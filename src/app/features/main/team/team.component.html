@@ -1,0 +1,41 @@
+<!-- Team Start -->
+<div class="container-fluid bg-light py-5">
+    <div class="container py-5">
+      <div class="row g-5 align-items-center">
+        <!-- Team Introduction Section -->
+        <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+          <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">
+            {{ 'TEAM.OUR_TEAM' | translate }}
+          </div>
+          <h1 class="mb-4">{{ 'TEAM.TITLE' | translate }}</h1>
+          <p class="mb-4">{{ 'TEAM.DESCRIPTION' | translate }}</p>
+          <a class="btn btn-primary rounded-pill px-4" href="">
+            {{ 'TEAM.READ_MORE' | translate }}
+          </a>
+        </div>
+  
+        <!-- Team Members Section -->
+        <div class="col-lg-7">
+          <div class="row g-4">
+            <div *ngFor="let member of teamMembers; let i = index" class="col-md-6">
+              <div class="team-item bg-white text-center rounded p-4 pt-0 wow fadeIn" [attr.data-wow-delay]="member.delay">
+                <img class="img-fluid rounded-circle p-4" [src]="member.image" [alt]="member.name | translate" />
+                <h5 class="mb-0">{{ member.name | translate }}</h5>
+                <small>{{ member.position | translate }}</small>
+                <div class="d-flex justify-content-center mt-3">
+                  <a
+                    *ngFor="let social of member.socials"
+                    class="btn btn-square btn-primary m-1"
+                    [href]="social.link"
+                    ><i [class]="social.icon"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Team End -->
+  

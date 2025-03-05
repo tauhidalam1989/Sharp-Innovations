@@ -1,0 +1,53 @@
+import { Component, OnInit, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import { RoutingService } from '../../../services/routing.service';
+import { LanguageService } from '../../../services/language.service';
+
+@Component({
+  selector: 'site-header',
+  templateUrl: './site-header.component.html',
+  styleUrls: ['./site-header.component.scss'],
+})
+export class SiteHeaderComponent implements OnInit {
+  currentLang: string = 'en';
+  isServicesHovered = false;
+
+
+  constructor(
+    private router: Router,
+    public pathService: RoutingService,
+    private languageService: LanguageService
+  ) {}
+
+  ngOnInit(): void {
+    this.currentLang = this.languageService.getLanguage();
+    this.languageService.switchLanguage(this.currentLang);
+
+    // Listen for navigation events
+    // this.router.events.subscribe((event) => {
+    //   if (event instanceof NavigationEnd) {
+    //     this.collapseNavbar(); // Collapse the navbar on navigation
+    //   }
+    // });
+  }
+
+  // ngAfterViewInit(): void {
+  //   // Initialize Bootstrap Collapse
+  //   this.navbarCollapse = new Collapse(this.navbarCollapseRef.nativeElement, {
+  //     toggle: false,
+  //   });
+  // }
+
+  // Switch language
+  switchLanguage(lang: string): void {
+    this.languageService.switchLanguage(lang);
+    this.currentLang = lang;
+  }
+
+  // Toggle dropdown on hover
+  toggleDropdown(isHovered: boolean): void {
+    this.isServicesHovered = isHovered;
+  }
+
+
+}

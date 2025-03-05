@@ -1,0 +1,49 @@
+.hero-header {
+    background-color: #007bff;
+    color: #fff;
+  
+    h1 {
+      font-size: 2.5rem;
+      line-height: 1.2;
+    }
+  
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  
+    .btn {
+      font-size: 1rem;
+      padding: 10px 20px;
+  
+      &.btn-outline-light {
+        border-color: #fff;
+        color: #fff;
+  
+        &:hover {
+          background-color: #fff;
+          color: #007bff;
+        }
+      }
+    }
+  
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .owl-carousel .owl-nav button {
+    color: #fff;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+  }
+  
+  .owl-carousel .owl-dots .owl-dot span {
+    background-color: #fff;
+  }
+  
+  .owl-carousel .owl-dots .owl-dot.active span {
+    background-color: #007bff;
+  }
+  

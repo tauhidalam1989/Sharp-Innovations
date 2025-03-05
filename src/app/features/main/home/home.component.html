@@ -1,0 +1,93 @@
+
+<!-- Hero Start -->
+<!-- Hero Section Start -->
+<!-- Hero Section Start -->
+<div class="container-fluid pt-5 bg-primary hero-header mb-5">
+  <div class="container-fluid ">
+    <div
+      id="heroCarousel"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+
+      <!-- Slides -->
+      <div class="carousel-inner">
+        <div
+          *ngFor="let slide of slides; let i = index"
+          class="carousel-item"
+          [class.active]="i === 0"
+        >
+          <div class="row g-5 pt-5">
+            <div class="col-lg-6 align-self-center text-center mb-lg-5">
+              <div class="btn btn-sm border rounded-pill text-white px-3 mb-3 slideInRight">
+                {{ slide.tagline | translate }}
+              </div>
+              <h1 class="display-4 text-white mb-4 slideInRight">
+                {{ slide.title | translate }}
+              </h1>
+              <p class="text-white mb-4 slideInRight">
+                {{ slide.description | translate }}
+              </p>
+              <a
+                href="#"
+                class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 slideInRight"
+              >
+                {{ 'HOMEs.READ_MORE' | translate }}
+              </a>
+              <a
+                href="#"
+                class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill slideInRight"
+              >
+                {{ 'HOMEs.CONTACT_US' | translate }}
+              </a>
+            </div>
+            <div class="col-lg-6 align-self-end text-center text-lg-end">
+              <img [src]="slide.image" class="img-fluid" alt="Hero Image" />
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- Controls -->
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Hero Section End -->
+
+  <!-- Hero Section End -->
+  
+<about  [isHome]="isHome" ></about>
+<service [isHome]="isHome"></service>
+<feature [isHome]="isHome"></feature>
+<projects [isHome]="isHome"></projects>
+<faq [isHome]="isHome"></faq>
+<team [isHome]="isHome"></team>
+<testimonial [isHome]="isHome"></testimonial>
+<newsletter [isHome]="isHome"></newsletter>

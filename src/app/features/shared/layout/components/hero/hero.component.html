@@ -1,0 +1,36 @@
+<!-- Hero Start -->
+<div *ngIf="showHero" class="container-fluid pt-5 bg-primary hero-header">
+  <div class="container">
+    <div class="row g-5 pt-5">
+      <!-- Title Section -->
+      <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
+        <h1 class=" text-white mb-4 animated slideInRight">{{ pageTitle | translate }}</h1>
+
+        <!-- Breadcrumb Section -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
+            <li class="breadcrumb-item">
+              <a class="text-white" routerLink="/">{{ 'HOME' | translate }}</a>
+            </li>
+            <li
+              *ngFor="let breadcrumb of breadcrumbs; let last = last"
+              class="breadcrumb-item"
+              [class.text-white]="!last"
+              [class.active]="last"
+              [attr.aria-current]="last ? 'page' : null"
+            >
+              <a *ngIf="!last" class="text-white" [routerLink]="breadcrumb.url">{{ breadcrumb.label | translate }}</a>
+              <span *ngIf="last" class="text-white">{{ breadcrumb.label | translate }}</span>
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+      <!-- Image Section -->
+      <div class="col-lg-6 align-self-end text-center text-lg-end">
+        <img class="img-fluid" src="../../../../assets/img/hero-img.png" alt="Hero Image" style="max-height: 300px;" />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Hero End -->

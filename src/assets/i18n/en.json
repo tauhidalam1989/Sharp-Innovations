@@ -1,0 +1,965 @@
+{
+    
+        "PAGE_TITLE": {
+            "ABOUT": "About Us",
+            "HOME": "Home",
+            "SERVICES": "Our Services",
+            "services": "Services",
+            
+            "PROJECTS": "Our Projects",
+            "CONTACT": "Contact",
+            "FEATURES": "Features",
+            "OUR_TEAM": "Our Team",
+            "FAQS": "FAQs",
+            "TESTIMONIALS": "Testimonials",
+            "MobileDevelopment": "Mobile App Development",
+            "webDevelopment": "Web Application Development",
+            "cloudDevelopment":"Cloud Development",
+            "chatbotDevelopment":"Chatbot Development",
+            "digitalMarketingServices":"Digital Marketing Services",
+            "uiDevelopment":"UI Development"
+
+        },
+        "FEATURESS": {
+            "WHY_CHOOSE_US": "Why Choose Us",
+            "TITLE": "We Are Sharp Innovations Company for Information Technology",
+            "DESCRIPTION": "Sure, Sharp Innovations Company for Information Technology is a leading global provider of system firmware and software engineering services for companies in the mobile, desktop, server, and embedded systems industries. Yes, we are proud to have the world’s top computing companies as our customers. Naturally, we claim industry leaders including AMD, ARM, Aspeed, Intel, Microsoft, and many others are close working partners. With hard work, we’ve become a recognized leader in our markets.",
+            "FEATURE_ONE": "A team of people that aren’t afraid to get creative",
+            "FEATURE_TWO": "We built our reputation on providing superior firmware technology",
+            "FEATURE_THREE": "Sharp Innovations Company for Information Technology",
+            "HAPPY_CLIENTS": "Happy Clients",
+            "PROJECT_COMPLETE": "Project Complete"
+          },
+          "CONTACT-FORM": { "US": "Contact Us",
+          "QUERY_PROMPT": "If You Have Any Query, Please Contact Us",
+          "FORM_INACTIVE": "The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes.",
+          "DOWNLOAD_NOW": "Download Now",
+          "YOUR_NAME": "Your Name",
+          "PLACEHOLDER_NAME": "Enter your name",
+          "YOUR_EMAIL": "Your Email",
+          "PLACEHOLDER_EMAIL": "Enter your email",
+          "SUBJECT": "Subject",
+          "PLACEHOLDER_SUBJECT": "Enter subject",
+          "MESSAGE": "Message",
+          "PLACEHOLDER_MESSAGE": "Leave a message here",
+          "SEND_MESSAGE": "Send Message",
+          "ERROR_NAME": "Please enter your name (minimum 2 characters).",
+          "ERROR_EMAIL": "Please enter a valid email address.",
+          "ERROR_SUBJECT": "Please enter a subject.",
+          "ERROR_MESSAGE": "Please enter a message (minimum 10 characters)."
+       
+  },
+  "FAQ": {
+    "POPULAR_FAQS": "Popular FAQs",
+    "TITLE": "Frequently Asked Questions",
+    "QUESTION1": "How to build a website?",
+    "ANSWER1": "Building a website involves selecting a domain, hosting, and designing your site with HTML, CSS, and JavaScript.",
+    "QUESTION2": "How long will it take to get a new website?",
+    "ANSWER2": "The timeline depends on the project scope, but most websites can be built in 4-6 weeks.",
+    "QUESTION3": "Do you only create HTML websites?",
+    "ANSWER3": "No, we create websites with various technologies, including WordPress, React, Angular, and more.",
+    "QUESTION4": "Will my website be mobile-friendly?",
+    "ANSWER4": "Yes, all websites we create are fully responsive and mobile-friendly.",
+    "QUESTION5": "Will you maintain my site for me?",
+    "ANSWER5": "Yes, we offer maintenance packages to keep your site running smoothly.",
+    "QUESTION6": "I’m on a strict budget. Do you have any low-cost options?",
+    "ANSWER6": "Yes, we have affordable packages designed for small businesses.",
+    "QUESTION7": "Can I update the website myself once it’s built?",
+    "ANSWER7": "Yes, we offer CMS-based websites so you can update your content easily.",
+    "QUESTION8": "Do you provide hosting services?",
+    "ANSWER8": "Yes, we provide hosting services to ensure your site is fast and secure."
+  },
+  "NEWSLETTER": {
+    "TITLE": "Newsletter",
+    "SUBSCRIBE": "Let's subscribe to the newsletter",
+    "PLACEHOLDER": "Enter Your Email",
+    "ERROR": "Please enter a valid email address.",
+    "FOOTER_TEXT": "Diam sed sed dolor stet amet eirmod"
+  },
+  "SERVICE": {
+    "OUR_SERVICES": "Our Services",
+    "TITLE": "Our Excellent AI Solutions for Your Business",
+    "DESCRIPTION": "We provide cutting-edge AI solutions to help your business grow. Explore our services tailored to meet your needs.",
+    "READ_MORE": "Read More",
+    "ROBOTIC_AUTOMATION": "Robotic Automation",
+    "ROBOTIC_AUTOMATION_DESC": "Transforming processes with advanced robotic automation technology.",
+    "MACHINE_LEARNING": "Machine Learning",
+    "MACHINE_LEARNING_DESC": "Leverage machine learning to gain insights and make data-driven decisions.",
+    "EDUCATION_SCIENCE": "Education & Science",
+    "EDUCATION_SCIENCE_DESC": "Innovative AI solutions for education and scientific research.",
+    "PREDICTIVE_ANALYSIS": "Predictive Analysis",
+    "PREDICTIVE_ANALYSIS_DESC": "Forecast future outcomes with predictive analytics and AI."
+  },
+  "TEAM": {
+    "OUR_TEAM": "Our Team",
+    "TITLE": "Meet Our Experienced Team Members",
+    "DESCRIPTION": "We are proud to introduce our talented and experienced team who are the backbone of our company.",
+    "READ_MORE": "Read More",
+    "BORIS_JOHNSON": "Boris Johnson",
+    "FOUNDER_CEO": "Founder & CEO",
+    "ADAM_CREW": "Adam Crew",
+    "EXECUTIVE_MANAGER": "Executive Manager",
+    "KATE_WINSLET": "Kate Winslet",
+    "CO_FOUNDER": "Co-Founder",
+    "CODY_GARDNER": "Cody Gardner",
+    "PROJECT_MANAGER": "Project Manager"
+  },
+    
+  "PROJECT": {
+    "CASE_STUDY": "Case Study",
+    "TITLE": "Explore Our Recent AI Case Studies",
+    "CATEGORY_ROBOTIC": "Robotic Automation",
+    "TITLE_ROBOTIC": "Explore advanced robotic automation solutions",
+    "CATEGORY_MACHINE_LEARNING": "Machine Learning",
+    "TITLE_MACHINE_LEARNING": "Innovative machine learning applications",
+    "CATEGORY_PREDICTIVE": "Predictive Analysis",
+    "TITLE_PREDICTIVE": "Data-driven predictive analysis techniques"
+  },
+  "TESTIMONIAL": {
+    "TITLE": "Testimonial",
+    "SUBTITLE": "What Our Clients Say!",
+    "DESCRIPTION": "We value the feedback of our clients, which helps us improve and grow. Here are some of their words.",
+    "READ_MORE": "Read More",
+    "FEEDBACK_1": "This company provided exceptional service and transformed our business operations with their expertise.",
+    "CLIENT_NAME_1": "John Doe",
+    "PROFESSION_1": "Business Owner",
+    "FEEDBACK_2": "Their team was very professional and delivered outstanding results within the promised time.",
+    "CLIENT_NAME_2": "Jane Smith",
+    "PROFESSION_2": "Marketing Specialist",
+    "FEEDBACK_3": "I'm truly impressed with their attention to detail and innovative solutions. Highly recommended!",
+    "CLIENT_NAME_3": "Emily Johnson",
+    "PROFESSION_3": "Software Engineer"
+  },
+  "FOOTER": {
+    "COMPANY_NAME": "Sharp.Innvotech",
+    "DESCRIPTION": "SIIT was established in 2015 in Riyadh, Kingdom of Saudi Arabia. We provide technical solutions and consulting in resource planning for government and private enterprises.",
+    "GET_IN_TOUCH": "Get In Touch",
+    "ADDRESS": "7576, Sulay, Al-Riyadh, Kingdom of Saudi Arabia",
+    "PHONE": "+966 59 825 0829",
+    "EMAIL": "info@sharpinnvotech.com",
+    "POPULAR_LINKS": "Popular Links",
+    "ABOUT_US": "About Us",
+    "CONTACT_US": "Contact Us",
+    "PRIVACY_POLICY": "Privacy Policy",
+    "TERMS_CONDITIONS": "Terms & Conditions",
+    "CAREER": "Career",
+    "OUR_SERVICES": "Our Services",
+    "SERVICE_1": "Robotic Automation",
+    "SERVICE_2": "Machine Learning",
+    "SERVICE_3": "Predictive Analysis",
+    "SERVICE_4": "Data Science",
+    "SERVICE_5": "Robot Technology",
+    "COPYRIGHT": "Sharp Innovations Company for Information Technology, All Rights Reserved.",
+    "HOME": "Home",
+    "COOKIES": "Cookies",
+    "HELP": "Help",
+    "FAQS": "FAQs"
+  },
+  "HOMEs": {
+    "HERO_TAGLINE": "Sharp.Innovotech",
+    "HERO_TITLE_SLIDE1": "Managed IT Support Solutions",
+    "HERO_DESCRIPTION_SLIDE1": "Our Managed IT services are tailored to meet your needs, from employee endpoint management solutions to full management of your complex IT infrastructure. Let SIIT provide you with industry-leading IT management services.",
+    "HERO_TITLE_SLIDE2": "Networking Technology Solutions",
+    "HERO_DESCRIPTION_SLIDE2": "Secure, automate, and scale your network with solutions that connect your people and devices.",
+    "HERO_TITLE_SLIDE3": "Website Development Services",
+    "HERO_DESCRIPTION_SLIDE3": "We are experienced in web design and development, creating and launching successful websites worldwide.",
+    "READ_MORE": "Read More",
+    "CONTACT_US": "Contact Us"
+  },
+  "PAGE_TITLES": {
+    "HOME": "Home - Sharp.Innvotech",
+    "ABOUT": "About Us - Sharp.Innvotech",
+    "FEATURES": "Our Features - Sharp.Innvotech",
+    "CONTACT": "Contact Us - Sharp.Innvotech",
+    "SERVICES": "Our Services - Sharp.Innvotech",
+    "PROJECTS": "Our Projects - Sharp.Innvotech",
+    "FAQ": "FAQs - Sharp.Innvotech",
+    "TESTIMONIAL": "Testimonial - Sharp.Innvotech",
+    "TEAM":"TEAM - Sharp.Innvotech",
+    "DEFAULT": "Sharp.Innvotech - Managed IT Solutions",
+     "Mobile": "Mobile App Development"
+    
+  },
+  "about_page":{
+    "p1":"Welcome to Sharp Innvovations, a premier IT services and product company based in Saudi Arabia. Founded in 2015 by industry experts, Sharp Innvovations is dedicated to providing innovative technology solutions that help businesses succeed in an increasingly digital world.",
+    "p2":"Our mission is clear: to empower organizations by harnessing the transformative power of technology. By specializing in Artificial Intelligence, Automation, Cybersecurity, Application Services, and Consulting, we design and deliver solutions tailored to meet the unique needs of our clients, ensuring they achieve their business goals with efficiency and security.",
+    "p3":"We are proud to align our vision with Saudi Arabia’s Vision 2030, contributing to the country’s ambitious goals of becoming a global leader in innovation, technology, and economic diversification. Our services are crafted to not only support the growth of our clients but also contribute to the development of a knowledge-based, sustainable economy",
+    "focus":"Our Focus Areas:",
+    
+      "label1": "Artificial Intelligence (AI):",
+      "label1_description": "We integrate AI to create smarter, data-driven solutions that enhance decision-making, improve operational efficiency, and drive business innovation.",
+      
+      "label2": "Automation:",
+      "label2_description": "By automating processes, we help businesses save time, reduce costs, and increase productivity, allowing them to focus on what truly matters.",
+    
+      "label3": "Cybersecurity:",
+      "label3_description": "We ensure your digital assets are protected with robust security solutions that safeguard your organization from evolving threats and vulnerabilities.",
+    
+      "label4": "Application Services:",
+      "label4_description": "Our team provides end-to-end application development and management, ensuring seamless, scalable, and high-performance solutions tailored to your business needs.",
+    
+      "label5": "Consulting:",
+      "label5_description": "Our expert consultants work closely with you to design strategies that align technology with business objectives, overcoming challenges and maximizing growth opportunities.",
+    
+    "mission":"At Sharp Innvovations, we are driven by a commitment to excellence, continuous innovation, and delivering real-world results. Our team is passionate about helping businesses stay ahead of the curve in the digital era and supporting Saudi Arabia’s journey toward becoming a global technology hub by 2030."
+  },
+"career": {
+  "careers_title": "Careers at Sharp Innovations",
+  "careers_intro": "Shape the Future with Us",
+  "careers_description": "At Sharp Innovations, we believe in crafting exceptional IT solutions that empower businesses and drive transformation. We are a team of forward-thinkers, problem-solvers, and innovators dedicated to making an impact. If you’re passionate about technology, creativity, and collaboration, we invite you to join us and build a career that sharpens your potential.",
+  
+  "why_choose_us_title": "Why Choose Sharp Innovations?",
+  "why_choose_us_description": "At Sharp Innovations, we don’t just build technology—we build futures. Here's why you’ll love working with us:",
+  "why_choose_us_points": {
+    "point1_title": "Innovation-Driven Culture",
+    "point1_description": "We thrive on new ideas and encourage out-of-the-box thinking to solve real-world challenges.",
+    "point2_title": "Continuous Learning",
+    "point2_description": "From workshops and certifications to mentorship programs, we are committed to your professional growth.",
+    "point3_title": "Global Reach",
+    "point3_description": "Collaborate with top-tier clients from around the globe and work on cutting-edge technologies.",
+    "point4_title": "Diversity and Inclusion",
+    "point4_description": "We celebrate diverse perspectives and foster an environment where everyone feels valued.",
+    "point5_title": "Flexible Work Environment",
+    "point5_description": "Whether you prefer working from the office or remotely, we offer flexible options to suit your lifestyle."
+  },
+
+  "opportunities_title": "Explore Opportunities",
+  "opportunities_description": "We offer roles across various domains to match your expertise and career aspirations:",
+  "opportunities_list": {
+    "role1": "Software Development & Engineering",
+    "role2": "Cloud Solutions",
+    "role3": "Artificial Intelligence & Machine Learning",
+    "role4": "IT Consulting & Project Management",
+    "role5": "Cybersecurity Solutions",
+    "role6": "Web Development & UI/UX Design"
+  },
+
+  "what_we_offer_title": "What We Offer",
+  "what_we_offer_list": {
+    "offer1": "Competitive compensation and benefits",
+    "offer2": "Comprehensive health and wellness plans",
+    "offer3": "Paid time off and holidays",
+    "offer4": "Career development and training opportunities",
+    "offer5": "Employee rewards and recognition programs"
+  },
+
+  "join_us_title": "Join Our Growing Team",
+  "join_us_description": "Are you ready to be part of a company that values your skills and invests in your growth? Take the next step and explore our current job openings.",
+  "no_role_found": "Can’t find the right role?",
+  "no_role_description": "We’d still love to hear from you. Send your resume to *[hr@sharpinnovations.com]* and let us know how you can contribute to our mission.",
+  
+  "closing_statement": "Let’s Innovate Together",
+  "closing_description": "At Sharp Innovations, we’re not just offering jobs—we’re creating opportunities to innovate, inspire, and grow. Join us in shaping the future of IT solutions!"
+},
+
+
+    "TITLE": "Sharp Innovation",
+    "HOME": "Home",
+    "ABOUT": "About",
+    "SERVICES": "Services",
+    "PROJECTS": "Projects",
+    "CONTACT": "Contact",
+    "CAREERS":"Careers",
+    "PAGES": "Pages",
+    "FEATURES": "Features",
+    "OUR_TEAM": "Our Team",
+    "FAQS": "FAQs",
+    "TESTIMONIALS": "Testimonials",
+    "LANGUAGE": "Language",
+    "ABOUT_US": "About Us",
+    "WELCOME_MESSAGE": "Welcome to Sharp Innovations Company for Information Technology",
+    "FOCUS_ENGINEERS": "Highly Focused Talented IT Engineers, Designers, Analysts & Developers",
+    "COMPANY_DESCRIPTION": "Hope that you will find our Products & Services exotic which can support your esteemed organization to achieve goals. Sharp Innovations Company for Information Technology is a professionally managed company focusing on providing multiple types of IT Products & Services. Established in 2015, we are a Saudi-based company. We are a pioneering and dominant technical enterprise with an excellent edge in mobile software development. Sharp Innovations Solution as a Software organization provides cost-effective and quality solutions to clients. We believe in creating good relationships with customers. Our main objective is to meet customer requirements with cutting-edge technologies. We never compromise on the quality of the work.",
+    "AWARD_WINNING": "Award Winning",
+    "PROFESSIONAL_STAFF": "Professional Staff",
+    "SUPPORT_24_7": "24/7 Support",
+    "FAIR_PRICES": "Fair Prices",
+    "READ_MORE": "Read More",
+      "Mobile": "Mobile App Development",
+
+    "CUSTOM_SOFTWARE_DEVELOPERS": "Custom Software Developers",
+    "WEB_APP_DEVELOPMENT": "Web App Development",
+    "MOBILE_APP_DEVELOPMENT": "Mobile App Development",
+    "CLOUD_DEVELOPMENT": "Cloud Development",
+    "DIGITAL_TRANSFORMATION": "Digital Transformation",
+    "CHATBOT_DEVELOPMENT": "Chatbot Development",
+    "DIGITAL_MARKETING": "Digital Marketing",
+    "UI_UX_DESIGNING": "UI/UX Designing",
+    
+      "web_development_company": {
+        "title": "Get The Industry-shaping Web App Development Services",
+        "intro": "Sharp Innovation helps brands to establish a digital footprint globally with the most reliable web app development solutions.",
+        "cta": "Get Started",
+        "business_driven": {
+          "title": "Business-driven web app development solutions",
+          "content": "Leverage the latest technologies through our professional web app development services in order to stay ahead of your competitors. We ensure to deliver profitable outcomes with assured quality."
+        },
+        "services_section": "Our Services",
+        "services": {
+          "web_app_designing": {
+            "title": "Web App Designing",
+            "description": "Our web app designers know how to craft an idea into a perfect product design as your branding website using the latest web technologies."
+          },
+          "features_api": {
+            "title": "Features & API Integrations",
+            "description": "We ensure to integrate crucial functionalities that can enhance the look and feel of your website along with the user experience."
+          },
+          "frontend_development": {
+            "title": "Frontend Development",
+            "description": "We utilize the latest technology stack for developing frontend of the web applications such as Angular, Vue.Js and React.Js."
+          },
+          "backend_development": {
+            "title": "Backend Development",
+            "description": "Our backend developers are well-versed with the technologies like Node.Js, Python, and Ruby on Rails to build scalable apps."
+          },
+          "optimization_maintenance": {
+            "title": "Optimization & Maintenance",
+            "description": "We go beyond website design and development to maintain their performance consistently throughout the business roadmaps."
+          },
+          "dedicated_cms": {
+            "title": "Dedicated CMS",
+            "description": "A powerful content management system (CMS) can help you boost the performance of your website and we offer the same with simplicity."
+          }
+        },
+        "cta_lets_create": {
+          "title": "Let's Create Big Stories Together",
+          "content": "Web development is in our DNA. We don’t just craft websites, we shape brands. Selecting us will be your smartest choice.",
+          "button": "Get a Quote"
+        },
+        "core_values": {
+          "cloud_native": {
+            "title": "Cloud-native integrations",
+            "description": "We use a cloud-native strategy to develop and deploy scalable, robust, and high performance web apps. We leverage current architectures like microservices and containers to enable rapid and agile application delivery while lowering costs and boosting flexibility."
+          },
+          "consistent_management": {
+            "title": "Consistent management",
+            "description": "Sharp Innovation is able to accomplish projects on time, within scope, and under budget by focusing on detailed planning, management, and control. From the start, we deliver a predictable and transparent software development process."
+          },
+          "agile_mindset": {
+            "title": "Agile mindset",
+            "description": "Our Agile team works in short cycles and collects input on a regular basis to guarantee that the product fulfills the demands of the user. We can deliver high-quality online products that fit your business objectives by emphasizing flexibility and adaptability."
+          }
+        },
+        "industry_wise_services": {
+          "title": "Industry-Wise Services",
+          "healthcare": "Healthcare Software Development Services",
+          "manufacturing": "Manufacturing Software Development Services",
+          "education": "Education Software Development Services",
+          "fintech": "Fintech Development Services",
+          "entertainment": "Entertainment Web & App Development Services",
+          "ecommerce": "E-Commerce Development Services"
+        },
+        "digital_transformation_services": {
+          "title": "Digital Transformation Services",
+          "custom_software": "Custom Software Development Services",
+          "mobile_app": "Mobile App Development Services",
+          "digital_transformation": "Digital Transformation Services",
+          "ui_ux_designing": "UI/UX Designing Services"
+        },
+        "dedicated_developers": {
+          "title": "Are you looking to hire top-tier dedicated developers? Look no further than Sharp Innovation",
+          "description": "With a wide range of web and app development technologies, Sharp Innovation’s dedicated developers come with core expertise and years of experience.",
+          "services": {
+            "frontend": "Hire Frontend Developers",
+            "backend": "Hire Backend Developers",
+            "fullstack": "Hire Fullstack Developers",
+            "mean_stack": "Hire MEAN Stack Developers",
+            "mern_stack": "Hire MERN Stack Developers",
+            "nodejs": "Hire Node.js Developers",
+            "reactjs": "Hire React.js Developers"
+          }
+        }
+      },
+      "mobile_app_development": {
+        "title": "Get Renowned Mobile App Design & Development Solutions",
+        "intro": "From MVP development to complete business app development, we serve every possible solution to make your brand grow successively.",
+        "cta": "Get Started",
+        "business_oriented": {
+          "title": "Business Oriented Mobile App Design & Development Services",
+          "content": "We boost businesses to attain success and keep on growing with our scalable mobile app development services. Sharp Innovation has a complete range of solutions to drive excellent results."
+        },
+        "services_section": "Our Services",
+        "services": {
+          "android_app_development": {
+            "title": "Android App Development",
+            "description": "Our android app developers are serving businesses with the most user-friendly & performance-oriented business applications."
+          },
+          "ios_app_development": {
+            "title": "iOS App Development",
+            "description": "Our iOS app developers are serving businesses with the most user-friendly & performance-oriented business applications."
+          },
+          "cross_platform_app_development": {
+            "title": "Cross-platform App Development",
+            "description": "Our cross-platform app developers are well-known to develop & deliver applications with minimal coding requirements."
+          },
+          "app_ui_ux_design": {
+            "title": "App UI/UX Design",
+            "description": "Our mobile app designers focus on creating impressive UI/UX designs along with wireframes and prototypes as required by the clients."
+          },
+          "mvp_app_development": {
+            "title": "MVP App Development",
+            "description": "If you have a business idea and want a professional mobile app developer, we can provide a full-fledged MVP application to test your idea."
+          },
+          "support_maintenance": {
+            "title": "Support & Maintenance",
+            "description": "After launching your app on Play Store and App Store, we ensure to maintain the performance of your mobile app consistently."
+          }
+        },
+        "cta_tell_us": {
+          "title": "Tell us about your project",
+          "button": "Let’s Talk"
+        },
+        "industry_wise_services": {
+          "title": "Industry-wise Mobile App Development Services",
+          "healthcare": "Healthcare Software Development Services",
+          "manufacturing": "Manufacturing Software Development Services",
+          "education": "Education Software Development Services",
+          "fintech": "Fintech Development Services",
+          "entertainment": "Entertainment Web & App Development Services",
+          "ecommerce": "E-Commerce Development Services"
+        },
+        "turn_dreams_into_downloads": {
+          "title": "Turn Dreams Into Downloads",
+          "content": "Transforming ideas into user-friendly apps. Journey from vision to reality, crafting captivating mobile experiences. Dive into digital excellence with us.",
+          "button": "Let's work together"
+        },
+        "our_focus": {
+          "title": "Our Focus",
+          "content": "As a firm with curiosity and devotion as fundamental qualities, we will assist you in transforming your creative concept into a viable digital product."
+        },
+        "from_discovery_to_deployment": {
+          "title": "From Discovery to Deployment",
+          "content": "Choose an end-to-end product firm skilled in producing hybrid and native applications from start to finish: from R&D and consulting through design, development, and maintenance, whether you work in a globally renowned enterprise or a promising start-up."
+        },
+        "most_reliable_services": {
+          "title": "Most Reliable Mobile App Development Services",
+          "content": "Sharp Innovation deploys a complete mobile app development cycle to provide the desired product for your business with the latest technological integrations."
+        },
+        "teams_with_profound_brains": {
+          "title": "Teams with the Most Profound Brains",
+          "content": "Add senior mobile app developers to your team. We have extensive technical and subject knowledge and can assist you in assembling a high-performing team for native or cross-platform app development."
+        },
+        "keeping_ethics_values": {
+          "title": "Keeping Ethics & Values",
+          "content": "We create your mobile app within the parameters of the projected price, time, and scope of work. With our clear and predictable methods, you will receive a functional product in each Agile iteration."
+        },
+        "strong_technological_foundation": {
+          "title": "A Strong Technological Foundation",
+          "content": "Whether your company wants native or cross-platform mobile app development, we use a tech stack that provides long-term app performance, scalability, and maintainability."
+        },
+        "choose_high_quality_code": {
+          "title": "Choose High-Quality Code",
+          "content": "Do not allow mounting technical debt to become an unmanageable issue: select a reputable mobile application development business that guarantees the perfect quality of provided code and technical documentation."
+        },
+        "other_software_services": {
+          "title": "Other Software Development Services for Your Business",
+          "custom_software": "Custom Software Development Services",
+          "mobile_app": "Mobile App Development Services",
+          "digital_transformation": "Digital Transformation Services",
+          "ui_ux_designing": "UI/UX Designing Services"
+        },
+        "unleash_app_potential": {
+          "title": "Unleash App Potential",
+          "content": "Dive into a realm where design meets function. With us, every pixel is crafted with purpose. Elevate your brand, one app at a time.",
+          "button": "Let’s Talk"
+        },
+        "flexible_models": {
+          "title": "Flexible Models to Work with Our App Developers",
+          "hire_dedicated_developers": {
+            "title": "Hire Dedicated Developers",
+            "content": "Choose from the pool of top-tier talents as Sharp Innovation is a hub of providing professional services to the businesses. Our aim is to meet your end goal by deploying the latest technologies and resources while saving time and cost."
+          },
+          "complete_project_outsource": {
+            "title": "Complete Project Outsource",
+            "content": "Don’t want any hassle for your next big idea? Don’t worry because Sharp Innovation’s app development team is always ready to serve the best results as your end product. Just share your requirements and we’ll focus on delivery."
+          }
+        },
+        "hire_dedicated_developers": {
+          "title": "Hire Dedicated Developers for Your Next Project",
+          "frontend": "Hire Frontend Developers",
+          "backend": "Hire Backend Developers",
+          "fullstack": "Hire Fullstack Developers",
+          "mean_stack": "Hire MEAN Stack Developers",
+          "mern_stack": "Hire MERN Stack Developers",
+          "nodejs": "Hire Node.js Developers",
+          "reactjs": "Hire React.js Developers"
+        }
+      },
+      "cloud_application_development": {
+    "title": "Most Secure Cloud Application Development Services",
+    "intro": "Whether you need to migrate your data to a new cloud application or require a full-fledged platform, Sharp Innovation is always ready to impress you.",
+    "cta": "Get Started",
+    "business_friendly": {
+      "title": "Deploy Business-friendly Cloud App Development Services",
+      "content": "Our strategic cloud development services focused on building the most secure data architectures. We have a team of professionals meant to invent and deliver tech-oriented solutions for startups as well as SMEs."
+    },
+    "services_section": "Our Services",
+    "services": {
+      "cloud_migration": {
+        "title": "Cloud Migration Services",
+        "description": "We help businesses with well-planned cloud migration services to embrace the information management features through flexible tools."
+      },
+      "multi_cloud_approach": {
+        "title": "Multi-Cloud Approach",
+        "description": "Our multi-cloud development services ensure qualitative results with enhanced risk management and value propositions."
+      },
+      "devops_microservices": {
+        "title": "DevOps & Microservices",
+        "description": "Automate your cloud management services with our DevOps and microservices integration to focus on enhancing the business performance."
+      },
+      "iaas_paas_saas": {
+        "title": "IaaS, PaaS & SaaS Development",
+        "description": "We are expert in deploying the key areas of cloud application services according to your business requirements, size, and functions."
+      },
+      "cloud_modernization_automation": {
+        "title": "Cloud Modernization & Automation",
+        "description": "Upgrade your traditional data management infrastructure with the modern cloud platforms and automate data sharing capabilities."
+      },
+      "custom_cloud_development": {
+        "title": "Custom Cloud Development",
+        "description": "We consider your core business functions the way to build solutions through our custom cloud development services using various tools."
+      }
+    },
+    "industry_wise_services": {
+      "title": "Deploying Cloud Development Solutions for Different Industries",
+      "healthcare": "Healthcare Software Development Services",
+      "manufacturing": "Manufacturing Software Development Services",
+      "education": "Education Software Development Services",
+      "fintech": "Fintech Development Services",
+      "entertainment": "Entertainment Web & App Development Services",
+      "ecommerce": "E-Commerce Development Services"
+    },
+    "elevate_ideas": {
+      "title": "Elevate Your Ideas with Cloud-Crafted Applications",
+      "content": "Our expertise in cloud application development is unmatched. We do not just code; we engineer dreams. Your journey to astounding digital solutions begins with us.",
+      "button": "Contact Us"
+    },
+    "hire_dedicated_developers": {
+      "title": "Hire Dedicated Developers With Wide Expertise",
+      "public_cloud": {
+        "title": "Public Cloud",
+        "description": "Utilize the public cloud’s scalability and ease of usage. Learn all there is to know about our public cloud consultation services."
+      },
+      "private_cloud": {
+        "title": "Private Cloud",
+        "description": "With our managed private cloud consulting services, you may get enhanced security while maintaining company agility."
+      },
+      "hybrid_cloud": {
+        "title": "Hybrid Cloud",
+        "description": "With our end-to-end advisory services, you can get your hybrid cloud strategy correct, from scalability and cost savings to total transformation."
+      },
+      "multi_cloud": {
+        "title": "Multi-Cloud",
+        "description": "With our multi-cloud advisory services, you can avoid vendor lock-in while getting more value in terms of performance and support quality."
+      }
+    },
+    "leverage_solutions": {
+      "title": "Leverage Next-Gen Solutions from Sharp Innovation",
+      "custom_software": "Custom Software Development Services",
+      "mobile_app": "Mobile App Development Services",
+      "digital_transformation": "Digital Transformation Services",
+      "ui_ux_designing": "UI/UX Designing Services"
+    },
+    "cloud_development_benefits": {
+      "title": "Leverage Our Cloud Development Services For Your Business",
+      "scalability": {
+        "title": "Scalability",
+        "description": "Business technology is subject to rapid change. Cloud solutions enable you to respond and adapt to any industry changes, seasonal fluctuations in traffic, and other variations in load needs – simply select the resources that will benefit you at the time and scale conveniently!"
+      },
+      "security": {
+        "title": "Security",
+        "description": "We have teams that prioritize data security, and you can forget about manual updates – everything will be handled automatically. You can trust Sharp Innovation engineers to set up everything correctly and apply the right security policies to your product."
+      },
+      "reduced_costs": {
+        "title": "Reduced Costs",
+        "description": "This is the primary purpose of any company. A well-chosen cloud model will enable you to pay only for the services you really utilize. This implies you won’t have to pay for the infrastructure up front."
+      },
+      "ease_to_setup": {
+        "title": "Ease to Set Up",
+        "description": "Implementing our cloud development solution is far faster than developing your own infrastructure! Without any hassle, our teams ensure to deploy the required solutions, so that you will have more time to test alternate time-to-market methods."
+      }
+    },
+    "hire_dedicated_developers_expertise": {
+      "title": "Hire Dedicated Developers With Wide Expertise",
+      "teamwork": {
+        "title": "Teamwork is Everything",
+        "description": "Work with a digitally savvy, full stack team of 250+ skilled experts that will go above and beyond to ensure your success."
+      },
+      "on_time_delivery": {
+        "title": "On-Time Delivery",
+        "description": "We have successfully produced over 2000 mobile applications, Cloud products, digital solutions, and IoT systems for over 700 clients worldwide."
+      },
+      "serving_excellence": {
+        "title": "Serving Excellence",
+        "description": "We have the skills and experience to help businesses embrace the potential of cloud and digital using the latest technologies and tools."
+      },
+      "wide_palette_of_expertise": {
+        "title": "Wide Palette of Expertise",
+        "description": "While our talented designers and UX/UI experts are ready to create unique designs, our cloud developers are always there for seamless development."
+      }
+    },
+    "upgrade_solution": {
+      "title": "Need to Upgrade Your Existing Solution? Hire Dedicated Teams from Sharp Innovation",
+      "frontend": "Hire Frontend Developers",
+      "backend": "Hire Backend Developers",
+      "fullstack": "Hire Fullstack Developers",
+      "mean_stack": "Hire MEAN Stack Developers",
+      "mern_stack": "Hire MERN Stack Developers",
+      "nodejs": "Hire Node.js Developers",
+      "reactjs": "Hire React.js Developers"
+    },
+    "infinite_possibilities": {
+      "title": "Infinite Possibilities with Cloud Mastery",
+      "content": "Experience the power of innovation as we shape your ideas into dynamic cloud applications. With us, elevate your brand into a realm of digital brilliance and endless possibilities.",
+      "button": "Get a Quote"
+    }
+  },
+  "chatbot_development": {
+    "title": "End-to-end Chatbot Development Services",
+    "intro": "We help organizations utilize Google Assistant to communicate with their digital product users at any time as Actions on Google development professionals, but there’s more to our job than that! We can also create Alexa and Siri assistants, as well as intelligent chatbots that increase sales, enhance communication, and improve customer service.",
+    "cta": "Get Started",
+    "wide_range_solutions": {
+      "title": "Wide Range Of Our Chatbot Development Solutions",
+      "content": "Sharp Innovation has the most renowned chatbot developers who employ cutting-edge AI techniques to create customized Chatbots with effective data analysis, allowing users to begin queries and receive appropriate responses."
+    },
+    "services_section": "Our Services",
+    "services": {
+      "custom_chatbot_development": {
+        "title": "Custom Chatbot Development",
+        "description": "Get your customized chatbot development services deployed according to your business goals and leverage our effective approach."
+      },
+      "conversational_ai_chatbot": {
+        "title": "Conversational AI Chatbot",
+        "description": "We can assist you in applying AI to your application or website by utilizing best-in-class conversational chatbot development services and natural language processing technologies."
+      },
+      "voice_assistants_development": {
+        "title": "Voice Assistants Development",
+        "description": "We will convert your ideas into Google Actions, Alexa Skills, and Siri Extensions, but we will also test, publish, and optimize them based on your objectives."
+      },
+      "natural_language_processing": {
+        "title": "Natural Language Processing",
+        "description": "Our objective with sophisticated NLP skills is to reduce communication friction spots and attain human-like language proficiency with conversational intelligence."
+      }
+    },
+    "chatbots_speak_success": {
+      "title": "Chatbots that Speak Your Success",
+      "content": "Enhance customer engagement, efficiency, and innovation. Our chatbot solutions redefine communication.",
+      "button": "Contact Us"
+    },
+    "what_our_solutions_come_with": {
+      "title": "What Our Chatbot Development Solutions Come With?",
+      "responses_based_on_intent": {
+        "title": "Responses Based on Intent",
+        "description": "Beyond interpreting and participating in a discussion, our chatbot solution has natural language processing (NLP) features that allow it to grasp the context of a dialogue in many languages."
+      },
+      "support_in_several_languages": {
+        "title": "Support in Several Languages",
+        "description": "Our chatbot connects your audience from all over the world, broadening the demographics of your consumer base and obtaining more international clients, including those who may not speak the same language."
+      },
+      "seamless_integrations": {
+        "title": "Seamless Integrations",
+        "description": "Chatbot integration with channels (Messenger, Slack, WhatsApp, etc.), backend system, and internal software unites all platforms under one massive canopy of business intelligence communication."
+      },
+      "user_friendly_interactions": {
+        "title": "User-Friendly Interactions",
+        "description": "We’ll establish personas to guarantee that your assistants fit your business objectives, prototype and design voice interfaces to attain trust, and offer a quality experience with natural conversation."
+      }
+    },
+    "industry_wise_services": {
+      "title": "Industry-wise Chatbot Development Services",
+      "financial_sector": {
+        "title": "Chatbots in the Financial Sector",
+        "description": "Receive all relevant financial service information and give users impactful banking experiences that meet their needs."
+      },
+      "ecommerce": {
+        "title": "Chatbots for E-commerce",
+        "description": "E-commerce Chatbots aid in the development of real-time contact with customers by recommending, tracking, and obtaining product information."
+      },
+      "healthcare": {
+        "title": "Chatbots in Healthcare",
+        "description": "Patients can ask queries about their health issues in real time by describing their symptoms, getting diagnosed, and obtaining medicines."
+      },
+      "social_media": {
+        "title": "Chatbot for Social Media",
+        "description": "Create a social networking platform that uses AI, ML, and big data to give a sense of virtual popularity."
+      },
+      "travel_hospitality": {
+        "title": "Chatbots for Travel & Hospitality",
+        "description": "Make bookings for your vacation and receive instant suggestions for popular eating establishments for a one-of-a-kind experience."
+      }
+    },
+    "explore_other_solutions": {
+      "title": "Explore Other Digital Transformation Solutions by Sharp Innovation",
+      "custom_software": "Custom Software Development Services",
+      "mobile_app": "Mobile App Development Services",
+      "digital_transformation": "Digital Transformation Services",
+      "ui_ux_designing": "UI/UX Designing Services"
+    },
+    "reliable_choice": {
+      "title": "Sharp Innovation - Reliable Choice For Your Chatbot Development",
+      "in_depth_exploration": {
+        "title": "In-depth Exploration",
+        "description": "We provide a productive strategy to begin the automation journey by selecting important use cases from an automation standpoint."
+      },
+      "human_like_conversations": {
+        "title": "Human-like Conversations",
+        "description": "We create a design that is fully subject to human speech and just facilitates the connection between technology and humans."
+      },
+      "latest_stack_development": {
+        "title": "Latest Stack for Development",
+        "description": "Our Chatbot developers are experts in creating software products that use machine learning and artificial intelligence to provide seamless human contact."
+      },
+      "tested_by_quality_experts": {
+        "title": "Tested by Quality Experts",
+        "description": "Our QA engineers employ RPA UFT testing and security testing to identify problems, and they are then taught using machine-learning algorithms."
+      },
+      "hassle_free_deployments": {
+        "title": "Hassle-free Deployments",
+        "description": "We combine the machine learning model with the production environment to make data-driven decisions."
+      },
+      "focused_on_timely_delivery": {
+        "title": "Focused on Timely Delivery",
+        "description": "We provide a productive strategy to begin the automation journey by selecting important use cases from an automation standpoint."
+      }
+    },
+    "tell_us_about_your_project": {
+      "title": "Tell Us About Your Project",
+      "button": "Contact Us"
+    },
+    "hire_dedicated_developers": {
+      "title": "Sharp Innovation's Talented & Dedicated Developers to Build Your Innovative Product",
+      "frontend": "Hire Frontend Developers",
+      "backend": "Hire Backend Developers",
+      "fullstack": "Hire Fullstack Developers",
+      "mean_stack": "Hire MEAN Stack Developers",
+      "mern_stack": "Hire MERN Stack Developers",
+      "nodejs": "Hire Node.js Developers",
+      "reactjs": "Hire React.js Developers"
+    },
+    "chatbot_magic": {
+      "title": "Chatbot Magic: Your Voice, Our Code",
+      "content": "Empower your business with intelligent chatbots. Enhance engagement, drive efficiency. Make the smart choice today.",
+      "button": "Call Now"
+    }
+  },
+  "digital_marketing_services": {
+    "title": "Drive Growth With Our Digital Marketing Services",
+    "intro": "Sharp Innovation helps brands and enterprises to achieve success digitally with our renowned digital marketing services.",
+    "cta": "Get Started",
+    "carve_experiences": {
+      "title": "We Carve Experiences Through Digital Marketing Solutions",
+      "content": "Our strategies are focused on improving and maintaining brand identity to help companies reach success on online platforms. Our team stays updated with the latest trends and activities to boost your brand visibility."
+    },
+    "services_section": "Our Services",
+    "services": {
+      "search_engine_marketing": {
+        "title": "Search Engine Marketing",
+        "description": "We help businesses to rank higher on SERPs through paid search and organic marketing activities according to your business."
+      },
+      "social_media_marketing": {
+        "title": "Social Media Marketing",
+        "description": "Engage with your potential audience using our social media marketing services and drive them as leads toward your brand."
+      },
+      "online_reputation_management": {
+        "title": "Online Reputation Management",
+        "description": "We go beyond digital marketing to maintain your brand’s identity through online reputation management services."
+      },
+      "web_conversion_optimization": {
+        "title": "Web Conversion Optimization",
+        "description": "Our experts analyze your website and build strategies to drive more conversion opportunities by optimizing landing pages."
+      },
+      "content_marketing_services": {
+        "title": "Content Marketing Services",
+        "description": "We have a professional team of copywriters and editors that create well-researched, SEO-friendly copies to boost organic traffic."
+      },
+      "authority_building_pr": {
+        "title": "Authority Building & PR",
+        "description": "Sharp Innovation’s digital marketing team has professional connections in digital media to build and grow the authority of your brand online."
+      }
+    },
+    "tell_us_about_your_project": {
+      "title": "Tell Us About Your Project",
+      "button": "Contact Us"
+    },
+    "industry_wise_services": {
+      "title": "Industry-wise Distribution of Our Customized Services",
+      "healthcare": "Healthcare Software Development Services",
+      "manufacturing": "Manufacturing Software Development Services",
+      "education": "Education Software Development Services",
+      "fintech": "Fintech Development Services",
+      "entertainment": "Entertainment Web & App Development Services",
+      "ecommerce": "E-Commerce Development Services"
+    },
+    "revolutionise_digital_marketing": {
+      "title": "Revolutionise Your Digital Marketing Efforts!",
+      "content": "Unlock exponential growth with our cutting-edge digital marketing services. Click to transform your online presence and capture your market!",
+      "button": "Reach Out Now"
+    },
+    "four_pillars": {
+      "title": "4 Pillars Of Our Digital Marketing Services",
+      "effective_delivery_models": {
+        "title": "Effective Delivery Models",
+        "description": "Our digital marketing services include the most reliable delivery models that can help businesses sit on the top of the competition."
+      },
+      "data_driven_analytics": {
+        "title": "Data-driven Analytics",
+        "description": "Analytical teams to recognize the marketing and growth opportunities through in-depth analysis of the industry."
+      },
+      "marketing_automation": {
+        "title": "Marketing Automation",
+        "description": "Implementing marketing automation techniques that connect all marketing channels for a 360-degree perspective and improved ROI."
+      },
+      "technology": {
+        "title": "Technology",
+        "description": "Having the best technologies in our stack to integrate your brand with digital platforms and make it more realistic among potential audiences."
+      }
+    },
+    "wide_range_solutions": {
+      "title": "Wide Range of Digital Transformation Solutions",
+      "custom_software": "Custom Software Development Services",
+      "mobile_app": "Mobile App Development Services",
+      "digital_transformation": "Digital Transformation Services",
+      "ui_ux_designing": "UI/UX Designing Services"
+    },
+    "what_comes_with_our_services": {
+      "title": "What Comes With Our Digital Marketing Services?",
+      "diversified_professionals": {
+        "title": "Diversified Professionals",
+        "description": "We are a vast team of creative thinkers, strategists, influencers, and branding experts who know to make a brand speak out loud."
+      },
+      "significant_industrial_exposure": {
+        "title": "Significant Industrial Exposure",
+        "description": "We’ve worked with clients across several industries and for different requirements to serve them with ROI-focused results."
+      },
+      "scaling_solutions": {
+        "title": "Scaling Solutions",
+        "description": "Your business will leverage the scalability of our digital marketing solutions with the best results, built with data-driven strategies."
+      },
+      "optimized_conversions": {
+        "title": "Optimized Conversions",
+        "description": "Sharp Innovation will delve deep into your current data to track and optimize conversion across your site, resulting in a comprehensive study of your visitors’ behavior and site flow."
+      }
+    },
+    "why_Sharp Innovation": {
+      "title": "Why Sharp Innovation As Your Digital Marketing Agency?",
+      "progress_oriented": {
+        "title": "Progress-oriented",
+        "description": "We understand the ups and downs of performance, so staying on top of the metrics and providing those insights back to your organization is critical."
+      },
+      "creative_interactive_teams": {
+        "title": "Creative Interactive Teams",
+        "description": "As a dependable digital marketing firm, we can give you access to our award-winning creative department for assistance with digital asset ideation and development."
+      },
+      "efficient_strategies": {
+        "title": "Efficient Strategies",
+        "description": "We use innovative systems and procedures to increase productivity, ensuring that our clients obtain the finest service and outcomes possible while staying within their budget limits."
+      },
+      "in_depth_analysis": {
+        "title": "In-depth Analysis",
+        "description": "Our insights illustrate our ability to grasp each business’s unique demands and modify our strategy to maximize income from digital marketing services."
+      }
+    },
+    "elevate_your_brand": {
+      "title": "Elevate Your Brand Through Our Digital Marketing Prowess",
+      "content": "Enhance your digital footprint and captivate audiences in unprecedented ways. Immerse yourself in the world of results-oriented digital marketing with us.",
+      "button": "Let's Talk"
+    }
+  },
+  "ui_ux_design_services": {
+    "title": "Embrace Innovative UI/UX Design Services From Sharp Innovation",
+    "intro": "From mobile app screens to web designs, our UI/UX designers drive creativity to engage your audience with flawless experience.",
+    "cta": "Get Started",
+    "know_our_expertise": {
+      "title": "Know Our Expertise With UI/UX Designing",
+      "content": "Sharp Innovation’s UI/UX designers are well-versed to utilize the latest tools and frameworks for molding ideas into engaging screens. Our wide range of solutions can be served flexibly with these solutions."
+    },
+    "services_section": "Our Services",
+    "services": {
+      "mobile_app_ui_ux": {
+        "title": "Mobile App UI/UX",
+        "description": "Whether you want a branding website or to deploy a dynamically-enhanced web portal, our website designers and developers are well-versed with the latest technologies."
+      },
+      "website_ui_ux": {
+        "title": "Website UI/UX",
+        "description": "Whether you want a branding website or to deploy a dynamically-enhanced web portal, our website designers and developers are well-versed with the latest technologies."
+      },
+      "wireframing": {
+        "title": "Wireframing",
+        "description": "Whether you want a branding website or to deploy a dynamically-enhanced web portal, our website designers and developers are well-versed with the latest technologies."
+      },
+      "prototyping": {
+        "title": "Prototyping",
+        "description": "Whether you want a branding website or to deploy a dynamically-enhanced web portal, our website designers and developers are well-versed with the latest technologies."
+      },
+      "product_design": {
+        "title": "Product Design",
+        "description": "Whether you want a branding website or to deploy a dynamically-enhanced web portal, our website designers and developers are well-versed with the latest technologies."
+      }
+    },
+    "tell_us_about_your_project": {
+      "title": "Tell Us About Your Project",
+      "button": "Contact Us"
+    },
+    "establish_brand_values": {
+      "title": "Establish Brand Values",
+      "content": "With dependable, consistent designs, you can define your brand differentiators and develop confidence among your target customers."
+    },
+    "responsive_accessible_designs": {
+      "title": "Provide Responsive and Accessible User Interface Designs",
+      "content": "Provide responsive and accessible user interface designs for your product to convert visitors into buyers. By facilitating productive interactions and providing stunning aesthetics, excellent UI encourages users to return."
+    },
+    "our_ui_ux_design_services": {
+      "title": "Our UI/UX Design Services Can Do Wonders",
+      "content": "Dedicated teams to collaborate with our UI/UX designers."
+    },
+    "hire_dedicated_developers": {
+      "title": "Hire Dedicated Developers",
+      "frontend": "Hire Frontend Developers",
+      "backend": "Hire Backend Developers",
+      "fullstack": "Hire Fullstack Developers",
+      "mean_stack": "Hire MEAN Stack Developers",
+      "mern_stack": "Hire MERN Stack Developers",
+      "nodejs": "Hire Node.js Developers",
+      "reactjs": "Hire React.js Developers"
+    },
+    "revamp_digital_presence": {
+      "title": "Revamp Your Digital Presence with Premium UI/UX Services",
+      "content": "Unleash the potential of outstanding design! Opt for our top-tier UI/UX services and observe your user engagement skyrocket.",
+      "button": "Let’s Discuss"
+    },
+    "ever_trusting_process": {
+      "title": "Ever-trusting UI/UX Design Process",
+      "content": "At Sharp Innovation, we make sure to respect the art of implementing experiences that always be remembered by our dear customers. And hence our UI/UX design process is completely based on deep industry research."
+    },
+    "user_testing": {
+      "title": "User Testing",
+      "description": "Define your users, determine their requirements and issues, and learn how your technology might assist them."
+    },
+    "designing_an_interface": {
+      "title": "Designing an Interface",
+      "description": "Creating the most desirable and unique user interface’s structural, compositional, and visual design."
+    },
+    "prototyping": {
+      "title": "Prototyping",
+      "description": "Using high-fidelity previews while keeping the end product in mind to create effective wireframes and prototypes."
+    },
+    "usability_research": {
+      "title": "Usability Research",
+      "description": "Create test cases to ensure perfect usability of your product while resolving concerns or issues that arrive during the journey."
+    },
+    "launch_assessment": {
+      "title": "Launch & Assessment",
+      "description": "Publish the UI design and undertake ongoing analysis to see how well it fits the demands of the users."
+    },
+    "industry_wise_services": {
+      "title": "UI/UX Designing Services for Different Industries",
+      "healthcare": "Healthcare Software Development Services",
+      "manufacturing": "Manufacturing Software Development Services",
+      "education": "Education Software Development Services",
+      "fintech": "Fintech Development Services",
+      "entertainment": "Entertainment Web & App Development Services",
+      "ecommerce": "E-Commerce Development Services"
+    }
+  }
+    
+}

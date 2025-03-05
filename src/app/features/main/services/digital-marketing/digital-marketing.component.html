@@ -1,0 +1,254 @@
+<div class="container-fluid bg-light py-5">
+    <div class="container py-5">
+      <!-- Title and Introduction -->
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
+          <h1 class="mb-4 display-5 text-primary">
+            <i class="fas fa-chart-line me-2"></i>{{ 'digital_marketing_services.title' | translate }}
+          </h1>
+          <p class="mb-4 text-muted">{{ 'digital_marketing_services.intro' | translate }}</p>
+          <a class="btn btn-primary rounded-pill px-4 py-2 shadow-lg" href="#">
+            {{ 'digital_marketing_services.cta' | translate }}
+          </a>
+        </div>
+        <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.2s">
+          <img src="assets/images/digital-marketing.png" alt="Digital Marketing Services" class="img-fluid rounded shadow">
+        </div>
+      </div>
+  
+      <!-- Carve Experiences Section -->
+      <div class="row mt-5 text-center">
+        <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.2s">
+          <h2 class="mb-3 text-primary">
+            <i class="fas fa-pencil-ruler me-2"></i>{{ 'digital_marketing_services.carve_experiences.title' | translate }}
+          </h2>
+          <p class="text-muted">{{ 'digital_marketing_services.carve_experiences.content' | translate }}</p>
+        </div>
+      </div>
+  
+      <!-- Services Section -->
+      <div class="row g-5 mt-5">
+        <div class="col-lg-12">
+          <h3 class="mb-4 text-center text-primary wow fadeInUp">
+            <i class="fas fa-cogs me-2"></i>{{ 'digital_marketing_services.services_section' | translate }}
+          </h3>
+          <div class="row g-4">
+            <div
+              *ngFor="let service of ['search_engine_marketing', 'social_media_marketing', 'online_reputation_management', 'web_conversion_optimization', 'content_marketing_services', 'authority_building_pr']; let i = index"
+              class="col-md-6 col-lg-4 wow zoomIn"
+              [attr.data-wow-delay]="(0.2 + i * 0.1) + 's'"
+            >
+              <div class="service-item text-center p-4 bg-white shadow rounded h-100">
+                <div class="service-icon mb-3">
+                  <i
+                    class="fas"
+                    [ngClass]="{
+                      'fa-search': service === 'search_engine_marketing',
+                      'fa-hashtag': service === 'social_media_marketing',
+                      'fa-shield-alt': service === 'online_reputation_management',
+                      'fa-chart-line': service === 'web_conversion_optimization',
+                      'fa-pen-nib': service === 'content_marketing_services',
+                      'fa-bullhorn': service === 'authority_building_pr'
+                    }"
+                  ></i>
+                </div>
+                <h5 class="mb-3 text-primary">
+                  {{ ('digital_marketing_services.services.' + service + '.title') | translate }}
+                </h5>
+                <p class="text-muted">{{ ('digital_marketing_services.services.' + service + '.description') | translate }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Tell Us About Your Project Section -->
+      <div class="row mt-5 text-center">
+        <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.3s">
+          <h2 class="text-primary">
+            <i class="fas fa-lightbulb me-2"></i>{{ 'digital_marketing_services.tell_us_about_your_project.title' | translate }}
+          </h2>
+          <a class="btn btn-success rounded-pill px-4 py-2 shadow-lg" href="#">
+            {{ 'digital_marketing_services.tell_us_about_your_project.button' | translate }}
+          </a>
+        </div>
+      </div>
+  
+      <!-- Industry-Wise Services Section -->
+      <div class="row mt-5">
+        <div class="col-lg-12">
+          <h3 class="mb-4 text-primary text-center">
+            <i class="fas fa-industry me-2"></i>{{ 'digital_marketing_services.industry_wise_services.title' | translate }}
+          </h3>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div
+          *ngFor="let industry of ['healthcare', 'manufacturing', 'education', 'fintech', 'entertainment', 'ecommerce']; let i = index"
+          class="col-md-6 col-lg-4 wow fadeInUp"
+          [attr.data-wow-delay]="(0.2 + i * 0.1) + 's'"
+        >
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body text-center">
+              <div class="icon-container mb-3">
+                <i
+                  class="fas text-primary fs-3"
+                  [ngClass]="{
+                    'fa-stethoscope': industry === 'healthcare',
+                    'fa-industry': industry === 'manufacturing',
+                    'fa-graduation-cap': industry === 'education',
+                    'fa-credit-card': industry === 'fintech',
+                    'fa-film': industry === 'entertainment',
+                    'fa-shopping-cart': industry === 'ecommerce'
+                  }"
+                ></i>
+              </div>
+              <h5 class="card-title text-primary">
+                {{ ('digital_marketing_services.industry_wise_services.' + industry) | translate }}
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Revolutionise Digital Marketing Section -->
+      <div class="row mt-5 text-center">
+        <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.4s">
+          <h2 class="text-primary">
+            <i class="fas fa-rocket me-2"></i>{{ 'digital_marketing_services.revolutionise_digital_marketing.title' | translate }}
+          </h2>
+          <p class="text-muted mb-4">{{ 'digital_marketing_services.revolutionise_digital_marketing.content' | translate }}</p>
+          <a class="btn btn-primary rounded-pill px-4 py-2 shadow-lg" href="#">
+            {{ 'digital_marketing_services.revolutionise_digital_marketing.button' | translate }}
+          </a>
+        </div>
+      </div>
+  
+      <!-- Four Pillars Section -->
+      <div class="row mt-5">
+        <div class="col-lg-12 text-center">
+          <h3 class="mb-3 text-primary">
+            <i class="fas fa-shield-alt me-2"></i>{{ 'digital_marketing_services.four_pillars.title' | translate }}
+          </h3>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div
+          *ngFor="let pillar of ['effective_delivery_models', 'data_driven_analytics', 'marketing_automation', 'technology']; let i = index"
+          class="col-md-6 col-lg-3 wow fadeInUp"
+          [attr.data-wow-delay]="(0.2 + i * 0.1) + 's'"
+        >
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body text-center">
+              <div class="icon-container mb-3">
+                <i
+                  class="fas text-primary fs-3"
+                  [ngClass]="{
+                    'fa-truck': pillar === 'effective_delivery_models',
+                    'fa-chart-bar': pillar === 'data_driven_analytics',
+                    'fa-cogs': pillar === 'marketing_automation',
+                    'fa-microchip': pillar === 'technology'
+                  }"
+                ></i>
+              </div>
+              <h5 class="card-title text-primary">
+                {{ ('digital_marketing_services.four_pillars.' + pillar + '.title') | translate }}
+              </h5>
+              <p class="text-muted">
+                {{ ('digital_marketing_services.four_pillars.' + pillar + '.description') | translate }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- What Comes With Our Services Section -->
+      <div class="row mt-5">
+        <div class="col-lg-12 text-center">
+          <h3 class="mb-3 text-primary">
+            <i class="fas fa-check-circle me-2"></i>{{ 'digital_marketing_services.what_comes_with_our_services.title' | translate }}
+          </h3>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div
+          *ngFor="let feature of ['diversified_professionals', 'significant_industrial_exposure', 'scaling_solutions', 'optimized_conversions']; let i = index"
+          class="col-md-6 col-lg-3 wow fadeInUp"
+          [attr.data-wow-delay]="(0.2 + i * 0.1) + 's'"
+        >
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body text-center">
+              <div class="icon-container mb-3">
+                <i
+                  class="fas text-primary fs-3"
+                  [ngClass]="{
+                    'fa-users': feature === 'diversified_professionals',
+                    'fa-building': feature === 'significant_industrial_exposure',
+                    'fa-expand': feature === 'scaling_solutions',
+                    'fa-chart-line': feature === 'optimized_conversions'
+                  }"
+                ></i>
+              </div>
+              <h5 class="card-title text-primary">
+                {{ ('digital_marketing_services.what_comes_with_our_services.' + feature + '.title') | translate }}
+              </h5>
+              <p class="text-muted">
+                {{ ('digital_marketing_services.what_comes_with_our_services.' + feature + '.description') | translate }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Why Sharp Innovation Section -->
+      <div class="row mt-5">
+        <div class="col-lg-12 text-center">
+          <h3 class="mb-3 text-primary">
+            <i class="fas fa-question-circle me-2"></i>{{ 'digital_marketing_services.why_Sharp Innovation.title' | translate }}
+          </h3>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div
+          *ngFor="let reason of ['progress_oriented', 'creative_interactive_teams', 'efficient_strategies', 'in_depth_analysis']; let i = index"
+          class="col-md-6 col-lg-3 wow fadeInUp"
+          [attr.data-wow-delay]="(0.2 + i * 0.1) + 's'"
+        >
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body text-center">
+              <div class="icon-container mb-3">
+                <i
+                  class="fas text-primary fs-3"
+                  [ngClass]="{
+                    'fa-tachometer-alt': reason === 'progress_oriented',
+                    'fa-paint-brush': reason === 'creative_interactive_teams',
+                    'fa-cogs': reason === 'efficient_strategies',
+                    'fa-search': reason === 'in_depth_analysis'
+                  }"
+                ></i>
+              </div>
+              <h5 class="card-title text-primary">
+                {{ ('digital_marketing_services.why_Sharp Innovation.' + reason + '.title') | translate }}
+              </h5>
+              <p class="text-muted">
+                {{ ('digital_marketing_services.why_Sharp Innovation.' + reason + '.description') | translate }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Elevate Your Brand Section -->
+      <div class="row mt-5 text-center">
+        <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.5s">
+          <h2 class="text-primary">
+            <i class="fas fa-star me-2"></i>{{ 'digital_marketing_services.elevate_your_brand.title' | translate }}
+          </h2>
+          <p class="text-muted mb-4">{{ 'digital_marketing_services.elevate_your_brand.content' | translate }}</p>
+          <a class="btn btn-primary rounded-pill px-4 py-2 shadow-lg" href="#">
+            {{ 'digital_marketing_services.elevate_your_brand.button' | translate }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>

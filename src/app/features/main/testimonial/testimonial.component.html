@@ -1,0 +1,42 @@
+<!-- Testimonial Start -->
+<div class="container-xxl py-5">
+    <div class="container py-5">
+      <div class="row g-5">
+        <!-- Testimonial Introduction Section -->
+        <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+          <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">
+            {{ 'TESTIMONIAL.TITLE' | translate }}
+          </div>
+          <h1 class="mb-4">{{ 'TESTIMONIAL.SUBTITLE' | translate }}</h1>
+          <p class="mb-4">{{ 'TESTIMONIAL.DESCRIPTION' | translate }}</p>
+          <a class="btn btn-primary rounded-pill px-4" href="">
+            {{ 'TESTIMONIAL.READ_MORE' | translate }}
+          </a>
+        </div>
+  
+        <!-- Testimonial Carousel Section -->
+        <div class="col-lg-7" data-wow-delay="0.5s">
+          <div class="owl-carousel testimonial-carousel border-start border-primary">
+            <div *ngFor="let testimonial of testimonials" class="testimonial-item ps-5">
+              <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+              <p class="fs-4">{{ testimonial.feedback | translate }}</p>
+              <div class="d-flex align-items-center">
+                <img
+                  class="img-fluid flex-shrink-0 rounded-circle"
+                  [src]="testimonial.image"
+                  [alt]="testimonial.clientName | translate"
+                  style="width: 60px; height: 60px;"
+                />
+                <div class="ps-3">
+                  <h5 class="mb-1">{{ testimonial.clientName | translate }}</h5>
+                  <span>{{ testimonial.profession | translate }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Testimonial End -->
+  

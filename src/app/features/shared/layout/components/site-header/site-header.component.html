@@ -1,0 +1,135 @@
+<div class="container-fluid sticky-top">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark p-0">
+      <!-- Brand -->
+      <a (click)="pathService.navigateToAbout('home')" class="navbar-brand">
+        <h1 class="text-white">{{ 'TITLE' | translate }}</h1>
+      </a>
+      <div class="language-toggle show-on-mobile">
+        <div class="switch">
+          <input id="language-toggle" style="width: 90px;" type="checkbox"
+          [checked]="currentLang === 'ar'"
+          (change)="switchLanguage(currentLang === 'en' ? 'ar' : 'en')" class="check-toggle check-toggle-round-flat" >
+          <label for="language-toggle"></label>
+          <span class="on">{{ 'EN'}}</span>
+          <span class="off">{{ 'AR'  }}</span>
+        </div>
+      </div>
+      <!-- Mobile Toggle Button -->
+      <button
+        type="button"
+        class="navbar-toggler ms-auto me-0"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarCollapse" >
+        <div class="navbar-nav ms-auto">
+          <!-- Other Links -->
+          <a routerLink="/home" routerLinkActive="active" class="nav-item nav-link">
+            {{ 'HOME' | translate }}
+          </a>
+          <a routerLink="/about" routerLinkActive="active" class="nav-item nav-link">
+            {{ 'ABOUT' | translate }}
+          </a>
+
+          <!-- Services Dropdown -->
+          <div
+            class="nav-item dropdown"
+            [ngClass]="{ show: isServicesHovered }"
+            (mouseenter)="toggleDropdown(true)"
+            (mouseleave)="toggleDropdown(false)"
+          >
+            <a class="nav-link dropdown-toggle">{{ 'SERVICES' | translate }}</a>
+            <div
+              class="dropdown-menu service-menu"
+              [ngClass]="{ show: isServicesHovered }"
+            >
+              <div class="row p-3">
+                <!-- Custom Software Developers -->
+                <div class="col-lg-6 border-end">
+                  <h6 class="mb-3 text-primary">
+                    <i class="fas fa-laptop-code me-2"></i> {{ 'CUSTOM_SOFTWARE_DEVELOPERS' | translate }}
+                  </h6>
+                  <a class="dropdown-item py-2 px-3" routerLinkActive="active" routerLink="/services/web-app-development">
+                    <i class="fas fa-globe me-2"></i> {{ 'WEB_APP_DEVELOPMENT' | translate }}
+                  </a>
+                  <a class="dropdown-item py-2 px-3" routerLinkActive="active" routerLink="/services/mobile-app-development">
+                    <i class="fas fa-mobile-alt me-2"></i> {{ 'MOBILE_APP_DEVELOPMENT' | translate }}
+                  </a>
+                  <a class="dropdown-item py-2 px-3"  routerLinkActive="active" routerLink="/services/cloud-development">
+                    <i class="fas fa-cloud me-2"></i> {{ 'CLOUD_DEVELOPMENT' | translate }}
+                  </a>
+                </div>
+
+                <!-- Digital Transformation -->
+                <div class="col-lg-6">
+                  <h6 class="fw-bold mb-3 text-primary">
+                    <i class="fas fa-chart-line me-2"></i> {{ 'DIGITAL_TRANSFORMATION' | translate }}
+                  </h6>
+                  <a class="dropdown-item py-2 px-3" routerLinkActive="active" routerLink="/services/chatbot-development"  >
+                    <i class="fas fa-robot me-2"></i> {{ 'CHATBOT_DEVELOPMENT' | translate }}
+                  </a>
+                  <a class="dropdown-item py-2 px-3" routerLinkActive="active"  routerLink="/services/digital-marketing-services">
+                    <i class="fas fa-bullhorn me-2"></i> {{ 'DIGITAL_MARKETING' | translate }}
+                  </a>
+                  <a class="dropdown-item py-2 px-3"  routerLinkActive="active"  routerLink="/services/ui-development">
+                    <i class="fas fa-pencil-ruler me-2"></i> {{ 'UI_UX_DESIGNING' | translate }}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Other Links -->
+          <a routerLink="/project" routerLinkActive="active" class="nav-item nav-link">
+            {{ 'PROJECTS' | translate }}
+          </a>
+          <a routerLink="/Careers" routerLinkActive="active" class="nav-item nav-link">
+            {{ 'CAREERS' | translate }}
+          </a>
+
+          <!-- Pages Dropdown -->
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+              {{ 'PAGES' | translate }}
+            </a>
+            <div class="dropdown-menu bg-light mt-2">
+              <a (click)="pathService.navigateToAbout('feature')" class="dropdown-item">
+                {{ 'FEATURES' | translate }}
+              </a>
+              <a (click)="pathService.navigateToAbout('team')" class="dropdown-item">
+                {{ 'OUR_TEAM' | translate }}
+              </a>
+              <a (click)="pathService.navigateToAbout('faq')" class="dropdown-item">
+                {{ 'FAQS' | translate }}
+              </a>
+              <a (click)="pathService.navigateToAbout('testimonial')" class="dropdown-item">
+                {{ 'TESTIMONIALS' | translate }}
+              </a>
+            </div>
+          </div>
+
+          <a routerLink="/contact" routerLinkActive="active" class="nav-item nav-link">
+            {{ 'CONTACT' | translate }}
+          </a>
+
+          <!-- Language Toggle Switch -->
+          <div class="nav-item language-toggle hide-on-mobile">
+            <div class="switch">
+              <input id="language-toggle" type="checkbox"
+              [checked]="currentLang === 'ar'"
+              (change)="switchLanguage(currentLang === 'en' ? 'ar' : 'en')" class="check-toggle check-toggle-round-flat" >
+              <label for="language-toggle"></label>
+              <span class="on">{{ 'EN'}}</span>
+              <span class="off">{{ 'AR'  }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>

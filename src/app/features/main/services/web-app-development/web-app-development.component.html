@@ -1,0 +1,219 @@
+<div class="container-fluid bg-light py-5">
+    <div class="container py-5">
+      <!-- Title and Introduction -->
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
+          <h1 class="mb-4 display-7 text-primary">
+            <i class="fas fa-laptop-code me-2"></i>{{ 'web_development_company.title' | translate }}
+          </h1>
+          <p class="mb-4 text-muted">{{ 'web_development_company.intro' | translate }}</p>
+          <a class="btn btn-primary rounded-pill px-4 py-2 shadow-lg" href="#">
+            {{ 'web_development_company.cta' | translate }}
+          </a>
+        </div>
+        <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.2s">
+          <img src="../../../../../assets/img/Web-Development.jpeg" alt="Mobile App Development" class="img-fluid rounded shadow">
+        </div>
+      </div>
+  
+      <!-- Business-Driven Section -->
+      <div class="row mt-5 text-center">
+        <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.2s">
+          <h2 class="mb-3 text-primary">
+            <i class="fas fa-briefcase me-2"></i>{{ 'web_development_company.business_driven.title' | translate }}
+          </h2>
+          <p class="text-muted">{{ 'web_development_company.business_driven.content' | translate }}</p>
+        </div>
+      </div>
+  
+      <!-- Services Section -->
+      <div class="row g-5 mt-5">
+        <div class="col-lg-12">
+          <h3 class="mb-4 text-center text-primary wow fadeInUp">
+            <i class="fas fa-cogs me-2"></i>{{ 'web_development_company.services_section' | translate }}
+          </h3>
+          <div class="row g-4">
+            <div
+              *ngFor="let service of ['web_app_designing', 'features_api', 'frontend_development', 'backend_development', 'optimization_maintenance', 'dedicated_cms']; let i = index"
+              class="col-md-4 wow zoomIn"
+              [attr.data-wow-delay]="(0.2 + i * 0.1) + 's'"
+            >
+              <div class="service-item text-center p-4 bg-white shadow rounded h-100">
+                <div class="service-icon mb-3">
+                  <i
+                    class="fas"
+                    [ngClass]="{
+                      'fa-paint-brush': service === 'web_app_designing',
+                      'fa-plug': service === 'features_api',
+                      'fa-code': service === 'frontend_development',
+                      'fa-server': service === 'backend_development',
+                      'fa-tools': service === 'optimization_maintenance',
+                      'fa-edit': service === 'dedicated_cms'
+                    }"
+                  ></i>
+                </div>
+                <h5 class="mb-3 text-primary">
+                  {{ ('web_development_company.services.' + service + '.title') | translate }}
+                </h5>
+                <p class="text-muted">{{ ('web_development_company.services.' + service + '.description') | translate }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Call to Action Section -->
+      <div class="row mt-5 text-center">
+        <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.3s">
+          <h2 class="text-primary">
+            <i class="fas fa-lightbulb me-2"></i>{{ 'web_development_company.cta_lets_create.title' | translate }}
+          </h2>
+          <p class="text-muted mb-4">{{ 'web_development_company.cta_lets_create.content' | translate }}</p>
+          <a class="btn btn-success rounded-pill px-4 py-2 shadow-lg" href="#">
+            {{ 'web_development_company.cta_lets_create.button' | translate }}
+          </a>
+        </div>
+      </div>
+  
+      <!-- Core Values Section -->
+      <div class="row g-5 mt-5">
+        <div
+          *ngFor="let coreValue of ['cloud_native', 'consistent_management', 'agile_mindset']; let i = index"
+          class="col-md-4 wow fadeIn"
+          [attr.data-wow-delay]="(0.2 + i * 0.1) + 's'"
+        >
+          <div class="p-4 bg-white shadow rounded h-100 text-center">
+            <div class="core-icon mb-3">
+              <i
+                class="fas"
+                [ngClass]="{
+                  'fa-cloud': coreValue === 'cloud_native',
+                  'fa-tasks': coreValue === 'consistent_management',
+                  'fa-sync-alt': coreValue === 'agile_mindset'
+                }"
+              ></i>
+            </div>
+            <h5 class="text-primary">
+              {{ ('web_development_company.core_values.' + coreValue + '.title') | translate }}
+            </h5>
+            <p class="text-muted">
+              {{ ('web_development_company.core_values.' + coreValue + '.description') | translate }}
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Industry-Wise Services -->
+      <div class="row mt-5">
+        <div class="col-lg-12">
+          <h3 class="mb-4 text-primary text-center">
+            <i class="fas fa-industry me-2"></i>{{ 'web_development_company.industry_wise_services.title' | translate }}
+          </h3>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div
+          *ngFor="let industry of ['healthcare', 'manufacturing', 'education', 'fintech', 'entertainment', 'ecommerce']; let i = index"
+          class="col-md-4 wow fadeInUp"
+          [attr.data-wow-delay]="(0.2 + i * 0.1) + 's'"
+        >
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body text-center">
+              <div class="icon-container mb-3">
+                <i
+                  class="fas text-primary fs-3"
+                  [ngClass]="{
+                    'fa-stethoscope': industry === 'healthcare',
+                    'fa-industry': industry === 'manufacturing',
+                    'fa-graduation-cap': industry === 'education',
+                    'fa-credit-card': industry === 'fintech',
+                    'fa-film': industry === 'entertainment',
+                    'fa-shopping-cart': industry === 'ecommerce'
+                  }"
+                ></i>
+              </div>
+              <h5 class="card-title text-primary">
+                {{ ('web_development_company.industry_wise_services.' + industry) | translate }}
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Digital Transformation Services -->
+      <div class="row mt-5">
+        <div class="col-lg-12">
+          <h3 class="mb-4 text-primary text-center">
+            <i class="fas fa-digital-tachograph me-2"></i>{{ 'web_development_company.digital_transformation_services.title' | translate }}
+          </h3>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div
+          *ngFor="let service of ['custom_software', 'mobile_app', 'digital_transformation', 'ui_ux_designing']; let i = index"
+          class="col-md-4 wow fadeInUp"
+          [attr.data-wow-delay]="(0.2 + i * 0.1) + 's'"
+        >
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body text-center">
+              <div class="icon-container mb-3">
+                <i
+                  class="fas text-primary fs-3"
+                  [ngClass]="{
+                    'fa-cogs': service === 'custom_software',
+                    'fa-mobile-alt': service === 'mobile_app',
+                    'fa-sync': service === 'digital_transformation',
+                    'fa-pencil-ruler': service === 'ui_ux_designing'
+                  }"
+                ></i>
+              </div>
+              <h5 class="card-title text-primary">
+                {{ ('web_development_company.digital_transformation_services.' + service) | translate }}
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row mt-5">
+        <div class="col-lg-12 text-center">
+          <h3 class="mb-3 text-primary">
+            <i class="fas fa-users-cog me-2"></i>{{ 'web_development_company.dedicated_developers.title' | translate }}
+          </h3>
+          <p class="text-muted">
+            {{ 'web_development_company.dedicated_developers.description' | translate }}
+          </p>
+        </div>
+      </div>
+      <div class="row g-3 mt-4">
+        <div
+          *ngFor="let devService of ['frontend', 'backend', 'fullstack', 'mean_stack', 'mern_stack', 'nodejs', 'reactjs']; let i = index"
+          class="col-md-4 col-lg-3 wow fadeInUp"
+          [attr.data-wow-delay]="(0.2 + i * 0.1) + 's'"
+        >
+          <div class="d-flex align-items-center p-3 shadow-sm bg-white rounded h-100">
+            <div class="icon-container text-primary me-3">
+              <i
+                class="fas fs-4"
+                [ngClass]="{
+                  'fa-code': devService === 'frontend',
+                  'fa-database': devService === 'backend',
+                  'fa-layer-group': devService === 'fullstack',
+                  'fa-project-diagram': devService === 'mean_stack',
+                  'fa-sitemap': devService === 'mern_stack',
+                  'fa-node-js': devService === 'nodejs',
+                  'fa-react': devService === 'reactjs'
+                }"
+              ></i>
+            </div>
+            <div>
+              <h6 class="mb-0 text-primary">
+                {{ ('web_development_company.dedicated_developers.services.' + devService) | translate }}
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
