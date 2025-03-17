@@ -1,0 +1,22 @@
+
+  
+  /* Hover effect: text turns white */
+  .service-item:hover h5,
+  .service-item:hover p {
+    color: #fff !important;
+  }
+  
+  /* Keep the icon and button unchanged */
+  .service-item:hover i {
+    color: inherit;
+  }
+  
+  .service-item a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .service-item a:hover {
+    color: #0056b3;
+  }
+  

@@ -17,6 +17,8 @@ import { WhyChooseUsComponent } from './why-choose-us/why-choose-us.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CareersComponent } from './careers/careers.component';
+import { ClientsPageComponent } from './clients-page/clients-page.component';
+import { CoreServiceComponent } from './core-service/core-service.component';
 
 
 
@@ -33,7 +35,9 @@ import { CareersComponent } from './careers/careers.component';
     ProjectsComponent,
     NewsletterComponent,
     WhyChooseUsComponent,
-    CareersComponent
+    CareersComponent,
+    ClientsPageComponent,
+    CoreServiceComponent
   ],
   imports: [
     CommonModule,

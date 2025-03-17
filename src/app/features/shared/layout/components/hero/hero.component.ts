@@ -11,6 +11,7 @@ export class HeroComponent implements OnInit {
   pageTitle: string = '';
   breadcrumbs: { label: string; url: string }[] = [];
   showHero: boolean = false;
+  heroImageSrc: string = ''; // Property for hero image source
 
   constructor(private router: Router, private route: ActivatedRoute) {}
 
@@ -38,6 +39,11 @@ export class HeroComponent implements OnInit {
     // Set page title
     const lastSegment = urlSegments[urlSegments.length - 1];
     this.pageTitle = this.getCustomLabel(lastSegment) || this.capitalize(lastSegment);
+    const cleanPageTitle = this.pageTitle.replace('PAGE_TITLE.', '').toLowerCase();
+
+    // Update hero image source based on the cleaned page title
+    this.heroImageSrc = `../../../../assets/img/${cleanPageTitle}.png`;
+console.log(this.heroImageSrc,'hero');
 
     // Generate breadcrumbs
     let accumulatedUrl = '';

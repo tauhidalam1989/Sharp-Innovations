@@ -12,7 +12,8 @@ export class SiteHeaderComponent implements OnInit {
   currentLang: string = 'en';
   isServicesHovered = false;
 
-
+// Add this property to your component class
+selectedCategory: any = null;
   constructor(
     private router: Router,
     public pathService: RoutingService,
@@ -44,10 +45,21 @@ export class SiteHeaderComponent implements OnInit {
     this.currentLang = lang;
   }
 
-  // Toggle dropdown on hover
-  toggleDropdown(isHovered: boolean): void {
-    this.isServicesHovered = isHovered;
+
+isIotHovered = false;
+isProductsHovered = false;
+isservicing=false
+toggleDropdown(menu: string, state: boolean) {
+  switch (menu) {
+    case 'isservicing':
+      this.isservicing = state;
+      break;
+    case 'iot':
+      this.isIotHovered = state;
+      break;
+    case 'products':
+      this.isProductsHovered = state;
+      break;
   }
-
-
+}
 }

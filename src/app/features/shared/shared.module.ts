@@ -8,6 +8,7 @@ import { NewsletterComponent } from '../main/newsletter/newsletter.component';
 import { HeroComponent } from './layout/components/hero/hero.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { TypingEffectComponent } from './components/typing-effect/typing-effect.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     SiteFooterComponent,
     MainLayoutComponent,
     HeroComponent,
+    TypingEffectComponent,
   ],
   imports: [
     CommonModule,
@@ -23,7 +25,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     TranslateModule,
     CarouselModule
   ],
-  exports:[SiteFooterComponent,TranslateModule],
+  exports:[SiteFooterComponent,TranslateModule,TypingEffectComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA],
 })
 export class SharedModule { }

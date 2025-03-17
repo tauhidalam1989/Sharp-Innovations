@@ -2,6 +2,7 @@
 <!-- Hero Start -->
 <!-- Hero Section Start -->
 <!-- Hero Section Start -->
+
 <div class="container-fluid pt-5 bg-primary hero-header mb-5">
   <div class="container-fluid ">
     <div
@@ -12,24 +13,13 @@
       <!-- Indicators -->
       <div class="carousel-indicators">
         <button
+          *ngFor="let slide of slides; let i = index"
           type="button"
           data-bs-target="#heroCarousel"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#heroCarousel"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#heroCarousel"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
+          [attr.data-bs-slide-to]="i"
+          [class.active]="i === activeSlideIndex"
+          (click)="changeSlide(i)"
+          [attr.aria-label]="'Slide ' + (i + 1)"
         ></button>
       </div>
 
@@ -46,7 +36,14 @@
                 {{ slide.tagline | translate }}
               </div>
               <h1 class="display-4 text-white mb-4 slideInRight">
-                {{ slide.title | translate }}
+               {{ slide.title | translate}}
+<!--                 
+                <app-typing-effect
+                [uniqueKey]="i"
+                [index]="i"
+                [text]="slide.title | translate"
+                [activeIndex]="activeSlideIndex"
+              ></app-typing-effect> -->
               </h1>
               <p class="text-white mb-4 slideInRight">
                 {{ slide.description | translate }}

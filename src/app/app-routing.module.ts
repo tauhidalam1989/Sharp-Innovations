@@ -18,6 +18,11 @@ const routes: Routes = [
     component: MainLayoutComponent,
     children: [
       {
+        path: "",
+        redirectTo: "home", // Redirect to 'home'
+        pathMatch: "full",
+      },
+      {
         path: "about",
         component: AboutComponent,
       },

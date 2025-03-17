@@ -1,0 +1,20 @@
+<div class="page-container">
+  <div class="content-left">
+    <h2>Our Happy Clients</h2>
+    <p>We Cooperate with top Clients and provide access to over 100+ Countries.</p>
+  </div>
+<div class="carousel-wrapper">
+  <button class="nav-button prev" (click)="slide('prev')">←</button>
+  <div class="carousel-container">
+    <div class="carousel-track" [@scrollAnimation]="animationState">
+      <div class="carousel-item" *ngFor="let logo of logos">
+        <img [src]="logo" alt="Client Logo">
+      </div>
+      <div class="carousel-item" *ngFor="let logo of logos">
+        <img [src]="logo" alt="Client Logo">
+      </div>
+    </div>
+  </div>
+  <button class="nav-button next" (click)="slide('next')">→</button>
+</div>
+</div>

@@ -1,0 +1,13 @@
+.typing-effect {
+    border-right: .15em solid white; /* Cursor */
+    white-space: nowrap; /* Keep text in one line */
+    overflow: hidden; /* Hide overflow */
+    letter-spacing: .15em; /* Adjust spacing between letters */
+    animation: blink-caret .75s step-end infinite;
+}
+
+/* Blinking cursor animation */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}

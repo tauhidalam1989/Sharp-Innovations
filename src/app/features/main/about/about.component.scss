@@ -1,0 +1,10 @@
+.header-container {
+    display: flex;
+    align-items: center; /* Aligns the image and heading vertically */
+}
+
+.icon {
+    margin-right: 10px; /* Adds some space between the image and the heading */
+    height: auto; /* Adjust the height of the icon to match the heading size */
+    width: 46px; /* Adjust the width of the icon to match the heading size */
+}

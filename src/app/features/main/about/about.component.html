@@ -1,12 +1,12 @@
 
 <!-- About Start -->
-<div data-aos="animation_name" class="container-fluid py-5">
-    <div class="container py-5">
+<div data-aos="animation_name" class="container-fluid">
+    <div class="container py-5 ">
         <div class="row g-5 align-items-center">
             <!-- Image Section -->
             <div class="col-lg-6 wow fadeIn" [attr.data-wow-delay]="'0.1s'">
-                <div class="about-img">
-                    <img class="img-fluid" [src]="'../../../../assets/img/about-img.jpg'" alt="About Image">
+                <div class="">
+                    <img class="img-fluid" [src]="'../../../../assets/img/about-sharp.png'" alt="About Image">
                 </div>
             </div>
             <!-- Content Section -->
@@ -30,34 +30,9 @@
                     <a class="btn btn-outline-primary btn-square me-3" href="#"><i class="fab fa-instagram"></i></a>
                     <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
+   
             </div>
-            <div class="col-lg-12 wow fadeIn" [attr.data-wow-delay]="'0.5s'">
-          
-                <h1 class="mb-4">{{ 'about_page.focus' | translate }}</h1>
-
-                <!-- Label 1 -->
-                <h4 class="mb-3 text-primary">{{ 'about_page.label1' | translate }}</h4>
-                <p class="mb-4">{{ 'about_page.label1_description' | translate }}</p>
-
-                <!-- Label 2 -->
-                <h4 class="mb-3 text-primary">{{ 'about_page.label2' | translate }}</h4>
-                <p class="mb-4">{{ 'about_page.label2_description' | translate }}</p>
-
-                <!-- about_page.Label 3 -->
-                <h4 class="mb-3 text-primary">{{ 'about_page.label3' | translate }}</h4>
-                <p class="mb-4">{{ 'about_page.label3_description' | translate }}</p>
-
-                <!-- about_page.Label 4 -->
-                <h4 class="mb-3 text-primary">{{ 'about_page.label4' | translate }}</h4>
-                <p class="mb-4">{{ 'about_page.label4_description' | translate }}</p>
-
-                <!-- about_page.Label 5 -->
-                <h4 class="mb-3 text-primary">{{ 'about_page.label5' | translate }}</h4>
-                <p class="mb-4">{{ 'about_page.label5_description' | translate }}</p>
-             <i><p class="mb-4">{{ 'about_page.mission' | translate }}</p></i>   
-          
-            </div>
-        </div>
+            <app-core-service></app-core-service>
     </div>
 </div>
 <!-- About End -->
