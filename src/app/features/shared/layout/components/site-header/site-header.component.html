@@ -77,39 +77,38 @@
             </div>
           </div>
         </div>             
-<!-- IoT Services Dropdown -->
  <!-- PRODUCT Dropdown -->
  <div
  class="nav-item dropdown"
- [ngClass]="{ show: isservicing }"
- (mouseenter)="toggleDropdown('isservicing', true)"
- (mouseleave)="toggleDropdown('isservicing', false)"
+ [ngClass]="{ show: isProduct }"
+ (mouseenter)="toggleDropdown('isProduct', true)"
+ (mouseleave)="toggleDropdown('isProduct', false)"
 >
  <a class="nav-link dropdown-toggle">{{ 'PRODUCTS' | translate }}</a>
- <div class="dropdown-menu service-menuiot" [ngClass]="{ show: isservicing }">
+ <div class="dropdown-menu service-menuiot" [ngClass]="{ show: isProduct }">
    <div class="row p-3">
      <!-- Categories Column -->
      <div class="col-md-6 border-end">
-      <div *ngFor="let category of ('products_service' | translate); let i = index">
+      <div *ngFor="let product of ('products_service' | translate); let i = index">
          <h6 class="fw-bold mb-3 text-primary category-item" 
-             (mouseenter)="selectedCategory = category"
-             [ngClass]="{'active': selectedCategory === category}"
+             (mouseenter)="selectedproduct = product"
+             [ngClass]="{'active': selectedproduct === product}"
              #categoryElement>
-           <i [class]="category.icon + ' me-2'"></i> {{ category.key | translate }}
+           <i [class]="product.icon + ' me-2'"></i> {{ product.key | translate }}
          </h6>
         
        </div>
        <div class="banner-container">
          <div class="banner-container">
-           <img class="img-fluid banner-image" [src]="selectedCategory?.img || (('servicing' | translate)[0])?.img" alt="">
+           <img class="img-fluid banner-image" [src]="selectedproduct?.img || (('products_service' | translate)[0])?.img" alt="">
          </div>
        </div>
      </div>
      <!-- Items Column -->
      <div class="col-md-6">
        <a
-       [routerLink]="'services/'+item.path"
-       *ngFor="let item of (selectedCategory?.items || (('servicing' | translate)[0])?.items)"
+       [routerLink]="'/services/'+item.path"
+       *ngFor="let item of (selectedproduct?.items || (('products_service' | translate)[0])?.items)"
        class="dropdown-item py-2 px-3 cursor-pointer d-flex justify-content-between align-items-center "
      >
        <span><i [class]="item.icon + ' me-2'"></i> {{ item.name | translate }}</span>
@@ -119,39 +118,10 @@
    </div>
  </div>
 </div>             
-<!-- Products Dropdown -->
 
-
-
-          <!-- Other Links -->
-          <!-- <a routerLink="/project" routerLinkActive="active" class="nav-item nav-link">
-            {{ 'PROJECTS' | translate }}
-          </a> -->
           <a routerLink="/Careers" routerLinkActive="active" class="nav-item nav-link">
             {{ 'CAREERS' | translate }}
           </a>
-
-          <!-- Pages Dropdown -->
-          <!-- <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-              {{ 'PAGES' | translate }}
-            </a>
-            <div class="dropdown-menu bg-light mt-2">
-              <a (click)="pathService.navigateToAbout('feature')" class="dropdown-item">
-                {{ 'FEATURES' | translate }}
-              </a>
-              <a (click)="pathService.navigateToAbout('team')" class="dropdown-item">
-                {{ 'OUR_TEAM' | translate }}
-              </a>
-              <a (click)="pathService.navigateToAbout('faq')" class="dropdown-item">
-                {{ 'FAQS' | translate }}
-              </a>
-              <a (click)="pathService.navigateToAbout('testimonial')" class="dropdown-item">
-                {{ 'TESTIMONIALS' | translate }}
-              </a>
-            </div>
-          </div> -->
-
           <a routerLink="/contact" routerLinkActive="active" class="nav-item nav-link">
             {{ 'CONTACT' | translate }}
           </a>

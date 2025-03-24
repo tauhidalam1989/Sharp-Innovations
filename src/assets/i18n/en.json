@@ -1025,74 +1025,15 @@
 
 "products_service": [
     {
-      "key": "Finance",
+      "key": "AI Solutions",
       "items": [
-        { "name": "Accounting", "icon": "fas fa-calculator" },
-        { "name": "Invoicing", "icon": "fas fa-file-invoice-dollar" },
-        { "name": "Expenses", "icon": "fas fa-receipt" },
-        { "name": "Spreadsheet (BI)", "icon": "fas fa-table" },
-        { "name": "Documents", "icon": "fas fa-file-alt" },
-        { "name": "Sign", "icon": "fas fa-pen-fancy" }
+        { "name": "Potholes Detection", "icon": "fas fa-calculator" }
       ]
     },
     {
-      "key": "Sales",
+      "key": "Supply Chain",
       "items": [
-        { "name": "CRM", "icon": "fas fa-users" },
-        { "name": "Sales", "icon": "fas fa-shopping-cart" },
-        { "name": "POS Shop", "icon": "fas fa-store" },
-        { "name": "POS Restaurant", "icon": "fas fa-utensils" },
-        { "name": "Subscriptions", "icon": "fas fa-calendar-check" },
-        { "name": "Rental", "icon": "fas fa-car" }
-      ]
-    },
-    {
-      "key": "Website",
-      "items": [
-        { "name": "Website Builder", "icon": "fas fa-laptop-code" },
-        { "name": "eCommerce", "icon": "fas fa-shopping-bag" },
-        { "name": "Blog", "icon": "fas fa-pencil-alt" },
-        { "name": "Forum", "icon": "fas fa-comments" },
-        { "name": "Live Chat", "icon": "fas fa-comment-dots" },
-        { "name": "eLearning", "icon": "fas fa-chalkboard-teacher" }
-      ]
-    },
-    {
-      "key": "Human Resource",
-      "items": [
-        { "name": "Employees", "icon": "fas fa-user-tie" },
-        { "name": "Recruitment", "icon": "fas fa-user-plus" },
-        { "name": "Time Off", "icon": "fas fa-clock" },
-        { "name": "Appraisals", "icon": "fas fa-chart-bar" },
-        { "name": "Referrals", "icon": "fas fa-handshake" },
-        { "name": "Fleet", "icon": "fas fa-shuttle-van" }
-      ]
-    },
-    {
-      "key": "Marketing",
-      "items": [
-        { "name": "Social Marketing", "icon": "fas fa-share-alt" },
-        { "name": "Email Marketing", "icon": "fas fa-envelope-open-text" },
-        { "name": "SMS Marketing", "icon": "fas fa-sms" },
-        { "name": "Events", "icon": "fas fa-calendar-alt" },
-        { "name": "Marketing Automation", "icon": "fas fa-cogs" },
-        { "name": "Surveys", "icon": "fas fa-poll" }
-      ]
-    },
-    {
-      "key": "Services",
-      "items": [
-        { "name": "Project", "icon": "fas fa-project-diagram" },
-        { "name": "Timesheets", "icon": "fas fa-clock" },
-        { "name": "Field Service", "icon": "fas fa-wrench" },
-        { "name": "Helpdesk", "icon": "fas fa-headset" },
-        { "name": "Planning", "icon": "fas fa-calendar-check" },
-        { "name": "Appointments", "icon": "fas fa-user-clock" }
-      ]
-    },
-    {
-      "key": "Supply chain",
-      "items": [
+        { "name": "Assets Management System", "icon": "fas fa-users" },
         { "name": "Inventory", "icon": "fas fa-boxes" },
         { "name": "Manufacturing", "icon": "fas fa-industry" },
         { "name": "PLM", "icon": "fas fa-cube" },
@@ -1102,16 +1043,29 @@
       ]
     },
     {
-      "key": "Productivity",
+      "key": "Management Solutions",
       "items": [
-        { "name": "Discuss", "icon": "fas fa-comments" },
-        { "name": "Approvals", "icon": "fas fa-thumbs-up" },
-        { "name": "IoT", "icon": "fas fa-broadcast-tower" },
-        { "name": "VoIP", "icon": "fas fa-phone-alt" },
-        { "name": "Knowledge", "icon": "fas fa-book" },
-        { "name": "WhatsApp", "icon": "fab fa-whatsapp" }
+        { "name": "Task Management System", "icon": "fas fa-laptop-code" }
+      ]
+    },
+    {
+      "key": "GIS Solutions ",
+      "items": [
+        { "name": "Live Vehicle Tracking ", "icon": "fas fa-user-tie" }
+       
+      ]
+    },
+    {
+      "key": "Human Resource Management ",
+      "items": [
+        { "name": "Human Resource Management  ", "icon": "fas fa-users" }
+       
       ]
     }
+   
+    
+   
+    
   ],
   
   
