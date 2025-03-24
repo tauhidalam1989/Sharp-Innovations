@@ -66,7 +66,7 @@
               <!-- Items Column -->
               <div class="col-md-6">
                 <a
-                [routerLink]="'services/'+item.path"
+                [routerLink]="'/services/'+item.path"
                 *ngFor="let item of (selectedCategory?.items || (('servicing' | translate)[0])?.items)"
                 class="dropdown-item py-2 px-3 cursor-pointer d-flex justify-content-between align-items-center "
               >
@@ -77,71 +77,51 @@
             </div>
           </div>
         </div>             
-<!-- IoT Services Dropdown -->
-
-<!-- Products Dropdown -->
-<div
-  class="nav-item dropdown"
-  [ngClass]="{ show: isServicesHovered }"
-  (mouseenter)="toggleDropdown('products', true)"
-  (mouseleave)="toggleDropdown('products', false)"
+ <!-- PRODUCT Dropdown -->
+ <div
+ class="nav-item dropdown"
+ [ngClass]="{ show: isProduct }"
+ (mouseenter)="toggleDropdown('isProduct', true)"
+ (mouseleave)="toggleDropdown('isProduct', false)"
 >
-  <a class="nav-link dropdown-toggle">{{ 'PRODUCTS' | translate }}</a>
-  <div class="dropdown-menu service-menuiot" [ngClass]="{ show: isProductsHovered }">
-    <div class="row p-3">
-      <!-- Loop through categories -->
-      <div
-        *ngFor="let category of ('products_service' | translate); let i = index"
-        class="col-lg-3 mb-3"
-        [ngClass]="{ 'border-end': (i % 2 === 0) }"
-      >
-        <h6 class="fw-bold mb-3 text-primary">
-          <i class="fas fa-folder-open me-2"></i> {{ category.key | translate }}
-        </h6>
-        <!-- Loop through items with their icons -->
-        <a
-          *ngFor="let item of category.items"
-          class="dropdown-item py-2 px-3"
-        >
-          <i [class]="item.icon + ' me-2'"></i> {{ item.name | translate }}
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
+ <a class="nav-link dropdown-toggle">{{ 'PRODUCTS' | translate }}</a>
+ <div class="dropdown-menu service-menuiot" [ngClass]="{ show: isProduct }">
+   <div class="row p-3">
+     <!-- Categories Column -->
+     <div class="col-md-6 border-end">
+      <div *ngFor="let product of ('products_service' | translate); let i = index">
+         <h6 class="fw-bold mb-3 text-primary category-item" 
+             (mouseenter)="selectedproduct = product"
+             [ngClass]="{'active': selectedproduct === product}"
+             #categoryElement>
+           <i [class]="product.icon + ' me-2'"></i> {{ product.key | translate }}
+         </h6>
+        
+       </div>
+       <div class="banner-container">
+         <div class="banner-container">
+           <img class="img-fluid banner-image" [src]="selectedproduct?.img || (('products_service' | translate)[0])?.img" alt="">
+         </div>
+       </div>
+     </div>
+     <!-- Items Column -->
+     <div class="col-md-6">
+       <a
+       [routerLink]="'/services/'+item.path"
+       *ngFor="let item of (selectedproduct?.items || (('products_service' | translate)[0])?.items)"
+       class="dropdown-item py-2 px-3 cursor-pointer d-flex justify-content-between align-items-center "
+     >
+       <span><i [class]="item.icon + ' me-2'"></i> {{ item.name | translate }}</span>
+       <i class="fa fa-chevron-right ms-2"></i>
+     </a>
+     </div>
+   </div>
+ </div>
+</div>             
 
-
-
-
-          <!-- Other Links -->
-          <!-- <a routerLink="/project" routerLinkActive="active" class="nav-item nav-link">
-            {{ 'PROJECTS' | translate }}
-          </a> -->
           <a routerLink="/Careers" routerLinkActive="active" class="nav-item nav-link">
             {{ 'CAREERS' | translate }}
           </a>
-
-          <!-- Pages Dropdown -->
-          <!-- <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-              {{ 'PAGES' | translate }}
-            </a>
-            <div class="dropdown-menu bg-light mt-2">
-              <a (click)="pathService.navigateToAbout('feature')" class="dropdown-item">
-                {{ 'FEATURES' | translate }}
-              </a>
-              <a (click)="pathService.navigateToAbout('team')" class="dropdown-item">
-                {{ 'OUR_TEAM' | translate }}
-              </a>
-              <a (click)="pathService.navigateToAbout('faq')" class="dropdown-item">
-                {{ 'FAQS' | translate }}
-              </a>
-              <a (click)="pathService.navigateToAbout('testimonial')" class="dropdown-item">
-                {{ 'TESTIMONIALS' | translate }}
-              </a>
-            </div>
-          </div> -->
-
           <a routerLink="/contact" routerLinkActive="active" class="nav-item nav-link">
             {{ 'CONTACT' | translate }}
           </a>

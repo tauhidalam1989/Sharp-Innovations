@@ -14,6 +14,7 @@ export class SiteHeaderComponent implements OnInit {
 
 // Add this property to your component class
 selectedCategory: any = null;
+selectedproduct: any = null;
   constructor(
     private router: Router,
     public pathService: RoutingService,
@@ -49,13 +50,15 @@ selectedCategory: any = null;
 isIotHovered = false;
 isProductsHovered = false;
 isservicing=false
+isProduct=false
 toggleDropdown(menu: string, state: boolean) {
+  
   switch (menu) {
     case 'isservicing':
       this.isservicing = state;
       break;
-    case 'iot':
-      this.isIotHovered = state;
+    case 'isProduct':
+      this.isProduct = state;
       break;
     case 'products':
       this.isProductsHovered = state;

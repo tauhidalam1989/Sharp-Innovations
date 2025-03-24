@@ -1025,74 +1025,15 @@
 
 "products_service": [
     {
-      "key": "Finance",
+      "key": "AI Solutions",
       "items": [
-        { "name": "Accounting", "icon": "fas fa-calculator" },
-        { "name": "Invoicing", "icon": "fas fa-file-invoice-dollar" },
-        { "name": "Expenses", "icon": "fas fa-receipt" },
-        { "name": "Spreadsheet (BI)", "icon": "fas fa-table" },
-        { "name": "Documents", "icon": "fas fa-file-alt" },
-        { "name": "Sign", "icon": "fas fa-pen-fancy" }
+        { "name": "Potholes Detection", "icon": "fas fa-calculator" }
       ]
     },
     {
-      "key": "Sales",
+      "key": "Supply Chain",
       "items": [
-        { "name": "CRM", "icon": "fas fa-users" },
-        { "name": "Sales", "icon": "fas fa-shopping-cart" },
-        { "name": "POS Shop", "icon": "fas fa-store" },
-        { "name": "POS Restaurant", "icon": "fas fa-utensils" },
-        { "name": "Subscriptions", "icon": "fas fa-calendar-check" },
-        { "name": "Rental", "icon": "fas fa-car" }
-      ]
-    },
-    {
-      "key": "Website",
-      "items": [
-        { "name": "Website Builder", "icon": "fas fa-laptop-code" },
-        { "name": "eCommerce", "icon": "fas fa-shopping-bag" },
-        { "name": "Blog", "icon": "fas fa-pencil-alt" },
-        { "name": "Forum", "icon": "fas fa-comments" },
-        { "name": "Live Chat", "icon": "fas fa-comment-dots" },
-        { "name": "eLearning", "icon": "fas fa-chalkboard-teacher" }
-      ]
-    },
-    {
-      "key": "Human Resource",
-      "items": [
-        { "name": "Employees", "icon": "fas fa-user-tie" },
-        { "name": "Recruitment", "icon": "fas fa-user-plus" },
-        { "name": "Time Off", "icon": "fas fa-clock" },
-        { "name": "Appraisals", "icon": "fas fa-chart-bar" },
-        { "name": "Referrals", "icon": "fas fa-handshake" },
-        { "name": "Fleet", "icon": "fas fa-shuttle-van" }
-      ]
-    },
-    {
-      "key": "Marketing",
-      "items": [
-        { "name": "Social Marketing", "icon": "fas fa-share-alt" },
-        { "name": "Email Marketing", "icon": "fas fa-envelope-open-text" },
-        { "name": "SMS Marketing", "icon": "fas fa-sms" },
-        { "name": "Events", "icon": "fas fa-calendar-alt" },
-        { "name": "Marketing Automation", "icon": "fas fa-cogs" },
-        { "name": "Surveys", "icon": "fas fa-poll" }
-      ]
-    },
-    {
-      "key": "Services",
-      "items": [
-        { "name": "Project", "icon": "fas fa-project-diagram" },
-        { "name": "Timesheets", "icon": "fas fa-clock" },
-        { "name": "Field Service", "icon": "fas fa-wrench" },
-        { "name": "Helpdesk", "icon": "fas fa-headset" },
-        { "name": "Planning", "icon": "fas fa-calendar-check" },
-        { "name": "Appointments", "icon": "fas fa-user-clock" }
-      ]
-    },
-    {
-      "key": "Supply chain",
-      "items": [
+        { "name": "Assets Management System", "icon": "fas fa-users" },
         { "name": "Inventory", "icon": "fas fa-boxes" },
         { "name": "Manufacturing", "icon": "fas fa-industry" },
         { "name": "PLM", "icon": "fas fa-cube" },
@@ -1102,16 +1043,29 @@
       ]
     },
     {
-      "key": "Productivity",
+      "key": "Management Solutions",
       "items": [
-        { "name": "Discuss", "icon": "fas fa-comments" },
-        { "name": "Approvals", "icon": "fas fa-thumbs-up" },
-        { "name": "IoT", "icon": "fas fa-broadcast-tower" },
-        { "name": "VoIP", "icon": "fas fa-phone-alt" },
-        { "name": "Knowledge", "icon": "fas fa-book" },
-        { "name": "WhatsApp", "icon": "fab fa-whatsapp" }
+        { "name": "Task Management System", "icon": "fas fa-laptop-code" }
+      ]
+    },
+    {
+      "key": "GIS Solutions ",
+      "items": [
+        { "name": "Live Vehicle Tracking ", "icon": "fas fa-user-tie" }
+       
+      ]
+    },
+    {
+      "key": "Human Resource Management ",
+      "items": [
+        { "name": "Human Resource Management  ", "icon": "fas fa-users" }
+       
       ]
     }
+   
+    
+   
+    
   ],
   
   
@@ -1121,16 +1075,16 @@
       "icon": "fas fa-shield-alt",
       "img":"../../../../../../assets/img/Banner.png",
       "items": [
-        { "name": "Managed Security Services (MSSP)", "icon": "fas fa-shield-alt" },
-        { "name": "Data Security Services", "icon": "fas fa-database" },
-        { "name": "Cybersecurity Consulting", "icon": "fas fa-user-secret" },
-        { "name": "Cybersecurity Consulting", "icon": "fas fa-user-shield" },
-        { "name": "Application Security", "icon": "fas fa-lock" },
-        { "name": "Network Security", "icon": "fas fa-network-wired" },
-        { "name": "Cybersecurity Implementation", "icon": "fas fa-cogs" },
-        { "name": "Cyber Security Awareness", "icon": "fas fa-lightbulb" },
-        { "name": "Cyber Security Training", "icon": "fas fa-chalkboard-teacher" },
-        { "name": "Cyber Security Manpower Outsourcing", "icon": "fas fa-users-cog" }
+        { "name": "Managed Security Services (MSSP)", "icon": "fas fa-shield-alt" ,"path":"mssp" },
+        { "name": "Data Security Services", "icon": "fas fa-database","path":"data-security-services" },
+        { "name": "Cybersecurity Consulting", "icon": "fas fa-user-secret", "path":"cybersecurity-consulting" },
+        { "name": "Cybersecurity GRC Consulting", "icon": "fas fa-user-shield","path":"cybersecurity-grc-services.component" },
+        { "name": "Application Security", "icon": "fas fa-lock","path":"application-security" },
+        { "name": "Network Security", "icon": "fas fa-network-wired","path":"network-security" },
+        { "name": "Cybersecurity Implementation", "icon": "fas fa-cogs","path":"cybersecurity-implementation" },
+        { "name": "Cyber Security Awareness", "icon": "fas fa-lightbulb","path":"cyber-security-awareness" },
+        { "name": "Cyber Security Training", "icon": "fas fa-chalkboard-teacher","path":"cyber-security-training" },
+        { "name": "Cyber Security Manpower Outsourcing", "icon": "fas fa-users-cog","path":"cyber-security-manpower-outsourcing" }
       ]
     },
     {
@@ -1208,12 +1162,755 @@
     "description": "Achieve sustainable growth with strategic consulting services. Our experts work alongside your team to navigate complex challenges, optimize processes, and align technology with your long-term business goals. We dive deep into your industry, providing actionable insights and data-backed recommendations to help you innovate faster, reduce operational bottlenecks, and scale confidently. Let us bridge the gap between technology and business strategy — ensuring you stay competitive in an ever-evolving market.",
     "img": "../../../../../../assets/img/projects.png"
   }
-]
+],
+
+  "MSSP": {
+    "title": "Managed Security Services (MSSP)",
+    "subtitle": "Proactive Protection for Your Digital Assets",
+    "description": "In today’s rapidly evolving threat landscape, organizations need 24/7 monitoring and advanced security solutions to protect their critical infrastructure. Sharp Innovations offers comprehensive Managed Security Services (MSSP) to proactively detect, prevent, and respond to cyber threats, ensuring your business remains secure and compliant.",
+    "why_choose_us": {
+      "title": "Why Choose Sharp Innovations for Managed Security Services?",
+      "points": [
+        {
+          "title": "24/7 Monitoring & Threat Detection",
+          "description": "Continuous real-time monitoring of your systems to identify and mitigate threats before they escalate."
+        },
+        {
+          "title": "Certified Security Experts",
+          "description": "Our team includes CISSP, CEH, CISM, and ISO 27001-certified professionals."
+        },
+        {
+          "title": "Advanced Threat Intelligence",
+          "description": "Leverage AI-driven tools and threat intelligence to stay ahead of cybercriminals."
+        },
+        {
+          "title": "Proactive Incident Response",
+          "description": "Rapid response to security incidents to minimize damage and downtime."
+        },
+        {
+          "title": "Compliance Assurance",
+          "description": "Ensure adherence to GDPR, HIPAA, PCI-DSS, ISO 27001, and other regulatory standards."
+        }
+      ]
+    },
+    "services": {
+      "title": "Our Managed Security Services Include:",
+      "list": [
+        {
+          "title": "24/7 Security Monitoring",
+          "description": [
+            "Real-time monitoring of networks, endpoints, and cloud environments.",
+            "Threat detection using advanced SIEM (Security Information and Event Management) tools.",
+            "Alerts and notifications for suspicious activities."
+          ]
+        },
+        {
+          "title": "Firewall Management",
+          "description": [
+            "Deployment and management of next-generation firewalls (NGFWs).",
+            "Rule and policy configuration to block unauthorized access.",
+            "Regular updates and patch management."
+          ]
+        },
+        {
+          "title": "Intrusion Detection & Prevention (IDS/IPS)",
+          "description": [
+            "Real-time detection of malicious activities and attacks.",
+            "Automated response mechanisms to block threats.",
+            "Behavioral analytics to identify unusual patterns."
+          ]
+        },
+        {
+          "title": "Cloud Security Management",
+          "description": [
+            "Securing cloud workloads on AWS, Azure, and Google Cloud.",
+            "Cloud Access Security Broker (CASB) solutions for data protection.",
+            "Identity and Access Management (IAM) for cloud applications."
+          ]
+        },
+        {
+          "title": "Endpoint Security",
+          "description": [
+            "Endpoint Detection & Response (EDR) solutions for laptops, desktops, and mobile devices.",
+            "Anti-malware and anti-ransomware protection.",
+            "Network Access Control (NAC) to restrict unauthorized devices."
+          ]
+        },
+        {
+          "title": "Incident Response & Forensics",
+          "description": [
+            "Rapid response to security breaches and cyber incidents.",
+            "Forensic analysis to identify root causes and prevent future attacks.",
+            "Detailed incident reports and remediation plans."
+          ]
+        },
+        {
+          "title": "Compliance Management",
+          "description": [
+            "Regular audits and compliance gap assessments.",
+            "Assistance with GDPR, HIPAA, PCI-DSS, ISO 27001, and NIST compliance.",
+            "Policy development and enforcement."
+          ]
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Benefits of Our Managed Security Services",
+      "points": [
+        {
+          "title": "Proactive Threat Defense",
+          "description": "Stay ahead of cyber threats with 24/7 monitoring and advanced tools."
+        },
+        {
+          "title": "Cost-Effective",
+          "description": "Reduce the cost of building and maintaining an in-house security team."
+        },
+        {
+          "title": "Scalable Solutions",
+          "description": "Scale your security services as your business grows."
+        },
+        {
+          "title": "Peace of Mind",
+          "description": "Focus on your business while we handle your cybersecurity needs."
+        }
+      ]
+    },
+    "call_to_action": {
+      "title": "Secure Your Business with Sharp Innovations Today!",
+      "description": "Don’t wait for a cyberattack to happen—proactively protect your business with our Managed Security Services. Contact us today to learn more."
+    }
+  },
+  
+ "CybersecurityConsultingServices": {
+    "title": "Cybersecurity Consulting Services",
+    "subtitle": "Empowering Businesses with Expert Security Strategies and Risk Mitigation",
+    "description": "In today’s rapidly evolving digital landscape, organizations face growing cybersecurity threats that can compromise sensitive data, disrupt operations, and damage reputation. Sharp Innovations provides comprehensive Cybersecurity Consulting Services to help businesses identify vulnerabilities, mitigate risks, and strengthen their security posture. Our team of experts brings deep industry knowledge and cutting-edge solutions to ensure your organization remains secure, compliant, and resilient against cyber threats.",
+    "core_services": {
+      "title": "Our Cybersecurity Consulting Services",
+      "services": [
+        {
+          "title": "Cybersecurity Risk Assessment & Gap Analysis",
+          "description": [
+            "Evaluate existing security controls and identify vulnerabilities.",
+            "Conduct a risk-based assessment to prioritize threats.",
+            "Provide actionable recommendations to bridge security gaps."
+          ]
+        },
+        {
+          "title": "Governance, Risk, and Compliance (GRC) Advisory",
+          "description": [
+            "Develop and implement security policies, procedures, and frameworks.",
+            "Align cybersecurity programs with industry regulations (ISO 27001, NIST, HIPAA, GDPR, etc.).",
+            "Assist in achieving and maintaining regulatory compliance."
+          ]
+        },
+        {
+          "title": "Penetration Testing & Vulnerability Assessment",
+          "description": [
+            "Perform ethical hacking and security testing to uncover weaknesses.",
+            "Simulate real-world attack scenarios to assess resilience.",
+            "Provide detailed remediation plans to address vulnerabilities."
+          ]
+        },
+        {
+          "title": "Incident Response & Cyber Threat Management",
+          "description": [
+            "Develop and implement an incident response plan.",
+            "Provide rapid response services in case of a cyber attack.",
+            "Conduct forensic analysis to determine root causes and prevent future incidents."
+          ]
+        },
+        {
+          "title": "Cloud Security Consulting",
+          "description": [
+            "Assess cloud security risks and best practices.",
+            "Implement secure cloud configurations (AWS, Azure, Google Cloud).",
+            "Ensure compliance with cloud security standards and frameworks."
+          ]
+        },
+        {
+          "title": "Security Awareness Training & Phishing Simulation",
+          "description": [
+            "Conduct employee training to mitigate human-based cyber risks.",
+            "Simulate phishing attacks to evaluate staff awareness and response.",
+            "Promote a strong cybersecurity culture within the organization."
+          ]
+        },
+        {
+          "title": "Third-Party & Supply Chain Security Assessments",
+          "description": [
+            "Evaluate security risks associated with third-party vendors and partners.",
+            "Assess supply chain vulnerabilities and implement risk management controls.",
+            "Ensure alignment with cybersecurity best practices and regulatory requirements."
+          ]
+        },
+        {
+          "title": "Cybersecurity Strategy & Roadmap Development",
+          "description": [
+            "Design a tailored cybersecurity strategy aligned with business objectives.",
+            "Define security priorities and implementation milestones.",
+            "Provide ongoing advisory support to enhance cybersecurity maturity."
+          ]
+        }
+      ]
+    },
+    "call_to_action": {
+      "title": "Secure Your Business Now",
+      "description": "Don’t wait for a breach to happen — protect your data and fortify your organization with Sharp Innovations’ Cybersecurity Consulting Services.",
+      "button_text": "Get a Free Consultation"
+    }
+  },
+    "DataSecurityServices": {
+      "title": "Data Security Services",
+      "subtitle": "Protecting Your Data with Advanced Discovery, Classification, and Prevention Solutions",
+      "description": "At Sharp Innovations, we understand that data is the most valuable asset of any organization. With the increasing threat of cyberattacks, regulatory compliance requirements, and insider threats, securing sensitive data is critical. Our Data Security Services provide a comprehensive approach to Data Discovery, Data Classification, and Data Loss Prevention (DLP) to ensure the confidentiality, integrity, and availability of your data.",
+      "core_services": {
+        "title": "Our Core Services",
+        "services": [
+          {
+            "title": "Data Loss Prevention (DLP)",
+            "description": [
+              "Endpoint DLP – Protect sensitive data on laptops, desktops, mobile devices, and removable storage.",
+              "Network DLP – Monitor and control data movement across enterprise networks, emails, and file transfers.",
+              "Cloud DLP – Secure data stored and shared across cloud platforms like Microsoft 365, Google Workspace, and SaaS applications.",
+              "Real-Time Policy Enforcement – Implement rules to block, quarantine, or encrypt sensitive data when policy violations occur.",
+              "Incident Response & Analytics – Receive alerts, audit logs, and forensic insights to detect and mitigate data breaches proactively."
+            ]
+          },
+          {
+            "title": "Data Discovery",
+            "description": [
+              "Automated Scanning & Discovery – Identify sensitive data across structured (databases, data warehouses) and unstructured (emails, documents, cloud storage) environments.",
+              "Data Mapping & Inventory – Gain visibility into data flow, storage locations, and potential security vulnerabilities.",
+              "Cloud & On-Premises Coverage – Discover sensitive data across endpoints, cloud platforms (AWS, Azure, Google Cloud), and on-premises networks.",
+              "Compliance Readiness – Identify compliance gaps related to GDPR, HIPAA, CCPA, PCI-DSS, and other regulatory frameworks."
+            ]
+          },
+          {
+            "title": "Data Classification",
+            "description": [
+              "Automated & Manual Tagging – Assign predefined or customizable classification labels such as Confidential, Internal, Public, or Restricted.",
+              "Integration with Security Policies – Ensure classified data is governed by role-based access controls and encryption policies.",
+              "AI-Driven Context Analysis – Use machine learning to identify patterns, context, and intent behind data usage.",
+              "Metadata & Policy-Based Classification – Apply classification based on content, file type, metadata, and business rules.",
+              "User Training & Awareness – Educate employees on handling classified data securely to reduce insider threats."
+            ]
+          }
+        ]
+      }
+    },
+    "CybersecurityGRCServices": {
+  "title": "Cybersecurity GRC Services",
+  "subtitle": "Enhancing Compliance, Mitigating Risks, and Strengthening Security Posture",
+  "description": "Sharp Innovations provides comprehensive Governance, Risk, and Compliance (GRC) services to help organizations align cybersecurity with regulatory requirements, mitigate risks, and enhance overall security posture. Our GRC services ensure that your organization remains compliant, secure, and resilient against evolving cyber threats.",
+  "core_services": {
+    "title": "Our Key Services",
+    "services": [
+      {
+        "title": "Regulatory Compliance Management",
+        "description": [
+          "NIST (National Institute of Standards and Technology)",
+          "ISO 27001 (International Organization for Standardization - Information Security)",
+          "PCI-DSS (Payment Card Industry Data Security Standard)",
+          "NCA - National Cyber Security Authority",
+          "GDPR (General Data Protection Regulation)",
+          "SAMA - Saudi Arabia Monetary Authority",
+          "Gap assessments to identify compliance deficiencies",
+          "Compliance roadmap development",
+          "Policy alignment with regulatory frameworks",
+          "Assistance in audits and regulatory reporting",
+          "Ongoing compliance monitoring and updates"
+        ]
+      },
+      {
+        "title": "Risk Management Framework (RMF) Implementation",
+        "description": [
+          "Risk Assessment & Categorization – Identifying critical assets and threat vectors",
+          "Control Selection & Implementation – Mapping appropriate security controls",
+          "Security Assessment & Authorization – Ensuring controls meet security requirements",
+          "Continuous Monitoring & Improvement – Real-time threat detection and mitigation"
+        ]
+      },
+      {
+        "title": "Policy & Procedure Development",
+        "description": [
+          "Security policies covering access control, incident response, and data protection",
+          "Standard operating procedures (SOPs) for security teams",
+          "Security awareness and training guidelines for employees",
+          "Governance models ensuring accountability and compliance"
+        ]
+      },
+      {
+        "title": "Third-Party Risk Management (TPRM)",
+        "description": [
+          "Vendor risk assessments and due diligence",
+          "Contract review and security compliance checks",
+          "Continuous monitoring of third-party security postures",
+          "Incident response planning for third-party breaches"
+        ]
+      },
+      {
+        "title": "Continuous Security Audits & Reporting",
+        "description": [
+          "Proactive security auditing to maintain compliance",
+          "Detailed reporting to help strengthen cybersecurity frameworks"
+        ]
+      }
+    ]
+  },
+  "call_to_action": {
+    "title": "Protect Your Business with GRC Services",
+    "description": "Ensure compliance, mitigate risks, and enhance your cybersecurity posture with Sharp Innovations' GRC services.",
+    "button_text": "Get a Free Consultation"
+  }
+},
+"ApplicationSecurityServices": {
+      "title": "Application Security Services",
+      "subtitle": "Protecting Applications from Emerging Cyber Threats",
+      "description": "Sharp Innovations offers comprehensive Application Security Services to identify, analyze, and mitigate security vulnerabilities throughout the software development lifecycle, ensuring robust protection and compliance.",
+      "core_services": {
+        "title": "Our Key Services",
+        "services": [
+          {
+            "title": "Vulnerability Management",
+            "description": [
+              "Continuous identification and assessment of security flaws.",
+              "Risk prioritization based on threat impact and exploitability.",
+              "Ongoing remediation support and security patch guidance.",
+              "Integration with DevSecOps for proactive vulnerability mitigation."
+            ]
+          },
+          {
+            "title": "Vulnerability Assessment & Penetration Testing (VAPT)",
+            "description": [
+              "Comprehensive security assessments to detect weaknesses in web, mobile, and desktop applications.",
+              "Automated and manual penetration testing to simulate real-world attacks.",
+              "Detailed risk assessment reports with actionable recommendations.",
+              "Retesting after remediation to ensure security fixes are effective."
+            ]
+          },
+          {
+            "title": "Source Code Review",
+            "description": [
+              "Manual and automated analysis of application source code to uncover security flaws.",
+              "Identification of coding vulnerabilities such as SQL injection, cross-site scripting (XSS), and buffer overflows.",
+              "Secure coding recommendations to fortify application security from within.",
+              "Support for multiple programming languages and frameworks."
+            ]
+          },
+          {
+            "title": "Dynamic Application Security Testing (DAST)",
+            "description": [
+              "Real-time security testing of running applications to identify vulnerabilities in runtime environments.",
+              "Detection of authentication flaws, input validation issues, and misconfigurations.",
+              "Black-box testing methodology to simulate external attacker perspectives.",
+              "Continuous monitoring for evolving security threats and vulnerabilities."
+            ]
+          },
+          {
+            "title": "Static Application Security Testing (SAST)",
+            "description": [
+              "In-depth scanning of source code, binaries, and bytecode for security vulnerabilities.",
+              "Early detection of security risks in the development phase.",
+              "Integration with CI/CD pipelines for automated security testing.",
+              "Custom rule creation to align with organizational security policies."
+            ]
+          }
+        ]
+      },
+      "call_to_action": {
+        "title": "Secure Your Applications Now!",
+        "description": "Protect your business from application-level vulnerabilities. Get in touch with our experts today!"
+      }
+    },
+    
+      "NetworkSecurityServices": {
+        "title": "Network Security Services",
+        "subtitle": "Protecting Your Digital Assets with Advanced Security Solutions",
+        "description": "In today’s digital landscape, cyber threats are more sophisticated than ever. At Sharp Innovations, we provide comprehensive Network Security Services to safeguard your organization’s critical infrastructure, ensuring confidentiality, integrity, and availability of your data and systems.",
+        "core_services": {
+          "title": "Our Network Security Solutions",
+          "services": [
+            {
+              "title": "Network Security Assessment & Risk Analysis",
+              "description": [
+                "Network Penetration Testing – Simulating cyberattacks to uncover weaknesses.",
+                "Vulnerability Scanning – Detecting security flaws in firewalls, routers, and endpoints.",
+                "Compliance Gap Analysis – Ensuring alignment with industry standards (ISO 27001, NIST, CIS, HIPAA, PCI-DSS)."
+              ]
+            },
+            {
+              "title": "Firewall Implementation & Management",
+              "description": [
+                "Deployment of next-generation firewalls (NGFWs) for advanced threat protection.",
+                "Rule and policy configuration to control traffic and prevent unauthorized access.",
+                "24/7 monitoring & incident response for real-time threat detection."
+              ]
+            },
+            {
+              "title": "Intrusion Detection & Prevention Systems (IDPS)",
+              "description": [
+                "Signature-based and anomaly-based detection for real-time alerts.",
+                "Automated response mechanisms to mitigate threats immediately.",
+                "Behavioral analytics to identify unusual activities."
+              ]
+            },
+            {
+              "title": "Secure Network Architecture & Segmentation",
+              "description": [
+                "Zero Trust Network Architecture (ZTNA) for strict access controls.",
+                "Network segmentation to isolate critical assets from general traffic.",
+                "Micro-segmentation to enforce security at the application level."
+              ]
+            },
+            {
+              "title": "Endpoint Security & Network Access Control (NAC)",
+              "description": [
+                "Multi-factor authentication (MFA) & Single Sign-On (SSO) for secure login.",
+                "Endpoint Detection & Response (EDR) solutions to prevent malware infections.",
+                "Network Access Control (NAC) to restrict unauthorized device access."
+              ]
+            },
+            {
+              "title": "Cloud & Hybrid Network Security",
+              "description": [
+                "Cloud Firewall & CASB (Cloud Access Security Broker) solutions.",
+                "Identity & Access Management (IAM) for cloud applications.",
+                "Data loss prevention (DLP) & encryption to secure cloud workloads."
+              ]
+            },
+            {
+              "title": "Managed Network Security Services (24/7 Monitoring & Incident Response)",
+              "description": [
+                "Real-time threat intelligence & alerts powered by AI-driven security analytics.",
+                "Rapid incident response & forensic analysis for breach investigations.",
+                "Security Information & Event Management (SIEM) solutions for log analysis and reporting."
+              ]
+            },
+            {
+              "title": "DDoS Protection & Threat Mitigation",
+              "description": [
+                "Traffic filtering & rate limiting to block malicious requests.",
+                "AI-based anomaly detection for early warning and prevention.",
+                "Cloud-based DDoS mitigation to absorb large-scale attacks."
+              ]
+            },
+            {
+              "title": "Wireless & IoT Security",
+              "description": [
+                "Secure Wi-Fi network deployment with WPA3 encryption.",
+                "IoT device authentication & access control policies.",
+                "Network behavior monitoring for anomaly detection."
+              ]
+            },
+            {
+              "title": "Compliance & Regulatory Security Implementation",
+              "description": [
+                "NCA, SAMA, GDPR, CCPA, PCI-DSS, ISO 27001, NIST CSF compliance.",
+                "Policy enforcement & audit preparation for security governance.",
+                "Security awareness training for employees to reduce human risk factors."
+              ]
+            }
+          ]
+        },
+        "call_to_action": {
+          "title": "Secure Your Network Today!",
+          "description": "Protect your digital assets with Sharp Innovations' advanced Network Security Services. Contact us now for a free consultation."
+        }
+      },
+      
+        "CybersecurityImplementationServices": {
+          "title": "Cybersecurity Implementation Services",
+          "subtitle": "Strengthening Your Security Posture with Proven Strategies",
+          "description": "As cyber threats continue to evolve, organizations must implement robust security frameworks to protect sensitive data, mitigate risks, and ensure compliance with industry regulations. At Sharp Innovations, we provide end-to-end Cybersecurity Implementation Services, delivering customized security solutions that align with your business objectives and regulatory requirements.",
+          "why_choose_us": {
+            "title": "Why Choose Sharp Innovations for Cybersecurity Implementation?",
+            "points": [
+              {
+                "title": "Certified Security Experts",
+                "description": "Our team includes CISSP, CEH, CISM, and ISO 27001-certified professionals."
+              },
+              {
+                "title": "Tailored Security Solutions",
+                "description": "We customize implementation strategies based on your organization’s industry, size, and risk profile."
+              },
+              {
+                "title": "Cutting-Edge Technologies",
+                "description": "We leverage AI-driven security tools and next-gen solutions for proactive threat defense."
+              },
+              {
+                "title": "End-to-End Implementation Support",
+                "description": "From planning to execution, we handle every aspect of cybersecurity deployment."
+              }
+            ]
+          },
+          "core_services": {
+            "title": "Our Cybersecurity Implementation Services",
+            "services": [
+              {
+                "title": "Network Security Implementation",
+                "description": [
+                  "Deploying firewalls, IDS/IPS, VPNs, and secure network segmentation to protect your infrastructure.",
+                  "Next-Generation Firewalls (NGFWs) for advanced threat protection.",
+                  "Secure network segmentation to isolate critical assets.",
+                  "Zero Trust Network Architecture (ZTNA) for strict access controls."
+                ]
+              },
+              {
+                "title": "Cloud Security Deployment",
+                "description": [
+                  "Implementing cloud-native security controls for AWS, Azure, and Google Cloud to secure your cloud workloads.",
+                  "Cloud Access Security Broker (CASB) solutions.",
+                  "Identity & Access Management (IAM) for cloud applications.",
+                  "Data loss prevention (DLP) & encryption for cloud data."
+                ]
+              },
+              {
+                "title": "Endpoint Security Solutions",
+                "description": [
+                  "Deploying Endpoint Detection & Response (EDR), antivirus, and access controls to secure endpoints.",
+                  "Multi-factor authentication (MFA) & Single Sign-On (SSO).",
+                  "Advanced threat protection for laptops, desktops, and mobile devices.",
+                  "Network Access Control (NAC) to restrict unauthorized access."
+                ]
+              },
+              {
+                "title": "Identity & Access Management (IAM)",
+                "description": [
+                  "Implementing IAM solutions to manage user identities and enforce access controls.",
+                  "Role-based access control (RBAC) and privileged access management (PAM).",
+                  "Integration with existing IT infrastructure.",
+                  "Continuous monitoring of user access and permissions."
+                ]
+              },
+              {
+                "title": "Zero Trust Security Implementation",
+                "description": [
+                  "Adopting a Zero Trust model to enforce strict access controls and continuous verification.",
+                  "Micro-segmentation for application-level security.",
+                  "Continuous monitoring and threat detection.",
+                  "Integration with SIEM and SOAR solutions."
+                ]
+              },
+              {
+                "title": "Security Awareness Training",
+                "description": [
+                  "Educating employees on phishing attacks, social engineering, and security best practices.",
+                  "Phishing simulation exercises.",
+                  "Regular training sessions and workshops.",
+                  "Promoting a strong cybersecurity culture."
+                ]
+              }
+            ]
+          },
+          "call_to_action": {
+            "title": "Secure Your Business Today",
+            "description": "Strengthen your cybersecurity defenses with Sharp Innovations. Contact us today for a consultation and tailored security implementation plan.",
+            "contact": {
+              "phone": "+966 59 825 0829",
+              "email": "info@sharpinnvotech.com"
+            }
+          }
+        },
+      
+      "CybersecurityAwarenessService": {
+    "title": "Cybersecurity Awareness Service",
+    "subtitle": "Empowering Your Workforce to Defend Against Cyber Threats",
+    "description": "Even the most advanced security systems can be compromised if employees are unaware of cyber risks and best practices. Our structured training program educates and empowers your workforce.",
+    "call_to_action": {
+      "title": "Get Started with Cyber Awareness Training",
+      "description": "Equip your team with the knowledge to defend against cyber threats. Contact us today!",
+      "contact": {
+        "email": "info@sharpinnvotech.com"
+      }
+    },
+    "why_matters": {
+      "title": "Why Cybersecurity Awareness Matters",
+      "description": "Cybercriminals continuously evolve their tactics, targeting businesses through phishing attacks, social engineering, and data breaches. Awareness helps prevent human errors leading to breaches."
+    },
+    "program_details": {
+      "title": "What We Offer",
+      "modules": [
+        {
+          "title": "Phishing Awareness & Social Engineering Defense",
+          "points": [
+            "Identify phishing emails and malicious links",
+            "Recognize impersonation attacks",
+            "Hands-on phishing simulations"
+          ]
+        },
+        {
+          "title": "Data Protection & Privacy Best Practices",
+          "points": [
+            "Understand data classification and handling",
+            "Safe browsing and password management",
+            "Compliance with GDPR, HIPAA, and more"
+          ]
+        },
+        {
+          "title": "Cyber Hygiene & Secure Workplace Practices",
+          "points": [
+            "Secure device and network usage",
+            "Best practices for remote work",
+            "Recognize insider threats"
+          ]
+        },
+        {
+          "title": "Incident Response & Crisis Management",
+          "points": [
+            "Steps to follow during a breach",
+            "Reporting procedures",
+            "Real-world attack simulations"
+          ]
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Key Benefits of Our Awareness Program",
+      "list": [
+        "Reduced Human Error",
+        "Customized Training",
+        "Engaging & Practical Sessions",
+        "Regular Updates for Emerging Threats"
+      ]
+    }
+  },
+  "CybersecurityTrainingService": {
+    "title": "Cybersecurity Training Service",
+    "subtitle": "Empowering Your Team with Cutting-Edge Cybersecurity Skills",
+    "description": "Equip your team with the technical expertise needed to protect your business from evolving cyber threats. Our hands-on training covers real-world simulations and advanced techniques.",
+    "core_services": {
+      "title": "Key Training Modules",
+      "services": [
+        {
+          "title": "Risk Management & Security Frameworks",
+          "description": [
+            "Identifying and assessing cybersecurity risks",
+            "Implementing NIST, ISO 27001, CIS Controls, and regulatory compliance",
+            "Developing risk mitigation strategies and security policies"
+          ]
+        },
+        {
+          "title": "Ethical Hacking & Penetration Testing",
+          "description": [
+            "Hands-on training in vulnerability assessment and exploitation",
+            "Using industry-leading tools like Metasploit, Kali Linux, and Burp Suite",
+            "Simulating real-world cyberattacks to strengthen defenses"
+          ]
+        },
+        {
+          "title": "Advanced Network Security & Threat Intelligence",
+          "description": [
+            "Implementing firewalls, IDS/IPS, and network monitoring",
+            "Threat hunting and behavioral analytics",
+            "Securing cloud environments (AWS, Azure, Google Cloud)"
+          ]
+        },
+        {
+          "title": "Incident Response & Digital Forensics",
+          "description": [
+            "Real-time security event detection and response planning",
+            "Conducting forensic investigations to analyze cyber incidents",
+            "Utilizing SIEM solutions, log analysis, and malware detection techniques"
+          ]
+        },
+        {
+          "title": "Security Awareness & Compliance Training",
+          "description": [
+            "Understanding phishing, social engineering, and insider threats",
+            "Best practices for secure password management, multi-factor authentication (MFA), and endpoint security",
+            "Ensuring compliance with GDPR, HIPAA, PCI-DSS, and CCPA"
+          ]
+        }
+      ]
+    },
+    "call_to_action": {
+      "title": "Future-Proof Your Security Team Today!",
+      "description": "Invest in top-tier cybersecurity training with Sharp Innovations and strengthen your organization’s defense against cyber threats."
+    }
+  },
+  "CybersecurityOutsourcingService": {
+    "title": "Cybersecurity Manpower Outsourcing Service",
+    "subtitle": "Access Elite Cybersecurity Talent to Protect Your Business",
+    "description": "We provide skilled cybersecurity professionals to strengthen your security posture—ensuring 24/7 protection, regulatory compliance, and proactive threat mitigation at a cost-effective rate.",
+    "benefits": {
+      "title": "Why Choose Cybersecurity Outsourcing?",
+      "points": [
+        "Access to Certified Experts: Get immediate support from CISSP, CEH, CISM, ISO 27001-certified professionals.",
+        "Cost-Effective: Reduce the overhead costs of hiring, training, and retaining an in-house security team.",
+        "24/7 Monitoring & Incident Response: Ensure round-the-clock threat detection, vulnerability management, and response.",
+        "Scalable & Flexible Solutions: Scale your cybersecurity workforce based on business needs.",
+        "Compliance-Driven Security: Ensure adherence to ISO 27001, NIST, GDPR, HIPAA, PCI-DSS, and industry regulations."
+      ]
+    },
+    "specialists": {
+      "title": "Our Cybersecurity Specialists Cover",
+      "roles": [
+        {
+          "title": "Threat Detection & Incident Response (SOC Analysts & Threat Hunters)",
+          "description": [
+            "24/7 Security Operations Center (SOC) monitoring",
+            "Threat intelligence & proactive threat hunting",
+            "Incident response & digital forensics for security breaches"
+          ]
+        },
+        {
+          "title": "Compliance & Governance Experts (GRC Consultants)",
+          "description": [
+            "Regulatory compliance management (ISO 27001, NIST, GDPR, HIPAA, PCI-DSS)",
+            "Security policy development & risk assessments",
+            "Internal and external security audits"
+          ]
+        },
+        {
+          "title": "Network & Cloud Security Specialists",
+          "description": [
+            "Next-Generation Firewall (NGFW) and IDS/IPS management",
+            "Cloud security implementation (AWS, Azure, Google Cloud)",
+            "Zero Trust Network Architecture (ZTNA) & IAM implementation"
+          ]
+        },
+        {
+          "title": "Penetration Testers & Ethical Hackers",
+          "description": [
+            "Red teaming & penetration testing to identify vulnerabilities",
+            "Application & network security testing",
+            "Social engineering attack simulations"
+          ]
+        },
+        {
+          "title": "Security Engineers & Consultants",
+          "description": [
+            "SIEM deployment & log management",
+            "Security architecture design & endpoint security implementation",
+            "Incident response planning & disaster recovery strategies"
+          ]
+        }
+      ]
+    },
+    "process": {
+      "title": "How Our Service Works",
+      "steps": [
+        "Assessment: We evaluate your security needs & identify skill gaps.",
+        "Expert Deployment: We provide certified cybersecurity professionals tailored to your requirements.",
+        "Ongoing Support: Continuous monitoring, management & security improvements.",
+        "Scalability: Scale your team up or down as your business evolves."
+      ]
+    },
+    "call_to_action": {
+      "title": "Secure Your Business with Sharp Innovations Today!",
+      "description": "Don’t leave your cybersecurity to chance—get access to elite security professionals without the overhead costs."
+    }
+  }
+    
+  }
+
+
 
   
   
   
 
+
     
-    
-}
+
