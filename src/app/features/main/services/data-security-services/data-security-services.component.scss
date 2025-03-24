@@ -1,0 +1,56 @@
+.icon-container {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.icon-container i {
+    color: white;
+}
+
+.card {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    backdrop-filter: none;
+    box-shadow: none;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card-title, h6 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+}
+
+.card-text, p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Service icon styling */
+.service-item .service-icon {
+    margin: unset;
+    width: unset;
+    height: unset;
+    color: white;
+    background: unset;
+    transition: unset;
+}
+
+/* Set body background */
+body {
+    background-color: #14183e !important;
+    color: white;
+}

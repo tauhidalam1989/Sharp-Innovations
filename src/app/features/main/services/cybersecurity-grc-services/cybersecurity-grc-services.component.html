@@ -1,0 +1,49 @@
+<div class="container-fluid bg-light py-5">
+    <div class="container py-5">
+      <!-- Title and Introduction -->
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
+          <h1 class="mb-4 display-5 text-primary">
+            <i class="fas fa-shield-alt me-2"></i>{{ 'CybersecurityGRCServices.title' | translate }}
+          </h1>
+          <h4 class="mb-3 text-secondary">{{ 'CybersecurityGRCServices.subtitle' | translate }}</h4>
+          <p class="mb-4 text-muted">{{ 'CybersecurityGRCServices.description' | translate }}</p>
+        </div>
+      </div>
+  
+      <!-- Core Services Section -->
+      <div class="row mt-5 text-center">
+        <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.2s">
+          <h2 class="mb-3 text-primary">
+            <i class="fas fa-cogs me-2"></i>{{ 'CybersecurityGRCServices.core_services.title' | translate }}
+          </h2>
+        </div>
+      </div>
+  
+      <div class="row g-4">
+        <div *ngFor="let service of 'CybersecurityGRCServices.core_services.services' | translate" class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+          <div class="card h-100 shadow-sm border-0 text-center">
+            <div class="card-body">
+              <h5 class="card-title text-primary">{{ service.title }}</h5>
+              <ul class="text-muted text-start">
+                <li *ngFor="let desc of service.description">{{ desc }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Call to Action Section -->
+      <div class="row mt-5 text-center">
+        <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.3s">
+          <h2 class="text-primary">
+            <i class="fas fa-lock me-2"></i>{{ 'CybersecurityGRCServices.call_to_action.title' | translate }}
+          </h2>
+          <p class="text-muted mb-4">{{ 'CybersecurityGRCServices.call_to_action.description' | translate }}</p>
+          <a class="btn btn-success rounded-pill px-4 py-2 shadow-lg" href="#">
+            {{ 'CybersecurityGRCServices.call_to_action.button_text' | translate }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>

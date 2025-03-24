@@ -1,0 +1,77 @@
+<div class="container-fluid bg-light py-5">
+    <div class="container py-5">
+      <!-- Title, Introduction, and Image -->
+      <div class="row g-5 align-items-center">
+        <!-- Image on the left -->
+        <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
+          <img src="assets/images/cybersecurity-outsourcing.jpg" alt="Cybersecurity Outsourcing" class="img-fluid rounded shadow-sm" />
+        </div>
+        <!-- Text content on the right -->
+        <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.2s">
+          <h1 class="mb-4 display-5 text-primary">
+            <i class="fas fa-shield-alt me-2"></i>{{ 'CybersecurityOutsourcingService.title' | translate }}
+          </h1>
+          <h4 class="mb-3 text-secondary">{{ 'CybersecurityOutsourcingService.subtitle' | translate }}</h4>
+          <p class="mb-4 text-muted">{{ 'CybersecurityOutsourcingService.description' | translate }}</p>
+        </div>
+      </div>
+  
+      <!-- Benefits Section -->
+      <div class="row mt-5 text-center">
+        <h2 class="mb-3 text-primary">
+          <i class="fas fa-check-circle me-2"></i>{{ 'CybersecurityOutsourcingService.benefits.title' | translate }}
+        </h2>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div *ngFor="let point of 'CybersecurityOutsourcingService.benefits.points' | translate" class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+          <div class="card h-100 shadow-sm border-0 text-center">
+            <div class="card-body">
+              <p class="text-muted">{{ point }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Specialist Roles Section -->
+      <div class="row mt-5 text-center">
+        <h2 class="mb-3 text-primary">
+          <i class="fas fa-user-shield me-2"></i>{{ 'CybersecurityOutsourcingService.specialists.title' | translate }}
+        </h2>
+      </div>
+      <div class="row g-4">
+        <div *ngFor="let role of 'CybersecurityOutsourcingService.specialists.roles' | translate" class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+          <div class="card h-100 shadow-sm border-0 text-center">
+            <div class="card-body">
+              <h5 class="card-title text-primary">{{ role.title }}</h5>
+              <ul class="text-muted text-start">
+                <li *ngFor="let desc of role.description">{{ desc }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Process Steps Section -->
+      <div class="row mt-5 text-center">
+        <h2 class="mb-3 text-primary">
+          <i class="fas fa-tasks me-2"></i>{{ 'CybersecurityOutsourcingService.process.title' | translate }}
+        </h2>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div *ngFor="let step of 'CybersecurityOutsourcingService.process.steps' | translate" class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+          <div class="card h-100 shadow-sm border-0 text-center">
+            <div class="card-body">
+              <p class="text-muted">{{ step }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Call to Action Section -->
+      <div class="row mt-5 text-center">
+        <h2 class="text-primary">{{ 'CybersecurityOutsourcingService.call_to_action.title' | translate }}</h2>
+        <p class="text-muted mb-4">{{ 'CybersecurityOutsourcingService.call_to_action.description' | translate }}</p>
+      </div>
+    </div>
+  </div>
+  
