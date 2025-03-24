@@ -10,25 +10,39 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Checkout the code from the repo
       - name: Checkout code
         uses: actions/checkout@v3
 
+      # Set up Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20'
 
+      # Install dependencies (force resolve conflict)
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --legacy-peer-deps
 
+      # Build Angular app for production
       - name: Build Angular
         run: npm run build -- --configuration production
 
-      - name: Deploy to Hostinger FTP
+      # Deploy to Hostinger FTP
+      - name: Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: dist/sharpinvotech/
+          local-dir: dist/sharpinvotech/  # <-- replace with your actual project folder name
           server-dir: /public_html/staging/
+
+      # Optional: Cache node_modules for faster builds
+      - name: Cache node modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-node_modules-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.OS }}-node_modules-
