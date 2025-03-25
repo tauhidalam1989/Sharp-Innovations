@@ -1,89 +1,127 @@
 <!-- Contact Start -->
-<div class="container-fluid py-5">
-    <div class="container py-5">
-      <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
-        <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">
-          {{ 'CONTACT-FORM.US' | translate }}
-        </div>
-        <h1 class="mb-4">{{ 'CONTACT-FORM.QUERY_PROMPT' | translate }}</h1>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-lg-7">
+<div class="container-fluid">
+  <div class="container py-5">
+    <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
+      <!-- <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">
+       <h3>{{ 'CONTACT-FORM.US' | translate }}</h3> 
+      </div> -->
+      <h1 class="mb-4">{{ 'CONTACT-FORM.QUERY_PROMPT' | translate }}</h1>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
 
-          <div class="wow fadeIn" data-wow-delay="0.3s">
-            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <div class="form-floating">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="name"
-                      placeholder="{{ 'CONTACT-FORM.PLACEHOLDER_NAME' | translate }}"
-                      formControlName="name"
-                    />
-                    <label for="name">{{ 'CONTACT-FORM.YOUR_NAME' | translate }}</label>
-                    <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="text-danger">
-                      {{ 'CONTACT-FORM.ERROR_NAME' | translate }}
-                    </div>
+        <div class="wow fadeIn" data-wow-delay="0.3s">
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="{{ 'CONTACT-FORM.PLACEHOLDER_NAME' | translate }}"
+                    formControlName="name"
+                  />
+                  <label for="name">{{ 'CONTACT-FORM.YOUR_NAME' | translate }}</label>
+                  <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="text-danger">
+                    {{ 'CONTACT-FORM.ERROR_NAME' | translate }}
                   </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-floating">
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="email"
-                      placeholder="{{ 'CONTACT-FORM.PLACEHOLDER_EMAIL' | translate }}"
-                      formControlName="email"
-                    />
-                    <label for="email">{{ 'CONTACT-FORM.YOUR_EMAIL' | translate }}</label>
-                    <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="text-danger">
-                      {{ 'CONTACT-FORM.ERROR_EMAIL' | translate }}
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="form-floating">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="subject"
-                      placeholder="{{ 'CONTACT-FORM.PLACEHOLDER_SUBJECT' | translate }}"
-                      formControlName="subject"
-                    />
-                    <label for="subject">{{ 'CONTACT-FORM.SUBJECT' | translate }}</label>
-                    <div *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched" class="text-danger">
-                      {{ 'CONTACT-FORM.ERROR_SUBJECT' | translate }}
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="form-floating">
-                    <textarea
-                      class="form-control"
-                      placeholder="{{ 'CONTACT-FORM.PLACEHOLDER_MESSAGE' | translate }}"
-                      id="message"
-                      style="height: 150px"
-                      formControlName="message"
-                    ></textarea>
-                    <label for="message">{{ 'CONTACT-FORM.MESSAGE' | translate }}</label>
-                    <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="text-danger">
-                      {{ 'CONTACT-FORM.ERROR_MESSAGE' | translate }}
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <button class="btn btn-primary w-100 py-3" type="submit" [disabled]="contactForm.invalid">
-                    {{ 'CONTACT-FORM.SEND_MESSAGE' | translate }}
-                  </button>
                 </div>
               </div>
-            </form>
-          </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="{{ 'CONTACT-FORM.PLACEHOLDER_EMAIL' | translate }}"
+                    formControlName="email"
+                  />
+                  <label for="email">{{ 'CONTACT-FORM.YOUR_EMAIL' | translate }}</label>
+                  <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="text-danger">
+                    {{ 'CONTACT-FORM.ERROR_EMAIL' | translate }}
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="contactNumber"
+                    placeholder="{{ 'CONTACT-FORM.PLACEHOLDER_NUMBER' | translate }}"
+                    formControlName="contactNumber"
+                  />
+                  <label for="contactNumber">{{ 'CONTACT-FORM.CONTACT_NUMBER' | translate }}</label>
+                  <div *ngIf="contactForm.get('contactNumber')?.invalid && contactForm.get('contactNumber')?.touched" class="text-danger">
+                    {{ 'CONTACT-FORM.ERROR_NUMBER' | translate }}
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="organization"
+                    placeholder="{{ 'CONTACT-FORM.PLACEHOLDER_ORGANIZATION' | translate }}"
+                    formControlName="organization"
+                  />
+                  <label for="organization">{{ 'CONTACT-FORM.ORGANIZATION' | translate }}</label>
+                  <div *ngIf="contactForm.get('organization')?.invalid && contactForm.get('organization')?.touched" class="text-danger">
+                    {{ 'CONTACT-FORM.ERROR_ORGANIZATION' | translate }}
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating">
+                  <select
+                    class="form-control"
+                    id="subject"
+                    formControlName="subject"
+                  >
+                    <option value="" >
+                      {{ 'CONTACT-FORM.PLACEHOLDER_SUBJECT' | translate }}
+                    </option>
+                    <option value="1">{{ 'CONTACT-FORM.SUBJECT_SERVICES' | translate }}</option>
+                    <option value="6">{{ 'CONTACT-FORM.SUBJECT_MEDIA' | translate }}</option>
+                    <option value="2">{{ 'CONTACT-FORM.SUBJECT_BILLING' | translate }}</option>
+                    <option value="3">{{ 'CONTACT-FORM.SUBJECT_GENERAL' | translate }}</option>
+                    <option value="5">{{ 'CONTACT-FORM.SUBJECT_TECHNICAL' | translate }}</option>
+                    <option value="7">{{ 'CONTACT-FORM.SUBJECT_COMPLAINTS' | translate }}</option>
+                  </select>
+                  <label for="subject">{{ 'CONTACT-FORM.SUBJECT' | translate }}</label>
+                  <div *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched" class="text-danger">
+                    {{ 'CONTACT-FORM.ERROR_SUBJECT' | translate }}
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-12">
+                <div class="form-floating">
+                  <textarea
+                    class="form-control"
+                    placeholder="{{ 'CONTACT-FORM.PLACEHOLDER_MESSAGE' | translate }}"
+                    id="message"
+                    style="height: 150px"
+                    formControlName="message"
+                  ></textarea>
+                  <label for="message">{{ 'CONTACT-FORM.MESSAGE' | translate }}</label>
+                  <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="text-danger">
+                    {{ 'CONTACT-FORM.ERROR_MESSAGE' | translate }}
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary w-100 py-3" type="submit" [disabled]="contactForm.invalid">
+                  {{ 'CONTACT-FORM.SEND_MESSAGE' | translate }}
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
   </div>
-  <!-- Contact End -->
-  
+</div>
+<!-- Contact End -->

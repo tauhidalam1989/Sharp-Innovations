@@ -19,13 +19,15 @@ export class ContactComponent {
       email: ['', [Validators.required, Validators.email]],
       subject: ['', [Validators.required]],
       message: ['', [Validators.required, Validators.minLength(10)]],
+      contactNumber:['', [Validators.required]],
+      organization:['']
     });
   }
 
 
   onSubmit(): void {
     if (this.contactForm.valid) {
-      const payload = this.contactForm.value; // Automatically maps form values to payload
+      const payload = this.contactForm.value;
       this.contactservice.sendContactForm(payload).subscribe(
         (response) => {
           this.successMessage = 'Your message has been sent successfully!';
