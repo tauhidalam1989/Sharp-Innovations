@@ -1092,7 +1092,7 @@
       "icon": "fas fa-network-wired",
       "img":"../../../../../../assets/img/Banner2.png",
       "items": [
-        { "name": "Network Operation Center", "icon": "fas fa-server" },
+        { "name": "Network Operation Center", "icon": "fas fa-server", "path":"NOC"},
         { "name": "Network Consulting", "icon": "fas fa-comments" },
         { "name": "Network Infratructure Implementation", "icon": "fas fa-tools" }
       ]
@@ -1901,8 +1901,135 @@
       "title": "Secure Your Business with Sharp Innovations Today!",
       "description": "Don’t leave your cybersecurity to chance—get access to elite security professionals without the overhead costs."
     }
+  },
+    "SuperiorMonitoringNOCService": {
+  "title": "Superior Monitoring Network Operations Center (NOC) Service",
+  "subtitle": "Ensuring High Availability, Security, and Performance",
+  "description": "Sharp Innovations provides a cutting-edge Network Operations Center (NOC) service designed to ensure high availability, security, and efficiency in managing network infrastructures.",
+  "services": {
+    "title": "We Provide End-to-End NOC Service",
+    "points": [
+      "NOC Consulting: Expert guidance to design and implement NOC solutions tailored to your needs.",
+      "Seamless Onboarding: Smooth transition and integration of your network into our NOC services.",
+      "Managed Network Services: Comprehensive management of your network infrastructure.",
+      "Continuous Improvement: Ongoing optimization and updates to ensure peak performance."
+    ]
+  },
+  "operations": {
+    "title": "Key Operational Activities",
+    "activities": [
+      {
+        "title": "Network Monitoring & Incident Management",
+        "description": [
+          "Continuous monitoring of network performance, uptime, and health.",
+          "Proactive identification of anomalies and potential issues.",
+          "Automatic alerting and incident escalation.",
+          "Rapid troubleshooting and remediation of network failures."
+        ]
+      },
+      {
+        "title": "Performance Optimization",
+        "description": [
+          "Real-time network traffic analysis.",
+          "Bandwidth and latency monitoring.",
+          "Load balancing and congestion management.",
+          "Tuning network parameters for optimal performance."
+        ]
+      },
+      {
+        "title": "Security & Compliance Management",
+        "description": [
+          "Intrusion detection and prevention system (IDS/IPS) monitoring.",
+          "Firewall and endpoint security management.",
+          "Threat intelligence and vulnerability assessment.",
+          "Compliance enforcement (NCA, ISO 27001, NIST, etc.)."
+        ]
+      },
+      {
+        "title": "Patch & Configuration Management",
+        "description": [
+          "Regular firmware and software updates.",
+          "Configuration audits and policy enforcement.",
+          "Change management to minimize network disruptions."
+        ]
+      },
+      {
+        "title": "Reporting & Analytics",
+        "description": [
+          "Custom dashboard for real-time insights.",
+          "Monthly performance reports.",
+          "Root cause analysis for recurring issues.",
+          "Predictive analytics for capacity planning."
+        ]
+      }
+    ]
+  },
+  "architecture": {
+    "title": "Architecture of NOC Service",
+    "description": [
+      "Multi-Tiered Architecture: Data collection, analysis, and automated resolution layers.",
+      "Cloud-Enabled & On-Premises Capabilities: Hybrid deployment with secure VPN.",
+      "Integration with ITSM & SIEM: Works with ServiceNow, Jira, and SIEM tools."
+    ]
+  },
+  "team": {
+    "title": "Our NOC Team Structure",
+    "levels": [
+      "Level 1 (L1) - Network Monitoring Engineers: First point of contact for alerts and incidents.",
+      "Level 2 (L2) - Network Support Specialists: Advanced troubleshooting and security enforcement.",
+      "Level 3 (L3) - Network Architects & Security Analysts: Infrastructure design and threat mitigation.",
+      "NOC Manager & Compliance Officers: Ensuring operational excellence and regulatory compliance."
+    ]
+  },
+  "benefits": {
+    "title": "Advantages of NOC Services by Sharp Innovations",
+    "points": [
+      "24/7 Network Availability: Continuous monitoring and quick resolution reduce downtime.",
+      "Enhanced Security Posture: Proactive threat detection minimizes cyber risks.",
+      "Cost Savings & Operational Efficiency: Reduces the need for in-house network monitoring resources.",
+      "Compliance & Risk Mitigation: Ensures adherence to industry regulations and standards.",
+      "Scalable & Customizable Solutions: Tailored to meet your business’s unique needs.",
+      "Fast-Track Your Growth: Seamlessly scale without hiring more technicians.",
+      "Superior Service Quality: Achieve operational excellence at a fraction of the cost."
+    ]
+  },
+  "call_to_action": {
+    "title": "Boost Your Network Performance with Sharp Innovations!",
+    "description": "Ensure 24/7 monitoring, enhanced security, and improved network efficiency—get started today!"
   }
-    
+},
+"NOCServicePackage": {
+  "title": "NOC Service Package – Sharp Innovations",
+  "headers": ["Sr. No.", "Service Details", "Essentials", "Advance"],
+  "sections": [
+    {
+      "title": "Network Monitoring Service",
+      "services": [
+        { "sr": "1", "detail": "Hardware Health Monitoring", "essentials": "true", "advance": "true" },
+        { "sr": "2", "detail": "Device Performance Monitoring", "essentials": "true", "advance": "true" },
+        { "sr": "3", "detail": "Hardware Availability Monitoring", "essentials": "true", "advance": "true" },
+        { "sr": "4", "detail": "Network Traffic Analysis", "essentials": "true", "advance": "true" },
+        { "sr": "5", "detail": "Capacity Monitoring", "essentials": "true", "advance": "true" },
+        { "sr": "6", "detail": "WAN and VoIP Monitoring", "essentials": "true", "advance": "true" },
+        { "sr": "7", "detail": "24x7 Monitoring", "essentials": "true", "advance": "true" },
+        { "sr": "8", "detail": "Monitoring Dashboards and Reports", "essentials": "true", "advance": "true" }
+      ]
+    },
+    {
+      "title": "Network Management Service",
+      "services": [
+        { "sr": "9", "detail": "SLA Management", "essentials": "false", "advance": "true" },
+        { "sr": "10", "detail": "Configuration Management", "essentials": "false", "advance": "true" },
+        { "sr": "11", "detail": "Incident, Problem and Change Management", "essentials": "false", "advance": "true" },
+        { "sr": "12", "detail": "Device Administration", "essentials": "false", "advance": "true" },
+        { "sr": "13", "detail": "Change Management", "essentials": "false", "advance": "true" },
+        { "sr": "14", "detail": "Capacity Management", "essentials": "false", "advance": "true" },
+        { "sr": "15", "detail": "Provisioning Support", "essentials": "false", "advance": "true" }
+      ]
+    }
+  ]
+}
+
   }
 
 

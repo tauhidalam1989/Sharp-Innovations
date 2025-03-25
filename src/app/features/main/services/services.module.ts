@@ -19,6 +19,7 @@ import { CybersecurityImplementationComponent } from './cybersecurity-implementa
 import { CyberSecurityAwarenessComponent } from './cyber-security-awareness/cyber-security-awareness.component';
 import { CyberSecurityTrainingComponent } from './cyber-security-training/cyber-security-training.component';
 import { CyberSecurityManpowerOutsourcingComponent } from './cyber-security-manpower-outsourcing/cyber-security-manpower-outsourcing.component';
+import { NOCComponent } from './noc/noc.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { CyberSecurityManpowerOutsourcingComponent } from './cyber-security-manp
     CybersecurityImplementationComponent,
     CyberSecurityAwarenessComponent,
     CyberSecurityTrainingComponent,
-    CyberSecurityManpowerOutsourcingComponent
+    CyberSecurityManpowerOutsourcingComponent,
+    NOCComponent
   ],
   imports: [
     CommonModule,

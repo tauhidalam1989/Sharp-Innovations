@@ -16,6 +16,7 @@ import { CybersecurityImplementationComponent } from './cybersecurity-implementa
 import { CyberSecurityAwarenessComponent } from './cyber-security-awareness/cyber-security-awareness.component';
 import { CyberSecurityTrainingComponent } from './cyber-security-training/cyber-security-training.component';
 import { CyberSecurityManpowerOutsourcingComponent } from './cyber-security-manpower-outsourcing/cyber-security-manpower-outsourcing.component';
+import { NOCComponent } from './noc/noc.component';
 
 const routes: Routes = [
   {
@@ -81,6 +82,10 @@ const routes: Routes = [
   {
     path:"cyber-security-manpower-outsourcing",
     component:CyberSecurityManpowerOutsourcingComponent
+  },
+  {
+    path:"NOC",
+    component:NOCComponent
   }
  
 ];

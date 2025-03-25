@@ -1,0 +1,119 @@
+<div class="container-fluid bg-light py-5">
+    <div class="container py-5">
+      <!-- Title and Introduction -->
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
+          <img
+            src="assets/images/noc_service.jpg"
+            alt="NOC Service"
+            class="img-fluid rounded"
+          />
+        </div>
+        <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.2s">
+          <h1 class="mb-4 display-5 text-primary">
+            <i class="fas fa-network-wired me-2"></i
+            >{{ 'SuperiorMonitoringNOCService.title' | translate }}
+          </h1>
+          <h4 class="mb-3 text-secondary">
+            {{ 'SuperiorMonitoringNOCService.subtitle' | translate }}
+          </h4>
+          <p class="mb-4 text-muted">
+            {{ 'SuperiorMonitoringNOCService.description' | translate }}
+          </p>
+        </div>
+      </div>
+  
+      <!-- NOC Services -->
+      <div class="row mt-5 text-center">
+        <h2 class="mb-3 text-primary">
+          <i class="fas fa-cogs me-2"></i
+          >{{ 'SuperiorMonitoringNOCService.services.title' | translate }}
+        </h2>
+      </div>
+      <div class="row g-4">
+        <div
+          *ngFor="let service of 'SuperiorMonitoringNOCService.services.points' | translate"
+          class="col-md-6 col-lg-3 wow fadeInUp"
+          data-wow-delay="0.2s"
+        >
+          <div class="card h-100 shadow-sm border-0 text-center">
+            <div class="card-body">
+              <h6 class="card-title text-primary">{{ service }}</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Operational Activities Section -->
+      <div class="row mt-5 text-center">
+        <h2 class="mb-3 text-primary">
+          <i class="fas fa-tasks me-2"></i
+          >{{ 'SuperiorMonitoringNOCService.operations.title' | translate }}
+        </h2>
+      </div>
+      <div class="row g-4">
+        <div
+          *ngFor="let activity of 'SuperiorMonitoringNOCService.operations.activities' | translate"
+          class="col-md-6 col-lg-4 wow fadeInUp"
+          data-wow-delay="0.2s"
+        >
+          <div class="card h-100 shadow-sm border-0 text-center">
+            <div class="card-body">
+              <h5 class="card-title text-primary">{{ activity.title }}</h5>
+              <ul class="text-muted text-start">
+                <li *ngFor="let point of activity.description">{{ point }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Call to Action Section -->
+      <div class="row mt-5 text-center">
+        <h2 class="text-primary">
+          {{ 'SuperiorMonitoringNOCService.call_to_action.title' | translate }}
+        </h2>
+        <p class="text-muted mb-4">
+          {{ 'SuperiorMonitoringNOCService.call_to_action.description' | translate }}
+        </p>
+      </div>
+      <div class="container-fluid bg-light py-5">
+        <div class="container py-5">
+          <!-- NOC Service Package Title -->
+          <h2 class="mb-4 text-center text-primary">
+            {{ 'NOCServicePackage.title' | translate }}
+          </h2>
+      
+          <!-- NOC Service Table -->
+          <table class="table table-bordered text-center shadow-sm">
+            <thead class="bg-success text-white">
+              <tr>
+                <th *ngFor="let header of 'NOCServicePackage.headers' | translate">
+                  {{ header }}
+                </th>
+              </tr>
+            </thead>
+          
+            <tbody>
+              <!-- Loop through Sections -->
+              <ng-container *ngFor="let section of 'NOCServicePackage.sections' | translate">
+                <!-- Section Title Row -->
+                <tr class="table-secondary fw-bold">
+                  <td colspan="4">{{ section.title }}</td>
+                </tr>
+          
+                <!-- Service Rows -->
+                <tr *ngFor="let service of section.services">
+                  <td>{{ service.sr }}</td>
+                  <td>{{ service.detail }}</td>
+                  <td>{{ service.essentials=="true" ? '✅' : '❌' }}</td>
+                  <td>{{ service.advance=="true" ? '✅' : '❌' }}</td>
+                </tr>
+              </ng-container>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+    </div>
+  </div>
