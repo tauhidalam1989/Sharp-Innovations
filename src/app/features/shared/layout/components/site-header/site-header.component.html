@@ -2,7 +2,7 @@
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark p-0">
       <!-- Brand -->
-      <a (click)="pathService.navigateToAbout('home')" class="navbar-brand">
+      <a class="cursor-pointer" (click)="pathService.navigateToAbout('home')" class="navbar-brand">
         <h1 class="text-white">{{ 'TITLE' | translate }}</h1>
       </a>
       <div class="language-toggle show-on-mobile" (click)="switchLanguage(currentLang === 'en' ? 'ar' : 'en')">
@@ -125,7 +125,7 @@
           <a routerLink="/contact" routerLinkActive="active" class="nav-item nav-link">
             {{ 'CONTACT' | translate }}
           </a>
-          <a (click)="switchLanguage(currentLang === 'en' ? 'ar' : 'en')"  routerLinkActive="active" class="nav-item nav-link cursor-pointer">
+          <a class="cursor-pointer" (click)="switchLanguage(currentLang === 'en' ? 'ar' : 'en')"  routerLinkActive="active" class="nav-item nav-link cursor-pointer">
             {{ currentLang === 'ar' ? 'English': 'عربي'   }}
           </a>
 
