@@ -11,7 +11,7 @@
       <div class="col-lg-7">
 
         <div class="wow fadeIn" data-wow-delay="0.3s">
-          <form [formGroup]="contactForm" >
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
             <div class="row g-3">
               <div class="col-md-6">
                 <div class="form-floating">
@@ -117,7 +117,7 @@
      
               </div>
               <div class="col-6">
-                <button class="btn btn-primary w-100 py-3 d-flex justify-content-center align-items-center" type="submit" (touchend)="onSubmit()" (click)="onSubmit()" [disabled]="contactForm.invalid">
+                <button class="btn btn-primary w-100 py-3 d-flex justify-content-center align-items-center" type="submit" (touchend)="onSubmit()" [disabled]="contactForm.invalid">
                   <ng-container *ngIf="!loading && !success">
                     {{ 'CONTACT-FORM.SEND_MESSAGE' | translate }}
                   </ng-container>
@@ -126,10 +126,7 @@
                   <div *ngIf="loading" class="spinner-border spinner-border-sm ms-2" role="status">
                     <span class="visually-hidden">Loading...</span>
                   </div>
-                  <div *ngIf="contactForm.invalid" class="text-danger">
-                    Form invalid: {{ contactForm.errors | json }}
-                  </div>
-                  
+              
                   <!-- White checkmark on success -->
                   <div *ngIf="success" class="text-white ms-2">
                     <i class="fa fa-check-circle"></i>
