@@ -79,6 +79,7 @@
                     class="form-control"
                     id="subject"
                     formControlName="subject"
+                    (change)="onSubjectChange($event)"
                   >
                     <option value="" >
                       {{ 'CONTACT-FORM.PLACEHOLDER_SUBJECT' | translate }}
@@ -112,11 +113,32 @@
                   </div>
                 </div>
               </div>
-              <div class="col-12">
-                <button class="btn btn-primary w-100 py-3" type="submit" [disabled]="contactForm.invalid">
-                  {{ 'CONTACT-FORM.SEND_MESSAGE' | translate }}
+              <div class="col-3">
+     
+              </div>
+              <div class="col-6">
+                <button class="btn btn-primary w-100 py-3 d-flex justify-content-center align-items-center" type="submit" [disabled]="contactForm.invalid">
+                  <ng-container *ngIf="!loading && !success">
+                    {{ 'CONTACT-FORM.SEND_MESSAGE' | translate }}
+                  </ng-container>
+              
+                  <!-- Spinner while sending -->
+                  <div *ngIf="loading" class="spinner-border spinner-border-sm ms-2" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+              
+                  <!-- White checkmark on success -->
+                  <div *ngIf="success" class="text-white ms-2">
+                    <i class="fa fa-check-circle"></i>
+                  </div>
                 </button>
               </div>
+              
+              <div class="col-3">
+            
+              </div>
+             
+
             </div>
           </form>
         </div>

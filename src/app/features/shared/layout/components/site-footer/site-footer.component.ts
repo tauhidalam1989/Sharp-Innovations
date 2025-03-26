@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./site-footer.component.scss']
 })
 export class SiteFooterComponent {
-
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  
 }

@@ -44,7 +44,7 @@
   "ORGANIZATION": "Organization",
   "PLACEHOLDER_ORGANIZATION": "Enter your organization",
   "SUBJECT": "Subject",
-  "PLACEHOLDER_SUBJECT": "Enter subject",
+  "PLACEHOLDER_SUBJECT": "Select subject",
   "MESSAGE": "Message",
   "PLACEHOLDER_MESSAGE": "Leave a message here",
   "SEND_MESSAGE": "Send Message",
