@@ -126,7 +126,10 @@
                   <div *ngIf="loading" class="spinner-border spinner-border-sm ms-2" role="status">
                     <span class="visually-hidden">Loading...</span>
                   </div>
-              
+                  <div *ngIf="contactForm.invalid" class="text-danger">
+                    Form invalid: {{ contactForm.errors | json }}
+                  </div>
+                  
                   <!-- White checkmark on success -->
                   <div *ngIf="success" class="text-white ms-2">
                     <i class="fa fa-check-circle"></i>
