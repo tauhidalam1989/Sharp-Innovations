@@ -20,7 +20,7 @@ export class ContactComponent {
   ) {
     this.contactForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
-      email: [''],
+      email: ['', [Validators.required, Validators.email]],
       subject: ['', ],
       message: [''],
       contactNumber:['', [Validators.required]],

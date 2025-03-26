@@ -117,7 +117,7 @@
      
               </div>
               <div class="col-6">
-                <button class="btn btn-primary w-100 py-3 d-flex justify-content-center align-items-center" type="submit" [disabled]="contactForm.invalid">
+                <button class="btn btn-primary w-100 py-3 d-flex justify-content-center align-items-center" type="submit" (touchend)="onSubmit()" [disabled]="contactForm.invalid">
                   <ng-container *ngIf="!loading && !success">
                     {{ 'CONTACT-FORM.SEND_MESSAGE' | translate }}
                   </ng-container>
