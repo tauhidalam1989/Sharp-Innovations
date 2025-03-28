@@ -57,7 +57,11 @@
   "SUBJECT_BILLING": "مشاكل الفواتير والحسابات",
   "SUBJECT_GENERAL": "استفسار عام",
   "SUBJECT_TECHNICAL": "الدعم الفني",
-  "SUBJECT_COMPLAINTS": "الشكاوى"
+  "SUBJECT_COMPLAINTS": "الشكاوى",
+  "CONTACT_HOURS": "ساعات العمل",
+  "CONTACT_TIME": "الأحد - الخميس: 8 صباحًا إلى 5 مساءً",
+  "CONTACT_DAY": "الجمعة والسبت: مغلق",
+  "CONTACT_SOCIALMEDIA": "حسابات وسائل التواصل الاجتماعي"
 },
  "FAQ": {
     "POPULAR_FAQS": "الأسئلة الشائعة",

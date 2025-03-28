@@ -59,7 +59,11 @@
   "SUBJECT_BILLING": "Billing and Accounts Issues",
   "SUBJECT_GENERAL": "General Inquiry",
   "SUBJECT_TECHNICAL": "Technical Support",
-  "SUBJECT_COMPLAINTS": "Complaints"
+  "SUBJECT_COMPLAINTS": "Complaints",
+  "CONTACT_HOURS": "Business Hours",
+  "CONTACT_TIME": "Sunday - Thursday: 8 a.m. to 5 p.m",
+  "CONTACT_DAY": "Friday & Saturday : Closed",
+  "CONTACT_SOCIALMEDIA": "Social Media accounts"
 },
 
  "FAQ": {
