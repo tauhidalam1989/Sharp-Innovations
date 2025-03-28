@@ -12,7 +12,7 @@ body.rtl {
   font-family: "DIN Next LT Arabic Light";
   direction: rtl;
   text-align: right;
-  font-size: 16px;
+  font-size: 14px;
   @media (min-width: 992px) {
     .text-lg-start {
         text-align: right !important;
@@ -47,9 +47,9 @@ body.rtl {
     margin-right: auto !important;
   }
 
-  .ms-auto {
-    margin-left: unset !important;
-  }
+  // .ms-auto {
+  //   margin-left: unset !important;
+  // }
 
   .navbar-brand {
     padding-top: .3125rem;
@@ -85,6 +85,8 @@ body {
  //font-family: "DIN Next LT Arabic Light";
   direction: ltr;
   text-align: left;
+  font-size: 14px;
+  font-family: "DIN Next LT Arabic Light";
 
 }
 .cursor-pointer{
