@@ -1,20 +1,58 @@
-<div class="page-container">
-  <div class="content-left">
-    <h2>Our Happy Clients</h2>
+<div class="py-5">
+  <div class="content-left container">
+    <div class="heading">
+      <div class="clients">
+        <img src="../../../../assets/logo/SLogo.png" alt=""> 
+        <h2> Our Clients</h2>
+      </div>
+      <div class="explore">
+        <p class="explore-btn">Explore More <i class="fas fa-arrow-right"></i></p>
+       
+      </div>
+    </div>
+   
     <p>We Cooperate with top Clients and provide access to over 100+ Countries.</p>
   </div>
-<div class="carousel-wrapper">
-  <button class="nav-button prev" (click)="slide('prev')">←</button>
-  <div class="carousel-container">
-    <div class="carousel-track" [@scrollAnimation]="animationState">
-      <div class="carousel-item" *ngFor="let logo of logos">
-        <img [src]="logo" alt="Client Logo">
-      </div>
-      <div class="carousel-item" *ngFor="let logo of logos">
-        <img [src]="logo" alt="Client Logo">
+  
+  <div class="carousel-wrapper">
+    <div class="carousel-container">
+      <div class="carousel-track scroll-left">
+        <div class="carousel-item" *ngFor="let logo of clientLogos">
+          <img [src]="logo" alt="Client Logo">
+        </div>
+        <!-- Duplicate Logos -->
+        <div class="carousel-item" *ngFor="let logo of clientLogos">
+          <img [src]="logo" alt="Client Logo">
+        </div>
       </div>
     </div>
   </div>
-  <button class="nav-button next" (click)="slide('next')">→</button>
+  <div class="content-left container">
+    <div class="heading">
+      <div class="clients">
+        <img src="../../../../assets/logo/SLogo.png" alt=""> 
+        <h2> Our Partners</h2>
+      </div>
+      <div class="explore">
+        <p class="explore-btn">Explore More <i class="fas fa-arrow-right"></i></p>
+      </div>
+    </div>
+    <p>we built a global tech ecosystem through years of collaboration with a vast network of vendors and partners.</p>
+  </div>
+  
+ <!-- Partners Carousel (Moves Right) -->
+<div class="carousel-wrapper">
+  <div class="carousel-container">
+    <div class="carousel-track scroll-right">
+      <div class="carousel-item" *ngFor="let logo of partnerLogos">
+        <img [src]="logo" alt="Partner Logo">
+      </div>
+      <!-- Duplicate Logos to Avoid Blank Space -->
+      <div class="carousel-item" *ngFor="let logo of partnerLogos">
+        <img [src]="logo" alt="Partner Logo">
+      </div>
+    </div>
+  </div>
 </div>
+
 </div>
