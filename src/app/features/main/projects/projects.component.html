@@ -1,27 +1,8 @@
 <!-- Project (Case Study) Start -->
 <div class="container-fluid bg-light">
-    <div class="container ">
+    <div class=" ">
       <app-clients-page></app-clients-page>
-      <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
-        <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">
-          {{ 'PROJECT.CASE_STUDY' | translate }}
-        </div>
-        <h1 class="mb-4">{{ 'PROJECT.TITLE' | translate }}</h1>
-      </div>
-      <div class="row g-4">
-        <div *ngFor="let project of projectList; let i = index" class="col-lg-4 wow fadeIn" [attr.data-wow-delay]="project.delay">
-          <div class="case-item position-relative overflow-hidden rounded mb-2">
-            <img class="img-fluid" [src]="project.image" [alt]="project.title | translate" />
-            <a class="case-overlay text-decoration-none" [href]="project.link">
-              <small>{{ project.category | translate }}</small>
-              <h5 class="lh-base text-white mb-3">{{ project.title | translate }}</h5>
-              <span class="btn btn-square btn-primary">
-                <i class="fa fa-arrow-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
+     
     </div>
   </div>
   <!-- Project (Case Study) End -->

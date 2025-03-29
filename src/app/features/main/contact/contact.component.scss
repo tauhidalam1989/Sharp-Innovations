@@ -31,3 +31,28 @@
     to { transform: rotate(360deg); }
   }
   
+  .contact{
+    --tw-text-opacity: 1;
+    color: #7f7f7f;
+    text-align: start;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  .border {
+    border: 1.5px solid #1363c6 !important;
+}
+
+  .btn-outline-primary {
+    color: #fff;
+    background-color: #1363c6;
+  //  background-color: white;
+    border-color: white;
+}
+  .btn-outline-primary:hover {
+    color: #fff;
+    background-color: #1363c6;
+    border-color: #1363c6;
+}
+p{
+  font-weight: 600;
+}

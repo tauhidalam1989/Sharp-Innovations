@@ -32,7 +32,7 @@
           },
           "CONTACT-FORM": {
   "US": "Contact Us",
-  "QUERY_PROMPT": "If You Have Any Query, Please Contact Us",
+  "QUERY_PROMPT": "We will be happy to share us your ideas and opinions about any of our solutions and services. Our team is always ready to answer all your inquiries at anytime",
   "FORM_INACTIVE": "The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes.",
   "DOWNLOAD_NOW": "Download Now",
   "YOUR_NAME": "Your Name",
@@ -149,7 +149,7 @@
   },
   "FOOTER": {
     "COMPANY_NAME": "Sharp Innovations",
-    "DESCRIPTION": "SIIT was established in 2015 in Riyadh, Kingdom of Saudi Arabia. We provide technical solutions and consulting in resource planning for government and private enterprises.",
+    "DESCRIPTION": "SIIT was established in 2023 in Riyadh, Kingdom of Saudi Arabia. We provide technical solutions and consulting in resource planning for government and private enterprises.",
     "GET_IN_TOUCH": "Get In Touch",
     "ADDRESS": "7576, Sulay, Al-Riyadh, Kingdom of Saudi Arabia",
     "PHONE": "+966 59 825 0829",

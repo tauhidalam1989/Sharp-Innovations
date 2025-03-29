@@ -5,17 +5,19 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   selector: 'app-clients-page',
   templateUrl: './clients-page.component.html',
   styleUrls: ['./clients-page.component.scss'],
-  animations: [
-    trigger('scrollAnimation', [
-      state('start', style({ transform: 'translateX(0)' })),
-      state('end', style({ transform: 'translateX(-50%)' })),
-      transition('start => end', animate('20s linear')),
-      transition('end => start', animate('20s linear')),
-    ]),
-  ],
+
 })
 export class ClientsPageComponent implements OnDestroy {
-  logos: string[] = [
+  animationStateClients = 'start';  // For clients (moves left)
+  animationStatePartners = 'start'; // For partners (moves right)
+  private intervalIdClients: any;
+  private intervalIdPartners: any;
+
+  constructor() {
+    this.startAutoSlideClients();
+    this.startAutoSlidePartners();
+  }
+  clientLogos: string[] = [
     'assets/clients/logo_01_1.png',
     'assets/clients/logo_03_1.png',
     'assets/clients/logo_04_1_sahat.png',
@@ -29,32 +31,40 @@ export class ClientsPageComponent implements OnDestroy {
     'assets/clients/logo_nat_housing.png',
     'assets/clients/logo_national_guard.png',
   ];
-
-  animationState = 'start';
-  private intervalId: any;
-
-  constructor() {
-    this.startAutoSlide();
-  }
+  partnerLogos: string[] = [
+    'assets/clients/logo_01_1.png',
+    'assets/clients/logo_03_1.png',
+    'assets/clients/logo_04_1_sahat.png',
+    'assets/clients/logo_05_1.png',
+    'assets/clients/logo_06_1.png',
+    'assets/clients/logo_10_1_prince.png',
+    'assets/clients/logo_11_1_solution.png',
+    'assets/clients/logo_12_1_office.png',
+    'assets/clients/logo_initial.png',
+    'assets/clients/logo_kingfaisal.png',
+    'assets/clients/logo_nat_housing.png',
+    'assets/clients/logo_national_guard.png',
+  ];
+  
 
   ngOnDestroy() {
-    if (this.intervalId) {
-      clearInterval(this.intervalId);
+    if (this.intervalIdClients) {
+      clearInterval(this.intervalIdClients);
+    }
+    if (this.intervalIdPartners) {
+      clearInterval(this.intervalIdPartners);
     }
   }
 
-  private startAutoSlide() {
-    this.intervalId = setInterval(() => {
-      this.animationState = this.animationState === 'start' ? 'end' : 'start';
+  private startAutoSlideClients() {
+    this.intervalIdClients = setInterval(() => {
+      this.animationStateClients = this.animationStateClients === 'start' ? 'end' : 'start';
     }, 20000);
   }
 
-  slide(direction: 'prev' | 'next') {
-    if (this.intervalId) {
-      clearInterval(this.intervalId);
-    }
-
-    this.animationState = direction === 'next' ? 'end' : 'start';
-    this.startAutoSlide();
+  private startAutoSlidePartners() {
+    this.intervalIdPartners = setInterval(() => {
+      this.animationStatePartners = this.animationStatePartners === 'start' ? 'end' : 'start';
+    }, 20000);
   }
 }
