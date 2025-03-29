@@ -3,7 +3,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark p-0 cursor-pointer">
       <!-- Brand -->
       <a class="cursor-pointer" (click)="pathService.navigateToAbout('home')" class="navbar-brand">
-        <h1 class="text-white">{{ 'TITLE' | translate }}</h1>
+        <!-- <h1 class="text-white">{{ 'TITLE' | translate }}</h1> -->
+         <img [height]="60" src="../../../../../../assets/img/Sharp-Innovations-White.png" alt="" srcset="">
       </a>
       <div class="language-toggle show-on-mobile" (click)="switchLanguage(currentLang === 'en' ? 'ar' : 'en')">
         <div class="switch  d-flex"  >
