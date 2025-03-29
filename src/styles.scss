@@ -98,3 +98,7 @@ body {
   color: #6c757d;
   content: var(--bs-breadcrumb-divider, "|") /* rtl: var(--bs-breadcrumb-divider, "/") */;
 }
+
+.navbar-nav.ms-auto {
+  font-size: 19px;
+}
