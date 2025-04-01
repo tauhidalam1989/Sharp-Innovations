@@ -3,6 +3,9 @@
   display: inline-block;
   margin: 0 5px;
 }
+.header-logo{
+  display: flex;
+}
 
 .switch > label {
   position: relative;
@@ -183,6 +186,14 @@
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+
+  .navbar-brand{
+
+    img{
+      height: 37px;
+    }
+  }
+  
   .service-menuiot {
     position: relative; /* Allow dropdown to stack below */
     min-width: 100%; /* Use full width of the screen */

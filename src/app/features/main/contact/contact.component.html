@@ -141,17 +141,39 @@
         <div class="col-lg-6">
           <div class="map-card relative bg-white p-4 mt-6 border border-gray-300 rounded-base" style="border-radius: 8px;">
              <div class="map-container min-h-[12rem] bg-white rounded-base overflow-hidden">
-              <iframe allowfullscreen="" referrerpolicy="no-referrer-when-downgrade" width="100%" class="h-full" style="border: 0;" 
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3620.9598450098615!2d46.6081297!3d24.8310468!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee55a1a323d63%3A0x28cf3917d46d8ddb!2s2P%20contact%20center%20building!5e0!3m2!1sar!2seg!4v1716279720611!5m2!1sar!2seg">
-            </iframe></div>
-            <p class="flex items-center gap-3 text-base">
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3626.6349878292594!2d46.83981599999999!3d24.636262400000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2fa712790d0be7%3A0xae72a5d4a66b7e45!2z2LTYsdmD2Kkg2KfYqNiq2YPYp9ix2KfYqiDYrdin2K_YqQ!5e0!3m2!1sen!2sin!4v1743526567330!5m2!1sen!2sin" width="600" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+               <p class="flex items-center gap-3 text-base" style="text-align: center;">
                 <i class="fa fa-map-marker-alt me-3"></i> {{ 'FOOTER.ADDRESS' | translate }}
               </p>
-              <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 my-3">
-                <p class="flex items-center gap-2 text-base">
-                   <i class="fa fa-phone-alt me-3"></i> {{ 'FOOTER.PHONE' | translate }} </p>
-				   <a target="_blank" class="flex items-center gap-2 text-base" style="font-weight: 600;" href="mailto:info@sharpinnvotech.com">
-				    <i class="fa fa-envelope me-3"></i>  {{ 'FOOTER.EMAIL' | translate }} </a></div></div>
+             <div class="container">
+    <div class="row">
+        <div class="col-md-6 p-3 border-end border-dark text-center">
+            <p class="d-flex align-items-center justify-content-center gap-2 text-base">
+                Our Contact details
+            </p>
+            <p class="d-flex align-items-center justify-content-center gap-2 text-base">
+                <i class="fa fa-phone-alt"></i> {{ 'FOOTER.PHONE' | translate }}
+            </p>
+            <a target="_blank" class="d-flex align-items-center justify-content-center gap-2 text-base fw-bold" href="mailto:info@sharpinnvotech.com">
+                <i class="fa fa-envelope "></i> {{ 'FOOTER.EMAIL' | translate }}
+            </a>
+        </div>
+        <div class="col-md-6 p-3 text-center">
+            <p class="d-flex align-items-center justify-content-center gap-2 text-base">
+                For Sales Inquiries
+            </p>
+            <p class="d-flex align-items-center justify-content-center gap-2 text-base">
+                <i class="fa fa-phone-alt "></i> {{ 'FOOTER.PHONE' | translate }}
+            </p>
+            <a target="_blank" class="d-flex align-items-center justify-content-center gap-2 text-base fw-bold" href="mailto:sales@sharpinnvotech.com">
+                <i class="fa fa-envelope "></i> {{ 'FOOTER.sales' | translate }}
+            </a>
+        </div>
+    </div>
+</div>
+
+           
+            </div>
 
 
             <div class="my-4 p-4 bg-[#F7F7F7] border border-[#D7D7D7] rounded-[0.625rem] p-[1.40rem]" style="background-color:#1363c6;border-radius: 8px;">

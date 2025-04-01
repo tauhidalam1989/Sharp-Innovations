@@ -1,6 +1,16 @@
 .page-container {
   width: 100%;
 }
+@media (max-width: 767.98px) {
+  .heading[_ngcontent-cjl-c13] p[_ngcontent-cjl-c13] {
+    --tw-text-opacity: 1;
+    color: #7f7f7f !important;
+    text-align: start;
+     font-size: unset !important; 
+    font-weight: 600 !important;
+  }
+  
+}
 
 /* 🔹 Heading Styles */
 .heading {
@@ -13,12 +23,18 @@ justify-content: space-between;
 gap: 10px;
     align-items: center;
 }
+
   p {
     --tw-text-opacity: 1;
     color: #7f7f7f !important;
     text-align: start;
     font-size: 1.25rem !important;
     font-weight: 600 !important;
+    @media (max-width: 767.98px) {
+      p{
+        font-size: unset !important;
+      }
+    }
   }
 
   img {
@@ -30,11 +46,18 @@ gap: 10px;
 /* 🔹 Content Section */
 .content-left {
   padding-top: 40px;
-
+  @media (max-width: 767.98px) {
+    h2 {
+      font-size: 16px !important;
+    }
+  }
   h2 {
     font-size: 32px;
     color: #1a1a1a;
     margin-bottom: 20px;
+
+  
+
   }
 
   p {
@@ -97,7 +120,10 @@ gap: 10px;
 /* 🔹 Carousel Items */
 .carousel-item {
   border-radius: 19px;
-  padding: 40px;
+  padding:22px;
+  @media (max-width: 767.98px) {
+    padding:9px !important;
+  }
   border: 1.5px solid #1363c6 !important;
   margin: 0 10px;
   border: 1px solid white;
@@ -109,8 +135,9 @@ gap: 10px;
 
 /* 🔹 Logo Images */
 .carousel-item img {
-  height: 80px;
+  height: 128px;
   width: 100%;
+  max-width: 300px !important;
   object-fit: contain;
 }
 
@@ -135,7 +162,7 @@ gap: 10px;
 }
 
 .explore-btn {
-
+ 
   color: #0d4fa3;
   border: none;
   padding: 0.8rem 1.5rem;
@@ -154,5 +181,10 @@ gap: 10px;
 
   i {
     font-size: 0.9rem;
+  }
+  @media (max-width: 767.98px) {
+    i{
+      font-size: unset !important;
+    }
   }
 }

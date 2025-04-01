@@ -18,12 +18,18 @@ export class ClientsPageComponent implements OnDestroy {
     this.startAutoSlidePartners();
   }
   clientLogos: string[] = [
-    'assets/clients/logo_01_1.png',
-    'assets/clients/logo_03_1.png',
-    'assets/clients/logo_04_1_sahat.png',
-    'assets/clients/logo_05_1.png',
-    'assets/clients/logo_06_1.png',
-    'assets/clients/logo_10_1_prince.png',
+    'assets/clients/2.jpg',
+    'assets/clients/3.png',
+    'assets/clients/4.jpg',
+    'assets/clients/5.png',
+    'assets/clients/6.jpg',
+    'assets/clients/7.png',
+    'assets/clients/8.png',
+    'assets/clients/9.png',
+    'assets/clients/10.png',
+    'assets/clients/11.png',
+    'assets/clients/12.jpeg',
+    'assets/clients/13.png',
   ];
   partnerLogos: string[] = [
     'assets/partner/Cisco.png',
@@ -31,6 +37,13 @@ export class ClientsPageComponent implements OnDestroy {
     'assets/partner/HP.svg',
     'assets/partner/odoo_logo.png',
     'assets/partner/T.png',
+    'assets/partner/O.png',
+    'assets/partner/Cisco.png',
+    'assets/partner/Dell.png',
+    'assets/partner/HP.svg',
+    'assets/partner/odoo_logo.png',
+    'assets/partner/T.png',
+    'assets/partner/O.png',
     
 
   ];

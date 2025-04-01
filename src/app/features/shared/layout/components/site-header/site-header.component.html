@@ -1,21 +1,19 @@
 <div class="container-fluid sticky-top">
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark p-0 cursor-pointer">
+
+      <div  class="header-logo">
+        <a style="color: white;" class="cursor-pointer show-on-mobile" (click)="switchLanguage(currentLang === 'en' ? 'ar' : 'en')"  routerLinkActive="active" class="nav-item nav-link cursor-pointer">
+          {{ currentLang === 'ar' ? 'English': 'عربي'   }}
+        </a>
+        <a class="cursor-pointer" (click)="pathService.navigateToAbout('home')" class="navbar-brand">
+          <!-- <h1 class="text-white">{{ 'TITLE' | translate }}</h1> -->
+           <img [height]="60" [src]="imageSrc" alt="" srcset="">
+        </a>
+  
+      </div>
       <!-- Brand -->
-      <a class="cursor-pointer" (click)="pathService.navigateToAbout('home')" class="navbar-brand">
-        <!-- <h1 class="text-white">{{ 'TITLE' | translate }}</h1> -->
-         <img [height]="60" src="../../../../../../assets/img/Sharp-Innovations-White.png" alt="" srcset="">
-      </a>
-      <div class="language-toggle show-on-mobile" (click)="switchLanguage(currentLang === 'en' ? 'ar' : 'en')">
-        <div class="switch  d-flex"  >
-          <i class="fa fa-globe Language" aria-hidden="true" >
-            
-            <label for="language-toggle">
-              <span class="on">{{ currentLang }}</span>
-            </label>
-          </i>
-      </div>
-      </div>
+    
       <!-- Mobile Toggle Button -->
       <button
         type="button"

@@ -15,16 +15,20 @@ export class SiteHeaderComponent implements OnInit {
 // Add this property to your component class
 selectedCategory: any = null;
 selectedproduct: any = null;
+  imageSrc: any;
   constructor(
     private router: Router,
     public pathService: RoutingService,
     private languageService: LanguageService
-  ) {}
+  ) {
+   
+  }
 
   ngOnInit(): void {
     this.currentLang = this.languageService.getLanguage();
     this.languageService.switchLanguage(this.currentLang);
-
+    this.imageSrc =  this.currentLang === 'en' ? '../../../../../../assets/img/Sharp-Innovations-White.png' : '../../../../../../assets/img/Arabic-sharp.png';
+    
     // Listen for navigation events
     // this.router.events.subscribe((event) => {
     //   if (event instanceof NavigationEnd) {
@@ -44,6 +48,11 @@ selectedproduct: any = null;
   switchLanguage(lang: string): void {
     this.languageService.switchLanguage(lang);
     this.currentLang = lang;
+    console.log(this.currentLang);
+    
+    this.imageSrc =  this.currentLang === 'en' ? '../../../../../../assets/img/Sharp-Innovations-White.png' : '../../../../../../assets/img/Arabic-sharp.png';
+    
+     
   }
 
 

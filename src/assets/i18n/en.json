@@ -152,8 +152,9 @@
     "DESCRIPTION": "SIIT was established in 2023 in Riyadh, Kingdom of Saudi Arabia. We provide technical solutions and consulting in resource planning for government and private enterprises.",
     "GET_IN_TOUCH": "Get In Touch",
     "ADDRESS": "7576, Sulay, Al-Riyadh, Kingdom of Saudi Arabia",
-    "PHONE": "+966 59 825 0829",
+    "PHONE": "+966 53 140 9624",
     "EMAIL": "info@sharpinnvotech.com",
+    "sales":"sales@sharpinnvotech.com",
     "POPULAR_LINKS": "Popular Links",
     "ABOUT_US": "About Us",
     "CONTACT_US": "Contact Us",
@@ -1759,7 +1760,7 @@
             "title": "Secure Your Business Today",
             "description": "Strengthen your cybersecurity defenses with Sharp Innovations. Contact us today for a consultation and tailored security implementation plan.",
             "contact": {
-              "phone": "+966 59 825 0829",
+              "phone": "+966 53 140 9624",
               "email": "info@sharpinnvotech.com"
             }
           }
