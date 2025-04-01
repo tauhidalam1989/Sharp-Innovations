@@ -5,7 +5,8 @@
         <!-- Company Info -->
         <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
           <a routerLink="/home" class="d-inline-block mb-3">
-            <h3 class="text-white">{{ 'FOOTER.COMPANY_NAME' | translate }}</h3>
+            <img [height]="60" src="../../../../../../assets/img/Sharp-Innovations-White.png" alt="" srcset="">
+    
           </a>
           <p class="mb-0">{{ 'FOOTER.DESCRIPTION' | translate }}</p>
         </div>
@@ -44,9 +45,9 @@
         <!-- Services -->
         <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
           <h5 class="text-white mb-4">{{ 'FOOTER.OUR_SERVICES' | translate }}</h5>
-          <a class="btn btn-link">{{ 'FOOTER.SERVICE_1' | translate }}</a>
-          <a class="btn btn-link">{{ 'FOOTER.SERVICE_2' | translate }}</a>
-          <a class="btn btn-link">{{ 'FOOTER.SERVICE_3' | translate }}</a>
+          <a class="btn btn-link" routerLink="/services/application-security" >{{ 'FOOTER.SERVICE_1' | translate }}</a>
+          <a class="btn btn-link" routerLink="/services/network-security">{{ 'FOOTER.SERVICE_2' | translate }}</a>
+          <a class="btn btn-link" routerLink="/services/chatbot-development">{{ 'FOOTER.SERVICE_3' | translate }}</a>
           <a class="btn btn-link">{{ 'FOOTER.SERVICE_4' | translate }}</a>
           <a class="btn btn-link">{{ 'FOOTER.SERVICE_5' | translate }}</a>
         </div>

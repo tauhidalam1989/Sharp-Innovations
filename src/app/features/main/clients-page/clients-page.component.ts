@@ -24,26 +24,15 @@ export class ClientsPageComponent implements OnDestroy {
     'assets/clients/logo_05_1.png',
     'assets/clients/logo_06_1.png',
     'assets/clients/logo_10_1_prince.png',
-    'assets/clients/logo_11_1_solution.png',
-    'assets/clients/logo_12_1_office.png',
-    'assets/clients/logo_initial.png',
-    'assets/clients/logo_kingfaisal.png',
-    'assets/clients/logo_nat_housing.png',
-    'assets/clients/logo_national_guard.png',
   ];
   partnerLogos: string[] = [
-    'assets/clients/logo_01_1.png',
-    'assets/clients/logo_03_1.png',
-    'assets/clients/logo_04_1_sahat.png',
-    'assets/clients/logo_05_1.png',
-    'assets/clients/logo_06_1.png',
-    'assets/clients/logo_10_1_prince.png',
-    'assets/clients/logo_11_1_solution.png',
-    'assets/clients/logo_12_1_office.png',
-    'assets/clients/logo_initial.png',
-    'assets/clients/logo_kingfaisal.png',
-    'assets/clients/logo_nat_housing.png',
-    'assets/clients/logo_national_guard.png',
+    'assets/partner/Cisco.png',
+    'assets/partner/Dell.png',
+    'assets/partner/HP.svg',
+    'assets/partner/odoo_logo.png',
+    'assets/partner/T.png',
+    
+
   ];
   
 

@@ -161,11 +161,11 @@
     "TERMS_CONDITIONS": "Terms & Conditions",
     "CAREER": "Career",
     "OUR_SERVICES": "Our Services",
-    "SERVICE_1": "Robotic Automation",
-    "SERVICE_2": "Machine Learning",
-    "SERVICE_3": "Predictive Analysis",
-    "SERVICE_4": "Data Science",
-    "SERVICE_5": "Robot Technology",
+    "SERVICE_1": "Application Security",
+    "SERVICE_2": "Network Security",
+    "SERVICE_3": "Chat Bot Development",
+    "SERVICE_4": "Oracle process automation",
+    "SERVICE_5": "Ai in Cyber Security",
     "COPYRIGHT": "Sharp Innovations Company for Information Technology, All Rights Reserved.",
     "HOME": "Home",
     "COOKIES": "Cookies",
@@ -206,7 +206,7 @@
     
   },
   "about_page":{
-    "p1":"Welcome to Sharp Innvovations, a premier IT services and product company based in Saudi Arabia. Founded in 2015 by industry experts, Sharp Innvovations is dedicated to providing innovative technology solutions that help businesses succeed in an increasingly digital world.",
+    "p1":"Welcome to Sharp Innvovations, a premier IT services and product company based in Saudi Arabia. Founded in 2023 by industry experts, Sharp Innvovations is dedicated to providing innovative technology solutions that help businesses succeed in an increasingly digital world.",
     "p2":"Our mission is clear: to empower organizations by harnessing the transformative power of technology. By specializing in Artificial Intelligence, Automation, Cybersecurity, Application Services, and Consulting, we design and deliver solutions tailored to meet the unique needs of our clients, ensuring they achieve their business goals with efficiency and security.",
     "p3":"We are proud to align our vision with Saudi Arabia’s Vision 2030, contributing to the country’s ambitious goals of becoming a global leader in innovation, technology, and economic diversification. Our services are crafted to not only support the growth of our clients but also contribute to the development of a knowledge-based, sustainable economy" 
   },
@@ -283,7 +283,7 @@
     "oracle":"Oracle",
     "WELCOME_MESSAGE": "Welcome to Sharp Innovations Company for Information Technology",
     "FOCUS_ENGINEERS": "Highly Focused Talented IT Engineers, Designers, Analysts & Developers",
-    "COMPANY_DESCRIPTION": "Hope that you will find our Products & Services exotic which can support your esteemed organization to achieve goals. Sharp Innovations Company for Information Technology is a professionally managed company focusing on providing multiple types of IT Products & Services. Established in 2015, we are a Saudi-based company. We are a pioneering and dominant technical enterprise with an excellent edge in mobile software development. Sharp Innovations Solution as a Software organization provides cost-effective and quality solutions to clients. We believe in creating good relationships with customers. Our main objective is to meet customer requirements with cutting-edge technologies. We never compromise on the quality of the work.",
+    "COMPANY_DESCRIPTION": "Hope that you will find our Products & Services exotic which can support your esteemed organization to achieve goals. Sharp Innovations Company for Information Technology is a professionally managed company focusing on providing multiple types of IT Products & Services. Established in 2023, we are a Saudi-based company. We are a pioneering and dominant technical enterprise with an excellent edge in mobile software development. Sharp Innovations Solution as a Software organization provides cost-effective and quality solutions to clients. We believe in creating good relationships with customers. Our main objective is to meet customer requirements with cutting-edge technologies. We never compromise on the quality of the work.",
     "AWARD_WINNING": "Award Winning",
     "PROFESSIONAL_STAFF": "Professional Staff",
     "SUPPORT_24_7": "24/7 Support",
@@ -1095,17 +1095,19 @@
       "icon": "fas fa-shield-alt",
       "img":"../../../../../../assets/img/Banner.png",
       "items": [
+        { "name": "Application Security", "icon": "fas fa-lock","path":"application-security" },
+        { "name": "Cyber Security Awareness", "icon": "fas fa-lightbulb","path":"cyber-security-awareness" },
+        { "name": "Cybersecurity Consulting", "icon": "fas fa-user-secret", "path":"cybersecurity-consulting" },
+        { "name": "Cybersecurity Implementation", "icon": "fas fa-cogs","path":"cybersecurity-implementation" },
+       
+        { "name": "Cyber Security Manpower Outsourcing", "icon": "fas fa-users-cog","path":"cyber-security-manpower-outsourcing" },
+     { "name": "Cyber Security Training", "icon": "fas fa-chalkboard-teacher","path":"cyber-security-training" },
+        { "name": "Cybersecurity GRC Consulting", "icon": "fas fa-user-shield","path":"cybersecurity-grc-services.component" },
+      
         { "name": "Managed Security Services (MSSP)", "icon": "fas fa-shield-alt" ,"path":"mssp" },
         { "name": "Data Security Services", "icon": "fas fa-database","path":"data-security-services" },
-        { "name": "Cybersecurity Consulting", "icon": "fas fa-user-secret", "path":"cybersecurity-consulting" },
-        { "name": "Cybersecurity GRC Consulting", "icon": "fas fa-user-shield","path":"cybersecurity-grc-services.component" },
-        { "name": "Application Security", "icon": "fas fa-lock","path":"application-security" },
-        { "name": "Network Security", "icon": "fas fa-network-wired","path":"network-security" },
-        { "name": "Cybersecurity Implementation", "icon": "fas fa-cogs","path":"cybersecurity-implementation" },
-        { "name": "Cyber Security Awareness", "icon": "fas fa-lightbulb","path":"cyber-security-awareness" },
-        { "name": "Cyber Security Training", "icon": "fas fa-chalkboard-teacher","path":"cyber-security-training" },
-        { "name": "Cyber Security Manpower Outsourcing", "icon": "fas fa-users-cog","path":"cyber-security-manpower-outsourcing" }
-      ]
+         { "name": "Network Security", "icon": "fas fa-network-wired","path":"network-security" }
+         ]
     },
     {
       "key": "Network Infrastructure Services",
@@ -1114,7 +1116,8 @@
       "items": [
         { "name": "Network Operation Center", "icon": "fas fa-server", "path":"NOC"},
         { "name": "Network Consulting", "icon": "fas fa-comments" },
-        { "name": "Network Infratructure Implementation", "icon": "fas fa-tools" }
+        { "name": "Network Infratructure Implementation", "icon": "fas fa-tools" },
+        { "name": "Network Maintenance and Support", "icon": "fas fa-tools" }
       ]
     },
     {
@@ -1122,11 +1125,19 @@
       "icon": "fas fa-robot",
       "img":"../../../../../../assets/img/Banner3.png",
       "items": [
-        { "name": "Website Builder", "icon": "fas fa-laptop-code" }
+        { "name": "AI Consulting and Strategy", "icon": "fas fa-laptop-code" },
+        { "name": "AI Product Development", "icon": "fas fa-laptop-code" },
+        { "name": "Machine Learning (ML) Services", "icon": "fas fa-laptop-code" },
+        { "name": "Natural Language Processing (NLP)", "icon": "fas fa-laptop-code" },
+        { "name": "Computer Vision", "icon": "fas fa-laptop-code" },
+        { "name": "AI-Powered Automation", "icon": "fas fa-laptop-code" },
+        { "name": "AI in Cybersecurity", "icon": "fas fa-laptop-code" }
+        
+        
       ]
     },
     {
-      "key": "IT Infrastructure Services",
+      "key": "Application Management",
       "icon": "fas fa-server",
          "img":"../../../../../../assets/img/projects.png",
       "items": [
@@ -1137,12 +1148,33 @@
         { "name": "ui-development", "icon": "fas fa-paint-brush", "path": "cloud-development" },
         { "name": "Windows Application", "icon": "fas fa-window-maximize" },
         { "name": "ERP Solutions", "icon": "fas fa-project-diagram" },
-        { "name": "Big Data Development", "icon": "fas fa-chart-bar" },
-        { "name": "Business IT support", "icon": "fas fa-headset" },
-        { "name": "Onsite IT Staffing", "icon": "fas fa-user-friends" },
+        { "name": "Application Consulting", "icon": "fas fa-chart-bar" },
+        { "name": "Application Maintenance and Operation", "icon": "fas fa-headset" },
+        { "name": "Manpower Outsourcing(Application Experts)", "icon": "fas fa-user-friends" },
         { "name": "QA & Testing Services", "icon": "fas fa-vial" }
       ]
+    },
+    {
+      "key": "IT Infrastructure",
+      "icon": "fas fa-robot",
+      "img":"../../../../../../assets/img/Banner3.png",
+      "items": [
+        { "name": "IT Infrastructure Maintenance and Operation", "icon": "fas fa-laptop-code" },
+        { "name": "Server Administrators", "icon": "fas fa-laptop-code" },
+        { "name": "Database Administrators", "icon": "fas fa-laptop-code" }  
+      ]
+    },
+    {
+      "key": "Oracle",
+      "icon": "fas fa-robot",
+      "img":"../../../../../../assets/img/Banner3.png",
+      "items": [
+        { "name": "Oracle Primavera", "icon": "fas fa-laptop-code" },
+        { "name": "Oracle Process Automation", "icon": "fas fa-laptop-code" },
+        { "name": "Oracle Visual Builder", "icon": "fas fa-laptop-code" }  
+      ]
     }
+    
   ],
 
   
