@@ -61,12 +61,12 @@ export class ClientsPageComponent implements OnDestroy {
   private startAutoSlideClients() {
     this.intervalIdClients = setInterval(() => {
       this.animationStateClients = this.animationStateClients === 'start' ? 'end' : 'start';
-    }, 20000);
+    }, 1); // Changed from 1000000ms to 3000ms (3 seconds)
   }
-
+  
   private startAutoSlidePartners() {
     this.intervalIdPartners = setInterval(() => {
       this.animationStatePartners = this.animationStatePartners === 'start' ? 'end' : 'start';
-    }, 20000);
+    }, 1); // Changed from 1000000ms to 3000ms (3 seconds)
   }
 }
