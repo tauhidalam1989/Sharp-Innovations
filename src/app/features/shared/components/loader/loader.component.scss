@@ -1,0 +1,49 @@
+.loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000000;
+  }
+  
+  .loader-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loader-image {
+    width: 100px; /* Adjust size as needed */
+    border-radius: 20px; /* Optional: rounded corners */
+  }
+  
+  .loader-border {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    border: 3px solid transparent;
+   // animation: borderPulse 1.5s infinite linear;
+  }
+  
+  @keyframes borderPulse {
+    0% {
+      border-color: transparent;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+    50% {
+      border-color: #007bff;
+      box-shadow: 0 0 15px rgba(0, 123, 255, 0.8);
+    }
+    100% {
+      border-color: transparent;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+  }
+  
