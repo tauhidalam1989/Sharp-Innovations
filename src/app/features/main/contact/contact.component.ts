@@ -26,8 +26,11 @@ export class ContactComponent {
       contactNumber:['', [Validators.required]],
       organization:['']
     });
+    setTimeout(() => {
+      this.isLoading = false; // Simulating a delay
+    }, 3000);
   }
-
+isLoading =true
   loading = false; // Spinner state
   success = false; // Green tick state
   onSubmit(): void {

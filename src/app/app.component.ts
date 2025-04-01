@@ -18,7 +18,14 @@ export class AppComponent implements OnInit {
     private router: Router,
     private titleService: Title,
     private translateService: TranslateService
-  ) {}
+  ) {
+    setTimeout(() => {
+      this.isLoading = false; // Simulating a delay
+    }, 3000);
+  }
+  isLoading = true;
+
+
 
   ngOnInit(): void {
     // Check the current route and navigate to home if no route is provided
