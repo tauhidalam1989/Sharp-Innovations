@@ -1092,7 +1092,7 @@
   
   "servicing": [
     {
-      "key": "Cyber Security Services",
+      "key": "Cyber Security",
       "icon": "fas fa-shield-alt",
       "img":"../../../../../../assets/img/Banner.png",
       "items": [
@@ -1111,31 +1111,30 @@
          ]
     },
     {
-      "key": "Network Infrastructure Services",
+      "key": "Network Infrastructure",
       "icon": "fas fa-network-wired",
       "img":"../../../../../../assets/img/Banner2.png",
       "items": [
         { "name": "Network Operation Center", "icon": "fas fa-server", "path":"NOC"},
-        { "name": "Network Consulting", "icon": "fas fa-comments" },
-        { "name": "Network Infratructure Implementation", "icon": "fas fa-tools" },
-        { "name": "Network Maintenance and Support", "icon": "fas fa-tools" }
+        { "name": "Network Consulting", "icon": "fas fa-comments" ,"path":"network-consulting-services"  },
+        { "name": "Network Infratructure Implementation", "icon": "fas fa-tools","path":"network-infrastructure-services" },
+        { "name": "Network Maintenance and Support", "icon": "fas fa-tools","path":"network-infrastructure-maintenance" }
       ]
     },
     {
-      "key": "Our Ai Services",
+      "key": "Artificial Intelligence(AI)",
       "icon": "fas fa-robot",
       "img":"../../../../../../assets/img/Banner3.png",
       "items": [
-        { "name": "AI Consulting and Strategy", "icon": "fas fa-laptop-code" },
-        { "name": "AI Product Development", "icon": "fas fa-laptop-code" },
-        { "name": "Machine Learning (ML) Services", "icon": "fas fa-laptop-code" },
-        { "name": "Natural Language Processing (NLP)", "icon": "fas fa-laptop-code" },
-        { "name": "Computer Vision", "icon": "fas fa-laptop-code" },
-        { "name": "AI-Powered Automation", "icon": "fas fa-laptop-code" },
-        { "name": "AI in Cybersecurity", "icon": "fas fa-laptop-code" }
-        
-        
-      ]
+    { "name": "AI Consulting and Strategy", "icon": "fas fa-chalkboard-teacher","path":"ai-consulting" },
+    { "name": "AI Product Development", "icon": "fas fa-cogs", "path": "ai-product-development" },
+    { "name": "Machine Learning (ML) Services", "icon": "fas fa-brain", "path": "ai-ml-services" },
+    { "name": "Natural Language Processing (NLP)", "icon": "fas fa-comment-dots", "path": "nlp-services" },
+    { "name": "Computer Vision", "icon": "fas fa-eye", "path": "computer-vision" },
+    { "name": "AI-Powered Automation", "icon": "fas fa-robot", "path": "automation-services" },
+    { "name": "AI in Cybersecurity", "icon": "fas fa-shield-alt", "path": "cybersecurity-services" }
+]
+
     },
     {
       "key": "Application Management",
@@ -2081,8 +2080,650 @@
       ]
     }
   ]
-}
-
+},
+"network_infrastructure_services": {
+    "title": "Network Infrastructure Implementation Services",
+    "subtitle": "Future-Proof Your Business with Scalable and Secure Network Solutions",
+    "description": "At Sharp Innovations, we specialize in designing and implementing robust network infrastructures that power business growth. Our Network Infrastructure Implementation Services ensure high-performance, secure, and scalable connectivity for organizations of all sizes. Whether you're building a new network from scratch or upgrading an existing one, our expert engineers will deliver a tailored solution that meets your business needs.",
+    "services": [
+      {
+        "title": "Network Planning & Design",
+        "description": "We assess your business needs and design an optimized network architecture that ensures seamless connectivity, scalability, and security. Our design approach aligns with industry best practices and future technological advancements."
+      },
+      {
+        "title": "Network Installation & Configuration",
+        "description": "Our experts handle the end-to-end installation and configuration of network components, including routers, switches, firewalls, access points, and servers. We ensure efficient deployment with minimal downtime."
+      },
+      {
+        "title": "Cloud & Hybrid Network Integration",
+        "description": "We integrate cloud-based and hybrid network solutions to enhance flexibility, accessibility, and performance. Our solutions support multi-cloud environments, ensuring secure and efficient data flow."
+      },
+      {
+        "title": "Wireless Network Deployment",
+        "description": "We implement high-speed, secure, and scalable Wi-Fi solutions for businesses, ensuring seamless connectivity across all devices and locations."
+      },
+      {
+        "title": "Network Security Implementation",
+        "description": "Security is at the core of our network solutions. We deploy firewalls, intrusion detection/prevention systems, and encryption protocols to safeguard your network from cyber threats."
+      },
+      {
+        "title": "Structured Cabling & Hardware Deployment",
+        "description": "We provide structured cabling solutions that support high-speed data transmission and future expansion. Our team installs and configures network hardware to optimize performance and reliability."
+      },
+      {
+        "title": "Network Performance Optimization & Testing",
+        "description": "We conduct thorough performance testing and optimization to eliminate bottlenecks, improve efficiency, and ensure seamless operation across your network infrastructure."
+      },
+      {
+        "title": "Ongoing Support & Maintenance",
+        "description": "Our support doesn’t end after deployment. We offer 24/7 monitoring, troubleshooting, and maintenance services to keep your network secure and efficient."
+      }
+    ],
+    "why_choose_us": {
+      "title": "Why Choose Sharp Innovations for Network Services?",
+      "reasons": [
+        " Industry Expertise – Our team consists of certified network engineers with years of experience in implementing enterprise-grade network solutions.",
+        " Customized Solutions – We tailor network infrastructure to align with your business needs, industry standards, and compliance requirements.",
+        " Scalability & Reliability – Our solutions grow with your business, ensuring seamless operations as your infrastructure evolves.",
+        " Security First Approach – We prioritize security to protect your data, applications, and users from cyber threats.",
+        " End-to-End Support – From initial assessment to post-implementation maintenance, we provide continuous support to maximize network efficiency."
+      ]
+    }
+  },
+  "network_consulting_services": {
+    "title": "Network Consulting Services",
+    "subtitle": "Unlock the Full Potential of Your Network",
+    "description": "In today’s fast-paced digital landscape, a robust and secure network infrastructure is essential for business success. Sharp Innovations provides expert network consulting services to help organizations design, optimize, and secure their IT environments for maximum performance and reliability.",
+    "services": [
+      {
+        "title": "Network Assessment & Planning",
+        "description": [
+          "Comprehensive analysis of your existing network infrastructure.",
+          "Identification of performance bottlenecks and security vulnerabilities.",
+          "Strategic roadmap for network scalability and optimization."
+        ]
+      },
+      {
+        "title": "Network Design & Architecture",
+        "description": [
+          "Tailored network architecture based on industry best practices.",
+          "Implementation of high-availability and fault-tolerant network designs.",
+          "Cloud, hybrid, and on-premise network integration."
+        ]
+      },
+      {
+        "title": "Network Security & Compliance",
+        "description": [
+          "Risk assessments and security audits to identify threats.",
+          "Implementation of firewalls, intrusion detection, and encryption.",
+          "Compliance with industry regulations such as NCA, SAMA, ISO 27001, NIST, and GDPR."
+        ]
+      },
+      {
+        "title": "Network Performance Optimization",
+        "description": [
+          "Bandwidth management and traffic analysis.",
+          "Load balancing and Quality of Service (QoS) strategies.",
+          "Proactive monitoring and performance tuning."
+        ]
+      },
+      {
+        "title": "Wireless & Remote Networking",
+        "description": [
+          "Secure and scalable wireless network deployments.",
+          "Remote access solutions for a seamless work-from-anywhere experience.",
+          "VPN, SD-WAN, and mobile network security enhancements."
+        ]
+      },
+      {
+        "title": "Cloud & Hybrid Networking",
+        "description": [
+          "Migration and integration with cloud platforms (AWS, Azure, Google Cloud).",
+          "Secure hybrid networking solutions.",
+          "Optimization of cloud-based applications and connectivity."
+        ]
+      },
+      {
+        "title": "Disaster Recovery & Business Continuity",
+        "description": [
+          "Network redundancy and failover planning.",
+          "Data backup and recovery solutions.",
+          "Incident response planning for minimal downtime."
+        ]
+      }
+    ],
+    "why_choose_us": {
+      "title": "Why Choose Sharp Innovations for Network Consulting?",
+      "reasons": [
+        "Industry Expertise: Our certified network consultants bring years of hands-on experience.",
+        "Tailored Solutions: We customize strategies to fit your unique business needs.",
+        "End-to-End Support: From planning to execution, we ensure a seamless network transformation.",
+        "Security First Approach: Our solutions prioritize data integrity and cybersecurity."
+      ]
+    }
+  },
+  "network_infrastructure_maintenance": {
+    "title": "Network Infrastructure Maintenance & Support",
+    "subtitle": "Reliable, Secure, and Optimized Network Infrastructure for Your Business",
+    "description": "In today’s digital-first world, your network infrastructure is the backbone of your business operations. At Sharp Innovations, we provide comprehensive Network Infrastructure Maintenance & Support services to ensure that your systems remain secure, optimized, and operational 24/7. Our proactive approach minimizes downtime, enhances performance, and mitigates potential risks before they become costly problems.",
+    "services": [
+      {
+        "title": "Proactive Network Monitoring & Maintenance",
+        "description": [
+          "Continuous monitoring for anomalies, security threats, and performance issues.",
+          "Automated alerts and real-time analytics to prevent failures.",
+          "Minimizing disruptions before they impact your business."
+        ]
+      },
+      {
+        "title": "24/7 Technical Support & Troubleshooting",
+        "description": [
+          "Round-the-clock support for troubleshooting and configuration issues.",
+          "Emergency response for critical network failures.",
+          "Rapid resolution to ensure business continuity."
+        ]
+      },
+      {
+        "title": "Security & Compliance Management",
+        "description": [
+          "Implementation of firewall management and intrusion detection.",
+          "Vulnerability assessments and access control policies.",
+          "Ensuring compliance with industry regulations and security standards."
+        ]
+      },
+      {
+        "title": "Network Optimization & Performance Enhancement",
+        "description": [
+          "Analysis of network traffic and bandwidth utilization.",
+          "Optimization for latency, load balancing, and scalability.",
+          "Ensuring smooth operations as your business grows."
+        ]
+      },
+      {
+        "title": "Hardware & Software Updates",
+        "description": [
+          "Regular updates and patches for routers, switches, and firewalls.",
+          "Upgrading software solutions to the latest industry standards.",
+          "Minimizing security vulnerabilities due to outdated technology."
+        ]
+      },
+      {
+        "title": "Backup & Disaster Recovery Solutions",
+        "description": [
+          "Ensuring minimal downtime in case of network failures or cyberattacks.",
+          "Rapid restoration of critical data and services.",
+          "Comprehensive backup and disaster recovery planning."
+        ]
+      },
+      {
+        "title": "Remote & On-Site Support",
+        "description": [
+          "Flexible support options including remote diagnostics.",
+          "On-site visits by expert technicians for complex issues.",
+          "Ensuring efficient and effective problem resolution."
+        ]
+      }
+    ],
+    "why_choose_us": {
+      "title": "Why Choose Sharp Innovations Network Service?",
+      "reasons": [
+        "Experienced Professionals: Our certified network engineers bring extensive expertise in managing complex IT environments.",
+        "Customized Solutions: We tailor our services to meet the specific needs of your business, whether you’re a small startup or a large enterprise.",
+        "Cost-Effective Plans: Avoid unexpected downtime and costly repairs with our affordable maintenance and support plans.",
+        "24/7 Reliability: Count on us for round-the-clock monitoring, rapid response, and expert technical assistance."
+      ]
+    }
+  },
+  "ai_product_development": {
+    "title": "Artificial Intelligence Product Development Services",
+    "subtitle": "Transforming Ideas into Intelligent Solutions",
+    "description": "At Sharp Innovations, we specialize in end-to-end Artificial Intelligence (AI) Product Development that empowers businesses to leverage cutting-edge AI technologies. Our expertise spans across machine learning, natural language processing, computer vision, and AI-driven automation to create smart, scalable, and efficient solutions.",
+    "services": [
+      {
+        "title": "AI Strategy & Consulting",
+        "description": [
+          "Understanding business objectives and AI potential.",
+          "Feasibility analysis and use case identification.",
+          "Roadmap development for AI implementation."
+        ]
+      },
+      {
+        "title": "Data Engineering & Preparation",
+        "description": [
+          "Data collection, cleansing, and transformation.",
+          "AI model training dataset creation.",
+          "Data governance and compliance assurance."
+        ]
+      },
+      {
+        "title": "Model Development & Training",
+        "description": [
+          "Selection of appropriate AI models.",
+          "Supervised, unsupervised, and reinforcement learning techniques.",
+          "Optimization and fine-tuning for performance."
+        ]
+      },
+      {
+        "title": "AI Integration & Deployment",
+        "description": [
+          "Embedding AI into existing business processes.",
+          "Cloud, on-premise, and edge AI deployment.",
+          "API development and system integration."
+        ]
+      },
+      {
+        "title": "Monitoring & Continuous Improvement",
+        "description": [
+          "Model performance tracking and retraining.",
+          "Bias detection and risk mitigation.",
+          "AI lifecycle management and updates."
+        ]
+      }
+    ]
+  },
+  "ai_ml_services": {
+    "title": "Artificial Intelligence & Machine Learning Services",
+    "subtitle": "Empowering Businesses with AI & ML",
+    "description": "At Sharp Innovations, we harness the power of Artificial Intelligence (AI) and Machine Learning (ML) to help businesses unlock new opportunities, optimize operations, and drive intelligent decision-making. Our AI & ML solutions are designed to enhance efficiency, security, and scalability while ensuring seamless integration with your existing infrastructure.",
+    "services": [
+      {
+        "title": "Machine Learning Model Development",
+        "description": [
+          "Build custom ML models for predictive analytics and natural language processing (NLP).",
+          "Analyze data, automate tasks, and generate valuable insights.",
+          "Support data-driven decision-making through intelligent algorithms."
+        ]
+      },
+      {
+        "title": "AI-Powered Automation",
+        "description": [
+          "Automate repetitive tasks and enhance productivity with AI-driven automation.",
+          "Reduce human error and streamline operations across various industries.",
+          "Deploy intelligent bots and algorithms for process optimization."
+        ]
+      },
+      {
+        "title": "Computer Vision & Image Processing",
+        "description": [
+          "Leverage AI-powered image and video analysis for facial recognition, object classification, and defect detection.",
+          "Enhance accuracy and efficiency with real-time surveillance and quality control.",
+          "Integrate advanced computer vision solutions into business workflows."
+        ]
+      },
+      {
+        "title": "Natural Language Processing (NLP)",
+        "description": [
+          "Develop chatbots, virtual assistants, and AI-powered text analysis tools.",
+          "Enhance customer experiences and optimize communication workflows.",
+          "Enable human-like interactions through NLP technologies."
+        ]
+      },
+      {
+        "title": "AI Security & Risk Mitigation",
+        "description": [
+          "Detect threats, prevent fraud, and safeguard sensitive data with AI-driven cybersecurity.",
+          "Integrate AI into your security framework to proactively mitigate risks.",
+          "Ensure compliance with industry regulations and standards."
+        ]
+      },
+      {
+        "title": "AI for Business Intelligence & Analytics",
+        "description": [
+          "Transform raw data into actionable insights with AI-powered analytics.",
+          "Extract meaningful patterns and forecast trends.",
+          "Optimize business strategies using cutting-edge AI tools."
+        ]
+      }
+    ],
+    "why_choose_us": {
+      "title": "Why Choose Sharp Innovations?",
+      "points": [
+        "Expert AI & ML Team – Our skilled professionals bring years of experience in AI, ML, and data science.",
+        "Custom AI Solutions – We tailor AI models and applications to fit your unique business requirements.",
+        "Scalable & Secure – Our AI implementations are designed for seamless scalability with robust security protocols.",
+        "End-to-End AI Development – From strategy to deployment, we handle the full AI lifecycle.",
+        "Industry-Specific Expertise – We provide AI solutions for finance, healthcare, retail, and more."
+      ]
+    },
+    "call_to_action": {
+      "title": "Transform Your Business with AI",
+      "description": "Unlock the full potential of AI & ML with Sharp Innovations. Whether you're looking to automate processes, gain data-driven insights, or enhance security, our AI solutions can help you stay ahead in the digital era.",
+      "button": "Contact Us"
+    }
+  },
+  "nlp_services": {
+    "title": "Natural Language Processing (NLP) Services",
+    "subtitle": "Unlock the Power of Language with AI-driven NLP Solutions",
+    "description": "At Sharp Innovations, we leverage Artificial Intelligence (AI) and Natural Language Processing (NLP) to transform unstructured text data into actionable insights, enhancing communication, automation, and decision-making.",
+    "services": [
+      {
+        "title": "Text Analytics & Sentiment Analysis",
+        "description": [
+          "Understand customer emotions and extract valuable feedback.",
+          "Analyze sentiment across reviews, social media, and support tickets."
+        ]
+      },
+      {
+        "title": "Chatbots & Virtual Assistants",
+        "description": [
+          "Enhance user engagement with AI-powered chatbots.",
+          "Provide real-time responses and intelligent automation."
+        ]
+      },
+      {
+        "title": "Automated Document Processing",
+        "description": [
+          "Save time with NLP-driven document classification and data extraction.",
+          "Summarize legal, financial, and healthcare documents."
+        ]
+      },
+      {
+        "title": "Speech-to-Text & Text-to-Speech",
+        "description": [
+          "Convert spoken language into text for transcription and accessibility.",
+          "Generate human-like speech for enhanced user experiences."
+        ]
+      },
+      {
+        "title": "Language Translation & Localization",
+        "description": [
+          "Expand global reach with AI-powered translation services.",
+          "Ensure accurate, context-aware localization of content."
+        ]
+      },
+      {
+        "title": "AI-Powered Search & Knowledge Management",
+        "description": [
+          "Improve information retrieval with intelligent search systems.",
+          "Deliver precise and relevant results by understanding context."
+        ]
+      }
+    ],
+    "why_choose_us": {
+      "title": "Why Choose Sharp Innovations?",
+      "points": [
+        "Industry expertise across healthcare, finance, e-commerce, and cybersecurity.",
+        "Advanced machine learning, deep learning, and large language models (LLMs).",
+        "Custom NLP applications tailored to unique business needs.",
+        "Seamless integration with existing systems, APIs, and cloud platforms.",
+        "Data security and compliance with industry standards."
+      ]
+    },
+    "call_to_action": {
+      "title": "Transform Your Business with NLP",
+      "description": "Leverage AI-driven Natural Language Processing to enhance customer engagement, streamline operations, and unlock hidden insights.",
+      "button": "Contact Us"
+    }
+  },
+  "computer_vision": {
+    "title": "Artificial Intelligence Computer Vision Services",
+    "subtitle": "Transforming Visual Data into Actionable Insights",
+    "description": "At Sharp Innovations, we leverage the power of Artificial Intelligence (AI) and Computer Vision to help businesses extract meaningful insights from visual data. Our AI-driven solutions enable real-time analysis, automation, and enhanced decision-making across multiple industries.",
+    "services": [
+      {
+        "title": "Object Detection & Recognition",
+        "description": [
+          "Detect and classify objects in images and videos.",
+          "Improve automation, security, and data-driven decision-making."
+        ]
+      },
+      {
+        "title": "Facial Recognition & Biometric Analysis",
+        "description": [
+          "Enhance security with facial recognition and biometric solutions.",
+          "Tailored for enterprise applications and authentication."
+        ]
+      },
+      {
+        "title": "Image & Video Analytics",
+        "description": [
+          "Gain insights from AI-driven image and video analytics.",
+          "Applicable for surveillance, healthcare, retail, and smart cities."
+        ]
+      },
+      {
+        "title": "Optical Character Recognition (OCR)",
+        "description": [
+          "Convert printed or handwritten text into digital format.",
+          "Streamline document processing and data extraction."
+        ]
+      },
+      {
+        "title": "Quality Control & Defect Detection",
+        "description": [
+          "Automate defect detection for improved manufacturing efficiency.",
+          "Ensure quality assurance through AI-driven image processing."
+        ]
+      },
+      {
+        "title": "Augmented Reality (AR) & Virtual Reality (VR) Integration",
+        "description": [
+          "Enhance user experiences with AI-enabled AR and VR applications.",
+          "Create immersive and interactive digital environments."
+        ]
+      }
+    ],
+    "why_choose_us": {
+      "title": "Why Choose Sharp Innovations?",
+      "points": [
+        "Custom AI and Computer Vision models tailored to business needs.",
+        "High-speed, scalable solutions for real-time analysis.",
+        "Proven expertise in AI-driven visual analytics across industries.",
+        "Seamless integration with existing systems and workflows.",
+        "Robust security measures ensuring compliance with industry standards."
+      ]
+    },
+    "industries": {
+      "title": "Industries We Serve",
+      "list": [
+        "Healthcare & Medical Imaging",
+        "Retail & E-commerce",
+        "Manufacturing & Industrial Automation",
+        "Smart Cities & Surveillance",
+        "Automotive & Transportation",
+        "Finance & Banking"
+      ]
+    },
+    "call_to_action": {
+      "title": "Get Started with AI Computer Vision",
+      "description": "Unlock the potential of AI-powered Computer Vision with Sharp Innovations. Contact us today to learn how our solutions can transform your business operations and decision-making processes.",
+      "contact": {
+        "email": "sales@sharpinnvotech.com",
+        "phone": "+966 53 140 9624"
+      },
+      "button": "Contact Us"
+    }
+  },
+  "automation_services": {
+    "title": "Welcome to Sharp Innovations - AI-Powered Automation Services",
+    "subtitle": "Transform Your Business with Intelligent Automation",
+    "description": "At Sharp Innovations, we specialize in cutting-edge AI-powered automation solutions designed to enhance efficiency, reduce operational costs, and optimize workflows. Our intelligent automation services empower businesses to streamline repetitive tasks, improve decision-making, and drive innovation across industries.",
+    "services": [
+      {
+        "title": "Intelligent Process Automation",
+        "description": [
+          "AI-driven workflow automation eliminates manual processes.",
+          "Enhances accuracy and boosts productivity.",
+          "Seamless integration with existing systems for real-time automation."
+        ]
+      },
+      {
+        "title": "AI-Powered Chatbots & Virtual Assistants",
+        "description": [
+          "Enhance customer engagement with smart AI chatbots.",
+          "Provide instant responses and 24/7 personalized support.",
+          "Streamline customer service, sales, and internal processes."
+        ]
+      },
+      {
+        "title": "Robotic Process Automation (RPA)",
+        "description": [
+          "Automate high-volume, repetitive tasks.",
+          "AI-enhanced bots handle data entry, report generation, and invoice processing.",
+          "Free up employees for strategic tasks."
+        ]
+      },
+      {
+        "title": "AI-Driven Data Analysis & Insights",
+        "description": [
+          "Transform raw data into actionable insights.",
+          "Leverage machine learning and AI analytics for better decision-making.",
+          "Detect patterns and forecast trends with high accuracy."
+        ]
+      },
+      {
+        "title": "Smart Document Processing",
+        "description": [
+          "Automate document extraction, classification, and validation.",
+          "Use AI-powered OCR and NLP for reduced manual paperwork.",
+          "Enhance compliance and operational efficiency."
+        ]
+      },
+      {
+        "title": "Predictive Maintenance & AI Monitoring",
+        "description": [
+          "Optimize asset performance and prevent downtime.",
+          "Monitor equipment in real-time and detect anomalies.",
+          "AI-driven predictive maintenance ensures proactive actions."
+        ]
+      }
+    ],
+    "why_choose_us": {
+      "title": "Why Choose Sharp Innovations?",
+      "points": [
+        "Expertise in AI & Automation – Years of experience in AI-powered solutions.",
+        "Customizable & Scalable – AI solutions designed to grow with your business.",
+        "Seamless Integration – Smooth integration with existing IT ecosystems.",
+        "Data Security & Compliance – Adheres to the highest security standards."
+      ]
+    },
+    "call_to_action": {
+      "title": "Get Started with AI-Powered Automation",
+      "description": "Ready to transform your business with AI automation? Contact Sharp Innovations today and discover how our intelligent automation solutions can drive efficiency, productivity, and growth.",
+      "contact": {
+        "email": "sales@sharpinnvotech.com",
+        "phone": "+966 53 140 9624"
+      },
+      "button": "Get in Touch"
+    }
+  },
+  "cybersecurity_services": {
+    "title": "AI-Powered Cybersecurity Services by Sharp Innovations",
+    "subtitle": "Safeguard Your Digital Assets with Next-Gen AI Security",
+    "description": "In an era where cyber threats evolve faster than ever, traditional security measures alone are no longer sufficient. Sharp Innovations leverages the power of artificial intelligence to deliver cutting-edge cybersecurity solutions that proactively detect, prevent, and mitigate cyber risks in real time.",
+    "services": [
+      {
+        "title": "Threat Intelligence & Predictive Analysis",
+        "description": [
+          "Utilizing AI and machine learning to predict and prevent cyber threats.",
+          "Analyzing vast amounts of data for proactive defense.",
+          "Ensuring your business stays ahead of attackers."
+        ]
+      },
+      {
+        "title": "AI-Powered Endpoint Protection",
+        "description": [
+          "Detect and neutralize malware, ransomware, and zero-day attacks in real time.",
+          "Advanced endpoint security for continuous protection.",
+          "Safeguarding all connected devices."
+        ]
+      },
+      {
+        "title": "Automated Incident Detection & Response",
+        "description": [
+          "AI-driven SOC swiftly detects anomalies and automates threat response.",
+          "Minimizes human intervention and reduces response time.",
+          "Mitigates cyber incidents effectively."
+        ]
+      },
+      {
+        "title": "AI-Enhanced Network Security",
+        "description": [
+          "AI-based intrusion detection and prevention systems (IDPS).",
+          "Continuous network monitoring to identify and block threats.",
+          "Preventing cyber attacks before they happen."
+        ]
+      },
+      {
+        "title": "Behavioral Analysis & User Anomaly Detection",
+        "description": [
+          "AI-powered behavioral analytics detect unusual user activities.",
+          "Prevents insider threats and credential-based attacks.",
+          "Secures your systems before breaches occur."
+        ]
+      },
+      {
+        "title": "Intelligent Risk Management & Compliance",
+        "description": [
+          "Ensuring adherence to GDPR, NIST, and ISO 27001 regulations.",
+          "AI-driven compliance monitoring reduces vulnerabilities.",
+          "Minimizing regulatory risks with automation."
+        ]
+      }
+    ],
+    "why_choose_us": {
+      "title": "Why Choose Sharp Innovations?",
+      "points": [
+        "AI-Driven Real-Time Protection – Instant threat detection using deep learning and AI.",
+        "Automated Security Operations – Reduce manual workload with automated monitoring and mitigation.",
+        "Scalable & Adaptive Security – Flexible solutions that grow with your business.",
+        "24/7 Advanced Threat Monitoring – AI-powered SOC provides continuous security oversight.",
+        "Expert Cybersecurity Consultants – Our AI and security professionals deliver tailored solutions."
+      ]
+    },
+    "call_to_action": {
+      "title": "Secure Your Business Today",
+      "description": "Cyber threats are evolving every day. Protect your business with Sharp Innovations’ AI-powered cybersecurity solutions and stay ahead of attackers.",
+      "contact": {
+        "email": "sales@sharpinnvotech.com",
+        "phone": "+966 53 140 9624"
+      },
+      "button": "Contact Us"
+    }
+  },
+  "ai_consulting": {
+    "title": "Artificial Intelligence Consulting & Strategy",
+    "subtitle": "Unlock the Power of AI with Sharp Innovations",
+    "description": "At Sharp Innovations, we help businesses harness the power of Artificial Intelligence (AI) to drive innovation, enhance efficiency, and achieve strategic growth. Our AI consulting and strategy services are designed to align AI technologies with your business objectives, ensuring seamless integration and measurable impact.",
+    "services": [
+      {
+        "title": "AI Strategy Development",
+        "description": [
+          "Assess your business goals and craft a comprehensive AI roadmap to optimize operations and enhance decision-making."
+        ]
+      },
+      {
+        "title": "Machine Learning & Data Science",
+        "description": [
+          "Leverage advanced machine learning models and data science techniques to extract valuable insights and automate complex processes."
+        ]
+      },
+      {
+        "title": "AI-Powered Automation",
+        "description": [
+          "Streamline repetitive tasks with intelligent automation solutions, boosting efficiency and reducing operational costs."
+        ]
+      },
+      {
+        "title": "Natural Language Processing (NLP)",
+        "description": [
+          "Implement AI-driven solutions for chatbots, sentiment analysis, and language translation to enhance customer engagement."
+        ]
+      },
+      {
+        "title": "Predictive Analytics",
+        "description": [
+          "Utilize AI-powered forecasting to make data-driven decisions and gain a competitive edge."
+        ]
+      },
+      {
+        "title": "AI Governance & Ethics",
+        "description": [
+          "Ensure compliance with AI ethics, governance, and risk management best practices to foster responsible AI adoption."
+        ]
+      }
+    ]
+  }
   }
 
 

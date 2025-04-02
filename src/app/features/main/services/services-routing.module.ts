@@ -17,6 +17,16 @@ import { CyberSecurityAwarenessComponent } from './cyber-security-awareness/cybe
 import { CyberSecurityTrainingComponent } from './cyber-security-training/cyber-security-training.component';
 import { CyberSecurityManpowerOutsourcingComponent } from './cyber-security-manpower-outsourcing/cyber-security-manpower-outsourcing.component';
 import { NOCComponent } from './noc/noc.component';
+import { NetworkInfrastructureServicesComponent } from './network-infrastructure-services/network-infrastructure-services.component';
+import { NetworkConsultingServicesComponent } from './network-consulting-services/network-consulting-services.component';
+import { NetworkInfrastructureMaintenanceComponent } from './network-infrastructure-maintenance/network-infrastructure-maintenance.component';
+import { AiProductDevelopmentComponent } from './ai-product-development/ai-product-development.component';
+import { AiMlServicesComponent } from './ai-ml-services/ai-ml-services.component';
+import { NlpServicesComponent } from './nlp-services/nlp-services.component';
+import { ComputerVisionComponent } from './computer-vision/computer-vision.component';
+import { AutomationServicesComponent } from './automation-services/automation-services.component';
+import { CybersecurityServicesComponent } from './cybersecurity-services/cybersecurity-services.component';
+import { AiConsultingComponent } from './ai-consulting/ai-consulting.component';
 
 const routes: Routes = [
   {
@@ -84,8 +94,48 @@ const routes: Routes = [
     component:CyberSecurityManpowerOutsourcingComponent
   },
   {
+    path:"network-infrastructure-services",
+    component:NetworkInfrastructureServicesComponent
+  },
+  {
+    path:"network-consulting-services",
+    component:NetworkConsultingServicesComponent
+  },
+  {
     path:"NOC",
     component:NOCComponent
+  },
+  {
+    path:"network-infrastructure-maintenance",
+    component:NetworkInfrastructureMaintenanceComponent
+  },
+  {
+    path:"ai-product-development",
+    component: AiProductDevelopmentComponent
+  },
+  {
+    path:"ai-ml-services",
+    component: AiMlServicesComponent
+  },
+  {
+    path:"nlp-services",
+    component:NlpServicesComponent
+  },
+  {
+    path:"computer-vision",
+    component: ComputerVisionComponent
+  },
+  {
+    path:"automation-services",
+    component:AutomationServicesComponent
+
+  },{
+    path:"cybersecurity-services",
+    component:CybersecurityServicesComponent
+  },
+  {
+    path:"ai-consulting",
+    component:AiConsultingComponent
   }
  
 ];
