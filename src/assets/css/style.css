@@ -539,3 +539,19 @@ h6,
     padding-right: 0;
     border-right: none;
 }
+.contact-list {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+}
+
+.contact-list li {
+    margin-bottom: 5px; /* Space between items */
+    font-size: 16px; /* Adjust font size as needed */
+    color: #333; /* Change text color */
+}
+
+.contact-list li i {
+    margin-right: 8px; /* Space between icon and text */
+    color: #007bff; /* Change icon color */
+}
