@@ -1092,7 +1092,7 @@
   
   "servicing": [
     {
-      "key": "Cyber Security Services",
+      "key": "Cyber Security",
       "icon": "fas fa-shield-alt",
       "img":"../../../../../../assets/img/Banner.png",
       "items": [
@@ -1111,7 +1111,7 @@
          ]
     },
     {
-      "key": "Network Infrastructure Services",
+      "key": "Network Infrastructure",
       "icon": "fas fa-network-wired",
       "img":"../../../../../../assets/img/Banner2.png",
       "items": [
@@ -1122,7 +1122,7 @@
       ]
     },
     {
-      "key": "Our Ai Services",
+      "key": "Artificial Intelligence(AI)",
       "icon": "fas fa-robot",
       "img":"../../../../../../assets/img/Banner3.png",
       "items": [
