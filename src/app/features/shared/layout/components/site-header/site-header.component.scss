@@ -5,8 +5,31 @@
 }
 .header-logo{
   display: flex;
+  .show-on-mobile {
+    display: none;
+  }
+  @media (max-width: 767.98px) {
+    .show-on-mobile {
+      display: block;
+    }
+    h1{
+      font-size: 21px !important;
+    }
+    .navbar {
+      padding: 14px 29px !important;
+      height: 75px;
+  }
+  }
+  
 }
 
+@media (max-width: 767.98px) {
+
+  .navbar {
+    padding: 14px 29px !important;
+    height: 75px;
+}
+}
 .switch > label {
   position: relative;
   display: flex;
@@ -108,9 +131,6 @@
   }
 }
 /* Hide language toggle by default */
-.show-on-mobile {
-  display: none;
-}
 
 /* Show language toggle on mobile devices */
 @media (max-width: 767.98px) {

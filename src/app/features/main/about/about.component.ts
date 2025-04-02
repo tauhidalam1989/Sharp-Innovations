@@ -8,7 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
- imageSrc: any;
+ imageSrc: '../../../../assets/img/English.png' | any;
  constructor(public pathService:RoutingService,private translate: TranslateService) {
   this.translate.onLangChange.subscribe((event) => {
     console.log(event.lang);
