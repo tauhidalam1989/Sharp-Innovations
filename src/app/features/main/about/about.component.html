@@ -6,7 +6,7 @@
             <!-- Image Section -->
             <div class="col-lg-6 wow fadeIn" [attr.data-wow-delay]="'0.1s'">
                 <div class="">
-                    <img class="img-fluid" [src]="imageSrc" alt="About Image">
+                    <img class="img-fluid" *ngIf="imageSrc" [src]="imageSrc" alt="About Image">
                 </div>
             </div>
             <!-- Content Section -->
