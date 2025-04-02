@@ -17,6 +17,9 @@ import { CyberSecurityAwarenessComponent } from './cyber-security-awareness/cybe
 import { CyberSecurityTrainingComponent } from './cyber-security-training/cyber-security-training.component';
 import { CyberSecurityManpowerOutsourcingComponent } from './cyber-security-manpower-outsourcing/cyber-security-manpower-outsourcing.component';
 import { NOCComponent } from './noc/noc.component';
+import { NetworkInfrastructureServicesComponent } from './network-infrastructure-services/network-infrastructure-services.component';
+import { NetworkConsultingServicesComponent } from './network-consulting-services/network-consulting-services.component';
+import { NetworkInfrastructureMaintenanceComponent } from './network-infrastructure-maintenance/network-infrastructure-maintenance.component';
 
 const routes: Routes = [
   {
@@ -84,8 +87,20 @@ const routes: Routes = [
     component:CyberSecurityManpowerOutsourcingComponent
   },
   {
+    path:"network-infrastructure-services",
+    component:NetworkInfrastructureServicesComponent
+  },
+  {
+    path:"network-consulting-services",
+    component:NetworkConsultingServicesComponent
+  },
+  {
     path:"NOC",
     component:NOCComponent
+  },
+  {
+    path:"network-infrastructure-maintenance",
+    component:NetworkInfrastructureMaintenanceComponent
   }
  
 ];

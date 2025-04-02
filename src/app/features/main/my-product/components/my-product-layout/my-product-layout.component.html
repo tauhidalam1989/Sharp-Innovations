@@ -1,0 +1,23 @@
+<section class="container mt-4">
+
+  
+    <div class="services-layout">
+      <div class="services-tabs">
+        <div *ngFor="let service of ('core_services' | translate); let first = first"
+             class="category-item" 
+             [routerLink]="'assets-management-system'"
+             (click)="selectedService = service"
+             [ngClass]="{'active': selectedService === service || (first && !selectedService)}">
+             <img class="service-image" [src]="service.icon" width="20px" alt="Service Banner">
+             <span >{{ service.title }}</span>
+        </div>
+      </div>
+      
+      <div class="content-area">
+        <div class="banner-container">
+          <!-- <img class="service-image" [src]="selectedService?.img || (('core_services' | translate)[0])?.img" alt="Service Banner"> -->
+        </div>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </section>

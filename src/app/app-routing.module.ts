@@ -73,6 +73,14 @@ const routes: Routes = [
         (m) => m.ServicesModule
       ),
   },
+  {
+    path: 'product',
+    component: MainLayoutComponent,
+    loadChildren: () =>
+      import("./features/main/my-product/my-product.module").then(
+        (m) => m.MyProductModule
+      ),
+  },
  
   // {
   //   path: "**", // Wildcard route for 404 or invalid paths
