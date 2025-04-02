@@ -9,8 +9,7 @@
         <p class="explore-btn">Explore More <i class="fas fa-arrow-right"></i></p>
        
       </div> -->
-    </div>
-   
+    </div>   
     <p>We Cooperate with top Clients and provide access to over 100+ Countries.</p>
   </div>
   
@@ -54,5 +53,31 @@
     </div>
   </div>
 </div>
+<div class="content-left container">
+  <div class="heading">
+    <div class="clients">
+      <img src="../../../../assets/logo/SLogo.png" alt=""> 
+      <h2> ISO Certification</h2>
+    </div>
+    <!-- <div class="explore">
+      <p class="explore-btn">Explore More <i class="fas fa-arrow-right"></i></p>
+    </div> -->
+  </div>
+  <p></p>
+</div>
 
+<!-- ISO Certificate Carousel (Moves Right) -->
+<div class="carousel-wrapper">
+<div class="carousel-container">
+  <div class="carousel-track scroll-right">
+    <div class="carousel-item" *ngFor="let logo of isocertificates">
+      <img [src]="logo" alt="ISO certificate images">
+    </div>
+    <!-- Duplicate images to Avoid Blank Space -->
+    <div class="carousel-item" *ngFor="let logo of isocertificates">
+      <img [src]="logo" alt="ISO Certificate">
+    </div>
+  </div>
+</div>
+</div>
 </div>
