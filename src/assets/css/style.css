@@ -556,7 +556,6 @@ h6,
     margin-right: 8px; /* Space between icon and text */
     color: #007bff; /* Change icon color */
 }
-
 /* Media query for mobile view */
 @media (max-width: 768px) {
     .contact-list {
