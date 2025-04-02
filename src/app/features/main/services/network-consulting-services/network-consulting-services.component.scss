@@ -1,0 +1,94 @@
+/* Floating animation for shield icon */
+.floating-icon {
+    animation: floating 3s ease-in-out infinite;
+  }
+  
+  @keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  /* Rotating animation faor cogs icon */
+  .rotating-icon {
+    animation: rotating 8s linear infinite;
+  }
+  
+  @keyframes rotating {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Pulse animation for lock icon */
+  .pulse-icon {
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  /* Hover effects */
+  .hover-scale {
+    transition: transform 0.3s ease;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+  
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
+  }
+  
+  .hover-glow {
+    transition: all 0.3s ease;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 20px rgba(40, 167, 69, 0.5) !important;
+    transform: scale(1.05);
+  }
+  
+  .service-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+  }
+  
+  .hover-list-item {
+    position: relative;
+    padding: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .hover-list-item:hover {
+    color: var(--bs-primary) !important;
+    background: rgba(0, 123, 255, 0.05);
+    border-radius: 4px;
+    border-left: 3px solid var(--bs-primary);
+  }
+  
+  /* Add animate.css classes */
+  .animate__animated {
+    animation-duration: 1s;
+  }
+  
+  .animate__delay-1s {
+    animation-delay: 1s;
+  }
+  
+  .animate__delay-2s {
+    animation-delay: 2s;
+  }

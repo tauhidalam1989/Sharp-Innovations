@@ -1,0 +1,34 @@
+<div class="container-fluid bg-light py-5">
+    <div class="container py-5">
+      <!-- Title and Introduction -->
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
+          <h1 class="mb-4 display-5 text-primary animate__animated animate__fadeIn">
+            <i class="fas fa-network-wired me-2 floating-icon"></i>{{ 'network_consulting_services.title' | translate }}
+          </h1>
+          <h4 class="mb-3 text-secondary animate__animated animate__fadeIn animate__delay-1s">
+            {{ 'network_consulting_services.subtitle' | translate }}
+          </h4>
+          <p class="mb-4 text-muted animate__animated animate__fadeIn animate__delay-2s">
+            {{ 'network_consulting_services.description' | translate }}
+          </p>
+        </div>
+      </div>
+  
+      <!-- Our Services Section -->
+      <div class="row g-4">
+        <div *ngFor="let service of 'network_consulting_services.services' | translate" 
+             class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+          <div class="card h-100 shadow-sm border-0 text-center service-card">
+            <div class="card-body">
+              <h5 class="card-title text-primary">{{ service.title }}</h5>
+              <ul class="text-muted text-start">
+                <li *ngFor="let desc of service.description" class="hover-list-item">{{ desc }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

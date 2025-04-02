@@ -1116,9 +1116,9 @@
       "img":"../../../../../../assets/img/Banner2.png",
       "items": [
         { "name": "Network Operation Center", "icon": "fas fa-server", "path":"NOC"},
-        { "name": "Network Consulting", "icon": "fas fa-comments" },
-        { "name": "Network Infratructure Implementation", "icon": "fas fa-tools" },
-        { "name": "Network Maintenance and Support", "icon": "fas fa-tools" }
+        { "name": "Network Consulting", "icon": "fas fa-comments" ,"path":"network-consulting-services"  },
+        { "name": "Network Infratructure Implementation", "icon": "fas fa-tools","path":"network-infrastructure-services" },
+        { "name": "Network Maintenance and Support", "icon": "fas fa-tools","path":"network-infrastructure-maintenance" }
       ]
     },
     {
@@ -2081,7 +2081,200 @@
       ]
     }
   ]
-}
+},
+"network_infrastructure_services": {
+    "title": "Network Infrastructure Implementation Services",
+    "subtitle": "Future-Proof Your Business with Scalable and Secure Network Solutions",
+    "description": "At Sharp Innovations, we specialize in designing and implementing robust network infrastructures that power business growth. Our Network Infrastructure Implementation Services ensure high-performance, secure, and scalable connectivity for organizations of all sizes. Whether you're building a new network from scratch or upgrading an existing one, our expert engineers will deliver a tailored solution that meets your business needs.",
+    "services": [
+      {
+        "title": "Network Planning & Design",
+        "description": "We assess your business needs and design an optimized network architecture that ensures seamless connectivity, scalability, and security. Our design approach aligns with industry best practices and future technological advancements."
+      },
+      {
+        "title": "Network Installation & Configuration",
+        "description": "Our experts handle the end-to-end installation and configuration of network components, including routers, switches, firewalls, access points, and servers. We ensure efficient deployment with minimal downtime."
+      },
+      {
+        "title": "Cloud & Hybrid Network Integration",
+        "description": "We integrate cloud-based and hybrid network solutions to enhance flexibility, accessibility, and performance. Our solutions support multi-cloud environments, ensuring secure and efficient data flow."
+      },
+      {
+        "title": "Wireless Network Deployment",
+        "description": "We implement high-speed, secure, and scalable Wi-Fi solutions for businesses, ensuring seamless connectivity across all devices and locations."
+      },
+      {
+        "title": "Network Security Implementation",
+        "description": "Security is at the core of our network solutions. We deploy firewalls, intrusion detection/prevention systems, and encryption protocols to safeguard your network from cyber threats."
+      },
+      {
+        "title": "Structured Cabling & Hardware Deployment",
+        "description": "We provide structured cabling solutions that support high-speed data transmission and future expansion. Our team installs and configures network hardware to optimize performance and reliability."
+      },
+      {
+        "title": "Network Performance Optimization & Testing",
+        "description": "We conduct thorough performance testing and optimization to eliminate bottlenecks, improve efficiency, and ensure seamless operation across your network infrastructure."
+      },
+      {
+        "title": "Ongoing Support & Maintenance",
+        "description": "Our support doesn’t end after deployment. We offer 24/7 monitoring, troubleshooting, and maintenance services to keep your network secure and efficient."
+      }
+    ],
+    "why_choose_us": {
+      "title": "Why Choose Sharp Innovations for Network Services?",
+      "reasons": [
+        " Industry Expertise – Our team consists of certified network engineers with years of experience in implementing enterprise-grade network solutions.",
+        " Customized Solutions – We tailor network infrastructure to align with your business needs, industry standards, and compliance requirements.",
+        " Scalability & Reliability – Our solutions grow with your business, ensuring seamless operations as your infrastructure evolves.",
+        " Security First Approach – We prioritize security to protect your data, applications, and users from cyber threats.",
+        " End-to-End Support – From initial assessment to post-implementation maintenance, we provide continuous support to maximize network efficiency."
+      ]
+    }
+  },
+  "network_consulting_services": {
+    "title": "Network Consulting Services",
+    "subtitle": "Unlock the Full Potential of Your Network",
+    "description": "In today’s fast-paced digital landscape, a robust and secure network infrastructure is essential for business success. Sharp Innovations provides expert network consulting services to help organizations design, optimize, and secure their IT environments for maximum performance and reliability.",
+    "services": [
+      {
+        "title": "Network Assessment & Planning",
+        "description": [
+          "Comprehensive analysis of your existing network infrastructure.",
+          "Identification of performance bottlenecks and security vulnerabilities.",
+          "Strategic roadmap for network scalability and optimization."
+        ]
+      },
+      {
+        "title": "Network Design & Architecture",
+        "description": [
+          "Tailored network architecture based on industry best practices.",
+          "Implementation of high-availability and fault-tolerant network designs.",
+          "Cloud, hybrid, and on-premise network integration."
+        ]
+      },
+      {
+        "title": "Network Security & Compliance",
+        "description": [
+          "Risk assessments and security audits to identify threats.",
+          "Implementation of firewalls, intrusion detection, and encryption.",
+          "Compliance with industry regulations such as NCA, SAMA, ISO 27001, NIST, and GDPR."
+        ]
+      },
+      {
+        "title": "Network Performance Optimization",
+        "description": [
+          "Bandwidth management and traffic analysis.",
+          "Load balancing and Quality of Service (QoS) strategies.",
+          "Proactive monitoring and performance tuning."
+        ]
+      },
+      {
+        "title": "Wireless & Remote Networking",
+        "description": [
+          "Secure and scalable wireless network deployments.",
+          "Remote access solutions for a seamless work-from-anywhere experience.",
+          "VPN, SD-WAN, and mobile network security enhancements."
+        ]
+      },
+      {
+        "title": "Cloud & Hybrid Networking",
+        "description": [
+          "Migration and integration with cloud platforms (AWS, Azure, Google Cloud).",
+          "Secure hybrid networking solutions.",
+          "Optimization of cloud-based applications and connectivity."
+        ]
+      },
+      {
+        "title": "Disaster Recovery & Business Continuity",
+        "description": [
+          "Network redundancy and failover planning.",
+          "Data backup and recovery solutions.",
+          "Incident response planning for minimal downtime."
+        ]
+      }
+    ],
+    "why_choose_us": {
+      "title": "Why Choose Sharp Innovations for Network Consulting?",
+      "reasons": [
+        "Industry Expertise: Our certified network consultants bring years of hands-on experience.",
+        "Tailored Solutions: We customize strategies to fit your unique business needs.",
+        "End-to-End Support: From planning to execution, we ensure a seamless network transformation.",
+        "Security First Approach: Our solutions prioritize data integrity and cybersecurity."
+      ]
+    }
+  },
+  "network_infrastructure_maintenance": {
+    "title": "Network Infrastructure Maintenance & Support",
+    "subtitle": "Reliable, Secure, and Optimized Network Infrastructure for Your Business",
+    "description": "In today’s digital-first world, your network infrastructure is the backbone of your business operations. At Sharp Innovations, we provide comprehensive Network Infrastructure Maintenance & Support services to ensure that your systems remain secure, optimized, and operational 24/7. Our proactive approach minimizes downtime, enhances performance, and mitigates potential risks before they become costly problems.",
+    "services": [
+      {
+        "title": "Proactive Network Monitoring & Maintenance",
+        "description": [
+          "Continuous monitoring for anomalies, security threats, and performance issues.",
+          "Automated alerts and real-time analytics to prevent failures.",
+          "Minimizing disruptions before they impact your business."
+        ]
+      },
+      {
+        "title": "24/7 Technical Support & Troubleshooting",
+        "description": [
+          "Round-the-clock support for troubleshooting and configuration issues.",
+          "Emergency response for critical network failures.",
+          "Rapid resolution to ensure business continuity."
+        ]
+      },
+      {
+        "title": "Security & Compliance Management",
+        "description": [
+          "Implementation of firewall management and intrusion detection.",
+          "Vulnerability assessments and access control policies.",
+          "Ensuring compliance with industry regulations and security standards."
+        ]
+      },
+      {
+        "title": "Network Optimization & Performance Enhancement",
+        "description": [
+          "Analysis of network traffic and bandwidth utilization.",
+          "Optimization for latency, load balancing, and scalability.",
+          "Ensuring smooth operations as your business grows."
+        ]
+      },
+      {
+        "title": "Hardware & Software Updates",
+        "description": [
+          "Regular updates and patches for routers, switches, and firewalls.",
+          "Upgrading software solutions to the latest industry standards.",
+          "Minimizing security vulnerabilities due to outdated technology."
+        ]
+      },
+      {
+        "title": "Backup & Disaster Recovery Solutions",
+        "description": [
+          "Ensuring minimal downtime in case of network failures or cyberattacks.",
+          "Rapid restoration of critical data and services.",
+          "Comprehensive backup and disaster recovery planning."
+        ]
+      },
+      {
+        "title": "Remote & On-Site Support",
+        "description": [
+          "Flexible support options including remote diagnostics.",
+          "On-site visits by expert technicians for complex issues.",
+          "Ensuring efficient and effective problem resolution."
+        ]
+      }
+    ],
+    "why_choose_us": {
+      "title": "Why Choose Sharp Innovations Network Service?",
+      "reasons": [
+        "Experienced Professionals: Our certified network engineers bring extensive expertise in managing complex IT environments.",
+        "Customized Solutions: We tailor our services to meet the specific needs of your business, whether you’re a small startup or a large enterprise.",
+        "Cost-Effective Plans: Avoid unexpected downtime and costly repairs with our affordable maintenance and support plans.",
+        "24/7 Reliability: Count on us for round-the-clock monitoring, rapid response, and expert technical assistance."
+      ]
+    }
+  }
 
   }
 
