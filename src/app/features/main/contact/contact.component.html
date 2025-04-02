@@ -145,57 +145,61 @@
                <p class="flex items-center gap-3 text-base" style="text-align: center;">
                 <i class="fa fa-map-marker-alt me-3"></i> {{ 'FOOTER.ADDRESS' | translate }}
               </p>
-             <div class="container">
-    <div class="row">
-        <div class="col-md-6 p-3 border-end border-dark text-center">
-            <p class="d-flex align-items-center justify-content-center gap-2 text-base">
-                Our Contact details
-            </p>
-            <p class="d-flex align-items-center justify-content-center gap-2 text-base">
-                <i class="fa fa-phone-alt"></i> {{ 'FOOTER.PHONE' | translate }}
-            </p>
-            <a target="_blank" class="d-flex align-items-center justify-content-center gap-2 text-base fw-bold" href="mailto:info@sharpinnvotech.com">
-                <i class="fa fa-envelope "></i> {{ 'FOOTER.EMAIL' | translate }}
-            </a>
-        </div>
-        <div class="col-md-6 p-3 text-center">
-            <p class="d-flex align-items-center justify-content-center gap-2 text-base">
-                For Sales Inquiries
-            </p>
-            <p class="d-flex align-items-center justify-content-center gap-2 text-base">
-                <i class="fa fa-phone-alt "></i> {{ 'FOOTER.PHONE' | translate }}
-            </p>
-            <a target="_blank" class="d-flex align-items-center justify-content-center gap-2 text-base fw-bold" href="mailto:sales@sharpinnvotech.com">
-                <i class="fa fa-envelope "></i> {{ 'FOOTER.sales' | translate }}
-            </a>
-        </div>
-    </div>
-</div>
-
-           
-            </div>
-
-
-            <div class="my-4 p-4 bg-[#F7F7F7] border border-[#D7D7D7] rounded-[0.625rem] p-[1.40rem]" style="background-color:#1363c6;border-radius: 8px;">
-              <p class="text-base text-white font-medium"> <b>{{ 'CONTACT-FORM.CONTACT_HOURS' | translate }} </b></p>
-              <p class="flex items-center flex-wrap gap-2 text-sm my-3">
-              <i class="fa fa-clock me-3" style="font-size: 1.5rem;color:white;"></i>
-              <span class="text-white text-sm"> {{ 'CONTACT-FORM.CONTACT_TIME' | translate }} </span>
-              <span class="text-main p-1 rounded-base" style="color:#1363c6;background-color: #E7EFF9;border-radius: 8px;">  {{ 'CONTACT-FORM.CONTACT_DAY' | translate }}</span>
-              </p><div class="lg:w-3/6 w-full download-apps">
-              <p class="text-base text-white font-medium"> <b>{{ 'CONTACT-FORM.CONTACT_SOCIALMEDIA' | translate }} </b></p>
-              <div _ngcontent-ewr-c9="" class="d-flex align-items-center mt-4">
-                <a _ngcontent-ewr-c9="" href="#" class="btn btn-outline-primary btn-square me-3">
-                <i _ngcontent-ewr-c9="" class="fab fa-facebook-f"></i></a>
-                <a _ngcontent-ewr-c9="" href="#" class="btn btn-outline-primary btn-square me-3">
-                <i _ngcontent-ewr-c9="" class="fab fa-twitter"></i></a>
-                <a _ngcontent-ewr-c9="" href="#" class="btn btn-outline-primary btn-square me-3">
-                <i _ngcontent-ewr-c9="" class="fab fa-instagram"></i></a>
-                <a _ngcontent-ewr-c9="" href="#" class="btn btn-outline-primary btn-square">
-                <i _ngcontent-ewr-c9="" class="fab fa-linkedin-in"></i></a>
-                </div>
+   <div class="container">
+      <div class="container">
+         <div class="row">
+             <div class="col-md-6 p-3 border-end border-dark text-center">
+                 <p class="text-base">Our Contact details</p>
+                 <ul class="contact-list">
+                  <li><i class="fa fa-phone-alt"></i> {{ 'FOOTER.PHONE' | translate }}</li>
+                  <li><i class="fa fa-envelope "></i> {{ 'FOOTER.EMAIL' | translate }}</li>
+                 </ul>                
+             </div>
+               <div class="col-md-6 p-3 border-dark text-center">
+                  <p class="text-base">For Sales Inquiries</p>
+                  <ul class="contact-list">
+                   <li><i class="fa fa-phone-alt"></i> {{ 'FOOTER.PHONE' | translate }}</li>
+                   <li><i class="fa fa-envelope"></i> {{ 'FOOTER.sales' | translate }}</li>
+                  </ul>                
               </div>
-        </div>
+             
+         </div>
+     </div>
+     
+</div>          
+   </div>
+   <div class="my-4 p-4 bg-[#F7F7F7] border border-[#D7D7D7] rounded-[0.625rem]" style="background-color:#1363c6;border-radius: 8px;">
+      <p class="text-base text-white font-medium">
+          <b>{{ 'CONTACT-FORM.CONTACT_HOURS' | translate }}</b>
+      </p>
+      <p class="flex items-center flex-wrap gap-1 text-sm my-2">
+          <i class="fa fa-clock me-2" style="font-size: 1.5rem; color: white;"></i>
+          <span class="text-white text-sm" style="margin-right: 4px;">{{ 'CONTACT-FORM.CONTACT_TIME' | translate }}</span>
+          <span class="text-main p-1 rounded-base ms-2" style="color: #1363c6; background-color: #E7EFF9; border-radius: 8px;margin-right: 4px;">
+              {{ 'CONTACT-FORM.CONTACT_DAY' | translate }}
+          </span>
+      </p>
+      <div class="lg:w-3/6 w-full download-apps">
+          <p class="text-base text-white font-medium">
+              <b>{{ 'CONTACT-FORM.CONTACT_SOCIALMEDIA' | translate }}</b>
+          </p>
+          <div class="d-flex align-items-center mt-2">
+              <a href="#" class="btn btn-outline-primary btn-square me-2">
+                  <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="btn btn-outline-primary btn-square me-2">
+                  <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="btn btn-outline-primary btn-square me-2">
+                  <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="btn btn-outline-primary btn-square me-2">
+                  <i class="fab fa-linkedin-in"></i>
+              </a>
+          </div>
+      </div>
+  </div>
+  
      </div>
   </div>
 </div>
