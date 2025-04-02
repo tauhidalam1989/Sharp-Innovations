@@ -555,3 +555,25 @@ h6,
     margin-right: 8px; /* Space between icon and text */
     color: #007bff; /* Change icon color */
 }
+.list-none {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+  }
+  .contact-hours {
+    display: flex;
+    align-items: center; /* Center items vertically on larger screens */
+    flex-wrap: wrap; /* Allow wrapping for mobile */
+}
+
+@media (max-width: 768px) {
+    .contact-hours {
+        flex-direction: column; /* Stack items vertically on mobile */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .contact-hours span {
+        margin-right: 0; /* Remove right margin on mobile */
+        margin-bottom: 4px; /* Add space between stacked items */
+    }
+}
