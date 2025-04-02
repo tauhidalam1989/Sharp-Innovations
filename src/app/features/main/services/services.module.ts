@@ -23,6 +23,13 @@ import { NOCComponent } from './noc/noc.component';
 import { NetworkInfrastructureServicesComponent } from './network-infrastructure-services/network-infrastructure-services.component';
 import { NetworkConsultingServicesComponent } from './network-consulting-services/network-consulting-services.component';
 import { NetworkInfrastructureMaintenanceComponent } from './network-infrastructure-maintenance/network-infrastructure-maintenance.component';
+import { AiProductDevelopmentComponent } from './ai-product-development/ai-product-development.component';
+import { AiMlServicesComponent } from './ai-ml-services/ai-ml-services.component';
+import { NlpServicesComponent } from './nlp-services/nlp-services.component';
+import { ComputerVisionComponent } from './computer-vision/computer-vision.component';
+import { AutomationServicesComponent } from './automation-services/automation-services.component';
+import { CybersecurityServicesComponent } from './cybersecurity-services/cybersecurity-services.component';
+import { AiConsultingComponent } from './ai-consulting/ai-consulting.component';
 
 
 @NgModule({
@@ -46,7 +53,14 @@ import { NetworkInfrastructureMaintenanceComponent } from './network-infrastruct
     NOCComponent,
     NetworkInfrastructureServicesComponent,
     NetworkConsultingServicesComponent,
-    NetworkInfrastructureMaintenanceComponent
+    NetworkInfrastructureMaintenanceComponent,
+    AiProductDevelopmentComponent,
+    AiMlServicesComponent,
+    NlpServicesComponent,
+    ComputerVisionComponent,
+    AutomationServicesComponent,
+    CybersecurityServicesComponent,
+    AiConsultingComponent
   ],
   imports: [
     CommonModule,
