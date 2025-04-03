@@ -1,20 +1,23 @@
 <div class="sidebar" [class.open]="isOpen">
     <button class="close-btn" (click)="closeSidebar()">×</button>
-
-    <a class="cursor-pointer lang-switch" (click)="switchLanguage()">
+    <a class="cursor-pointer" (click)="pathService.navigateToAbout('home')" class="navbar-brand">
+        <!-- <h1 class="text-white">{{ 'TITLE' | translate }}</h1> -->
+         <img [height]="50" [src]="imageSrc" alt="" srcset="">
+      </a>
+    <a class="cursor-pointer lang-switch" (click)="switchLanguage(currentLang === 'en' ? 'ar' : 'en')" >
         {{ currentLang === 'ar' ? 'English' : 'عربي' }}
     </a>
 
-    <a routerLink="/home" routerLinkActive="active" class="nav-item">
+    <a routerLink="/home" (click)="closeSidebar()" routerLinkActive="active" class="nav-item">
         {{ 'HOME' | translate }}
     </a>
 
-    <a routerLink="/about" routerLinkActive="active" class="nav-item">
+    <a routerLink="/about" (click)="closeSidebar()" routerLinkActive="active" class="nav-item">
         {{ 'ABOUT' | translate }}
     </a>
 
     <!-- Services Dropdown -->
-    <div class="nav-item">
+    <div class="nav-item" style=" border-bottom: 2px solid rgba(255, 255, 255, 0.5);">
         <!-- Click to toggle services dropdown -->
         <a class="cursor-pointer" (click)="toggleDropdown('isservicing')">
             {{ 'SERVICES' | translate }}
@@ -32,8 +35,8 @@
                 </a>
     
                 <!-- Second Level: Service Items (Nested Under Category) -->
-                <div class="sub-menu" *ngIf="selectedCategory === category">
-                    <a *ngFor="let item of category.items" [routerLink]="'/services/' + item.path"
+                <div class="sub-menu"  *ngIf="selectedCategory === category">
+                    <a style="display: flex; gap: 10px; border-bottom:none;font-size: 17px;" (click)="closeSidebar()" *ngFor="let item of category.items" [routerLink]="'/services/' + item.path"
                        class="cursor-pointer">
                         <i [class]="item.icon + ' me-2'"></i> {{ item.name | translate }}
                     </a>
@@ -44,7 +47,7 @@
     
 
     <!-- Products Dropdown -->
-    <div class="nav-item">
+    <div class="nav-item" style=" border-bottom: 2px solid rgba(255, 255, 255, 0.5);">
         <a class="cursor-pointer" (click)="toggleDropdown('isProduct')">
             {{ 'PRODUCTS' | translate }}
             <i class="fa fa-chevron-down" [ngClass]="{ 'rotate': isProduct }"></i>
@@ -56,10 +59,16 @@
         </div>
     </div>
 
-    <a routerLink="/Careers" routerLinkActive="active" class="nav-item">
+    <a routerLink="/Careers" (click)="closeSidebar()" routerLinkActive="active" class="nav-item">
         {{ 'CAREERS' | translate }}
     </a>
-    <a routerLink="/contact" routerLinkActive="active" class="nav-item">
+    <a routerLink="/contact" (click)="closeSidebar()" routerLinkActive="active" class="nav-item">
         {{ 'CONTACT' | translate }}
     </a>
+    <div class="banner-container">
+        <div class="banner-container">
+          <img class="img-fluid banner-image" src="../../../../../../assets/img/Banner3.svg" alt="">
+        </div>
+      </div>
+
 </div>

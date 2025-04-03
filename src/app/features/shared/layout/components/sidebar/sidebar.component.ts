@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { RoutingService } from '../../../services/routing.service';
+import { LanguageService } from '../../../services/language.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -6,8 +8,23 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
+  constructor(public pathService: RoutingService,
+    private languageService: LanguageService
+  ){}
   @Input() isOpen = false;
-
+  imageSrc: "../../../../../../assets/img/d1.png" | any;
+  ngOnInit(): void {
+    this.currentLang = this.languageService.getLanguage();
+    this.languageService.switchLanguage(this.currentLang);
+    this.imageSrc =  this.currentLang === 'en' ? '../../../../../../assets/img/d1.png' : '../../../../../../assets/img/d2.png';
+    
+    // Listen for navigation events
+    // this.router.events.subscribe((event) => {
+    //   if (event instanceof NavigationEnd) {
+    //     this.collapseNavbar(); // Collapse the navbar on navigation
+    //   }
+    // });
+  }
   isservicing = false;
   isProduct = false;
   currentLang = 'en';
@@ -28,7 +45,13 @@ export class SidebarComponent {
     }
   }
 
-  switchLanguage() {
-    this.currentLang = this.currentLang === 'en' ? 'ar' : 'en';
+  switchLanguage(lang: string): void {
+    this.languageService.switchLanguage(lang);
+    this.currentLang = lang;
+    console.log(this.currentLang);
+    
+    this.imageSrc =  this.currentLang === 'en' ? '../../../../../../assets/img/d1.png' : '../../../../../../assets/img/d2.png';
+    
+     
   }
 }
