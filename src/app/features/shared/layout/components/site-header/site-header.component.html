@@ -1,11 +1,6 @@
 <div class="container-fluid sticky-top">
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark p-0 cursor-pointer">
-
-      <div  class="header-logo ">
-        <a style="color: white;" (click)="switchLanguage(currentLang === 'en' ? 'ar' : 'en')"  routerLinkActive="active" class="nav-item nav-link cursor-pointer show-on-mobile">
-          {{ currentLang === 'ar' ? 'English': 'عربي'   }}
-        </a>
         <a class="cursor-pointer" (click)="pathService.navigateToAbout('home')" class="navbar-brand">
           <!-- <h1 class="text-white">{{ 'TITLE' | translate }}</h1> -->
            <img [height]="60" [src]="imageSrc" alt="" srcset="">
@@ -13,8 +8,6 @@
         <button type="button" class="navbar-toggler ms-auto me-0" (click)="toggleSidebar.emit()">
           <span class="navbar-toggler-icon"></span>
         </button>
-        
-      </div>
       <!-- Brand -->
     
       <!-- Mobile Toggle Button -->

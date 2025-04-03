@@ -4,23 +4,30 @@
         <!-- <h1 class="text-white">{{ 'TITLE' | translate }}</h1> -->
          <img [height]="50" [src]="imageSrc" alt="" srcset="">
       </a>
-    <a class="cursor-pointer lang-switch" (click)="switchLanguage(currentLang === 'en' ? 'ar' : 'en')" >
-        {{ currentLang === 'ar' ? 'English' : 'عربي' }}
+      <a class="cursor-pointer lang-switch" (click)="switchLanguage(currentLang === 'en' ? 'ar' : 'en')">
+        <i class="fa fa-globe"></i> 
+        {{ currentLang === 'ar' ? 'English' : ' العربية' }}
     </a>
-
+    
     <a routerLink="/home" (click)="closeSidebar()" routerLinkActive="active" class="nav-item">
+        <i class="fa fa-home"></i> 
         {{ 'HOME' | translate }}
     </a>
-
+    
     <a routerLink="/about" (click)="closeSidebar()" routerLinkActive="active" class="nav-item">
+        <i class="fa fa-info-circle"></i> 
         {{ 'ABOUT' | translate }}
     </a>
-
+    
     <!-- Services Dropdown -->
-    <div class="nav-item" style=" border-bottom: 2px solid rgba(255, 255, 255, 0.5);">
+    <div class="nav-item" style=" border-bottom: 2px solid rgba(255, 255, 255, 0.5); ">
         <!-- Click to toggle services dropdown -->
-        <a class="cursor-pointer" (click)="toggleDropdown('isservicing')">
-            {{ 'SERVICES' | translate }}
+        <a class="cursor-pointer" style="display: flex;justify-content: space-between;" (click)="toggleDropdown('isservicing')">
+          <div class="service-menu">
+
+              <i class="fa fa-cogs"></i> 
+              {{ 'SERVICES' | translate }}
+          </div>
             <i class="fa fa-chevron-down" [ngClass]="{ 'rotate': isservicing }"></i>
         </a>
     
@@ -36,8 +43,8 @@
     
                 <!-- Second Level: Service Items (Nested Under Category) -->
                 <div class="sub-menu"  *ngIf="selectedCategory === category">
-                    <a style="display: flex; gap: 10px; border-bottom:none;font-size: 17px;" (click)="closeSidebar()" *ngFor="let item of category.items" [routerLink]="'/services/' + item.path"
-                       class="cursor-pointer">
+                    <a style="display: flex;justify-content: space-between; gap: 10px; border-bottom:none" (click)="closeSidebar()" *ngFor="let item of category.items" [routerLink]="'/services/' + item.path"
+                       class="cursor-pointer" >
                         <i [class]="item.icon + ' me-2'"></i> {{ item.name | translate }}
                     </a>
                 </div>
@@ -48,8 +55,12 @@
 
     <!-- Products Dropdown -->
     <div class="nav-item" style=" border-bottom: 2px solid rgba(255, 255, 255, 0.5);">
-        <a class="cursor-pointer" (click)="toggleDropdown('isProduct')">
-            {{ 'PRODUCTS' | translate }}
+        <a class="cursor-pointer" style="display: flex;justify-content: space-between; gap: 10px; border-bottom:none;" (click)="toggleDropdown('isProduct')">
+             <div class="service-menu">
+
+                <i class="fa fa-box"></i> 
+                {{ 'PRODUCTS' | translate }}
+            </div>
             <i class="fa fa-chevron-down" [ngClass]="{ 'rotate': isProduct }"></i>
         </a>
         <div class="sidebar-item" *ngIf="isProduct">
@@ -59,12 +70,16 @@
         </div>
     </div>
 
-    <a routerLink="/Careers" (click)="closeSidebar()" routerLinkActive="active" class="nav-item">
+    <a routerLink="/careers" (click)="closeSidebar()" routerLinkActive="active" class="nav-item">
+        <i class="fa fa-briefcase"></i>
         {{ 'CAREERS' | translate }}
     </a>
+    
     <a routerLink="/contact" (click)="closeSidebar()" routerLinkActive="active" class="nav-item">
+        <i class="fa fa-envelope"></i>
         {{ 'CONTACT' | translate }}
     </a>
+    
     <div class="banner-container">
         <div class="banner-container">
           <img class="img-fluid banner-image" src="../../../../../../assets/img/Banner3.svg" alt="">
