@@ -5,7 +5,7 @@
         <!-- Company Info -->
         <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
           <a routerLink="/home" class="d-inline-block mb-3">
-            <img [height]="60" src="../../../../../../assets/img/Sharp-Innovations-White.png" alt="" srcset="">
+            <img [height]="60" *ngIf="imageSrc" [src]="imageSrc" alt="" srcset="">
     
           </a>
           <p class="mb-0">{{ 'FOOTER.DESCRIPTION' | translate }}</p>

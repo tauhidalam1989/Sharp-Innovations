@@ -2839,16 +2839,18 @@
     "why_choose_us": {
       "title": "Why Choose Sharp Innovations?",
       "points": [
-        "✔ Expert Team: Skilled professionals with expertise in modern technologies.",
-        "✔ Security-First Approach: Robust security measures to protect your data and applications.",
-        "✔ Scalable Solutions: Applications that grow with your business.",
-        "✔ Agile Development: Rapid development cycles for faster time-to-market.",
-        "✔ End-to-End Services: From ideation to deployment and ongoing support."
+        " Expert Team: Skilled professionals with expertise in modern technologies.",
+        " Security-First Approach: Robust security measures to protect your data and applications.",
+        " Scalable Solutions: Applications that grow with your business.",
+        " Agile Development: Rapid development cycles for faster time-to-market.",
+        " End-to-End Services: From ideation to deployment and ongoing support."
       ]
     },
     "cta": "Ready to transform your business with a high-performance web application?",
     "contact": "Contact Sharp Innovations today!"
   },
+
+
 
   "mobile_app_development": {
     "title": "Mobile Application Development Services",
