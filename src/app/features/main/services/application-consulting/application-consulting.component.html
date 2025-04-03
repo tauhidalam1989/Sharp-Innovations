@@ -1,0 +1,50 @@
+<div class="container-fluid bg-light py-5">
+    <div class="container py-5">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
+          <h1 class="mb-4 display-5 text-primary animate__animated animate__fadeIn">
+            <i class="fas fa-laptop-code me-2 floating-icon"></i>{{ 'application_consulting.title' | translate }}
+          </h1>
+          <h4 class="mb-3 text-secondary animate__animated animate__fadeIn animate__delay-1s">
+            {{ 'application_consulting.subtitle' | translate }}
+          </h4>
+          <p class="mb-4 text-muted animate__animated animate__fadeIn animate__delay-2s">
+            {{ 'application_consulting.description' | translate }}
+          </p>
+        </div>
+      </div>
+  
+      <div class="row g-4">
+        <div *ngFor="let service of 'application_consulting.services' | translate" class="col-md-6 col-lg-4 wow fadeInUp">
+          <div class="card h-100 shadow-sm border-0 text-center service-card">
+            <div class="card-body">
+              <h5 class="card-title text-primary">{{ service.title }}</h5>
+              <ul class="text-muted text-start">
+                <li *ngFor="let desc of service.description">{{ desc }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row mt-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="text-primary animate__animated animate__fadeIn">{{ 'application_consulting.why_choose_us.title' | translate }}</h2>
+          <ul class="list-unstyled text-muted mt-3">
+            <li *ngFor="let point of 'application_consulting.why_choose_us.points' | translate">
+              <i class="fas fa-check-circle text-success me-2"></i> {{ point }}
+            </li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="row mt-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="text-primary animate__animated animate__fadeIn">{{ 'application_consulting.cta' | translate }}</h2>
+          <p class="text-muted">{{ 'application_consulting.contact' | translate }}</p>
+          <a href="/contact" class="btn btn-primary mt-3 px-4 py-2">{{ 'contact' | translate }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  

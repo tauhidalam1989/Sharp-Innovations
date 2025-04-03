@@ -1144,7 +1144,7 @@
         { "name": "Web Application Development", "icon": "fas fa-code", "path": "web-app-development" },
         { "name": "Mobile Application Development", "icon": "fas fa-mobile-alt", "path": "mobile-app-development" },
         { "name": "Windows Application Development", "icon": "fas fa-window-maximize" },
-        { "name": "Application Consulting", "icon": "fas fa-chart-bar" },
+        { "name": "Application Consulting", "icon": "fas fa-chart-bar","path":"application-consulting" },
         { "name": "Application Maintenance and Operation", "icon": "fas fa-headset" },
         { "name": "Manpower Outsourcing(Application Experts)", "icon": "fas fa-user-friends" }
       ]
@@ -2718,6 +2718,300 @@
         ]
       }
     ]
+  },
+  "web_system_development": {
+    "title": "Web & System Development Services",
+    "subtitle": "Build Secure, Scalable, and High-Performance Solutions",
+    "description": "At Sharp Innovations, we design and develop robust web and system solutions tailored to your business needs. Our approach prioritizes security, efficiency, and scalability, ensuring your digital assets are resilient against evolving cyber threats.",
+    "services": [
+      {
+        "title": "Secure Web Development",
+        "description": [
+          "We create custom web applications with built-in security features, adhering to industry standards such as OWASP Top 10, ISO 27001, and GDPR compliance."
+        ]
+      },
+      {
+        "title": "Enterprise System Development",
+        "description": [
+          "Our team develops scalable enterprise solutions, integrating security frameworks to protect sensitive business data."
+        ]
+      },
+      {
+        "title": "Cloud-Based Solutions",
+        "description": [
+          "We build and optimize secure cloud applications, leveraging AWS, Azure, and Google Cloud platforms."
+        ]
+      },
+      {
+        "title": "Custom API Development",
+        "description": [
+          "Secure API integrations to enhance interoperability between your systems without exposing vulnerabilities."
+        ]
+      },
+      {
+        "title": "DevSecOps Implementation",
+        "description": [
+          "Embedding security into the development lifecycle to ensure compliance and risk mitigation from the ground up."
+        ]
+      }
+    ],
+    "why_choose_us": {
+      "title": "Why Choose Us?",
+      "points": [
+        "✔ Security-First Approach – We embed security best practices in every phase of development, from design to deployment.",
+        "✔ End-to-End Compliance – Our solutions align with regulatory frameworks to ensure legal and data security compliance.",
+        "✔ Performance & Scalability – Our systems are designed to grow with your business while maintaining optimal speed and reliability.",
+        "✔ 24/7 Support & Maintenance – Ongoing monitoring, vulnerability assessments, and timely updates keep your applications secure."
+      ]
+    },
+    "cta": "Enhance your business operations with cutting-edge web and system development solutions that prioritize security and innovation. Let Sharp Innovations help you build resilient, high-performing applications tailored to your needs.",
+    "contact": "Contact Us Today!"
+  },
+  "web_application": {
+    "title": "Web Application Development Services",
+    "subtitle": "High-Performance Web Solutions Tailored to Your Business",
+    "description": "At Sharp Innovations, we specialize in designing, developing, and deploying high-performance web applications tailored to meet your business needs. Our team of experts leverages cutting-edge technologies to create scalable, secure, and user-friendly applications that drive growth and efficiency.",
+    "services": [
+      {
+        "title": "Custom Web Application Development",
+        "description": [
+          "Tailor-made web applications that align with your business objectives.",
+          "Seamless functionality and optimal performance."
+        ]
+      },
+      {
+        "title": "Full-Stack Development",
+        "description": [
+          "Expertise in front-end and back-end technologies.",
+          "Modern frameworks like React, Angular, Vue.js, Node.js, Python, and more."
+        ]
+      },
+      {
+        "title": "E-Commerce Solutions",
+        "description": [
+          "Secure and scalable e-commerce platforms.",
+          "Features like payment integration, inventory management, and AI-driven recommendations."
+        ]
+      },
+      {
+        "title": "API Development & Integration",
+        "description": [
+          "Building and integrating RESTful and GraphQL APIs.",
+          "Seamless communication with third-party services and mobile applications."
+        ]
+      },
+      {
+        "title": "Progressive Web Apps (PWAs)",
+        "description": [
+          "Fast, reliable, and offline-capable web applications.",
+          "Provide a native app-like experience."
+        ]
+      },
+      {
+        "title": "Enterprise Web Solutions",
+        "description": [
+          "Enterprise-grade applications ensuring scalability and security.",
+          "Compliance with industry standards."
+        ]
+      },
+      {
+        "title": "Cloud-Based Web Applications",
+        "description": [
+          "Leverage cloud computing for scalability and high availability.",
+          "Deploying applications on AWS, Azure, and Google Cloud."
+        ]
+      },
+      {
+        "title": "UI/UX Design & Prototyping",
+        "description": [
+          "Intuitive and visually appealing interfaces.",
+          "Enhancing user engagement and experience."
+        ]
+      },
+      {
+        "title": "Maintenance & Support",
+        "description": [
+          "Continuous monitoring and regular updates.",
+          "Proactive maintenance for security and performance optimization."
+        ]
+      }
+    ],
+    "why_choose_us": {
+      "title": "Why Choose Sharp Innovations?",
+      "points": [
+        "✔ Expert Team: Skilled professionals with expertise in modern technologies.",
+        "✔ Security-First Approach: Robust security measures to protect your data and applications.",
+        "✔ Scalable Solutions: Applications that grow with your business.",
+        "✔ Agile Development: Rapid development cycles for faster time-to-market.",
+        "✔ End-to-End Services: From ideation to deployment and ongoing support."
+      ]
+    },
+    "cta": "Ready to transform your business with a high-performance web application?",
+    "contact": "Contact Sharp Innovations today!"
+  },
+
+  "mobile_app_development": {
+    "title": "Mobile Application Development Services",
+    "subtitle": "Transforming Ideas into Cutting-Edge Mobile Experiences",
+    "description": "At Sharp Innovations, we specialize in custom mobile application development for Android and iOS platforms. Our expertise ensures that your mobile app is built with precision, scalability, and security, delivering an intuitive and engaging user experience. Whether you're a startup, SME, or enterprise, our mobile solutions empower your business to stay ahead in the digital landscape.",
+    "services": [
+      {
+        "title": "Custom Mobile App Development",
+        "description": [
+          "We design and develop tailored mobile applications that align with your business objectives.",
+          "Our development approach focuses on usability, performance, and security to ensure a seamless user experience across different devices."
+        ]
+      },
+      {
+        "title": "Cross-Platform App Development",
+        "description": [
+          "Using technologies like React Native, Flutter, and Xamarin, we build applications that run smoothly on both Android and iOS platforms.",
+          "Reduces development time and cost without compromising quality."
+        ]
+      },
+      {
+        "title": "Native App Development",
+        "description": [
+          "For businesses requiring high-performance applications, we offer native development using:",
+          "Swift & Objective-C for iOS development",
+          "Kotlin & Java for Android development"
+        ]
+      },
+      {
+        "title": "UI/UX Design",
+        "description": [
+          "User experience is at the heart of mobile success.",
+          "Our design experts craft intuitive interfaces and smooth interactions, ensuring that users have a frictionless and engaging experience."
+        ]
+      },
+      {
+        "title": "API Integration & Backend Development",
+        "description": [
+          "We develop robust backend systems and APIs to support mobile applications.",
+          "Ensuring seamless data synchronization, security, and functionality."
+        ]
+      },
+      {
+        "title": "Mobile App Security & Compliance",
+        "description": [
+          "Security is our top priority.",
+          "Our applications comply with industry standards such as NCA, SAMA, GDPR, HIPAA, and PCI-DSS.",
+          "Implementing data encryption, secure authentication, and vulnerability testing to safeguard your business and users."
+        ]
+      },
+      {
+        "title": "App Maintenance & Support",
+        "description": [
+          "We offer continuous support and maintenance to ensure your app remains updated, secure, and compatible with evolving mobile OS versions and hardware advancements."
+        ]
+      },
+      {
+        "title": "App Deployment & Store Optimization",
+        "description": [
+          "We help launch your mobile app successfully on Google Play Store and Apple App Store.",
+          "Ensuring compliance with guidelines and optimizing app visibility for better discoverability."
+        ]
+      }
+    ],
+    "why_choose_us": {
+      "title": "Why Choose Sharp Innovations?",
+      "points": [
+        " Experienced Developers: Skilled in the latest mobile technologies and frameworks.",
+        " Agile Development Process: Ensuring fast delivery and flexibility.",
+        " Scalability & Performance: Apps built to handle growth and high user loads.",
+        " Security-First Approach: Ensuring secure mobile applications.",
+        " Seamless Integration: Connecting apps with existing business systems."
+      ]
+    },
+    "industries": {
+      "title": "Industries We Serve",
+      "list": [
+        "Construction",
+        "Finance & FinTech",
+        "Healthcare & Telemedicine",
+        "E-commerce & Retail",
+        "Education & E-learning",
+        "Travel & Hospitality",
+        "Enterprise & Productivity Solutions"
+      ]
+    },
+    "cta": "Ready to take your business mobile? Sharp Innovations is here to bring your vision to life with feature-rich, high-performance, and secure mobile applications.",
+    "contact": "Contact us today to discuss your project and get started!"
+  },
+  "application_consulting": {
+    "title": "Application Consulting Services",
+    "subtitle": "Drive Digital Excellence with Expert Application Consulting",
+    "description": "At Sharp Innovations, we empower businesses with cutting-edge application consulting services designed to optimize, modernize, and secure your software ecosystem.",
+    "services": [
+      {
+        "title": "Application Strategy & Roadmap Development",
+        "description": [
+          "Align your business goals with a tailored application strategy.",
+          "Define a technology roadmap for scalability and digital transformation.",
+          "Evaluate current applications for modernization and integration opportunities."
+        ]
+      },
+      {
+        "title": "Application Design & Architecture",
+        "description": [
+          "Design robust, scalable, and secure application architectures.",
+          "Ensure compliance with industry standards and best practices.",
+          "Optimize applications for cloud, hybrid, and on-premise environments."
+        ]
+      },
+      {
+        "title": "Application Modernization & Migration",
+        "description": [
+          "Upgrade legacy systems to modern platforms with minimal disruption.",
+          "Cloud migration and hybrid cloud adoption strategies.",
+          "Leverage containerization, microservices, and DevOps for enhanced agility."
+        ]
+      },
+      {
+        "title": "Custom Application Development Consultation",
+        "description": [
+          "Guidance on custom application development for unique business needs.",
+          "Selection of the right technology stack and development frameworks.",
+          "Agile methodologies to ensure rapid delivery and flexibility."
+        ]
+      },
+      {
+        "title": "Performance Optimization & Security Enhancements",
+        "description": [
+          "Identify and resolve performance bottlenecks to improve application speed and efficiency.",
+          "Implement security best practices to protect against cyber threats.",
+          "Continuous monitoring and vulnerability assessments for risk mitigation."
+        ]
+      },
+      {
+        "title": "Compliance, Governance & Risk Management",
+        "description": [
+          "Ensure compliance with industry regulations (NCA, SAMA, GDPR, HIPAA, ISO, etc.).",
+          "Develop governance frameworks for effective IT and application management.",
+          "Risk assessment and mitigation strategies to safeguard business operations."
+        ]
+      },
+      {
+        "title": "Application Support & Continuous Improvement",
+        "description": [
+          "Proactive application monitoring and incident resolution.",
+          "Regular updates and enhancements to maintain peak performance.",
+          "End-user training and support for seamless adoption."
+        ]
+      }
+    ],
+    "why_choose_us": {
+      "title": "Why Choose Sharp Innovations?",
+      "points": [
+        "Expert Guidance: Our consultants bring deep industry expertise and technical proficiency.",
+        "Tailored Solutions: We customize our strategies based on your business needs and goals.",
+        "End-to-End Support: From planning to execution and ongoing optimization, we ensure success.",
+        "Security-First Approach: Robust security measures are embedded in every stage of application management.",
+        "Proven Success: Trusted by businesses across industries for innovative and reliable solutions."
+      ]
+    },
+    "cta": "Transform your applications with Sharp Innovations. Whether you need strategy consulting, modernization, or continuous support, we are your trusted partner in digital excellence.",
+    "contact": "📩 Contact us today to schedule a consultation and unlock the full potential of your applications."
   }
   }
 

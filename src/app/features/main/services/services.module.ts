@@ -30,6 +30,7 @@ import { ComputerVisionComponent } from './computer-vision/computer-vision.compo
 import { AutomationServicesComponent } from './automation-services/automation-services.component';
 import { CybersecurityServicesComponent } from './cybersecurity-services/cybersecurity-services.component';
 import { AiConsultingComponent } from './ai-consulting/ai-consulting.component';
+import { ApplicationConsultingComponent } from './application-consulting/application-consulting.component';
 
 
 @NgModule({
@@ -60,7 +61,8 @@ import { AiConsultingComponent } from './ai-consulting/ai-consulting.component';
     ComputerVisionComponent,
     AutomationServicesComponent,
     CybersecurityServicesComponent,
-    AiConsultingComponent
+    AiConsultingComponent,
+    ApplicationConsultingComponent
   ],
   imports: [
     CommonModule,

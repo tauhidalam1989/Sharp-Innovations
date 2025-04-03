@@ -1,165 +1,61 @@
 <div class="container-fluid bg-light py-5">
-    <div class="container py-5">
-      <!-- Title and Introduction -->
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
-          <h1 class="mb-4 display-7 text-primary">
-            <i class="fas fa-mobile-alt me-2"></i>{{ 'mobile_app_development.title' | translate }}
-          </h1>
-          <p class="mb-4 text-muted">{{ 'mobile_app_development.intro' | translate }}</p>
-          <a class="btn btn-primary rounded-pill px-4 py-2 shadow-lg" href="#">
-            {{ 'mobile_app_development.cta' | translate }}
-          </a>
-        </div>
-        <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.2s">
-          <img src="../../../../../assets/img/Mobile-App.png" alt="Mobile App Development" class="img-fluid rounded ">
-        </div>
+  <div class="container py-5">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
+        <h1 class="mb-4 display-5 text-primary animate__animated animate__fadeIn">
+          <i class="fas fa-mobile-alt me-2 floating-icon"></i>{{ 'mobile_app_development.title' | translate }}
+        </h1>
+        <h4 class="mb-3 text-secondary animate__animated animate__fadeIn animate__delay-1s">
+          {{ 'mobile_app_development.subtitle' | translate }}
+        </h4>
+        <p class="mb-4 text-muted animate__animated animate__fadeIn animate__delay-2s">
+          {{ 'mobile_app_development.description' | translate }}
+        </p>
       </div>
-  
-      <!-- Business-Oriented Section -->
-      <div class="row mt-5 text-center">
-        <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.2s">
-          <h2 class="mb-3 text-primary">
-            <i class="fas fa-briefcase me-2"></i>{{ 'mobile_app_development.business_oriented.title' | translate }}
-          </h2>
-          <p class="text-muted">{{ 'mobile_app_development.business_oriented.content' | translate }}</p>
-        </div>
-      </div>
-  
-      <!-- Services Section -->
-      <div class="row g-5 mt-5">
-        <div class="col-lg-12">
-          <h3 class="mb-4 text-center text-primary wow fadeInUp">
-            <i class="fas fa-cogs me-2"></i>{{ 'mobile_app_development.services_section' | translate }}
-          </h3>
-          <div class="row g-4">
-            <div
-              *ngFor="let service of ['android_app_development', 'ios_app_development', 'cross_platform_app_development', 'app_ui_ux_design', 'mvp_app_development', 'support_maintenance']; let i = index"
-              class="col-md-4 wow zoomIn"
-              [attr.data-wow-delay]="(0.2 + i * 0.1) + 's'"
-            >
-              <div class="service-item text-center p-4 bg-white shadow rounded h-100">
-                <div class="service-icon mb-3">
-                  <i
-                    class="fas"
-                    [ngClass]="{
-                      'fa-android': service === 'android_app_development',
-                      'fa-apple': service === 'ios_app_development',
-                      'fa-code-branch': service === 'cross_platform_app_development',
-                      'fa-paint-brush': service === 'app_ui_ux_design',
-                      'fa-lightbulb': service === 'mvp_app_development',
-                      'fa-tools': service === 'support_maintenance'
-                    }"
-                  ></i>
-                </div>
-                <h5 class="mb-3 text-primary">
-                  {{ ('mobile_app_development.services.' + service + '.title') | translate }}
-                </h5>
-                <p class="text-muted">{{ ('mobile_app_development.services.' + service + '.description') | translate }}</p>
-              </div>
-            </div>
+    </div>
+
+    <div class="row g-4">
+      <div *ngFor="let service of 'mobile_app_development.services' | translate" class="col-md-6 col-lg-4 wow fadeInUp">
+        <div class="card h-100 shadow-sm border-0 text-center service-card">
+          <div class="card-body">
+            <h5 class="card-title text-primary">{{ service.title }}</h5>
+            <ul class="text-muted text-start">
+              <li *ngFor="let desc of service.description">{{ desc }}</li>
+            </ul>
           </div>
-        </div>
-      </div>
-  
-      <!-- Call to Action Section -->
-      <div class="row mt-5 text-center">
-        <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.3s">
-          <h2 class="text-primary">
-            <i class="fas fa-lightbulb me-2"></i>{{ 'mobile_app_development.cta_tell_us.title' | translate }}
-          </h2>
-          <a class="btn btn-success rounded-pill px-4 py-2 shadow-lg" href="#">
-            {{ 'mobile_app_development.cta_tell_us.button' | translate }}
-          </a>
-        </div>
-      </div>
-  
-      <!-- Industry-Wise Services -->
-      <div class="row mt-5">
-        <div class="col-lg-12">
-          <h3 class="mb-4 text-primary text-center">
-            <i class="fas fa-industry me-2"></i>{{ 'mobile_app_development.industry_wise_services.title' | translate }}
-          </h3>
-        </div>
-      </div>
-      <div class="row g-4">
-        <div
-          *ngFor="let industry of ['healthcare', 'manufacturing', 'education', 'fintech', 'entertainment', 'ecommerce']; let i = index"
-          class="col-md-4 wow fadeInUp"
-          [attr.data-wow-delay]="(0.2 + i * 0.1) + 's'"
-        >
-          <div class="card h-100 shadow-sm border-0">
-            <div class="card-body text-center">
-              <div class="icon-container mb-3">
-                <i
-                  class="fas text-primary fs-3"
-                  [ngClass]="{
-                    'fa-stethoscope': industry === 'healthcare',
-                    'fa-industry': industry === 'manufacturing',
-                    'fa-graduation-cap': industry === 'education',
-                    'fa-credit-card': industry === 'fintech',
-                    'fa-film': industry === 'entertainment',
-                    'fa-shopping-cart': industry === 'ecommerce'
-                  }"
-                ></i>
-              </div>
-              <h5 class="card-title text-primary">
-                {{ ('mobile_app_development.industry_wise_services.' + industry) | translate }}
-              </h5>
-            </div>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Dedicated Developers Section -->
-      <div class="row mt-5">
-        <div class="col-lg-12 text-center">
-          <h3 class="mb-3 text-primary">
-            <i class="fas fa-users-cog me-2"></i>{{ 'mobile_app_development.hire_dedicated_developers.title' | translate }}
-          </h3>
-        </div>
-      </div>
-      <div class="row g-3 mt-4">
-        <div
-          *ngFor="let devService of ['frontend', 'backend', 'fullstack', 'mean_stack', 'mern_stack', 'nodejs', 'reactjs']; let i = index"
-          class="col-md-4 col-lg-3 wow fadeInUp"
-          [attr.data-wow-delay]="(0.2 + i * 0.1) + 's'"
-        >
-          <div class="d-flex align-items-center p-3 shadow-sm bg-white rounded h-100">
-            <div class="icon-container text-primary me-3">
-              <i
-                class="fas fs-4"
-                [ngClass]="{
-                  'fa-code': devService === 'frontend',
-                  'fa-database': devService === 'backend',
-                  'fa-layer-group': devService === 'fullstack',
-                  'fa-project-diagram': devService === 'mean_stack',
-                  'fa-sitemap': devService === 'mern_stack',
-                  'fa-node-js': devService === 'nodejs',
-                  'fa-react': devService === 'reactjs'
-                }"
-              ></i>
-            </div>
-            <div>
-              <h6 class="mb-0 text-primary">
-                {{ ('mobile_app_development.hire_dedicated_developers.' + devService) | translate }}
-              </h6>
-            </div>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Unleash App Potential Section -->
-      <div class="row mt-5 text-center">
-        <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.4s">
-          <h2 class="text-primary">
-            <i class="fas fa-magic me-2"></i>{{ 'mobile_app_development.unleash_app_potential.title' | translate }}
-          </h2>
-          <p class="text-muted mb-4">{{ 'mobile_app_development.unleash_app_potential.content' | translate }}</p>
-          <a class="btn btn-primary rounded-pill px-4 py-2 shadow-lg" href="#">
-            {{ 'mobile_app_development.unleash_app_potential.button' | translate }}
-          </a>
         </div>
       </div>
     </div>
+
+    <!-- Why Choose Us Section -->
+    <div class="mt-5">
+      <h2 class="text-primary mb-4">{{ 'mobile_app_development.why_choose_us.title' | translate }}</h2>
+      <ul class="list-unstyled">
+        <li *ngFor="let point of 'mobile_app_development.why_choose_us.points' | translate" class="mb-2">
+          <i class="fas fa-check-circle text-success me-2"></i>{{ point }}
+        </li>
+      </ul>
+    </div>
+
+    <!-- Industries We Serve Section -->
+    <div class="mt-5">
+      <h2 class="text-primary mb-4">{{ 'mobile_app_development.industries.title' | translate }}</h2>
+      <div class="row">
+        <div *ngFor="let industry of 'mobile_app_development.industries.list' | translate" class="col-md-4 mb-3">
+          <div class="border rounded p-3 bg-white shadow-sm text-center">
+            <i class="fas fa-industry text-secondary me-2"></i>{{ industry }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action Section -->
+    <div class="mt-5 text-center">
+      <h3 class="text-primary">{{ 'mobile_app_development.cta' | translate }}</h3>
+      <p class="lead text-muted">{{ 'mobile_app_development.contact' | translate }}</p>
+      <a href="/contact" class="btn btn-primary btn-lg mt-3">
+        <i class="fas fa-envelope me-2"></i> Contact Us
+      </a>
+    </div>
   </div>
+</div>
