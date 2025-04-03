@@ -63,7 +63,9 @@
   "CONTACT_HOURS": "Business Hours",
   "CONTACT_TIME": "Sunday - Thursday: 8 a.m. to 5 p.m",
   "CONTACT_DAY": "Friday & Saturday : Closed",
-  "CONTACT_SOCIALMEDIA": "Social Media accounts"
+  "CONTACT_SOCIALMEDIA": "Social Media accounts",
+  "CONTACT_DETAILS" : "Our Contact details",
+  "SALES_INQURY":"For Sales Inquiries"
 },
 
  "FAQ": {
@@ -153,6 +155,7 @@
     "GET_IN_TOUCH": "Get In Touch",
     "ADDRESS": "7576, Sulay, Al-Riyadh, Kingdom of Saudi Arabia",
     "PHONE": "+966 53 140 9624",
+    "LANDLINE": "+966 11 453 0073",
     "EMAIL": "info@sharpinnvotech.com",
     "sales":"sales@sharpinnvotech.com",
     "POPULAR_LINKS": "Popular Links",

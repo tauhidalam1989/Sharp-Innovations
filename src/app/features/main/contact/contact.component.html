@@ -147,36 +147,55 @@
                <p class="flex items-center gap-3 text-base" style="text-align: center;">
                 <i class="fa fa-map-marker-alt me-3"></i> {{ 'FOOTER.ADDRESS' | translate }}
               </p>
-   <div class="">
+   <div class="container">
       <div class="container">
          <div class="row">
              <div class="col-md-6 p-3 border-end border-dark text-center">
-                 <p class="text-base">Our Contact details</p>
-                 <ul class="contact-list">
-                  <li><i class="fa fa-phone-alt"></i> {{ 'FOOTER.PHONE' | translate }}</li>
-                  <li><i class="fa fa-envelope "></i> {{ 'FOOTER.EMAIL' | translate }}</li>
+                 <p class="text-base">{{ 'CONTACT-FORM.CONTACT_DETAILS' | translate }}</p>
+                 <ul class="contact-list" style="direction: ltr;">
+                  <li>
+                     <i class="fa fa-phone-alt"></i> 
+                     <a href="tel:+966598250829">{{'FOOTER.PHONE' | translate}}</a>
+                   </li>
+                   <li>
+                     <i class="fas fa-tty"></i>
+                     <a href="tel:+966114530073">{{ 'FOOTER.LANDLINE' | translate}}</a>
+                   </li>
+                   <li>
+                     <i class="fa fa-envelope"></i>
+                     <a href="mailto:info@sharpinnvotech.com">{{ 'FOOTER.EMAIL' | translate}}</a>
+                   </li>
                  </ul>                
              </div>
                <div class="col-md-6 p-3 border-dark text-center">
-                  <p class="text-base">For Sales Inquiries</p>
-                  <ul class="contact-list">
-                   <li><i class="fa fa-phone-alt"></i> {{ 'FOOTER.PHONE' | translate }}</li>
-                   <li><i class="fa fa-envelope"></i> {{ 'FOOTER.sales' | translate }}</li>
+                  <p class="text-base">{{ 'CONTACT-FORM.SALES_INQURY' | translate }}</p>
+                  <ul class="contact-list" style="direction: ltr;">
+                     <li>
+                        <i class="fa fa-phone-alt"></i> 
+                        <a href="tel:+966598250829">{{ 'FOOTER.PHONE' | translate}}</a>
+                      </li>
+                      <li>
+                        <i class="fas fa-tty"></i>
+                        <a href="tel:+966114530073">{{ 'FOOTER.LANDLINE' | translate}}</a>
+                      </li>
+                      <li>
+                        <i class="fa fa-envelope"></i>
+                        <a href="mailto:sales@sharpinnvotech.com">{{ 'FOOTER.sales' | translate}}</a>
+                      </li>
                   </ul>                
               </div>
              
          </div>
-     </div>
-     
+     </div>     
 </div>          
    </div>
-   <div class="my-4 p-3 bg-[#F7F7F7] border border-[#D7D7D7] rounded-[0.625rem]" style="background-color:#1363c6;border-radius: 8px;">
+   <div class="my-4 p-4 bg-[#F7F7F7] border border-[#D7D7D7] rounded-[0.625rem]" style="background-color:#1363c6;border-radius: 8px;">
       <p class="text-base text-white font-medium">
           <b>{{ 'CONTACT-FORM.CONTACT_HOURS' | translate }}</b>
       </p>
       <div class="flex items-center flex-wrap gap-1 text-sm my-2">          
           <div class="contact-hours">           
-            <span class="text-white text-sm" >
+            <span class="text-white text-sm" style="margin-right: 4px;">
                <i class="fa fa-clock me-2" style="font-size: 1.5rem; color: white;"></i>  {{ 'CONTACT-FORM.CONTACT_TIME' | translate }}
             </span>
             <span class="text-main p-1 rounded-base ms-2" style="color: #1363c6; background-color: #E7EFF9; border-radius: 8px; margin-right: 4px;">
