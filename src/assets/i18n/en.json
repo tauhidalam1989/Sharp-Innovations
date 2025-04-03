@@ -1141,17 +1141,12 @@
       "icon": "fas fa-server",
          "img":"../../../../../../assets/img/projects.png",
       "items": [
-        { "name": "Web and System Development", "icon": "fas fa-code", "path": "web-app-development" },
-        { "name": "Mobile Application", "icon": "fas fa-mobile-alt", "path": "mobile-app-development" },
-        { "name": "chatbot-development", "icon": "fas fa-comments", "path": "chatbot-development" },
-        { "name": "cloud-development", "icon": "fas fa-cloud", "path": "cloud-development" },
-        { "name": "ui-development", "icon": "fas fa-paint-brush", "path": "cloud-development" },
-        { "name": "Windows Application", "icon": "fas fa-window-maximize" },
-        { "name": "ERP Solutions", "icon": "fas fa-project-diagram" },
+        { "name": "Web Application Development", "icon": "fas fa-code", "path": "web-app-development" },
+        { "name": "Mobile Application Development", "icon": "fas fa-mobile-alt", "path": "mobile-app-development" },
+        { "name": "Windows Application Development", "icon": "fas fa-window-maximize" },
         { "name": "Application Consulting", "icon": "fas fa-chart-bar" },
         { "name": "Application Maintenance and Operation", "icon": "fas fa-headset" },
-        { "name": "Manpower Outsourcing(Application Experts)", "icon": "fas fa-user-friends" },
-        { "name": "QA & Testing Services", "icon": "fas fa-vial" }
+        { "name": "Manpower Outsourcing(Application Experts)", "icon": "fas fa-user-friends" }
       ]
     },
     {
