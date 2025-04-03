@@ -10,6 +10,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { TypingEffectComponent } from './components/typing-effect/typing-effect.component';
 import { LoaderComponent } from './components/loader/loader.component';
+import { SidebarComponent } from './layout/components/sidebar/sidebar.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { LoaderComponent } from './components/loader/loader.component';
     HeroComponent,
     TypingEffectComponent,
     LoaderComponent,
+    SidebarComponent,
   ],
   imports: [
     CommonModule,

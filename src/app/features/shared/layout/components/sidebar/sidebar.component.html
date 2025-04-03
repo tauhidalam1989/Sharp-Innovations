@@ -1,0 +1,65 @@
+<div class="sidebar" [class.open]="isOpen">
+    <button class="close-btn" (click)="closeSidebar()">×</button>
+
+    <a class="cursor-pointer lang-switch" (click)="switchLanguage()">
+        {{ currentLang === 'ar' ? 'English' : 'عربي' }}
+    </a>
+
+    <a routerLink="/home" routerLinkActive="active" class="nav-item">
+        {{ 'HOME' | translate }}
+    </a>
+
+    <a routerLink="/about" routerLinkActive="active" class="nav-item">
+        {{ 'ABOUT' | translate }}
+    </a>
+
+    <!-- Services Dropdown -->
+    <div class="nav-item">
+        <!-- Click to toggle services dropdown -->
+        <a class="cursor-pointer" (click)="toggleDropdown('isservicing')">
+            {{ 'SERVICES' | translate }}
+            <i class="fa fa-chevron-down" [ngClass]="{ 'rotate': isservicing }"></i>
+        </a>
+    
+        <!-- First Level: Service Categories -->
+        <div class="sidebar-item" *ngIf="isservicing">
+            <div *ngFor="let category of ('servicing' | translate)">
+                <!-- Category Item -->
+                <a class="cursor-pointer category-item"
+                   (click)="selectCategory(category)">
+                    <i [class]="category.icon + ' me-2'"></i> {{ category.key | translate }}
+                    <i class="fa fa-chevron-down ms-auto" [ngClass]="{ 'rotate': selectedCategory === category }"></i>
+                </a>
+    
+                <!-- Second Level: Service Items (Nested Under Category) -->
+                <div class="sub-menu" *ngIf="selectedCategory === category">
+                    <a *ngFor="let item of category.items" [routerLink]="'/services/' + item.path"
+                       class="cursor-pointer">
+                        <i [class]="item.icon + ' me-2'"></i> {{ item.name | translate }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Products Dropdown -->
+    <div class="nav-item">
+        <a class="cursor-pointer" (click)="toggleDropdown('isProduct')">
+            {{ 'PRODUCTS' | translate }}
+            <i class="fa fa-chevron-down" [ngClass]="{ 'rotate': isProduct }"></i>
+        </a>
+        <div class="sidebar-item" *ngIf="isProduct">
+            <a *ngFor="let product of ('products_service' | translate)">
+                <i [class]="product.icon + ' me-2'"></i> {{ product.key | translate }}
+            </a>
+        </div>
+    </div>
+
+    <a routerLink="/Careers" routerLinkActive="active" class="nav-item">
+        {{ 'CAREERS' | translate }}
+    </a>
+    <a routerLink="/contact" routerLinkActive="active" class="nav-item">
+        {{ 'CONTACT' | translate }}
+    </a>
+</div>

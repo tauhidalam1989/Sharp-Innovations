@@ -10,15 +10,10 @@
           <!-- <h1 class="text-white">{{ 'TITLE' | translate }}</h1> -->
            <img [height]="60" [src]="imageSrc" alt="" srcset="">
         </a>
-        <button
-        type="button"
-        class="navbar-toggler ms-auto me-0"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarCollapse"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
+        <button type="button" class="navbar-toggler ms-auto me-0" (click)="toggleSidebar.emit()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
       </div>
       <!-- Brand -->
     

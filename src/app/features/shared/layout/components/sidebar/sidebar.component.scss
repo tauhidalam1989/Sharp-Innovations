@@ -1,0 +1,97 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100vw;
+    height: 100vh;
+    background: #0A163D;
+    color: white;
+    transition: left 0.3s ease-in-out;
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 1050;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+ 
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+}
+.dropdown-menu{
+    position: absolute;
+    z-index: 1000;
+    display: block;
+    min-width: 10rem;
+    padding: .5rem 0;
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+    text-align: left;
+    list-style: none;
+  
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 10px;
+}
+.sidebar a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+    cursor: pointer;
+    
+}
+.sidebar-item{
+    a{
+        display: flex;
+      gap:20px !important;
+        align-items: center;
+        color: white;
+        padding: 15px;
+        text-decoration: none;
+        font-size: 18px;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+}
+
+.sidebar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    padding-left: 15px;
+    flex-direction: column;
+}
+
+.dropdown-menu a {
+    padding: 10px 15px;
+    display: block;
+    font-size: 16px;
+}
+
+/* Chevron Rotation */
+.fa-chevron-down {
+    transition: transform 0.3s ease;
+}
+
+.fa-chevron-down.rotate {
+    transform: rotate(180deg);
+}

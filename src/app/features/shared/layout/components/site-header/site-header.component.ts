@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, ElementRef, EventEmitter, Output } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { RoutingService } from '../../../services/routing.service';
 import { LanguageService } from '../../../services/language.service';
@@ -74,4 +74,5 @@ toggleDropdown(menu: string, state: boolean) {
       break;
   }
 }
+@Output() toggleSidebar = new EventEmitter<void>();
 }
