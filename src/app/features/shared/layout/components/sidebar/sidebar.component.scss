@@ -53,10 +53,10 @@
     border-radius: 10px;
 }
 .service-menu{
-    display: flex
-    ;
-        gap: 18px;
-        align-items: baseline;
+    display: flex;
+    gap: 18px;
+    align-items: baseline;
+    color: #fff !important; 
 }
 .sidebar a {
     display: flex;
@@ -71,9 +71,6 @@
     cursor: pointer;
     border-bottom: 2px solid rgba(255, 255, 255, 0.5); 
 }
-
-
-
 .sidebar-item{
     a{
         display: flex;
@@ -87,7 +84,6 @@
         cursor: pointer;
     }
 }
-
 .sidebar a:hover {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
@@ -139,3 +135,4 @@
       }
     }
   }
+  
