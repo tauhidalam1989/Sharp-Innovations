@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-main-layout',
@@ -11,4 +11,21 @@ export class MainLayoutComponent {
   toggleSidebar() {
     this.isSidebarOpen = !this.isSidebarOpen;
   }
+  isMobile = false;
+
+  ngOnInit() {
+    this.checkIfMobile();
+  }
+  @HostListener('window:resize')
+  onResize() {
+    this.checkIfMobile();
+  }
+
+  checkIfMobile() {
+    this.isMobile = window.innerWidth <= 768;
+    if (!this.isMobile) {
+      this.isSidebarOpen = false; // close sidebar on desktop
+    }
+  }
+
 }

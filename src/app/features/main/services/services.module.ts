@@ -31,6 +31,13 @@ import { AutomationServicesComponent } from './automation-services/automation-se
 import { CybersecurityServicesComponent } from './cybersecurity-services/cybersecurity-services.component';
 import { AiConsultingComponent } from './ai-consulting/ai-consulting.component';
 import { ApplicationConsultingComponent } from './application-consulting/application-consulting.component';
+import { ApplicationMaintenanceComponent } from './application-maintenance/application-maintenance.component';
+import { ManpowerOutsourcingComponent } from './manpower-outsourcing/manpower-outsourcing.component';
+import { ItServerAdminComponent } from './it-server-admin/it-server-admin.component';
+import { ItDatabaseAdministrationComponent } from './it-database-administration/it-database-administration.component';
+import { PmoServicesComponent } from './pmo-services/pmo-services.component';
+import { OracleAutomationComponent } from './oracle-automation/oracle-automation.component';
+import { OracleVisualBuilderComponent } from './oracle-visual-builder/oracle-visual-builder.component';
 
 
 @NgModule({
@@ -62,7 +69,14 @@ import { ApplicationConsultingComponent } from './application-consulting/applica
     AutomationServicesComponent,
     CybersecurityServicesComponent,
     AiConsultingComponent,
-    ApplicationConsultingComponent
+    ApplicationConsultingComponent,
+    ApplicationMaintenanceComponent,
+    ManpowerOutsourcingComponent,
+    ItServerAdminComponent,
+    ItDatabaseAdministrationComponent,
+    PmoServicesComponent,
+    OracleAutomationComponent,
+    OracleVisualBuilderComponent
   ],
   imports: [
     CommonModule,

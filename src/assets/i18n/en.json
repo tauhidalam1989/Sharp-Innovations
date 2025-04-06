@@ -32,7 +32,7 @@
           },
           "CONTACT-FORM": {
   "US": "Contact Us",
-  "QUERY_PROMPT": "We will be happy to share us your ideas and opinions about any of our solutions and services. Our team is always ready to answer all your inquiries at anytime",
+  "QUERY_PROMPT": "We’d love to hear your thoughts and feedback on any of our solutions and services. Our team is always here to assist you and respond to your inquiries at any time",
   "FORM_INACTIVE": "The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes.",
   "DOWNLOAD_NOW": "Download Now",
   "YOUR_NAME": "Your Name",
@@ -96,7 +96,7 @@
     "FOOTER_TEXT": ""
   },
   "SERVICE": {
-    "OUR_SERVICES": "Our Services",
+    "OUR_SERVICES": "Our Products",
     "TITLE": "Our Excellent AI Solutions for Your Business",
     "DESCRIPTION": "We provide cutting-edge AI solutions to help your business grow. Explore our services tailored to meet your needs.",
     "READ_MORE": "Read More",
@@ -153,7 +153,7 @@
     "COMPANY_NAME": "Sharp Innovations",
     "DESCRIPTION": "SIIT was established in 2023 in Riyadh, Kingdom of Saudi Arabia. We provide technical solutions and consulting in resource planning for government and private enterprises.",
     "GET_IN_TOUCH": "Get In Touch",
-    "ADDRESS": "7576, Sulay, Al-Riyadh, Kingdom of Saudi Arabia",
+    "ADDRESS": "7576, Sulay, Al-Riyadh,KSA",
     "PHONE": "+966 53 140 9624",
     "LANDLINE": "+966 11 453 0073",
     "EMAIL": "info@sharpinnvotech.com",
@@ -1148,8 +1148,8 @@
         { "name": "Mobile Application Development", "icon": "fas fa-mobile-alt", "path": "mobile-app-development" },
         { "name": "Windows Application Development", "icon": "fas fa-window-maximize" },
         { "name": "Application Consulting", "icon": "fas fa-chart-bar","path":"application-consulting" },
-        { "name": "Application Maintenance and Operation", "icon": "fas fa-headset" },
-        { "name": "Manpower Outsourcing(Application Experts)", "icon": "fas fa-user-friends" }
+        { "name": "Application Maintenance and Operation", "icon": "fas fa-headset","path": "application-maintenance" },
+        { "name": "Manpower Outsourcing(Application Experts)", "icon": "fas fa-user-friends","path":"manpower-outsourcing" }
       ]
     },
     {
@@ -1158,8 +1158,8 @@
       "img":"../../../../../../assets/img/Banner3.png",
       "items": [
         { "name": "IT Infrastructure Maintenance and Operation", "icon": "fas fa-laptop-code" },
-        { "name": "Server Administrators", "icon": "fas fa-laptop-code" },
-        { "name": "Database Administrators", "icon": "fas fa-laptop-code" }  
+        { "name": "Server Administration", "icon": "fas fa-laptop-code","path":"it-server-admin" },
+        { "name": "Database Administration", "icon": "fas fa-laptop-code","path":"it-database-administration" }  
       ]
     },
     {
@@ -1167,9 +1167,9 @@
       "icon": "fas fa-robot",
       "img":"../../../../../../assets/img/Banner3.png",
       "items": [
-        { "name": "Oracle Primavera", "icon": "fas fa-laptop-code" },
-        { "name": "Oracle Process Automation", "icon": "fas fa-laptop-code" },
-        { "name": "Oracle Visual Builder", "icon": "fas fa-laptop-code" }  
+        { "name": "Oracle Primavera", "icon": "fas fa-laptop-code","path":"pmo-services" },
+        { "name": "Oracle Process Automation", "icon": "fas fa-laptop-code","path":"oracle-automation" },
+        { "name": "Oracle Visual Builder", "icon": "fas fa-laptop-code","path":"oracle-visual-builder" }  
       ]
     }
     
@@ -3017,7 +3017,431 @@
     },
     "cta": "Transform your applications with Sharp Innovations. Whether you need strategy consulting, modernization, or continuous support, we are your trusted partner in digital excellence.",
     "contact": "📩 Contact us today to schedule a consultation and unlock the full potential of your applications."
-  }
+  },
+  "application_maintenance": {
+    "title": "Application Maintenance and Operations Services",
+    "subtitle": "Empowering Business Continuity with Scalable and Reliable Application Management",
+    "description": "At Sharp Innovations, we understand that maintaining and optimizing applications is crucial for ensuring seamless business operations. Our Application Maintenance and Operations Services are designed to enhance performance, maximize uptime, and ensure the security of your applications while reducing operational costs.",
+    "services": [
+      {
+        "title": "Proactive Application Monitoring and Management",
+        "description": [
+          "Continuous monitoring of applications to detect and resolve issues proactively.",
+          "Performance optimization to ensure seamless user experience.",
+          "Incident management and quick resolution to minimize downtime."
+        ]
+      },
+      {
+        "title": "Application Support and Troubleshooting",
+        "description": [
+          "24/7 technical support for mission-critical applications.",
+          "Root cause analysis and resolution for recurring issues.",
+          "Patch management, bug fixes, and performance tuning."
+        ]
+      },
+      {
+        "title": "Security and Compliance Management",
+        "description": [
+          "Regular security assessments and vulnerability management.",
+          "Implementation of security patches to prevent data breaches.",
+          "Compliance with industry standards and regulatory requirements."
+        ]
+      },
+      {
+        "title": "Scalability and Performance Optimization",
+        "description": [
+          "Application load balancing and capacity planning.",
+          "Performance tuning to support business growth and increasing user demands.",
+          "Optimization of database and application resources."
+        ]
+      },
+      {
+        "title": "Application Lifecycle Management",
+        "description": [
+          "Change and configuration management to align with business needs.",
+          "Application modernization to transition from legacy systems.",
+          "Seamless integration with cloud and on-premise infrastructures."
+        ]
+      },
+      {
+        "title": "Disaster Recovery and Business Continuity Support",
+        "description": [
+          "Backup and recovery solutions for critical applications.",
+          "Failover strategies to ensure business continuity.",
+          "Rapid disaster recovery plans for minimized disruption."
+        ]
+      }
+    ],
+    "why_choose_us": {
+      "title": "Why Choose Sharp Innovations?",
+      "points": [
+        " Experienced Experts: A team of certified professionals with deep domain expertise.",
+        " 24/7 Availability: Round-the-clock monitoring and support for your applications.",
+        " Cost-Effective Solutions: Optimized application operations that reduce overhead costs.",
+        " Customized Services: Tailored solutions to meet unique business requirements.",
+        " Cutting-Edge Technology: Leveraging AI-driven insights and automation for enhanced efficiency."
+      ]
+    },
+    "cta": "Ensure the stability, security, and performance of your applications with Sharp Innovations.",
+    "contact": "Contact us today to learn how we can support your business with our Application Maintenance and Operations Services."
+  },
+"manpower_outsourcing": {
+    "title": "Manpower Outsourcing for Application Services",
+    "subtitle": "Flexible, Scalable, and Skilled Resources at Your Service",
+    "description": "At Sharp Innovations, we provide comprehensive manpower outsourcing solutions for application development, application consulting, and application support services. Our flexible engagement models—offshore, onshore, dedicated resource model, and shared resource model—ensure that businesses receive tailored solutions that align with their operational needs, budget, and strategic goals.",
+    
+    "engagement_models": {
+      "title": "Engagement Models provided by Sharp Innovations:",
+      "models": [
+        "• Offshore Development: Cost-effective, global talent pool, round-the-clock productivity.",
+        "• Onshore Development: Seamless collaboration, local expertise, compliance with regional regulations.",
+        "• Dedicated Resource Model: Exclusive professionals working solely on your project.",
+        "• Shared Resource Model: Cost-efficient model with shared resources across multiple projects."
+      ]
+    },
+
+    "application_development": {
+      "title": "Application Development Outsourcing",
+      "points": [
+        "Custom application development",
+        "Web and mobile app development",
+        "Cloud-based application solutions",
+        "API development and integration",
+        "Software modernization and migration"
+      ]
+    },
+
+    "application_consulting": {
+      "title": "Application Consulting Outsourcing",
+      "points": [
+        "IT strategy and digital transformation",
+        "Enterprise architecture and technology selection",
+        "Agile and DevOps implementation",
+        "Cloud adoption and migration",
+        "Security and compliance consulting"
+      ]
+    },
+
+    "application_support": {
+      "title": "Application Support Service Outsourcing",
+      "points": [
+        "Application maintenance and monitoring",
+        "Incident management and troubleshooting",
+        "Performance optimization and scalability",
+        "Patch management and security updates",
+        "SLA-based support and 24/7 monitoring"
+      ]
+    },
+
+    "why_choose_us": {
+      "title": "Why Choose Sharp Innovations?",
+      "points": [
+        "✔ Global Talent Pool: Access to a diverse and skilled workforce.",
+        "✔ Scalability & Flexibility: Adapt to evolving business demands effortlessly.",
+        "✔ Cost Optimization: Reduce overhead while maintaining service excellence.",
+        "✔ Proven Expertise: Industry-leading professionals with deep technical knowledge.",
+        "✔ Seamless Integration: Smooth collaboration with existing teams and processes."
+      ]
+    },
+
+    "cta": "Leverage Sharp Innovations’ manpower outsourcing services to drive efficiency, enhance productivity, and achieve technology excellence.",
+    "contact": "Contact us today to discuss your requirements and find the right outsourcing model for your business!"
+  },
+  "it_server_admin": {
+    "title": "IT Server Administration Services By Sharp Innovations",
+    "subtitle": "Empowering Your Business with Reliable Server Solutions",
+    "description": "Sharp Innovations provides comprehensive IT Server Administration Services, ensuring your servers operate efficiently, securely, and with minimal downtime.",
+    "services": [
+      {
+        "title": "Server Installation & Configuration",
+        "description": [
+          "Deployment of on-premises and cloud-based servers (Windows, Linux, UNIX, etc.)",
+          "Optimized server setup for performance and security",
+          "Custom configurations tailored to business needs"
+        ]
+      },
+      {
+        "title": "Server Monitoring & Maintenance",
+        "description": [
+          "24/7 proactive server monitoring and health checks",
+          "Regular system updates, patches, and performance tuning",
+          "Preventative maintenance to reduce downtime and enhance reliability"
+        ]
+      },
+      {
+        "title": "Security & Compliance Management",
+        "description": [
+          "Implementation of firewalls, encryption, and access controls",
+          "Security audits and threat mitigation",
+          "Compliance with GDPR, HIPAA, ISO 27001, and NIST"
+        ]
+      },
+      {
+        "title": "Backup & Disaster Recovery Solutions",
+        "description": [
+          "Automated backup solutions",
+          "Disaster recovery planning and implementation",
+          "Rapid data restoration in case of failure"
+        ]
+      },
+      {
+        "title": "Virtualization & Cloud Server Management",
+        "description": [
+          "VM setup and management (VMware, Hyper-V, etc.)",
+          "Cloud server management (AWS, Azure, Google Cloud)",
+          "Load balancing and scalability optimization"
+        ]
+      },
+      {
+        "title": "Performance Optimization & Troubleshooting",
+        "description": [
+          "Server performance analysis and tuning",
+          "Root cause analysis and resolution",
+          "Log management and alerting"
+        ]
+      },
+      {
+        "title": "User & Access Management",
+        "description": [
+          "Role-based access control and identity management",
+          "Secure authentication protocols (MFA, SSO, etc.)",
+          "User provisioning and auditing"
+        ]
+      }
+    ],
+    "why_choose_us": {
+      "title": "Why Choose Sharp Innovations?",
+      "points": [
+        "✔ Experienced IT Professionals: Certified server administrators with years of expertise.",
+        "✔ Proactive & Preventive Approach: Early detection to prevent failures.",
+        "✔ Scalable & Cost-Effective Solutions: Tailored for your business growth and budget.",
+        "✔ 24/7 Support & Rapid Response: Uninterrupted business operations guaranteed."
+      ]
+    },
+    "cta": "Get Started with Sharp Innovations Today",
+    "contact": "Contact us for expert IT server administration and ensure your infrastructure's stability, security, and performance."
+  },
+  "it_database_administration": {
+    "title": "IT Database Administration Services",
+    "subtitle": "Optimize, Secure, and Manage Your Databases with Confidence",
+    "description": "At Sharp Innovations, we provide end-to-end database administration services to ensure that your business-critical data is always available, secure, and performing at its peak. Our team of experienced database administrators (DBAs) offers expertise in managing complex database environments across multiple platforms, ensuring operational efficiency and business continuity.",
+    "services": [
+      {
+        "title": "Database Design & Architecture",
+        "description": [
+          "Customized database design tailored to your business requirements.",
+          "Scalable architecture planning for future growth.",
+          "Data modeling and schema optimization.",
+          "Selection of the right database technologies (SQL, NoSQL, cloud, hybrid, on-premise)."
+        ]
+      },
+      {
+        "title": "Database Installation & Configuration",
+        "description": [
+          "Deployment of DBMS including MySQL, PostgreSQL, SQL Server, Oracle, MongoDB, and more.",
+          "Optimization of database settings for maximum performance.",
+          "Configuration of replication, clustering, and high availability."
+        ]
+      },
+      {
+        "title": "Database Performance Tuning",
+        "description": [
+          "Query optimization and indexing strategies.",
+          "Load balancing and performance monitoring.",
+          "Troubleshooting slow queries and reducing bottlenecks.",
+          "Proactive performance assessment and fine-tuning."
+        ]
+      },
+      {
+        "title": "Database Security & Compliance",
+        "description": [
+          "Implementation of industry-standard security best practices.",
+          "Role-based access control (RBAC) and privilege management.",
+          "Data encryption and masking for sensitive information.",
+          "Compliance with GDPR, HIPAA, PCI-DSS, and others."
+        ]
+      },
+      {
+        "title": "Backup & Disaster Recovery",
+        "description": [
+          "Automated and scheduled backup solutions.",
+          "Business continuity planning and disaster recovery strategies.",
+          "Failover and replication strategies for minimal downtime.",
+          "Regular backup testing and validation."
+        ]
+      },
+      {
+        "title": "Database Monitoring & Maintenance",
+        "description": [
+          "24/7 database monitoring with proactive alerting.",
+          "Patch management and version upgrades.",
+          "Storage optimization and capacity planning.",
+          "Continuous health checks and database audits."
+        ]
+      },
+      {
+        "title": "Cloud Database Management",
+        "description": [
+          "Migration of databases to AWS, Azure, Google Cloud, Oracle Cloud.",
+          "Hybrid and multi-cloud database solutions.",
+          "Cost optimization and scalability planning.",
+          "Cloud-native and serverless database administration."
+        ]
+      },
+      {
+        "title": "Data Integration & ETL Services",
+        "description": [
+          "Data extraction, transformation, and loading (ETL).",
+          "Integration with third-party applications and BI tools.",
+          "Data warehouse management and big data solutions.",
+          "Real-time data streaming and synchronization."
+        ]
+      }
+    ],
+    "why_choose_us": {
+      "title": "Why Choose Sharp Innovations?",
+      "points": [
+        "✅ Expertise Across Multiple Platforms – Experienced with relational, NoSQL, and cloud databases.",
+        "✅ 24/7 Monitoring & Support – Minimize downtime with proactive monitoring.",
+        "✅ Security & Compliance Focused – Data protection and compliance with industry standards.",
+        "✅ Customized Solutions – Tailored strategies aligned with your goals.",
+        "✅ Cost-Effective Management – Reduced costs with improved efficiency."
+      ]
+    },
+    "cta": "Get Started with Sharp Innovations Today",
+    "contact": "Contact us now to optimize and secure your databases!"
+  },
+  "pmo_services": {
+    "title": "PMO Setup & Project Management Services",
+    "subtitle": "Industry Best Practice for Project Lifecycle Optimization",
+    "description": "We help customers build and adopt healthy and industry best practices for project management, including process optimizations for the complete project lifecycle.",
+    "services": [
+      {
+        "title": "Outsourcing Planning Engineer",
+        "description": [
+          "We provide Planning Engineers/Managers on a Time & Material basis to clients in sectors like Metro Construction, Oil & Gas, Roads, and Infrastructure.",
+          "Our planners implement industry-best planning techniques and practices.",
+          "They also assist organizations in establishing effective PMO practices across departments such as Procurement, Engineering, and Commissioning."
+        ]
+      },
+      {
+        "title": "Primavera Implementation",
+        "description": [
+          "Oracle Primavera P6 EPPM supports complex, large-scale projects with high performance and reliability.",
+          "Our team has led multiple end-to-end Primavera implementations across industries like Real Estate, Refineries, Power Plants, Steel, and Telecom.",
+          "We also offer AMC services for Primavera."
+        ]
+      },
+      {
+        "title": "Unifier Implementation",
+        "description": [
+          "We help digitize project processes like Document Management, Communication (MoM, Action Items), and Cost & Contract Management using Oracle Primavera Unifier.",
+          "We have successfully implemented Unifier for various clients."
+        ]
+      },
+      {
+        "title": "Primavera & Third-Party Tool Integration",
+        "description": [
+          "We’ve successfully integrated Primavera with SAP, Oracle ERP/EBS, and Oracle Fusion Cloud.",
+          "Integration with BIM applications like Synchro and RIB iTWO is also part of our expertise."
+        ]
+      },
+      {
+        "title": "5D BIM Implementation",
+        "description": [
+          "We implement 5D BIM project solutions to help organizations adopt and manage project tracking in 5D BIM format.",
+          "Currently supporting multiple clients in transitioning to 5D BIM-based management."
+        ]
+      }
+    ]
+  },
+  "oracle_automation": {
+  "title": "Oracle Process Automation Service",
+  "subtitle": "Overview",
+  "description": "Sharp Innovations offers Oracle Process Automation (OPA) services to streamline business operations, enhance efficiency, and drive digital transformation. Our expert solutions leverage Oracle's cutting-edge automation tools to eliminate bottlenecks, reduce manual intervention, and ensure compliance with industry standards.",
+  "features": [
+    "Intelligent Workflow Automation: Automate complex workflows and integrate seamlessly with enterprise applications.",
+    "AI-Driven Process Optimization: Utilize AI and machine learning to analyze, optimize, and improve business processes.",
+    "Low-Code Development: Enable business users to design, build, and deploy automated processes with minimal coding.",
+    "Seamless Integration: Connect with existing ERP, CRM, and third-party applications for a unified automation experience.",
+    "Scalability & Flexibility: Adapt automation solutions to evolving business needs without disrupting operations.",
+    "Security & Compliance: Ensure robust security measures and compliance with regulatory requirements."
+  ],
+  "approach_title": "Our Approach",
+  "approach": [
+    "Assessment & Strategy: Understanding your business needs and identifying automation opportunities.",
+    "Design & Implementation: Developing customized workflows and automating processes using Oracle's advanced tools.",
+    "Integration & Deployment: Seamless integration with existing systems and deployment of automation solutions.",
+    "Monitoring & Optimization: Continuous monitoring, reporting, and improvement of automated workflows."
+  ],
+  "benefits_title": "Benefits of Oracle Process Automation",
+  "benefits": [
+    "Increased Productivity: Reduce manual effort and improve operational efficiency.",
+    "Cost Savings: Minimize operational costs through automated workflows and resource optimization.",
+    "Enhanced Decision-Making: Leverage real-time analytics and AI insights for data-driven decisions.",
+    "Improved Compliance: Automate regulatory processes to meet industry standards.",
+    "Better Customer Experience: Streamline customer interactions and enhance service delivery."
+  ],
+  "why_choose_us_title": "Why Choose Sharp Innovations?",
+  "why_choose_us": [
+    "Proven Expertise: Our team comprises Oracle-certified professionals with deep expertise in process automation.",
+    "Customized Solutions: Tailored automation strategies to meet unique business requirements.",
+    "End-to-End Support: Comprehensive services from consultation to implementation and ongoing maintenance.",
+    "Innovation-Driven Approach: Leveraging AI, analytics, and the latest technologies to drive transformation."
+  ],
+  "cta": "Get Started",
+  "contact": "Transform your business processes with Sharp Innovations’ Oracle Process Automation services. Contact us today to explore how automation can drive efficiency, agility, and innovation in your organization."
+},
+"oracle_visual_builder": {
+  "title": "Oracle Visual Builder Services",
+  "subtitle": "Empowering Businesses with Low-Code Development",
+  "description": "Sharp Innovations provides cutting-edge Oracle Visual Builder services to help businesses rapidly develop, integrate, and deploy web and mobile applications. As a cloud-native, low-code development platform, Oracle Visual Builder empowers organizations to streamline their application development processes with minimal coding effort while ensuring enterprise-grade security and scalability.",
+  "services": [
+    {
+      "title": "Custom Application Development",
+      "description": [
+        "Design and develop custom web and mobile applications using Oracle Visual Builder."
+      ]
+    },
+    {
+      "title": "Integration Services",
+      "description": [
+        "Seamless integration with Oracle Cloud, on-premises apps, and third-party services."
+      ]
+    },
+    {
+      "title": "Migration & Modernization",
+      "description": [
+        "Modernize legacy apps into scalable cloud-native solutions."
+      ]
+    },
+    {
+      "title": "UI/UX Enhancements",
+      "description": [
+        "Create intuitive and responsive designs for all devices."
+      ]
+    },
+    {
+      "title": "Training & Support",
+      "description": [
+        "Comprehensive training and ongoing support to maximize value."
+      ]
+    }
+  ],
+  "why_choose_us": {
+    "title": "Why Choose Sharp Innovations?",
+    "points": [
+      "Expertise in Oracle Technologies: Extensive experience in Oracle Cloud solutions.",
+      "Agile Development Approach: Efficient and flexible agile methodology.",
+      "Security & Compliance: Adherence to cybersecurity and governance standards.",
+      "End-to-End Support: From consultation to post-deployment services."
+    ]
+  },
+  "cta": "Transform your business applications with Sharp Innovations’ Oracle Visual Builder services.",
+  "contact": "Contact us today to accelerate your digital transformation journey."
+}
+
+
   }
 
 
