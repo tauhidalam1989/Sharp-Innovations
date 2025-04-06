@@ -28,6 +28,13 @@ import { AutomationServicesComponent } from './automation-services/automation-se
 import { CybersecurityServicesComponent } from './cybersecurity-services/cybersecurity-services.component';
 import { AiConsultingComponent } from './ai-consulting/ai-consulting.component';
 import { ApplicationConsultingComponent } from './application-consulting/application-consulting.component';
+import { ApplicationMaintenanceComponent } from './application-maintenance/application-maintenance.component';
+import { ManpowerOutsourcingComponent } from './manpower-outsourcing/manpower-outsourcing.component';
+import { ItServerAdminComponent } from './it-server-admin/it-server-admin.component';
+import { ItDatabaseAdministrationComponent } from './it-database-administration/it-database-administration.component';
+import { PmoServicesComponent } from './pmo-services/pmo-services.component';
+import { OracleAutomationComponent } from './oracle-automation/oracle-automation.component';
+import { OracleVisualBuilderComponent } from './oracle-visual-builder/oracle-visual-builder.component';
 
 const routes: Routes = [
   {
@@ -141,6 +148,32 @@ const routes: Routes = [
   {
     path:"application-consulting",
     component:ApplicationConsultingComponent
+  },{
+    path: "application-maintenance",
+    component:ApplicationMaintenanceComponent
+  },
+  {
+    path:"manpower-outsourcing",
+    component:ManpowerOutsourcingComponent
+  },
+  {
+    path:"it-server-admin",
+    component:ItServerAdminComponent
+  },{
+    path:"it-database-administration",
+    component: ItDatabaseAdministrationComponent
+  },
+  {
+    path:"pmo-services",
+    component:PmoServicesComponent
+  },
+  {
+    path:"oracle-automation",
+    component:OracleAutomationComponent
+  },
+  {
+    path:"oracle-visual-builder",
+    component: OracleVisualBuilderComponent
   }
  
 ];

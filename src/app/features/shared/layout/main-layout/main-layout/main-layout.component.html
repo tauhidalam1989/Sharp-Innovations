@@ -1,5 +1,5 @@
 <site-header (toggleSidebar)="toggleSidebar()"></site-header>
-<app-sidebar [isOpen]="isSidebarOpen"></app-sidebar>
+<app-sidebar *ngIf="isMobile" [isOpen]="isSidebarOpen"></app-sidebar>
 <hero></hero>
 <router-outlet></router-outlet>
 <site-footer></site-footer>
