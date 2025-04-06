@@ -1,83 +1,68 @@
-<div class="py-5">
-  <div class="content-left container">
-    <div class="heading">
-      <div class="clients">
-        <img src="../../../../assets/logo/SLogo.png" alt=""> 
-        <h2> Our Clients</h2>
+<div class="clients-page py-5">
+  <!-- Clients Section -->
+  <div class="carousel">
+    <div class="section-title ">
+      <div class="header-title text-center">
+        <img  src="../../../../assets/logo/SLogo.png" [height]="50">
+        <h2>Our Valued Clients</h2>
       </div>
-      <!-- <div class="explore">
-        <p class="explore-btn">Explore More <i class="fas fa-arrow-right"></i></p>
-       
-      </div> -->
-    </div>   
-    <p>We Cooperate with top Clients and provide access to over 100+ Countries.</p>
-  </div>
-  
-  <div class="carousel-wrapper">
-    <div class="carousel-container">
-      <div class="carousel-track scroll-left">
-        <div class="carousel-item" *ngFor="let logo of clientLogos">
-          <img [src]="logo" alt="Client Logo">
-        </div>
-        <!-- Duplicate Logos -->
-        <div class="carousel-item" *ngFor="let logo of clientLogos">
-          <img [src]="logo" alt="Client Logo">
-        </div>
-      </div>
+    
+      <p>We're proud to partner with industry leaders across multiple sectors</p>
     </div>
+    
+    <owl-carousel-o [options]="clientOptions">
+      <ng-container *ngFor="let logo of clientLogos">
+        <ng-template carouselSlide>
+          <div class="logo-item">
+            <img [src]="logo" [alt]="'Client logo'" loading="lazy">
+          </div>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
   </div>
-  <div class="content-left container">
-    <div class="heading">
-      <div class="clients">
-        <img src="../../../../assets/logo/SLogo.png" alt=""> 
-        <h2> Our Partners</h2>
-      </div>
-      <!-- <div class="explore">
-        <p class="explore-btn">Explore More <i class="fas fa-arrow-right"></i></p>
-      </div> -->
-    </div>
-    <p>we built a global tech ecosystem through years of collaboration with a vast network of vendors and partners.</p>
-  </div>
-  
- <!-- Partners Carousel (Moves Right) -->
-<div class="carousel-wrapper">
-  <div class="carousel-container">
-    <div class="carousel-track scroll-right">
-      <div class="carousel-item" *ngFor="let logo of partnerLogos">
-        <img [src]="logo" alt="Partner Logo">
-      </div>
-      <!-- Duplicate Logos to Avoid Blank Space -->
-      <div class="carousel-item" *ngFor="let logo of partnerLogos">
-        <img [src]="logo" alt="Partner Logo">
-      </div>
-    </div>
-  </div>
-</div>
-<div class="content-left container">
-  <div class="heading">
-    <div class="clients">
-      <img src="../../../../assets/logo/SLogo.png" alt=""> 
-      <h2> ISO Certification</h2>
-    </div>
-    <!-- <div class="explore">
-      <p class="explore-btn">Explore More <i class="fas fa-arrow-right"></i></p>
-    </div> -->
-  </div>
-  <p></p>
-</div>
 
-<!-- ISO Certificate Carousel (Moves Right) -->
-<div class="carousel-wrapper">
-<div class="carousel-container">
-  <div class="carousel-track scroll-right">
-    <div class="carousel-item" *ngFor="let logo of isocertificates">
-      <img [src]="logo" alt="ISO certificate images">
+  <!-- Partners Section -->
+  <div class="carousel">
+    <div class="section-title">
+      <div class="header-title">
+        <img  src="../../../../assets/logo/SLogo.png" [height]="50">
+        <h2>Strategic Partnerships</h2>
+        </div>
+   
+      <p>Collaborating with technology leaders to deliver exceptional solutions</p>
     </div>
-    <!-- Duplicate images to Avoid Blank Space -->
-    <div class="carousel-item" *ngFor="let logo of isocertificates">
-      <img [src]="logo" alt="ISO Certificate">
-    </div>
+    
+    <owl-carousel-o [options]="partnerOptions">
+      <ng-container *ngFor="let logo of partnerLogos">
+        <ng-template carouselSlide>
+          <div class="logo-item">
+            <img [src]="logo" [alt]="'Partner logo'" loading="lazy"  >
+          </div>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
   </div>
-</div>
-</div>
+
+  <!-- Certificates Section -->
+  <div class="carousel">
+    <div class="section-title">
+      <div class="header-title">
+        <img  src="../../../../assets/logo/SLogo.png" [height]="50">
+        <h2>Our Certifications</h2>
+        </div>
+
+ 
+      <p>Recognized for our commitment to quality and excellence</p>
+    </div>
+    
+    <owl-carousel-o [options]="certificateOptions">
+      <ng-container *ngFor="let cert of isocertificates">
+        <ng-template carouselSlide>
+          <div class="certificate-item">
+            <img [src]="cert" [alt]="'ISO Certificate'" loading="lazy">
+          </div>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </div>
 </div>

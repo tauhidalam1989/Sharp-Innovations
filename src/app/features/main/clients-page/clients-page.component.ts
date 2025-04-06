@@ -1,22 +1,11 @@
-import { Component, OnDestroy } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-clients-page',
   templateUrl: './clients-page.component.html',
-  styleUrls: ['./clients-page.component.scss'],
-
+  styleUrls: ['./clients-page.component.scss']
 })
-export class ClientsPageComponent implements OnDestroy {
-  animationStateClients = 'start';  // For clients (moves left)
-  animationStatePartners = 'start'; // For partners (moves right)
-  private intervalIdClients: any;
-  private intervalIdPartners: any;
-
-  constructor() {
-    this.startAutoSlideClients();
-    this.startAutoSlidePartners();
-  }
+export class ClientsPageComponent {
   clientLogos: string[] = [
     'assets/clients/2.jpg',
     'assets/clients/3.png',
@@ -31,6 +20,7 @@ export class ClientsPageComponent implements OnDestroy {
     'assets/clients/12.jpeg',
     'assets/clients/13.png',
   ];
+
   partnerLogos: string[] = [
     'assets/partner/Cisco.png',
     'assets/partner/Dell.png',
@@ -38,14 +28,8 @@ export class ClientsPageComponent implements OnDestroy {
     'assets/partner/odoo_logo.png',
     'assets/partner/T.png',
     'assets/partner/O.png',
-    'assets/partner/Cisco.png',
-    'assets/partner/Dell.png',
-    'assets/partner/HP.svg',
-    'assets/partner/odoo_logo.png',
-    'assets/partner/T.png',
-    'assets/partner/O.png',
-    
   ];
+
   isocertificates: string[] = [
     'assets/isocert/UAF_Americo-ISO_9001-0001.jpg',
     'assets/isocert/UAF_Americo-ISO_9001-0002.jpg',
@@ -54,27 +38,55 @@ export class ClientsPageComponent implements OnDestroy {
     'assets/isocert/UAF_Americo-ISO_9001-0005.jpg',
     'assets/isocert/UAF_Americo-ISO_9001-0006.jpg',
     'assets/isocert/UAF_Americo-ISO_9001-0007.jpg',
-    'assets/isocert/UAF_Americo-ISO_9001-0008.jpg',   
+    'assets/isocert/UAF_Americo-ISO_9001-0008.jpg',
   ];
-
-  ngOnDestroy() {
-    if (this.intervalIdClients) {
-      clearInterval(this.intervalIdClients);
+  clientOptions = {
+    items: 4,
+    dots: true,
+    nav: false,
+    loop: true,
+    margin: 20,
+    autoplay: true,
+    touchDrag: true,
+    autoplayTimeout: 2000,
+    responsive: {
+      0: { items: 2 },
+      600: { items: 3 },
+      1000: { items: 4 }
     }
-    if (this.intervalIdPartners) {
-      clearInterval(this.intervalIdPartners);
-    }
-  }
+  };
 
-  private startAutoSlideClients() {
-    this.intervalIdClients = setInterval(() => {
-      this.animationStateClients = this.animationStateClients === 'start' ? 'end' : 'start';
-    }, 1); // Changed from 1000000ms to 3000ms (3 seconds)
-  }
-  
-  private startAutoSlidePartners() {
-    this.intervalIdPartners = setInterval(() => {
-      this.animationStatePartners = this.animationStatePartners === 'start' ? 'end' : 'start';
-    }, 1); // Changed from 1000000ms to 3000ms (3 seconds)
-  }
+  // Carousel options for partners
+  partnerOptions = {
+    items: 4,
+    dots: true,
+    nav: false,
+    loop: true,
+    margin: 20,
+    autoplay: true,
+    touchDrag: true,
+    autoplayTimeout: 3000,
+    responsive: {
+      0: { items: 2 },
+      600: { items: 3 },
+      1000: { items: 4 }
+    }
+  };
+
+  // Carousel options for certificates
+  certificateOptions = {
+    items: 4,
+    dots: true,
+    nav: false,
+    loop: true,
+    margin: 20,
+    touchDrag: true,
+    autoplay: true,
+    autoplayTimeout: 4000,
+    responsive: {
+      0: { items: 2 },
+      600: { items: 3 },
+      1000: { items: 4 }
+    }
+  };
 }

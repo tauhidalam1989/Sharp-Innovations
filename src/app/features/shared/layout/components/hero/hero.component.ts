@@ -43,9 +43,6 @@ export class HeroComponent implements OnInit {
 
     // Update hero image source based on the cleaned page title
     this.heroImageSrc = `../../../../assets/img/${cleanPageTitle}.png`;
-console.log(this.heroImageSrc,'hero');
-
-    // Generate breadcrumbs
     let accumulatedUrl = '';
     this.breadcrumbs = urlSegments.map((segment) => {
       accumulatedUrl += `/${segment}`;
