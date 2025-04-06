@@ -7,7 +7,8 @@
   url("https://db.onlinewebfonts.com/t/d78f5d2c76185fa07aaf8dd729eef33e.ttf")format("truetype"),
   url("https://db.onlinewebfonts.com/t/d78f5d2c76185fa07aaf8dd729eef33e.svg#DIN Next LT Arabic Light")format("svg");
 }
-
+@import "ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+@import "ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
 body.rtl {
   font-family: "DIN Next LT Arabic Light";
   direction: rtl;

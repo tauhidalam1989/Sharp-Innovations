@@ -29,7 +29,7 @@ import { SidebarComponent } from './layout/components/sidebar/sidebar.component'
     TranslateModule,
     CarouselModule
   ],
-  exports:[SiteFooterComponent,TranslateModule,TypingEffectComponent,LoaderComponent],
+  exports:[SiteFooterComponent,TranslateModule,TypingEffectComponent,LoaderComponent,CarouselModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA],
 })
 export class SharedModule { }

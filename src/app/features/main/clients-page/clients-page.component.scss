@@ -1,195 +1,262 @@
-.page-container {
-  width: 100%;
+/* Main section styling */
+.clients-page {
+ // padding: 60px 0;
+  background-color: #f9f9f9;
 }
-@media (max-width: 767.98px) {
-  .heading[_ngcontent-cjl-c13] p[_ngcontent-cjl-c13] {
-    --tw-text-opacity: 1;
-    color: #7f7f7f !important;
-    text-align: start;
-     font-size: unset !important; 
-    font-weight: 600 !important;
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  .header-title{
+    display: flex;
+        gap: 20px;
+        justify-content: center;
+  }
+
+  
+  h2 {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+  
   }
   
-}
-
-/* 🔹 Heading Styles */
-.heading {
-  display: flex;
-justify-content: space-between;
-  align-items: center;
-
-.clients{
-  display: flex;
-gap: 10px;
-    align-items: center;
-}
-
   p {
-    --tw-text-opacity: 1;
-    color: #7f7f7f !important;
-    text-align: start;
-    font-size: 1.25rem !important;
-    font-weight: 600 !important;
-    @media (max-width: 767.98px) {
-      p{
-        font-size: unset !important;
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+/* Carousel container */
+.carousel-container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 15px;
+}
+
+/* Logo item styling */
+.logo-item {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+cursor: pointer;
+  padding: 22px;
+  padding: 15px 25px;
+  margin: 0 10px;
+ // background: white;
+ height: 160px;
+ width: 100%;
+ max-width: 300px !important;
+ border: 1.5px solid #1363c6 !important;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+
+  img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+   // filter: grayscale(100%);
+   // opacity: 0.7;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+     transform: translateX(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
+
+    img {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+  }
+}
+
+/* Certificate item styling */
+.certificate-item {
+  @extend .logo-item;
+  height: 180px;
+  padding: 20px;
+  
+  img {
+    filter: none;
+    opacity: 1;
+    border: 1px solid #eee;
+  }
+}
+
+/* Custom navigation arrows */
+::ng-deep .owl-carousel {
+  position: relative;
+  
+  .owl-nav {
+    margin-top: 0;
+    
+    button.owl-prev,
+    button.owl-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      border-radius: 50% !important;
+      background: rgba(63, 81, 181, 0.8) !important;
+      color: white !important;
+      font-size: 20px !important;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background: rgba(63, 81, 181, 1) !important;
+        transform: translateY(-50%) scale(1.1);
+      }
+      
+      span {
+        display: block;
+        line-height: 1;
+        margin-top: -2px;
+      }
+    }
+    
+    button.owl-prev {
+      left: -50px;
+      
+      @media (max-width: 768px) {
+        left: -20px;
+      }
+    }
+    
+    button.owl-next {
+      right: -50px;
+      
+      @media (max-width: 768px) {
+        right: -20px;
+      }
+    }
+    
+    &.disabled {
+      display: none;
+    }
+  }
+  
+  .owl-dots {
+    margin-top: 30px !important;
+    
+    .owl-dot {
+      span {
+        width: 12px !important;
+        height: 12px !important;
+        margin: 5px 6px !important;
+        background: #ddd !important;
+        transition: all 0.3s ease;
+      }
+      
+      &.active span {
+        background: #3f51b5 !important;
+        transform: scale(1.2);
+      }
+      
+      &:hover span {
+        background: #bbb !important;
       }
     }
   }
+}
 
-  img {
-    height: 50px;
-    width: auto;
+/* Responsive adjustments */
+@media (max-width: 1199px) {
+  .section-title h2 {
+    font-size: 2.2rem;
+  }
+  
+  .logo-item {
+    height: 100px;
+    padding: 10px 20px;
+  }
+  
+  .certificate-item {
+    height: 160px;
   }
 }
 
-/* 🔹 Content Section */
-.content-left {
-  padding-top: 40px;
-  @media (max-width: 767.98px) {
+@media (max-width: 767px) {
+  .clients-page {
+    padding: 40px 0;
+  }
+  
+  .section-title {
+    margin-bottom: 30px;
+    
     h2 {
+      font-size: 1.8rem;
+    }
+    
+    p {
+      font-size: 1rem;
+    }
+  }
+  
+  .logo-item {
+    height: 128px;
+    width: 100%;
+    max-width: 300px !important;
+    padding: 8px 15px;
+    margin: 0 5px;
+  }
+  
+  .certificate-item {
+    height: 140px;
+  }
+  
+  ::ng-deep .owl-carousel .owl-nav {
+    button.owl-prev,
+    button.owl-next {
+      width: 30px;
+      height: 30px;
       font-size: 16px !important;
     }
   }
-  h2 {
-    font-size: 32px;
-    color: #1a1a1a;
-    margin-bottom: 20px;
+}
 
+/* Animation for autoplay items */
+@keyframes fadeIn {
+  from { opacity: 0.5; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+::ng-deep .owl-item {
+  animation: fadeIn 0.5s ease;
+}
+
+/* Loading state */
+.carousel-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
   
-
-  }
-
-  p {
-    color: #666;
-    line-height: 1.5;
-  }
-}
-
-/* 🔹 Carousel Wrapper */
-.carousel-wrapper {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  gap: 10px;
-  overflow: hidden;
-}
-
-/* 🔹 Carousel Container */
-.carousel-container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-/* 🔹 Track (Scrollable Area) */
-.carousel-track {
-  display: inline-flex;
-  white-space: nowrap;
-}
-
-/* ✨ Clients move LEFT */
-.carousel-track.scroll-left {
-  animation: scroll-left 10s linear infinite;
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
+  .spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 4px solid #3f51b5;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
   }
 }
 
-/* ✨ Partners move RIGHT */
-.carousel-track.scroll-right {
-  animation: scroll-right 10s linear infinite;
-}
-
-@keyframes scroll-right {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-/* 🔹 Carousel Items */
-.carousel-item {
-  border-radius: 19px;
-  padding:22px;
-  @media (max-width: 767.98px) {
-    padding:9px !important;
-  }
-  @media (max-width: 767.98px) {
-    .carousel-item {
-      flex: 0 0 20% !important; /* Ensures 5 items fit in one row */
-    }
-  }
-  border: 1.5px solid #1363c6 !important;
-  margin: 0 10px;
-  border: 1px solid white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  flex: 0 0 calc(100% / 5);
-  box-sizing: border-box;
-  display: unset !important;
-}
-
-/* 🔹 Logo Images */
-.carousel-item img {
-  height: 128px;
-  width: 100%;
-  max-width: 300px !important;
-  object-fit: contain;
-}
-
-/* 🔹 Navigation Buttons (Optional) */
-.nav-button {
-  position: relative;
-  background: rgba(255, 255, 255, 0.8);
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 20px;
-  cursor: pointer;
-  z-index: 1;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-
-  &:hover {
-    background: rgba(255, 255, 255, 1);
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-  }
-}
-
-.explore-btn {
- 
-  color: #0d4fa3;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-
-  &:hover {
-    color: #0d4fa3;
-    transform: translateY(-2px);
-    text-decoration: wavy;
-  }
-
-  i {
-    font-size: 0.9rem;
-  }
-  @media (max-width: 767.98px) {
-    i{
-      font-size: unset !important;
-    }
-  }
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
