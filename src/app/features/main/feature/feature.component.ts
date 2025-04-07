@@ -12,6 +12,5 @@ constructor(public pathService:RoutingService) {}
 featuresList: string[] = [
   'FEATURESS.FEATURE_ONE',
   'FEATURESS.FEATURE_TWO',
-  'FEATURESS.FEATURE_THREE',
 ];
 }
