@@ -12,6 +12,12 @@ export class HomeComponent {
   changeSlide(index: number): void {
     this.activeSlideIndex = index;
   }
+  isLoading =true
+  ngOnInit(){
+    setTimeout(() => {
+      this.isLoading = false; // Simulating a delay
+    }, 3000);
+  }
   isHome: boolean = true;
   constructor(public pathService:RoutingService) {}
   slides = [
@@ -20,31 +26,37 @@ export class HomeComponent {
       tagline: 'HOMEs.HERO_TAGLINE',
       title: 'HOMEs.HERO_TITLE_SLIDE0',
       description: 'HOMEs.HERO_DESCRIPTION_SLIDE0',
-      image: '../../../../assets/img/Slider/slider.png'
+      image: '../../../../assets/img/Slider/slider.png',
+      path:"/services/cybersecurity-consulting"
+
     },
     {
       tagline: 'HOMEs.HERO_TAGLINE',
       title: 'HOMEs.HERO_TITLE_SLIDE1',
       description: 'HOMEs.HERO_DESCRIPTION_SLIDE1',
-      image: '../../../../assets/img/Slider/2.png'
+      image: '../../../../assets/img/Slider/2.png',
+      path:"/services/it-server-admin"
     },
     {
       tagline: 'HOMEs.HERO_TAGLINE',
       title: 'HOMEs.HERO_TITLE_SLIDE2',
       description: 'HOMEs.HERO_DESCRIPTION_SLIDE2',
-      image: '../../../../assets/img/Slider/3.png'
+      image: '../../../../assets/img/Slider/3.png',
+      path:"/services/NOC"
     },
     {
       tagline: 'HOMEs.HERO_TAGLINE',
       title: 'HOMEs.HERO_TITLE_SLIDE3',
       description: 'HOMEs.HERO_DESCRIPTION_SLIDE3',
-      image: '../../../../assets/img/Slider/ERP_Solutions_Services.png'
+      image: '../../../../assets/img/Slider/ERP_Solutions_Services.png',
+      path:"/services/web-app-development"
     },
     {
       tagline: 'HOMEs.HERO_TAGLINE',
       title: 'HOMEs.HERO_TITLE_SLIDE4',
       description: 'HOMEs.HERO_DESCRIPTION_SLIDE4',
-      image: '../../../../assets/img/Slider/Managed_IT.png'
+      image: '../../../../assets/img/Slider/Managed_IT.png',
+      path:"/services/mobile-app-development"
     },
     {
       tagline: 'HOMEs.HERO_TAGLINE',

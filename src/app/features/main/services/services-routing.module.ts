@@ -35,6 +35,7 @@ import { ItDatabaseAdministrationComponent } from './it-database-administration/
 import { PmoServicesComponent } from './pmo-services/pmo-services.component';
 import { OracleAutomationComponent } from './oracle-automation/oracle-automation.component';
 import { OracleVisualBuilderComponent } from './oracle-visual-builder/oracle-visual-builder.component';
+import { ItInfrastructureComponent } from './it-infrastructure/it-infrastructure.component';
 
 const routes: Routes = [
   {
@@ -174,6 +175,10 @@ const routes: Routes = [
   {
     path:"oracle-visual-builder",
     component: OracleVisualBuilderComponent
+  },
+  {
+    path:"it-infrastructure",
+    component:ItInfrastructureComponent
   }
  
 ];

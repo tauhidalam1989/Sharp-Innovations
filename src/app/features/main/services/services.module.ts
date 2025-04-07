@@ -38,6 +38,7 @@ import { ItDatabaseAdministrationComponent } from './it-database-administration/
 import { PmoServicesComponent } from './pmo-services/pmo-services.component';
 import { OracleAutomationComponent } from './oracle-automation/oracle-automation.component';
 import { OracleVisualBuilderComponent } from './oracle-visual-builder/oracle-visual-builder.component';
+import { ItInfrastructureComponent } from './it-infrastructure/it-infrastructure.component';
 
 
 @NgModule({
@@ -76,7 +77,8 @@ import { OracleVisualBuilderComponent } from './oracle-visual-builder/oracle-vis
     ItDatabaseAdministrationComponent,
     PmoServicesComponent,
     OracleAutomationComponent,
-    OracleVisualBuilderComponent
+    OracleVisualBuilderComponent,
+    ItInfrastructureComponent
   ],
   imports: [
     CommonModule,

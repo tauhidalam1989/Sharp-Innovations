@@ -175,7 +175,7 @@
     "SERVICE_3": "Chat Bot Development",
     "SERVICE_4": "Oracle process automation",
     "SERVICE_5": "Ai in Cyber Security",
-    "COPYRIGHT": "Sharp Innovations Company for Information Technology, All Rights Reserved.",
+    "COPYRIGHT": "2025 Sharp Innovations Company for Information Technology, All Rights Reserved.",
     "HOME": "Home",
     "COOKIES": "Cookies",
     "HELP": "Help",
@@ -1159,14 +1159,27 @@
     },
     {
       "key": "IT Infrastructure",
-      "icon": "fas fa-robot",
-      "img":"../../../../../../assets/img/Banner3.png",
+      "icon": "fas fa-network-wired",
+      "img": "../../../../../../assets/img/Banner3.png",
       "items": [
-        { "name": "IT Infrastructure Maintenance and Operation", "icon": "fas fa-laptop-code" },
-        { "name": "Server Administration", "icon": "fas fa-laptop-code","path":"it-server-admin" },
-        { "name": "Database Administration", "icon": "fas fa-laptop-code","path":"it-database-administration" }  
+        {
+          "name": "IT Infrastructure Maintenance and Operation",
+          "icon": "fas fa-tools",
+          "path": "it-infrastructure"
+        },
+        {
+          "name": "Server Administration",
+          "icon": "fas fa-server",
+          "path": "it-server-admin"
+        },
+        {
+          "name": "Database Administration",
+          "icon": "fas fa-database",
+          "path": "it-database-administration"
+        }
       ]
     },
+    
     {
       "key": "Oracle",
       "icon": "fas fa-robot",
@@ -1187,35 +1200,40 @@
     "icon": "../../../../../../assets/img/artificial intelligence.png",
     "title": "Artificial Intelligence (AI)",
     "description": "Empower your business with cutting-edge AI solutions. From predictive analytics to intelligent automation, we harness the power of AI to drive smarter decisions, boost productivity, and uncover new opportunities for growth. Leverage machine learning models, natural language processing, and data-driven insights to stay ahead of the competition. Our AI solutions are tailored to adapt and scale with your evolving business needs, ensuring you remain innovative and future-ready.",
-    "img": "../../../../../../assets/img/Banner.png"
+    "img": "../../../../../../assets/img/Banner.png",
+    "path":"/services/ai-consulting"
   },
   {
     "key": "AUTOMATION",
     "icon": "../../../../../../assets/img/Automation.png",
     "title": "Automation",
     "description": "Streamline your operations with advanced automation technology. Reduce manual tasks, minimize errors, and accelerate workflows — giving your team more time to focus on innovation and high-impact initiatives. From robotic process automation (RPA) to intelligent workflows and automated reporting, we design systems that cut costs while enhancing speed and accuracy. Let automation unlock new levels of efficiency, ensuring your business runs smoothly — even at scale.",
-    "img": "../../../../../../assets/img/projects.png"
+    "img": "../../../../../../assets/img/projects.png",
+     "path":"/services/it-infrastructure"
   },
   {
     "key": "CYBERSECURITY",
     "icon": "../../../../../../assets/img/Cybersecurity.png",
     "title": "Cybersecurity",
     "description": "Protect your digital ecosystem with next-generation cybersecurity solutions. We provide comprehensive defenses against evolving threats, ensuring your data, infrastructure, and reputation remain secure and resilient. Our proactive approach includes threat detection, vulnerability assessments, and rapid incident response to safeguard critical assets. Stay compliant with industry standards while fortifying your business from ransomware, data breaches, and emerging cyber risks.",
-    "img": "../../../../../../assets/img/Banner3.png"
+    "img": "../../../../../../assets/img/Banner3.png",
+     "path":"/services/cybersecurity-consulting"
   },
   {
     "key": "APPLICATION",
     "icon": "../../../../../../assets/img/Application Services.png",
     "title": "Application Services",
     "description": "Unlock the full potential of your business with tailor-made applications. From development to deployment and maintenance, we craft scalable, high-performance apps designed to evolve with your business needs. Whether it’s a customer-facing mobile app, an internal management platform, or a data-driven web application — our team ensures intuitive designs, seamless integration, and robust performance to enhance user experience and drive productivity.",
-    "img": "../../../../../../assets/img/Banner2.png"
+    "img": "../../../../../../assets/img/Banner2.png",
+     "path":"/services/application-consulting"
   },
   {
     "key": "CONSULTING",
     "icon": "../../../../../../assets/img/Consulting.png",
     "title": "Consulting",
     "description": "Achieve sustainable growth with strategic consulting services. Our experts work alongside your team to navigate complex challenges, optimize processes, and align technology with your long-term business goals. We dive deep into your industry, providing actionable insights and data-backed recommendations to help you innovate faster, reduce operational bottlenecks, and scale confidently. Let us bridge the gap between technology and business strategy — ensuring you stay competitive in an ever-evolving market.",
-    "img": "../../../../../../assets/img/projects.png"
+    "img": "../../../../../../assets/img/projects.png",
+     "path":"/services/it-infrastructure"
   }
 ],
 
@@ -3444,7 +3462,75 @@
   },
   "cta": "Transform your business applications with Sharp Innovations’ Oracle Visual Builder services.",
   "contact": "Contact us today to accelerate your digital transformation journey."
+},
+"it_infrastructure": {
+  "title": "IT Infrastructure Maintenance and Operation Services",
+  "subtitle": "Ensure Optimal Performance, Security, and Reliability",
+  "description": "In today's digital landscape, maintaining a robust, secure, and high-performing IT infrastructure is crucial for business continuity and efficiency. Sharp Innovations offers comprehensive IT Infrastructure Maintenance and Operation Services designed to ensure optimal performance, security, and scalability of your IT environment.",
+  "services": [
+    {
+      "title": "Proactive Monitoring & Management",
+      "description": [
+        "24/7 infrastructure monitoring to detect and prevent potential issues",
+        "Real-time performance tracking and analytics",
+        "Automated alerts and issue resolution to minimize downtime"
+      ]
+    },
+    {
+      "title": "Network Management",
+      "description": [
+        "Configuration, optimization, and management of LAN, WAN, VPN, and wireless networks",
+        "Bandwidth management and network traffic optimization",
+        "Regular network audits and compliance assessments"
+      ]
+    },
+    {
+      "title": "Server & Storage Management",
+      "description": [
+        "Routine maintenance, patch management, and software updates",
+        "Server performance optimization and capacity planning",
+        "Data backup, disaster recovery, and business continuity solutions"
+      ]
+    },
+    {
+      "title": "Cloud & Virtualization Services",
+      "description": [
+        "Cloud infrastructure management (AWS, Azure, Google Cloud)",
+        "Virtual machine deployment and management",
+        "Hybrid cloud integration and optimization"
+      ]
+    },
+    {
+      "title": "Help Desk & Technical Support",
+      "description": [
+        "24/7 IT support services with multi-tier escalation",
+        "Remote and onsite troubleshooting",
+        "End-user training and IT best practices guidance"
+      ]
+    },
+    {
+      "title": "IT Asset & Lifecycle Management",
+      "description": [
+        "Asset tracking and inventory management",
+        "Hardware and software lifecycle management",
+        "Vendor and license management"
+      ]
+    }
+  ],
+  "why_choose_us": {
+    "title": "Why Choose Sharp Innovations?",
+    "points": [
+      "Experienced IT Professionals: Certified experts in infrastructure management.",
+      "Cutting-Edge Technology: Leverage the latest advancements in IT operations.",
+      "Cost-Effective Solutions: Reduce operational costs while maximizing efficiency.",
+      "Security First Approach: Proactive security measures to safeguard your business.",
+      "Scalable & Customizable Services: Tailored solutions that grow with your business needs."
+    ]
+  },
+  "cta": "Get in Touch",
+  "contact": "Contact us today to discuss your IT infrastructure needs and discover how we can enhance the performance, security, and reliability of your business operations."
 }
+
 
 
   }

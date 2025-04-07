@@ -10,6 +10,7 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class SiteFooterComponent {
   imageSrc: string = 'assets/img/d1.png';
+  currentYear: number | any;
 
   scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -19,8 +20,10 @@ export class SiteFooterComponent {
       private translate: TranslateService,
       private cdRef: ChangeDetectorRef,
       private router: Router
+
     ) {}
     ngOnInit() {
+      this.currentYear=new Date().getFullYear() ;
       // Function to update image based on language
       const updateImage = () => {
         this.imageSrc = this.translate.currentLang === 'en'
