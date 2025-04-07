@@ -20,37 +20,37 @@ export class HomeComponent {
       tagline: 'HOMEs.HERO_TAGLINE',
       title: 'HOMEs.HERO_TITLE_SLIDE0',
       description: 'HOMEs.HERO_DESCRIPTION_SLIDE0',
-      image: '../../../../assets/img/Banner.png'
+      image: '../../../../assets/img/Slider/slider.png'
     },
     {
       tagline: 'HOMEs.HERO_TAGLINE',
       title: 'HOMEs.HERO_TITLE_SLIDE1',
       description: 'HOMEs.HERO_DESCRIPTION_SLIDE1',
-      image: '../../../../assets/img/Banner.png'
+      image: '../../../../assets/img/Slider/2.png'
     },
     {
       tagline: 'HOMEs.HERO_TAGLINE',
       title: 'HOMEs.HERO_TITLE_SLIDE2',
       description: 'HOMEs.HERO_DESCRIPTION_SLIDE2',
-      image: '../../../../assets/img/Banner2.png'
+      image: '../../../../assets/img/Slider/3.png'
     },
     {
       tagline: 'HOMEs.HERO_TAGLINE',
       title: 'HOMEs.HERO_TITLE_SLIDE3',
       description: 'HOMEs.HERO_DESCRIPTION_SLIDE3',
-      image: '../../../../assets/img/Banner3.png'
+      image: '../../../../assets/img/Slider/ERP_Solutions_Services.png'
     },
     {
       tagline: 'HOMEs.HERO_TAGLINE',
       title: 'HOMEs.HERO_TITLE_SLIDE4',
       description: 'HOMEs.HERO_DESCRIPTION_SLIDE4',
-      image: '../../../../assets/img/Banner.png'
+      image: '../../../../assets/img/Slider/Managed_IT.png'
     },
     {
       tagline: 'HOMEs.HERO_TAGLINE',
       title: 'HOMEs.HERO_TITLE_SLIDE5',
       description: 'HOMEs.HERO_DESCRIPTION_SLIDE5',
-      image: '../../../../assets/img/Banner.png'
+      image: '../../../../assets/img/Slider/Mobile_App_Development.png'
     }
   ]
 
