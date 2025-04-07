@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-clients-page',
@@ -6,6 +8,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./clients-page.component.scss']
 })
 export class ClientsPageComponent {
+  @ViewChild('imageModal') imageModal: any;
+  selectedImage: '' | any;
+  constructor(private modalService: BsModalService) {}
+  modalRef?: BsModalRef;
+  openModal(imageUrl: string) {
+    this.selectedImage = imageUrl;
+    this.modalRef = this.modalService.show(this.imageModal, {
+      id: 1,
+      class: "modal-lg modal-dialog-centered",
+      backdrop: "static",
+      keyboard: false,
+    });
+    
+  }
+
+  closeModal() {
+    this.modalRef?.hide();
+  }
   clientLogos: string[] = [
     'assets/clients/2.jpg',
     'assets/clients/3.png',

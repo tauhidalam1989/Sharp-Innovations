@@ -11,6 +11,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { TypingEffectComponent } from './components/typing-effect/typing-effect.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { SidebarComponent } from './layout/components/sidebar/sidebar.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 @NgModule({
@@ -27,9 +28,10 @@ import { SidebarComponent } from './layout/components/sidebar/sidebar.component'
     CommonModule,
     RouterModule,
     TranslateModule,
-    CarouselModule
+    CarouselModule,
+    ModalModule.forRoot(),
   ],
-  exports:[SiteFooterComponent,TranslateModule,TypingEffectComponent,LoaderComponent,CarouselModule],
+  exports:[SiteFooterComponent,TranslateModule,TypingEffectComponent,LoaderComponent,CarouselModule,ModalModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA],
 })
 export class SharedModule { }
