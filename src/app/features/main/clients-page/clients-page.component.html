@@ -13,7 +13,7 @@
     <owl-carousel-o [options]="clientOptions">
       <ng-container *ngFor="let logo of clientLogos">
         <ng-template carouselSlide>
-          <div class="logo-item">
+          <div class="logo-item" (click)="openModal(logo)">
             <img [src]="logo" [alt]="'Client logo'" loading="lazy">
           </div>
         </ng-template>
@@ -35,7 +35,7 @@
     <owl-carousel-o [options]="partnerOptions">
       <ng-container *ngFor="let logo of partnerLogos">
         <ng-template carouselSlide>
-          <div class="logo-item">
+          <div class="logo-item" (click)="openModal(logo)">
             <img [src]="logo" [alt]="'Partner logo'" loading="lazy"  >
           </div>
         </ng-template>
@@ -58,7 +58,7 @@
     <owl-carousel-o [options]="certificateOptions">
       <ng-container *ngFor="let cert of isocertificates">
         <ng-template carouselSlide>
-          <div class="certificate-item">
+          <div class="certificate-item" (click)="openModal(cert)">
             <img [src]="cert" [alt]="'ISO Certificate'" loading="lazy">
           </div>
         </ng-template>
@@ -66,3 +66,15 @@
     </owl-carousel-o>
   </div>
 </div>
+<!-- Add this modal template at the end of your component -->
+<ng-template #imageModal let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title">Image Preview</h5>
+    <button type="button" class="btn-close" (click)="closeModal()"></button>
+  </div>
+  <div class="modal-body text-center">
+    <img [src]="selectedImage" class="img-fluid" alt="Enlarged view">
+  </div>
+</ng-template>
+
+<!-- Modified logo items section -->
