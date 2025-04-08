@@ -29,10 +29,10 @@
               "src/favicon.ico",
               "src/assets",
               {
-                "glob": "**/*",
-                "input": "src/old",
-                "output": "/"
-              }
+    "glob": "**/*",
+    "input": "src/old",
+    "output": "old"
+  }
             ],
             "styles": [
             //  "node_modules/bootstrap/dist/css/bootstrap.min.css",
