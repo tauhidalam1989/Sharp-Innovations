@@ -1119,7 +1119,7 @@
         { "name": "Cybersecurity Consulting", "icon": "fas fa-user-secret", "path":"cybersecurity-consulting" },
         { "name": "Cybersecurity Implementation", "icon": "fas fa-cogs","path":"cybersecurity-implementation" },
        
-        { "name": "Cyber Security Manpower Outsourcing", "icon": "fas fa-users-cog","path":"cyber-security-manpower-outsourcing" },
+        { "name": "Cyber Manpower Outsourcing", "icon": "fas fa-users-cog","path":"cyber-security-manpower-outsourcing" },
      { "name": "Cyber Security Training", "icon": "fas fa-chalkboard-teacher","path":"cyber-security-training" },
         { "name": "Cybersecurity GRC Consulting", "icon": "fas fa-user-shield","path":"cybersecurity-grc-services.component" },
       

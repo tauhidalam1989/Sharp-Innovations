@@ -43,7 +43,7 @@
     
                 <!-- Second Level: Service Items (Nested Under Category) -->
                 <div class="sub-menu"  *ngIf="selectedCategory === category">
-                    <a style="display: flex;justify-content: space-between; gap: 10px; border-bottom:none" (click)="closeSidebar()" *ngFor="let item of category.items" [routerLink]="'/services/' + item.path"
+                    <a style="display: flex;justify-content: space-between; gap: 10px; border-bottom:none;font-size: 16px;" (click)="closeSidebar()" *ngFor="let item of category.items" [routerLink]="'/services/' + item.path"
                        class="cursor-pointer" >
                         <i [class]="item.icon + ' me-2'"></i> {{ item.name | translate }}
                     </a>
