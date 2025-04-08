@@ -1056,7 +1056,17 @@
     {
       "key": "AI Solutions",
       "items": [
-        { "name": "Potholes Detection", "icon": "fas fa-calculator" }
+        
+          { "name": "Potholes Detection", "icon": "fas fa-road" },
+          { "name": "Vehicle Traffic Detection", "icon": "fas fa-traffic-light" },
+          { "name": "Garbage detection", "icon": "fas fa-trash-alt" },
+          { "name": "Illegal Parking Monitoring", "icon": "fas fa-parking" },
+          { "name": "Vehicle collision detection", "icon": "fas fa-car-crash" }
+        
+        
+        
+         
+
       ]
     },
     {
