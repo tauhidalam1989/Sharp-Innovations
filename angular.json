@@ -31,7 +31,7 @@
               {
     "glob": "**/*",
     "input": "src/old",
-    "output": "old"
+    "output": ""
   }
             ],
             "styles": [
@@ -104,7 +104,7 @@
               {
                 "glob": "**/*",
                 "input": "src/old",
-                "output": "/"
+                "output": ""
               }
             ],
             "styles": [
