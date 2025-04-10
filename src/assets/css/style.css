@@ -157,15 +157,7 @@ h6,
 
 
 /*** Section Title ***/
-.section-title::before {
-    position: absolute;
-    content: "";
-    width: 45px;
-    height: 4px;
-    bottom: 0;
-    left: 0;
-    background: var(--dark);
-}
+
 
 .section-title::after {
     position: absolute;

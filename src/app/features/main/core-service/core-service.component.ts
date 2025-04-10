@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -18,4 +18,17 @@ i: any;
     // Set default selected service
    
   }
+  @ViewChild('detailSection') detailSection!: ElementRef;
+
+  selectService(service: any) {
+    this.selectedService = service;
+  
+    if (window.innerWidth <= 768) {
+      setTimeout(() => {
+        this.detailSection?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  }
+  
+  
 }
