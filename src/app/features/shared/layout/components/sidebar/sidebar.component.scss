@@ -36,10 +36,10 @@
     border: none;
     color: white;
 }
-.dropdown-menu{
+.dropdown-menu {
     position: absolute;
     z-index: 1000;
-    display: block;
+    display: none; /* Default to hidden */
     min-width: 10rem;
     padding: .5rem 0;
     margin: 0;
@@ -47,7 +47,6 @@
     color: #555;
     text-align: left;
     list-style: none;
-  
     background-clip: padding-box;
     border: 1px solid rgba(0, 0, 0, .15);
     border-radius: 10px;

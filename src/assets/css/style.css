@@ -135,7 +135,7 @@ h6,
         transition: .5s;
     }
 
-    .navbar .nav-item:hover .dropdown-menu {
+    .navbar .nav-item .dropdown-menu.show {
         top: 100%;
         visibility: visible;
         transition: .5s;
