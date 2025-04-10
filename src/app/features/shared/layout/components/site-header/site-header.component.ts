@@ -55,13 +55,12 @@ selectedproduct: any = null;
      
   }
 
-
 isIotHovered = false;
 isProductsHovered = false;
 isservicing=false
 isProduct=false
-toggleDropdown(menu: string, state: boolean) {
-  
+toggleDropdown(menu: string, state: boolean) {  
+  console.log(`Toggling ${menu} to ${state}`);
   switch (menu) {
     case 'isservicing':
       this.isservicing = state;
@@ -73,6 +72,11 @@ toggleDropdown(menu: string, state: boolean) {
       this.isProductsHovered = state;
       break;
   }
+}
+closeAllDropdowns(): void {  
+  this.isservicing = false;
+  this.isProduct = false;
+  this.isProductsHovered = false;  
 }
 @Output() toggleSidebar = new EventEmitter<void>();
 }
