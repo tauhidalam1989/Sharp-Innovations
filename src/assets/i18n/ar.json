@@ -3293,83 +3293,100 @@
   "cta": "تواصل معنا",
   "contact": "اتصل بنا اليوم لمناقشة احتياجات البنية التحتية لتكنولوجيا المعلومات الخاصة بك واكتشف كيف يمكننا تعزيز الأداء والأمان والموثوقية في عمليات أعمالك."
 },
-"servicing": [
-  {
-    "key": "الأمن السيبراني",
-    "icon": "fas fa-shield-alt",
-    "img": "../../../../../../assets/img/Banner.png",
-    "items": [
-      { "name": "أمن التطبيقات", "icon": "fas fa-lock", "path": "application-security" },
-      { "name": "التوعية بالأمن السيبراني", "icon": "fas fa-lightbulb", "path": "cyber-security-awareness" },
-      { "name": "استشارات الأمن السيبراني", "icon": "fas fa-user-secret", "path": "cybersecurity-consulting" },
-      { "name": "تنفيذ الأمن السيبراني", "icon": "fas fa-cogs", "path": "cybersecurity-implementation" },
-      { "name": "الاستعانة بالعمالة في الأمن السيبراني", "icon": "fas fa-users-cog", "path": "cyber-security-manpower-outsourcing" },
-      { "name": "تدريب الأمن السيبراني", "icon": "fas fa-chalkboard-teacher", "path": "cyber-security-training" },
-      { "name": "استشارات GRC في الأمن السيبراني", "icon": "fas fa-user-shield", "path": "cybersecurity-grc-services.component" },
-      { "name": "خدمات الأمان المدارة (MSSP)", "icon": "fas fa-shield-alt", "path": "mssp" },
-      { "name": "خدمات أمان البيانات", "icon": "fas fa-database", "path": "data-security-services" },
-      { "name": "أمن الشبكات", "icon": "fas fa-network-wired", "path": "network-security" }
-    ]
-  },
-  {
-    "key": "البنية التحتية للشبكة",
-    "icon": "fas fa-network-wired",
-    "img": "../../../../../../assets/img/Banner2.png",
-    "items": [
-      { "name": "مركز تشغيل الشبكة", "icon": "fas fa-server", "path": "NOC" },
-      { "name": "استشارات الشبكة", "icon": "fas fa-comments", "path": "network-consulting-services" },
-      { "name": "تنفيذ البنية التحتية للشبكة", "icon": "fas fa-tools", "path": "network-infrastructure-services" },
-      { "name": "صيانة ودعم الشبكة", "icon": "fas fa-tools", "path": "network-infrastructure-maintenance" }
-    ]
-  },
-  {
-    "key": "الذكاء الاصطناعي (AI)",
-    "icon": "fas fa-robot",
-    "img": "../../../../../../assets/img/Banner3.png",
-    "items": [
-      { "name": "استشارات واستراتيجيات الذكاء الاصطناعي", "icon": "fas fa-chalkboard-teacher", "path": "ai-consulting" },
-      { "name": "تطوير منتجات الذكاء الاصطناعي", "icon": "fas fa-cogs", "path": "ai-product-development" },
-      { "name": "خدمات التعلم الآلي (ML)", "icon": "fas fa-brain", "path": "ai-ml-services" },
-      { "name": "معالجة اللغة الطبيعية (NLP)", "icon": "fas fa-comment-dots", "path": "nlp-services" },
-      { "name": "الرؤية الحاسوبية", "icon": "fas fa-eye", "path": "computer-vision" },
-      { "name": "الأتمتة المعتمدة على الذكاء الاصطناعي", "icon": "fas fa-robot", "path": "automation-services" },
-      { "name": "الذكاء الاصطناعي في الأمن السيبراني", "icon": "fas fa-shield-alt", "path": "cybersecurity-services" }
-    ]
-  },
-  {
-    "key": "إدارة التطبيقات",
-    "icon": "fas fa-server",
-    "img": "../../../../../../assets/img/projects.png",
-    "items": [
-      { "name": "تطوير التطبيقات على الويب", "icon": "fas fa-code", "path": "web-app-development" },
-      { "name": "تطوير التطبيقات المحمولة", "icon": "fas fa-mobile-alt", "path": "mobile-app-development" },
-      { "name": "تطوير التطبيقات لنظام ويندوز", "icon": "fas fa-window-maximize" },
-      { "name": "استشارات التطبيقات", "icon": "fas fa-chart-bar", "path": "application-consulting" },
-      { "name": "صيانة وتشغيل التطبيقات", "icon": "fas fa-headset", "path": "application-maintenance" },
-      { "name": "الاستعانة بالعمالة (خبراء التطبيقات)", "icon": "fas fa-user-friends", "path": "manpower-outsourcing" }
-    ]
-  },
-  {
-    "key": "البنية التحتية لتكنولوجيا المعلومات",
-    "icon": "fas fa-network-wired",
-    "img": "../../../../../../assets/img/Banner3.png",
-    "items": [
-      { "name": "صيانة وتشغيل البنية التحتية لتكنولوجيا المعلومات", "icon": "fas fa-tools", "path": "it-infrastructure" },
-      { "name": "إدارة الخوادم", "icon": "fas fa-server", "path": "it-server-admin" },
-      { "name": "إدارة قواعد البيانات", "icon": "fas fa-database", "path": "it-database-administration" }
-    ]
-  },
-  {
-    "key": "أوراكل",
-    "icon": "fas fa-robot",
-    "img": "../../../../../../assets/img/Banner3.png",
-    "items": [
-      { "name": "أوراكل بريمافيرا", "icon": "fas fa-laptop-code", "path": "pmo-services" },
-      { "name": "أوراكل أتمتة العمليات", "icon": "fas fa-laptop-code", "path": "oracle-automation" },
-      { "name": "أوراكل فيجوال بيلدر", "icon": "fas fa-laptop-code", "path": "oracle-visual-builder" }
-    ]
+ "servicing": [
+    {
+      "key": "الأمن السيبراني",
+      "icon": "fas fa-shield-alt",
+      "img": "../../../../../../assets/img/Banner.png",
+      "items": [
+        { "name": "أمن التطبيقات", "icon": "fas fa-lock", "path": "application-security" },
+        { "name": "التوعية بالأمن السيبراني", "icon": "fas fa-lightbulb", "path": "cyber-security-awareness" },
+        { "name": "استشارات الأمن السيبراني", "icon": "fas fa-user-secret", "path": "cybersecurity-consulting" },
+        { "name": "تنفيذ الأمن السيبراني", "icon": "fas fa-cogs", "path": "cybersecurity-implementation" },
+        { "name": "الاستعانة بالعمالة في الأمن السيبراني", "icon": "fas fa-users-cog", "path": "cyber-security-manpower-outsourcing" },
+        { "name": "تدريب الأمن السيبراني", "icon": "fas fa-chalkboard-teacher", "path": "cyber-security-training" },
+        { "name": "استشارات GRC في الأمن السيبراني", "icon": "fas fa-user-shield", "path": "cybersecurity-grc-services.component" },
+        { "name": "خدمات الأمان المدارة (MSSP)", "icon": "fas fa-shield-alt", "path": "mssp" },
+        { "name": "خدمات أمان البيانات", "icon": "fas fa-database", "path": "data-security-services" },
+        { "name": "أمن الشبكات", "icon": "fas fa-network-wired", "path": "network-security" }
+      ]
+    },
+    {
+      "key": "البنية التحتية للشبكة",
+      "icon": "fas fa-network-wired",
+      "img": "../../../../../../assets/img/Banner2.png",
+      "items": [
+        { "name": "مركز تشغيل الشبكة", "icon": "fas fa-server", "path": "NOC" },
+        { "name": "استشارات الشبكة", "icon": "fas fa-comments", "path": "network-consulting-services" },
+        { "name": "تنفيذ البنية التحتية للشبكة", "icon": "fas fa-tools", "path": "network-infrastructure-services" },
+        { "name": "صيانة ودعم الشبكة", "icon": "fas fa-tools", "path": "network-infrastructure-maintenance" }
+      ]
+    },
+    {
+      "key": "الذكاء الاصطناعي (AI)",
+      "icon": "fas fa-robot",
+      "img": "../../../../../../assets/img/Banner3.png",
+      "items": [
+        { "name": "استشارات واستراتيجيات الذكاء الاصطناعي", "icon": "fas fa-chalkboard-teacher", "path": "ai-consulting" },
+        { "name": "تطوير منتجات الذكاء الاصطناعي", "icon": "fas fa-cogs", "path": "ai-product-development" },
+        { "name": "خدمات التعلم الآلي (ML)", "icon": "fas fa-brain", "path": "ai-ml-services" },
+        { "name": "معالجة اللغة الطبيعية (NLP)", "icon": "fas fa-comment-dots", "path": "nlp-services" },
+        { "name": "الرؤية الحاسوبية", "icon": "fas fa-eye", "path": "computer-vision" },
+        { "name": "الأتمتة المعتمدة على الذكاء الاصطناعي", "icon": "fas fa-robot", "path": "automation-services" },
+        { "name": "الذكاء الاصطناعي في الأمن السيبراني", "icon": "fas fa-shield-alt", "path": "cybersecurity-services" }
+      ]
+    },
+    {
+      "key": "إدارة التطبيقات",
+      "icon": "fas fa-server",
+      "img": "../../../../../../assets/img/projects.png",
+      "items": [
+        { "name": "تطوير التطبيقات على الويب", "icon": "fas fa-code", "path": "web-app-development" },
+        { "name": "تطوير التطبيقات المحمولة", "icon": "fas fa-mobile-alt", "path": "mobile-app-development" },
+        { "name": "تطوير التطبيقات لنظام ويندوز", "icon": "fas fa-window-maximize" },
+        { "name": "استشارات التطبيقات", "icon": "fas fa-chart-bar", "path": "application-consulting" },
+        { "name": "صيانة وتشغيل التطبيقات", "icon": "fas fa-headset", "path": "application-maintenance" },
+        { "name": "الاستعانة بالعمالة (خبراء التطبيقات)", "icon": "fas fa-user-friends", "path": "manpower-outsourcing" }
+      ]
+    },
+    {
+      "key": "البنية التحتية لتكنولوجيا المعلومات",
+      "icon": "fas fa-network-wired",
+      "img": "../../../../../../assets/img/Banner3.png",
+      "items": [
+        { "name": "صيانة وتشغيل البنية التحتية لتكنولوجيا المعلومات", "icon": "fas fa-tools", "path": "it-infrastructure" },
+        { "name": "إدارة الخوادم", "icon": "fas fa-server", "path": "it-server-admin" },
+        { "name": "إدارة قواعد البيانات", "icon": "fas fa-database", "path": "it-database-administration" }
+      ]
+    },
+    {
+      "key": "أوراكل",
+      "icon": "fas fa-robot",
+      "img": "../../../../../../assets/img/Banner3.png",
+      "items": [
+        { "name": "أوراكل بريمافيرا", "icon": "fas fa-laptop-code", "path": "pmo-services" },
+        { "name": "أوراكل أتمتة العمليات", "icon": "fas fa-laptop-code", "path": "oracle-automation" },
+        { "name": "أوراكل فيجوال بيلدر", "icon": "fas fa-laptop-code", "path": "oracle-visual-builder" }
+      ]
+    }
+  ],
+  "clientsPage": {
+    "clients": {
+      "title": "عملاؤنا الكرام",
+      "description": "نفخر بشراكتنا مع رواد الصناعة في مختلف القطاعات"
+    },
+    "partners": {
+      "title": "الشراكات الاستراتيجية",
+      "description": "نتعاون مع رواد التكنولوجيا لتقديم حلول متميزة"
+    },
+    "certificates": {
+      "title": "شهاداتنا",
+      "description": "تم الاعتراف بنا لالتزامنا بالجودة والتميز"
+    },
+    "modal": {
+      "title": "معاينة الصورة"
+    }
   }
-]
 
 
 

@@ -3539,7 +3539,24 @@
   },
   "cta": "Get in Touch",
   "contact": "Contact us today to discuss your IT infrastructure needs and discover how we can enhance the performance, security, and reliability of your business operations."
-}
+},
+"clientsPage": {
+    "clients": {
+      "title": "Our Valued Clients",
+      "description": "We're proud to partner with industry leaders across multiple sectors"
+    },
+    "partners": {
+      "title": "Strategic Partnerships",
+      "description": "Collaborating with technology leaders to deliver exceptional solutions"
+    },
+    "certificates": {
+      "title": "Our Certifications",
+      "description": "Recognized for our commitment to quality and excellence"
+    },
+    "modal": {
+      "title": "Image Preview"
+    }
+  }
 
 
 

@@ -3,6 +3,14 @@
  // padding: 60px 0;
  // background-color: #f9f9f9;
 }
+.rtl {
+  direction: rtl;
+}
+
+.rtl .owl-carousel .owl-item {
+  float: right !important;
+}
+
 
 .section-title {
   text-align: center;

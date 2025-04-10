@@ -10,6 +10,9 @@
 @import "ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
 @import "ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
 body.rtl {
+  .me-3 {
+    margin-left: 1rem !important;
+}
   font-family: "DIN Next LT Arabic Light";
   direction: rtl;
   text-align: right;
