@@ -89,7 +89,7 @@
              (mouseenter)="selectedproduct = product"
              [ngClass]="{'active': selectedproduct === product}"
              #categoryElement>
-           <i [class]="product.icon + ' me-2'"></i> {{ product.key | translate }}
+           <i [class]="product.pathIcon + ' me-2'"></i> {{ product.key | translate }}
          </h6>
         
        </div>

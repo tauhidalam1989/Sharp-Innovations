@@ -7,10 +7,14 @@ import { Observable } from 'rxjs';
 })
 export class ContactService {
   private apiUrl = 'https://sharpinnovation-api.sharpinnvotech.com/v1/mail/send-mail'; // Replace with your API endpoint
-
+  private apiUrlnews = 'http://localhost:8091/v1/mail/newsletter';
+  
   constructor(private http: HttpClient) {}
 
   sendContactForm(payload: any): Observable<any> {
     return this.http.post(this.apiUrl, payload);
+  }
+  newsletter(data: { email: string }): Observable<any> {
+    return this.http.post(this.apiUrlnews, data);
   }
 }

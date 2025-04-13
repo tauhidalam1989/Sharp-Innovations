@@ -34,6 +34,7 @@ export class AppComponent implements OnInit {
     //   this.router.navigate(['/home']);
     // }
 
+
     // Set dynamic titles based on the route
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
@@ -41,6 +42,16 @@ export class AppComponent implements OnInit {
         const currentRoute = this.router.url.split('/')[1]; // Get the first segment of the URL
         this.setPageTitle(currentRoute);
       });
+      this.router.events.subscribe(event => {
+        if (event instanceof NavigationEnd) {
+          this.scrollToTop();
+        }
+      });
+  }
+ 
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   private setPageTitle(route: string): void {

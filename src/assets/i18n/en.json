@@ -1052,59 +1052,59 @@
   }
 ],
 
-"products_service": [
+"products_service": 
+  [
     {
       "key": "AI Solutions",
+      "pathIcon": "fas fa-brain",
       "items": [
-        
-          { "name": "Potholes Detection", "icon": "fas fa-road" },
-          { "name": "Vehicle Traffic Detection", "icon": "fas fa-traffic-light" },
-          { "name": "Garbage detection", "icon": "fas fa-trash-alt" },
-          { "name": "Illegal Parking Monitoring", "icon": "fas fa-parking" },
-          { "name": "Vehicle collision detection", "icon": "fas fa-car-crash" }
-        
-        
-        
-         
-
-      ]
-    },
-    {
-      "key": "Supply Chain",
-      "items": [
-        { "name": "Assets Management System", "icon": "fas fa-users" },
-        { "name": "Inventory", "icon": "fas fa-boxes" },
-        { "name": "Manufacturing", "icon": "fas fa-industry" },
-        { "name": "PLM", "icon": "fas fa-cube" },
-        { "name": "Purchase", "icon": "fas fa-shopping-basket" },
-        { "name": "Maintenance", "icon": "fas fa-tools" },
-        { "name": "Quality", "icon": "fas fa-check-circle" }
+        { "name": "Potholes Detection", "icon": "fas fa-road" },
+        { "name": "Vehicle Traffic Detection", "icon": "fas fa-traffic-light" },
+        { "name": "Garbage detection", "icon": "fas fa-trash" },
+        { "name": "Illegal Parking Monitoring", "icon": "fas fa-ban" },
+        { "name": "Vehicle collision detection", "icon": "fas fa-car-crash" },
+        { "name": "PPE Monitoring", "icon": "fas fa-hard-hat" },
+        { "name": "Emergency Module", "icon": "fas fa-ambulance" },
+        { "name": "Cleanliness Monitoring", "icon": "fas fa-broom" },
+        { "name": "Critical Area Monitoring", "icon": "fas fa-exclamation-triangle" }
       ]
     },
     {
       "key": "Management Solutions",
+      "pathIcon": "fas fa-cogs",
+
       "items": [
-        { "name": "Task Management System", "icon": "fas fa-laptop-code" }
+        { "name": "Task Management System", "icon": "fas fa-tasks" }
       ]
     },
     {
-      "key": "GIS Solutions ",
+      "key": "GIS Solutions",
+      "pathIcon": "fas fa-map",
       "items": [
-        { "name": "Live Vehicle Tracking ", "icon": "fas fa-user-tie" }
-       
+        { "name": "Remote Sensing", "icon": "fas fa-satellite" },
+        { "name": "Sharp GIS", "icon": "fas fa-map-marked-alt" },
+        { "name": "Drone Solutions", "icon": "fas fa-drone"
+      
+      }
+      ]
+    },
+    {
+      "key": "Telematics Solutions",
+      "pathIcon": "fas fa-network-wired",
+
+      "items": [
+        { "name": "Fleet Management System", "icon": "fas fa-truck-moving" },
+        { "name": "MDVR Solutions", "icon": "fas fa-video" },
+        { "name": "Depot Management System", "icon": "fas fa-warehouse" }
       ]
     },
     {
       "key": "Human Resource Management ",
+      "pathIcon": "fas fa-user-friends",
       "items": [
-        { "name": "Human Resource Management  ", "icon": "fas fa-users" }
-       
+        { "name": "Human Resource Management", "icon": "fas fa-users-cog" }
       ]
     }
-   
-    
-   
-    
   ],
   
   
