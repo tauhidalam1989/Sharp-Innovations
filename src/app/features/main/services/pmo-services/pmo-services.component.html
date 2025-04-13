@@ -1,31 +1,40 @@
 <div class="container-fluid bg-light py-5">
-    <div class="container py-5">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-12 wow fadeInLeft" data-wow-delay="0.1s">
-          <h1 class="mb-4 display-5 text-primary">
-            {{ 'pmo_services.title' | translate }}
-          </h1>
-          <h4 class="mb-3 text-secondary">
-            {{ 'pmo_services.subtitle' | translate }}
-          </h4>
-          <p class="mb-4 text-muted">
-            {{ 'pmo_services.description' | translate }}
-          </p>
-        </div>
+  <div class="container py-5">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-8 wow animate__animated animate__fadeInLeft" data-wow-delay="0.1s">
+        <h1 class="mb-4 display-7 text-primary">
+          {{ 'pmo_services.title' | translate }}
+        </h1>
+        <h4 class="mb-3 text-secondary">
+          {{ 'pmo_services.subtitle' | translate }}
+        </h4>
+        <p class="mb-4 text-muted">
+          {{ 'pmo_services.description' | translate }}
+        </p>
       </div>
-  
-      <div class="row g-4">
-        <div *ngFor="let service of 'pmo_services.services' | translate" class="col-md-6 col-lg-4 wow fadeInUp">
-          <div class="card h-100 shadow-sm border-0 text-center service-card">
-            <div class="card-body">
-              <h5 class="card-title text-primary">{{ service.title }}</h5>
-              <ul class="text-muted text-start">
-                <li *ngFor="let desc of service.description">{{ desc }}</li>
-              </ul>
+      <div class="col-lg-4 wow fadeInRight" data-wow-delay="0.2s">
+        <img src="../../../../../assets/cybersecurity/Cyber-security-awareness.png" alt="Cloud Application Development" class="img-fluid">
+      </div>
+    </div>
+
+    <div class="row g-4 mt-3">
+      <div
+        *ngFor="let service of 'pmo_services.services' | translate; let i = index"
+        class="col-md-6 col-lg-4 wow animate__animated animate__zoomIn"
+        [attr.data-wow-delay]="(i * 0.1) + 's'"
+      >
+        <div class="card h-100 shadow border-0 text-center service-card p-3 rounded-4">
+          <div class="card-body">
+            <div class="mb-3">
+              <i class="fa-solid fa-clipboard-list fa-2x text-primary"></i> <!-- Change icon based on context -->
             </div>
+            <h5 class="card-title text-primary mb-3">{{ service.title }}</h5>
+            <ul class="text-muted text-start ps-3">
+              <li *ngFor="let desc of service.description" class="hover-list-item">{{ desc }}</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
+</div>

@@ -54,22 +54,39 @@
     
 
     <!-- Products Dropdown -->
-    <div class="nav-item" style=" border-bottom: 2px solid rgba(255, 255, 255, 0.5);">
-        <a class="cursor-pointer" style="display: flex;justify-content: space-between; gap: 10px; border-bottom:none;" (click)="toggleDropdown('isProduct')">
-             <div class="service-menu">
-
-                <i class="fa fa-box"></i> 
-                {{ 'PRODUCTS' | translate }}
-            </div>
-            <i class="fa fa-chevron-down" [ngClass]="{ 'rotate': isProduct }"></i>
+   <!-- Products Dropdown -->
+<div class="nav-item" style="border-bottom: 2px solid rgba(255, 255, 255, 0.5);">
+    <!-- Click to toggle products dropdown -->
+    <a class="cursor-pointer" style="display: flex; justify-content: space-between;" (click)="toggleDropdown('isProduct')">
+      <div class="service-menu">
+        <i class="fa fa-box"></i>
+        {{ 'PRODUCTS' | translate }}
+      </div>
+      <i class="fa fa-chevron-down" [ngClass]="{ 'rotate': isProduct }"></i>
+    </a>
+  
+    <!-- First Level: Product Categories -->
+    <div class="sidebar-item" *ngIf="isProduct">
+      <div *ngFor="let category of ('products_service' | translate)">
+        <!-- Category Item -->
+        <a class="cursor-pointer category-item" (click)="selectProductCategory(category)">
+          <i [class]="category.icon + ' me-2'"></i> {{ category.key | translate }}
+          <i class="fa fa-chevron-down ms-auto" [ngClass]="{ 'rotate': selectedProductCategory === category }"></i>
         </a>
-        <div class="sidebar-item" *ngIf="isProduct">
-            <a *ngFor="let product of ('products_service' | translate)">
-                <i [class]="product.icon + ' me-2'"></i> {{ product.key | translate }}
-            </a>
+  
+        <!-- Second Level: Product Items (Nested Under Category) -->
+        <div class="sub-menu" *ngIf="selectedProductCategory === category">
+          <a style="display: flex; justify-content: space-between; gap: 10px; border-bottom: none; font-size: 16px;"
+             (click)="closeSidebar()" *ngFor="let item of category.items"
+             [routerLink]="'/products/' + item.path"
+             class="cursor-pointer">
+            <i [class]="item.icon + ' me-2'"></i> {{ item.name | translate }}
+          </a>
         </div>
+      </div>
     </div>
-
+  </div>
+  
     <a routerLink="/careers" (click)="closeSidebar()" routerLinkActive="active" class="nav-item">
         <i class="fa fa-briefcase"></i>
         {{ 'CAREERS' | translate }}

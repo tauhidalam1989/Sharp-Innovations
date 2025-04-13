@@ -1,8 +1,8 @@
 <div class="container-fluid bg-light py-5">
   <div class="container py-5">
     <div class="row g-5 align-items-center">
-      <div class="col-lg-12 wow fadeInLeft" data-wow-delay="0.1s">
-        <h1 class="mb-4 display-5 text-primary animate__animated animate__fadeIn">
+      <div class="col-lg-8 wow fadeInLeft" data-wow-delay="0.1s">
+        <h1 class="mb-4 display-7 text-primary animate__animated animate__fadeIn">
           <i class="fas fa-mobile-alt me-2 floating-icon"></i>{{ 'mobile_app_development.title' | translate }}
         </h1>
         <h4 class="mb-3 text-secondary animate__animated animate__fadeIn animate__delay-1s">
@@ -11,6 +11,9 @@
         <p class="mb-4 text-muted animate__animated animate__fadeIn animate__delay-2s">
           {{ 'mobile_app_development.description' | translate }}
         </p>
+      </div>
+      <div class="col-lg-4 wow fadeInRight" data-wow-delay="0.2s">
+        <img src="../../../../../assets/cybersecurity/Cyber-security-awareness.png" alt="Cloud Application Development" class="img-fluid">
       </div>
     </div>
 
@@ -31,8 +34,8 @@
     <div class="mt-5">
       <h2 class="text-primary mb-4">{{ 'mobile_app_development.why_choose_us.title' | translate }}</h2>
       <ul class="list-unstyled">
-        <li *ngFor="let point of 'mobile_app_development.why_choose_us.points' | translate" class="mb-2">
-          <i class="fas fa-check-circle text-success me-2"></i>{{ point }}
+        <li class="hover-list-item" *ngFor="let point of 'mobile_app_development.why_choose_us.points' | translate" class="mb-2">
+          <i  class="fas fa-check-circle text-success me-2"></i>{{ point }}
         </li>
       </ul>
     </div>
@@ -41,7 +44,7 @@
     <div class="mt-5">
       <h2 class="text-primary mb-4">{{ 'mobile_app_development.industries.title' | translate }}</h2>
       <div class="row">
-        <div *ngFor="let industry of 'mobile_app_development.industries.list' | translate" class="col-md-4 mb-3">
+        <div class="hover-list-item" *ngFor="let industry of 'mobile_app_development.industries.list' | translate" class="col-md-4 mb-3">
           <div class="border rounded p-3 bg-white shadow-sm text-center">
             <i class="fas fa-industry text-secondary me-2"></i>{{ industry }}
           </div>

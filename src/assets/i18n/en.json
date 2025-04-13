@@ -1055,14 +1055,22 @@
 "products_service": 
   [
     {
-      "key": "AI Solutions",
+      "key": "AI Smart City",
       "pathIcon": "fas fa-brain",
+      "img":"../../../../../../assets/img/Banner.png",
       "items": [
         { "name": "Potholes Detection", "icon": "fas fa-road" },
         { "name": "Vehicle Traffic Detection", "icon": "fas fa-traffic-light" },
         { "name": "Garbage detection", "icon": "fas fa-trash" },
         { "name": "Illegal Parking Monitoring", "icon": "fas fa-ban" },
-        { "name": "Vehicle collision detection", "icon": "fas fa-car-crash" },
+        { "name": "Vehicle collision detection", "icon": "fas fa-car-crash" }
+      ]
+    },
+    {
+      "key": "AI Industrial Safety",
+      "pathIcon": "fas fa-brain",
+      "img":"../../../../../../assets/img/Banner2.png",
+      "items": [
         { "name": "PPE Monitoring", "icon": "fas fa-hard-hat" },
         { "name": "Emergency Module", "icon": "fas fa-ambulance" },
         { "name": "Cleanliness Monitoring", "icon": "fas fa-broom" },
@@ -1072,7 +1080,7 @@
     {
       "key": "Management Solutions",
       "pathIcon": "fas fa-cogs",
-
+       "img":"../../../../../../assets/img/Banner3.png",
       "items": [
         { "name": "Task Management System", "icon": "fas fa-tasks" },
         { "name": "Assets Management System", "icon": "fas fa-boxes" }
@@ -1082,6 +1090,7 @@
     {
       "key": "GIS Solutions",
       "pathIcon": "fas fa-map",
+      "img":"../../../../../../assets/img/projects.png",
       "items": [
         { "name": "Remote Sensing", "icon": "fas fa-satellite" },
         { "name": "Sharp GIS", "icon": "fas fa-map-marked-alt" },
@@ -1093,7 +1102,7 @@
     {
       "key": "Telematics Solutions",
       "pathIcon": "fas fa-network-wired",
-
+"img": "../../../../../../assets/cybersecurity/Cyber-security-awareness.png",
       "items": [
         { "name": "Fleet Management System", "icon": "fas fa-truck-moving" },
         { "name": "MDVR Solutions", "icon": "fas fa-video" },
@@ -1103,6 +1112,7 @@
     {
       "key": "Human Resource Management ",
       "pathIcon": "fas fa-user-friends",
+      "img": "../../../../../../assets/cybersecurity/Cybersecurity-implementation.png",
       "items": [
         { "name": "Human Resource Management", "icon": "fas fa-users-cog" }
       ]

@@ -9,8 +9,8 @@
             class="img-fluid rounded"
           />
         </div> -->
-        <div class="col-lg-12 wow fadeInRight" data-wow-delay="0.2s">
-          <h1 class="mb-4 display-5 text-primary">
+        <div class="col-lg-8 wow fadeInRight" data-wow-delay="0.2s">
+          <h1 class="mb-4 display-7 text-primary">
             <i class="fas fa-network-wired me-2"></i
             >{{ 'SuperiorMonitoringNOCService.title' | translate }}
           </h1>
@@ -20,6 +20,9 @@
           <p class="mb-4 text-muted">
             {{ 'SuperiorMonitoringNOCService.description' | translate }}
           </p>
+        </div>
+        <div class="col-lg-4 wow fadeInRight" data-wow-delay="0.2s">
+          <img src="../../../../../assets/cybersecurity/Cyber-security-awareness.png" alt="Cloud Application Development" class="img-fluid">
         </div>
       </div>
   
@@ -61,7 +64,7 @@
             <div class="card-body">
               <h5 class="card-title text-primary">{{ activity.title }}</h5>
               <ul class="text-muted text-start">
-                <li *ngFor="let point of activity.description">{{ point }}</li>
+                <li class="hover-list-item" *ngFor="let point of activity.description">{{ point }}</li>
               </ul>
             </div>
           </div>

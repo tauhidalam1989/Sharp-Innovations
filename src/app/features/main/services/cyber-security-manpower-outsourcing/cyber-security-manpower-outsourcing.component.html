@@ -5,12 +5,15 @@
         <!-- Image on the left -->
   
         <!-- Text content on the right -->
-        <div class="col-lg-12 wow fadeInRight" data-wow-delay="0.2s">
-          <h1 class="mb-4 display-5 text-primary">
+        <div class="col-lg-8 wow fadeInRight" data-wow-delay="0.2s">
+          <h1 class="mb-4 display-7 text-primary">
             <i class="fas fa-shield-alt me-2"></i>{{ 'CybersecurityOutsourcingService.title' | translate }}
           </h1>
           <h4 class="mb-3 text-secondary">{{ 'CybersecurityOutsourcingService.subtitle' | translate }}</h4>
           <p class="mb-4 text-muted">{{ 'CybersecurityOutsourcingService.description' | translate }}</p>
+        </div>
+        <div class="col-lg-4 wow fadeInRight" data-wow-delay="0.2s">
+          <img src="../../../../../assets/cybersecurity/Cyber-security-manpower-outsourcing.png" alt="Cloud Application Development" class="img-fluid">
         </div>
       </div>
   
@@ -24,7 +27,7 @@
         <div *ngFor="let point of 'CybersecurityOutsourcingService.benefits.points' | translate" class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
           <div class="card h-100 shadow-sm border-0 text-center">
             <div class="card-body">
-              <p class="text-muted">{{ point }}</p>
+              <p class="hover-list-item" class="text-muted">{{ point }}</p>
             </div>
           </div>
         </div>
@@ -42,7 +45,7 @@
             <div class="card-body">
               <h5 class="card-title text-primary">{{ role.title }}</h5>
               <ul class="text-muted text-start">
-                <li *ngFor="let desc of role.description">{{ desc }}</li>
+                <li class="hover-list-item" *ngFor="let desc of role.description">{{ desc }}</li>
               </ul>
             </div>
           </div>
@@ -59,7 +62,7 @@
         <div *ngFor="let step of 'CybersecurityOutsourcingService.process.steps' | translate" class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
           <div class="card h-100 shadow-sm border-0 text-center">
             <div class="card-body">
-              <p class="text-muted">{{ step }}</p>
+              <p  class="hover-list-item" class="text-muted">{{ step }}</p>
             </div>
           </div>
         </div>

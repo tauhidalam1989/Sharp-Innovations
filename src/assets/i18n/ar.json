@@ -154,7 +154,7 @@
   "COMPANY_NAME": "شارب إنوفيشنز",
   "DESCRIPTION": "تأسست SIIT في عام 2023 في الرياض، المملكة العربية السعودية. نقدم حلولًا تقنية واستشارات في تخطيط الموارد للمؤسسات الحكومية والخاصة.",
   "GET_IN_TOUCH": "تواصل معنا",
-  "ADDRESS": "7576، حي السُلي، الرياض، المملكة العربية السعودية",
+  "ADDRESS": "7576، حي السُلي، الرياض، KSA",
   "PHONE": "+966 53 140 9624 ",
   "LANDLINE": "+966 11 453 0073 ",
   "EMAIL": "info@sharpinnvotech.com",
@@ -1052,96 +1052,70 @@
       "icon": "fas fa-users-cog"
     }
   ],
-    "products_service": [
-    {
-      "key": "المالية",
-      "items": [
-        { "name": "المحاسبة", "icon": "fas fa-calculator" },
-        { "name": "الفواتير", "icon": "fas fa-file-invoice-dollar" },
-        { "name": "المصروفات", "icon": "fas fa-receipt" },
-        { "name": "جدول البيانات (BI)", "icon": "fas fa-table" },
-        { "name": "المستندات", "icon": "fas fa-file-alt" },
-        { "name": "التوقيع", "icon": "fas fa-pen-fancy" }
-      ]
-    },
-    {
-      "key": "المبيعات",
-      "items": [
-        { "name": "إدارة علاقات العملاء", "icon": "fas fa-users" },
-        { "name": "المبيعات", "icon": "fas fa-shopping-cart" },
-        { "name": "متجر نقاط البيع", "icon": "fas fa-store" },
-        { "name": "مطعم نقاط البيع", "icon": "fas fa-utensils" },
-        { "name": "الاشتراكات", "icon": "fas fa-calendar-check" },
-        { "name": "التأجير", "icon": "fas fa-car" }
-      ]
-    },
-    {
-      "key": "المواقع الإلكترونية",
-      "items": [
-        { "name": "منشئ المواقع", "icon": "fas fa-laptop-code" },
-        { "name": "التجارة الإلكترونية", "icon": "fas fa-shopping-bag" },
-        { "name": "مدونة", "icon": "fas fa-pencil-alt" },
-        { "name": "منتدى", "icon": "fas fa-comments" },
-        { "name": "الدردشة المباشرة", "icon": "fas fa-comment-dots" },
-        { "name": "التعلم الإلكتروني", "icon": "fas fa-chalkboard-teacher" }
-      ]
-    },
-    {
-      "key": "الموارد البشرية",
-      "items": [
-        { "name": "الموظفين", "icon": "fas fa-user-tie" },
-        { "name": "التوظيف", "icon": "fas fa-user-plus" },
-        { "name": "الإجازات", "icon": "fas fa-clock" },
-        { "name": "التقييمات", "icon": "fas fa-chart-bar" },
-        { "name": "الإحالات", "icon": "fas fa-handshake" },
-        { "name": "الأسطول", "icon": "fas fa-shuttle-van" }
-      ]
-    },
-    {
-      "key": "التسويق",
-      "items": [
-        { "name": "التسويق عبر وسائل التواصل", "icon": "fas fa-share-alt" },
-        { "name": "التسويق عبر البريد الإلكتروني", "icon": "fas fa-envelope-open-text" },
-        { "name": "التسويق عبر الرسائل النصية", "icon": "fas fa-sms" },
-        { "name": "الفعاليات", "icon": "fas fa-calendar-alt" },
-        { "name": "أتمتة التسويق", "icon": "fas fa-cogs" },
-        { "name": "الاستبيانات", "icon": "fas fa-poll" }
-      ]
-    },
-    {
-      "key": "الخدمات",
-      "items": [
-        { "name": "المشاريع", "icon": "fas fa-project-diagram" },
-        { "name": "جداول العمل", "icon": "fas fa-clock" },
-        { "name": "الخدمات الميدانية", "icon": "fas fa-wrench" },
-        { "name": "خدمة العملاء", "icon": "fas fa-headset" },
-        { "name": "التخطيط", "icon": "fas fa-calendar-check" },
-        { "name": "المواعيد", "icon": "fas fa-user-clock" }
-      ]
-    },
-    {
-      "key": "سلسلة التوريد",
-      "items": [
-        { "name": "المخزون", "icon": "fas fa-boxes" },
-        { "name": "التصنيع", "icon": "fas fa-industry" },
-        { "name": "إدارة دورة حياة المنتج", "icon": "fas fa-cube" },
-        { "name": "المشتريات", "icon": "fas fa-shopping-basket" },
-        { "name": "الصيانة", "icon": "fas fa-tools" },
-        { "name": "الجودة", "icon": "fas fa-check-circle" }
-      ]
-    },
-    {
-      "key": "الإنتاجية",
-      "items": [
-        { "name": "المناقشات", "icon": "fas fa-comments" },
-        { "name": "الموافقات", "icon": "fas fa-thumbs-up" },
-        { "name": "إنترنت الأشياء", "icon": "fas fa-broadcast-tower" },
-        { "name": "الاتصالات عبر الإنترنت (VoIP)", "icon": "fas fa-phone-alt" },
-        { "name": "قاعدة المعرفة", "icon": "fas fa-book" },
-        { "name": "واتساب", "icon": "fab fa-whatsapp" }
-      ]
-    }
-  ],
+"products_service": 
+[
+  {
+    "key": "المدينة الذكية بالذكاء الاصطناعي",
+    "pathIcon": "fas fa-brain",
+    "img": "../../../../../../assets/img/Banner.png",
+    "items": [
+      { "name": "كشف الحفر", "icon": "fas fa-road" },
+      { "name": "كشف حركة المرور", "icon": "fas fa-traffic-light" },
+      { "name": "كشف النفايات", "icon": "fas fa-trash" },
+      { "name": "مراقبة الوقوف غير القانوني", "icon": "fas fa-ban" },
+      { "name": "كشف تصادم المركبات", "icon": "fas fa-car-crash" }
+    ]
+  },
+  {
+    "key": "السلامة الصناعية بالذكاء الاصطناعي",
+    "pathIcon": "fas fa-brain",
+    "img": "../../../../../../assets/img/Banner2.png",
+    "items": [
+      { "name": "مراقبة معدات الحماية الشخصية", "icon": "fas fa-hard-hat" },
+      { "name": "وحدة الطوارئ", "icon": "fas fa-ambulance" },
+      { "name": "مراقبة النظافة", "icon": "fas fa-broom" },
+      { "name": "مراقبة المناطق الحرجة", "icon": "fas fa-exclamation-triangle" }
+    ]
+  },
+  {
+    "key": "حلول الإدارة",
+    "pathIcon": "fas fa-cogs",
+    "img": "../../../../../../assets/img/Banner3.png",
+    "items": [
+      { "name": "نظام إدارة المهام", "icon": "fas fa-tasks" },
+      { "name": "نظام إدارة الأصول", "icon": "fas fa-boxes" }
+    ]
+  },
+  {
+    "key": "حلول نظم المعلومات الجغرافية",
+    "pathIcon": "fas fa-map",
+    "img": "../../../../../../assets/img/projects.png",
+    "items": [
+      { "name": "الاستشعار عن بعد", "icon": "fas fa-satellite" },
+      { "name": "شارب جي آي إس", "icon": "fas fa-map-marked-alt" },
+      { "name": "حلول الطائرات بدون طيار", "icon": "fas fa-drone" }
+    ]
+  },
+  {
+    "key": "حلول التليماتية",
+    "pathIcon": "fas fa-network-wired",
+    "img": "../../../../../../assets/cybersecurity/Cyber-security-awareness.png",
+    "items": [
+      { "name": "نظام إدارة الأسطول", "icon": "fas fa-truck-moving" },
+      { "name": "حلول تسجيل الفيديو الرقمي المتنقلة", "icon": "fas fa-video" },
+      { "name": "نظام إدارة المستودعات", "icon": "fas fa-warehouse" }
+    ]
+  },
+  {
+    "key": "إدارة الموارد البشرية",
+    "pathIcon": "fas fa-user-friends",
+    "img": "../../../../../../assets/cybersecurity/Cybersecurity-implementation.png",
+    "items": [
+      { "name": "إدارة الموارد البشرية", "icon": "fas fa-users-cog" }
+    ]
+  }
+],
+
   
     "MSSP": {
       "title": "خدمات الأمن المُدارة (MSSP)",

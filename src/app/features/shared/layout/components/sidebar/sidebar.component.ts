@@ -29,11 +29,15 @@ export class SidebarComponent {
   isProduct = false;
   currentLang = 'en';
   selectedCategory: any = null; // Track selected category
+  selectedProductCategory :any =null
   closeSidebar() {
     this.isOpen = false;
   }
   selectCategory(category: any) {
     this.selectedCategory = this.selectedCategory === category ? null : category;
+  }
+  selectProductCategory(category:any){
+    this.selectedProductCategory = this.selectedProductCategory === category ? null : category;
   }
   toggleDropdown(menu: string) {
     if (menu === 'isservicing') {
