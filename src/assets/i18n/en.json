@@ -1074,7 +1074,9 @@
       "pathIcon": "fas fa-cogs",
 
       "items": [
-        { "name": "Task Management System", "icon": "fas fa-tasks" }
+        { "name": "Task Management System", "icon": "fas fa-tasks" },
+        { "name": "Assets Management System", "icon": "fas fa-boxes" }
+
       ]
     },
     {
