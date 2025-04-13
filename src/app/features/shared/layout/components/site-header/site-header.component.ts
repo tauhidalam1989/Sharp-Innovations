@@ -48,8 +48,6 @@ selectedproduct: any = null;
   switchLanguage(lang: string): void {
     this.languageService.switchLanguage(lang);
     this.currentLang = lang;
-    console.log(this.currentLang);
-    
     this.imageSrc =  this.currentLang === 'en' ? '../../../../../../assets/img/d1.png' : '../../../../../../assets/img/d2.png';
     
      

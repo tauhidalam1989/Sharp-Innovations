@@ -1058,43 +1058,55 @@
       "key": "AI Smart City",
       "pathIcon": "fas fa-brain",
       "img":"../../../../../../assets/img/Banner.png",
+      "description": "Innovative urban solutions for smarter cities.",
+    "icon": "fas fa-city",
+    "path":"potholes-detection",
       "items": [
-        { "name": "Potholes Detection", "icon": "fas fa-road" },
-        { "name": "Vehicle Traffic Detection", "icon": "fas fa-traffic-light" },
-        { "name": "Garbage detection", "icon": "fas fa-trash" },
-        { "name": "Illegal Parking Monitoring", "icon": "fas fa-ban" },
-        { "name": "Vehicle collision detection", "icon": "fas fa-car-crash" }
+        { "name": "Potholes Detection", "icon": "fas fa-road","path":"potholes-detection" },
+        { "name": "Vehicle Traffic Detection", "icon": "fas fa-traffic-light","path":"vehicle-traffic-detection" },
+        { "name": "Garbage detection", "icon": "fas fa-trash","path":"garbage-detection" },
+        { "name": "Illegal Parking Monitoring", "icon": "fas fa-ban","path":"illegal-parking-monitoring" },
+        { "name": "Vehicle collision detection", "icon": "fas fa-car-crash","path":"vehicle-collision-detection" }
       ]
     },
     {
       "key": "AI Industrial Safety",
+      "description": "AI-powered detection of objects via CCTV and dashcams.",
+    "icon": "fas fa-video",
       "pathIcon": "fas fa-brain",
       "img":"../../../../../../assets/img/Banner2.png",
+      "path":"ppe-monitoring" ,
       "items": [
-        { "name": "PPE Monitoring", "icon": "fas fa-hard-hat" },
-        { "name": "Emergency Module", "icon": "fas fa-ambulance" },
-        { "name": "Cleanliness Monitoring", "icon": "fas fa-broom" },
-        { "name": "Critical Area Monitoring", "icon": "fas fa-exclamation-triangle" }
+        { "name": "PPE Monitoring", "icon": "fas fa-hard-hat","path":"ppe-monitoring" },
+        { "name": "Emergency Module", "icon": "fas fa-ambulance","path":"emeregency-module" },
+        { "name": "Cleanliness Monitoring", "icon": "fas fa-broom","path":"cleanliness-monitoring" },
+        { "name": "Critical Area Monitoring", "icon": "fas fa-exclamation-triangle","path":"critical-area-monitoring" }
       ]
     },
     {
       "key": "Management Solutions",
+      "description": "Efficient planning, tracking, and managing  seamlessly.",
+    "icon": "fas fa-tasks",
       "pathIcon": "fas fa-cogs",
        "img":"../../../../../../assets/img/Banner3.png",
+       "path":"task-management-system",
       "items": [
-        { "name": "Task Management System", "icon": "fas fa-tasks" },
-        { "name": "Assets Management System", "icon": "fas fa-boxes" }
+        { "name": "Task Management System", "icon": "fas fa-tasks","path":"task-management-system" },
+        { "name": "Assets Management System", "icon": "fas fa-boxes","path":"assets-management-system" }
 
       ]
     },
     {
       "key": "GIS Solutions",
       "pathIcon": "fas fa-map",
+      "description": "Advanced mapping and geospatial technologies.",
+    "icon": "fas fa-map-marked-alt",
       "img":"../../../../../../assets/img/projects.png",
+      "path":"remote-sensing",
       "items": [
-        { "name": "Remote Sensing", "icon": "fas fa-satellite" },
-        { "name": "Sharp GIS", "icon": "fas fa-map-marked-alt" },
-        { "name": "Drone Solutions", "icon": "fas fa-drone"
+        { "name": "Remote Sensing", "icon": "fas fa-satellite","path":"remote-sensing" },
+        { "name": "Sharp GIS", "icon": "fas fa-map-marked-alt","path":"sharp-gis" },
+        { "name": "Drone Solutions", "icon": "fas fa-drone","path":"drone-solutions"
       
       }
       ]
@@ -1102,19 +1114,25 @@
     {
       "key": "Telematics Solutions",
       "pathIcon": "fas fa-network-wired",
-"img": "../../../../../../assets/cybersecurity/Cyber-security-awareness.png",
+      "img": "../../../../../../assets/cybersecurity/Cyber-security-awareness.png",
+      "description": "Smart fleet management and remote monitoring.",
+    "icon": "fas fa-car",
+    "path":"fleet-management-system",
       "items": [
-        { "name": "Fleet Management System", "icon": "fas fa-truck-moving" },
-        { "name": "MDVR Solutions", "icon": "fas fa-video" },
-        { "name": "Depot Management System", "icon": "fas fa-warehouse" }
+        { "name": "Fleet Management System", "icon": "fas fa-truck-moving","path":"fleet-management-system" },
+        { "name": "MDVR Solutions", "icon": "fas fa-video","path":"mdvr-solutions" },
+        { "name": "Depot Management System", "icon": "fas fa-warehouse","path":"depot-management-system" }
       ]
     },
     {
       "key": "Human Resource Management ",
       "pathIcon": "fas fa-user-friends",
+       "description": "Streamlining human resource management and operations.",
+    "icon": "fas fa-users",
       "img": "../../../../../../assets/cybersecurity/Cybersecurity-implementation.png",
+      "path":"human-resource-management-system",
       "items": [
-        { "name": "Human Resource Management", "icon": "fas fa-users-cog" }
+        { "name": "Human Resource Management", "icon": "fas fa-users-cog","path":"human-resource-management-system" }
       ]
     }
   ],

@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { RoutingService } from '../../shared/services/routing.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'service',
@@ -34,4 +35,8 @@ export class ServiceComponent {
       delay: '0.7s',
     },
   ];
+  constructor(private router:Router){}
+  routeTo(path:any){
+    this.router.navigate(['/product/'+path]);
+  }
 }

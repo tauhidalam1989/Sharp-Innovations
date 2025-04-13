@@ -1058,6 +1058,8 @@
     "key": "المدينة الذكية بالذكاء الاصطناعي",
     "pathIcon": "fas fa-brain",
     "img": "../../../../../../assets/img/Banner.png",
+    "description": "حلول حضرية مبتكرة للمدن الذكية.",
+    "icon": "fas fa-city",
     "items": [
       { "name": "كشف الحفر", "icon": "fas fa-road" },
       { "name": "كشف حركة المرور", "icon": "fas fa-traffic-light" },
@@ -1068,6 +1070,8 @@
   },
   {
     "key": "السلامة الصناعية بالذكاء الاصطناعي",
+    "description": "اكتشاف مدعوم بالذكاء الاصطناعي عبر كاميرات المراقبة وكاميرات السيارات.",
+    "icon": "fas fa-video",
     "pathIcon": "fas fa-brain",
     "img": "../../../../../../assets/img/Banner2.png",
     "items": [
@@ -1079,6 +1083,8 @@
   },
   {
     "key": "حلول الإدارة",
+    "description": "تخطيط وتتبع وإدارة بكفاءة وسلاسة.",
+    "icon": "fas fa-tasks",
     "pathIcon": "fas fa-cogs",
     "img": "../../../../../../assets/img/Banner3.png",
     "items": [
@@ -1089,10 +1095,12 @@
   {
     "key": "حلول نظم المعلومات الجغرافية",
     "pathIcon": "fas fa-map",
+    "description": "تقنيات متقدمة لرسم الخرائط والمجال الجغرافي.",
+    "icon": "fas fa-map-marked-alt",
     "img": "../../../../../../assets/img/projects.png",
     "items": [
       { "name": "الاستشعار عن بعد", "icon": "fas fa-satellite" },
-      { "name": "شارب جي آي إس", "icon": "fas fa-map-marked-alt" },
+      { "name": "نظام GIS من شارب", "icon": "fas fa-map-marked-alt" },
       { "name": "حلول الطائرات بدون طيار", "icon": "fas fa-drone" }
     ]
   },
@@ -1100,18 +1108,22 @@
     "key": "حلول التليماتية",
     "pathIcon": "fas fa-network-wired",
     "img": "../../../../../../assets/cybersecurity/Cyber-security-awareness.png",
+    "description": "إدارة ذكية للأسطول والمراقبة عن بُعد.",
+    "icon": "fas fa-car",
     "items": [
       { "name": "نظام إدارة الأسطول", "icon": "fas fa-truck-moving" },
-      { "name": "حلول تسجيل الفيديو الرقمي المتنقلة", "icon": "fas fa-video" },
+      { "name": "حلول MDVR", "icon": "fas fa-video" },
       { "name": "نظام إدارة المستودعات", "icon": "fas fa-warehouse" }
     ]
   },
   {
     "key": "إدارة الموارد البشرية",
     "pathIcon": "fas fa-user-friends",
+    "description": "تبسيط إدارة الموارد البشرية والعمليات.",
+    "icon": "fas fa-users",
     "img": "../../../../../../assets/cybersecurity/Cybersecurity-implementation.png",
     "items": [
-      { "name": "إدارة الموارد البشرية", "icon": "fas fa-users-cog" }
+      { "name": "نظام إدارة الموارد البشرية", "icon": "fas fa-users-cog" }
     ]
   }
 ],

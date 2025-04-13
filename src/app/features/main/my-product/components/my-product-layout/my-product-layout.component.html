@@ -1,23 +1,46 @@
 <section class="container mt-4">
-
-  
-    <div class="services-layout">
-      <div class="services-tabs">
-        <div *ngFor="let service of ('core_services' | translate); let first = first"
-             class="category-item" 
-             [routerLink]="'assets-management-system'"
-             (click)="selectedService = service"
-             [ngClass]="{'active': selectedService === service || (first && !selectedService)}">
-             <img class="service-image" [src]="service.icon" width="20px" alt="Service Banner">
-             <span >{{ service.title }}</span>
+  <div class="services-layout">
+    
+    <!-- LEFT SIDE: Product Categories + Submenus -->
+    <div class="services-tabs" #submenuContainer>
+      <div *ngFor="let product of productsService; let first = first"
+           class="category-item"
+           (click)="selectProduct(product)"
+           [ngClass]="{'active': isActiveSubmenu(product)}">
+        
+        <!-- Main Category -->
+        <div class="product-header">
+          <i [class]="product.pathIcon"></i>
+          <span>{{ product.key }}</span>
         </div>
-      </div>
+    
+        <!-- Submenu: Product Items -->
       
-      <div class="content-area">
-        <div class="banner-container">
-          <!-- <img class="service-image" [src]="selectedService?.img || (('core_services' | translate)[0])?.img" alt="Service Banner"> -->
+          <div  class="submenu" *ngIf="product.items?.length" >
+            <div class="submenu-item"
+                 *ngFor="let item of product.items"
+                 [ngClass]="{'active': isActiveSubmenu(item)}"
+                 [routerLink]="item.path | lowercase"
+                 routerLinkActive="active-submenu">
+              <i [class]="item.icon"></i>
+              <span>{{ item.name }}</span>
+            </div>
+    
+          
         </div>
-        <router-outlet></router-outlet>
       </div>
     </div>
-  </section>
+    
+
+    <!-- RIGHT SIDE: Banner + Details -->
+    <div class="content-area">
+      <div class="banner-container" *ngIf="selectedProduct">
+        <img class="service-image" 
+             [src]="selectedProduct?.img" 
+             alt="Product Banner">
+      </div>
+
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</section>
