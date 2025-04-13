@@ -78,7 +78,7 @@
         <div class="sub-menu" *ngIf="selectedProductCategory === category">
           <a style="display: flex; justify-content: space-between; gap: 10px; border-bottom: none; font-size: 16px;"
              (click)="closeSidebar()" *ngFor="let item of category.items"
-             [routerLink]="'/products/' + item.path"
+             [routerLink]="'/product/' +item.path"
              class="cursor-pointer">
             <i [class]="item.icon + ' me-2'"></i> {{ item.name | translate }}
           </a>

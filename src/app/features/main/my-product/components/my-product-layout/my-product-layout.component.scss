@@ -19,12 +19,31 @@
     font-size: 1.1rem;
   }
 }
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* default: 1 column for large screens */
+  gap: 1rem;
+}
+
+/* For mobile and tablet (max-width: 991px) */
+@media screen and (max-width: 991px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller devices */
+  }
+}
+
 
 .services-layout {
   display: flex;
   gap: 3rem;
   border-radius: 12px;
   flex-wrap: wrap;
+}
+.toggle-icon {
+  //margin-right: auto;
+  font-size: 2rem;
+  color: #1363C6;
+  cursor: pointer;
 }
 
 .services-tabs {
@@ -34,6 +53,10 @@
 
   /* Make it sticky and scrollable */
   position: sticky;
+  @media (max-width: 768px) {
+    position: unset;
+    top: 50px; 
+  }  
   top: 100px; // <-- adjust based on your header height
   max-height: calc(100vh - 200px); // <-- full view height minus header
   overflow-y: auto;
@@ -60,6 +83,12 @@
 
 .category-item {
   padding: 1rem 1.5rem;
+  
+@media (max-width: 768px) {
+  padding: 0rem 1.5rem;
+  display: unset;
+  flex-direction: unset;
+}
   margin-bottom: 0.5rem;
   border-radius: 0;
   cursor: pointer;
@@ -74,8 +103,14 @@
 
   .product-header {
     display: flex;
+  align-items: center;
+  justify-content: space-between; /* This pushes the toggle to the end */
+  padding-right: 0.5rem; /* optional */
+    .p-1{
+      display: flex;
+    gap: 6px;
     align-items: center;
-    gap: 0.8rem;
+    }
 
     i {
       font-size: 1.2rem;
@@ -88,15 +123,11 @@
     }
   }
 
-  &:hover {
-    border-left: 3px solid rgba(19, 99, 198, 0.3);
-    background: rgba(19, 99, 198, 0.05);
-  }
+ 
 
   &.active {
-    border-left: 3px solid #1363C6;
-    border-right: 3px solid #1363C6;
-    background: rgba(19, 99, 198, 0.1);
+    border-left: 3px solid rgba(19, 99, 198, 0.3);
+    background: rgba(19, 99, 198, 0.05);
 
     .product-header i,
     .product-header span {
@@ -240,10 +271,12 @@
     margin-bottom: 1.5rem;
   }
 
-  .category-item {
-    padding: 1rem;
-    margin-bottom: 1rem;
+ .category-item {
+    padding:6px;
+    margin-bottom: unset;
   }
+
+
 
   .submenu {
     padding-left: 2rem;

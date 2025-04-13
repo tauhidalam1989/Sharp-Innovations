@@ -1,42 +1,49 @@
 <section class="container mt-4">
   <div class="services-layout">
-    
+
     <!-- LEFT SIDE: Product Categories + Submenus -->
-    <div class="services-tabs" #submenuContainer>
-      <div *ngFor="let product of productsService; let first = first"
-           class="category-item"
-           (click)="selectProduct(product)"
-           [ngClass]="{'active': isActiveSubmenu(product)}">
+    <div class="services-tabs " #submenuContainer>
+      <div *ngFor="let product of productsService" class="category-item" (click)="selectProduct(product)">
         
         <!-- Main Category -->
-        <div class="product-header">
-          <i [class]="product.pathIcon"></i>
-          <span>{{ product.key }}</span>
-        </div>
-    
-        <!-- Submenu: Product Items -->
-      
-          <div  class="submenu" *ngIf="product.items?.length" >
-            <div class="submenu-item"
-                 *ngFor="let item of product.items"
-                 [ngClass]="{'active': isActiveSubmenu(item)}"
-                 [routerLink]="item.path | lowercase"
-                 routerLinkActive="active-submenu">
-              <i [class]="item.icon"></i>
-              <span>{{ item.name }}</span>
-            </div>
-    
+        <div class="product-header ">
+          <div class="p-1">
+            <i [class]="product.pathIcon"></i>
+            <span>{{ product.key }}</span>  
+          </div>
           
+          <div 
+            class="toggle-icon"
+            *ngIf="product.items?.length && isMobileView()"
+            (click)="toggleSubmenu(product.key); $event.stopPropagation()"
+            [ngClass]="{
+              
+              'fa-solid fa-plus': !submenuVisibilityMap[product.key],
+              'fa-solid fa-minus': submenuVisibilityMap[product.key]
+            }">
+          </div>
+        </div>
+
+        <!-- Submenu: Product Items -->
+        <div class="submenu" 
+             *ngIf="product.items?.length && (submenuVisibilityMap[product.key] || !isMobileView())">
+          <div class="submenu-item"
+               *ngFor="let item of product.items"
+               [ngClass]="{'active': isActiveSubmenu(item)}"
+               [routerLink]="item.path | lowercase"
+               routerLinkActive="active-submenu">
+            <i [class]="item.icon"></i>
+            <span>{{ item.name }}</span>
+          </div>
         </div>
       </div>
     </div>
-    
 
     <!-- RIGHT SIDE: Banner + Details -->
     <div class="content-area">
       <div class="banner-container" *ngIf="selectedProduct">
-        <img class="service-image" 
-             [src]="selectedProduct?.img" 
+        <img class="service-image"
+             [src]="selectedProduct?.img"
              alt="Product Banner">
       </div>
 
