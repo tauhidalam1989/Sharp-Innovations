@@ -19,7 +19,7 @@
               [attr.aria-current]="last ? 'page' : null"
             >
               <a *ngIf="!last" class="text-bread" >{{ breadcrumb.label | translate }}</a>
-              <span *ngIf="last" class="text-bread">{{ breadcrumb.label | translate }}</span>
+              <span *ngIf="last" class="text-bread">{{ replaceHyphen(breadcrumb.label) | translate }}</span>
             </li>
           </ol>
         </nav>

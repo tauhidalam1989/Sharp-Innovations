@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild, HostListener } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-my-product-layout',
@@ -53,6 +54,11 @@ export class MyProductLayoutComponent implements OnInit, AfterViewInit {
         this.selectSubmenu(submenuKey);
         this.scrollToActiveItem();
       }
+    });
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      this.scrollToActiveItem();
     });
   }
   

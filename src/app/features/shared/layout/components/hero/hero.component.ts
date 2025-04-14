@@ -78,4 +78,8 @@ export class HeroComponent implements OnInit {
     if (!text) return '';
     return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
   }
+  replaceHyphen(label: string): string {
+    return label ? label.replace(/-/g, ' ') : label;
+  }
+  
 }
