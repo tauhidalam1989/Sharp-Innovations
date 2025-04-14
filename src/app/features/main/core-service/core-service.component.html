@@ -10,17 +10,20 @@
              [ngClass]="{'active': selectedService === service || (first && !selectedService)}">
              <img class="service-image" [src]="service.icon" width="20px" alt="Service Banner">
              <span>{{ service.title }}</span>
+             
         </div>
+      
       </div>
       
       <div class="content-area" #detailSection>
-        <div class="banner-container">
-          <img class="service-image" [src]="selectedService?.img || (('core_services' | translate)[0])?.img" alt="Service Banner">
-        </div>
+      
         <div class="service-details"  *ngIf="selectedService || ('core_services' | translate)[0]">
           <h2>{{(selectedService || ('core_services' | translate)[0]).title}}</h2>
           <p>{{(selectedService || ('core_services' | translate)[0]).description}}</p>
           <button class="explore-btn" [routerLink]="selectedService?.path">Explore More <i class="fas fa-arrow-right"></i></button>
+        </div>
+        <div class="banner-container">
+          <img class="service-image" [src]="selectedService?.img || (('core_services' | translate)[0])?.img" alt="Service Banner">
         </div>
       </div>
     </div>

@@ -13,10 +13,18 @@ export class HomeComponent {
     this.activeSlideIndex = index;
   }
   isLoading =true
+  private loadStartTime: number = 0;
   ngOnInit(){
     setTimeout(() => {
+      this.isLoading = false;
+      const loadEndTime = performance.now(); // End timing
+      const loadDuration = loadEndTime - this.loadStartTime;
+      console.log('Page finished loading at:', loadEndTime);
+      console.log(`Page load duration: ${loadDuration.toFixed(2)} ms`);
+    }, 100);
+    setTimeout(() => {
       this.isLoading = false; // Simulating a delay
-    }, 3000);
+    }, 100);
   }
   isHome: boolean = true;
   constructor(public pathService:RoutingService) {}

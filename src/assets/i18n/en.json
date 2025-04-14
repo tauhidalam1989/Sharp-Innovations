@@ -1240,7 +1240,7 @@
     "icon": "../../../../../../assets/img/artificial intelligence.png",
     "title": "Artificial Intelligence (AI)",
     "description": "Empower your business with cutting-edge AI solutions. From predictive analytics to intelligent automation, we harness the power of AI to drive smarter decisions, boost productivity, and uncover new opportunities for growth. Leverage machine learning models, natural language processing, and data-driven insights to stay ahead of the competition. Our AI solutions are tailored to adapt and scale with your evolving business needs, ensuring you remain innovative and future-ready.",
-    "img": "../../../../../../assets/img/Banner.png",
+    "img": "../../../../../../assets/img/Banner2.png",
     "path":"/services/ai-consulting"
   },
   {
@@ -1248,7 +1248,7 @@
     "icon": "../../../../../../assets/img/Automation.png",
     "title": "Automation",
     "description": "Streamline your operations with advanced automation technology. Reduce manual tasks, minimize errors, and accelerate workflows — giving your team more time to focus on innovation and high-impact initiatives. From robotic process automation (RPA) to intelligent workflows and automated reporting, we design systems that cut costs while enhancing speed and accuracy. Let automation unlock new levels of efficiency, ensuring your business runs smoothly — even at scale.",
-    "img": "../../../../../../assets/img/projects.png",
+    "img": "../../../../../../assets/img/Banner3.png",
      "path":"/services/it-infrastructure"
   },
   {
@@ -1256,7 +1256,7 @@
     "icon": "../../../../../../assets/img/Cybersecurity.png",
     "title": "Cybersecurity",
     "description": "Protect your digital ecosystem with next-generation cybersecurity solutions. We provide comprehensive defenses against evolving threats, ensuring your data, infrastructure, and reputation remain secure and resilient. Our proactive approach includes threat detection, vulnerability assessments, and rapid incident response to safeguard critical assets. Stay compliant with industry standards while fortifying your business from ransomware, data breaches, and emerging cyber risks.",
-    "img": "../../../../../../assets/img/Banner3.png",
+    "img": "../../../../../../assets/img/Slider/2.png",
      "path":"/services/cybersecurity-consulting"
   },
   {
@@ -1264,7 +1264,7 @@
     "icon": "../../../../../../assets/img/Application Services.png",
     "title": "Application Services",
     "description": "Unlock the full potential of your business with tailor-made applications. From development to deployment and maintenance, we craft scalable, high-performance apps designed to evolve with your business needs. Whether it’s a customer-facing mobile app, an internal management platform, or a data-driven web application — our team ensures intuitive designs, seamless integration, and robust performance to enhance user experience and drive productivity.",
-    "img": "../../../../../../assets/img/Banner2.png",
+    "img": "../../../../../../assets/img/Slider/3.png",
      "path":"/services/application-consulting"
   },
   {
@@ -1272,7 +1272,7 @@
     "icon": "../../../../../../assets/img/Consulting.png",
     "title": "Consulting",
     "description": "Achieve sustainable growth with strategic consulting services. Our experts work alongside your team to navigate complex challenges, optimize processes, and align technology with your long-term business goals. We dive deep into your industry, providing actionable insights and data-backed recommendations to help you innovate faster, reduce operational bottlenecks, and scale confidently. Let us bridge the gap between technology and business strategy — ensuring you stay competitive in an ever-evolving market.",
-    "img": "../../../../../../assets/img/projects.png",
+    "img": "../../../../../../assets/img/Slider/slider.png",
      "path":"/services/it-infrastructure"
   }
 ],

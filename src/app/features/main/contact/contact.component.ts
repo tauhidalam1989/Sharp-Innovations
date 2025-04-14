@@ -48,7 +48,7 @@ isLoading =true
         this.contactForm.reset();
           setTimeout(() => {
             this.success = false; // Reset green tick after a few seconds
-          }, 3000);
+          }, 1000);
         },
         () => {
           this.loading = false;
