@@ -13,15 +13,17 @@
           </div>
           
           <div 
-            class="toggle-icon"
-            *ngIf="product.items?.length && isMobileView()"
-            (click)="toggleSubmenu(product.key); $event.stopPropagation()"
-            [ngClass]="{
-              
-              'fa-solid fa-plus': !submenuVisibilityMap[product.key],
-              'fa-solid fa-minus': submenuVisibilityMap[product.key]
-            }">
-          </div>
+          class="toggle-icon"
+          *ngIf="product.items?.length && isMobileView()"
+          (click)="toggleSubmenu(product.key); $event.stopPropagation()"
+        >
+          <img 
+            [src]="submenuVisibilityMap[product.key] ? 'assets/logo/minus.png' : 'assets/logo/plus.png'" 
+            alt="toggle icon"
+            class="icon-img"
+          />
+        </div>
+        
         </div>
 
         <!-- Submenu: Product Items -->

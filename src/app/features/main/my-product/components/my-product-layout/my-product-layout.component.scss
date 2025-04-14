@@ -39,13 +39,11 @@
   border-radius: 12px;
   flex-wrap: wrap;
 }
-.toggle-icon {
-  //margin-right: auto;
-  font-size: 2rem;
-  color: #1363C6;
+.toggle-icon .icon-img {
+  width: 25px;
+  height: 25px;
   cursor: pointer;
 }
-
 .services-tabs {
   width: 370px;
   border-right: 1px solid #eee;
@@ -105,7 +103,7 @@
     display: flex;
   align-items: center;
   justify-content: space-between; /* This pushes the toggle to the end */
-  padding-right: 0.5rem; /* optional */
+  padding-right: 1.5rem;
     .p-1{
       display: flex;
     gap: 6px;
