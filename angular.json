@@ -27,12 +27,7 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              {
-                "glob": "**/*",
-                "input": "src/old",
-                "output": ""
-              }
+              "src/assets"
             ],
             "styles": [
             //  "node_modules/bootstrap/dist/css/bootstrap.min.css",
