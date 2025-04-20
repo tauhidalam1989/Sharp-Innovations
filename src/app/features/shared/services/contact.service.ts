@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ContactService {
-  private apiUrl = 'http://88.222.244.10:8092/v1/mail/send-mail'; // Replace with your API endpoint
+  private apiUrl = 'https://sharpinnovation-api.sharpinnvotech.com/v1/mail/send-mail'; // Replace with your API endpoint
   private apiUrlnews = 'http://localhost:8091/v1/mail/newsletter';
   
   constructor(private http: HttpClient) {}
