@@ -26,9 +26,9 @@ export class ContactComponent {
       contactNumber:['', [Validators.required]],
       organization:['']
     });
-    // setTimeout(() => {
-    //   this.isLoading = false; // Simulating a delay
-    // }, 3000);
+    setTimeout(() => {
+      this.isLoading = false; // Simulating a delay
+    }, 1000);
   }
 isLoading =true
   loading = false; // Spinner state
