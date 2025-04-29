@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { LanguageService } from './features/shared/services/language.service';
 import { Router, NavigationEnd } from '@angular/router';
 import { Title } from '@angular/platform-browser';
@@ -17,7 +17,8 @@ export class AppComponent implements OnInit {
     private languageService: LanguageService,
     private router: Router,
     private titleService: Title,
-    private translateService: TranslateService
+    private translateService: TranslateService,
+    private renderer: Renderer2
   ) {
     setTimeout(() => {
       this.isLoading = false; // Simulating a delay
@@ -73,6 +74,14 @@ export class AppComponent implements OnInit {
     const titleKey = titles[route] || 'PAGE_TITLES.DEFAULT';
     this.translateService.get(titleKey).subscribe((translatedTitle) => {
       this.titleService.setTitle(translatedTitle);
+    });
+  }
+  ngAfterViewInit() {
+    const elements = document.querySelectorAll('.wow');
+    elements.forEach((el) => {
+      this.renderer.removeClass(el, 'wow');
+      this.renderer.removeClass(el, 'animated'); // If using animate.css too
+      this.renderer.setStyle(el, 'visibility', 'visible'); // Make sure it's visible
     });
   }
 }

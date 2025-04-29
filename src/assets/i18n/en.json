@@ -224,6 +224,12 @@
     
     
 "career": {
+  "form": {
+    "name": "Name",
+    "designation": "Designation",
+    "upload_cv": "Upload CV",
+    "submit": "Submit"
+  },
   "careers_title": "Careers at Sharp Innovations",
   "careers_intro": "Shape the Future with Us",
   "careers_description": "At Sharp Innovations, we believe in crafting exceptional IT solutions that empower businesses and drive transformation. We are a team of forward-thinkers, problem-solvers, and innovators dedicated to making an impact. If you’re passionate about technology, creativity, and collaboration, we invite you to join us and build a career that sharpens your potential.",
@@ -1163,7 +1169,7 @@
       "icon": "fas fa-network-wired",
       "img":"../../../../../../assets/img/Banner2.png",
       "items": [
-        { "name": "Network Operation Center", "icon": "fas fa-server", "path":"NOC"},
+        { "name": "Network Operation Center", "icon": "fas fa-server", "path":"noc"},
         { "name": "Network Consulting", "icon": "fas fa-comments" ,"path":"network-consulting-services"  },
         { "name": "Network Infratructure Implementation", "icon": "fas fa-tools","path":"network-infrastructure-services" },
         { "name": "Network Maintenance and Support", "icon": "fas fa-tools","path":"network-infrastructure-maintenance" }
@@ -1191,7 +1197,6 @@
       "items": [
         { "name": "Web Application Development", "icon": "fas fa-code", "path": "web-app-development" },
         { "name": "Mobile Application Development", "icon": "fas fa-mobile-alt", "path": "mobile-app-development" },
-        { "name": "Windows Application Development", "icon": "fas fa-window-maximize" },
         { "name": "Application Consulting", "icon": "fas fa-chart-bar","path":"application-consulting" },
         { "name": "Application Maintenance and Operation", "icon": "fas fa-headset","path": "application-maintenance" },
         { "name": "Manpower Outsourcing(Application Experts)", "icon": "fas fa-user-friends","path":"manpower-outsourcing" }

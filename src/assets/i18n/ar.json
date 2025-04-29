@@ -233,6 +233,12 @@
     "mission": "في شركة شارب إنوفيشنز، نحن ملتزمون بالتميز، والابتكار المستمر، وتقديم نتائج ملموسة. فريقنا شغوف بمساعدة الشركات على البقاء في الطليعة في العصر الرقمي، ودعم رحلة المملكة العربية السعودية نحو أن تصبح مركزًا عالميًا للتكنولوجيا بحلول عام 2030"
   },
  "career": {
+  "form": {
+    "name": "الاسم",
+    "designation": "المسمى الوظيفي",
+    "upload_cv": "تحميل السيرة الذاتية",
+    "submit": "إرسال"
+  },
   "careers_title": "الوظائف في شركة ابتكارات حادة لتقنية المعلومات",
   "careers_intro": "ارسم مستقبلك معنا",
   "careers_description": "في شركة ابتكارات حادة، نعمل على إنشاء حلول تقنية استثنائية تمكن الشركات والمؤسسات من التطور والازدهار في مجال تقنية المعلومات لدفع عجلة التحول الرقمي. يتميز فريقنا بخبراته الواسعة في إدارة البنية التحتية التقنية، وتطوير الحلول الرقمية، وضمان أمن المعلومات ، والتحول الرقمي . إذا كنت شغوفًا بالتكنولوجيا والإبداع والتعاون، ندعوك للانضمام إلينا وبناء مسيرة مهنية تطور وتنمي مهاراتك وإمكانياتك.",
@@ -3302,7 +3308,7 @@
       "icon": "fas fa-network-wired",
       "img": "../../../../../../assets/img/Banner2.png",
       "items": [
-        { "name": "مركز تشغيل الشبكة", "icon": "fas fa-server", "path": "NOC" },
+        { "name": "مركز تشغيل الشبكة", "icon": "fas fa-server", "path": "noc" },
         { "name": "استشارات الشبكة", "icon": "fas fa-comments", "path": "network-consulting-services" },
         { "name": "تنفيذ البنية التحتية للشبكة", "icon": "fas fa-tools", "path": "network-infrastructure-services" },
         { "name": "صيانة ودعم الشبكة", "icon": "fas fa-tools", "path": "network-infrastructure-maintenance" }
@@ -3329,7 +3335,7 @@
       "items": [
         { "name": "تطوير التطبيقات على الويب", "icon": "fas fa-code", "path": "web-app-development" },
         { "name": "تطوير التطبيقات المحمولة", "icon": "fas fa-mobile-alt", "path": "mobile-app-development" },
-        { "name": "تطوير التطبيقات لنظام ويندوز", "icon": "fas fa-window-maximize" },
+       
         { "name": "استشارات التطبيقات", "icon": "fas fa-chart-bar", "path": "application-consulting" },
         { "name": "صيانة وتشغيل التطبيقات", "icon": "fas fa-headset", "path": "application-maintenance" },
         { "name": "الاستعانة بالعمالة (خبراء التطبيقات)", "icon": "fas fa-user-friends", "path": "manpower-outsourcing" }

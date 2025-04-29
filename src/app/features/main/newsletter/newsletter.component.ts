@@ -17,26 +17,5 @@ export class NewsletterComponent {
     });
   }
 
-  onSubmit(): void {
-    if (this.newsletterForm.valid) {
-      // Get the email from the form control
-      const email = this.newsletterForm.value.email;
 
-      // Call the newsletter service to send the subscription request
-      this.contactService.newsletter({ email })
-        .subscribe(
-          (response) => {
-            // Handle success response
-           // alert('Thank you for subscribing to our newsletter!');
-            this.newsletterForm.reset(); // Reset form
-          },
-          (error) => {
-            // Handle error response
-            //alert('An error occurred while subscribing. Please try again.');
-          }
-        );
-    } else {
-      //alert('Please enter a valid email.');
-    }
-  }
 }

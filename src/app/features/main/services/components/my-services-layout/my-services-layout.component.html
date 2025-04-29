@@ -1,0 +1,51 @@
+<section class=" mt-4">
+    <div class="services-layout">
+  
+      <!-- LEFT SIDE: Product Categories + Submenus -->
+      <div class="services-tabs " #submenuContainer>
+        <div *ngFor="let product of productsService" class="category-item" (click)="selectProduct(product)">
+          
+          <!-- Main Category -->
+          <div class="product-header ">
+            <div class="p-1">
+              <i [class]="product.pathIcon"></i>
+              <span>{{ product.key | translate }}</span>  
+            </div>
+            
+            <div 
+            class="toggle-icon"
+            *ngIf="product.items?.length && isMobileView()"
+            (click)="toggleSubmenu(product.key); $event.stopPropagation()"
+          >
+            <img 
+              [src]="submenuVisibilityMap[product.key] ? 'assets/logo/minus.png' : 'assets/logo/plus.png'" 
+              alt="toggle icon"
+              class="icon-img"
+            />
+          </div>
+          
+          </div>
+  
+          <!-- Submenu: Product Items -->
+          <div class="submenu" 
+               *ngIf="product.items?.length && (submenuVisibilityMap[product.key] || !isMobileView())">
+            <div class="submenu-item"
+                 *ngFor="let item of product.items"
+                 [ngClass]="{'active': isActiveSubmenu(item)}"
+                 [routerLink]="item.path"
+                 (click)="scrollTO()"
+                 routerLinkActive="active-submenu">
+              <i [class]="item.icon"></i>
+              <span>{{ item.name | translate }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- RIGHT SIDE: Banner + Details -->
+      <div class="content-area" #contentArea>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </section>
+  

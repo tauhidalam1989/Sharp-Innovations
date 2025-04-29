@@ -14,7 +14,7 @@
           </div>
           <h1 class="text-white mb-4">{{ 'NEWSLETTER.SUBSCRIBE' | translate }}</h1>
   
-          <form [formGroup]="newsletterForm" (ngSubmit)="onSubmit()">
+          <form [formGroup]="newsletterForm" >
             <div class="position-relative w-100 mt-3 mb-2">
               <input
                 formControlName="email"

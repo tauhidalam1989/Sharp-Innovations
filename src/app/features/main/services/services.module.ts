@@ -39,6 +39,7 @@ import { PmoServicesComponent } from './pmo-services/pmo-services.component';
 import { OracleAutomationComponent } from './oracle-automation/oracle-automation.component';
 import { OracleVisualBuilderComponent } from './oracle-visual-builder/oracle-visual-builder.component';
 import { ItInfrastructureComponent } from './it-infrastructure/it-infrastructure.component';
+import { MyServicesLayoutComponent } from './components/my-services-layout/my-services-layout.component';
 
 
 @NgModule({
@@ -78,7 +79,8 @@ import { ItInfrastructureComponent } from './it-infrastructure/it-infrastructure
     PmoServicesComponent,
     OracleAutomationComponent,
     OracleVisualBuilderComponent,
-    ItInfrastructureComponent
+    ItInfrastructureComponent,
+    MyServicesLayoutComponent
   ],
   imports: [
     CommonModule,

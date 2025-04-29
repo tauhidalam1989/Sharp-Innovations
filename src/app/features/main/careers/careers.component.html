@@ -11,10 +11,10 @@
 
         <!-- Introduction Section -->
         <div class="row align-items-center g-5 mb-5">
-            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.3s">
+            <div class="col-lg-6  fadeInLeft" data-wow-delay="0.3s">
                 <img class="img-fluid rounded shadow-lg" src="../../../../assets/img/career.png" alt="Careers Image">
             </div>
-            <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+            <div class="col-lg-6  fadeInRight" data-wow-delay="0.3s">
                 <p class="fs-5 text-muted">{{ 'career.careers_description' | translate }}</p>
             </div>
         </div>
@@ -175,6 +175,31 @@
             <h3 class="fw-bold text-dark">{{ 'career.closing_statement' | translate }}</h3>
             <p class="fs-5 text-muted">{{ 'career.closing_description' | translate }}</p>
         </div>
+        <!-- Career Form Section -->
+<!-- <div class="mt-5 wow fadeInUp" data-wow-delay="1s">
+    <form [formGroup]="careerForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <label class="form-label">{{ 'career.form.name' | translate }}</label>
+          <input type="text" class="form-control" formControlName="name" required />
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">{{ 'career.form.designation' | translate }}</label>
+          <input type="text" class="form-control" formControlName="designation" required />
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">{{ 'career.form.upload_cv' | translate }}</label>
+          <input type="file" class="form-control" (change)="onFileChange($event)" required />
+        </div>
+        <div class="col-md-12 text-center">
+          <button class="btn btn-primary mt-3" type="submit" [disabled]="careerForm.invalid">
+            {{ 'career.form.submit' | translate }}
+          </button>
+        </div>
+      </div>
+    </form>
+  </div> -->
+  
     </div>
 </div>
 <!-- Careers Page End -->
