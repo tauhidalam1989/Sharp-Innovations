@@ -23,8 +23,8 @@ export class HomeComponent {
       console.log(`Page load duration: ${loadDuration.toFixed(2)} ms`);
     }, 100);
     setTimeout(() => {
-      this.isLoading = false; // Simulating a delay
-    }, 100);
+      this.isLoading = false; 
+    }, 3000);
   }
   isHome: boolean = true;
   constructor(public pathService:RoutingService) {}

@@ -20,7 +20,7 @@
   
   .loader-image {
     width: 100px; /* Adjust size as needed */
-    border-radius: 20px; /* Optional: rounded corners */
+    border-radius: 29px; /* Optional: rounded corners */
   }
   
   .loader-border {
@@ -30,20 +30,5 @@
     border-radius: 10px;
     border: 3px solid transparent;
    // animation: borderPulse 1.5s infinite linear;
-  }
-  
-  @keyframes borderPulse {
-    0% {
-      border-color: transparent;
-      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    }
-    50% {
-      border-color: #007bff;
-      box-shadow: 0 0 15px rgba(0, 123, 255, 0.8);
-    }
-    100% {
-      border-color: transparent;
-      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    }
   }
   
