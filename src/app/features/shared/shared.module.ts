@@ -13,7 +13,7 @@ import { LoaderComponent } from './components/loader/loader.component';
 import { SidebarComponent } from './layout/components/sidebar/sidebar.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { PrivacyComponent } from './components/privacy/privacy.component';
-
+import { CookieConsentComponent } from './components/cookie-consent/cookie-consent.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +25,7 @@ import { PrivacyComponent } from './components/privacy/privacy.component';
     LoaderComponent,
     SidebarComponent,
     PrivacyComponent,
+    CookieConsentComponent,
   ],
   imports: [
     CommonModule,
@@ -33,7 +34,15 @@ import { PrivacyComponent } from './components/privacy/privacy.component';
     CarouselModule,
     ModalModule.forRoot(),
   ],
-  exports:[SiteFooterComponent,TranslateModule,TypingEffectComponent,LoaderComponent,CarouselModule,ModalModule],
+  exports: [
+    SiteFooterComponent,
+    TranslateModule,
+    TypingEffectComponent,
+    LoaderComponent,
+    CarouselModule,
+    ModalModule,
+    CookieConsentComponent
+  ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA],
 })
 export class SharedModule { }

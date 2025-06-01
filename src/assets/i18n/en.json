@@ -23,7 +23,7 @@
         "FEATURESS": {
             "WHY_CHOOSE_US": "Why Choose Sharp Innovations?",
             "TITLE": "We Are Sharp Innovations Company for Information Technology",
-            "DESCRIPTION": "At Sharp Innovations, we’re not just service providers — We’re your strategic partners in driving digital transformation. With a proven track record and a team of dedicated experts, we bring clarity, security, and innovation to your technology landscape.",
+            "DESCRIPTION": "At Sharp Innovations, we're not just service providers — We're your strategic partners in driving digital transformation. With a proven track record and a team of dedicated experts, we bring clarity, security, and innovation to your technology landscape.",
             "FEATURE_ONE": "Across industries and continents, our clients trust us to deliver results that matter. From startups to enterprises, we build lasting relationships through consistent performance and genuine partnership.",
             "FEATURE_TWO": "Every project we take on is a mission—executed with precision, driven by strategy, and backed by deep expertise in Application Management, Cybersecurity, Network infrastructure, and AI consulting.",
             "HAPPY_CLIENTS": "Happy Clients",
@@ -31,7 +31,7 @@
           },
           "CONTACT-FORM": {
   "US": "Contact Us",
-  "QUERY_PROMPT": "We’d love to hear your thoughts and feedback on any of our solutions and services. Our team is always here to assist you and respond to your inquiries at any time",
+  "QUERY_PROMPT": "We'd love to hear your thoughts and feedback on any of our solutions and services. Our team is always here to assist you and respond to your inquiries at any time",
   "FORM_INACTIVE": "The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes.",
   "DOWNLOAD_NOW": "Download Now",
   "YOUR_NAME": "Your Name",
@@ -80,10 +80,10 @@
     "ANSWER4": "Absolutely. All websites we create are designed with a mobile-first approach, ensuring they are fully responsive and optimized for all devices, including smartphones, tablets, and desktops. This guarantees a seamless user experience across all screen sizes.",
     "QUESTION5": "Will you maintain my site for me?",
     "ANSWER5": "Yes, we offer comprehensive maintenance packages to keep your website secure, up-to-date, and running smoothly. Our services include regular updates, backups, security monitoring, and technical support to ensure your site remains in top condition.",
-    "QUESTION6": "I’m on a strict budget. Do you have any low-cost options?",
-    "ANSWER6": "Yes, we understand that small businesses and startups often have budget constraints. We offer affordable packages that include essential features to get your website up and running without compromising on quality. Let us know your budget, and we’ll work with you to create a solution that fits your needs.",
-    "QUESTION7": "Can I update the website myself once it’s built?",
-    "ANSWER7": "Yes, we build websites using user-friendly content management systems (CMS) like WordPress, which allow you to easily update content, add blog posts, upload images, and make other changes without needing technical expertise. We also provide training to ensure you’re comfortable managing your site.",
+    "QUESTION6": "I'm on a strict budget. Do you have any low-cost options?",
+    "ANSWER6": "Yes, we understand that small businesses and startups often have budget constraints. We offer affordable packages that include essential features to get your website up and running without compromising on quality. Let us know your budget, and we'll work with you to create a solution that fits your needs.",
+    "QUESTION7": "Can I update the website myself once it's built?",
+    "ANSWER7": "Yes, we build websites using user-friendly content management systems (CMS) like WordPress, which allow you to easily update content, add blog posts, upload images, and make other changes without needing technical expertise. We also provide training to ensure you're comfortable managing your site.",
     "QUESTION8": "Do you provide hosting services?",
     "ANSWER8": "Yes, we offer reliable and secure hosting services to ensure your website performs optimally. Our hosting solutions include fast loading speeds, robust security measures, and 24/7 technical support to keep your site running smoothly. We can also help you migrate your existing site to our hosting platform."
   },
@@ -141,13 +141,13 @@
     "FEEDBACK_1": "They have got my project on time with the competition with a sed highly skilled, and experienced &amp; professional team.",
     "CLIENT_NAME_1": "Talal Naseer Alharbi",
     "PROFESSION_1": "Manager of Al-Qassim Chalets",
-    "FEEDBACK_2": "SIIT’s dedication to service with excellent expertise and know how in the IT industry is why we partnered with them. Excellent communication and skilled staff with quarterly review meetings and updates about growing trends with a proactive approach to all things IT.",
+    "FEEDBACK_2": "SIIT's dedication to service with excellent expertise and know how in the IT industry is why we partnered with them. Excellent communication and skilled staff with quarterly review meetings and updates about growing trends with a proactive approach to all things IT.",
     "CLIENT_NAME_2": "Kofi Amadi",
     "PROFESSION_2": "Director of IT, Stanley Benefits",
     "FEEDBACK_3": "The project was aggressive and SIIT's team was very supportive with our deliverables.",
     "CLIENT_NAME_3": "Mr. Roman Ahmed",
     "PROFESSION_3": "SAHET",
-    "FEEDBACK_4": "We have used Internetwork Engineering on a number of projects and have always had great success. They’re reliable and trustworthy. They have always been great about working with us to deliver affordable products and services. We want to provide our students with the tools they need to support their learning and to prepare them for higher education opportunities and careers. SIIT helped us make that a reality",
+    "FEEDBACK_4": "We have used Internetwork Engineering on a number of projects and have always had great success. They're reliable and trustworthy. They have always been great about working with us to deliver affordable products and services. We want to provide our students with the tools they need to support their learning and to prepare them for higher education opportunities and careers. SIIT helped us make that a reality",
     "CLIENT_NAME_4": "Harriet Zwart",
     "PROFESSION_4": "IT Director, Lexington School District One",
     "FEEDBACK_5": "When our phone system suffered an outage on a Saturday night, SIIT ruled out the network and contacted the phone and circuit companies.  By Sunday morning, our system was fully operational.  The way SIIT handled the situation was PERFECT!  SIIT did exactly what I want my MSP to do - they just took care of it.  Thank you SIIT team!",
@@ -179,7 +179,8 @@
     "HOME": "Home",
     "COOKIES": "Cookies",
     "HELP": "Help",
-    "FAQS": "FAQs"
+    "FAQS": "FAQs",
+    "privacy_policy": "Privacy Policy"
   },
   "HOMEs": {
     "HERO_TAGLINE": "Sharp Innovations",
@@ -218,7 +219,7 @@
   "about_page":{
     "p1":"Welcome to Sharp Innovations, a premier IT services and product company based in Saudi Arabia. Founded in 2023 by industry experts, Sharp Innvovations is dedicated to providing innovative technology solutions that help businesses succeed in an increasingly digital world.",
     "p2":"Our mission is clear: to empower organizations by harnessing the transformative power of technology. By specializing in Artificial Intelligence, Automation, Cybersecurity, Application Services, and Consulting, we design and deliver solutions tailored to meet the unique needs of our clients, ensuring they achieve their business goals with efficiency and security.",
-    "p3":"We are proud to align our vision with Saudi Arabia’s Vision 2030, contributing to the country’s ambitious goals of becoming a global leader in innovation, technology, and economic diversification. Our services are crafted to not only support the growth of our clients but also contribute to the development of a knowledge-based, sustainable economy" 
+    "p3":"We are proud to align our vision with Saudi Arabia's Vision 2030, contributing to the country's ambitious goals of becoming a global leader in innovation, technology, and economic diversification. Our services are crafted to not only support the growth of our clients but also contribute to the development of a knowledge-based, sustainable economy" 
   },
     
  
@@ -233,10 +234,10 @@
   },
   "careers_title": "Careers at Sharp Innovations",
   "careers_intro": "Shape the Future with Us",
-  "careers_description": "At Sharp Innovations, we believe in crafting exceptional IT solutions that empower businesses and drive transformation. We are a team of forward-thinkers, problem-solvers, and innovators dedicated to making an impact. If you’re passionate about technology, creativity, and collaboration, we invite you to join us and build a career that sharpens your potential.",
+  "careers_description": "At Sharp Innovations, we believe in crafting exceptional IT solutions that empower businesses and drive transformation. We are a team of forward-thinkers, problem-solvers, and innovators dedicated to making an impact. If you're passionate about technology, creativity, and collaboration, we invite you to join us and build a career that sharpens your potential.",
   
   "why_choose_us_title": "Why Choose Sharp Innovations?",
-  "why_choose_us_description": "At Sharp Innovations, we don’t just build technology—we build futures. Here's why you’ll love working with us:",
+  "why_choose_us_description": "At Sharp Innovations, we don't just build technology—we build futures. Here's why you'll love working with us:",
   "why_choose_us_points": {
     "point1_title": "Innovation-Driven Culture",
     "point1_description": "We thrive on new ideas and encourage out-of-the-box thinking to solve real-world challenges.",
@@ -272,11 +273,11 @@
 
   "join_us_title": "Join Our Growing Team",
   "join_us_description": "Are you ready to be part of a company that values your skills and invests in your growth? Take the next step and explore our current job openings.",
-  "no_role_found": "Can’t find the right role?",
-  "no_role_description": "We’d still love to hear from you. Send your resume to *[hr@sharpinnovations.com]* and let us know how you can contribute to our mission.",
+  "no_role_found": "Can't find the right role?",
+  "no_role_description": "We'd still love to hear from you. Send your resume to *[hr@sharpinnovations.com]* and let us know how you can contribute to our mission.",
   
-  "closing_statement": "Let’s Innovate Together",
-  "closing_description": "At Sharp Innovations, we’re not just offering jobs—we’re creating opportunities to innovate, inspire, and grow. Join us in shaping the future of IT solutions!"
+  "closing_statement": "Let's Innovate Together",
+  "closing_description": "At Sharp Innovations, we're not just offering jobs—we're creating opportunities to innovate, inspire, and grow. Join us in shaping the future of IT solutions!"
 },
 
 
@@ -353,7 +354,7 @@
         },
         "cta_lets_create": {
           "title": "Let's Create Big Stories Together",
-          "content": "Web development is in our DNA. We don’t just craft websites, we shape brands. Selecting us will be your smartest choice.",
+          "content": "Web development is in our DNA. We don't just craft websites, we shape brands. Selecting us will be your smartest choice.",
           "button": "Get a Quote"
         },
         "core_values": {
@@ -388,7 +389,7 @@
         },
         "dedicated_developers": {
           "title": "Are you looking to hire top-tier dedicated developers? Look no further than Sharp Innovations",
-          "description": "With a wide range of web and app development technologies, Sharp Innovations’s dedicated developers come with core expertise and years of experience.",
+          "description": "With a wide range of web and app development technologies, Sharp Innovations's dedicated developers come with core expertise and years of experience.",
           "services": {
             "frontend": "Hire Frontend Developers",
             "backend": "Hire Backend Developers",
@@ -437,7 +438,7 @@
         },
         "cta_tell_us": {
           "title": "Tell us about your project",
-          "button": "Let’s Talk"
+          "button": "Let's Talk"
         },
         "industry_wise_services": {
           "title": "Industry-wise Mobile App Development Services",
@@ -491,7 +492,7 @@
         "unleash_app_potential": {
           "title": "Unleash App Potential",
           "content": "Dive into a realm where design meets function. With us, every pixel is crafted with purpose. Elevate your brand, one app at a time.",
-          "button": "Let’s Talk"
+          "button": "Let's Talk"
         },
         "flexible_models": {
           "title": "Flexible Models to Work with Our App Developers",
@@ -501,7 +502,7 @@
           },
           "complete_project_outsource": {
             "title": "Complete Project Outsource",
-            "content": "Don’t want any hassle for your next big idea? Don’t worry because Sharp Innovations’s app development team is always ready to serve the best results as your end product. Just share your requirements and we’ll focus on delivery."
+            "content": "Don't want any hassle for your next big idea? Don't worry because Sharp Innovations's app development team is always ready to serve the best results as your end product. Just share your requirements and we'll focus on delivery."
           }
         },
         "hire_dedicated_developers": {
@@ -568,7 +569,7 @@
       "title": "Hire Dedicated Developers With Wide Expertise",
       "public_cloud": {
         "title": "Public Cloud",
-        "description": "Utilize the public cloud’s scalability and ease of usage. Learn all there is to know about our public cloud consultation services."
+        "description": "Utilize the public cloud's scalability and ease of usage. Learn all there is to know about our public cloud consultation services."
       },
       "private_cloud": {
         "title": "Private Cloud",
@@ -602,7 +603,7 @@
       },
       "reduced_costs": {
         "title": "Reduced Costs",
-        "description": "This is the primary purpose of any company. A well-chosen cloud model will enable you to pay only for the services you really utilize. This implies you won’t have to pay for the infrastructure up front."
+        "description": "This is the primary purpose of any company. A well-chosen cloud model will enable you to pay only for the services you really utilize. This implies you won't have to pay for the infrastructure up front."
       },
       "ease_to_setup": {
         "title": "Ease to Set Up",
@@ -646,7 +647,7 @@
   },
   "chatbot_development": {
     "title": "End-to-end Chatbot Development Services",
-    "intro": "We help organizations utilize Google Assistant to communicate with their digital product users at any time as Actions on Google development professionals, but there’s more to our job than that! We can also create Alexa and Siri assistants, as well as intelligent chatbots that increase sales, enhance communication, and improve customer service.",
+    "intro": "We help organizations utilize Google Assistant to communicate with their digital product users at any time as Actions on Google development professionals, but there's more to our job than that! We can also create Alexa and Siri assistants, as well as intelligent chatbots that increase sales, enhance communication, and improve customer service.",
     "cta": "Get Started",
     "wide_range_solutions": {
       "title": "Wide Range Of Our Chatbot Development Solutions",
@@ -692,7 +693,7 @@
       },
       "user_friendly_interactions": {
         "title": "User-Friendly Interactions",
-        "description": "We’ll establish personas to guarantee that your assistants fit your business objectives, prototype and design voice interfaces to attain trust, and offer a quality experience with natural conversation."
+        "description": "We'll establish personas to guarantee that your assistants fit your business objectives, prototype and design voice interfaces to attain trust, and offer a quality experience with natural conversation."
       }
     },
     "industry_wise_services": {
@@ -792,7 +793,7 @@
       },
       "online_reputation_management": {
         "title": "Online Reputation Management",
-        "description": "We go beyond digital marketing to maintain your brand’s identity through online reputation management services."
+        "description": "We go beyond digital marketing to maintain your brand's identity through online reputation management services."
       },
       "web_conversion_optimization": {
         "title": "Web Conversion Optimization",
@@ -804,7 +805,7 @@
       },
       "authority_building_pr": {
         "title": "Authority Building & PR",
-        "description": "Sharp Innovations’s digital marketing team has professional connections in digital media to build and grow the authority of your brand online."
+        "description": "Sharp Innovations's digital marketing team has professional connections in digital media to build and grow the authority of your brand online."
       }
     },
     "tell_us_about_your_project": {
@@ -859,7 +860,7 @@
       },
       "significant_industrial_exposure": {
         "title": "Significant Industrial Exposure",
-        "description": "We’ve worked with clients across several industries and for different requirements to serve them with ROI-focused results."
+        "description": "We've worked with clients across several industries and for different requirements to serve them with ROI-focused results."
       },
       "scaling_solutions": {
         "title": "Scaling Solutions",
@@ -867,7 +868,7 @@
       },
       "optimized_conversions": {
         "title": "Optimized Conversions",
-        "description": "Sharp Innovations will delve deep into your current data to track and optimize conversion across your site, resulting in a comprehensive study of your visitors’ behavior and site flow."
+        "description": "Sharp Innovations will delve deep into your current data to track and optimize conversion across your site, resulting in a comprehensive study of your visitors' behavior and site flow."
       }
     },
     "why_Sharp Innovations": {
@@ -886,7 +887,7 @@
       },
       "in_depth_analysis": {
         "title": "In-depth Analysis",
-        "description": "Our insights illustrate our ability to grasp each business’s unique demands and modify our strategy to maximize income from digital marketing services."
+        "description": "Our insights illustrate our ability to grasp each business's unique demands and modify our strategy to maximize income from digital marketing services."
       }
     },
     "elevate_your_brand": {
@@ -901,7 +902,7 @@
     "cta": "Get Started",
     "know_our_expertise": {
       "title": "Know Our Expertise With UI/UX Designing",
-      "content": "Sharp Innovations’s UI/UX designers are well-versed to utilize the latest tools and frameworks for molding ideas into engaging screens. Our wide range of solutions can be served flexibly with these solutions."
+      "content": "Sharp Innovations's UI/UX designers are well-versed to utilize the latest tools and frameworks for molding ideas into engaging screens. Our wide range of solutions can be served flexibly with these solutions."
     },
     "services_section": "Our Services",
     "services": {
@@ -955,7 +956,7 @@
     "revamp_digital_presence": {
       "title": "Revamp Your Digital Presence with Premium UI/UX Services",
       "content": "Unleash the potential of outstanding design! Opt for our top-tier UI/UX services and observe your user engagement skyrocket.",
-      "button": "Let’s Discuss"
+      "button": "Let's Discuss"
     },
     "ever_trusting_process": {
       "title": "Ever-trusting UI/UX Design Process",
@@ -967,7 +968,7 @@
     },
     "designing_an_interface": {
       "title": "Designing an Interface",
-      "description": "Creating the most desirable and unique user interface’s structural, compositional, and visual design."
+      "description": "Creating the most desirable and unique user interface's structural, compositional, and visual design."
     },
     "prototyping": {
       "title": "Prototyping",
@@ -1269,7 +1270,7 @@
     "key": "APPLICATION",
     "icon": "../../../../../../assets/img/Application Services.png",
     "title": "Application Services",
-    "description": "Unlock the full potential of your business with tailor-made applications. From development to deployment and maintenance, we craft scalable, high-performance apps designed to evolve with your business needs. Whether it’s a customer-facing mobile app, an internal management platform, or a data-driven web application — our team ensures intuitive designs, seamless integration, and robust performance to enhance user experience and drive productivity.",
+    "description": "Unlock the full potential of your business with tailor-made applications. From development to deployment and maintenance, we craft scalable, high-performance apps designed to evolve with your business needs. Whether it's a customer-facing mobile app, an internal management platform, or a data-driven web application — our team ensures intuitive designs, seamless integration, and robust performance to enhance user experience and drive productivity.",
     "img": "../../../../../../assets/img/Slider/3.png",
      "path":"/services/application-consulting"
   },
@@ -1286,7 +1287,7 @@
   "MSSP": {
     "title": "Managed Security Services (MSSP)",
     "subtitle": "Proactive Protection for Your Digital Assets",
-    "description": "In today’s rapidly evolving threat landscape, organizations need 24/7 monitoring and advanced security solutions to protect their critical infrastructure. Sharp Innovations offers comprehensive Managed Security Services (MSSP) to proactively detect, prevent, and respond to cyber threats, ensuring your business remains secure and compliant.",
+    "description": "In today's rapidly evolving threat landscape, organizations need 24/7 monitoring and advanced security solutions to protect their critical infrastructure. Sharp Innovations offers comprehensive Managed Security Services (MSSP) to proactively detect, prevent, and respond to cyber threats, ensuring your business remains secure and compliant.",
     "why_choose_us": {
       "title": "Why Choose Sharp Innovations for Managed Security Services?",
       "points": [
@@ -1396,14 +1397,14 @@
     },
     "call_to_action": {
       "title": "Secure Your Business with Sharp Innovations Today!",
-      "description": "Don’t wait for a cyberattack to happen—proactively protect your business with our Managed Security Services. Contact us today to learn more."
+      "description": "Don't wait for a cyberattack to happen—proactively protect your business with our Managed Security Services. Contact us today to learn more."
     }
   },
   
  "CybersecurityConsultingServices": {
     "title": "Cybersecurity Consulting Services",
     "subtitle": "Empowering Businesses with Expert Security Strategies and Risk Mitigation",
-    "description": "In today’s rapidly evolving digital landscape, organizations face growing cybersecurity threats that can compromise sensitive data, disrupt operations, and damage reputation. Sharp Innovations provides comprehensive Cybersecurity Consulting Services to help businesses identify vulnerabilities, mitigate risks, and strengthen their security posture. Our team of experts brings deep industry knowledge and cutting-edge solutions to ensure your organization remains secure, compliant, and resilient against cyber threats.",
+    "description": "In today's rapidly evolving digital landscape, organizations face growing cybersecurity threats that can compromise sensitive data, disrupt operations, and damage reputation. Sharp Innovations provides comprehensive Cybersecurity Consulting Services to help businesses identify vulnerabilities, mitigate risks, and strengthen their security posture. Our team of experts brings deep industry knowledge and cutting-edge solutions to ensure your organization remains secure, compliant, and resilient against cyber threats.",
     "core_services": {
       "title": "Our Cybersecurity Consulting Services",
       "services": [
@@ -1475,7 +1476,7 @@
     },
     "call_to_action": {
       "title": "Secure Your Business Now",
-      "description": "Don’t wait for a breach to happen — protect your data and fortify your organization with Sharp Innovations’ Cybersecurity Consulting Services.",
+      "description": "Don't wait for a breach to happen — protect your data and fortify your organization with Sharp Innovations' Cybersecurity Consulting Services.",
       "button_text": "Get a Free Consultation"
     }
   },
@@ -1646,7 +1647,7 @@
       "NetworkSecurityServices": {
         "title": "Network Security Services",
         "subtitle": "Protecting Your Digital Assets with Advanced Security Solutions",
-        "description": "In today’s digital landscape, cyber threats are more sophisticated than ever. At Sharp Innovations, we provide comprehensive Network Security Services to safeguard your organization’s critical infrastructure, ensuring confidentiality, integrity, and availability of your data and systems.",
+        "description": "In today's digital landscape, cyber threats are more sophisticated than ever. At Sharp Innovations, we provide comprehensive Network Security Services to safeguard your organization's critical infrastructure, ensuring confidentiality, integrity, and availability of your data and systems.",
         "core_services": {
           "title": "Our Network Security Solutions",
           "services": [
@@ -1751,7 +1752,7 @@
               },
               {
                 "title": "Tailored Security Solutions",
-                "description": "We customize implementation strategies based on your organization’s industry, size, and risk profile."
+                "description": "We customize implementation strategies based on your organization's industry, size, and risk profile."
               },
               {
                 "title": "Cutting-Edge Technologies",
@@ -1945,7 +1946,7 @@
     },
     "call_to_action": {
       "title": "Future-Proof Your Security Team Today!",
-      "description": "Invest in top-tier cybersecurity training with Sharp Innovations and strengthen your organization’s defense against cyber threats."
+      "description": "Invest in top-tier cybersecurity training with Sharp Innovations and strengthen your organization's defense against cyber threats."
     }
   },
   "CybersecurityOutsourcingService": {
@@ -3685,6 +3686,15 @@
       "description": "In case of any questions, comments, or complaints you can reach us via email or call customer service center.",
       "authority": "The competent supervisory authority for Sharp Innovations activities is the Communications, Space and Technology Commission (CST)"
     }
+  },
+    "cookieConsent": {
+    "title": "This website uses cookies to ensure you get the best experience on our website",
+    "description": "Sharp Innovations uses cookies and similar technologies to ensure you get the best experience on this website. If you consent to it, we will use cookies for analytics purposes",
+    "accept": "Accept All Cookies",
+    "policy": "Cookie Policy"
+  },
+  "visitorCounter": {
+    "text": "visitors today"
   }
 
 

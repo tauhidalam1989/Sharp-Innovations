@@ -1,0 +1,31 @@
+<!-- Modal Backdrop -->
+<div class="cookie-modal-backdrop" *ngIf="showConsent"></div>
+
+<!-- Cookie Consent Modal -->
+<div class="cookie-consent" *ngIf="showConsent">
+    <div class="cookie-modal">
+        <div class="cookie-content">
+            <h2>{{ 'cookieConsent.title' | translate }}</h2>
+            <p>{{ 'cookieConsent.description' | translate }}</p>
+            <div class="cookie-actions">
+                <button class="btn btn-primary rounded-pill px-4" (click)="acceptCookies()">
+                    {{ 'cookieConsent.accept' | translate }}
+                </button>
+                <button class="btn btn-secondary rounded-pill px-4" (click)="viewPolicy()">
+                    {{ 'cookieConsent.policy' | translate }}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Visitor Counter -->
+<div class="visitor-counter">
+    <div class="container">
+        <div class="counter-content">
+            <i class="fas fa-users"></i>
+            <span class="counter-number">{{ visitorCount }}</span>
+            <span class="counter-text">{{ 'visitorCounter.text' | translate }}</span>
+        </div>
+    </div>
+</div> 
