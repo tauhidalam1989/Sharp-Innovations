@@ -11,6 +11,7 @@ import { TestimonialComponent } from './features/main/testimonial/testimonial.co
 import { FeatureComponent } from './features/main/feature/feature.component';
 import { ProjectsComponent } from './features/main/projects/projects.component';
 import { CareersComponent } from './features/main/careers/careers.component';
+import { PrivacyComponent } from './features/shared/components/privacy/privacy.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,10 @@ const routes: Routes = [
       {
         path: "about",
         component: AboutComponent,
+      },
+      {
+        path: "privacy",
+        component: PrivacyComponent,
       },
       {
         path: "home",

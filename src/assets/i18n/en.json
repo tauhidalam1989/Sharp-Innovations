@@ -3592,6 +3592,99 @@
     "modal": {
       "title": "Image Preview"
     }
+  },
+  "privacyNotice": {
+    "title": "Privacy Notice",
+    "introduction": "Sharp Innovations respects your privacy and it is our objective to provide excellent service to all our customers. This privacy notice is formulated in accordance with the Personal Data Protection Law and Regulations in the Kingdom of Saudi Arabia to help you understand the nature of data we collect from you and how this data will be treated by Sharp Innovations.",
+    "scope": "This privacy notice applies to all sectors and business units in the Company. All Company staff, contractors, and vendors working either on a permanent or temporary basis are obliged to follow the outlined standards.",
+    
+    "whyWeCollect": {
+      "title": "Why We Collect and Use Your Personal Data",
+      "description": "To provide you the highest standard of service and products, we collect and use your personal data.",
+      "legalBasis": {
+        "title": "The legal basis for processing your personal data is:",
+        "items": [
+          "Contractual – to fulfil our service obligations to you.",
+          "Legitimate interest - for activities such as certain types of marketing, preventing fraud and ensuring network and information security.",
+          "Consent – for other activities such as information, sales & certain types of marketing.",
+          "Legal obligation – to comply with government requirements including but not limited to, national security and protection of public health."
+        ]
+      },
+      "purposes": {
+        "title": "The purposes of this data collection including but not limited to:",
+        "items": [
+          "Enabling us to develop, enhance, market and/or deliver products and services to Sharp Innovations customers.",
+          "Enabling and supporting our operation and systems to ensure continuity and quality to our services and provide accurate billing and enable us to process payments for products and services.",
+          "Understanding your needs as customers and your eligibility for products and services and recommend products and services that would be relevant to you.",
+          "Communicating new product and services launched.",
+          "Resolving any queries or complaints you may have and allows us to provide you a personalized customer experience across all our channels."
+        ]
+      }
+    },
+
+    "cookies": {
+      "title": "Cookies Usage",
+      "description": "Sharp Innovations uses cookies and similar technologies to improve your experience on our website. This includes:",
+      "purposes": [
+        "Keeping you signed in.",
+        "Necessary for operation of the website.",
+        "Understanding how you use our website and mobile apps."
+      ]
+    },
+
+    "personalData": {
+      "title": "What Personal Data We Collect and Use",
+      "description": "The main types of personal data we collect from you and use include:",
+      "types": [
+        "Data required when registering with our services (such as name, e-mail address, address, phone number, date of birth, nationality, gender).",
+        "Data required for you to use of our services, websites or mobile apps (such as cookies and usage data).",
+        "Data exchanged during communications with you (such as customer support requests and feedback from you)."
+      ]
+    },
+
+    "dataCollection": {
+      "title": "How We Collect Your Personal Data",
+      "methods": [
+        "Product and Services – When you register, use or sign a contract to become our customer and use one of our products or services.",
+        "Direct Interactions – When you complete a form and send it to us via our website, mobile apps, by email, post or via a phone call to our call center.",
+        "Social Media Interactions – Any posts and interactions you have directly with us on social media channels.",
+        "Browsing – Data about how you are using our web site.",
+        "Web Surveys – Our online web surveys enable us to gather specific data regarding issues such as your feedback."
+      ]
+    },
+
+    "dataRetention": {
+      "title": "How Long We Store Your Personal Data",
+      "description": "Your personal data is retained only for the duration necessary to fulfil its intended purposes and meet legal, regulatory, accounting, or reporting obligations. Sharp Innovations ensure data deletion after this necessary duration."
+    },
+
+    "dataProtection": {
+      "title": "Data Protection and Disclosure",
+      "description": "We take the protection of your data very seriously and will employ appropriate organizational and technical data protection and security measures and procedures.",
+      "sharing": "Sharp Innovations does not rent, sell, exchange, or transfer your personal data to third parties outside of Sharp Innovations."
+    },
+
+    "customerRights": {
+      "title": "Your Customer Rights",
+      "rights": [
+        "Right to Be Informed: Customers have the right to be informed about the purpose and type of personal data that Sharp Innovations have about them.",
+        "Right To Access: Customers have the right to access or obtain a copy of their personal data held by Sharp Innovations through contacting Sharp Innovations support.",
+        "Right To Rectify: Customers have the right to correct, complete or update their personal data held by Sharp Innovations through contacting Sharp Innovations support.",
+        "Right To Withdraw Consent: Customer has the right to revoke his consent, or stop receiving promotional messages through contacting Sharp Innovations support."
+      ]
+    },
+
+    "changes": {
+      "title": "Changes to this privacy notice",
+      "description": "To ensure that we continue to offer the best possible experience and the highest level of protection to you, we reserve the right to update the Privacy notice as and when necessary and appropriate.",
+      "lastUpdated": "Monday 14 September 2024"
+    },
+
+    "contact": {
+      "title": "Contact us with your questions and comments",
+      "description": "In case of any questions, comments, or complaints you can reach us via email or call customer service center.",
+      "authority": "The competent supervisory authority for Sharp Innovations activities is the Communications, Space and Technology Commission (CST)"
+    }
   }
 
 

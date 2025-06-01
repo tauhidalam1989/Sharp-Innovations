@@ -12,6 +12,7 @@ import { TypingEffectComponent } from './components/typing-effect/typing-effect.
 import { LoaderComponent } from './components/loader/loader.component';
 import { SidebarComponent } from './layout/components/sidebar/sidebar.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { PrivacyComponent } from './components/privacy/privacy.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     TypingEffectComponent,
     LoaderComponent,
     SidebarComponent,
+    PrivacyComponent,
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,163 @@
+<div class="privacy-notice">
+    <div class="privacy-header">
+        <div class="container">
+            <h1 class="text-center">{{ 'privacyNotice.title' | translate }}</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Introduction -->
+        <div class="section intro-section">
+            <div class="card">
+                <p class="intro-text">{{ 'privacyNotice.introduction' | translate }}</p>
+                <p>{{ 'privacyNotice.scope' | translate }}</p>
+            </div>
+        </div>
+
+        <!-- Why We Collect -->
+        <div class="section">
+            <div class="section-header">
+                <h2>{{ 'privacyNotice.whyWeCollect.title' | translate }}</h2>
+            </div>
+            <div class="card">
+                <p class="mb-4">{{ 'privacyNotice.whyWeCollect.description' | translate }}</p>
+
+                <!-- Legal Basis -->
+                <div class="subsection">
+                    <h3>{{ 'privacyNotice.whyWeCollect.legalBasis.title' | translate }}</h3>
+                    <ul class="custom-list">
+                        <li *ngFor="let item of 'privacyNotice.whyWeCollect.legalBasis.items' | translate">
+                            <i class="fas fa-check-circle"></i>
+                            {{ item }}
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Purposes -->
+                <div class="subsection">
+                    <h3>{{ 'privacyNotice.whyWeCollect.purposes.title' | translate }}</h3>
+                    <ul class="custom-list">
+                        <li *ngFor="let purpose of 'privacyNotice.whyWeCollect.purposes.items' | translate">
+                            <i class="fas fa-arrow-right"></i>
+                            {{ purpose }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cookies -->
+        <div class="section">
+            <div class="section-header">
+                <h2>{{ 'privacyNotice.cookies.title' | translate }}</h2>
+            </div>
+            <div class="card">
+                <p>{{ 'privacyNotice.cookies.description' | translate }}</p>
+                <ul class="custom-list">
+                    <li *ngFor="let purpose of 'privacyNotice.cookies.purposes' | translate">
+                        <i class="fas fa-cookie-bite"></i>
+                        {{ purpose }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Personal Data -->
+        <div class="section">
+            <div class="section-header">
+                <h2>{{ 'privacyNotice.personalData.title' | translate }}</h2>
+            </div>
+            <div class="card">
+                <p>{{ 'privacyNotice.personalData.description' | translate }}</p>
+                <ul class="custom-list">
+                    <li *ngFor="let type of 'privacyNotice.personalData.types' | translate">
+                        <i class="fas fa-user-shield"></i>
+                        {{ type }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Data Collection -->
+        <div class="section">
+            <div class="section-header">
+                <h2>{{ 'privacyNotice.dataCollection.title' | translate }}</h2>
+            </div>
+            <div class="card">
+                <ul class="custom-list">
+                    <li *ngFor="let method of 'privacyNotice.dataCollection.methods' | translate">
+                        <i class="fas fa-database"></i>
+                        {{ method }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Data Retention -->
+        <div class="section">
+            <div class="section-header">
+                <h2>{{ 'privacyNotice.dataRetention.title' | translate }}</h2>
+            </div>
+            <div class="card">
+                <p>{{ 'privacyNotice.dataRetention.description' | translate }}</p>
+            </div>
+        </div>
+
+        <!-- Data Protection -->
+        <div class="section">
+            <div class="section-header">
+                <h2>{{ 'privacyNotice.dataProtection.title' | translate }}</h2>
+            </div>
+            <div class="card">
+                <p>{{ 'privacyNotice.dataProtection.description' | translate }}</p>
+                <div class="alert alert-info">
+                    <i class="fas fa-shield-alt"></i>
+                    {{ 'privacyNotice.dataProtection.sharing' | translate }}
+                </div>
+            </div>
+        </div>
+
+        <!-- Customer Rights -->
+        <div class="section">
+            <div class="section-header">
+                <h2>{{ 'privacyNotice.customerRights.title' | translate }}</h2>
+            </div>
+            <div class="card">
+                <ul class="custom-list rights-list">
+                    <li *ngFor="let right of 'privacyNotice.customerRights.rights' | translate">
+                        <i class="fas fa-check"></i>
+                        {{ right }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Changes -->
+        <div class="section">
+            <div class="section-header">
+                <h2>{{ 'privacyNotice.changes.title' | translate }}</h2>
+            </div>
+            <div class="card">
+                <p>{{ 'privacyNotice.changes.description' | translate }}</p>
+                <div class="update-date">
+                    <i class="fas fa-calendar-alt"></i>
+                    {{ 'privacyNotice.changes.lastUpdated' | translate }}
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="section">
+            <div class="section-header">
+                <h2>{{ 'privacyNotice.contact.title' | translate }}</h2>
+            </div>
+            <div class="card contact-card">
+                <p>{{ 'privacyNotice.contact.description' | translate }}</p>
+                <div class="authority-info">
+                    <i class="fas fa-landmark"></i>
+                    {{ 'privacyNotice.contact.authority' | translate }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
