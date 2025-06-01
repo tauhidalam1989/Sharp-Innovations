@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -10,7 +11,7 @@ export class CookieConsentComponent implements OnInit {
   showConsent = true;
   visitorCount = 0;
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService,private router:Router) {
     // Initialize showConsent in constructor
     const cookieConsent = localStorage.getItem('cookieConsent');
     this.showConsent = cookieConsent !== 'accepted';
@@ -55,7 +56,9 @@ export class CookieConsentComponent implements OnInit {
   }
 
   viewPolicy() {
+    this.acceptCookies();
     // Navigate to cookie policy page or open in new tab
-    window.open('/privacy', '_blank');
+   
+    this.router.navigate(['/privacy']);
   }
 } 
