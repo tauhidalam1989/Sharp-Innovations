@@ -3698,29 +3698,123 @@
   }
 ,
 "SEO": {
-    "DEFAULT_TITLE": "Sharp Innovations - IT Solutions & Services",
-    "DEFAULT_DESCRIPTION": "Sharp Innovations provides cutting-edge IT solutions, cybersecurity services, web & mobile app development, and managed IT services for businesses worldwide.",
-    "DEFAULT_KEYWORDS": "IT solutions, cybersecurity, web development, mobile app development, managed IT services, Sharp Innovations",
+    "DEFAULT_TITLE": "Sharp Innovations - Leading IT Solutions & Services Provider in KSA",
+    "DEFAULT_DESCRIPTION": "Sharp Innovations delivers cutting-edge IT solutions, cybersecurity services, web & mobile app development, and managed IT services for businesses across Saudi Arabia and worldwide.",
+    "DEFAULT_KEYWORDS": "IT solutions Saudi Arabia, cybersecurity KSA, web development Riyadh, mobile app development, managed IT services, Sharp Innovations",
+    "ORGANIZATION_SCHEMA": {
+      "NAME": "Sharp Innovations",
+      "DESCRIPTION": "Leading IT solutions provider in Saudi Arabia specializing in cybersecurity, web development, and managed IT services",
+      "FOUNDING_DATE": "2023",
+      "FOUNDER": "Sharp Innovations Team",
+      "ADDRESS": "7576, Sulay, Al-Riyadh, KSA",
+      "TELEPHONE": "+966 53 140 9624"
+    },
     "HOME": {
-      "TITLE": "Sharp Innovations - Leading IT Solutions Provider",
-      "DESCRIPTION": "Transform your business with Sharp Innovations' comprehensive IT solutions. Expert services in cybersecurity, web development, mobile apps, and managed IT.",
-      "KEYWORDS": "IT company, technology solutions, digital transformation, Sharp Innovations"
+      "TITLE": "Sharp Innovations - Premier IT Solutions Provider in Saudi Arabia",
+      "DESCRIPTION": "Transform your business with Sharp Innovations' comprehensive IT solutions. Expert services in cybersecurity, web development, mobile apps, and managed IT services in KSA.",
+      "KEYWORDS": "IT company Saudi Arabia, technology solutions Riyadh, digital transformation KSA, Sharp Innovations",
+      "SCHEMA_TYPE": "WebPage"
     },
     "SERVICES": {
-      "TITLE": "IT Services & Solutions - Sharp Innovations",
-      "DESCRIPTION": "Explore our comprehensive range of IT services including cybersecurity, web development, mobile apps, cloud solutions, and managed IT services.",
-      "KEYWORDS": "IT services, managed services, technology solutions, cybersecurity services"
+      "TITLE": "IT Services & Solutions in Saudi Arabia - Sharp Innovations",
+      "DESCRIPTION": "Comprehensive IT services including cybersecurity, web development, mobile apps, cloud solutions, and managed IT services tailored for businesses in KSA.",
+      "KEYWORDS": "IT services Saudi Arabia, managed services Riyadh, technology solutions KSA, cybersecurity services",
+      "SCHEMA_TYPE": "Service",
+        "AI_CONSULTING": {
+            "TITLE": "AI Consulting Services | Sharp Innovations",
+            "DESCRIPTION": "Expert AI consulting services to help businesses leverage artificial intelligence for growth and innovation. Get strategic guidance from our experienced consultants.",
+            "KEYWORDS": "AI consulting, artificial intelligence consulting, AI strategy, AI implementation, business AI, Sharp Innovations"
+        },
+        "AI_ML_SERVICES": {
+            "TITLE": "AI & Machine Learning Services | Sharp Innovations",
+            "DESCRIPTION": "Advanced AI and Machine Learning solutions for businesses. From predictive analytics to deep learning, we help you harness the power of AI.",
+            "KEYWORDS": "AI services, machine learning, deep learning, predictive analytics, AI solutions, Sharp Innovations"
+        },
+        "APPLICATION_SECURITY": {
+            "TITLE": "Application Security Services | Sharp Innovations",
+            "DESCRIPTION": "Comprehensive application security services to protect your software from threats. Expert security testing and implementation.",
+            "KEYWORDS": "application security, app security testing, secure development, vulnerability assessment, Sharp Innovations"
+        },
+        "CLOUD_DEVELOPMENT": {
+            "TITLE": "Cloud Development Services | Sharp Innovations",
+            "DESCRIPTION": "Expert cloud development and migration services. Build scalable, secure cloud applications with our experienced team.",
+            "KEYWORDS": "cloud development, cloud migration, cloud applications, AWS, Azure, GCP, Sharp Innovations"
+        },
+        "CYBERSECURITY_SERVICES": {
+            "TITLE": "Cybersecurity Services | Sharp Innovations",
+            "DESCRIPTION": "Comprehensive cybersecurity solutions to protect your business. Expert threat detection, prevention, and response services.",
+            "KEYWORDS": "cybersecurity, information security, cyber protection, security services, Sharp Innovations"
+        },
+        "DIGITAL_MARKETING": {
+            "TITLE": "Digital Marketing Services | Sharp Innovations",
+            "DESCRIPTION": "Results-driven digital marketing services to grow your online presence. SEO, social media, content marketing, and more.",
+            "KEYWORDS": "digital marketing, SEO, social media marketing, content marketing, online advertising, Sharp Innovations"
+        },
+        "MOBILE_APP_DEVELOPMENT": {
+            "TITLE": "Mobile App Development | Sharp Innovations",
+            "DESCRIPTION": "Custom mobile app development for iOS and Android. Create powerful, user-friendly mobile applications for your business.",
+            "KEYWORDS": "mobile app development, iOS development, Android development, app design, Sharp Innovations"
+        },
+        "WEB_APP_DEVELOPMENT": {
+            "TITLE": "Web Application Development | Sharp Innovations",
+            "DESCRIPTION": "Professional web application development services. Build scalable, modern web applications with our expert team.",
+            "KEYWORDS": "web development, web applications, custom web apps, frontend development, backend development, Sharp Innovations"
+        }
     },
     "ABOUT": {
-      "TITLE": "About Sharp Innovations - Our Story & Mission",
-      "DESCRIPTION": "Learn about Sharp Innovations' journey, our mission to deliver innovative IT solutions, and our commitment to client success.",
-      "KEYWORDS": "about us, IT company history, technology mission, Sharp Innovations team"
+      "TITLE": "About Sharp Innovations - Leading IT Company in Saudi Arabia",
+      "DESCRIPTION": "Learn about Sharp Innovations' journey as a premier IT solutions provider in KSA, our mission to deliver innovative IT solutions, and our commitment to client success.",
+      "KEYWORDS": "IT company Saudi Arabia, technology company Riyadh, Sharp Innovations KSA, IT solutions provider",
+      "SCHEMA_TYPE": "AboutPage"
     },
     "CONTACT": {
-      "TITLE": "Contact Sharp Innovations - Get in Touch",
-      "DESCRIPTION": "Contact Sharp Innovations for expert IT solutions and services. Let's discuss how we can help transform your business.",
-      "KEYWORDS": "contact us, IT consultation, technology support, business inquiry"
+      "TITLE": "Contact Sharp Innovations - IT Solutions Provider in Saudi Arabia",
+      "DESCRIPTION": "Get in touch with Sharp Innovations for expert IT solutions and services in Saudi Arabia. Let's discuss how we can transform your business with our technology expertise.",
+      "KEYWORDS": "contact IT company Saudi Arabia, IT consultation Riyadh, technology support KSA, business inquiry",
+      "SCHEMA_TYPE": "ContactPage"
+    },
+    "SOCIAL_MEDIA": {
+      "FACEBOOK_TITLE": "Sharp Innovations - IT Solutions & Services | Facebook",
+      "TWITTER_TITLE": "Sharp Innovations (@SharpInnovKSA) | Twitter",
+      "LINKEDIN_TITLE": "Sharp Innovations: IT Solutions Provider in Saudi Arabia | LinkedIn"
+    },
+    "REGION": {
+      "COUNTRY": "Saudi Arabia",
+      "CITY": "Riyadh",
+      "LANGUAGE": "English",
+      "CURRENCY": "SAR"
+    },
+    "FAQ": {
+      "TITLE": "Frequently Asked Questions - Sharp Innovations IT Solutions",
+      "DESCRIPTION": "Find answers to common questions about our IT services, web development, mobile apps, and cybersecurity solutions. Expert guidance from Sharp Innovations.",
+      "KEYWORDS": "IT FAQ, technology questions, Sharp Innovations help, IT solutions FAQ, Saudi Arabia IT support",
+      "SCHEMA_TYPE": "FAQPage"
+    },
+    "TEAM": {
+      "TITLE": "Our Expert Team - Sharp Innovations Technology Leaders",
+      "DESCRIPTION": "Meet our team of IT experts, developers, and cybersecurity specialists at Sharp Innovations. Dedicated professionals delivering excellence in technology solutions.",
+      "KEYWORDS": "IT experts Saudi Arabia, technology team Riyadh, Sharp Innovations professionals, IT specialists KSA",
+      "SCHEMA_TYPE": "ProfilePage"
+    },
+    "CAREERS": {
+      "TITLE": "Careers at Sharp Innovations - Join Our IT Team",
+      "DESCRIPTION": "Join Sharp Innovations and be part of a dynamic team delivering innovative IT solutions. Explore career opportunities in technology, development, and cybersecurity.",
+      "KEYWORDS": "IT jobs Saudi Arabia, technology careers Riyadh, Sharp Innovations employment, tech jobs KSA",
+      "SCHEMA_TYPE": "JobPosting"
+    },
+    "PROJECTS": {
+      "TITLE": "Our Projects - Sharp Innovations Success Stories",
+      "DESCRIPTION": "Explore our successful IT projects and case studies. See how Sharp Innovations delivers innovative technology solutions across Saudi Arabia.",
+      "KEYWORDS": "IT projects Saudi Arabia, technology case studies, Sharp Innovations portfolio, successful implementations",
+      "SCHEMA_TYPE": "CollectionPage"
+    },
+    "TESTIMONIALS": {
+      "TITLE": "Client Testimonials - Sharp Innovations IT Solutions",
+      "DESCRIPTION": "Read what our clients say about Sharp Innovations' IT services and solutions. Real feedback from businesses across Saudi Arabia.",
+      "KEYWORDS": "IT company reviews, technology testimonials, Sharp Innovations feedback, client success stories",
+      "SCHEMA_TYPE": "ReviewNewsArticle"
     }
+   
   }
 
   }

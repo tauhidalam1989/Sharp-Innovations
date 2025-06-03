@@ -1,13 +1,15 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { RoutingService } from '../../shared/services/routing.service';
+import { SeoService } from '../../shared/services/seo.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'team',
   templateUrl: './team.component.html',
   styleUrls: ['./team.component.scss']
 })
-export class TeamComponent {
-   @Input() isHome: boolean = false;
+export class TeamComponent implements OnInit {
+  @Input() isHome: boolean = false;
   teamMembers = [
     {
       image: '../../../../assets/img/team-1.jpg',
@@ -58,4 +60,22 @@ export class TeamComponent {
       ],
     },
   ];
+
+  constructor(
+    private seoService: SeoService,
+    private translateService: TranslateService
+  ) {}
+
+  ngOnInit() {
+    this.translateService.get(['SEO.TEAM.TITLE', 'SEO.TEAM.DESCRIPTION', 'SEO.TEAM.KEYWORDS']).subscribe(translations => {
+      this.seoService.updateMetaTags({
+        title: translations['SEO.TEAM.TITLE'],
+        description: translations['SEO.TEAM.DESCRIPTION'],
+        keywords: translations['SEO.TEAM.KEYWORDS'],
+        url: 'https://sharpinvotech.com/team',
+        page: 'TEAM',
+        schemaType: 'ProfilePage'
+      });
+    });
+  }
 }

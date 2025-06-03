@@ -1,38 +1,57 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RoutingService } from '../../shared/services/routing.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ContactService } from '../../shared/services/contact.service';
 import { TranslateService } from '@ngx-translate/core';
+import { SeoService } from '../../shared/services/seo.service';
 
 @Component({
   selector: 'contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent {
- contactForm: FormGroup;
+export class ContactComponent implements OnInit {
+  contactForm: FormGroup;
   successMessage: string | undefined;
   errorMessage: string | undefined;
   translatedsubject: any;
 
-  constructor(private fb: FormBuilder,private contactservice: ContactService,
-    private translate: TranslateService
+  constructor(
+    private fb: FormBuilder,
+    private contactservice: ContactService,
+    private translate: TranslateService,
+    private seoService: SeoService
   ) {
     this.contactForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
-      subject: ['' ],
+      subject: [''],
       message: [''],
-      contactNumber:['', [Validators.required]],
-      organization:['']
+      contactNumber: ['', [Validators.required]],
+      organization: ['']
     });
     setTimeout(() => {
       this.isLoading = false; // Simulating a delay
     }, 1000);
   }
-isLoading =true
+
+  isLoading = true;
   loading = false; // Spinner state
   success = false; // Green tick state
+
+  ngOnInit() {
+    this.translate.get(['SEO.CONTACT.TITLE', 'SEO.CONTACT.DESCRIPTION', 'SEO.CONTACT.KEYWORDS']).subscribe(translations => {
+      this.seoService.updateMetaTags({
+        title: translations['SEO.CONTACT.TITLE'],
+        description: translations['SEO.CONTACT.DESCRIPTION'],
+        keywords: translations['SEO.CONTACT.KEYWORDS'],
+        url: 'https://sharpinvotech.com/contact',
+        page: 'CONTACT',
+        schemaType: 'ContactPage'
+      });
+    });
+  }
+
   onSubmit(): void {
     if (this.contactForm.valid) {
       this.loading = true; // Show spinner
@@ -45,7 +64,7 @@ isLoading =true
         () => {
           this.loading = false;
           this.success = true; // Show green tick
-        this.contactForm.reset();
+          this.contactForm.reset();
           setTimeout(() => {
             this.success = false; // Reset green tick after a few seconds
           }, 1000);
@@ -54,8 +73,9 @@ isLoading =true
           this.loading = false;
         }
       );
-    } 
+    }
   }
+
   onSubjectChange(event: Event) {
     const selectedValue = (event.target as HTMLSelectElement).value;
 
@@ -85,7 +105,7 @@ isLoading =true
     }
 
     this.translate.get(translationKey).subscribe((translatedText: string) => {
-    this.translatedsubject=translatedText;
+      this.translatedsubject = translatedText;
     });
   }
 }

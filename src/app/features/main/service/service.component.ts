@@ -1,14 +1,16 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { RoutingService } from '../../shared/services/routing.service';
 import { Router } from '@angular/router';
+import { SeoService } from '../../shared/services/seo.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'service',
   templateUrl: './service.component.html',
   styleUrls: ['./service.component.scss']
 })
-export class ServiceComponent {
-   @Input() isHome: boolean = false;
+export class ServiceComponent implements OnInit {
+  @Input() isHome: boolean = false;
   servicesList = [
     {
       icon: 'fa fa-robot fa-2x',
@@ -35,8 +37,26 @@ export class ServiceComponent {
       delay: '0.7s',
     },
   ];
-  constructor(private router:Router){}
-  routeTo(path:any){
-    this.router.navigate(['/product/'+path]);
+  constructor(
+    private router: Router,
+    private seoService: SeoService,
+    private translateService: TranslateService
+  ) {}
+
+  ngOnInit() {
+    this.translateService.get(['SEO.SERVICES.TITLE', 'SEO.SERVICES.DESCRIPTION', 'SEO.SERVICES.KEYWORDS']).subscribe(translations => {
+      this.seoService.updateMetaTags({
+        title: translations['SEO.SERVICES.TITLE'],
+        description: translations['SEO.SERVICES.DESCRIPTION'],
+        keywords: translations['SEO.SERVICES.KEYWORDS'],
+        url: 'https://sharpinvotech.com/services',
+        page: 'SERVICES',
+        schemaType: 'Service'
+      });
+    });
+  }
+
+  routeTo(path: any) {
+    this.router.navigate(['/product/' + path]);
   }
 }
