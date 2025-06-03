@@ -14,15 +14,20 @@ export class AiConsultingComponent {
   ) {}
 
   ngOnInit() {
-    this.translateService.get(['SEO.AI_CONSULTING.TITLE', 'SEO.FAQ.DESCRIPTION', 'SEO.FAQ.KEYWORDS']).subscribe(translations => {
+    this.translateService.get([
+      'SEO.SERVICES.AI_CONSULTING.TITLE',
+      'SEO.SERVICES.AI_CONSULTING.DESCRIPTION',
+      'SEO.SERVICES.AI_CONSULTING.KEYWORDS'
+    ]).subscribe(translations => {
       this.seoService.updateMetaTags({
-        title: translations['SEO.AI_CONSULTING.TITLE'],
-        description: translations['SEO.AI_CONSULTING.DESCRIPTION'],
-        keywords: translations['SEO.AI_CONSULTING.KEYWORDS'],
+        title: translations['SEO.SERVICES.AI_CONSULTING.TITLE'],
+        description: translations['SEO.SERVICES.AI_CONSULTING.DESCRIPTION'],
+        keywords: translations['SEO.SERVICES.AI_CONSULTING.KEYWORDS'],
         url: 'https://sharpinvotech.com/services/ai-consulting',
         page: 'AI_CONSULTING',
         schemaType: 'AI_CONSULTINGPage'
       });
     });
-  }
+    
+}
 }
