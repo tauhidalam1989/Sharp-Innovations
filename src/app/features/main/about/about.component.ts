@@ -2,7 +2,6 @@ import { ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { RoutingService } from '../../shared/services/routing.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Router, NavigationEnd } from '@angular/router';
-import { SeoService } from '../../shared/services/seo.service';
 
 @Component({
   selector: 'about',
@@ -16,8 +15,7 @@ export class AboutComponent implements OnInit {
     public pathService: RoutingService,
     private translate: TranslateService,
     private cdRef: ChangeDetectorRef,
-    private router: Router,
-    private seoService: SeoService
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -44,17 +42,6 @@ export class AboutComponent implements OnInit {
 
     // Initial image update
     updateImage();
-
-    this.translateService.get(['SEO.ABOUT.TITLE', 'SEO.ABOUT.DESCRIPTION', 'SEO.ABOUT.KEYWORDS']).subscribe(translations => {
-      this.seoService.updateMetaTags({
-        title: translations['SEO.ABOUT.TITLE'],
-        description: translations['SEO.ABOUT.DESCRIPTION'],
-        keywords: translations['SEO.ABOUT.KEYWORDS'],
-        url: 'https://sharpinvotech.com/about',
-        page: 'ABOUT',
-        schemaType: 'AboutPage'
-      });
-    });
   }
 
   @Input() isHome: boolean = false;
