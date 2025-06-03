@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-main-layout',
@@ -7,15 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainLayoutComponent implements OnInit {
   isSidebarOpen = false;
-  isMobile = window.innerWidth <= 768;
+  isMobile = false;
+  private isBrowser: boolean;
 
-  constructor() {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
+    if (this.isBrowser) {
+      this.isMobile = window.innerWidth <= 768;
+    }
+  }
 
   ngOnInit() {
-    // Check window size on init
-    this.checkWindowSize();
-    // Listen for window resize
-    window.addEventListener('resize', () => this.checkWindowSize());
+    if (this.isBrowser) {
+      // Check window size on init
+      this.checkWindowSize();
+      // Listen for window resize
+      window.addEventListener('resize', () => this.checkWindowSize());
+    }
   }
 
   toggleSidebar() {
@@ -23,6 +32,8 @@ export class MainLayoutComponent implements OnInit {
   }
 
   private checkWindowSize() {
-    this.isMobile = window.innerWidth <= 768;
+    if (this.isBrowser) {
+      this.isMobile = window.innerWidth <= 768;
+    }
   }
 }

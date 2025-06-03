@@ -3,10 +3,9 @@
   
     <div class="services-layout">
       <div class="services-tabs">
-        <div *ngFor="let service of ('core_services' | translate); let first = first"
+        <div *ngFor="let service of services; let first = first"
              class="category-item" 
              (click)="selectService(service)"
-             (click)="selectedService = service"
              [ngClass]="{'active': selectedService === service || (first && !selectedService)}">
              <img class="service-image" [src]="service.icon" width="20px" alt="Service Banner">
              <span>{{ service.title }}</span>
@@ -17,13 +16,13 @@
       
       <div class="content-area" #detailSection>
       
-        <div class="service-details"  *ngIf="selectedService || ('core_services' | translate)[0]">
-          <h2>{{(selectedService || ('core_services' | translate)[0]).title}}</h2>
-          <p>{{(selectedService || ('core_services' | translate)[0]).description}}</p>
+        <div class="service-details"  *ngIf="selectedService">
+          <h2>{{ selectedService.title }}</h2>
+          <p>{{ selectedService.description }}</p>
           <button class="explore-btn" [routerLink]="selectedService?.path">Explore More <i class="fas fa-arrow-right"></i></button>
         </div>
         <div class="banner-container">
-          <img class="service-image" [src]="selectedService?.img || (('core_services' | translate)[0])?.img" alt="Service Banner">
+          <img class="service-image" [src]="selectedService?.img" alt="Service Banner">
         </div>
       </div>
     </div>
