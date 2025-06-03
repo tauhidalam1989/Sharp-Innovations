@@ -2019,7 +2019,7 @@
     },
     "call_to_action": {
       "title": "Secure Your Business with Sharp Innovations Today!",
-      "description": "Don’t leave your cybersecurity to chance—get access to elite security professionals without the overhead costs."
+      "description": "Don't leave your cybersecurity to chance—get access to elite security professionals without the overhead costs."
     }
   },
     "SuperiorMonitoringNOCService": {
@@ -2108,7 +2108,7 @@
       "Enhanced Security Posture: Proactive threat detection minimizes cyber risks.",
       "Cost Savings & Operational Efficiency: Reduces the need for in-house network monitoring resources.",
       "Compliance & Risk Mitigation: Ensures adherence to industry regulations and standards.",
-      "Scalable & Customizable Solutions: Tailored to meet your business’s unique needs.",
+      "Scalable & Customizable Solutions: Tailored to meet your business's unique needs.",
       "Fast-Track Your Growth: Seamlessly scale without hiring more technicians.",
       "Superior Service Quality: Achieve operational excellence at a fraction of the cost."
     ]
@@ -2184,7 +2184,7 @@
       },
       {
         "title": "Ongoing Support & Maintenance",
-        "description": "Our support doesn’t end after deployment. We offer 24/7 monitoring, troubleshooting, and maintenance services to keep your network secure and efficient."
+        "description": "Our support doesn't end after deployment. We offer 24/7 monitoring, troubleshooting, and maintenance services to keep your network secure and efficient."
       }
     ],
     "why_choose_us": {
@@ -2201,7 +2201,7 @@
   "network_consulting_services": {
     "title": "Network Consulting Services",
     "subtitle": "Unlock the Full Potential of Your Network",
-    "description": "In today’s fast-paced digital landscape, a robust and secure network infrastructure is essential for business success. Sharp Innovations provides expert network consulting services to help organizations design, optimize, and secure their IT environments for maximum performance and reliability.",
+    "description": "In today's fast-paced digital landscape, a robust and secure network infrastructure is essential for business success. Sharp Innovations provides expert network consulting services to help organizations design, optimize, and secure their IT environments for maximum performance and reliability.",
     "services": [
       {
         "title": "Network Assessment & Planning",
@@ -2273,7 +2273,7 @@
   "network_infrastructure_maintenance": {
     "title": "Network Infrastructure Maintenance & Support",
     "subtitle": "Reliable, Secure, and Optimized Network Infrastructure for Your Business",
-    "description": "In today’s digital-first world, your network infrastructure is the backbone of your business operations. At Sharp Innovations, we provide comprehensive Network Infrastructure Maintenance & Support services to ensure that your systems remain secure, optimized, and operational 24/7. Our proactive approach minimizes downtime, enhances performance, and mitigates potential risks before they become costly problems.",
+    "description": "In today's digital-first world, your network infrastructure is the backbone of your business operations. At Sharp Innovations, we provide comprehensive Network Infrastructure Maintenance & Support services to ensure that your systems remain secure, optimized, and operational 24/7. Our proactive approach minimizes downtime, enhances performance, and mitigates potential risks before they become costly problems.",
     "services": [
       {
         "title": "Proactive Network Monitoring & Maintenance",
@@ -2336,7 +2336,7 @@
       "title": "Why Choose Sharp Innovations Network Service?",
       "reasons": [
         "Experienced Professionals: Our certified network engineers bring extensive expertise in managing complex IT environments.",
-        "Customized Solutions: We tailor our services to meet the specific needs of your business, whether you’re a small startup or a large enterprise.",
+        "Customized Solutions: We tailor our services to meet the specific needs of your business, whether you're a small startup or a large enterprise.",
         "Cost-Effective Plans: Avoid unexpected downtime and costly repairs with our affordable maintenance and support plans.",
         "24/7 Reliability: Count on us for round-the-clock monitoring, rapid response, and expert technical assistance."
       ]
@@ -2741,7 +2741,7 @@
     },
     "call_to_action": {
       "title": "Secure Your Business Today",
-      "description": "Cyber threats are evolving every day. Protect your business with Sharp Innovations’ AI-powered cybersecurity solutions and stay ahead of attackers.",
+      "description": "Cyber threats are evolving every day. Protect your business with Sharp Innovations' AI-powered cybersecurity solutions and stay ahead of attackers.",
       "contact": {
         "email": "sales@sharpinnvotech.com",
         "phone": "+966 53 140 9624"
@@ -3214,7 +3214,7 @@
       ]
     },
 
-    "cta": "Leverage Sharp Innovations’ manpower outsourcing services to drive efficiency, enhance productivity, and achieve technology excellence.",
+    "cta": "Leverage Sharp Innovations' manpower outsourcing services to drive efficiency, enhance productivity, and achieve technology excellence.",
     "contact": "Contact us today to discuss your requirements and find the right outsourcing model for your business!"
   },
   "it_server_admin": {
@@ -3412,7 +3412,7 @@
       {
         "title": "Primavera & Third-Party Tool Integration",
         "description": [
-          "We’ve successfully integrated Primavera with SAP, Oracle ERP/EBS, and Oracle Fusion Cloud.",
+          "We've successfully integrated Primavera with SAP, Oracle ERP/EBS, and Oracle Fusion Cloud.",
           "Integration with BIM applications like Synchro and RIB iTWO is also part of our expertise."
         ]
       },
@@ -3460,7 +3460,7 @@
     "Innovation-Driven Approach: Leveraging AI, analytics, and the latest technologies to drive transformation."
   ],
   "cta": "Get Started",
-  "contact": "Transform your business processes with Sharp Innovations’ Oracle Process Automation services. Contact us today to explore how automation can drive efficiency, agility, and innovation in your organization."
+  "contact": "Transform your business processes with Sharp Innovations' Oracle Process Automation services. Contact us today to explore how automation can drive efficiency, agility, and innovation in your organization."
 },
 "oracle_visual_builder": {
   "title": "Oracle Visual Builder Services",
@@ -3507,7 +3507,7 @@
       "End-to-End Support: From consultation to post-deployment services."
     ]
   },
-  "cta": "Transform your business applications with Sharp Innovations’ Oracle Visual Builder services.",
+  "cta": "Transform your business applications with Sharp Innovations' Oracle Visual Builder services.",
   "contact": "Contact us today to accelerate your digital transformation journey."
 },
 "it_infrastructure": {
@@ -3696,10 +3696,35 @@
   "visitorCounter": {
     "text": "visitors today"
   }
-
-
+,
+"SEO": {
+    "DEFAULT_TITLE": "Sharp Innovations - IT Solutions & Services",
+    "DEFAULT_DESCRIPTION": "Sharp Innovations provides cutting-edge IT solutions, cybersecurity services, web & mobile app development, and managed IT services for businesses worldwide.",
+    "DEFAULT_KEYWORDS": "IT solutions, cybersecurity, web development, mobile app development, managed IT services, Sharp Innovations",
+    "HOME": {
+      "TITLE": "Sharp Innovations - Leading IT Solutions Provider",
+      "DESCRIPTION": "Transform your business with Sharp Innovations' comprehensive IT solutions. Expert services in cybersecurity, web development, mobile apps, and managed IT.",
+      "KEYWORDS": "IT company, technology solutions, digital transformation, Sharp Innovations"
+    },
+    "SERVICES": {
+      "TITLE": "IT Services & Solutions - Sharp Innovations",
+      "DESCRIPTION": "Explore our comprehensive range of IT services including cybersecurity, web development, mobile apps, cloud solutions, and managed IT services.",
+      "KEYWORDS": "IT services, managed services, technology solutions, cybersecurity services"
+    },
+    "ABOUT": {
+      "TITLE": "About Sharp Innovations - Our Story & Mission",
+      "DESCRIPTION": "Learn about Sharp Innovations' journey, our mission to deliver innovative IT solutions, and our commitment to client success.",
+      "KEYWORDS": "about us, IT company history, technology mission, Sharp Innovations team"
+    },
+    "CONTACT": {
+      "TITLE": "Contact Sharp Innovations - Get in Touch",
+      "DESCRIPTION": "Contact Sharp Innovations for expert IT solutions and services. Let's discuss how we can help transform your business.",
+      "KEYWORDS": "contact us, IT consultation, technology support, business inquiry"
+    }
+  }
 
   }
+  
 
 
 

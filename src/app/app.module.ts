@@ -1,5 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,7 +25,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   ],
   imports: [
     MainModule,
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule,
@@ -40,7 +41,10 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     }),
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA],
-  providers: [],
+  providers: [
+    Meta,
+    Title,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -26,7 +26,7 @@ jobs:
 
       # Build Angular app for production
       - name: Build Angular
-        run: npm run build -- --configuration production
+        run: npm run build:ssr --configuration production
 
       # Deploy to Hostinger FTP
       - name: Deploy to Hostinger via FTP
