@@ -30,15 +30,15 @@ export class FaqComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.translateService.get(['SEO.FAQ.TITLE', 'SEO.FAQ.DESCRIPTION', 'SEO.FAQ.KEYWORDS']).subscribe(translations => {
-      this.seoService.updateMetaTags({
-        title: translations['SEO.FAQ.TITLE'],
-        description: translations['SEO.FAQ.DESCRIPTION'],
-        keywords: translations['SEO.FAQ.KEYWORDS'],
-        url: 'https://sharpinvotech.com/faq',
-        page: 'FAQ',
-        schemaType: 'FAQPage'
-      });
-    });
+    // this.translateService.get(['SEO.FAQ.TITLE', 'SEO.FAQ.DESCRIPTION', 'SEO.FAQ.KEYWORDS']).subscribe(translations => {
+    //   this.seoService.updateMetaTags({
+    //     title: translations['SEO.FAQ.TITLE'],
+    //     description: translations['SEO.FAQ.DESCRIPTION'],
+    //     keywords: translations['SEO.FAQ.KEYWORDS'],
+    //     url: 'https://sharpinvotech.com/faq',
+    //     page: 'FAQ',
+    //     schemaType: 'FAQPage'
+    //   });
+    // });
   }
 }
