@@ -10,6 +10,19 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class AboutComponent implements OnInit {
   imageSrc: string = 'assets/img/English.png'; // Default path
+  
+  // Office images array
+  officeImages: string[] = [
+    'assets/office/image 2.jpg',
+    'assets/office/image 3.jpg',
+    'assets/office/image 4.jpg',
+    'assets/office/image 5.jpg'
+  ];
+
+  // Modal properties
+  isModalOpen: boolean = false;
+  selectedImage: string = '';
+  selectedImageIndex: number = 0;
 
   constructor(
     public pathService: RoutingService,
@@ -42,6 +55,33 @@ export class AboutComponent implements OnInit {
 
     // Initial image update
     updateImage();
+  }
+
+  // Modal methods
+  openImageModal(image: string, index: number): void {
+    this.selectedImage = image;
+    this.selectedImageIndex = index;
+    this.isModalOpen = true;
+    document.body.style.overflow = 'hidden'; // Prevent background scroll
+  }
+
+  closeImageModal(): void {
+    this.isModalOpen = false;
+    document.body.style.overflow = 'auto'; // Restore scroll
+  }
+
+  nextImage(): void {
+    if (this.selectedImageIndex < this.officeImages.length - 1) {
+      this.selectedImageIndex++;
+      this.selectedImage = this.officeImages[this.selectedImageIndex];
+    }
+  }
+
+  previousImage(): void {
+    if (this.selectedImageIndex > 0) {
+      this.selectedImageIndex--;
+      this.selectedImage = this.officeImages[this.selectedImageIndex];
+    }
   }
 
   @Input() isHome: boolean = false;
