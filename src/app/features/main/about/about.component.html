@@ -42,7 +42,7 @@
         </div>
         
         <!-- Office Gallery Section -->
-        <div class="row mt-5">
+        <!-- <div class="row mt-5">
             <div class="col-12">
                 <div class="text-center mb-4">
                     <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">{{ 'OFFICE_GALLERY' | translate }}</div>
@@ -50,9 +50,9 @@
                     <p class="text-muted">{{ 'OFFICE_GALLERY_DESCRIPTION' | translate }}</p>
                 </div>
             </div>
-        </div>
+        </div> -->
         
-        <div class="row g-4 mb-5">
+        <!-- <div class="row g-4 mb-5">
             <div class="col-lg-3 col-md-6 col-sm-6" *ngFor="let image of officeImages; let i = index">
                 <div class="office-image-container wow fadeInUp" [attr.data-wow-delay]="(i * 0.1 + 0.1) + 's'">
                     <div class="image-wrapper" (click)="openImageModal(image, i)">
@@ -69,10 +69,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         
         <!-- Image Modal -->
-        <div class="image-modal" [class.active]="isModalOpen" (click)="closeImageModal()">
+        <!-- <div class="image-modal" [class.active]="isModalOpen" (click)="closeImageModal()">
             <div class="modal-content" (click)="$event.stopPropagation()">
                 <button class="modal-close" (click)="closeImageModal()">
                     <i class="fas fa-times"></i>
@@ -90,7 +90,7 @@
                     </button>
                 </div>
             </div>
-        </div>
+        </div> -->
         
         <app-core-service></app-core-service>
     </div>
