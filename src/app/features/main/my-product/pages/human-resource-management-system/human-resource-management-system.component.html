@@ -1,1 +1,142 @@
-<p>coming soon</p>
+<div class="container-fluid py-5">
+  <div class="container py-5">
+    <!-- Hero Section -->
+    <div class="row g-5 align-items-center mb-5">
+      <div class="col-lg-12 fadeInLeft" data-wow-delay="0.1s">
+        <h1 class="mb-4 display-7 text-primary animate__animated animate__fadeIn">
+          <i class="fas fa-users-cog me-2 floating-icon"></i>{{ 'hrms.title' | translate }}
+        </h1>
+        <h4 class="mb-3 text-secondary animate__animated animate__fadeIn animate__delay-1s">
+          {{ 'hrms.subtitle' | translate }}
+        </h4>
+        <p class="mb-4 text-muted animate__animated animate__fadeIn animate__delay-2s">
+          {{ 'hrms.description' | translate }}
+        </p>
+        <div class="d-flex gap-3 animate__animated animate__fadeIn animate__delay-3s">
+          <a href="#features" class="btn btn-primary btn-lg hover-lift">
+            <i class="fas fa-arrow-down me-2"></i>{{ 'hrms.explore_features' | translate }}
+          </a>
+          <a href="#contact" class="btn btn-outline-primary btn-lg hover-lift">
+            <i class="fas fa-phone me-2"></i>{{ 'hrms.contact_us' | translate }}
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key Features Section -->
+    <div id="features" class="row mt-5 mb-5">
+      <div class="col-lg-12 text-center wow fadeInUp" data-wow-delay="0.2s">
+        <h2 class="mb-3 text-primary animate__animated animate__fadeIn">
+          <i class="fas fa-star me-2 pulse-icon"></i>{{ 'hrms.key_features.title' | translate }}
+        </h2>
+        <p class="text-muted mb-5">{{ 'hrms.key_features.subtitle' | translate }}</p>
+      </div>
+    </div>
+    <div class="row g-4 mb-5">
+      <div *ngFor="let feature of 'hrms.key_features.features' | translate; let i = index" 
+           class="col-md-6 col-lg-4 wow fadeInUp" 
+           [attr.data-wow-delay]="(i * 0.1) + 's'">
+        <div class="card h-100 shadow-sm border-0 text-center service-card">
+          <div class="card-body p-4">
+            <div class="feature-icon mb-3">
+              <i [class]="feature.icon" class="text-primary" style="font-size: 3rem;"></i>
+            </div>
+            <h5 class="card-title text-primary mb-3">{{ feature.title }}</h5>
+            <p class="text-muted">{{ feature.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Benefits Section -->
+    <div class="row mt-5 mb-5">
+      <div class="col-lg-12 wow fadeInLeft" data-wow-delay="0.2s">
+        <h2 class="mb-4 text-primary animate__animated animate__fadeIn">
+          <i class="fas fa-check-circle me-2 rotating-icon"></i>{{ 'hrms.benefits.title' | translate }}
+        </h2>
+        <ul class="list-unstyled">
+          <li *ngFor="let benefit of 'hrms.benefits.list' | translate; let i = index" 
+              class="mb-3 hover-list-item animate__animated animate__fadeInLeft"
+              [style.animation-delay]="(i * 0.1) + 's'">
+            <i class="fas fa-check text-success me-2"></i>
+            <span class="fs-5">{{ benefit }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="row mt-5 mb-5">
+      <div class="col-lg-12 text-center wow fadeInUp" data-wow-delay="0.2s">
+        <h2 class="mb-3 text-primary animate__animated animate__fadeIn">
+          <i class="fas fa-cogs me-2 rotating-icon"></i>{{ 'hrms.services.title' | translate }}
+        </h2>
+        <p class="text-muted mb-5">{{ 'hrms.services.subtitle' | translate }}</p>
+      </div>
+    </div>
+    <div class="row g-4 mb-5">
+      <div *ngFor="let service of 'hrms.services.list' | translate; let i = index" 
+           class="col-md-6 col-lg-4 wow fadeInUp" 
+           [attr.data-wow-delay]="(i * 0.1) + 's'">
+        <div class="card h-100 shadow-sm border-0 service-card hover-glow">
+          <div class="card-body p-4">
+            <h5 class="card-title text-primary mb-3">
+              <i [class]="service.icon" class="me-2"></i>{{ service.title }}
+            </h5>
+            <ul class="text-muted text-start">
+              <li *ngFor="let item of service.items" class="hover-list-item mb-2">
+                {{ item }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why Choose Us Section -->
+    <div class="row mt-5 mb-5">
+      <div class="col-lg-12">
+        <div class="card shadow-lg border-0 bg-primary text-white wow fadeInUp" data-wow-delay="0.2s">
+          <div class="card-body p-5">
+            <div class="row align-items-center">
+              <div class="col-lg-8">
+                <h2 class="mb-4 animate__animated animate__fadeIn">
+                  <i class="fas fa-trophy me-2 floating-icon"></i>{{ 'hrms.why_choose.title' | translate }}
+                </h2>
+                <p class="fs-5 mb-4">{{ 'hrms.why_choose.description' | translate }}</p>
+                <ul class="list-unstyled">
+                  <li *ngFor="let reason of 'hrms.why_choose.reasons' | translate; let i = index" 
+                      class="mb-3 animate__animated animate__fadeInLeft"
+                      [style.animation-delay]="(i * 0.1) + 's'">
+                    <i class="fas fa-check-circle me-2"></i>
+                    <span>{{ reason }}</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-4 text-center">
+                <i class="fas fa-users-cog" style="font-size: 8rem; opacity: 0.3;"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div id="contact" class="row mt-5 mb-5">
+      <div class="col-lg-12 text-center wow fadeInUp" data-wow-delay="0.2s">
+        <div class="card shadow-lg border-0 bg-gradient-primary text-white">
+          <div class="card-body p-5">
+            <h2 class="mb-4 animate__animated animate__fadeIn">
+              <i class="fas fa-rocket me-2 floating-icon"></i>{{ 'hrms.cta.title' | translate }}
+            </h2>
+            <p class="fs-5 mb-4">{{ 'hrms.cta.description' | translate }}</p>
+            <a [routerLink]="['/contact']" class="btn btn-light btn-lg hover-lift">
+              <i class="fas fa-envelope me-2"></i>{{ 'hrms.cta.button' | translate }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

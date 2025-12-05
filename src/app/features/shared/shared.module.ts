@@ -41,7 +41,8 @@ import { CookieConsentComponent } from './components/cookie-consent/cookie-conse
     LoaderComponent,
     CarouselModule,
     ModalModule,
-    CookieConsentComponent
+    CookieConsentComponent,
+    RouterModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA],
 })

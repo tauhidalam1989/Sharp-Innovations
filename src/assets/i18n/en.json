@@ -2463,6 +2463,118 @@
       "button": "Contact Us"
     }
   },
+  "hrms": {
+    "title": "Human Resource Management System (HRMS)",
+    "subtitle": "Streamline Your HR Operations with Advanced Technology",
+    "description": "At Sharp Innovations, we provide comprehensive Human Resource Management System (HRMS) solutions that transform how organizations manage their workforce. Our HRMS platform integrates all HR functions into a single, unified system, enabling efficient employee management, payroll processing, attendance tracking, performance evaluation, and more.",
+    "explore_features": "Explore Features",
+    "contact_us": "Contact Us",
+    "key_features": {
+      "title": "Key Features",
+      "subtitle": "Comprehensive HR management tools designed to simplify your operations",
+      "features": [
+        {
+          "icon": "fas fa-user-tie",
+          "title": "Employee Management",
+          "description": "Complete employee database with profiles, documents, and history management."
+        },
+        {
+          "icon": "fas fa-calendar-check",
+          "title": "Attendance & Leave",
+          "description": "Automated attendance tracking, leave management, and time-off requests."
+        },
+        {
+          "icon": "fas fa-dollar-sign",
+          "title": "Payroll Management",
+          "description": "Automated salary calculations, tax deductions, and payment processing."
+        },
+        {
+          "icon": "fas fa-chart-line",
+          "title": "Performance Management",
+          "description": "Goal setting, performance reviews, and employee evaluation systems."
+        },
+        {
+          "icon": "fas fa-graduation-cap",
+          "title": "Training & Development",
+          "description": "Track training programs, certifications, and skill development."
+        },
+        {
+          "icon": "fas fa-bullhorn",
+          "title": "Recruitment",
+          "description": "Manage job postings, applications, interviews, and onboarding processes."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Benefits of Our HRMS",
+      "list": [
+        "Streamlined HR processes and reduced administrative workload",
+        "Improved accuracy in payroll and attendance management",
+        "Enhanced employee engagement and satisfaction",
+        "Real-time analytics and reporting capabilities",
+        "Compliance with labor laws and regulations",
+        "Mobile access for employees and managers",
+        "Integration with existing business systems",
+        "Data security and privacy protection"
+      ]
+    },
+    "services": {
+      "title": "Our HRMS Services",
+      "subtitle": "End-to-end HRMS solutions tailored to your business needs",
+      "list": [
+        {
+          "icon": "fas fa-cogs",
+          "title": "HRMS Implementation",
+          "items": [
+            "System analysis and requirements gathering",
+            "Custom configuration and setup",
+            "Data migration and integration",
+            "User training and support"
+          ]
+        },
+        {
+          "icon": "fas fa-tools",
+          "title": "HRMS Customization",
+          "items": [
+            "Custom workflow development",
+            "Branding and UI customization",
+            "Third-party system integration",
+            "API development and integration"
+          ]
+        },
+        {
+          "icon": "fas fa-headset",
+          "title": "Support & Maintenance",
+          "items": [
+            "24/7 technical support",
+            "Regular system updates",
+            "Performance monitoring",
+            "Backup and disaster recovery"
+          ]
+        }
+      ]
+    },
+    "gallery": {
+      "title": "Our Office & Workspace",
+      "subtitle": "See where we create innovative HR solutions"
+    },
+    "why_choose": {
+      "title": "Why Choose Our HRMS Solution?",
+      "description": "Our HRMS platform is designed with your organization's needs in mind, providing a comprehensive solution that grows with your business.",
+      "reasons": [
+        "Experienced HR Technology Team – Our experts understand HR processes and technology integration.",
+        "Scalable Solutions – From small businesses to large enterprises, our HRMS scales with you.",
+        "User-Friendly Interface – Intuitive design ensures easy adoption by all users.",
+        "Comprehensive Support – We provide ongoing support and training to ensure success.",
+        "Cost-Effective – Reduce HR costs while improving efficiency and accuracy."
+      ]
+    },
+    "cta": {
+      "title": "Ready to Transform Your HR Management?",
+      "description": "Get started with our comprehensive HRMS solution today. Contact us to schedule a demo and see how we can streamline your HR operations.",
+      "button": "Get Started"
+    }
+  },
   "nlp_services": {
     "title": "Natural Language Processing (NLP) Services",
     "subtitle": "Unlock the Power of Language with AI-driven NLP Solutions",
