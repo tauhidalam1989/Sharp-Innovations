@@ -62,11 +62,24 @@
   cursor: pointer;
   border-radius: 12px;
   overflow: hidden;
+  background: #ffffff;
 }
 
 .service-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+}
+
+.enhanced-card {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: #ffffff;
+}
+
+.enhanced-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(19, 99, 198, 0.12) !important;
+  border-color: rgba(19, 99, 198, 0.2);
 }
 
 .hover-list-item {
@@ -83,13 +96,83 @@
   padding-left: 12px;
 }
 
+/* Service list styling */
+.service-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.service-list-item {
+  padding: 0.75rem 0;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  
+  i {
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+  }
+  
+  &:hover {
+    color: #1363C6 !important;
+    padding-left: 0.5rem;
+  }
+}
+
 /* Feature icon styling */
 .feature-icon {
   transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-icon-large {
+  font-size: 3.5rem !important;
+  transition: all 0.3s ease;
 }
 
 .service-card:hover .feature-icon {
   transform: scale(1.1) rotate(5deg);
+}
+
+.service-card:hover .feature-icon-large {
+  color: #0d4a9e !important;
+}
+
+/* Service title and icon styling */
+.service-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.service-icon {
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.enhanced-card:hover .service-icon {
+  transform: rotate(15deg);
+  color: #0d4a9e;
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.feature-description {
+  line-height: 1.7;
+  font-size: 0.95rem;
 }
 
 /* Gallery item styling */
@@ -121,8 +204,21 @@
   transition: all 0.3s ease;
 }
 
+.card.shadow-sm {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
 .card.shadow-lg {
   box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important;
+}
+
+/* Enhanced shadows for better depth */
+.enhanced-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+.enhanced-card:hover {
+  box-shadow: 0 20px 50px rgba(19, 99, 198, 0.15) !important;
 }
 
 /* Text animations */
@@ -202,6 +298,60 @@
   .service-card {
     margin-bottom: 1.5rem;
   }
+
+  .card-body {
+    padding: 1.5rem !important;
+  }
+
+  h1, h2 {
+    text-align: center;
+  }
+
+  .text-lg-start {
+    text-align: center !important;
+  }
+}
+
+/* Alignment improvements */
+.text-center.text-lg-start {
+  @media (min-width: 992px) {
+    text-align: left !important;
+  }
+}
+
+.justify-content-center.justify-content-lg-start {
+  @media (min-width: 992px) {
+    justify-content: flex-start !important;
+  }
+}
+
+/* List alignment */
+.list-unstyled {
+  li {
+    display: flex;
+    align-items: flex-start;
+    
+    i {
+      flex-shrink: 0;
+      margin-top: 0.25rem;
+    }
+  }
+}
+
+/* Card content alignment */
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Button alignment on mobile */
+@media (max-width: 576px) {
+  .d-flex.flex-column.flex-sm-row {
+    .btn {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+  }
 }
 
 /* Button enhancements */
@@ -214,6 +364,7 @@
 .btn-primary {
   background-color: #1363C6;
   border-color: #1363C6;
+  color: #ffffff;
 }
 
 .btn-primary:hover {
@@ -221,11 +372,13 @@
   border-color: #0d4a9e;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(19, 99, 198, 0.3);
+  color: #ffffff;
 }
 
 .btn-outline-primary {
   color: #1363C6;
   border-color: #1363C6;
+  background-color: transparent;
 }
 
 .btn-outline-primary:hover {
@@ -233,6 +386,61 @@
   border-color: #1363C6;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(19, 99, 198, 0.3);
+  color: #ffffff;
+}
+
+/* Hero section buttons with white hover */
+.hero-btn-primary {
+  background-color: #1363C6;
+  border-color: #1363C6;
+  color: #ffffff;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  
+  &:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #1363C6;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(19, 99, 198, 0.3);
+  }
+  
+  i {
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover i {
+    transform: translateY(2px);
+  }
+}
+
+.hero-btn-outline {
+  color: #1363C6;
+  border-color: #1363C6;
+  background-color: transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  border-width: 2px;
+  
+  &:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #1363C6;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(19, 99, 198, 0.3);
+  }
+  
+  i {
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover i {
+    transform: translateX(3px);
+  }
 }
 
 /* List styling */
@@ -243,11 +451,28 @@
 
 /* Section spacing */
 .mb-5 {
-  margin-bottom: 3rem !important;
+  margin-bottom: 4rem !important;
+  
+  @media (max-width: 768px) {
+    margin-bottom: 3rem !important;
+  }
 }
 
 .mt-5 {
-  margin-top: 3rem !important;
+  margin-top: 4rem !important;
+  
+  @media (max-width: 768px) {
+    margin-top: 3rem !important;
+  }
+}
+
+/* Container improvements */
+.container {
+  max-width: 1200px;
+}
+
+.container-fluid {
+  background: #f8f9fa;
 }
 
 /* Image styling */
@@ -286,9 +511,273 @@ html {
   background: linear-gradient(to bottom, rgba(19, 99, 198, 0.02), transparent);
 }
 
+.enhanced-card:hover .card-body {
+  background: linear-gradient(to bottom, rgba(19, 99, 198, 0.03), transparent);
+}
+
+/* Improved list item spacing in service cards */
+.service-list-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+  
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Better card title alignment */
+.service-title,
+.feature-title {
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* Icon color transitions */
 .service-card:hover .feature-icon i {
   color: #1363C6 !important;
   transition: color 0.3s ease;
+}
+
+/* Section title and subtitle styling */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  
+  @media (max-width: 768px) {
+    font-size: 1.75rem;
+  }
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #6c757d;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Hero section styling */
+.hero-title {
+  font-size: 36px;;
+  font-weight: 700;
+  line-height: 1.2;
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.4;
+  
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+  }
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 900px;
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+/* CTA section styling */
+.cta-card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1363C6 0%, #0d4a9e 100%);
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 70px rgba(19, 99, 198, 0.4) !important;
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
+  
+  &:hover::before {
+    opacity: 1;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
+  
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+}
+
+.cta-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  
+  @media (max-width: 768px) {
+    font-size: 1.75rem;
+  }
+  
+  @media (max-width: 576px) {
+    font-size: 1.5rem;
+  }
+  
+  i {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  }
+}
+
+.cta-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #ffffff !important;
+  position: relative;
+  z-index: 2;
+  max-width: 750px;
+  margin: 0 auto;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-weight: 400;
+  
+  @media (max-width: 768px) {
+    font-size: 1.05rem;
+  }
+  
+  @media (max-width: 576px) {
+    font-size: 1rem;
+  }
+}
+
+/* Ensure white color in CTA card */
+.cta-card .cta-description,
+.cta-card p.cta-description,
+.cta-card .fs-5.cta-description {
+  color: #ffffff !important;
+}
+
+.cta-button {
+  font-weight: 600;
+  padding: 1rem 3rem;
+  border-radius: 12px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 3;
+  background-color: #ffffff;
+  color: #1363C6;
+  border: 2px solid #ffffff;
+  font-size: 1.15rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+  }
+  
+  &:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+    color: #0d4a9e;
+    border-color: #ffffff;
+  }
+  
+  &:hover::before {
+    left: 100%;
+  }
+  
+  &:active {
+    transform: translateY(-2px) scale(1.03);
+  }
+  
+  i {
+    transition: transform 0.4s ease;
+    position: relative;
+    z-index: 1;
+  }
+  
+  &:hover i {
+    transform: translateX(5px);
+  }
+  
+  span, & {
+    position: relative;
+    z-index: 1;
+  }
+  
+  @media (max-width: 576px) {
+    padding: 0.875rem 2.5rem;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* Enhanced card body padding */
+.enhanced-card .card-body {
+  padding: 2rem;
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
+}
+
+/* Better spacing for service cards */
+.service-card .card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Improved text colors */
+.text-muted {
+  color: #6c757d !important;
+  line-height: 1.7;
 }
 
