@@ -98,14 +98,14 @@ export class ClientsPageComponent implements OnInit {
   ];
 
   isocertificates: string[] = [
-    'assets/isocert/UAF_Americo-ISO_9001-0001.jpg',
-    'assets/isocert/UAF_Americo-ISO_9001-0002.jpg',
-    'assets/isocert/UAF_Americo-ISO_9001-0003.jpg',
-    'assets/isocert/UAF_Americo-ISO_9001-0004.jpg',
-    'assets/isocert/UAF_Americo-ISO_9001-0005.jpg',
-    'assets/isocert/UAF_Americo-ISO_9001-0006.jpg',
-    'assets/isocert/UAF_Americo-ISO_9001-0007.jpg',
-    'assets/isocert/UAF_Americo-ISO_9001-0008.jpg',
+    'assets/isocert/1.jpg',
+    'assets/isocert/2.jpg',
+    'assets/isocert/3.jpg',
+    'assets/isocert/4.jpg',
+    'assets/isocert/5.jpg',
+    'assets/isocert/6.jpg',
+    'assets/isocert/7.jpg',
+
   ];
 
   clientOptions: any = {};
