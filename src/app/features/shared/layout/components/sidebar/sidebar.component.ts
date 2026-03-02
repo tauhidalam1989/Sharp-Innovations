@@ -39,15 +39,15 @@ export class SidebarComponent {
   selectProductCategory(category:any){
     this.selectedProductCategory = this.selectedProductCategory === category ? null : category;
   }
-  toggleDropdown(menu: string) {
-    if (menu === 'isservicing') {
-      this.isservicing = !this.isservicing;
-      this.isProduct = false; // Close other menu
-    } else if (menu === 'isProduct') {
-      this.isProduct = !this.isProduct;
-      this.isservicing = false; // Close other menu
-    }
-  }
+  // toggleDropdown(menu: string) {
+  //   if (menu === 'isservicing') {
+  //     this.isservicing = !this.isservicing;
+  //     this.isProduct = false; // Close other menu
+  //   } else if (menu === 'isProduct') {
+  //     this.isProduct = !this.isProduct;
+  //     this.isservicing = false; // Close other menu
+  //   }
+  // }
 
   switchLanguage(lang: string): void {
     this.languageService.switchLanguage(lang);
