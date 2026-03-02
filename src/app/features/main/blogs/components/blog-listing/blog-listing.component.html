@@ -83,11 +83,11 @@
         </svg>
     </div>
 
-    <!-- Header - more compact -->
-    <div class="page-header text-center py-4">
-        <h1 class="fw-bold">{{ 'BLOG_LISTING.TITLE' | translate }}</h1>
-        <p class="lead text-muted mb-0">{{ 'BLOG_LISTING.SUBTITLE' | translate }}</p>
-    </div>
+    <!-- Header -->
+<div class="page-header py-4 text-center">
+    <h1 class="fw-bold">{{ currentLang === 'ar' ? 'تحليلاتنا وأخبارنا' : 'Our Insights & News' }}</h1>
+    <p class="lead text-muted mb-0">{{ currentLang === 'ar' ? 'ابقَ على اطلاع دائم بأحدث التطورات في مجال التكنولوجيا والتصميم والأمن السيبراني.' : 'Stay updated with the latest in technology, design, and cybersecurity.' }}</p>
+</div>
 
     <!-- Filters - more compact -->
     <div class="container mb-4">
