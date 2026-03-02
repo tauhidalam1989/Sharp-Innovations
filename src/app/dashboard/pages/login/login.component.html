@@ -1,0 +1,60 @@
+<div class="login-container">
+  <div class="login-card">
+    <div class="login-header">
+      <img src="assets/logo/SLogo.png" alt="Company Logo" class="logo">
+      <h2>Admin Portal</h2>
+      <p class="text-muted">Enter your credentials to access the dashboard</p>
+    </div>
+
+    <div *ngIf="error" class="alert alert-danger">
+      <i class="fas fa-exclamation-circle"></i>
+      {{ error }}
+    </div>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="email">
+          <i class="fas fa-envelope"></i>
+          Email Address
+        </label>
+        <input type="email" id="email" formControlName="email" class="form-control"
+          [class.is-invalid]="submitted && f['email'].errors" placeholder="Enter your email">
+        <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+          <div *ngIf="f['email'].errors['required']">Email is required</div>
+          <div *ngIf="f['email'].errors['email']">Please enter a valid email</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">
+          <i class="fas fa-lock"></i>
+          Password
+        </label>
+        <input type="password" id="password" formControlName="password" class="form-control"
+          [class.is-invalid]="submitted && f['password'].errors" placeholder="Enter your password">
+        <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+          <div *ngIf="f['password'].errors['required']">Password is required</div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label class="checkbox">
+          <input type="checkbox" formControlName="rememberMe">
+          <span>Remember me</span>
+        </label>
+        <!-- <a href="#" class="forgot-password">Forgot Password?</a> -->
+      </div>
+
+      <button type="submit" class="btn-login" [disabled]="loading">
+        <span *ngIf="loading" class="spinner"></span>
+        <span *ngIf="!loading">Login to Dashboard</span>
+        <span *ngIf="loading">Logging in...</span>
+      </button>
+    </form>
+
+    <div class="login-footer">
+      <!-- <p>Need help? <a href="#">Contact Support</a></p> -->
+      <p class="copyright">&copy; 2026 Sharp Innovations. All rights reserved.</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,132 @@
+<div class="product-list-container">
+    <!-- Header -->
+    <div class="page-header">
+        <h1>Services</h1>
+        <button class="btn-primary" (click)="createNew()">
+            <i class="fas fa-plus"></i>
+            Add New Service
+        </button>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters-card">
+        <div class="filters-grid">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" [(ngModel)]="searchTerm" (keyup.enter)="onSearch()" placeholder="Search services..."
+                    class="form-control">
+            </div>
+
+            <div class="filter-select">
+                <select [(ngModel)]="statusFilter" (change)="onStatusFilterChange()" class="form-control">
+                    <option value="all">All Status</option>
+                    <option value="published">Published</option>
+                    <option value="draft">Draft</option>
+                </select>
+            </div>
+
+            <div class="filter-select">
+                <select class="form-control" (change)="onPageChange(1)">
+                    <option [value]="10">10 per page</option>
+                    <option [value]="25">25 per page</option>
+                    <option [value]="50">50 per page</option>
+                    <option [value]="100">100 per page</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" *ngIf="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Services Table -->
+    <div class="table-card" *ngIf="!loading">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th (click)="onSortChange('order')" class="sortable">
+                        Order <i class="fas" [ngClass]="getSortIcon('order')"></i>
+                    </th>
+                    <th (click)="onSortChange('heroTitle')" class="sortable">
+                        Service Title <i class="fas" [ngClass]="getSortIcon('heroTitle')"></i>
+                    </th>
+                    <th>Slug</th>
+                    <th>Status</th>
+                    <th (click)="onSortChange('views')" class="sortable">
+                        Views <i class="fas" [ngClass]="getSortIcon('views')"></i>
+                    </th>
+                    <th (click)="onSortChange('createdAt')" class="sortable">
+                        Created <i class="fas" [ngClass]="getSortIcon('createdAt')"></i>
+                    </th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let service of services">
+                    <td>
+                        <span class="order-badge">{{ service.order }}</span>
+                    </td>
+                    <td>
+                        <div class="product-info">
+                            <div class="product-icon" *ngIf="service.heroIcon">
+                                <i [class]="service.heroIcon"
+                                    *ngIf="service.heroIcon.startsWith('fa') || service.heroIcon.startsWith('fa-') || service.heroIcon.includes(' fa-')"></i>
+                                <img [src]="service.heroIcon" alt="Hero Icon" width="30"
+                                    *ngIf="!(service.heroIcon.startsWith('fa') || service.heroIcon.startsWith('fa-') || service.heroIcon.includes(' fa-'))">
+                            </div>
+                            <div class="product-details">
+                                <strong>{{ service.heroTitle }}</strong>
+                                <small *ngIf="service.heroTagline">{{ service.heroTagline | slice:0:50 }}...</small>
+                            </div>
+                        </div>
+                    </td>
+                    <td><code>{{ service.slug }}</code></td>
+                    <td>
+                        <span class="status-badge" [class.published]="service.isPublished"
+                            [class.draft]="!service.isPublished">
+                            {{ service.isPublished ? 'Published' : 'Draft' }}
+                        </span>
+                    </td>
+                    <td>{{ service.views }}</td>
+                    <td>{{ service.createdAt | date:'mediumDate' }}</td>
+                    <td class="actions">
+                        <button class="btn-icon" (click)="viewService(service)" title="View">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="btn-icon" (click)="editService(service.id)" title="Edit">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn-icon" (click)="togglePublish(service)"
+                            [title]="service.isPublished ? 'Unpublish' : 'Publish'">
+                            <i class="fas" [ngClass]="service.isPublished ? 'fa-eye-slash' : 'fa-eye'"></i>
+                        </button>
+                        <button class="btn-icon delete" (click)="deleteService(service.id)" title="Delete">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr *ngIf="services.length === 0">
+                    <td colspan="7" class="text-center">No services found</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Pagination -->
+        <div class="pagination" *ngIf="totalItems > pageSize">
+            <button class="page-btn" [disabled]="currentPage === 1" (click)="onPageChange(currentPage - 1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <span class="page-info">
+                Page {{ currentPage }} of {{ getTotalPages() }}
+            </span>
+
+            <button class="page-btn" [disabled]="currentPage === getTotalPages()"
+                (click)="onPageChange(currentPage + 1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</div>

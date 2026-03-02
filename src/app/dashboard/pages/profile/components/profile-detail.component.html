@@ -1,0 +1,59 @@
+<div class="profile-container">
+    <div class="header">
+        <h2>My Profile</h2>
+        <p>Manage your account settings and profile details.</p>
+    </div>
+
+    <div *ngIf="loading" class="loading-state">
+        <div class="spinner"></div>
+        <p>Loading profile...</p>
+    </div>
+
+    <div *ngIf="error" class="error-state">
+        <p>{{ error }}</p>
+        <button (click)="loadProfile()" class="retry-btn">Retry</button>
+    </div>
+
+    <div *ngIf="!loading && profileData" class="profile-card">
+        <div class="profile-header">
+            <div class="avatar-container">
+                <img [src]="profileData.avatar || 'assets/default-avatar.png'" alt="User Avatar" class="avatar">
+            </div>
+            <div class="user-info">
+                <h3>{{ profileData.name }}</h3>
+                <span class="role-badge">{{ profileData.role }}</span>
+            </div>
+        </div>
+
+        <div class="profile-details">
+            <div class="detail-group">
+                <label>Email Address</label>
+                <div class="value">{{ profileData.email }}</div>
+            </div>
+
+            <div class="detail-group">
+                <label>Phone Number</label>
+                <div class="value">{{ profileData.phone || 'Not provided' }}</div>
+            </div>
+
+            <div class="detail-group">
+                <label>Status</label>
+                <div class="value">
+                    <span [class.active-status]="profileData.isActive" [class.inactive-status]="!profileData.isActive">
+                        {{ profileData.isActive ? 'Active' : 'Inactive' }}
+                    </span>
+                </div>
+            </div>
+
+            <div class="detail-group">
+                <label>Last Login</label>
+                <div class="value">{{ profileData.lastLogin ? (profileData.lastLogin | date:'medium') : 'Never' }}</div>
+            </div>
+
+            <div class="detail-group">
+                <label>Account Created</label>
+                <div class="value">{{ profileData.createdAt | date:'mediumDate' }}</div>
+            </div>
+        </div>
+    </div>
+</div>

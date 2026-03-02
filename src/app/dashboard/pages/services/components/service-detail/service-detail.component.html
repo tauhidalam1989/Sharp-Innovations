@@ -1,0 +1,215 @@
+<div class="service-detail-wrapper" *ngIf="service" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'"
+    [class.rtl]="currentLang === 'ar'">
+
+    <!-- 1. HERO SECTION -->
+    <section class="hero-section" [style.background-image]="'url(' + getImageUrl(service.heroImage) + ')'">
+        <div class="overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-icon-box" *ngIf="service.heroIcon">
+                    <img [src]="getImageUrl(service.heroIcon)" alt="Hero Icon">
+                </div>
+                <h1 class="hero-title">{{ currentLang === 'ar' ? service.heroTitleAr : service.heroTitle }}</h1>
+                <p class="hero-tagline" *ngIf="service.heroTagline || service.heroTaglineAr">
+                    {{ currentLang === 'ar' ? service.heroTaglineAr : service.heroTagline }}
+                </p>
+                <div class="hero-description" *ngIf="service.heroIntroduction || service.heroIntroductionAr">
+                    {{ currentLang === 'ar' ? service.heroIntroductionAr : service.heroIntroduction }}
+                </div>
+                <div class="hero-actions">
+                    <a [routerLink]="service.primaryCtaLink" class="btn btn-primary lg"
+                        *ngIf="service.primaryCtaText || service.primaryCtaTextAr">
+                        {{ currentLang === 'ar' ? service.primaryCtaTextAr : service.primaryCtaText }}
+                    </a>
+                    <a [routerLink]="service.secondaryCtaLink" class="btn btn-outline-light lg"
+                        *ngIf="service.secondaryCtaText || service.secondaryCtaTextAr">
+                        {{ currentLang === 'ar' ? service.secondaryCtaTextAr : service.secondaryCtaText }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. ABOUT THIS SERVICE -->
+    <section class="section about-section white-bg" *ngIf="service.aboutSectionTitle || service.aboutSectionTitleAr">
+        <div class="container grid-2-col align-center">
+            <div class="content-left">
+                <h2 class="section-title main-gradient-text">{{ currentLang === 'ar' ? service.aboutSectionTitleAr :
+                    service.aboutSectionTitle }}</h2>
+                <div class="section-desc">
+                    {{ currentLang === 'ar' ? service.aboutSectionDescriptionAr : service.aboutSectionDescription }}
+                </div>
+
+                <div class="about-pillars mt-5">
+                    <div class="pillar-item" *ngFor="let pillar of getAboutPillars()">
+                        <div class="pillar-icon">
+                            <i *ngIf="pillar.iconType === 'fa'" [class]="pillar.iconFA"></i>
+                            <img *ngIf="pillar.iconType === 'file'" [src]="getImageUrl(pillar.iconPath)" alt="Icon">
+                        </div>
+                        <div class="pillar-text">
+                            <h3>{{ currentLang === 'ar' ? pillar.titleAr : pillar.title }}</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-right image-box animate-fade-in">
+                <img [src]="getImageUrl(service.aboutSectionImage)"
+                    [alt]="currentLang === 'ar' ? service.aboutSectionImageAltAr : service.aboutSectionImageAlt"
+                    class="premium-shadow rounded-20">
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SOLUTIONS / CAPABILITIES -->
+    <section class="section capabilities-section gray-bg" *ngIf="getCapabilities().length > 0">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="section-title center-gradient-text">{{ currentLang === 'ar' ?
+                    service.capabilitiesSectionTitleAr : service.capabilitiesSectionTitle }}</h2>
+            </div>
+            <div class="capabilities-grid">
+                <div class="capability-card" *ngFor="let item of getCapabilities()">
+                    <div class="card-icon">
+                        <i [class]="item.icon || 'fas fa-check-circle'"></i>
+                    </div>
+                    <h3 class="card-title">{{ currentLang === 'ar' ? item.titleAr : item.title }}</h3>
+                    <p class="card-desc">{{ currentLang === 'ar' ? item.descriptionAr : item.description }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. INDUSTRIES WE SUPPORT -->
+    <section class="section industries-section white-bg"
+        *ngIf="service.industriesSectionTitle || service.industriesSectionTitleAr">
+        <div class="container grid-2-col align-center">
+            <div class="content-left image-box order-mobile-2">
+                <img [src]="getImageUrl(service.industriesImage)"
+                    [alt]="currentLang === 'ar' ? service.industriesImageAltAr : service.industriesImageAlt"
+                    class="premium-shadow rounded-20">
+            </div>
+            <div class="content-right order-mobile-1">
+                <h2 class="section-title main-gradient-text">{{ currentLang === 'ar' ? service.industriesSectionTitleAr
+                    : service.industriesSectionTitle }}</h2>
+                <div class="section-desc mb-5">
+                    {{ currentLang === 'ar' ? service.industriesSectionDescriptionAr :
+                    service.industriesSectionDescription }}
+                </div>
+
+                <div class="industries-list">
+                    <div class="industry-item" *ngFor="let ind of getIndustries()">
+                        <div class="industry-icon">
+                            <i *ngIf="ind.iconType === 'fa'" [class]="ind.iconFA"></i>
+                            <img *ngIf="ind.iconType === 'file'" [src]="getImageUrl(ind.iconPath)" alt="Industry Icon">
+                        </div>
+                        <div class="industry-content">
+                            <h3>{{ currentLang === 'ar' ? ind.titleAr : ind.title }}</h3>
+                            <div class="vertical-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CRITICAL SECTION -->
+    <section class="section critical-section dark-bg"
+        *ngIf="service.criticalSectionTitle || service.criticalSectionTitleAr">
+        <div class="container grid-2-col">
+            <div class="impact-left">
+                <h2 class="critical-title text-white mb-4">{{ currentLang === 'ar' ? service.criticalSectionTitleAr :
+                    service.criticalSectionTitle }}</h2>
+                <div class="critical-desc text-white-70 mb-5">
+                    {{ currentLang === 'ar' ? service.criticalSectionDescriptionAr : service.criticalSectionDescription
+                    }}
+                </div>
+                <a [routerLink]="service.criticalSectionButtonLink" class="btn btn-primary lg"
+                    *ngIf="service.criticalSectionButtonText || service.criticalSectionButtonTextAr">
+                    {{ currentLang === 'ar' ? service.criticalSectionButtonTextAr : service.criticalSectionButtonText }}
+                </a>
+            </div>
+            <div class="impact-right">
+                <h3 class="subsection-title text-primary mb-4">{{ currentLang === 'ar' ? service.criticalRightTitleAr :
+                    service.criticalRightTitle }}</h3>
+                <div class="critical-cards-grid">
+                    <div class="critical-card" *ngFor="let card of getCriticalCards()">
+                        <h4>{{ currentLang === 'ar' ? card.titleAr : card.title }}</h4>
+                        <div class="hover-circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. WHY CHOOSE US -->
+    <section class="section why-choose-section gray-bg"
+        *ngIf="service.whyChooseUsSectionTitle || service.whyChooseUsSectionTitleAr">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="section-title center-gradient-text">{{ currentLang === 'ar' ?
+                    service.whyChooseUsSectionTitleAr : service.whyChooseUsSectionTitle }}</h2>
+                <p class="section-subtitle">{{ currentLang === 'ar' ? service.whyChooseUsDescriptionAr :
+                    service.whyChooseUsDescription }}</p>
+            </div>
+            <div class="why-choose-list">
+                <div class="reason-card" *ngFor="let item of getWhyChooseUs()">
+                    <div class="reason-icon">
+                        <i *ngIf="item.iconType === 'fa'" [class]="item.iconFA"></i>
+                        <img *ngIf="item.iconType === 'file'" [src]="getImageUrl(item.iconPath)" alt="Icon">
+                    </div>
+                    <div class="reason-content">
+                        <h3>{{ currentLang === 'ar' ? item.titleAr : item.title }}</h3>
+                        <p>{{ currentLang === 'ar' ? item.descriptionAr : item.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FAQ SECTION -->
+    <section class="section faq-section white-bg" *ngIf="getFAQs().length > 0">
+        <div class="container narrow-container">
+            <div class="section-header text-center mb-5">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-accordion">
+                <div class="faq-item" *ngFor="let faq of getFAQs(); let i = index" [class.active]="activeFaq === i">
+                    <div class="faq-question" (click)="toggleFaq(i)">
+                        <h3>{{ currentLang === 'ar' ? faq.questionAr : faq.question }}</h3>
+                        <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer" *ngIf="activeFaq === i">
+                        <p>{{ currentLang === 'ar' ? faq.answerAr : faq.answer }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. BOTTOM CTA BANNER -->
+    <section class="section cta-banner-section" *ngIf="service.ctaMessage || service.ctaMessageAr">
+        <div class="container text-center">
+            <h2 class="cta-message text-white mb-5">{{ currentLang === 'ar' ? service.ctaMessageAr : service.ctaMessage
+                }}</h2>
+            <div class="cta-actions">
+                <a [routerLink]="service.ctaPrimaryLink" class="btn btn-primary lg"
+                    *ngIf="service.ctaPrimaryText || service.ctaPrimaryTextAr">
+                    {{ currentLang === 'ar' ? service.ctaPrimaryTextAr : service.ctaPrimaryText }}
+                </a>
+                <a [routerLink]="service.ctaSecondaryLink" class="btn btn-outline-light lg"
+                    *ngIf="service.ctaSecondaryText || service.ctaSecondaryTextAr">
+                    {{ currentLang === 'ar' ? service.ctaSecondaryTextAr : service.ctaSecondaryText }}
+                </a>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<div class="loading-state" *ngIf="loading">
+    <div class="spinner"></div>
+</div>
+
+<div class="error-state" *ngIf="error">
+    <div class="alert alert-danger">{{ error }}</div>
+</div>

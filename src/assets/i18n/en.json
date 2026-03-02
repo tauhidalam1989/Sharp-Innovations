@@ -1,73 +1,69 @@
 {
-    
-        "PAGE_TITLE": {
-            "ABOUT": "About Us",
-            "HOME": "Home",
-            "SERVICES": "Our Services",
-            "services": "Services",
-            
-            "PROJECTS": "Our Projects",
-            "CONTACT": "Contact",
-            "FEATURES": "Features",
-            "OUR_TEAM": "Our Team",
-            "FAQS": "FAQs",
-            "TESTIMONIALS": "Testimonials",
-            "MobileDevelopment": "Mobile App Development",
-            "webDevelopment": "Web Application Development",
-            "cloudDevelopment":"Cloud Development",
-            "chatbotDevelopment":"Chatbot Development",
-            "digitalMarketingServices":"Digital Marketing Services",
-            "uiDevelopment":"UI Development"
-
-        },
-        "FEATURESS": {
-            "WHY_CHOOSE_US": "Why Choose Sharp Innovations?",
-            "TITLE": "We Are Sharp Innovations Company for Information Technology",
-            "DESCRIPTION": "At Sharp Innovations, we're not just service providers — We're your strategic partners in driving digital transformation. With a proven track record and a team of dedicated experts, we bring clarity, security, and innovation to your technology landscape.",
-            "FEATURE_ONE": "Across industries and continents, our clients trust us to deliver results that matter. From startups to enterprises, we build lasting relationships through consistent performance and genuine partnership.",
-            "FEATURE_TWO": "Every project we take on is a mission—executed with precision, driven by strategy, and backed by deep expertise in Application Management, Cybersecurity, Network infrastructure, and AI consulting.",
-            "HAPPY_CLIENTS": "Happy Clients",
-            "PROJECT_COMPLETE": "Successful Projects Delivered"
-          },
-          "CONTACT-FORM": {
-  "US": "Contact Us",
-  "QUERY_PROMPT": "We'd love to hear your thoughts and feedback on any of our solutions and services. Our team is always here to assist you and respond to your inquiries at any time",
-  "FORM_INACTIVE": "The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes.",
-  "DOWNLOAD_NOW": "Download Now",
-  "YOUR_NAME": "Your Name",
-  "PLACEHOLDER_NAME": "Enter your name",
-  "YOUR_EMAIL": "Your Email",
-  "PLACEHOLDER_EMAIL": "Enter your email",
-  "CONTACT_NUMBER": "Contact Number",
-  "PLACEHOLDER_NUMBER": "Enter your phone number",
-  "ORGANIZATION": "Organization",
-  "PLACEHOLDER_ORGANIZATION": "Enter your organization",
-  "SUBJECT": "Subject",
-  "PLACEHOLDER_SUBJECT": "Select subject",
-  "MESSAGE": "Message",
-  "PLACEHOLDER_MESSAGE": "Leave a message here",
-  "SEND_MESSAGE": "Send Message",
-  "ERROR_NAME": "Please enter your name (minimum 2 characters).",
-  "ERROR_EMAIL": "Please enter a valid email address.",
-  "ERROR_NUMBER": "Please enter a valid contact number.",
-  "ERROR_ORGANIZATION": "Please enter your organization.",
-  "ERROR_SUBJECT": "Please enter a subject.",
-  "ERROR_MESSAGE": "Please enter a message (minimum 10 characters).",
-  "SUBJECT_SERVICES": "Services and Solutions",
-  "SUBJECT_MEDIA": "Media and Public Relations",
-  "SUBJECT_BILLING": "Billing and Accounts Issues",
-  "SUBJECT_GENERAL": "General Inquiry",
-  "SUBJECT_TECHNICAL": "Technical Support",
-  "SUBJECT_COMPLAINTS": "Complaints",
-  "CONTACT_HOURS": "Business Hours",
-  "CONTACT_TIME": "Sunday - Thursday: 8 a.m. to 5 p.m",
-  "CONTACT_DAY": "Friday & Saturday : Closed",
-  "CONTACT_SOCIALMEDIA": "Social Media accounts",
-  "CONTACT_DETAILS" : "Our Contact details",
-  "SALES_INQURY":"For Sales Inquiries"
-},
-
- "FAQ": {
+  "PAGE_TITLE": {
+    "ABOUT": "About Us",
+    "HOME": "Home",
+    "SERVICES": "Our Services",
+    "services": "Services",
+    "PROJECTS": "Our Projects",
+    "CONTACT": "Contact",
+    "FEATURES": "Features",
+    "OUR_TEAM": "Our Team",
+    "FAQS": "FAQs",
+    "TESTIMONIALS": "Testimonials",
+    "MobileDevelopment": "Mobile App Development",
+    "webDevelopment": "Web Application Development",
+    "cloudDevelopment": "Cloud Development",
+    "chatbotDevelopment": "Chatbot Development",
+    "digitalMarketingServices": "Digital Marketing Services",
+    "uiDevelopment": "UI Development"
+  },
+  "FEATURESS": {
+    "WHY_CHOOSE_US": "Why Choose Sharp Innovations?",
+    "TITLE": "We Are Sharp Innovations Company for Information Technology",
+    "DESCRIPTION": "At Sharp Innovations, we're not just service providers — We're your strategic partners in driving digital transformation. With a proven track record and a team of dedicated experts, we bring clarity, security, and innovation to your technology landscape.",
+    "FEATURE_ONE": "Across industries and continents, our clients trust us to deliver results that matter. From startups to enterprises, we build lasting relationships through consistent performance and genuine partnership.",
+    "FEATURE_TWO": "Every project we take on is a mission—executed with precision, driven by strategy, and backed by deep expertise in Application Management, Cybersecurity, Network infrastructure, and AI consulting.",
+    "HAPPY_CLIENTS": "Happy Clients",
+    "PROJECT_COMPLETE": "Successful Projects Delivered"
+  },
+  "CONTACT-FORM": {
+    "US": "Contact Us",
+    "QUERY_PROMPT": "We'd love to hear your thoughts and feedback on any of our solutions and services. Our team is always here to assist you and respond to your inquiries at any time",
+    "FORM_INACTIVE": "The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes.",
+    "DOWNLOAD_NOW": "Download Now",
+    "YOUR_NAME": "Your Name",
+    "PLACEHOLDER_NAME": "Enter your name",
+    "YOUR_EMAIL": "Your Email",
+    "PLACEHOLDER_EMAIL": "Enter your email",
+    "CONTACT_NUMBER": "Contact Number",
+    "PLACEHOLDER_NUMBER": "Enter your phone number",
+    "ORGANIZATION": "Organization",
+    "PLACEHOLDER_ORGANIZATION": "Enter your organization",
+    "SUBJECT": "Subject",
+    "PLACEHOLDER_SUBJECT": "Select subject",
+    "MESSAGE": "Message",
+    "PLACEHOLDER_MESSAGE": "Leave a message here",
+    "SEND_MESSAGE": "Send Message",
+    "ERROR_NAME": "Please enter your name (minimum 2 characters).",
+    "ERROR_EMAIL": "Please enter a valid email address.",
+    "ERROR_NUMBER": "Please enter a valid contact number.",
+    "ERROR_ORGANIZATION": "Please enter your organization.",
+    "ERROR_SUBJECT": "Please enter a subject.",
+    "ERROR_MESSAGE": "Please enter a message (minimum 10 characters).",
+    "SUBJECT_SERVICES": "Services and Solutions",
+    "SUBJECT_MEDIA": "Media and Public Relations",
+    "SUBJECT_BILLING": "Billing and Accounts Issues",
+    "SUBJECT_GENERAL": "General Inquiry",
+    "SUBJECT_TECHNICAL": "Technical Support",
+    "SUBJECT_COMPLAINTS": "Complaints",
+    "CONTACT_HOURS": "Business Hours",
+    "CONTACT_TIME": "Sunday - Thursday: 8 a.m. to 5 p.m",
+    "CONTACT_DAY": "Friday & Saturday : Closed",
+    "CONTACT_SOCIALMEDIA": "Social Media accounts",
+    "CONTACT_DETAILS": "Our Contact details",
+    "SALES_INQURY": "For Sales Inquiries"
+  },
+  "FAQ": {
     "POPULAR_FAQS": "Popular FAQs",
     "TITLE": "Frequently Asked Questions",
     "QUESTION1": "How to build a website?",
@@ -122,7 +118,6 @@
     "CODY_GARDNER": "Cody Gardner",
     "PROJECT_MANAGER": "Project Manager"
   },
-    
   "PROJECT": {
     "CASE_STUDY": "Case Study",
     "TITLE": "Explore Our Recent AI Case Studies",
@@ -162,7 +157,7 @@
     "PHONE": "+966 53 140 9624",
     "LANDLINE": "+966 11 453 0073",
     "EMAIL": "info@sharpinnvotech.com",
-    "sales":"sales@sharpinnvotech.com",
+    "sales": "sales@sharpinnvotech.com",
     "POPULAR_LINKS": "Popular Links",
     "ABOUT_US": "About Us",
     "CONTACT_US": "Contact Us",
@@ -185,7 +180,7 @@
   "HOMEs": {
     "HERO_TAGLINE": "Sharp Innovations",
     "HERO_TITLE_SLIDE0": "Cybersecurity Technology Solutions",
-    "HERO_DESCRIPTION_SLIDE0":"Defend your on-premises, hybrid, and multi-cloud environments with forward-thinking cybersecurity solutions and services",
+    "HERO_DESCRIPTION_SLIDE0": "Defend your on-premises, hybrid, and multi-cloud environments with forward-thinking cybersecurity solutions and services",
     "HERO_TITLE_SLIDE1": "Managed IT Support Solutions",
     "HERO_DESCRIPTION_SLIDE1": "Our Managed IT services are tailored to meet your needs, from employee endpoint management solutions to full management of your complex IT infrastructure. Let SIIT provide you with industry-leading IT management services.",
     "HERO_TITLE_SLIDE2": "Networking Technology Solutions",
@@ -195,11 +190,9 @@
     "READ_MORE": "Read More",
     "CONTACT_US": "Contact Us",
     "HERO_TITLE_SLIDE4": "Mobile App Development Services",
-    "HERO_DESCRIPTION_SLIDE4":"IOS & Android APP Development The unique features that accompany the apple corporation iphone apps are globally prominent and legendary ",
+    "HERO_DESCRIPTION_SLIDE4": "IOS & Android APP Development The unique features that accompany the apple corporation iphone apps are globally prominent and legendary ",
     "HERO_TITLE_SLIDE5": "ERP Solutions Services",
-    "HERO_DESCRIPTION_SLIDE5":"We believe in to create good relation with customers. Our main objective to meet the customer requirement with cutting edge technologies.We never compromise with quality of the work."
-    
-    
+    "HERO_DESCRIPTION_SLIDE5": "We believe in to create good relation with customers. Our main objective to meet the customer requirement with cutting edge technologies.We never compromise with quality of the work."
   },
   "PAGE_TITLES": {
     "HOME": "Home - Sharp Innovations",
@@ -210,317 +203,275 @@
     "PROJECTS": "Our Projects - Sharp Innovations",
     "FAQ": "FAQs - Sharp Innovations",
     "TESTIMONIAL": "Testimonial - Sharp Innovations",
-    "TEAM":"TEAM - Sharp Innovations",
+    "TEAM": "TEAM - Sharp Innovations",
     "DEFAULT": "Sharp Innovations - Managed IT Solutions",
-     "Mobile": "Mobile App Development"
-     
-    
+    "Mobile": "Mobile App Development"
   },
-  "about_page":{
-    "p1":"Welcome to Sharp Innovations, a premier IT services and product company based in Saudi Arabia. Founded in 2023 by industry experts, Sharp Innvovations is dedicated to providing innovative technology solutions that help businesses succeed in an increasingly digital world.",
-    "p2":"Our mission is clear: to empower organizations by harnessing the transformative power of technology. By specializing in Artificial Intelligence, Automation, Cybersecurity, Application Services, and Consulting, we design and deliver solutions tailored to meet the unique needs of our clients, ensuring they achieve their business goals with efficiency and security.",
-    "p3":"We are proud to align our vision with Saudi Arabia's Vision 2030, contributing to the country's ambitious goals of becoming a global leader in innovation, technology, and economic diversification. Our services are crafted to not only support the growth of our clients but also contribute to the development of a knowledge-based, sustainable economy" 
+  "about_page": {
+    "p1": "Welcome to Sharp Innovations, a premier IT services and product company based in Saudi Arabia. Founded in 2023 by industry experts, Sharp Innvovations is dedicated to providing innovative technology solutions that help businesses succeed in an increasingly digital world.",
+    "p2": "Our mission is clear: to empower organizations by harnessing the transformative power of technology. By specializing in Artificial Intelligence, Automation, Cybersecurity, Application Services, and Consulting, we design and deliver solutions tailored to meet the unique needs of our clients, ensuring they achieve their business goals with efficiency and security.",
+    "p3": "We are proud to align our vision with Saudi Arabia's Vision 2030, contributing to the country's ambitious goals of becoming a global leader in innovation, technology, and economic diversification. Our services are crafted to not only support the growth of our clients but also contribute to the development of a knowledge-based, sustainable economy"
   },
   "OFFICE_GALLERY": "Our Office",
   "OFFICE_GALLERY_TITLE": "Take a Look at Our Workspace",
   "OFFICE_GALLERY_DESCRIPTION": "Discover our modern and innovative office environment where creativity and technology come together to deliver exceptional results.",
   "VIEW_IMAGE": "View Image",
-    
- 
-    
-    
-"career": {
-  "form": {
-    "name": "Name",
-    "designation": "Designation",
-    "upload_cv": "Upload CV",
-    "submit": "Submit"
+  "career": {
+    "form": {
+      "name": "Name",
+      "designation": "Designation",
+      "upload_cv": "Upload CV",
+      "submit": "Submit"
+    },
+    "careers_title": "Careers at Sharp Innovations",
+    "careers_intro": "Shape the Future with Us",
+    "careers_description": "At Sharp Innovations, we believe in crafting exceptional IT solutions that empower businesses and drive transformation. We are a team of forward-thinkers, problem-solvers, and innovators dedicated to making an impact. If you're passionate about technology, creativity, and collaboration, we invite you to join us and build a career that sharpens your potential.",
+    "why_choose_us_title": "Why Choose Sharp Innovations?",
+    "why_choose_us_description": "At Sharp Innovations, we don't just build technology—we build futures. Here's why you'll love working with us:",
+    "why_choose_us_points": {
+      "point1_title": "Innovation-Driven Culture",
+      "point1_description": "We thrive on new ideas and encourage out-of-the-box thinking to solve real-world challenges.",
+      "point2_title": "Continuous Learning",
+      "point2_description": "From workshops and certifications to mentorship programs, we are committed to your professional growth.",
+      "point3_title": "Global Reach",
+      "point3_description": "Collaborate with top-tier clients from around the globe and work on cutting-edge technologies.",
+      "point4_title": "Diversity and Inclusion",
+      "point4_description": "We celebrate diverse perspectives and foster an environment where everyone feels valued.",
+      "point5_title": "Flexible Work Environment",
+      "point5_description": "Whether you prefer working from the office or remotely, we offer flexible options to suit your lifestyle."
+    },
+    "opportunities_title": "Explore Opportunities",
+    "opportunities_description": "We offer roles across various domains to match your expertise and career aspirations:",
+    "opportunities_list": {
+      "role1": "Software Development & Engineering",
+      "role2": "Cloud Solutions",
+      "role3": "Artificial Intelligence & Machine Learning",
+      "role4": "IT Consulting & Project Management",
+      "role5": "Cybersecurity Solutions",
+      "role6": "Web Development & UI/UX Design"
+    },
+    "what_we_offer_title": "What We Offer",
+    "what_we_offer_list": {
+      "offer1": "Competitive compensation and benefits",
+      "offer2": "Comprehensive health and wellness plans",
+      "offer3": "Paid time off and holidays",
+      "offer4": "Career development and training opportunities",
+      "offer5": "Employee rewards and recognition programs"
+    },
+    "join_us_title": "Join Our Growing Team",
+    "join_us_description": "Are you ready to be part of a company that values your skills and invests in your growth? Take the next step and explore our current job openings.",
+    "no_role_found": "Can't find the right role?",
+    "no_role_description": "We'd still love to hear from you. Send your resume to *[hr@sharpinnovations.com]* and let us know how you can contribute to our mission.",
+    "closing_statement": "Let's Innovate Together",
+    "closing_description": "At Sharp Innovations, we're not just offering jobs—we're creating opportunities to innovate, inspire, and grow. Join us in shaping the future of IT solutions!"
   },
-  "careers_title": "Careers at Sharp Innovations",
-  "careers_intro": "Shape the Future with Us",
-  "careers_description": "At Sharp Innovations, we believe in crafting exceptional IT solutions that empower businesses and drive transformation. We are a team of forward-thinkers, problem-solvers, and innovators dedicated to making an impact. If you're passionate about technology, creativity, and collaboration, we invite you to join us and build a career that sharpens your potential.",
-  
-  "why_choose_us_title": "Why Choose Sharp Innovations?",
-  "why_choose_us_description": "At Sharp Innovations, we don't just build technology—we build futures. Here's why you'll love working with us:",
-  "why_choose_us_points": {
-    "point1_title": "Innovation-Driven Culture",
-    "point1_description": "We thrive on new ideas and encourage out-of-the-box thinking to solve real-world challenges.",
-    "point2_title": "Continuous Learning",
-    "point2_description": "From workshops and certifications to mentorship programs, we are committed to your professional growth.",
-    "point3_title": "Global Reach",
-    "point3_description": "Collaborate with top-tier clients from around the globe and work on cutting-edge technologies.",
-    "point4_title": "Diversity and Inclusion",
-    "point4_description": "We celebrate diverse perspectives and foster an environment where everyone feels valued.",
-    "point5_title": "Flexible Work Environment",
-    "point5_description": "Whether you prefer working from the office or remotely, we offer flexible options to suit your lifestyle."
-  },
-
-  "opportunities_title": "Explore Opportunities",
-  "opportunities_description": "We offer roles across various domains to match your expertise and career aspirations:",
-  "opportunities_list": {
-    "role1": "Software Development & Engineering",
-    "role2": "Cloud Solutions",
-    "role3": "Artificial Intelligence & Machine Learning",
-    "role4": "IT Consulting & Project Management",
-    "role5": "Cybersecurity Solutions",
-    "role6": "Web Development & UI/UX Design"
-  },
-
-  "what_we_offer_title": "What We Offer",
-  "what_we_offer_list": {
-    "offer1": "Competitive compensation and benefits",
-    "offer2": "Comprehensive health and wellness plans",
-    "offer3": "Paid time off and holidays",
-    "offer4": "Career development and training opportunities",
-    "offer5": "Employee rewards and recognition programs"
-  },
-
-  "join_us_title": "Join Our Growing Team",
-  "join_us_description": "Are you ready to be part of a company that values your skills and invests in your growth? Take the next step and explore our current job openings.",
-  "no_role_found": "Can't find the right role?",
-  "no_role_description": "We'd still love to hear from you. Send your resume to *[hr@sharpinnovations.com]* and let us know how you can contribute to our mission.",
-  
-  "closing_statement": "Let's Innovate Together",
-  "closing_description": "At Sharp Innovations, we're not just offering jobs—we're creating opportunities to innovate, inspire, and grow. Join us in shaping the future of IT solutions!"
-},
-
-
-    "TITLE": "Sharp Innovations",
-    "HOME": "Home",
-    "ABOUT": "About Us",
-    "SERVICES": "Services",
-    "PRODUCTS": "Products",
-    "PROJECTS": "Projects",
-    "CONTACT": "Contact Us",
-    "CAREERS":"Careers",
-    "PAGES": "Pages",
-    "FEATURES": "Features",
-    "OUR_TEAM": "Our Team",
-    "FAQS": "FAQs",
-    "TESTIMONIALS": "Testimonials",
-    "LANGUAGE": "Language",
-    "ABOUT_US": "About Us",
-    "application":"application management service ",
-    "oracle":"Oracle",
-    "WELCOME_MESSAGE": "Welcome to Sharp Innovations Company for Information Technology",
-    "FOCUS_ENGINEERS": "Highly Focused Talented IT Engineers, Designers, Analysts & Developers",
-    "COMPANY_DESCRIPTION": "Hope that you will find our Products & Services exotic which can support your esteemed organization to achieve goals. Sharp Innovations Company for Information Technology is a professionally managed company focusing on providing multiple types of IT Products & Services. Established in 2023, we are a Saudi-based company. We are a pioneering and dominant technical enterprise with an excellent edge in mobile software development. Sharp Innovations Solution as a Software organization provides cost-effective and quality solutions to clients. We believe in creating good relationships with customers. Our main objective is to meet customer requirements with cutting-edge technologies. We never compromise on the quality of the work.",
-    "AWARD_WINNING": "Award Winning",
-    "PROFESSIONAL_STAFF": "Professional Staff",
-    "SUPPORT_24_7": "24/7 Support",
-    "FAIR_PRICES": "Fair Prices",
-    "READ_MORE": "Read More",
-      "Mobile": "Mobile App Development",
-
-    "CUSTOM_SOFTWARE_DEVELOPERS": "Custom Software Developers",
-    "WEB_APP_DEVELOPMENT": "Web App Development",
-    "MOBILE_APP_DEVELOPMENT": "Mobile App Development",
-    "CLOUD_DEVELOPMENT": "Cloud Development",
-    "DIGITAL_TRANSFORMATION": "Digital Transformation",
-    "CHATBOT_DEVELOPMENT": "Chatbot Development",
-    "DIGITAL_MARKETING": "Digital Marketing",
-    "UI_UX_DESIGNING": "UI/UX Designing",
-    
-      "web_development_company": {
-        "title": "Get The Industry-shaping Web App Development Services",
-        "intro": "Sharp Innovations helps brands to establish a digital footprint globally with the most reliable web app development solutions.",
-        "cta": "Get Started",
-        "business_driven": {
-          "title": "Business-driven web app development solutions",
-          "content": "Leverage the latest technologies through our professional web app development services in order to stay ahead of your competitors. We ensure to deliver profitable outcomes with assured quality."
-        },
-        "services_section": "Our Services",
-        "services": {
-          "web_app_designing": {
-            "title": "Web App Designing",
-            "description": "Our web app designers know how to craft an idea into a perfect product design as your branding website using the latest web technologies."
-          },
-          "features_api": {
-            "title": "Features & API Integrations",
-            "description": "We ensure to integrate crucial functionalities that can enhance the look and feel of your website along with the user experience."
-          },
-          "frontend_development": {
-            "title": "Frontend Development",
-            "description": "We utilize the latest technology stack for developing frontend of the web applications such as Angular, Vue.Js and React.Js."
-          },
-          "backend_development": {
-            "title": "Backend Development",
-            "description": "Our backend developers are well-versed with the technologies like Node.Js, Python, and Ruby on Rails to build scalable apps."
-          },
-          "optimization_maintenance": {
-            "title": "Optimization & Maintenance",
-            "description": "We go beyond website design and development to maintain their performance consistently throughout the business roadmaps."
-          },
-          "dedicated_cms": {
-            "title": "Dedicated CMS",
-            "description": "A powerful content management system (CMS) can help you boost the performance of your website and we offer the same with simplicity."
-          }
-        },
-        "cta_lets_create": {
-          "title": "Let's Create Big Stories Together",
-          "content": "Web development is in our DNA. We don't just craft websites, we shape brands. Selecting us will be your smartest choice.",
-          "button": "Get a Quote"
-        },
-        "core_values": {
-          "cloud_native": {
-            "title": "Cloud-native integrations",
-            "description": "We use a cloud-native strategy to develop and deploy scalable, robust, and high performance web apps. We leverage current architectures like microservices and containers to enable rapid and agile application delivery while lowering costs and boosting flexibility."
-          },
-          "consistent_management": {
-            "title": "Consistent management",
-            "description": "Sharp Innovations is able to accomplish projects on time, within scope, and under budget by focusing on detailed planning, management, and control. From the start, we deliver a predictable and transparent software development process."
-          },
-          "agile_mindset": {
-            "title": "Agile mindset",
-            "description": "Our Agile team works in short cycles and collects input on a regular basis to guarantee that the product fulfills the demands of the user. We can deliver high-quality online products that fit your business objectives by emphasizing flexibility and adaptability."
-          }
-        },
-        "industry_wise_services": {
-          "title": "Industry-Wise Services",
-          "healthcare": "Healthcare Software Development Services",
-          "manufacturing": "Manufacturing Software Development Services",
-          "education": "Education Software Development Services",
-          "fintech": "Fintech Development Services",
-          "entertainment": "Entertainment Web & App Development Services",
-          "ecommerce": "E-Commerce Development Services"
-        },
-        "digital_transformation_services": {
-          "title": "Digital Transformation Services",
-          "custom_software": "Custom Software Development Services",
-          "mobile_app": "Mobile App Development Services",
-          "digital_transformation": "Digital Transformation Services",
-          "ui_ux_designing": "UI/UX Designing Services"
-        },
-        "dedicated_developers": {
-          "title": "Are you looking to hire top-tier dedicated developers? Look no further than Sharp Innovations",
-          "description": "With a wide range of web and app development technologies, Sharp Innovations's dedicated developers come with core expertise and years of experience.",
-          "services": {
-            "frontend": "Hire Frontend Developers",
-            "backend": "Hire Backend Developers",
-            "fullstack": "Hire Fullstack Developers",
-            "mean_stack": "Hire MEAN Stack Developers",
-            "mern_stack": "Hire MERN Stack Developers",
-            "nodejs": "Hire Node.js Developers",
-            "reactjs": "Hire React.js Developers"
-          }
-        }
+  "TITLE": "Sharp Innovations",
+  "HOME": "Home",
+  "ABOUT": "About Us",
+  "SERVICES": "Services",
+  "PRODUCTS": "Products",
+  "PROJECTS": "Projects",
+  "CONTACT": "Contact Us",
+  "CAREERS": "Careers",
+  "PAGES": "Pages",
+  "FEATURES": "Features",
+  "OUR_TEAM": "Our Team",
+  "FAQS": "FAQs",
+  "TESTIMONIALS": "Testimonials",
+  "LANGUAGE": "Language",
+  "ABOUT_US": "About Us",
+  "application": "application management service ",
+  "oracle": "Oracle",
+  "WELCOME_MESSAGE": "Welcome to Sharp Innovations Company for Information Technology",
+  "FOCUS_ENGINEERS": "Highly Focused Talented IT Engineers, Designers, Analysts & Developers",
+  "COMPANY_DESCRIPTION": "Hope that you will find our Products & Services exotic which can support your esteemed organization to achieve goals. Sharp Innovations Company for Information Technology is a professionally managed company focusing on providing multiple types of IT Products & Services. Established in 2023, we are a Saudi-based company. We are a pioneering and dominant technical enterprise with an excellent edge in mobile software development. Sharp Innovations Solution as a Software organization provides cost-effective and quality solutions to clients. We believe in creating good relationships with customers. Our main objective is to meet customer requirements with cutting-edge technologies. We never compromise on the quality of the work.",
+  "AWARD_WINNING": "Award Winning",
+  "PROFESSIONAL_STAFF": "Professional Staff",
+  "SUPPORT_24_7": "24/7 Support",
+  "FAIR_PRICES": "Fair Prices",
+  "READ_MORE": "Read More",
+  "Mobile": "Mobile App Development",
+  "CUSTOM_SOFTWARE_DEVELOPERS": "Custom Software Developers",
+  "WEB_APP_DEVELOPMENT": "Web App Development",
+  "MOBILE_APP_DEVELOPMENT": "Mobile App Development",
+  "CLOUD_DEVELOPMENT": "Cloud Development",
+  "DIGITAL_TRANSFORMATION": "Digital Transformation",
+  "CHATBOT_DEVELOPMENT": "Chatbot Development",
+  "DIGITAL_MARKETING": "Digital Marketing",
+  "UI_UX_DESIGNING": "UI/UX Designing",
+  "web_development_company": {
+    "title": "Get The Industry-shaping Web App Development Services",
+    "intro": "Sharp Innovations helps brands to establish a digital footprint globally with the most reliable web app development solutions.",
+    "cta": "Get Started",
+    "business_driven": {
+      "title": "Business-driven web app development solutions",
+      "content": "Leverage the latest technologies through our professional web app development services in order to stay ahead of your competitors. We ensure to deliver profitable outcomes with assured quality."
+    },
+    "services_section": "Our Services",
+    "services": {
+      "web_app_designing": {
+        "title": "Web App Designing",
+        "description": "Our web app designers know how to craft an idea into a perfect product design as your branding website using the latest web technologies."
       },
-      "mobile_app_development": {
-        "title": "Get Renowned Mobile App Design & Development Solutions",
-        "intro": "From MVP development to complete business app development, we serve every possible solution to make your brand grow successively.",
-        "cta": "Get Started",
-        "business_oriented": {
-          "title": "Business Oriented Mobile App Design & Development Services",
-          "content": "We boost businesses to attain success and keep on growing with our scalable mobile app development services. Sharp Innovations has a complete range of solutions to drive excellent results."
-        },
-        "services_section": "Our Services",
-        "services": {
-          "android_app_development": {
-            "title": "Android App Development",
-            "description": "Our android app developers are serving businesses with the most user-friendly & performance-oriented business applications."
-          },
-          "ios_app_development": {
-            "title": "iOS App Development",
-            "description": "Our iOS app developers are serving businesses with the most user-friendly & performance-oriented business applications."
-          },
-          "cross_platform_app_development": {
-            "title": "Cross-platform App Development",
-            "description": "Our cross-platform app developers are well-known to develop & deliver applications with minimal coding requirements."
-          },
-          "app_ui_ux_design": {
-            "title": "App UI/UX Design",
-            "description": "Our mobile app designers focus on creating impressive UI/UX designs along with wireframes and prototypes as required by the clients."
-          },
-          "mvp_app_development": {
-            "title": "MVP App Development",
-            "description": "If you have a business idea and want a professional mobile app developer, we can provide a full-fledged MVP application to test your idea."
-          },
-          "support_maintenance": {
-            "title": "Support & Maintenance",
-            "description": "After launching your app on Play Store and App Store, we ensure to maintain the performance of your mobile app consistently."
-          }
-        },
-        "cta_tell_us": {
-          "title": "Tell us about your project",
-          "button": "Let's Talk"
-        },
-        "industry_wise_services": {
-          "title": "Industry-wise Mobile App Development Services",
-          "healthcare": "Healthcare Software Development Services",
-          "manufacturing": "Manufacturing Software Development Services",
-          "education": "Education Software Development Services",
-          "fintech": "Fintech Development Services",
-          "entertainment": "Entertainment Web & App Development Services",
-          "ecommerce": "E-Commerce Development Services"
-        },
-        "turn_dreams_into_downloads": {
-          "title": "Turn Dreams Into Downloads",
-          "content": "Transforming ideas into user-friendly apps. Journey from vision to reality, crafting captivating mobile experiences. Dive into digital excellence with us.",
-          "button": "Let's work together"
-        },
-        "our_focus": {
-          "title": "Our Focus",
-          "content": "As a firm with curiosity and devotion as fundamental qualities, we will assist you in transforming your creative concept into a viable digital product."
-        },
-        "from_discovery_to_deployment": {
-          "title": "From Discovery to Deployment",
-          "content": "Choose an end-to-end product firm skilled in producing hybrid and native applications from start to finish: from R&D and consulting through design, development, and maintenance, whether you work in a globally renowned enterprise or a promising start-up."
-        },
-        "most_reliable_services": {
-          "title": "Most Reliable Mobile App Development Services",
-          "content": "Sharp Innovations deploys a complete mobile app development cycle to provide the desired product for your business with the latest technological integrations."
-        },
-        "teams_with_profound_brains": {
-          "title": "Teams with the Most Profound Brains",
-          "content": "Add senior mobile app developers to your team. We have extensive technical and subject knowledge and can assist you in assembling a high-performing team for native or cross-platform app development."
-        },
-        "keeping_ethics_values": {
-          "title": "Keeping Ethics & Values",
-          "content": "We create your mobile app within the parameters of the projected price, time, and scope of work. With our clear and predictable methods, you will receive a functional product in each Agile iteration."
-        },
-        "strong_technological_foundation": {
-          "title": "A Strong Technological Foundation",
-          "content": "Whether your company wants native or cross-platform mobile app development, we use a tech stack that provides long-term app performance, scalability, and maintainability."
-        },
-        "choose_high_quality_code": {
-          "title": "Choose High-Quality Code",
-          "content": "Do not allow mounting technical debt to become an unmanageable issue: select a reputable mobile application development business that guarantees the perfect quality of provided code and technical documentation."
-        },
-        "other_software_services": {
-          "title": "Other Software Development Services for Your Business",
-          "custom_software": "Custom Software Development Services",
-          "mobile_app": "Mobile App Development Services",
-          "digital_transformation": "Digital Transformation Services",
-          "ui_ux_designing": "UI/UX Designing Services"
-        },
-        "unleash_app_potential": {
-          "title": "Unleash App Potential",
-          "content": "Dive into a realm where design meets function. With us, every pixel is crafted with purpose. Elevate your brand, one app at a time.",
-          "button": "Let's Talk"
-        },
-        "flexible_models": {
-          "title": "Flexible Models to Work with Our App Developers",
-          "hire_dedicated_developers": {
-            "title": "Hire Dedicated Developers",
-            "content": "Choose from the pool of top-tier talents as Sharp Innovations is a hub of providing professional services to the businesses. Our aim is to meet your end goal by deploying the latest technologies and resources while saving time and cost."
-          },
-          "complete_project_outsource": {
-            "title": "Complete Project Outsource",
-            "content": "Don't want any hassle for your next big idea? Don't worry because Sharp Innovations's app development team is always ready to serve the best results as your end product. Just share your requirements and we'll focus on delivery."
-          }
-        },
-        "hire_dedicated_developers": {
-          "title": "Hire Dedicated Developers for Your Next Project",
-          "frontend": "Hire Frontend Developers",
-          "backend": "Hire Backend Developers",
-          "fullstack": "Hire Fullstack Developers",
-          "mean_stack": "Hire MEAN Stack Developers",
-          "mern_stack": "Hire MERN Stack Developers",
-          "nodejs": "Hire Node.js Developers",
-          "reactjs": "Hire React.js Developers"
-        }
+      "features_api": {
+        "title": "Features & API Integrations",
+        "description": "We ensure to integrate crucial functionalities that can enhance the look and feel of your website along with the user experience."
       },
-      "cloud_application_development": {
+      "frontend_development": {
+        "title": "Frontend Development",
+        "description": "We utilize the latest technology stack for developing frontend of the web applications such as Angular, Vue.Js and React.Js."
+      },
+      "backend_development": {
+        "title": "Backend Development",
+        "description": "Our backend developers are well-versed with the technologies like Node.Js, Python, and Ruby on Rails to build scalable apps."
+      },
+      "optimization_maintenance": {
+        "title": "Optimization & Maintenance",
+        "description": "We go beyond website design and development to maintain their performance consistently throughout the business roadmaps."
+      },
+      "dedicated_cms": {
+        "title": "Dedicated CMS",
+        "description": "A powerful content management system (CMS) can help you boost the performance of your website and we offer the same with simplicity."
+      }
+    },
+    "cta_lets_create": {
+      "title": "Let's Create Big Stories Together",
+      "content": "Web development is in our DNA. We don't just craft websites, we shape brands. Selecting us will be your smartest choice.",
+      "button": "Get a Quote"
+    },
+    "core_values": {
+      "cloud_native": {
+        "title": "Cloud-native integrations",
+        "description": "We use a cloud-native strategy to develop and deploy scalable, robust, and high performance web apps. We leverage current architectures like microservices and containers to enable rapid and agile application delivery while lowering costs and boosting flexibility."
+      },
+      "consistent_management": {
+        "title": "Consistent management",
+        "description": "Sharp Innovations is able to accomplish projects on time, within scope, and under budget by focusing on detailed planning, management, and control. From the start, we deliver a predictable and transparent software development process."
+      },
+      "agile_mindset": {
+        "title": "Agile mindset",
+        "description": "Our Agile team works in short cycles and collects input on a regular basis to guarantee that the product fulfills the demands of the user. We can deliver high-quality online products that fit your business objectives by emphasizing flexibility and adaptability."
+      }
+    },
+    "industry_wise_services": {
+      "title": "Industry-Wise Services",
+      "healthcare": "Healthcare Software Development Services",
+      "manufacturing": "Manufacturing Software Development Services",
+      "education": "Education Software Development Services",
+      "fintech": "Fintech Development Services",
+      "entertainment": "Entertainment Web & App Development Services",
+      "ecommerce": "E-Commerce Development Services"
+    },
+    "digital_transformation_services": {
+      "title": "Digital Transformation Services",
+      "custom_software": "Custom Software Development Services",
+      "mobile_app": "Mobile App Development Services",
+      "digital_transformation": "Digital Transformation Services",
+      "ui_ux_designing": "UI/UX Designing Services"
+    },
+    "dedicated_developers": {
+      "title": "Are you looking to hire top-tier dedicated developers? Look no further than Sharp Innovations",
+      "description": "With a wide range of web and app development technologies, Sharp Innovations's dedicated developers come with core expertise and years of experience.",
+      "services": {
+        "frontend": "Hire Frontend Developers",
+        "backend": "Hire Backend Developers",
+        "fullstack": "Hire Fullstack Developers",
+        "mean_stack": "Hire MEAN Stack Developers",
+        "mern_stack": "Hire MERN Stack Developers",
+        "nodejs": "Hire Node.js Developers",
+        "reactjs": "Hire React.js Developers"
+      }
+    }
+  },
+  "mobile_app_development": {
+    "title": "Mobile Application Development Services",
+    "subtitle": "Transforming Ideas into Cutting-Edge Mobile Experiences",
+    "description": "At Sharp Innovations, we specialize in custom mobile application development for Android and iOS platforms. Our expertise ensures that your mobile app is built with precision, scalability, and security, delivering an intuitive and engaging user experience. Whether you're a startup, SME, or enterprise, our mobile solutions empower your business to stay ahead in the digital landscape.",
+    "services": [
+      {
+        "title": "Custom Mobile App Development",
+        "description": [
+          "We design and develop tailored mobile applications that align with your business objectives.",
+          "Our development approach focuses on usability, performance, and security to ensure a seamless user experience across different devices."
+        ]
+      },
+      {
+        "title": "Cross-Platform App Development",
+        "description": [
+          "Using technologies like React Native, Flutter, and Xamarin, we build applications that run smoothly on both Android and iOS platforms.",
+          "Reduces development time and cost without compromising quality."
+        ]
+      },
+      {
+        "title": "Native App Development",
+        "description": [
+          "For businesses requiring high-performance applications, we offer native development using:",
+          "Swift & Objective-C for iOS development",
+          "Kotlin & Java for Android development"
+        ]
+      },
+      {
+        "title": "UI/UX Design",
+        "description": [
+          "User experience is at the heart of mobile success.",
+          "Our design experts craft intuitive interfaces and smooth interactions, ensuring that users have a frictionless and engaging experience."
+        ]
+      },
+      {
+        "title": "API Integration & Backend Development",
+        "description": [
+          "We develop robust backend systems and APIs to support mobile applications.",
+          "Ensuring seamless data synchronization, security, and functionality."
+        ]
+      },
+      {
+        "title": "Mobile App Security & Compliance",
+        "description": [
+          "Security is our top priority.",
+          "Our applications comply with industry standards such as NCA, SAMA, GDPR, HIPAA, and PCI-DSS.",
+          "Implementing data encryption, secure authentication, and vulnerability testing to safeguard your business and users."
+        ]
+      },
+      {
+        "title": "App Maintenance & Support",
+        "description": [
+          "We offer continuous support and maintenance to ensure your app remains updated, secure, and compatible with evolving mobile OS versions and hardware advancements."
+        ]
+      },
+      {
+        "title": "App Deployment & Store Optimization",
+        "description": [
+          "We help launch your mobile app successfully on Google Play Store and Apple App Store.",
+          "Ensuring compliance with guidelines and optimizing app visibility for better discoverability."
+        ]
+      }
+    ],
+    "why_choose_us": {
+      "title": "Why Choose Sharp Innovations?",
+      "points": [
+        " Experienced Developers: Skilled in the latest mobile technologies and frameworks.",
+        " Agile Development Process: Ensuring fast delivery and flexibility.",
+        " Scalability & Performance: Apps built to handle growth and high user loads.",
+        " Security-First Approach: Ensuring secure mobile applications.",
+        " Seamless Integration: Connecting apps with existing business systems."
+      ]
+    },
+    "industries": {
+      "title": "Industries We Serve",
+      "list": [
+        "Construction",
+        "Finance & FinTech",
+        "Healthcare & Telemedicine",
+        "E-commerce & Retail",
+        "Education & E-learning",
+        "Travel & Hospitality",
+        "Enterprise & Productivity Solutions"
+      ]
+    },
+    "cta": "Ready to take your business mobile? Sharp Innovations is here to bring your vision to life with feature-rich, high-performance, and secure mobile applications.",
+    "contact": "Contact us today to discuss your project and get started!"
+  },
+  "cloud_application_development": {
     "title": "Most Secure Cloud Application Development Services",
     "intro": "Whether you need to migrate your data to a new cloud application or require a full-fledged platform, Sharp Innovations is always ready to impress you.",
     "cta": "Get Started",
@@ -996,131 +947,179 @@
       "ecommerce": "E-Commerce Development Services"
     }
   },
-  
-    "IOT_SERVICES": "IoT Services",
-    "GIS_SOLUTIONS": "GIS Solutions",
-    "ADVANCED_REMOTE_SENSING": "Advanced Remote Sensing Technology",
-    "SHARP_GIS_PLATFORM": "Sharp GIS Platform",
-    "SHARP_DRONE_MAPPING": "Sharp - Aerial Drone Mapping",
-    "SHARP_LMIS": "Sharp - Land Management Information System (LMIS)",
-    "TELEMATICS_SOLUTIONS": "Telematics Solutions",
-    "INTELLIGENT_FLEET_MANAGEMENT": "Intelligent Fleet Management",
-    "SHARP_EMERGENCY_RESPONSE": "Sharp - Emergency Response Coordination",
-    "SHARP_MDVR": "Sharp MDVR System",
-    "REAL_TIME_VIDEO_TELEMATICS": "Real-Time Video Telematics",
-    "DASH_CAM_MONITORING": "Dash Cam Monitoring",
-    "DRIVER_BEHAVIOR_MONITORING": "Driver Behavior & Safety Monitoring (ADAS/DMS)",
-    "SMART_CITY_INNOVATIONS": "Smart City Innovations",
-    "SHARP_ITMS": "Sharp ITMS (Integrated Traffic Management System)",
-    "SHARP_FARE_PAYMENT": "Sharp - Automated Fare Payment System",
-    "SHARP_WASTE_TRACKING": "Sharp - Waste Tracking & Monitoring System",
-    "SHARP_RFID": "Sharp - RFID Solutions",
-    "SHARP_SMART_GATE": "Sharp - Smart Gate Automation",
-    "EV_SOLUTIONS": "Electric Vehicle Solutions",
-    "SMART_BATTERY_MANAGEMENT": "Smart Battery Management System",
-    "IOT_EV_CHARGING": "IoT-Enabled EV Charging Infrastructure",
-  
-    
-    "IOT_SERVICESs": [
-  {
-    "title": "GIS Solutions",
-    "description": "Advanced mapping and geospatial technologies.",
-    "icon": "fas fa-map-marked-alt"
-  },
-  {
-    "title": "Telematics Solutions",
-    "description": "Smart fleet management and remote monitoring.",
-    "icon": "fas fa-car"
-  },
-  {
-    "title": "Smart City Innovations",
-    "description": "Innovative urban solutions for smarter cities.",
-    "icon": "fas fa-city"
-  },
-  {
-    "title": "Electric Vehicle Solutions",
-    "description": "Empowering EV infrastructure and battery management.",
-    "icon": "fas fa-bolt"
-  },
-  {
-    "title": "Potholes Detection",
-    "description": "AI-powered detection of potholes via CCTV and dashcams.",
-    "icon": "fas fa-video"
-  },
-  {
-    "title": "Task Management System",
-    "description": "Efficient planning, tracking, and managing tasks seamlessly.",
-    "icon": "fas fa-tasks"
-  },
-  {
-    "title": "Assets Management System",
-    "description": "Track and manage assets to maximize operational efficiency.",
-    "icon": "fas fa-boxes"
-  },
-  {
-    "title": "HRMS",
-    "description": "Streamlining human resource management and operations.",
-    "icon": "fas fa-users"
-  }
-],
-
-"products_service": 
-  [
+  "IOT_SERVICES": "IoT Services",
+  "GIS_SOLUTIONS": "GIS Solutions",
+  "ADVANCED_REMOTE_SENSING": "Advanced Remote Sensing Technology",
+  "SHARP_GIS_PLATFORM": "Sharp GIS Platform",
+  "SHARP_DRONE_MAPPING": "Sharp - Aerial Drone Mapping",
+  "SHARP_LMIS": "Sharp - Land Management Information System (LMIS)",
+  "TELEMATICS_SOLUTIONS": "Telematics Solutions",
+  "INTELLIGENT_FLEET_MANAGEMENT": "Intelligent Fleet Management",
+  "SHARP_EMERGENCY_RESPONSE": "Sharp - Emergency Response Coordination",
+  "SHARP_MDVR": "Sharp MDVR System",
+  "REAL_TIME_VIDEO_TELEMATICS": "Real-Time Video Telematics",
+  "DASH_CAM_MONITORING": "Dash Cam Monitoring",
+  "DRIVER_BEHAVIOR_MONITORING": "Driver Behavior & Safety Monitoring (ADAS/DMS)",
+  "SMART_CITY_INNOVATIONS": "Smart City Innovations",
+  "SHARP_ITMS": "Sharp ITMS (Integrated Traffic Management System)",
+  "SHARP_FARE_PAYMENT": "Sharp - Automated Fare Payment System",
+  "SHARP_WASTE_TRACKING": "Sharp - Waste Tracking & Monitoring System",
+  "SHARP_RFID": "Sharp - RFID Solutions",
+  "SHARP_SMART_GATE": "Sharp - Smart Gate Automation",
+  "EV_SOLUTIONS": "Electric Vehicle Solutions",
+  "SMART_BATTERY_MANAGEMENT": "Smart Battery Management System",
+  "IOT_EV_CHARGING": "IoT-Enabled EV Charging Infrastructure",
+  "IOT_SERVICESs": [
+    {
+      "title": "GIS Solutions",
+      "description": "Advanced mapping and geospatial technologies.",
+      "icon": "fas fa-map-marked-alt"
+    },
+    {
+      "title": "Telematics Solutions",
+      "description": "Smart fleet management and remote monitoring.",
+      "icon": "fas fa-car"
+    },
+    {
+      "title": "Smart City Innovations",
+      "description": "Innovative urban solutions for smarter cities.",
+      "icon": "fas fa-city"
+    },
+    {
+      "title": "Electric Vehicle Solutions",
+      "description": "Empowering EV infrastructure and battery management.",
+      "icon": "fas fa-bolt"
+    },
+    {
+      "title": "Potholes Detection",
+      "description": "AI-powered detection of potholes via CCTV and dashcams.",
+      "icon": "fas fa-video"
+    },
+    {
+      "title": "Task Management System",
+      "description": "Efficient planning, tracking, and managing tasks seamlessly.",
+      "icon": "fas fa-tasks"
+    },
+    {
+      "title": "Assets Management System",
+      "description": "Track and manage assets to maximize operational efficiency.",
+      "icon": "fas fa-boxes"
+    },
+    {
+      "title": "HRMS",
+      "description": "Streamlining human resource management and operations.",
+      "icon": "fas fa-users"
+    }
+  ],
+  "products_service": [
     {
       "key": "AI Smart City",
       "pathIcon": "fas fa-brain",
-      "img":"../../../../../../assets/img/Banner.png",
+      "img": "../../../../../../assets/img/Banner.png",
       "description": "Innovative urban solutions for smarter cities.",
-    "icon": "fas fa-city",
-    "path":"potholes-detection",
+      "icon": "fas fa-city",
+      "path": "potholes-detection",
       "items": [
-        { "name": "Potholes Detection", "icon": "fas fa-road","path":"potholes-detection" },
-        { "name": "Vehicle Traffic Detection", "icon": "fas fa-traffic-light","path":"vehicle-traffic-detection" },
-        { "name": "Garbage detection", "icon": "fas fa-trash","path":"garbage-detection" },
-        { "name": "Illegal Parking Monitoring", "icon": "fas fa-ban","path":"illegal-parking-monitoring" },
-        { "name": "Vehicle collision detection", "icon": "fas fa-car-crash","path":"vehicle-collision-detection" }
+        {
+          "name": "Potholes Detection",
+          "icon": "fas fa-road",
+          "path": "potholes-detection"
+        },
+        {
+          "name": "Vehicle Traffic Detection",
+          "icon": "fas fa-traffic-light",
+          "path": "vehicle-traffic-detection"
+        },
+        {
+          "name": "Garbage detection",
+          "icon": "fas fa-trash",
+          "path": "garbage-detection"
+        },
+        {
+          "name": "Illegal Parking Monitoring",
+          "icon": "fas fa-ban",
+          "path": "illegal-parking-monitoring"
+        },
+        {
+          "name": "Vehicle collision detection",
+          "icon": "fas fa-car-crash",
+          "path": "vehicle-collision-detection"
+        }
       ]
     },
     {
       "key": "AI Industrial Safety",
       "description": "AI-powered detection of objects via CCTV and dashcams.",
-    "icon": "fas fa-video",
+      "icon": "fas fa-video",
       "pathIcon": "fas fa-brain",
-      "img":"../../../../../../assets/img/Banner2.png",
-      "path":"ppe-monitoring" ,
+      "img": "../../../../../../assets/img/Banner2.png",
+      "path": "ppe-monitoring",
       "items": [
-        { "name": "PPE Monitoring", "icon": "fas fa-hard-hat","path":"ppe-monitoring" },
-        { "name": "Emergency Module", "icon": "fas fa-ambulance","path":"emeregency-module" },
-        { "name": "Cleanliness Monitoring", "icon": "fas fa-broom","path":"cleanliness-monitoring" },
-        { "name": "Critical Area Monitoring", "icon": "fas fa-exclamation-triangle","path":"critical-area-monitoring" }
+        {
+          "name": "PPE Monitoring",
+          "icon": "fas fa-hard-hat",
+          "path": "ppe-monitoring"
+        },
+        {
+          "name": "Emergency Module",
+          "icon": "fas fa-ambulance",
+          "path": "emeregency-module"
+        },
+        {
+          "name": "Cleanliness Monitoring",
+          "icon": "fas fa-broom",
+          "path": "cleanliness-monitoring"
+        },
+        {
+          "name": "Critical Area Monitoring",
+          "icon": "fas fa-exclamation-triangle",
+          "path": "critical-area-monitoring"
+        }
       ]
     },
     {
       "key": "Management Solutions",
       "description": "Efficient planning, tracking, and managing  seamlessly.",
-    "icon": "fas fa-tasks",
+      "icon": "fas fa-tasks",
       "pathIcon": "fas fa-cogs",
-       "img":"../../../../../../assets/img/Banner3.png",
-       "path":"task-management-system",
+      "img": "../../../../../../assets/img/Banner3.png",
+      "path": "task-management-system",
       "items": [
-        { "name": "Task Management System", "icon": "fas fa-tasks","path":"task-management-system" },
-        { "name": "Assets Management System", "icon": "fas fa-boxes","path":"assets-management-system" }
-
+        {
+          "name": "Task Management System",
+          "icon": "fas fa-tasks",
+          "path": "task-management-system"
+        },
+        {
+          "name": "Assets Management System",
+          "icon": "fas fa-boxes",
+          "path": "assets-management-system"
+        }
       ]
     },
     {
       "key": "GIS Solutions",
       "pathIcon": "fas fa-map",
       "description": "Advanced mapping and geospatial technologies.",
-    "icon": "fas fa-map-marked-alt",
-      "img":"../../../../../../assets/img/projects.png",
-      "path":"remote-sensing",
+      "icon": "fas fa-map-marked-alt",
+      "img": "../../../../../../assets/img/projects.png",
+      "path": "remote-sensing",
       "items": [
-        { "name": "Remote Sensing", "icon": "fas fa-satellite","path":"remote-sensing" },
-        { "name": "Sharp GIS", "icon": "fas fa-map-marked-alt","path":"sharp-gis" },
-        { "name": "Drone Solutions", "icon": "fas fa-drone","path":"drone-solutions"
-      
-      }
+        {
+          "name": "Remote Sensing",
+          "icon": "fas fa-satellite",
+          "path": "remote-sensing"
+        },
+        {
+          "name": "Sharp GIS",
+          "icon": "fas fa-map-marked-alt",
+          "path": "sharp-gis"
+        },
+        {
+          "name": "Drone Solutions",
+          "icon": "fas fa-drone",
+          "path": "drone-solutions"
+        }
       ]
     },
     {
@@ -1128,84 +1127,199 @@
       "pathIcon": "fas fa-network-wired",
       "img": "../../../../../../assets/cybersecurity/Cyber-security-awareness.png",
       "description": "Smart fleet management and remote monitoring.",
-    "icon": "fas fa-car",
-    "path":"fleet-management-system",
+      "icon": "fas fa-car",
+      "path": "fleet-management-system",
       "items": [
-        { "name": "Fleet Management System", "icon": "fas fa-truck-moving","path":"fleet-management-system" },
-        { "name": "MDVR Solutions", "icon": "fas fa-video","path":"mdvr-solutions" },
-        { "name": "Depot Management System", "icon": "fas fa-warehouse","path":"depot-management-system" }
+        {
+          "name": "Fleet Management System",
+          "icon": "fas fa-truck-moving",
+          "path": "fleet-management-system"
+        },
+        {
+          "name": "MDVR Solutions",
+          "icon": "fas fa-video",
+          "path": "mdvr-solutions"
+        },
+        {
+          "name": "Depot Management System",
+          "icon": "fas fa-warehouse",
+          "path": "depot-management-system"
+        }
       ]
     },
     {
       "key": "Human Resource Management ",
       "pathIcon": "fas fa-user-friends",
-       "description": "Streamlining human resource management and operations.",
-    "icon": "fas fa-users",
+      "description": "Streamlining human resource management and operations.",
+      "icon": "fas fa-users",
       "img": "../../../../../../assets/cybersecurity/Cybersecurity-implementation.png",
-      "path":"human-resource-management-system",
+      "path": "human-resource-management-system",
       "items": [
-        { "name": "Human Resource Management", "icon": "fas fa-users-cog","path":"human-resource-management-system" }
+        {
+          "name": "Human Resource Management",
+          "icon": "fas fa-users-cog",
+          "path": "human-resource-management-system"
+        }
       ]
     }
   ],
-  
-  
   "servicing": [
     {
       "key": "Cyber Security",
       "icon": "fas fa-shield-alt",
-      "img":"../../../../../../assets/img/Banner.png",
+      "img": "../../../../../../assets/img/Banner.png",
       "items": [
-        { "name": "Application Security", "icon": "fas fa-lock","path":"application-security" },
-        { "name": "Cyber Security Awareness", "icon": "fas fa-lightbulb","path":"cyber-security-awareness" },
-        { "name": "Cybersecurity Consulting", "icon": "fas fa-user-secret", "path":"cybersecurity-consulting" },
-        { "name": "Cybersecurity Implementation", "icon": "fas fa-cogs","path":"cybersecurity-implementation" },
-       
-        { "name": "Cyber Manpower Outsourcing", "icon": "fas fa-users-cog","path":"cyber-security-manpower-outsourcing" },
-     { "name": "Cyber Security Training", "icon": "fas fa-chalkboard-teacher","path":"cyber-security-training" },
-        { "name": "Cybersecurity GRC Consulting", "icon": "fas fa-user-shield","path":"cybersecurity-grc-services.component" },
-      
-        { "name": "Managed Security Services (MSSP)", "icon": "fas fa-shield-alt" ,"path":"mssp" },
-        { "name": "Data Security Services", "icon": "fas fa-database","path":"data-security-services" },
-         { "name": "Network Security", "icon": "fas fa-network-wired","path":"network-security" }
-         ]
+        {
+          "name": "Application Security",
+          "icon": "fas fa-lock",
+          "path": "application-security"
+        },
+        {
+          "name": "Cyber Security Awareness",
+          "icon": "fas fa-lightbulb",
+          "path": "cyber-security-awareness"
+        },
+        {
+          "name": "Cybersecurity Consulting",
+          "icon": "fas fa-user-secret",
+          "path": "cybersecurity-consulting"
+        },
+        {
+          "name": "Cybersecurity Implementation",
+          "icon": "fas fa-cogs",
+          "path": "cybersecurity-implementation"
+        },
+        {
+          "name": "Cyber Manpower Outsourcing",
+          "icon": "fas fa-users-cog",
+          "path": "cyber-security-manpower-outsourcing"
+        },
+        {
+          "name": "Cyber Security Training",
+          "icon": "fas fa-chalkboard-teacher",
+          "path": "cyber-security-training"
+        },
+        {
+          "name": "Cybersecurity GRC Consulting",
+          "icon": "fas fa-user-shield",
+          "path": "cybersecurity-grc-services.component"
+        },
+        {
+          "name": "Managed Security Services (MSSP)",
+          "icon": "fas fa-shield-alt",
+          "path": "mssp"
+        },
+        {
+          "name": "Data Security Services",
+          "icon": "fas fa-database",
+          "path": "data-security-services"
+        },
+        {
+          "name": "Network Security",
+          "icon": "fas fa-network-wired",
+          "path": "network-security"
+        }
+      ]
     },
     {
       "key": "Network Infrastructure",
       "icon": "fas fa-network-wired",
-      "img":"../../../../../../assets/img/Banner2.png",
+      "img": "../../../../../../assets/img/Banner2.png",
       "items": [
-        { "name": "Network Operation Center", "icon": "fas fa-server", "path":"noc"},
-        { "name": "Network Consulting", "icon": "fas fa-comments" ,"path":"network-consulting-services"  },
-        { "name": "Network Infratructure Implementation", "icon": "fas fa-tools","path":"network-infrastructure-services" },
-        { "name": "Network Maintenance and Support", "icon": "fas fa-tools","path":"network-infrastructure-maintenance" }
+        {
+          "name": "Network Operation Center",
+          "icon": "fas fa-server",
+          "path": "noc"
+        },
+        {
+          "name": "Network Consulting",
+          "icon": "fas fa-comments",
+          "path": "network-consulting-services"
+        },
+        {
+          "name": "Network Infratructure Implementation",
+          "icon": "fas fa-tools",
+          "path": "network-infrastructure-services"
+        },
+        {
+          "name": "Network Maintenance and Support",
+          "icon": "fas fa-tools",
+          "path": "network-infrastructure-maintenance"
+        }
       ]
     },
     {
       "key": "Artificial Intelligence(AI)",
       "icon": "fas fa-robot",
-      "img":"../../../../../../assets/img/Banner3.png",
+      "img": "../../../../../../assets/img/Banner3.png",
       "items": [
-    { "name": "AI Consulting and Strategy", "icon": "fas fa-chalkboard-teacher","path":"ai-consulting" },
-    { "name": "AI Product Development", "icon": "fas fa-cogs", "path": "ai-product-development" },
-    { "name": "Machine Learning (ML) Services", "icon": "fas fa-brain", "path": "ai-ml-services" },
-    { "name": "Natural Language Processing (NLP)", "icon": "fas fa-comment-dots", "path": "nlp-services" },
-    { "name": "Computer Vision", "icon": "fas fa-eye", "path": "computer-vision" },
-    { "name": "AI-Powered Automation", "icon": "fas fa-robot", "path": "automation-services" },
-    { "name": "AI in Cybersecurity", "icon": "fas fa-shield-alt", "path": "cybersecurity-services" }
-]
-
+        {
+          "name": "AI Consulting and Strategy",
+          "icon": "fas fa-chalkboard-teacher",
+          "path": "ai-consulting"
+        },
+        {
+          "name": "AI Product Development",
+          "icon": "fas fa-cogs",
+          "path": "ai-product-development"
+        },
+        {
+          "name": "Machine Learning (ML) Services",
+          "icon": "fas fa-brain",
+          "path": "ai-ml-services"
+        },
+        {
+          "name": "Natural Language Processing (NLP)",
+          "icon": "fas fa-comment-dots",
+          "path": "nlp-services"
+        },
+        {
+          "name": "Computer Vision",
+          "icon": "fas fa-eye",
+          "path": "computer-vision"
+        },
+        {
+          "name": "AI-Powered Automation",
+          "icon": "fas fa-robot",
+          "path": "automation-services"
+        },
+        {
+          "name": "AI in Cybersecurity",
+          "icon": "fas fa-shield-alt",
+          "path": "cybersecurity-services"
+        }
+      ]
     },
     {
       "key": "Application Management",
       "icon": "fas fa-server",
-         "img":"../../../../../../assets/img/projects.png",
+      "img": "../../../../../../assets/img/projects.png",
       "items": [
-        { "name": "Web Application Development", "icon": "fas fa-code", "path": "web-app-development" },
-        { "name": "Mobile Application Development", "icon": "fas fa-mobile-alt", "path": "mobile-app-development" },
-        { "name": "Application Consulting", "icon": "fas fa-chart-bar","path":"application-consulting" },
-        { "name": "Application Maintenance and Operation", "icon": "fas fa-headset","path": "application-maintenance" },
-        { "name": "Manpower Outsourcing(Application Experts)", "icon": "fas fa-user-friends","path":"manpower-outsourcing" }
+        {
+          "name": "Web Application Development",
+          "icon": "fas fa-code",
+          "path": "web-app-development"
+        },
+        {
+          "name": "Mobile Application Development",
+          "icon": "fas fa-mobile-alt",
+          "path": "mobile-app-development"
+        },
+        {
+          "name": "Application Consulting",
+          "icon": "fas fa-chart-bar",
+          "path": "application-consulting"
+        },
+        {
+          "name": "Application Maintenance and Operation",
+          "icon": "fas fa-headset",
+          "path": "application-maintenance"
+        },
+        {
+          "name": "Manpower Outsourcing(Application Experts)",
+          "icon": "fas fa-user-friends",
+          "path": "manpower-outsourcing"
+        }
       ]
     },
     {
@@ -1230,64 +1344,71 @@
         }
       ]
     },
-    
     {
       "key": "Oracle",
       "icon": "fas fa-robot",
-      "img":"../../../../../../assets/img/Banner3.png",
+      "img": "../../../../../../assets/img/Banner3.png",
       "items": [
-        { "name": "Oracle Primavera", "icon": "fas fa-laptop-code","path":"pmo-services" },
-        { "name": "Oracle Process Automation", "icon": "fas fa-laptop-code","path":"oracle-automation" },
-        { "name": "Oracle Visual Builder", "icon": "fas fa-laptop-code","path":"oracle-visual-builder" }  
+        {
+          "name": "Oracle Primavera",
+          "icon": "fas fa-laptop-code",
+          "path": "pmo-services"
+        },
+        {
+          "name": "Oracle Process Automation",
+          "icon": "fas fa-laptop-code",
+          "path": "oracle-automation"
+        },
+        {
+          "name": "Oracle Visual Builder",
+          "icon": "fas fa-laptop-code",
+          "path": "oracle-visual-builder"
+        }
       ]
     }
-    
   ],
-
-  
   "core_services": [
-  {
-    "key": "AI",
-    "icon": "../../../../../../assets/img/artificial intelligence.png",
-    "title": "Artificial Intelligence (AI)",
-    "description": "Empower your business with cutting-edge AI solutions. From predictive analytics to intelligent automation, we harness the power of AI to drive smarter decisions, boost productivity, and uncover new opportunities for growth. Leverage machine learning models, natural language processing, and data-driven insights to stay ahead of the competition. Our AI solutions are tailored to adapt and scale with your evolving business needs, ensuring you remain innovative and future-ready.",
-    "img": "../../../../../../assets/img/Banner2.png",
-    "path":"/services/ai-consulting"
-  },
-  {
-    "key": "AUTOMATION",
-    "icon": "../../../../../../assets/img/Automation.png",
-    "title": "Automation",
-    "description": "Streamline your operations with advanced automation technology. Reduce manual tasks, minimize errors, and accelerate workflows — giving your team more time to focus on innovation and high-impact initiatives. From robotic process automation (RPA) to intelligent workflows and automated reporting, we design systems that cut costs while enhancing speed and accuracy. Let automation unlock new levels of efficiency, ensuring your business runs smoothly — even at scale.",
-    "img": "../../../../../../assets/img/Banner3.png",
-     "path":"/services/it-infrastructure"
-  },
-  {
-    "key": "CYBERSECURITY",
-    "icon": "../../../../../../assets/img/Cybersecurity.png",
-    "title": "Cybersecurity",
-    "description": "Protect your digital ecosystem with next-generation cybersecurity solutions. We provide comprehensive defenses against evolving threats, ensuring your data, infrastructure, and reputation remain secure and resilient. Our proactive approach includes threat detection, vulnerability assessments, and rapid incident response to safeguard critical assets. Stay compliant with industry standards while fortifying your business from ransomware, data breaches, and emerging cyber risks.",
-    "img": "../../../../../../assets/img/Slider/2.png",
-     "path":"/services/cybersecurity-consulting"
-  },
-  {
-    "key": "APPLICATION",
-    "icon": "../../../../../../assets/img/Application Services.png",
-    "title": "Application Services",
-    "description": "Unlock the full potential of your business with tailor-made applications. From development to deployment and maintenance, we craft scalable, high-performance apps designed to evolve with your business needs. Whether it's a customer-facing mobile app, an internal management platform, or a data-driven web application — our team ensures intuitive designs, seamless integration, and robust performance to enhance user experience and drive productivity.",
-    "img": "../../../../../../assets/img/Slider/3.png",
-     "path":"/services/application-consulting"
-  },
-  {
-    "key": "CONSULTING",
-    "icon": "../../../../../../assets/img/Consulting.png",
-    "title": "Consulting",
-    "description": "Achieve sustainable growth with strategic consulting services. Our experts work alongside your team to navigate complex challenges, optimize processes, and align technology with your long-term business goals. We dive deep into your industry, providing actionable insights and data-backed recommendations to help you innovate faster, reduce operational bottlenecks, and scale confidently. Let us bridge the gap between technology and business strategy — ensuring you stay competitive in an ever-evolving market.",
-    "img": "../../../../../../assets/img/Slider/slider.png",
-     "path":"/services/it-infrastructure"
-  }
-],
-
+    {
+      "key": "AI",
+      "icon": "../../../../../../assets/img/artificial intelligence.png",
+      "title": "Artificial Intelligence (AI)",
+      "description": "Empower your business with cutting-edge AI solutions. From predictive analytics to intelligent automation, we harness the power of AI to drive smarter decisions, boost productivity, and uncover new opportunities for growth. Leverage machine learning models, natural language processing, and data-driven insights to stay ahead of the competition. Our AI solutions are tailored to adapt and scale with your evolving business needs, ensuring you remain innovative and future-ready.",
+      "img": "../../../../../../assets/img/Banner2.png",
+      "path": "/services/ai-consulting"
+    },
+    {
+      "key": "AUTOMATION",
+      "icon": "../../../../../../assets/img/Automation.png",
+      "title": "Automation",
+      "description": "Streamline your operations with advanced automation technology. Reduce manual tasks, minimize errors, and accelerate workflows — giving your team more time to focus on innovation and high-impact initiatives. From robotic process automation (RPA) to intelligent workflows and automated reporting, we design systems that cut costs while enhancing speed and accuracy. Let automation unlock new levels of efficiency, ensuring your business runs smoothly — even at scale.",
+      "img": "../../../../../../assets/img/Banner3.png",
+      "path": "/services/it-infrastructure"
+    },
+    {
+      "key": "CYBERSECURITY",
+      "icon": "../../../../../../assets/img/Cybersecurity.png",
+      "title": "Cybersecurity",
+      "description": "Protect your digital ecosystem with next-generation cybersecurity solutions. We provide comprehensive defenses against evolving threats, ensuring your data, infrastructure, and reputation remain secure and resilient. Our proactive approach includes threat detection, vulnerability assessments, and rapid incident response to safeguard critical assets. Stay compliant with industry standards while fortifying your business from ransomware, data breaches, and emerging cyber risks.",
+      "img": "../../../../../../assets/img/Slider/2.png",
+      "path": "/services/cybersecurity-consulting"
+    },
+    {
+      "key": "APPLICATION",
+      "icon": "../../../../../../assets/img/Application Services.png",
+      "title": "Application Services",
+      "description": "Unlock the full potential of your business with tailor-made applications. From development to deployment and maintenance, we craft scalable, high-performance apps designed to evolve with your business needs. Whether it's a customer-facing mobile app, an internal management platform, or a data-driven web application — our team ensures intuitive designs, seamless integration, and robust performance to enhance user experience and drive productivity.",
+      "img": "../../../../../../assets/img/Slider/3.png",
+      "path": "/services/application-consulting"
+    },
+    {
+      "key": "CONSULTING",
+      "icon": "../../../../../../assets/img/Consulting.png",
+      "title": "Consulting",
+      "description": "Achieve sustainable growth with strategic consulting services. Our experts work alongside your team to navigate complex challenges, optimize processes, and align technology with your long-term business goals. We dive deep into your industry, providing actionable insights and data-backed recommendations to help you innovate faster, reduce operational bottlenecks, and scale confidently. Let us bridge the gap between technology and business strategy — ensuring you stay competitive in an ever-evolving market.",
+      "img": "../../../../../../assets/img/Slider/slider.png",
+      "path": "/services/it-infrastructure"
+    }
+  ],
   "MSSP": {
     "title": "Managed Security Services (MSSP)",
     "subtitle": "Proactive Protection for Your Digital Assets",
@@ -1404,8 +1525,7 @@
       "description": "Don't wait for a cyberattack to happen—proactively protect your business with our Managed Security Services. Contact us today to learn more."
     }
   },
-  
- "CybersecurityConsultingServices": {
+  "CybersecurityConsultingServices": {
     "title": "Cybersecurity Consulting Services",
     "subtitle": "Empowering Businesses with Expert Security Strategies and Risk Mitigation",
     "description": "In today's rapidly evolving digital landscape, organizations face growing cybersecurity threats that can compromise sensitive data, disrupt operations, and damage reputation. Sharp Innovations provides comprehensive Cybersecurity Consulting Services to help businesses identify vulnerabilities, mitigate risks, and strengthen their security posture. Our team of experts brings deep industry knowledge and cutting-edge solutions to ensure your organization remains secure, compliant, and resilient against cyber threats.",
@@ -1484,360 +1604,357 @@
       "button_text": "Get a Free Consultation"
     }
   },
-    "DataSecurityServices": {
-      "title": "Data Security Services",
-      "subtitle": "Protecting Your Data with Advanced Discovery, Classification, and Prevention Solutions",
-      "description": "At Sharp Innovations, we understand that data is the most valuable asset of any organization. With the increasing threat of cyberattacks, regulatory compliance requirements, and insider threats, securing sensitive data is critical. Our Data Security Services provide a comprehensive approach to Data Discovery, Data Classification, and Data Loss Prevention (DLP) to ensure the confidentiality, integrity, and availability of your data.",
-      "core_services": {
-        "title": "Our Core Services",
-        "services": [
-          {
-            "title": "Data Loss Prevention (DLP)",
-            "description": [
-              "Endpoint DLP – Protect sensitive data on laptops, desktops, mobile devices, and removable storage.",
-              "Network DLP – Monitor and control data movement across enterprise networks, emails, and file transfers.",
-              "Cloud DLP – Secure data stored and shared across cloud platforms like Microsoft 365, Google Workspace, and SaaS applications.",
-              "Real-Time Policy Enforcement – Implement rules to block, quarantine, or encrypt sensitive data when policy violations occur.",
-              "Incident Response & Analytics – Receive alerts, audit logs, and forensic insights to detect and mitigate data breaches proactively."
-            ]
-          },
-          {
-            "title": "Data Discovery",
-            "description": [
-              "Automated Scanning & Discovery – Identify sensitive data across structured (databases, data warehouses) and unstructured (emails, documents, cloud storage) environments.",
-              "Data Mapping & Inventory – Gain visibility into data flow, storage locations, and potential security vulnerabilities.",
-              "Cloud & On-Premises Coverage – Discover sensitive data across endpoints, cloud platforms (AWS, Azure, Google Cloud), and on-premises networks.",
-              "Compliance Readiness – Identify compliance gaps related to GDPR, HIPAA, CCPA, PCI-DSS, and other regulatory frameworks."
-            ]
-          },
-          {
-            "title": "Data Classification",
-            "description": [
-              "Automated & Manual Tagging – Assign predefined or customizable classification labels such as Confidential, Internal, Public, or Restricted.",
-              "Integration with Security Policies – Ensure classified data is governed by role-based access controls and encryption policies.",
-              "AI-Driven Context Analysis – Use machine learning to identify patterns, context, and intent behind data usage.",
-              "Metadata & Policy-Based Classification – Apply classification based on content, file type, metadata, and business rules.",
-              "User Training & Awareness – Educate employees on handling classified data securely to reduce insider threats."
-            ]
-          }
-        ]
-      }
-    },
-    "CybersecurityGRCServices": {
-  "title": "Cybersecurity GRC Services",
-  "subtitle": "Enhancing Compliance, Mitigating Risks, and Strengthening Security Posture",
-  "description": "Sharp Innovations provides comprehensive Governance, Risk, and Compliance (GRC) services to help organizations align cybersecurity with regulatory requirements, mitigate risks, and enhance overall security posture. Our GRC services ensure that your organization remains compliant, secure, and resilient against evolving cyber threats.",
-  "core_services": {
-    "title": "Our Key Services",
-    "services": [
-      {
-        "title": "Regulatory Compliance Management",
-        "description": [
-          "NIST (National Institute of Standards and Technology)",
-          "ISO 27001 (International Organization for Standardization - Information Security)",
-          "PCI-DSS (Payment Card Industry Data Security Standard)",
-          "NCA - National Cyber Security Authority",
-          "GDPR (General Data Protection Regulation)",
-          "SAMA - Saudi Arabia Monetary Authority",
-          "Gap assessments to identify compliance deficiencies",
-          "Compliance roadmap development",
-          "Policy alignment with regulatory frameworks",
-          "Assistance in audits and regulatory reporting",
-          "Ongoing compliance monitoring and updates"
-        ]
-      },
-      {
-        "title": "Risk Management Framework (RMF) Implementation",
-        "description": [
-          "Risk Assessment & Categorization – Identifying critical assets and threat vectors",
-          "Control Selection & Implementation – Mapping appropriate security controls",
-          "Security Assessment & Authorization – Ensuring controls meet security requirements",
-          "Continuous Monitoring & Improvement – Real-time threat detection and mitigation"
-        ]
-      },
-      {
-        "title": "Policy & Procedure Development",
-        "description": [
-          "Security policies covering access control, incident response, and data protection",
-          "Standard operating procedures (SOPs) for security teams",
-          "Security awareness and training guidelines for employees",
-          "Governance models ensuring accountability and compliance"
-        ]
-      },
-      {
-        "title": "Third-Party Risk Management (TPRM)",
-        "description": [
-          "Vendor risk assessments and due diligence",
-          "Contract review and security compliance checks",
-          "Continuous monitoring of third-party security postures",
-          "Incident response planning for third-party breaches"
-        ]
-      },
-      {
-        "title": "Continuous Security Audits & Reporting",
-        "description": [
-          "Proactive security auditing to maintain compliance",
-          "Detailed reporting to help strengthen cybersecurity frameworks"
-        ]
-      }
-    ]
-  },
-  "call_to_action": {
-    "title": "Protect Your Business with GRC Services",
-    "description": "Ensure compliance, mitigate risks, and enhance your cybersecurity posture with Sharp Innovations' GRC services.",
-    "button_text": "Get a Free Consultation"
-  }
-},
-"ApplicationSecurityServices": {
-      "title": "Application Security Services",
-      "subtitle": "Protecting Applications from Emerging Cyber Threats",
-      "description": "Sharp Innovations offers comprehensive Application Security Services to identify, analyze, and mitigate security vulnerabilities throughout the software development lifecycle, ensuring robust protection and compliance.",
-      "core_services": {
-        "title": "Our Key Services",
-        "services": [
-          {
-            "title": "Vulnerability Management",
-            "description": [
-              "Continuous identification and assessment of security flaws.",
-              "Risk prioritization based on threat impact and exploitability.",
-              "Ongoing remediation support and security patch guidance.",
-              "Integration with DevSecOps for proactive vulnerability mitigation."
-            ]
-          },
-          {
-            "title": "Vulnerability Assessment & Penetration Testing (VAPT)",
-            "description": [
-              "Comprehensive security assessments to detect weaknesses in web, mobile, and desktop applications.",
-              "Automated and manual penetration testing to simulate real-world attacks.",
-              "Detailed risk assessment reports with actionable recommendations.",
-              "Retesting after remediation to ensure security fixes are effective."
-            ]
-          },
-          {
-            "title": "Source Code Review",
-            "description": [
-              "Manual and automated analysis of application source code to uncover security flaws.",
-              "Identification of coding vulnerabilities such as SQL injection, cross-site scripting (XSS), and buffer overflows.",
-              "Secure coding recommendations to fortify application security from within.",
-              "Support for multiple programming languages and frameworks."
-            ]
-          },
-          {
-            "title": "Dynamic Application Security Testing (DAST)",
-            "description": [
-              "Real-time security testing of running applications to identify vulnerabilities in runtime environments.",
-              "Detection of authentication flaws, input validation issues, and misconfigurations.",
-              "Black-box testing methodology to simulate external attacker perspectives.",
-              "Continuous monitoring for evolving security threats and vulnerabilities."
-            ]
-          },
-          {
-            "title": "Static Application Security Testing (SAST)",
-            "description": [
-              "In-depth scanning of source code, binaries, and bytecode for security vulnerabilities.",
-              "Early detection of security risks in the development phase.",
-              "Integration with CI/CD pipelines for automated security testing.",
-              "Custom rule creation to align with organizational security policies."
-            ]
-          }
-        ]
-      },
-      "call_to_action": {
-        "title": "Secure Your Applications Now!",
-        "description": "Protect your business from application-level vulnerabilities. Get in touch with our experts today!"
-      }
-    },
-    
-      "NetworkSecurityServices": {
-        "title": "Network Security Services",
-        "subtitle": "Protecting Your Digital Assets with Advanced Security Solutions",
-        "description": "In today's digital landscape, cyber threats are more sophisticated than ever. At Sharp Innovations, we provide comprehensive Network Security Services to safeguard your organization's critical infrastructure, ensuring confidentiality, integrity, and availability of your data and systems.",
-        "core_services": {
-          "title": "Our Network Security Solutions",
-          "services": [
-            {
-              "title": "Network Security Assessment & Risk Analysis",
-              "description": [
-                "Network Penetration Testing – Simulating cyberattacks to uncover weaknesses.",
-                "Vulnerability Scanning – Detecting security flaws in firewalls, routers, and endpoints.",
-                "Compliance Gap Analysis – Ensuring alignment with industry standards (ISO 27001, NIST, CIS, HIPAA, PCI-DSS)."
-              ]
-            },
-            {
-              "title": "Firewall Implementation & Management",
-              "description": [
-                "Deployment of next-generation firewalls (NGFWs) for advanced threat protection.",
-                "Rule and policy configuration to control traffic and prevent unauthorized access.",
-                "24/7 monitoring & incident response for real-time threat detection."
-              ]
-            },
-            {
-              "title": "Intrusion Detection & Prevention Systems (IDPS)",
-              "description": [
-                "Signature-based and anomaly-based detection for real-time alerts.",
-                "Automated response mechanisms to mitigate threats immediately.",
-                "Behavioral analytics to identify unusual activities."
-              ]
-            },
-            {
-              "title": "Secure Network Architecture & Segmentation",
-              "description": [
-                "Zero Trust Network Architecture (ZTNA) for strict access controls.",
-                "Network segmentation to isolate critical assets from general traffic.",
-                "Micro-segmentation to enforce security at the application level."
-              ]
-            },
-            {
-              "title": "Endpoint Security & Network Access Control (NAC)",
-              "description": [
-                "Multi-factor authentication (MFA) & Single Sign-On (SSO) for secure login.",
-                "Endpoint Detection & Response (EDR) solutions to prevent malware infections.",
-                "Network Access Control (NAC) to restrict unauthorized device access."
-              ]
-            },
-            {
-              "title": "Cloud & Hybrid Network Security",
-              "description": [
-                "Cloud Firewall & CASB (Cloud Access Security Broker) solutions.",
-                "Identity & Access Management (IAM) for cloud applications.",
-                "Data loss prevention (DLP) & encryption to secure cloud workloads."
-              ]
-            },
-            {
-              "title": "Managed Network Security Services (24/7 Monitoring & Incident Response)",
-              "description": [
-                "Real-time threat intelligence & alerts powered by AI-driven security analytics.",
-                "Rapid incident response & forensic analysis for breach investigations.",
-                "Security Information & Event Management (SIEM) solutions for log analysis and reporting."
-              ]
-            },
-            {
-              "title": "DDoS Protection & Threat Mitigation",
-              "description": [
-                "Traffic filtering & rate limiting to block malicious requests.",
-                "AI-based anomaly detection for early warning and prevention.",
-                "Cloud-based DDoS mitigation to absorb large-scale attacks."
-              ]
-            },
-            {
-              "title": "Wireless & IoT Security",
-              "description": [
-                "Secure Wi-Fi network deployment with WPA3 encryption.",
-                "IoT device authentication & access control policies.",
-                "Network behavior monitoring for anomaly detection."
-              ]
-            },
-            {
-              "title": "Compliance & Regulatory Security Implementation",
-              "description": [
-                "NCA, SAMA, GDPR, CCPA, PCI-DSS, ISO 27001, NIST CSF compliance.",
-                "Policy enforcement & audit preparation for security governance.",
-                "Security awareness training for employees to reduce human risk factors."
-              ]
-            }
+  "DataSecurityServices": {
+    "title": "Data Security Services",
+    "subtitle": "Protecting Your Data with Advanced Discovery, Classification, and Prevention Solutions",
+    "description": "At Sharp Innovations, we understand that data is the most valuable asset of any organization. With the increasing threat of cyberattacks, regulatory compliance requirements, and insider threats, securing sensitive data is critical. Our Data Security Services provide a comprehensive approach to Data Discovery, Data Classification, and Data Loss Prevention (DLP) to ensure the confidentiality, integrity, and availability of your data.",
+    "core_services": {
+      "title": "Our Core Services",
+      "services": [
+        {
+          "title": "Data Loss Prevention (DLP)",
+          "description": [
+            "Endpoint DLP – Protect sensitive data on laptops, desktops, mobile devices, and removable storage.",
+            "Network DLP – Monitor and control data movement across enterprise networks, emails, and file transfers.",
+            "Cloud DLP – Secure data stored and shared across cloud platforms like Microsoft 365, Google Workspace, and SaaS applications.",
+            "Real-Time Policy Enforcement – Implement rules to block, quarantine, or encrypt sensitive data when policy violations occur.",
+            "Incident Response & Analytics – Receive alerts, audit logs, and forensic insights to detect and mitigate data breaches proactively."
           ]
         },
-        "call_to_action": {
-          "title": "Secure Your Network Today!",
-          "description": "Protect your digital assets with Sharp Innovations' advanced Network Security Services. Contact us now for a free consultation."
-        }
-      },
-      
-        "CybersecurityImplementationServices": {
-          "title": "Cybersecurity Implementation Services",
-          "subtitle": "Strengthening Your Security Posture with Proven Strategies",
-          "description": "As cyber threats continue to evolve, organizations must implement robust security frameworks to protect sensitive data, mitigate risks, and ensure compliance with industry regulations. At Sharp Innovations, we provide end-to-end Cybersecurity Implementation Services, delivering customized security solutions that align with your business objectives and regulatory requirements.",
-          "why_choose_us": {
-            "title": "Why Choose Sharp Innovations for Cybersecurity Implementation?",
-            "points": [
-              {
-                "title": "Certified Security Experts",
-                "description": "Our team includes CISSP, CEH, CISM, and ISO 27001-certified professionals."
-              },
-              {
-                "title": "Tailored Security Solutions",
-                "description": "We customize implementation strategies based on your organization's industry, size, and risk profile."
-              },
-              {
-                "title": "Cutting-Edge Technologies",
-                "description": "We leverage AI-driven security tools and next-gen solutions for proactive threat defense."
-              },
-              {
-                "title": "End-to-End Implementation Support",
-                "description": "From planning to execution, we handle every aspect of cybersecurity deployment."
-              }
-            ]
-          },
-          "core_services": {
-            "title": "Our Cybersecurity Implementation Services",
-            "services": [
-              {
-                "title": "Network Security Implementation",
-                "description": [
-                  "Deploying firewalls, IDS/IPS, VPNs, and secure network segmentation to protect your infrastructure.",
-                  "Next-Generation Firewalls (NGFWs) for advanced threat protection.",
-                  "Secure network segmentation to isolate critical assets.",
-                  "Zero Trust Network Architecture (ZTNA) for strict access controls."
-                ]
-              },
-              {
-                "title": "Cloud Security Deployment",
-                "description": [
-                  "Implementing cloud-native security controls for AWS, Azure, and Google Cloud to secure your cloud workloads.",
-                  "Cloud Access Security Broker (CASB) solutions.",
-                  "Identity & Access Management (IAM) for cloud applications.",
-                  "Data loss prevention (DLP) & encryption for cloud data."
-                ]
-              },
-              {
-                "title": "Endpoint Security Solutions",
-                "description": [
-                  "Deploying Endpoint Detection & Response (EDR), antivirus, and access controls to secure endpoints.",
-                  "Multi-factor authentication (MFA) & Single Sign-On (SSO).",
-                  "Advanced threat protection for laptops, desktops, and mobile devices.",
-                  "Network Access Control (NAC) to restrict unauthorized access."
-                ]
-              },
-              {
-                "title": "Identity & Access Management (IAM)",
-                "description": [
-                  "Implementing IAM solutions to manage user identities and enforce access controls.",
-                  "Role-based access control (RBAC) and privileged access management (PAM).",
-                  "Integration with existing IT infrastructure.",
-                  "Continuous monitoring of user access and permissions."
-                ]
-              },
-              {
-                "title": "Zero Trust Security Implementation",
-                "description": [
-                  "Adopting a Zero Trust model to enforce strict access controls and continuous verification.",
-                  "Micro-segmentation for application-level security.",
-                  "Continuous monitoring and threat detection.",
-                  "Integration with SIEM and SOAR solutions."
-                ]
-              },
-              {
-                "title": "Security Awareness Training",
-                "description": [
-                  "Educating employees on phishing attacks, social engineering, and security best practices.",
-                  "Phishing simulation exercises.",
-                  "Regular training sessions and workshops.",
-                  "Promoting a strong cybersecurity culture."
-                ]
-              }
-            ]
-          },
-          "call_to_action": {
-            "title": "Secure Your Business Today",
-            "description": "Strengthen your cybersecurity defenses with Sharp Innovations. Contact us today for a consultation and tailored security implementation plan.",
-            "contact": {
-              "phone": "+966 53 140 9624",
-              "email": "info@sharpinnvotech.com"
-            }
-          }
+        {
+          "title": "Data Discovery",
+          "description": [
+            "Automated Scanning & Discovery – Identify sensitive data across structured (databases, data warehouses) and unstructured (emails, documents, cloud storage) environments.",
+            "Data Mapping & Inventory – Gain visibility into data flow, storage locations, and potential security vulnerabilities.",
+            "Cloud & On-Premises Coverage – Discover sensitive data across endpoints, cloud platforms (AWS, Azure, Google Cloud), and on-premises networks.",
+            "Compliance Readiness – Identify compliance gaps related to GDPR, HIPAA, CCPA, PCI-DSS, and other regulatory frameworks."
+          ]
         },
-      
-      "CybersecurityAwarenessService": {
+        {
+          "title": "Data Classification",
+          "description": [
+            "Automated & Manual Tagging – Assign predefined or customizable classification labels such as Confidential, Internal, Public, or Restricted.",
+            "Integration with Security Policies – Ensure classified data is governed by role-based access controls and encryption policies.",
+            "AI-Driven Context Analysis – Use machine learning to identify patterns, context, and intent behind data usage.",
+            "Metadata & Policy-Based Classification – Apply classification based on content, file type, metadata, and business rules.",
+            "User Training & Awareness – Educate employees on handling classified data securely to reduce insider threats."
+          ]
+        }
+      ]
+    }
+  },
+  "CybersecurityGRCServices": {
+    "title": "Cybersecurity GRC Services",
+    "subtitle": "Enhancing Compliance, Mitigating Risks, and Strengthening Security Posture",
+    "description": "Sharp Innovations provides comprehensive Governance, Risk, and Compliance (GRC) services to help organizations align cybersecurity with regulatory requirements, mitigate risks, and enhance overall security posture. Our GRC services ensure that your organization remains compliant, secure, and resilient against evolving cyber threats.",
+    "core_services": {
+      "title": "Our Key Services",
+      "services": [
+        {
+          "title": "Regulatory Compliance Management",
+          "description": [
+            "NIST (National Institute of Standards and Technology)",
+            "ISO 27001 (International Organization for Standardization - Information Security)",
+            "PCI-DSS (Payment Card Industry Data Security Standard)",
+            "NCA - National Cyber Security Authority",
+            "GDPR (General Data Protection Regulation)",
+            "SAMA - Saudi Arabia Monetary Authority",
+            "Gap assessments to identify compliance deficiencies",
+            "Compliance roadmap development",
+            "Policy alignment with regulatory frameworks",
+            "Assistance in audits and regulatory reporting",
+            "Ongoing compliance monitoring and updates"
+          ]
+        },
+        {
+          "title": "Risk Management Framework (RMF) Implementation",
+          "description": [
+            "Risk Assessment & Categorization – Identifying critical assets and threat vectors",
+            "Control Selection & Implementation – Mapping appropriate security controls",
+            "Security Assessment & Authorization – Ensuring controls meet security requirements",
+            "Continuous Monitoring & Improvement – Real-time threat detection and mitigation"
+          ]
+        },
+        {
+          "title": "Policy & Procedure Development",
+          "description": [
+            "Security policies covering access control, incident response, and data protection",
+            "Standard operating procedures (SOPs) for security teams",
+            "Security awareness and training guidelines for employees",
+            "Governance models ensuring accountability and compliance"
+          ]
+        },
+        {
+          "title": "Third-Party Risk Management (TPRM)",
+          "description": [
+            "Vendor risk assessments and due diligence",
+            "Contract review and security compliance checks",
+            "Continuous monitoring of third-party security postures",
+            "Incident response planning for third-party breaches"
+          ]
+        },
+        {
+          "title": "Continuous Security Audits & Reporting",
+          "description": [
+            "Proactive security auditing to maintain compliance",
+            "Detailed reporting to help strengthen cybersecurity frameworks"
+          ]
+        }
+      ]
+    },
+    "call_to_action": {
+      "title": "Protect Your Business with GRC Services",
+      "description": "Ensure compliance, mitigate risks, and enhance your cybersecurity posture with Sharp Innovations' GRC services.",
+      "button_text": "Get a Free Consultation"
+    }
+  },
+  "ApplicationSecurityServices": {
+    "title": "Application Security Services",
+    "subtitle": "Protecting Applications from Emerging Cyber Threats",
+    "description": "Sharp Innovations offers comprehensive Application Security Services to identify, analyze, and mitigate security vulnerabilities throughout the software development lifecycle, ensuring robust protection and compliance.",
+    "core_services": {
+      "title": "Our Key Services",
+      "services": [
+        {
+          "title": "Vulnerability Management",
+          "description": [
+            "Continuous identification and assessment of security flaws.",
+            "Risk prioritization based on threat impact and exploitability.",
+            "Ongoing remediation support and security patch guidance.",
+            "Integration with DevSecOps for proactive vulnerability mitigation."
+          ]
+        },
+        {
+          "title": "Vulnerability Assessment & Penetration Testing (VAPT)",
+          "description": [
+            "Comprehensive security assessments to detect weaknesses in web, mobile, and desktop applications.",
+            "Automated and manual penetration testing to simulate real-world attacks.",
+            "Detailed risk assessment reports with actionable recommendations.",
+            "Retesting after remediation to ensure security fixes are effective."
+          ]
+        },
+        {
+          "title": "Source Code Review",
+          "description": [
+            "Manual and automated analysis of application source code to uncover security flaws.",
+            "Identification of coding vulnerabilities such as SQL injection, cross-site scripting (XSS), and buffer overflows.",
+            "Secure coding recommendations to fortify application security from within.",
+            "Support for multiple programming languages and frameworks."
+          ]
+        },
+        {
+          "title": "Dynamic Application Security Testing (DAST)",
+          "description": [
+            "Real-time security testing of running applications to identify vulnerabilities in runtime environments.",
+            "Detection of authentication flaws, input validation issues, and misconfigurations.",
+            "Black-box testing methodology to simulate external attacker perspectives.",
+            "Continuous monitoring for evolving security threats and vulnerabilities."
+          ]
+        },
+        {
+          "title": "Static Application Security Testing (SAST)",
+          "description": [
+            "In-depth scanning of source code, binaries, and bytecode for security vulnerabilities.",
+            "Early detection of security risks in the development phase.",
+            "Integration with CI/CD pipelines for automated security testing.",
+            "Custom rule creation to align with organizational security policies."
+          ]
+        }
+      ]
+    },
+    "call_to_action": {
+      "title": "Secure Your Applications Now!",
+      "description": "Protect your business from application-level vulnerabilities. Get in touch with our experts today!"
+    }
+  },
+  "NetworkSecurityServices": {
+    "title": "Network Security Services",
+    "subtitle": "Protecting Your Digital Assets with Advanced Security Solutions",
+    "description": "In today's digital landscape, cyber threats are more sophisticated than ever. At Sharp Innovations, we provide comprehensive Network Security Services to safeguard your organization's critical infrastructure, ensuring confidentiality, integrity, and availability of your data and systems.",
+    "core_services": {
+      "title": "Our Network Security Solutions",
+      "services": [
+        {
+          "title": "Network Security Assessment & Risk Analysis",
+          "description": [
+            "Network Penetration Testing – Simulating cyberattacks to uncover weaknesses.",
+            "Vulnerability Scanning – Detecting security flaws in firewalls, routers, and endpoints.",
+            "Compliance Gap Analysis – Ensuring alignment with industry standards (ISO 27001, NIST, CIS, HIPAA, PCI-DSS)."
+          ]
+        },
+        {
+          "title": "Firewall Implementation & Management",
+          "description": [
+            "Deployment of next-generation firewalls (NGFWs) for advanced threat protection.",
+            "Rule and policy configuration to control traffic and prevent unauthorized access.",
+            "24/7 monitoring & incident response for real-time threat detection."
+          ]
+        },
+        {
+          "title": "Intrusion Detection & Prevention Systems (IDPS)",
+          "description": [
+            "Signature-based and anomaly-based detection for real-time alerts.",
+            "Automated response mechanisms to mitigate threats immediately.",
+            "Behavioral analytics to identify unusual activities."
+          ]
+        },
+        {
+          "title": "Secure Network Architecture & Segmentation",
+          "description": [
+            "Zero Trust Network Architecture (ZTNA) for strict access controls.",
+            "Network segmentation to isolate critical assets from general traffic.",
+            "Micro-segmentation to enforce security at the application level."
+          ]
+        },
+        {
+          "title": "Endpoint Security & Network Access Control (NAC)",
+          "description": [
+            "Multi-factor authentication (MFA) & Single Sign-On (SSO) for secure login.",
+            "Endpoint Detection & Response (EDR) solutions to prevent malware infections.",
+            "Network Access Control (NAC) to restrict unauthorized device access."
+          ]
+        },
+        {
+          "title": "Cloud & Hybrid Network Security",
+          "description": [
+            "Cloud Firewall & CASB (Cloud Access Security Broker) solutions.",
+            "Identity & Access Management (IAM) for cloud applications.",
+            "Data loss prevention (DLP) & encryption to secure cloud workloads."
+          ]
+        },
+        {
+          "title": "Managed Network Security Services (24/7 Monitoring & Incident Response)",
+          "description": [
+            "Real-time threat intelligence & alerts powered by AI-driven security analytics.",
+            "Rapid incident response & forensic analysis for breach investigations.",
+            "Security Information & Event Management (SIEM) solutions for log analysis and reporting."
+          ]
+        },
+        {
+          "title": "DDoS Protection & Threat Mitigation",
+          "description": [
+            "Traffic filtering & rate limiting to block malicious requests.",
+            "AI-based anomaly detection for early warning and prevention.",
+            "Cloud-based DDoS mitigation to absorb large-scale attacks."
+          ]
+        },
+        {
+          "title": "Wireless & IoT Security",
+          "description": [
+            "Secure Wi-Fi network deployment with WPA3 encryption.",
+            "IoT device authentication & access control policies.",
+            "Network behavior monitoring for anomaly detection."
+          ]
+        },
+        {
+          "title": "Compliance & Regulatory Security Implementation",
+          "description": [
+            "NCA, SAMA, GDPR, CCPA, PCI-DSS, ISO 27001, NIST CSF compliance.",
+            "Policy enforcement & audit preparation for security governance.",
+            "Security awareness training for employees to reduce human risk factors."
+          ]
+        }
+      ]
+    },
+    "call_to_action": {
+      "title": "Secure Your Network Today!",
+      "description": "Protect your digital assets with Sharp Innovations' advanced Network Security Services. Contact us now for a free consultation."
+    }
+  },
+  "CybersecurityImplementationServices": {
+    "title": "Cybersecurity Implementation Services",
+    "subtitle": "Strengthening Your Security Posture with Proven Strategies",
+    "description": "As cyber threats continue to evolve, organizations must implement robust security frameworks to protect sensitive data, mitigate risks, and ensure compliance with industry regulations. At Sharp Innovations, we provide end-to-end Cybersecurity Implementation Services, delivering customized security solutions that align with your business objectives and regulatory requirements.",
+    "why_choose_us": {
+      "title": "Why Choose Sharp Innovations for Cybersecurity Implementation?",
+      "points": [
+        {
+          "title": "Certified Security Experts",
+          "description": "Our team includes CISSP, CEH, CISM, and ISO 27001-certified professionals."
+        },
+        {
+          "title": "Tailored Security Solutions",
+          "description": "We customize implementation strategies based on your organization's industry, size, and risk profile."
+        },
+        {
+          "title": "Cutting-Edge Technologies",
+          "description": "We leverage AI-driven security tools and next-gen solutions for proactive threat defense."
+        },
+        {
+          "title": "End-to-End Implementation Support",
+          "description": "From planning to execution, we handle every aspect of cybersecurity deployment."
+        }
+      ]
+    },
+    "core_services": {
+      "title": "Our Cybersecurity Implementation Services",
+      "services": [
+        {
+          "title": "Network Security Implementation",
+          "description": [
+            "Deploying firewalls, IDS/IPS, VPNs, and secure network segmentation to protect your infrastructure.",
+            "Next-Generation Firewalls (NGFWs) for advanced threat protection.",
+            "Secure network segmentation to isolate critical assets.",
+            "Zero Trust Network Architecture (ZTNA) for strict access controls."
+          ]
+        },
+        {
+          "title": "Cloud Security Deployment",
+          "description": [
+            "Implementing cloud-native security controls for AWS, Azure, and Google Cloud to secure your cloud workloads.",
+            "Cloud Access Security Broker (CASB) solutions.",
+            "Identity & Access Management (IAM) for cloud applications.",
+            "Data loss prevention (DLP) & encryption for cloud data."
+          ]
+        },
+        {
+          "title": "Endpoint Security Solutions",
+          "description": [
+            "Deploying Endpoint Detection & Response (EDR), antivirus, and access controls to secure endpoints.",
+            "Multi-factor authentication (MFA) & Single Sign-On (SSO).",
+            "Advanced threat protection for laptops, desktops, and mobile devices.",
+            "Network Access Control (NAC) to restrict unauthorized access."
+          ]
+        },
+        {
+          "title": "Identity & Access Management (IAM)",
+          "description": [
+            "Implementing IAM solutions to manage user identities and enforce access controls.",
+            "Role-based access control (RBAC) and privileged access management (PAM).",
+            "Integration with existing IT infrastructure.",
+            "Continuous monitoring of user access and permissions."
+          ]
+        },
+        {
+          "title": "Zero Trust Security Implementation",
+          "description": [
+            "Adopting a Zero Trust model to enforce strict access controls and continuous verification.",
+            "Micro-segmentation for application-level security.",
+            "Continuous monitoring and threat detection.",
+            "Integration with SIEM and SOAR solutions."
+          ]
+        },
+        {
+          "title": "Security Awareness Training",
+          "description": [
+            "Educating employees on phishing attacks, social engineering, and security best practices.",
+            "Phishing simulation exercises.",
+            "Regular training sessions and workshops.",
+            "Promoting a strong cybersecurity culture."
+          ]
+        }
+      ]
+    },
+    "call_to_action": {
+      "title": "Secure Your Business Today",
+      "description": "Strengthen your cybersecurity defenses with Sharp Innovations. Contact us today for a consultation and tailored security implementation plan.",
+      "contact": {
+        "phone": "+966 53 140 9624",
+        "email": "info@sharpinnvotech.com"
+      }
+    }
+  },
+  "CybersecurityAwarenessService": {
     "title": "Cybersecurity Awareness Service",
     "subtitle": "Empowering Your Workforce to Defend Against Cyber Threats",
     "description": "Even the most advanced security systems can be compromised if employees are unaware of cyber risks and best practices. Our structured training program educates and empowers your workforce.",
@@ -2026,134 +2143,214 @@
       "description": "Don't leave your cybersecurity to chance—get access to elite security professionals without the overhead costs."
     }
   },
-    "SuperiorMonitoringNOCService": {
-  "title": "Superior Monitoring Network Operations Center (NOC) Service",
-  "subtitle": "Ensuring High Availability, Security, and Performance",
-  "description": "Sharp Innovations provides a cutting-edge Network Operations Center (NOC) service designed to ensure high availability, security, and efficiency in managing network infrastructures.",
-  "services": {
-    "title": "We Provide End-to-End NOC Service",
-    "points": [
-      "NOC Consulting: Expert guidance to design and implement NOC solutions tailored to your needs.",
-      "Seamless Onboarding: Smooth transition and integration of your network into our NOC services.",
-      "Managed Network Services: Comprehensive management of your network infrastructure.",
-      "Continuous Improvement: Ongoing optimization and updates to ensure peak performance."
-    ]
+  "SuperiorMonitoringNOCService": {
+    "title": "Superior Monitoring Network Operations Center (NOC) Service",
+    "subtitle": "Ensuring High Availability, Security, and Performance",
+    "description": "Sharp Innovations provides a cutting-edge Network Operations Center (NOC) service designed to ensure high availability, security, and efficiency in managing network infrastructures.",
+    "services": {
+      "title": "We Provide End-to-End NOC Service",
+      "points": [
+        "NOC Consulting: Expert guidance to design and implement NOC solutions tailored to your needs.",
+        "Seamless Onboarding: Smooth transition and integration of your network into our NOC services.",
+        "Managed Network Services: Comprehensive management of your network infrastructure.",
+        "Continuous Improvement: Ongoing optimization and updates to ensure peak performance."
+      ]
+    },
+    "operations": {
+      "title": "Key Operational Activities",
+      "activities": [
+        {
+          "title": "Network Monitoring & Incident Management",
+          "description": [
+            "Continuous monitoring of network performance, uptime, and health.",
+            "Proactive identification of anomalies and potential issues.",
+            "Automatic alerting and incident escalation.",
+            "Rapid troubleshooting and remediation of network failures."
+          ]
+        },
+        {
+          "title": "Performance Optimization",
+          "description": [
+            "Real-time network traffic analysis.",
+            "Bandwidth and latency monitoring.",
+            "Load balancing and congestion management.",
+            "Tuning network parameters for optimal performance."
+          ]
+        },
+        {
+          "title": "Security & Compliance Management",
+          "description": [
+            "Intrusion detection and prevention system (IDS/IPS) monitoring.",
+            "Firewall and endpoint security management.",
+            "Threat intelligence and vulnerability assessment.",
+            "Compliance enforcement (NCA, ISO 27001, NIST, etc.)."
+          ]
+        },
+        {
+          "title": "Patch & Configuration Management",
+          "description": [
+            "Regular firmware and software updates.",
+            "Configuration audits and policy enforcement.",
+            "Change management to minimize network disruptions."
+          ]
+        },
+        {
+          "title": "Reporting & Analytics",
+          "description": [
+            "Custom dashboard for real-time insights.",
+            "Monthly performance reports.",
+            "Root cause analysis for recurring issues.",
+            "Predictive analytics for capacity planning."
+          ]
+        }
+      ]
+    },
+    "architecture": {
+      "title": "Architecture of NOC Service",
+      "description": [
+        "Multi-Tiered Architecture: Data collection, analysis, and automated resolution layers.",
+        "Cloud-Enabled & On-Premises Capabilities: Hybrid deployment with secure VPN.",
+        "Integration with ITSM & SIEM: Works with ServiceNow, Jira, and SIEM tools."
+      ]
+    },
+    "team": {
+      "title": "Our NOC Team Structure",
+      "levels": [
+        "Level 1 (L1) - Network Monitoring Engineers: First point of contact for alerts and incidents.",
+        "Level 2 (L2) - Network Support Specialists: Advanced troubleshooting and security enforcement.",
+        "Level 3 (L3) - Network Architects & Security Analysts: Infrastructure design and threat mitigation.",
+        "NOC Manager & Compliance Officers: Ensuring operational excellence and regulatory compliance."
+      ]
+    },
+    "benefits": {
+      "title": "Advantages of NOC Services by Sharp Innovations",
+      "points": [
+        "24/7 Network Availability: Continuous monitoring and quick resolution reduce downtime.",
+        "Enhanced Security Posture: Proactive threat detection minimizes cyber risks.",
+        "Cost Savings & Operational Efficiency: Reduces the need for in-house network monitoring resources.",
+        "Compliance & Risk Mitigation: Ensures adherence to industry regulations and standards.",
+        "Scalable & Customizable Solutions: Tailored to meet your business's unique needs.",
+        "Fast-Track Your Growth: Seamlessly scale without hiring more technicians.",
+        "Superior Service Quality: Achieve operational excellence at a fraction of the cost."
+      ]
+    },
+    "call_to_action": {
+      "title": "Boost Your Network Performance with Sharp Innovations!",
+      "description": "Ensure 24/7 monitoring, enhanced security, and improved network efficiency—get started today!"
+    }
   },
-  "operations": {
-    "title": "Key Operational Activities",
-    "activities": [
+  "NOCServicePackage": {
+    "title": "NOC Service Package – Sharp Innovations",
+    "headers": [
+      "Sr. No.",
+      "Service Details",
+      "Essentials",
+      "Advance"
+    ],
+    "sections": [
       {
-        "title": "Network Monitoring & Incident Management",
-        "description": [
-          "Continuous monitoring of network performance, uptime, and health.",
-          "Proactive identification of anomalies and potential issues.",
-          "Automatic alerting and incident escalation.",
-          "Rapid troubleshooting and remediation of network failures."
+        "title": "Network Monitoring Service",
+        "services": [
+          {
+            "sr": "1",
+            "detail": "Hardware Health Monitoring",
+            "essentials": "true",
+            "advance": "true"
+          },
+          {
+            "sr": "2",
+            "detail": "Device Performance Monitoring",
+            "essentials": "true",
+            "advance": "true"
+          },
+          {
+            "sr": "3",
+            "detail": "Hardware Availability Monitoring",
+            "essentials": "true",
+            "advance": "true"
+          },
+          {
+            "sr": "4",
+            "detail": "Network Traffic Analysis",
+            "essentials": "true",
+            "advance": "true"
+          },
+          {
+            "sr": "5",
+            "detail": "Capacity Monitoring",
+            "essentials": "true",
+            "advance": "true"
+          },
+          {
+            "sr": "6",
+            "detail": "WAN and VoIP Monitoring",
+            "essentials": "true",
+            "advance": "true"
+          },
+          {
+            "sr": "7",
+            "detail": "24x7 Monitoring",
+            "essentials": "true",
+            "advance": "true"
+          },
+          {
+            "sr": "8",
+            "detail": "Monitoring Dashboards and Reports",
+            "essentials": "true",
+            "advance": "true"
+          }
         ]
       },
       {
-        "title": "Performance Optimization",
-        "description": [
-          "Real-time network traffic analysis.",
-          "Bandwidth and latency monitoring.",
-          "Load balancing and congestion management.",
-          "Tuning network parameters for optimal performance."
-        ]
-      },
-      {
-        "title": "Security & Compliance Management",
-        "description": [
-          "Intrusion detection and prevention system (IDS/IPS) monitoring.",
-          "Firewall and endpoint security management.",
-          "Threat intelligence and vulnerability assessment.",
-          "Compliance enforcement (NCA, ISO 27001, NIST, etc.)."
-        ]
-      },
-      {
-        "title": "Patch & Configuration Management",
-        "description": [
-          "Regular firmware and software updates.",
-          "Configuration audits and policy enforcement.",
-          "Change management to minimize network disruptions."
-        ]
-      },
-      {
-        "title": "Reporting & Analytics",
-        "description": [
-          "Custom dashboard for real-time insights.",
-          "Monthly performance reports.",
-          "Root cause analysis for recurring issues.",
-          "Predictive analytics for capacity planning."
+        "title": "Network Management Service",
+        "services": [
+          {
+            "sr": "9",
+            "detail": "SLA Management",
+            "essentials": "false",
+            "advance": "true"
+          },
+          {
+            "sr": "10",
+            "detail": "Configuration Management",
+            "essentials": "false",
+            "advance": "true"
+          },
+          {
+            "sr": "11",
+            "detail": "Incident, Problem and Change Management",
+            "essentials": "false",
+            "advance": "true"
+          },
+          {
+            "sr": "12",
+            "detail": "Device Administration",
+            "essentials": "false",
+            "advance": "true"
+          },
+          {
+            "sr": "13",
+            "detail": "Change Management",
+            "essentials": "false",
+            "advance": "true"
+          },
+          {
+            "sr": "14",
+            "detail": "Capacity Management",
+            "essentials": "false",
+            "advance": "true"
+          },
+          {
+            "sr": "15",
+            "detail": "Provisioning Support",
+            "essentials": "false",
+            "advance": "true"
+          }
         ]
       }
     ]
   },
-  "architecture": {
-    "title": "Architecture of NOC Service",
-    "description": [
-      "Multi-Tiered Architecture: Data collection, analysis, and automated resolution layers.",
-      "Cloud-Enabled & On-Premises Capabilities: Hybrid deployment with secure VPN.",
-      "Integration with ITSM & SIEM: Works with ServiceNow, Jira, and SIEM tools."
-    ]
-  },
-  "team": {
-    "title": "Our NOC Team Structure",
-    "levels": [
-      "Level 1 (L1) - Network Monitoring Engineers: First point of contact for alerts and incidents.",
-      "Level 2 (L2) - Network Support Specialists: Advanced troubleshooting and security enforcement.",
-      "Level 3 (L3) - Network Architects & Security Analysts: Infrastructure design and threat mitigation.",
-      "NOC Manager & Compliance Officers: Ensuring operational excellence and regulatory compliance."
-    ]
-  },
-  "benefits": {
-    "title": "Advantages of NOC Services by Sharp Innovations",
-    "points": [
-      "24/7 Network Availability: Continuous monitoring and quick resolution reduce downtime.",
-      "Enhanced Security Posture: Proactive threat detection minimizes cyber risks.",
-      "Cost Savings & Operational Efficiency: Reduces the need for in-house network monitoring resources.",
-      "Compliance & Risk Mitigation: Ensures adherence to industry regulations and standards.",
-      "Scalable & Customizable Solutions: Tailored to meet your business's unique needs.",
-      "Fast-Track Your Growth: Seamlessly scale without hiring more technicians.",
-      "Superior Service Quality: Achieve operational excellence at a fraction of the cost."
-    ]
-  },
-  "call_to_action": {
-    "title": "Boost Your Network Performance with Sharp Innovations!",
-    "description": "Ensure 24/7 monitoring, enhanced security, and improved network efficiency—get started today!"
-  }
-},
-"NOCServicePackage": {
-  "title": "NOC Service Package – Sharp Innovations",
-  "headers": ["Sr. No.", "Service Details", "Essentials", "Advance"],
-  "sections": [
-    {
-      "title": "Network Monitoring Service",
-      "services": [
-        { "sr": "1", "detail": "Hardware Health Monitoring", "essentials": "true", "advance": "true" },
-        { "sr": "2", "detail": "Device Performance Monitoring", "essentials": "true", "advance": "true" },
-        { "sr": "3", "detail": "Hardware Availability Monitoring", "essentials": "true", "advance": "true" },
-        { "sr": "4", "detail": "Network Traffic Analysis", "essentials": "true", "advance": "true" },
-        { "sr": "5", "detail": "Capacity Monitoring", "essentials": "true", "advance": "true" },
-        { "sr": "6", "detail": "WAN and VoIP Monitoring", "essentials": "true", "advance": "true" },
-        { "sr": "7", "detail": "24x7 Monitoring", "essentials": "true", "advance": "true" },
-        { "sr": "8", "detail": "Monitoring Dashboards and Reports", "essentials": "true", "advance": "true" }
-      ]
-    },
-    {
-      "title": "Network Management Service",
-      "services": [
-        { "sr": "9", "detail": "SLA Management", "essentials": "false", "advance": "true" },
-        { "sr": "10", "detail": "Configuration Management", "essentials": "false", "advance": "true" },
-        { "sr": "11", "detail": "Incident, Problem and Change Management", "essentials": "false", "advance": "true" },
-        { "sr": "12", "detail": "Device Administration", "essentials": "false", "advance": "true" },
-        { "sr": "13", "detail": "Change Management", "essentials": "false", "advance": "true" },
-        { "sr": "14", "detail": "Capacity Management", "essentials": "false", "advance": "true" },
-        { "sr": "15", "detail": "Provisioning Support", "essentials": "false", "advance": "true" }
-      ]
-    }
-  ]
-},
-"network_infrastructure_services": {
+  "network_infrastructure_services": {
     "title": "Network Infrastructure Implementation Services",
     "subtitle": "Future-Proof Your Business with Scalable and Secure Network Solutions",
     "description": "At Sharp Innovations, we specialize in designing and implementing robust network infrastructures that power business growth. Our Network Infrastructure Implementation Services ensure high-performance, secure, and scalable connectivity for organizations of all sizes. Whether you're building a new network from scratch or upgrading an existing one, our expert engineers will deliver a tailored solution that meets your business needs.",
@@ -3038,97 +3235,6 @@
     "cta": "Ready to transform your business with a high-performance web application?",
     "contact": "Contact Sharp Innovations today!"
   },
-
-
-
-  "mobile_app_development": {
-    "title": "Mobile Application Development Services",
-    "subtitle": "Transforming Ideas into Cutting-Edge Mobile Experiences",
-    "description": "At Sharp Innovations, we specialize in custom mobile application development for Android and iOS platforms. Our expertise ensures that your mobile app is built with precision, scalability, and security, delivering an intuitive and engaging user experience. Whether you're a startup, SME, or enterprise, our mobile solutions empower your business to stay ahead in the digital landscape.",
-    "services": [
-      {
-        "title": "Custom Mobile App Development",
-        "description": [
-          "We design and develop tailored mobile applications that align with your business objectives.",
-          "Our development approach focuses on usability, performance, and security to ensure a seamless user experience across different devices."
-        ]
-      },
-      {
-        "title": "Cross-Platform App Development",
-        "description": [
-          "Using technologies like React Native, Flutter, and Xamarin, we build applications that run smoothly on both Android and iOS platforms.",
-          "Reduces development time and cost without compromising quality."
-        ]
-      },
-      {
-        "title": "Native App Development",
-        "description": [
-          "For businesses requiring high-performance applications, we offer native development using:",
-          "Swift & Objective-C for iOS development",
-          "Kotlin & Java for Android development"
-        ]
-      },
-      {
-        "title": "UI/UX Design",
-        "description": [
-          "User experience is at the heart of mobile success.",
-          "Our design experts craft intuitive interfaces and smooth interactions, ensuring that users have a frictionless and engaging experience."
-        ]
-      },
-      {
-        "title": "API Integration & Backend Development",
-        "description": [
-          "We develop robust backend systems and APIs to support mobile applications.",
-          "Ensuring seamless data synchronization, security, and functionality."
-        ]
-      },
-      {
-        "title": "Mobile App Security & Compliance",
-        "description": [
-          "Security is our top priority.",
-          "Our applications comply with industry standards such as NCA, SAMA, GDPR, HIPAA, and PCI-DSS.",
-          "Implementing data encryption, secure authentication, and vulnerability testing to safeguard your business and users."
-        ]
-      },
-      {
-        "title": "App Maintenance & Support",
-        "description": [
-          "We offer continuous support and maintenance to ensure your app remains updated, secure, and compatible with evolving mobile OS versions and hardware advancements."
-        ]
-      },
-      {
-        "title": "App Deployment & Store Optimization",
-        "description": [
-          "We help launch your mobile app successfully on Google Play Store and Apple App Store.",
-          "Ensuring compliance with guidelines and optimizing app visibility for better discoverability."
-        ]
-      }
-    ],
-    "why_choose_us": {
-      "title": "Why Choose Sharp Innovations?",
-      "points": [
-        " Experienced Developers: Skilled in the latest mobile technologies and frameworks.",
-        " Agile Development Process: Ensuring fast delivery and flexibility.",
-        " Scalability & Performance: Apps built to handle growth and high user loads.",
-        " Security-First Approach: Ensuring secure mobile applications.",
-        " Seamless Integration: Connecting apps with existing business systems."
-      ]
-    },
-    "industries": {
-      "title": "Industries We Serve",
-      "list": [
-        "Construction",
-        "Finance & FinTech",
-        "Healthcare & Telemedicine",
-        "E-commerce & Retail",
-        "Education & E-learning",
-        "Travel & Hospitality",
-        "Enterprise & Productivity Solutions"
-      ]
-    },
-    "cta": "Ready to take your business mobile? Sharp Innovations is here to bring your vision to life with feature-rich, high-performance, and secure mobile applications.",
-    "contact": "Contact us today to discuss your project and get started!"
-  },
   "application_consulting": {
     "title": "Application Consulting Services",
     "subtitle": "Drive Digital Excellence with Expert Application Consulting",
@@ -3271,11 +3377,10 @@
     "cta": "Ensure the stability, security, and performance of your applications with Sharp Innovations.",
     "contact": "Contact us today to learn how we can support your business with our Application Maintenance and Operations Services."
   },
-"manpower_outsourcing": {
+  "manpower_outsourcing": {
     "title": "Manpower Outsourcing for Application Services",
     "subtitle": "Flexible, Scalable, and Skilled Resources at Your Service",
     "description": "At Sharp Innovations, we provide comprehensive manpower outsourcing solutions for application development, application consulting, and application support services. Our flexible engagement models—offshore, onshore, dedicated resource model, and shared resource model—ensure that businesses receive tailored solutions that align with their operational needs, budget, and strategic goals.",
-    
     "engagement_models": {
       "title": "Engagement Models provided by Sharp Innovations:",
       "models": [
@@ -3285,7 +3390,6 @@
         "• Shared Resource Model: Cost-efficient model with shared resources across multiple projects."
       ]
     },
-
     "application_development": {
       "title": "Application Development Outsourcing",
       "points": [
@@ -3296,7 +3400,6 @@
         "Software modernization and migration"
       ]
     },
-
     "application_consulting": {
       "title": "Application Consulting Outsourcing",
       "points": [
@@ -3307,7 +3410,6 @@
         "Security and compliance consulting"
       ]
     },
-
     "application_support": {
       "title": "Application Support Service Outsourcing",
       "points": [
@@ -3318,7 +3420,6 @@
         "SLA-based support and 24/7 monitoring"
       ]
     },
-
     "why_choose_us": {
       "title": "Why Choose Sharp Innovations?",
       "points": [
@@ -3329,7 +3430,6 @@
         "✔ Seamless Integration: Smooth collaboration with existing teams and processes."
       ]
     },
-
     "cta": "Leverage Sharp Innovations' manpower outsourcing services to drive efficiency, enhance productivity, and achieve technology excellence.",
     "contact": "Contact us today to discuss your requirements and find the right outsourcing model for your business!"
   },
@@ -3542,158 +3642,158 @@
     ]
   },
   "oracle_automation": {
-  "title": "Oracle Process Automation Service",
-  "subtitle": "Overview",
-  "description": "Sharp Innovations offers Oracle Process Automation (OPA) services to streamline business operations, enhance efficiency, and drive digital transformation. Our expert solutions leverage Oracle's cutting-edge automation tools to eliminate bottlenecks, reduce manual intervention, and ensure compliance with industry standards.",
-  "features": [
-    "Intelligent Workflow Automation: Automate complex workflows and integrate seamlessly with enterprise applications.",
-    "AI-Driven Process Optimization: Utilize AI and machine learning to analyze, optimize, and improve business processes.",
-    "Low-Code Development: Enable business users to design, build, and deploy automated processes with minimal coding.",
-    "Seamless Integration: Connect with existing ERP, CRM, and third-party applications for a unified automation experience.",
-    "Scalability & Flexibility: Adapt automation solutions to evolving business needs without disrupting operations.",
-    "Security & Compliance: Ensure robust security measures and compliance with regulatory requirements."
-  ],
-  "approach_title": "Our Approach",
-  "approach": [
-    "Assessment & Strategy: Understanding your business needs and identifying automation opportunities.",
-    "Design & Implementation: Developing customized workflows and automating processes using Oracle's advanced tools.",
-    "Integration & Deployment: Seamless integration with existing systems and deployment of automation solutions.",
-    "Monitoring & Optimization: Continuous monitoring, reporting, and improvement of automated workflows."
-  ],
-  "benefits_title": "Benefits of Oracle Process Automation",
-  "benefits": [
-    "Increased Productivity: Reduce manual effort and improve operational efficiency.",
-    "Cost Savings: Minimize operational costs through automated workflows and resource optimization.",
-    "Enhanced Decision-Making: Leverage real-time analytics and AI insights for data-driven decisions.",
-    "Improved Compliance: Automate regulatory processes to meet industry standards.",
-    "Better Customer Experience: Streamline customer interactions and enhance service delivery."
-  ],
-  "why_choose_us_title": "Why Choose Sharp Innovations?",
-  "why_choose_us": [
-    "Proven Expertise: Our team comprises Oracle-certified professionals with deep expertise in process automation.",
-    "Customized Solutions: Tailored automation strategies to meet unique business requirements.",
-    "End-to-End Support: Comprehensive services from consultation to implementation and ongoing maintenance.",
-    "Innovation-Driven Approach: Leveraging AI, analytics, and the latest technologies to drive transformation."
-  ],
-  "cta": "Get Started",
-  "contact": "Transform your business processes with Sharp Innovations' Oracle Process Automation services. Contact us today to explore how automation can drive efficiency, agility, and innovation in your organization."
-},
-"oracle_visual_builder": {
-  "title": "Oracle Visual Builder Services",
-  "subtitle": "Empowering Businesses with Low-Code Development",
-  "description": "Sharp Innovations provides cutting-edge Oracle Visual Builder services to help businesses rapidly develop, integrate, and deploy web and mobile applications. As a cloud-native, low-code development platform, Oracle Visual Builder empowers organizations to streamline their application development processes with minimal coding effort while ensuring enterprise-grade security and scalability.",
-  "services": [
-    {
-      "title": "Custom Application Development",
-      "description": [
-        "Design and develop custom web and mobile applications using Oracle Visual Builder."
-      ]
-    },
-    {
-      "title": "Integration Services",
-      "description": [
-        "Seamless integration with Oracle Cloud, on-premises apps, and third-party services."
-      ]
-    },
-    {
-      "title": "Migration & Modernization",
-      "description": [
-        "Modernize legacy apps into scalable cloud-native solutions."
-      ]
-    },
-    {
-      "title": "UI/UX Enhancements",
-      "description": [
-        "Create intuitive and responsive designs for all devices."
-      ]
-    },
-    {
-      "title": "Training & Support",
-      "description": [
-        "Comprehensive training and ongoing support to maximize value."
-      ]
-    }
-  ],
-  "why_choose_us": {
-    "title": "Why Choose Sharp Innovations?",
-    "points": [
-      "Expertise in Oracle Technologies: Extensive experience in Oracle Cloud solutions.",
-      "Agile Development Approach: Efficient and flexible agile methodology.",
-      "Security & Compliance: Adherence to cybersecurity and governance standards.",
-      "End-to-End Support: From consultation to post-deployment services."
-    ]
+    "title": "Oracle Process Automation Service",
+    "subtitle": "Overview",
+    "description": "Sharp Innovations offers Oracle Process Automation (OPA) services to streamline business operations, enhance efficiency, and drive digital transformation. Our expert solutions leverage Oracle's cutting-edge automation tools to eliminate bottlenecks, reduce manual intervention, and ensure compliance with industry standards.",
+    "features": [
+      "Intelligent Workflow Automation: Automate complex workflows and integrate seamlessly with enterprise applications.",
+      "AI-Driven Process Optimization: Utilize AI and machine learning to analyze, optimize, and improve business processes.",
+      "Low-Code Development: Enable business users to design, build, and deploy automated processes with minimal coding.",
+      "Seamless Integration: Connect with existing ERP, CRM, and third-party applications for a unified automation experience.",
+      "Scalability & Flexibility: Adapt automation solutions to evolving business needs without disrupting operations.",
+      "Security & Compliance: Ensure robust security measures and compliance with regulatory requirements."
+    ],
+    "approach_title": "Our Approach",
+    "approach": [
+      "Assessment & Strategy: Understanding your business needs and identifying automation opportunities.",
+      "Design & Implementation: Developing customized workflows and automating processes using Oracle's advanced tools.",
+      "Integration & Deployment: Seamless integration with existing systems and deployment of automation solutions.",
+      "Monitoring & Optimization: Continuous monitoring, reporting, and improvement of automated workflows."
+    ],
+    "benefits_title": "Benefits of Oracle Process Automation",
+    "benefits": [
+      "Increased Productivity: Reduce manual effort and improve operational efficiency.",
+      "Cost Savings: Minimize operational costs through automated workflows and resource optimization.",
+      "Enhanced Decision-Making: Leverage real-time analytics and AI insights for data-driven decisions.",
+      "Improved Compliance: Automate regulatory processes to meet industry standards.",
+      "Better Customer Experience: Streamline customer interactions and enhance service delivery."
+    ],
+    "why_choose_us_title": "Why Choose Sharp Innovations?",
+    "why_choose_us": [
+      "Proven Expertise: Our team comprises Oracle-certified professionals with deep expertise in process automation.",
+      "Customized Solutions: Tailored automation strategies to meet unique business requirements.",
+      "End-to-End Support: Comprehensive services from consultation to implementation and ongoing maintenance.",
+      "Innovation-Driven Approach: Leveraging AI, analytics, and the latest technologies to drive transformation."
+    ],
+    "cta": "Get Started",
+    "contact": "Transform your business processes with Sharp Innovations' Oracle Process Automation services. Contact us today to explore how automation can drive efficiency, agility, and innovation in your organization."
   },
-  "cta": "Transform your business applications with Sharp Innovations' Oracle Visual Builder services.",
-  "contact": "Contact us today to accelerate your digital transformation journey."
-},
-"it_infrastructure": {
-  "title": "IT Infrastructure Maintenance and Operation Services",
-  "subtitle": "Ensure Optimal Performance, Security, and Reliability",
-  "description": "In today's digital landscape, maintaining a robust, secure, and high-performing IT infrastructure is crucial for business continuity and efficiency. Sharp Innovations offers comprehensive IT Infrastructure Maintenance and Operation Services designed to ensure optimal performance, security, and scalability of your IT environment.",
-  "services": [
-    {
-      "title": "Proactive Monitoring & Management",
-      "description": [
-        "24/7 infrastructure monitoring to detect and prevent potential issues",
-        "Real-time performance tracking and analytics",
-        "Automated alerts and issue resolution to minimize downtime"
+  "oracle_visual_builder": {
+    "title": "Oracle Visual Builder Services",
+    "subtitle": "Empowering Businesses with Low-Code Development",
+    "description": "Sharp Innovations provides cutting-edge Oracle Visual Builder services to help businesses rapidly develop, integrate, and deploy web and mobile applications. As a cloud-native, low-code development platform, Oracle Visual Builder empowers organizations to streamline their application development processes with minimal coding effort while ensuring enterprise-grade security and scalability.",
+    "services": [
+      {
+        "title": "Custom Application Development",
+        "description": [
+          "Design and develop custom web and mobile applications using Oracle Visual Builder."
+        ]
+      },
+      {
+        "title": "Integration Services",
+        "description": [
+          "Seamless integration with Oracle Cloud, on-premises apps, and third-party services."
+        ]
+      },
+      {
+        "title": "Migration & Modernization",
+        "description": [
+          "Modernize legacy apps into scalable cloud-native solutions."
+        ]
+      },
+      {
+        "title": "UI/UX Enhancements",
+        "description": [
+          "Create intuitive and responsive designs for all devices."
+        ]
+      },
+      {
+        "title": "Training & Support",
+        "description": [
+          "Comprehensive training and ongoing support to maximize value."
+        ]
+      }
+    ],
+    "why_choose_us": {
+      "title": "Why Choose Sharp Innovations?",
+      "points": [
+        "Expertise in Oracle Technologies: Extensive experience in Oracle Cloud solutions.",
+        "Agile Development Approach: Efficient and flexible agile methodology.",
+        "Security & Compliance: Adherence to cybersecurity and governance standards.",
+        "End-to-End Support: From consultation to post-deployment services."
       ]
     },
-    {
-      "title": "Network Management",
-      "description": [
-        "Configuration, optimization, and management of LAN, WAN, VPN, and wireless networks",
-        "Bandwidth management and network traffic optimization",
-        "Regular network audits and compliance assessments"
-      ]
-    },
-    {
-      "title": "Server & Storage Management",
-      "description": [
-        "Routine maintenance, patch management, and software updates",
-        "Server performance optimization and capacity planning",
-        "Data backup, disaster recovery, and business continuity solutions"
-      ]
-    },
-    {
-      "title": "Cloud & Virtualization Services",
-      "description": [
-        "Cloud infrastructure management (AWS, Azure, Google Cloud)",
-        "Virtual machine deployment and management",
-        "Hybrid cloud integration and optimization"
-      ]
-    },
-    {
-      "title": "Help Desk & Technical Support",
-      "description": [
-        "24/7 IT support services with multi-tier escalation",
-        "Remote and onsite troubleshooting",
-        "End-user training and IT best practices guidance"
-      ]
-    },
-    {
-      "title": "IT Asset & Lifecycle Management",
-      "description": [
-        "Asset tracking and inventory management",
-        "Hardware and software lifecycle management",
-        "Vendor and license management"
-      ]
-    }
-  ],
-  "why_choose_us": {
-    "title": "Why Choose Sharp Innovations?",
-    "points": [
-      "Experienced IT Professionals: Certified experts in infrastructure management.",
-      "Cutting-Edge Technology: Leverage the latest advancements in IT operations.",
-      "Cost-Effective Solutions: Reduce operational costs while maximizing efficiency.",
-      "Security First Approach: Proactive security measures to safeguard your business.",
-      "Scalable & Customizable Services: Tailored solutions that grow with your business needs."
-    ]
+    "cta": "Transform your business applications with Sharp Innovations' Oracle Visual Builder services.",
+    "contact": "Contact us today to accelerate your digital transformation journey."
   },
-  "cta": "Get in Touch",
-  "contact": "Contact us today to discuss your IT infrastructure needs and discover how we can enhance the performance, security, and reliability of your business operations."
-},
-"clientsPage": {
+  "it_infrastructure": {
+    "title": "IT Infrastructure Maintenance and Operation Services",
+    "subtitle": "Ensure Optimal Performance, Security, and Reliability",
+    "description": "In today's digital landscape, maintaining a robust, secure, and high-performing IT infrastructure is crucial for business continuity and efficiency. Sharp Innovations offers comprehensive IT Infrastructure Maintenance and Operation Services designed to ensure optimal performance, security, and scalability of your IT environment.",
+    "services": [
+      {
+        "title": "Proactive Monitoring & Management",
+        "description": [
+          "24/7 infrastructure monitoring to detect and prevent potential issues",
+          "Real-time performance tracking and analytics",
+          "Automated alerts and issue resolution to minimize downtime"
+        ]
+      },
+      {
+        "title": "Network Management",
+        "description": [
+          "Configuration, optimization, and management of LAN, WAN, VPN, and wireless networks",
+          "Bandwidth management and network traffic optimization",
+          "Regular network audits and compliance assessments"
+        ]
+      },
+      {
+        "title": "Server & Storage Management",
+        "description": [
+          "Routine maintenance, patch management, and software updates",
+          "Server performance optimization and capacity planning",
+          "Data backup, disaster recovery, and business continuity solutions"
+        ]
+      },
+      {
+        "title": "Cloud & Virtualization Services",
+        "description": [
+          "Cloud infrastructure management (AWS, Azure, Google Cloud)",
+          "Virtual machine deployment and management",
+          "Hybrid cloud integration and optimization"
+        ]
+      },
+      {
+        "title": "Help Desk & Technical Support",
+        "description": [
+          "24/7 IT support services with multi-tier escalation",
+          "Remote and onsite troubleshooting",
+          "End-user training and IT best practices guidance"
+        ]
+      },
+      {
+        "title": "IT Asset & Lifecycle Management",
+        "description": [
+          "Asset tracking and inventory management",
+          "Hardware and software lifecycle management",
+          "Vendor and license management"
+        ]
+      }
+    ],
+    "why_choose_us": {
+      "title": "Why Choose Sharp Innovations?",
+      "points": [
+        "Experienced IT Professionals: Certified experts in infrastructure management.",
+        "Cutting-Edge Technology: Leverage the latest advancements in IT operations.",
+        "Cost-Effective Solutions: Reduce operational costs while maximizing efficiency.",
+        "Security First Approach: Proactive security measures to safeguard your business.",
+        "Scalable & Customizable Services: Tailored solutions that grow with your business needs."
+      ]
+    },
+    "cta": "Get in Touch",
+    "contact": "Contact us today to discuss your IT infrastructure needs and discover how we can enhance the performance, security, and reliability of your business operations."
+  },
+  "clientsPage": {
     "clients": {
       "title": "Our Valued Clients",
       "description": "We're proud to partner with industry leaders across multiple sectors"
@@ -3714,7 +3814,6 @@
     "title": "Privacy Notice",
     "introduction": "Sharp Innovations respects your privacy and it is our objective to provide excellent service to all our customers. This privacy notice is formulated in accordance with the Personal Data Protection Law and Regulations in the Kingdom of Saudi Arabia to help you understand the nature of data we collect from you and how this data will be treated by Sharp Innovations.",
     "scope": "This privacy notice applies to all sectors and business units in the Company. All Company staff, contractors, and vendors working either on a permanent or temporary basis are obliged to follow the outlined standards.",
-    
     "whyWeCollect": {
       "title": "Why We Collect and Use Your Personal Data",
       "description": "To provide you the highest standard of service and products, we collect and use your personal data.",
@@ -3738,7 +3837,6 @@
         ]
       }
     },
-
     "cookies": {
       "title": "Cookies Usage",
       "description": "Sharp Innovations uses cookies and similar technologies to improve your experience on our website. This includes:",
@@ -3748,7 +3846,6 @@
         "Understanding how you use our website and mobile apps."
       ]
     },
-
     "personalData": {
       "title": "What Personal Data We Collect and Use",
       "description": "The main types of personal data we collect from you and use include:",
@@ -3758,7 +3855,6 @@
         "Data exchanged during communications with you (such as customer support requests and feedback from you)."
       ]
     },
-
     "dataCollection": {
       "title": "How We Collect Your Personal Data",
       "methods": [
@@ -3769,18 +3865,15 @@
         "Web Surveys – Our online web surveys enable us to gather specific data regarding issues such as your feedback."
       ]
     },
-
     "dataRetention": {
       "title": "How Long We Store Your Personal Data",
       "description": "Your personal data is retained only for the duration necessary to fulfil its intended purposes and meet legal, regulatory, accounting, or reporting obligations. Sharp Innovations ensure data deletion after this necessary duration."
     },
-
     "dataProtection": {
       "title": "Data Protection and Disclosure",
       "description": "We take the protection of your data very seriously and will employ appropriate organizational and technical data protection and security measures and procedures.",
       "sharing": "Sharp Innovations does not rent, sell, exchange, or transfer your personal data to third parties outside of Sharp Innovations."
     },
-
     "customerRights": {
       "title": "Your Customer Rights",
       "rights": [
@@ -3790,20 +3883,18 @@
         "Right To Withdraw Consent: Customer has the right to revoke his consent, or stop receiving promotional messages through contacting Sharp Innovations support."
       ]
     },
-
     "changes": {
       "title": "Changes to this privacy notice",
       "description": "To ensure that we continue to offer the best possible experience and the highest level of protection to you, we reserve the right to update the Privacy notice as and when necessary and appropriate.",
       "lastUpdated": "Monday 14 September 2024"
     },
-
     "contact": {
       "title": "Contact us with your questions and comments",
       "description": "In case of any questions, comments, or complaints you can reach us via email or call customer service center.",
       "authority": "The competent supervisory authority for Sharp Innovations activities is the Communications, Space and Technology Commission (CST)"
     }
   },
-    "cookieConsent": {
+  "cookieConsent": {
     "title": "This website uses cookies to ensure you get the best experience on our website",
     "description": "Sharp Innovations uses cookies and similar technologies to ensure you get the best experience on this website. If you consent to it, we will use cookies for analytics purposes",
     "accept": "Accept All Cookies",
@@ -3811,9 +3902,8 @@
   },
   "visitorCounter": {
     "text": "visitors today"
-  }
-,
-"SEO": {
+  },
+  "SEO": {
     "DEFAULT_TITLE": "Sharp Innovations - Leading IT Solutions & Services Provider in KSA",
     "DEFAULT_DESCRIPTION": "Sharp Innovations delivers cutting-edge IT solutions, cybersecurity services, web & mobile app development, and managed IT services for businesses across Saudi Arabia and worldwide.",
     "DEFAULT_KEYWORDS": "IT solutions Saudi Arabia, cybersecurity KSA, web development Riyadh, mobile app development, managed IT services, Sharp Innovations",
@@ -3836,46 +3926,46 @@
       "DESCRIPTION": "Comprehensive IT services including cybersecurity, web development, mobile apps, cloud solutions, and managed IT services tailored for businesses in KSA.",
       "KEYWORDS": "IT services Saudi Arabia, managed services Riyadh, technology solutions KSA, cybersecurity services",
       "SCHEMA_TYPE": "Service",
-        "AI_CONSULTING": {
-            "TITLE": "AI Consulting Services | Sharp Innovations",
-            "DESCRIPTION": "Expert AI consulting services to help businesses leverage artificial intelligence for growth and innovation. Get strategic guidance from our experienced consultants.",
-            "KEYWORDS": "AI consulting, artificial intelligence consulting, AI strategy, AI implementation, business AI, Sharp Innovations"
-        },
-        "AI_ML_SERVICES": {
-            "TITLE": "AI & Machine Learning Services | Sharp Innovations",
-            "DESCRIPTION": "Advanced AI and Machine Learning solutions for businesses. From predictive analytics to deep learning, we help you harness the power of AI.",
-            "KEYWORDS": "AI services, machine learning, deep learning, predictive analytics, AI solutions, Sharp Innovations"
-        },
-        "APPLICATION_SECURITY": {
-            "TITLE": "Application Security Services | Sharp Innovations",
-            "DESCRIPTION": "Comprehensive application security services to protect your software from threats. Expert security testing and implementation.",
-            "KEYWORDS": "application security, app security testing, secure development, vulnerability assessment, Sharp Innovations"
-        },
-        "CLOUD_DEVELOPMENT": {
-            "TITLE": "Cloud Development Services | Sharp Innovations",
-            "DESCRIPTION": "Expert cloud development and migration services. Build scalable, secure cloud applications with our experienced team.",
-            "KEYWORDS": "cloud development, cloud migration, cloud applications, AWS, Azure, GCP, Sharp Innovations"
-        },
-        "CYBERSECURITY_SERVICES": {
-            "TITLE": "Cybersecurity Services | Sharp Innovations",
-            "DESCRIPTION": "Comprehensive cybersecurity solutions to protect your business. Expert threat detection, prevention, and response services.",
-            "KEYWORDS": "cybersecurity, information security, cyber protection, security services, Sharp Innovations"
-        },
-        "DIGITAL_MARKETING": {
-            "TITLE": "Digital Marketing Services | Sharp Innovations",
-            "DESCRIPTION": "Results-driven digital marketing services to grow your online presence. SEO, social media, content marketing, and more.",
-            "KEYWORDS": "digital marketing, SEO, social media marketing, content marketing, online advertising, Sharp Innovations"
-        },
-        "MOBILE_APP_DEVELOPMENT": {
-            "TITLE": "Mobile App Development | Sharp Innovations",
-            "DESCRIPTION": "Custom mobile app development for iOS and Android. Create powerful, user-friendly mobile applications for your business.",
-            "KEYWORDS": "mobile app development, iOS development, Android development, app design, Sharp Innovations"
-        },
-        "WEB_APP_DEVELOPMENT": {
-            "TITLE": "Web Application Development | Sharp Innovations",
-            "DESCRIPTION": "Professional web application development services. Build scalable, modern web applications with our expert team.",
-            "KEYWORDS": "web development, web applications, custom web apps, frontend development, backend development, Sharp Innovations"
-        }
+      "AI_CONSULTING": {
+        "TITLE": "AI Consulting Services | Sharp Innovations",
+        "DESCRIPTION": "Expert AI consulting services to help businesses leverage artificial intelligence for growth and innovation. Get strategic guidance from our experienced consultants.",
+        "KEYWORDS": "AI consulting, artificial intelligence consulting, AI strategy, AI implementation, business AI, Sharp Innovations"
+      },
+      "AI_ML_SERVICES": {
+        "TITLE": "AI & Machine Learning Services | Sharp Innovations",
+        "DESCRIPTION": "Advanced AI and Machine Learning solutions for businesses. From predictive analytics to deep learning, we help you harness the power of AI.",
+        "KEYWORDS": "AI services, machine learning, deep learning, predictive analytics, AI solutions, Sharp Innovations"
+      },
+      "APPLICATION_SECURITY": {
+        "TITLE": "Application Security Services | Sharp Innovations",
+        "DESCRIPTION": "Comprehensive application security services to protect your software from threats. Expert security testing and implementation.",
+        "KEYWORDS": "application security, app security testing, secure development, vulnerability assessment, Sharp Innovations"
+      },
+      "CLOUD_DEVELOPMENT": {
+        "TITLE": "Cloud Development Services | Sharp Innovations",
+        "DESCRIPTION": "Expert cloud development and migration services. Build scalable, secure cloud applications with our experienced team.",
+        "KEYWORDS": "cloud development, cloud migration, cloud applications, AWS, Azure, GCP, Sharp Innovations"
+      },
+      "CYBERSECURITY_SERVICES": {
+        "TITLE": "Cybersecurity Services | Sharp Innovations",
+        "DESCRIPTION": "Comprehensive cybersecurity solutions to protect your business. Expert threat detection, prevention, and response services.",
+        "KEYWORDS": "cybersecurity, information security, cyber protection, security services, Sharp Innovations"
+      },
+      "DIGITAL_MARKETING": {
+        "TITLE": "Digital Marketing Services | Sharp Innovations",
+        "DESCRIPTION": "Results-driven digital marketing services to grow your online presence. SEO, social media, content marketing, and more.",
+        "KEYWORDS": "digital marketing, SEO, social media marketing, content marketing, online advertising, Sharp Innovations"
+      },
+      "MOBILE_APP_DEVELOPMENT": {
+        "TITLE": "Mobile App Development | Sharp Innovations",
+        "DESCRIPTION": "Custom mobile app development for iOS and Android. Create powerful, user-friendly mobile applications for your business.",
+        "KEYWORDS": "mobile app development, iOS development, Android development, app design, Sharp Innovations"
+      },
+      "WEB_APP_DEVELOPMENT": {
+        "TITLE": "Web Application Development | Sharp Innovations",
+        "DESCRIPTION": "Professional web application development services. Build scalable, modern web applications with our expert team.",
+        "KEYWORDS": "web development, web applications, custom web apps, frontend development, backend development, Sharp Innovations"
+      }
     },
     "ABOUT": {
       "TITLE": "About Sharp Innovations - Leading IT Company in Saudi Arabia",
@@ -3930,18 +4020,9 @@
       "KEYWORDS": "IT company reviews, technology testimonials, Sharp Innovations feedback, client success stories",
       "SCHEMA_TYPE": "ReviewNewsArticle"
     }
-   
+  },
+  "BLOG_LISTING": {
+    "TITLE": "Our Insights & News",
+    "SUBTITLE": "Stay updated with the latest in technology, design, and cybersecurity."
   }
-
-  }
-  
-
-
-
-  
-  
-  
-
-
-    
-
+}

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, UrlSegment } from '@angular/router';
 import { WebAppDevelopmentComponent } from './web-app-development/web-app-development.component';
 import { MobileAppDevelopmentComponent } from './mobile-app-development/mobile-app-development.component';
 import { CloudDevelopmentComponent } from './cloud-development/cloud-development.component';
@@ -37,158 +37,216 @@ import { OracleAutomationComponent } from './oracle-automation/oracle-automation
 import { OracleVisualBuilderComponent } from './oracle-visual-builder/oracle-visual-builder.component';
 import { ItInfrastructureComponent } from './it-infrastructure/it-infrastructure.component';
 import { MyServicesLayoutComponent } from './components/my-services-layout/my-services-layout.component';
+import { ProductsListingComponent } from './components/products-listing/products-listing.component';
+import { UserProductDetailComponent } from './components/user-product-detail/user-product-detail.component';
+
+const hardcodedServicePaths = [
+  "web-app-development",
+  "mobile-app-development",
+  "cloud-development",
+  "chatbot-development",
+  "digital-marketing-services",
+  "ui-development",
+  "mssp",
+  "data-security-services",
+  "cybersecurity-consulting",
+  "cybersecurity-grc-services",
+  "application-security",
+  "network-security",
+  "cybersecurity-implementation",
+  "cyber-security-awareness",
+  "cyber-security-training",
+  "cyber-security-manpower-outsourcing",
+  "network-infrastructure-services",
+  "network-consulting-services",
+  "noc",
+  "network-infrastructure-maintenance",
+  "ai-product-development",
+  "ai-ml-services",
+  "nlp-services",
+  "computer-vision",
+  "automation-services",
+  "cybersecurity-services",
+  "ai-consulting",
+  "application-consulting",
+  "application-maintenance",
+  "manpower-outsourcing",
+  "it-server-admin",
+  "it-database-administration",
+  "pmo-services",
+  "oracle-automation",
+  "oracle-visual-builder",
+  "it-infrastructure"
+];
+
+export function customServicesLayoutMatcher(segments: UrlSegment[]) {
+  if (segments.length === 1 && hardcodedServicePaths.includes(segments[0].path)) {
+    // Return empty consumed segments so the child routes can consume the exact path
+    return { consumed: [] };
+  }
+  return null;
+}
 
 const routes: Routes = [
   {
-   path: "",
-      component: MyServicesLayoutComponent,
-      children: [
-        {
-          path:"web-app-development",
-          component:WebAppDevelopmentComponent
-        },
-        {
-          path:"mobile-app-development",
-          component:MobileAppDevelopmentComponent
-        },
-        {
-          path:"cloud-development",
-          component:CloudDevelopmentComponent
-        },
-        {
-          path:"chatbot-development",
-          component:ChatbotDevelopmentComponent
-        },
-        {
-          path:"digital-marketing-services",
-          component:DigitalMarketingComponent
-        },
-        {
-          path:"ui-development",
-          component:UiDevelopmentComponent
-        },
-        {
-          path:"mssp",
-          component:MSSPComponent
-        },
-        {
-          path:"data-security-services",
-          component:DataSecurityServicesComponent
-        },
-        {
-          path:"cybersecurity-consulting",
-          component:CybersecurityConsultingComponent
-        },
-        {
-          path:"cybersecurity-grc-services.component",
-          component:CybersecurityGRCServicesComponent
-        },
-        {
-          path:'application-security',
-          component:ApplicationSecurityComponent
-        },
-        {
-          path:"network-security",
-          component:NetworkSecurityComponent
-        },
-        {
-          path:"cybersecurity-implementation",
-          component:CybersecurityImplementationComponent
-        },
-        {
-          path:"cyber-security-awareness",
-          component:CyberSecurityAwarenessComponent
-        },
-        {
-          path:"cyber-security-training",
-          component:CyberSecurityTrainingComponent
-        },
-        {
-          path:"cyber-security-manpower-outsourcing",
-          component:CyberSecurityManpowerOutsourcingComponent
-        },
-        {
-          path:"network-infrastructure-services",
-          component:NetworkInfrastructureServicesComponent
-        },
-        {
-          path:"network-consulting-services",
-          component:NetworkConsultingServicesComponent
-        },
-        {
-          path:"noc",
-          component:NOCComponent
-        },
-        {
-          path:"network-infrastructure-maintenance",
-          component:NetworkInfrastructureMaintenanceComponent
-        },
-        {
-          path:"ai-product-development",
-          component: AiProductDevelopmentComponent
-        },
-        {
-          path:"ai-ml-services",
-          component: AiMlServicesComponent
-        },
-        {
-          path:"nlp-services",
-          component:NlpServicesComponent
-        },
-        {
-          path:"computer-vision",
-          component: ComputerVisionComponent
-        },
-        {
-          path:"automation-services",
-          component:AutomationServicesComponent
-      
-        },{
-          path:"cybersecurity-services",
-          component:CybersecurityServicesComponent
-        },
-        {
-          path:"ai-consulting",
-          component:AiConsultingComponent
-        },
-        {
-          path:"application-consulting",
-          component:ApplicationConsultingComponent
-        },{
-          path: "application-maintenance",
-          component:ApplicationMaintenanceComponent
-        },
-        {
-          path:"manpower-outsourcing",
-          component:ManpowerOutsourcingComponent
-        },
-        {
-          path:"it-server-admin",
-          component:ItServerAdminComponent
-        },{
-          path:"it-database-administration",
-          component: ItDatabaseAdministrationComponent
-        },
-        {
-          path:"pmo-services",
-          component:PmoServicesComponent
-        },
-        {
-          path:"oracle-automation",
-          component:OracleAutomationComponent
-        },
-        {
-          path:"oracle-visual-builder",
-          component: OracleVisualBuilderComponent
-        },
-        {
-          path:"it-infrastructure",
-          component:ItInfrastructureComponent
-        }
-      ]
-    }
-  
- 
+    path: '',
+    component: ProductsListingComponent,
+    pathMatch: 'full'
+  },
+  {
+    matcher: customServicesLayoutMatcher,
+    component: MyServicesLayoutComponent,
+    children: [
+      {
+        path: "web-app-development",
+        component: WebAppDevelopmentComponent
+      },
+      {
+        path: "mobile-app-development",
+        component: MobileAppDevelopmentComponent
+      },
+      {
+        path: "cloud-development",
+        component: CloudDevelopmentComponent
+      },
+      {
+        path: "chatbot-development",
+        component: ChatbotDevelopmentComponent
+      },
+      {
+        path: "digital-marketing-services",
+        component: DigitalMarketingComponent
+      },
+      {
+        path: "ui-development",
+        component: UiDevelopmentComponent
+      },
+      {
+        path: "mssp",
+        component: MSSPComponent
+      },
+      {
+        path: "data-security-services",
+        component: DataSecurityServicesComponent
+      },
+      {
+        path: "cybersecurity-consulting",
+        component: CybersecurityConsultingComponent
+      },
+      {
+        path: "cybersecurity-grc-services",
+        component: CybersecurityGRCServicesComponent
+      },
+      {
+        path: 'application-security',
+        component: ApplicationSecurityComponent
+      },
+      {
+        path: "network-security",
+        component: NetworkSecurityComponent
+      },
+      {
+        path: "cybersecurity-implementation",
+        component: CybersecurityImplementationComponent
+      },
+      {
+        path: "cyber-security-awareness",
+        component: CyberSecurityAwarenessComponent
+      },
+      {
+        path: "cyber-security-training",
+        component: CyberSecurityTrainingComponent
+      },
+      {
+        path: "cyber-security-manpower-outsourcing",
+        component: CyberSecurityManpowerOutsourcingComponent
+      },
+      {
+        path: "network-infrastructure-services",
+        component: NetworkInfrastructureServicesComponent
+      },
+      {
+        path: "network-consulting-services",
+        component: NetworkConsultingServicesComponent
+      },
+      {
+        path: "noc",
+        component: NOCComponent
+      },
+      {
+        path: "network-infrastructure-maintenance",
+        component: NetworkInfrastructureMaintenanceComponent
+      },
+      {
+        path: "ai-product-development",
+        component: AiProductDevelopmentComponent
+      },
+      {
+        path: "ai-ml-services",
+        component: AiMlServicesComponent
+      },
+      {
+        path: "nlp-services",
+        component: NlpServicesComponent
+      },
+      {
+        path: "computer-vision",
+        component: ComputerVisionComponent
+      },
+      {
+        path: "automation-services",
+        component: AutomationServicesComponent
+      },
+      {
+        path: "cybersecurity-services",
+        component: CybersecurityServicesComponent
+      },
+      {
+        path: "ai-consulting",
+        component: AiConsultingComponent
+      },
+      {
+        path: "application-consulting",
+        component: ApplicationConsultingComponent
+      },
+      {
+        path: "application-maintenance",
+        component: ApplicationMaintenanceComponent
+      },
+      {
+        path: "manpower-outsourcing",
+        component: ManpowerOutsourcingComponent
+      },
+      {
+        path: "it-server-admin",
+        component: ItServerAdminComponent
+      },
+      {
+        path: "it-database-administration",
+        component: ItDatabaseAdministrationComponent
+      },
+      {
+        path: "pmo-services",
+        component: PmoServicesComponent
+      },
+      {
+        path: "oracle-automation",
+        component: OracleAutomationComponent
+      },
+      {
+        path: "oracle-visual-builder",
+        component: OracleVisualBuilderComponent
+      },
+      {
+        path: "it-infrastructure",
+        component: ItInfrastructureComponent
+      }
+    ]
+  },
+  {
+    path: ':slug',
+    component: UserProductDetailComponent
+  }
 ];
 
 @NgModule({

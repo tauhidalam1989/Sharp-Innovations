@@ -1,0 +1,441 @@
+.admin-sidebar {
+  width: 280px;
+  background: white;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 20px 0 40px -15px rgba(2, 0, 36, 0.15);
+  z-index: 1000;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-right: 1px solid rgba(2, 0, 36, 0.05);
+
+  &.collapsed {
+    width: 100px;
+
+    .sidebar-header {
+      padding: 25px 0;
+
+      h3 {
+        display: none;
+      }
+
+      .logo {
+        height: 45px;
+        width: 45px;
+        margin-bottom: 0;
+      }
+    }
+
+    .sidebar-nav {
+      a {
+        padding: 15px 0;
+        justify-content: center;
+
+        i {
+          margin-right: 0;
+          font-size: 22px;
+        }
+
+        span {
+          display: none;
+        }
+      }
+    }
+
+    .user-info {
+      .user-details {
+        display: none;
+      }
+    }
+
+    .logout-btn span {
+      display: none;
+    }
+
+    .logout-btn {
+      width: 45px;
+      height: 45px;
+      padding: 0;
+      border-radius: 15px;
+      margin: 0 auto;
+
+      i {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.sidebar-header {
+  padding: 30px 25px 20px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    right: 25px;
+    height: 2px;
+    background: linear-gradient(288deg, rgba(102, 184, 255, 1) 0%, rgba(70, 252, 213, 1) 100%);
+    border-radius: 2px;
+  }
+
+  .logo {
+    height: 50px;
+    width: auto;
+    margin-bottom: 15px;
+    transition: all 0.4s ease;
+    filter: drop-shadow(0 5px 15px rgba(2, 0, 36, 0.2));
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    background: linear-gradient(288deg, rgba(39, 9, 232, 1) 0%, rgba(10, 247, 247, 0.96) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.2px;
+    white-space: nowrap;
+  }
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 20px 15px;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(2, 0, 36, 0.02);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(2, 0, 36, 0.3) 0%, rgba(9, 9, 121, 0.3) 42%, rgba(0, 212, 255, 0.3) 100%);
+    border-radius: 4px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  li {
+    margin: 0;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: rgba(2, 0, 36, 0.6);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 16px;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(288deg, rgba(39, 9, 232, 1) 0%, rgba(10, 247, 247, 0.96) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: -1;
+    }
+
+    &:hover {
+      color: rgba(2, 0, 36, 0.9);
+      transform: translateX(5px);
+
+      &::before {
+        opacity: 1;
+      }
+
+      i {
+        transform: scale(1.1) rotate(3deg);
+        background: linear-gradient(288deg, rgba(39, 9, 232, 1) 0%, rgba(10, 247, 247, 0.96) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    &.active {
+      background: linear-gradient(288deg, rgba(39, 9, 232, 1) 0%, rgba(10, 247, 247, 0.96) 100%);
+      color: white;
+      box-shadow: 0 10px 20px -5px rgba(2, 0, 36, 0.3);
+
+      i {
+        color: white;
+        -webkit-text-fill-color: white;
+      }
+
+      &:hover {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  i {
+    width: 24px;
+    margin-right: 15px;
+    font-size: 18px;
+    text-align: center;
+    transition: all 0.3s ease;
+    background: linear-gradient(288deg, rgba(39, 9, 232, 1) 0%, rgba(10, 247, 247, 0.96) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.sidebar-footer {
+  padding: 25px;
+  border-top: 1px solid rgba(2, 0, 36, 0.05);
+  background: rgba(2, 0, 36, 0.02);
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(2, 0, 36, 0.05);
+
+    .user-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      object-fit: cover;
+      border: 3px solid transparent;
+      background: linear-gradient(288deg, rgba(39, 9, 232, 1) 0%, rgba(10, 247, 247, 0.96) 100%);
+      padding: 2px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05) rotate(3deg);
+      }
+    }
+
+    .user-details {
+      flex: 1;
+      overflow: hidden;
+
+      .user-name {
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 4px;
+        color: rgba(2, 0, 36, 0.9);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .user-role {
+        font-size: 11px;
+        font-weight: 500;
+        background: black;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  .logout-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(288deg, rgba(39, 9, 232, 1) 0%, rgba(10, 247, 247, 0.96) 100%);
+    border: none;
+    border-radius: 16px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 20px -5px rgba(2, 0, 36, 0.3);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    i {
+      font-size: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px -5px rgba(2, 0, 36, 0.4);
+
+      &::before {
+        opacity: 1;
+      }
+
+      i {
+        transform: rotate(180deg) scale(1.1);
+      }
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 5px 15px -5px rgba(2, 0, 36, 0.3);
+    }
+  }
+}
+
+.sidebar-footer-mini {
+  padding: 20px;
+  border-top: 1px solid rgba(2, 0, 36, 0.05);
+  text-align: center;
+
+  .logout-btn-mini {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 0.05) 0%, rgba(9, 9, 121, 0.05) 42%, rgba(0, 212, 255, 0.05) 100%);
+    border: none;
+    border-radius: 15px;
+    color: rgba(2, 0, 36, 0.6);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(2, 0, 36, 0.05);
+
+    i {
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 42%, rgba(0, 212, 255, 1) 100%);
+      color: white;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 10px 20px -5px rgba(2, 0, 36, 0.3);
+
+      i {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:active {
+      transform: translateY(0) scale(0.95);
+    }
+  }
+}
+
+// Animation for active link indicator
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.sidebar-nav a.active {
+  animation: slideIn 0.3s ease;
+}
+
+// Hover effect for menu items
+.sidebar-nav li {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.2), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .admin-sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+
+    &.collapsed {
+      transform: translateX(0);
+      width: 80px;
+    }
+  }
+
+  .main-content {
+    margin-left: 0 !important;
+  }
+}
+
+// Dark mode support
+@media (prefers-color-scheme: dark) {
+  .admin-sidebar {
+    background: #0a0a1a;
+    border-right-color: rgba(255, 255, 255, 0.05);
+
+    .sidebar-nav a {
+      color: rgba(255, 255, 255, 0.6);
+
+      &:hover {
+        color: white;
+      }
+    }
+
+    .sidebar-footer {
+      background: rgba(255, 255, 255, 0.02);
+      border-top-color: rgba(255, 255, 255, 0.05);
+
+      .user-info .user-details .user-name {
+        color: rgba(255, 255, 255, 0.9);
+      }
+    }
+  }
+}

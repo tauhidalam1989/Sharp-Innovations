@@ -1,0 +1,62 @@
+<section class="services-hero">
+    <div class="moving-dots-bg"></div>
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text" [ngClass]="{'text-end': currentLang === 'ar'}">
+                <h1 class="hero-title">{{ currentLang === 'ar' ? 'خدماتنا' : 'Our Services' }}</h1>
+                <p class="hero-subtitle">{{ currentLang === 'ar' ? 'حلول متكاملة مصممة لتلبية احتياجات عملك.' :
+                    'Comprehensive Solutions Tailored to Your Business Needs.' }}</p>
+            </div>
+            <div class="hero-illustration">
+                <img src="assets/img/service-hero.png" alt="Our Services" onerror="this.style.display='none'">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Cards Grid -->
+<section class="services-grid-section">
+    <div class="moving-dots-bg"></div>
+    <div class="container">
+        <!-- Loading -->
+        <div class="loading-container" *ngIf="loading">
+            <div class="spinner"></div>
+            <p>{{ currentLang === 'ar' ? 'جاري تحميل الخدمات...' : 'Loading services...' }}</p>
+        </div>
+
+        <!-- Error -->
+        <div class="error-container" *ngIf="error && !loading">
+            <i class="fas fa-exclamation-circle"></i>
+            <p>{{ error }}</p>
+            <button class="btn-retry" (click)="loadServices()">
+                <i class="fas fa-redo"></i> {{ currentLang === 'ar' ? 'إعادة المحاولة' : 'Retry' }}
+            </button>
+        </div>
+
+        <!-- Services Grouped by Category -->
+        <div class="category-group" *ngFor="let category of categories" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+            <h2 class="category-heading" [ngClass]="{'text-end': currentLang === 'ar'}">{{ category }}</h2>
+            <div class="services-grid">
+                <div class="service-card" *ngFor="let service of servicesByCategory[category]"
+                    (click)="navigateToService(service)" [ngClass]="{'text-end': currentLang === 'ar'}">
+                    <div class="card-icon" [ngClass]="{'ms-3 me-0': currentLang === 'ar'}">
+                        <i [class]="service.heroIcon || 'fas fa-cog'"></i>
+                    </div>
+                    <h3 class="card-title">
+                        {{ currentLang === 'ar' && service.heroTitleAr ? service.heroTitleAr : service.heroTitle }}
+                    </h3>
+                    <p class="card-description">
+                        {{ currentLang === 'ar' && service.heroTaglineAr ? service.heroTaglineAr :
+                        (service.heroTagline || ('COMMON.LEARN_MORE' | translate)) }}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-state" *ngIf="!loading && !error && services.length === 0">
+            <i class="fas fa-inbox"></i>
+            <p>{{ currentLang === 'ar' ? 'لا توجد خدمات متاحة حاليًا.' : 'No services available at the moment.' }}</p>
+        </div>
+    </div>
+</section>

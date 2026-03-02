@@ -1,0 +1,240 @@
+<div class="service-detail-wrapper" *ngIf="service && !loading" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'"
+    [class.rtl]="currentLang === 'ar'">
+
+    <!-- 1. HERO SECTION (Light Theme) -->
+    <section class="hero-section clean-hero">
+        <div class="container hero-container">
+            <!-- <nav class="breadcrumb-custom mb-4">
+                <a class="link" href="/">{{ currentLang === 'ar' ? 'الرئيسية' : 'Home' }}</a> /
+                <a class="link" href="/services">{{ currentLang === 'ar' ? 'الخدمات' : 'Services' }}</a> /
+                <span class="active">{{ currentLang === 'ar' ? service.heroTitleAr : service.heroTitle }}</span>
+            </nav> -->
+
+            <div class="hero-content">
+                <div class="hero-title-row">
+                    <div class="hero-dot"></div>
+                    <h1 class="hero-title">{{ currentLang === 'ar' ? service.heroTitleAr : service.heroTitle }}</h1>
+                </div>
+
+                <div class="hero-description" *ngIf="service.heroIntroduction || service.heroIntroductionAr">
+                    {{ currentLang === 'ar' ? service.heroIntroductionAr : service.heroIntroduction }}
+                </div>
+
+                <div class="hero-actions mt-4">
+                    <a [href]="service.primaryCtaLink" class="btn btn-primary-alt"
+                        *ngIf="service.primaryCtaText || service.primaryCtaTextAr">
+                        {{ currentLang === 'ar' ? service.primaryCtaTextAr : (service.primaryCtaText || 'Get Started')
+                        }}
+                    </a>
+                    <a [href]="service.secondaryCtaLink" class="btn btn-secondary-outline"
+                        *ngIf="service.secondaryCtaText || service.secondaryCtaTextAr">
+                        {{ currentLang === 'ar' ? service.secondaryCtaTextAr : (service.secondaryCtaText || 'Learn
+                        More') }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION DIVIDER -->
+    <div class="section-divider"></div>
+
+    <!-- 2. ABOUT THIS SERVICE (Content Left, Image Right) -->
+    <section class="section about-section-clean white-bg"
+        *ngIf="service.aboutSectionTitle || service.aboutSectionTitleAr">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2 class="about-main-title">{{ currentLang === 'ar' ? service.aboutSectionTitleAr :
+                        service.aboutSectionTitle }}</h2>
+                    <div class="about-text-content mb-4">
+                        {{ currentLang === 'ar' ? service.aboutSectionDescriptionAr : service.aboutSectionDescription }}
+                    </div>
+
+                    <!-- Horizontal Pillars / Points (Moved Inside) -->
+                    <div class="about-pillar-row" *ngIf="getAboutPillars().length > 0">
+                        <div class="pillar-circle-item" *ngFor="let pillar of getAboutPillars()">
+                            <div class="circle-icon">
+                                <i *ngIf="pillar.iconType === 'fa'" [class]="pillar.iconFA || 'fas fa-shield-alt'"></i>
+                                <img *ngIf="pillar.iconType === 'file'" [src]="getImageUrl(pillar.iconPath)" alt="Icon">
+                            </div>
+                            <span class="circle-label">{{ currentLang === 'ar' ? pillar.titleAr : pillar.title }}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image-wrapper">
+                    <img [src]="getImageUrl(service.aboutSectionImage)"
+                        [alt]="currentLang === 'ar' ? (service.aboutSectionImageAltAr || service.aboutSectionTitleAr) : (service.aboutSectionImageAlt || service.aboutSectionTitle)"
+                        class="about-img">
+                </div>
+            </div>
+
+
+            <div class="bottom-note mt-4" *ngIf="service.aboutSectionBottomNote || service.aboutSectionBottomNoteAr">
+                {{ currentLang === 'ar' ? service.aboutSectionBottomNoteAr : service.aboutSectionBottomNote }}
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SOLUTIONS / CAPABILITIES GRID -->
+    <section class="section capabilities-section gray-bg" *ngIf="getCapabilities().length > 0">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="section-title center-gradient-text color-black">{{ currentLang === 'ar' ?
+                    service.capabilitiesSectionTitleAr : service.capabilitiesSectionTitle }}</h2>
+            </div>
+            <div class="capabilities-grid">
+                <div class="capability-card" *ngFor="let item of getCapabilities()">
+                    <div class="card-icon">
+                        <i [class]="item.icon || 'fas fa-rocket'"></i>
+                    </div>
+                    <h3 class="card-title">{{ currentLang === 'ar' ? item.titleAr : item.title }}</h3>
+                    <p class="card-desc">{{ currentLang === 'ar' ? item.descriptionAr : item.description }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. INDUSTRIES WE SUPPORT (Refined) -->
+    <section class="section industries-section-refined white-bg"
+        *ngIf="service.industriesSectionTitle || service.industriesSectionTitleAr">
+        <div class="container grid-2-col-custom">
+            <div class="industries-left">
+                <div class="industries-image-wrapper">
+                    <img [src]="getImageUrl(service.industriesImage)"
+                        [alt]="currentLang === 'ar' ? (service.industriesImageAltAr || service.industriesSectionTitleAr) : (service.industriesImageAlt || service.industriesSectionTitle)"
+                        class="premium-shadow rounded-20">
+                    <div class="image-label" *ngIf="service.industriesSectionTitle || service.industriesSectionTitleAr">
+                        {{ currentLang === 'ar' ? service.industriesSectionTitleAr : service.industriesSectionTitle }}
+                    </div>
+                </div>
+            </div>
+            <div class="industries-right">
+                <h2 class="section-title main-gradient-text">{{ currentLang === 'ar' ? service.industriesSectionTitleAr
+                    : service.industriesSectionTitle }}</h2>
+                <div class="section-desc mb-4">
+                    {{ currentLang === 'ar' ? service.industriesSectionDescriptionAr :
+                    service.industriesSectionDescription }}
+                </div>
+
+                <div class="industries-list-refined">
+                    <div class="industry-row-item" *ngFor="let ind of getIndustries()">
+                        <div class="item-icon-circle">
+                            <i *ngIf="ind.iconType === 'fa'" [class]="ind.iconFA || 'fas fa-industry'"></i>
+                            <img *ngIf="ind.iconType === 'file'" [src]="getImageUrl(ind.iconPath)" alt="Icon">
+                        </div>
+                        <div class="item-content-refined">
+                            <span class="pillar-label">{{ currentLang === 'ar' ? ind.titleAr : ind.title }}</span>
+                            <div class="vertical-divider"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-bottom-note mt-4"
+                    *ngIf="service.industriesSectionBottomNote || service.industriesSectionBottomNoteAr">
+                    {{ currentLang === 'ar' ? service.industriesSectionBottomNoteAr :
+                    service.industriesSectionBottomNote
+                    }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CRITICAL IMPACT SECTION (Refined) -->
+    <section class="section critical-section-refined dark-bg"
+        *ngIf="service.criticalSectionTitle || service.criticalSectionTitleAr">
+        <div class="container grid-2-col-custom align-center">
+            <div class="impact-left-content">
+                <h2 class="critical-title text-white mb-4">{{ currentLang === 'ar' ? service.criticalSectionTitleAr :
+                    service.criticalSectionTitle }}</h2>
+                <div class="critical-desc text-white-70 mb-5">
+                    {{ currentLang === 'ar' ? service.criticalSectionDescriptionAr : service.criticalSectionDescription
+                    }}
+                </div>
+                <div class="cta-wrapper"
+                    *ngIf="service.criticalSectionButtonText || service.criticalSectionButtonTextAr">
+                    <a [href]="service.criticalSectionButtonLink" class="btn btn-primary lg">
+                        {{ currentLang === 'ar' ? service.criticalSectionButtonTextAr :
+                        service.criticalSectionButtonText }}
+                    </a>
+                </div>
+            </div>
+            <div class="impact-right-cards">
+                <h3 class="subsection-title mb-4">{{ currentLang === 'ar' ?
+                    service.criticalRightTitleAr : service.criticalRightTitle }}</h3>
+                <div class="critical-grid-refined">
+                    <div class="impact-card-refined" *ngFor="let card of getCriticalCards()">
+                        <div class="card-icon-indicator">
+                            <i *ngIf="card.iconType === 'fa'" [class]="card.iconFA || 'fas fa-shield-alt'"></i>
+                            <img *ngIf="card.iconType === 'file'" [src]="getImageUrl(card.iconPath)" alt="Icon">
+                        </div>
+                        <span class="card-text-label">{{ currentLang === 'ar' ? card.titleAr : card.title }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. WHY CHOOSE US (Redesigned) -->
+    <section class="section why-choose-section-clean gray-bg"
+        *ngIf="service.whyChooseUsSectionTitle || service.whyChooseUsSectionTitleAr">
+        <div class="container text-center">
+            <div class="section-header mb-5">
+                <h2 class="section-title center-gradient-text color-black">{{ currentLang === 'ar' ?
+                    service.whyChooseUsSectionTitleAr : service.whyChooseUsSectionTitle }}</h2>
+                <p class="section-subtitle">{{ currentLang === 'ar' ? service.whyChooseUsDescriptionAr :
+                    service.whyChooseUsDescription }}</p>
+            </div>
+
+            <div class="why-choose-row-clean">
+                <div class="reason-pill" *ngFor="let item of getWhyChooseUs()">
+                    <div class="pill-icon">
+                        <i *ngIf="item.iconType === 'fa'" [class]="item.iconFA || 'fas fa-check'"></i>
+                        <img *ngIf="item.iconType === 'file'" [src]="getImageUrl(item.iconPath)" alt="Icon">
+                        <div *ngIf="!item.iconType" class="pill-dot"></div>
+                    </div>
+                    <span class="pill-title">{{ currentLang === 'ar' ? item.titleAr : item.title }}</span>
+                </div>
+            </div>
+
+            <div class="section-bottom-note mt-5"
+                *ngIf="service.whyChooseUsBottomNote || service.whyChooseUsBottomNoteAr">
+                {{ currentLang === 'ar' ? service.whyChooseUsBottomNoteAr : service.whyChooseUsBottomNote }}
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FAQ SECTION (Redesigned) -->
+    <section class="section faq-section-clean white-bg" *ngIf="getFAQs().length > 0">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-grid-clean">
+                <div class="faq-item-clean" *ngFor="let faq of getFAQs(); let i = index"
+                    [class.active]="activeFaqIndex === i">
+                    <div class="faq-question" (click)="toggleFaq(i)">
+                        <h3>{{ currentLang === 'ar' ? faq.questionAr : faq.question }}</h3>
+                        <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer" [class.show]="activeFaqIndex === i">
+                        <p>{{ currentLang === 'ar' ? faq.answerAr : faq.answer }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Loading & Error States -->
+<div class="loading-state" *ngIf="loading">
+    <div class="spinner"></div>
+</div>
+
+<div class="error-state" *ngIf="error && !loading">
+    <div class="alert alert-danger" (click)="goBack()">
+        <i class="fas fa-exclamation-circle"></i> {{ error }}
+        <p class="mt-2" style="cursor: pointer; text-decoration: underline;">{{ currentLang === 'ar' ? 'العودة للخلف' :
+            'Go Back' }}</p>
+    </div>
+</div>

@@ -1,0 +1,805 @@
+<div class="dashboard-container">
+    <div class="header-section">
+        <div class="title-block">
+            <h1>{{ isEditMode ? 'Edit Service' : 'Create New Service' }}</h1>
+            <p class="subtitle">Manage all sections and content of your service page</p>
+        </div>
+        <div class="action-block">
+            <button class="btn-secondary" (click)="goBack()">
+                <i class="fas fa-times"></i> Cancel
+            </button>
+            <button class="btn-primary" [disabled]="submitting || serviceForm.invalid" (click)="onSubmit()">
+                <i class="fas" [class.fa-save]="!submitting" [class.fa-spinner]="submitting"
+                    [class.fa-spin]="submitting"></i>
+                {{ submitting ? 'Saving...' : (isEditMode ? 'Update Service' : 'Create Service') }}
+            </button>
+        </div>
+    </div>
+
+    <!-- Alert for errors -->
+    <div class="alert alert-danger" *ngIf="error">
+        <i class="fas fa-exclamation-triangle"></i> {{ error }}
+    </div>
+
+    <div class="form-card">
+        <!-- Tabs Navigation -->
+        <div class="form-tabs">
+            <button type="button" class="tab-btn" [class.active]="activeTab === 'basic'"
+                [class.error-tab]="serviceForm.get('slug')?.invalid || serviceForm.get('order')?.invalid"
+                (click)="setActiveTab('basic')">General</button>
+            <button type="button" class="tab-btn" [class.active]="activeTab === 'hero'"
+                [class.error-tab]="serviceForm.get('heroTitle')?.invalid" (click)="setActiveTab('hero')">Hero
+                Section</button>
+            <button type="button" class="tab-btn" [class.active]="activeTab === 'about'"
+                [class.error-tab]="aboutPillars.invalid" (click)="setActiveTab('about')">About Section</button>
+            <button type="button" class="tab-btn" [class.active]="activeTab === 'solutions'"
+                [class.error-tab]="capabilities.invalid" (click)="setActiveTab('solutions')">Solutions</button>
+            <button type="button" class="tab-btn" [class.active]="activeTab === 'industries'"
+                [class.error-tab]="industries.invalid" (click)="setActiveTab('industries')">Industries</button>
+            <button type="button" class="tab-btn" [class.active]="activeTab === 'critical'"
+                [class.error-tab]="criticalCards.invalid" (click)="setActiveTab('critical')">Critical Why</button>
+            <button type="button" class="tab-btn" [class.active]="activeTab === 'why-choose'"
+                [class.error-tab]="whyChooseUs.invalid" (click)="setActiveTab('why-choose')">Why Choose Us</button>
+            <button type="button" class="tab-btn" [class.active]="activeTab === 'extra'"
+                [class.error-tab]="faqs.invalid || serviceForm.get('metaTitle')?.invalid || serviceForm.get('metaDescription')?.invalid || serviceForm.get('metaKeywords')?.invalid"
+                (click)="setActiveTab('extra')">FAQ & SEO</button>
+        </div>
+
+        <form [formGroup]="serviceForm" class="service-form">
+
+            <!-- 1. GENERAL TAB -->
+            <div class="tab-content" *ngIf="activeTab === 'basic'">
+                <div class="form-section">
+                    <h2 class="section-title">Common Settings</h2>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="form-label required">Slug (URL identifier)</label>
+                            <div class="slug-input-wrapper">
+                                <input type="text" formControlName="slug" class="form-control"
+                                    placeholder="example-service-name">
+                                <button type="button" class="btn-icon" (click)="generateSlug()"
+                                    title="Generate from Title" *ngIf="!isEditMode">
+                                    <i class="fas fa-magic"></i>
+                                </button>
+                            </div>
+                            <small class="form-hint">Only lowercase letters, numbers, and hyphens allowed.</small>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Service Category</label>
+                            <select formControlName="categoryId" class="form-control">
+                                <option [ngValue]="null">None</option>
+                                <option *ngFor="let cat of existingCategories" [ngValue]="cat.id">{{ cat.name }}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Display Order</label>
+                            <input type="number" formControlName="order" class="form-control">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="form-label d-block">Publication Status</label>
+                            <div class="toggle-wrapper">
+                                <label class="switch">
+                                    <input type="checkbox" formControlName="isPublished">
+                                    <span class="slider round"></span>
+                                </label>
+                                <span class="toggle-label">{{ serviceForm.get('isPublished')?.value ? 'Published' :
+                                    'Draft' }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. HERO TAB -->
+            <div class="tab-content" *ngIf="activeTab === 'hero'">
+                <div class="form-section">
+                    <h2 class="section-title">Hero Section (Page Header)</h2>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="form-label required">Page Title (H1)</label>
+                            <input type="text" formControlName="heroTitle" class="form-control"
+                                placeholder="What is this service?">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Page Title (Arabic)</label>
+                            <input type="text" formControlName="heroTitleAr" class="form-control text-right" dir="rtl">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Hero Tagline / Small Intro</label>
+                            <input type="text" formControlName="heroTagline" class="form-control">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Hero Tagline (Arabic)</label>
+                            <input type="text" formControlName="heroTaglineAr" class="form-control text-right"
+                                dir="rtl">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Full Introduction Description</label>
+                            <textarea formControlName="heroIntroduction" class="form-control" rows="3"></textarea>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Full Introduction (Arabic)</label>
+                            <textarea formControlName="heroIntroductionAr" class="form-control text-right" dir="rtl"
+                                rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Hero Image & Icon -->
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <label class="form-label">Hero Header Image</label>
+                            <div class="image-upload-preview" (click)="heroImageFile.click()">
+                                <img *ngIf="heroImagePreview" [src]="heroImagePreview" alt="Hero Image">
+                                <div *ngIf="!heroImagePreview" class="placeholder">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Upload Main Image</span>
+                                </div>
+                                <button type="button" class="remove-btn" *ngIf="heroImagePreview"
+                                    (click)="removeImage('heroImage'); $event.stopPropagation()">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <input type="file" #heroImageFile (change)="onFileSelected($event, 'heroImage')" hidden
+                                accept="image/*">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Hero Icon (Small Overlay)</label>
+                            <div class="image-upload-preview icon-box" (click)="heroIconFile.click()">
+                                <img *ngIf="heroIconPreview" [src]="heroIconPreview" alt="Hero Icon">
+                                <div *ngIf="!heroIconPreview" class="placeholder">
+                                    <i class="fas fa-image"></i>
+                                    <span>Upload Icon</span>
+                                </div>
+                                <button type="button" class="remove-btn" *ngIf="heroIconPreview"
+                                    (click)="removeImage('heroIcon'); $event.stopPropagation()">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <input type="file" #heroIconFile (change)="onFileSelected($event, 'heroIcon')" hidden
+                                accept="image/*">
+                        </div>
+                    </div>
+
+                    <!-- Hero Buttons -->
+                    <h3 class="subsection-title mt-5">Action Buttons</h3>
+                    <div class="row">
+                        <div class="col-md-4 form-group">
+                            <label class="form-label">Primary Button Text</label>
+                            <input type="text" formControlName="primaryCtaText" class="form-control">
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <label class="form-label">Primary Button (Arabic)</label>
+                            <input type="text" formControlName="primaryCtaTextAr" class="form-control text-right"
+                                dir="rtl">
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <label class="form-label">Primary Link URL</label>
+                            <input type="text" formControlName="primaryCtaLink" class="form-control"
+                                placeholder="/contact">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 form-group">
+                            <label class="form-label">Secondary Button Text</label>
+                            <input type="text" formControlName="secondaryCtaText" class="form-control">
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <label class="form-label">Secondary Button (Arabic)</label>
+                            <input type="text" formControlName="secondaryCtaTextAr" class="form-control text-right"
+                                dir="rtl">
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <label class="form-label">Secondary Link URL</label>
+                            <input type="text" formControlName="secondaryCtaLink" class="form-control"
+                                placeholder="/services">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. ABOUT TAB -->
+            <div class="tab-content" *ngIf="activeTab === 'about'">
+                <div class="form-section">
+                    <h2 class="section-title">About This Service Section</h2>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Custom Section Title</label>
+                            <input type="text" formControlName="aboutSectionTitle" class="form-control"
+                                placeholder="About Our Service">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Section Title (Arabic)</label>
+                            <input type="text" formControlName="aboutSectionTitleAr" class="form-control text-right"
+                                dir="rtl">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Short Description (Left Content)</label>
+                            <textarea formControlName="aboutSectionDescription" class="form-control"
+                                rows="4"></textarea>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Short Description (Arabic)</label>
+                            <textarea formControlName="aboutSectionDescriptionAr" class="form-control text-right"
+                                dir="rtl" rows="4"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-md-8">
+                            <label class="form-label">Section Image (Right Side)</label>
+                            <div class="image-upload-preview large" (click)="aboutImageFile.click()">
+                                <img *ngIf="aboutSectionImagePreview" [src]="aboutSectionImagePreview"
+                                    alt="About Section Image">
+                                <div *ngIf="!aboutSectionImagePreview" class="placeholder">
+                                    <i class="fas fa-file-image"></i>
+                                    <span>Upload Section Image</span>
+                                </div>
+                                <button type="button" class="remove-btn" *ngIf="aboutSectionImagePreview"
+                                    (click)="removeImage('aboutSectionImage'); $event.stopPropagation()">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <input type="file" #aboutImageFile (change)="onFileSelected($event, 'aboutSectionImage')"
+                                hidden accept="image/*">
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="form-label">Image Alt-Tag (SEO)</label>
+                                <input type="text" formControlName="aboutSectionImageAlt" class="form-control"
+                                    placeholder="Alt text in English">
+                                <input type="text" formControlName="aboutSectionImageAltAr"
+                                    class="form-control text-right mt-2" dir="rtl" placeholder="نص بديل بالعربية">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Bottom Note (English)</label>
+                            <textarea formControlName="aboutSectionBottomNote" class="form-control" rows="2"></textarea>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Bottom Note (Arabic)</label>
+                            <textarea formControlName="aboutSectionBottomNoteAr" class="form-control text-right"
+                                dir="rtl" rows="2"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Pillars -->
+                <div class="dynamic-array-section mt-5">
+                    <div class="array-header">
+                        <h3 class="subsection-title">Section Points / Pillars</h3>
+                        <button type="button" class="btn-sm btn-outline" (click)="addAboutPillarItem()">
+                            <i class="fas fa-plus"></i> Add Point
+                        </button>
+                    </div>
+                    <div class="array-items" formArrayName="aboutPillars">
+                        <div class="array-item-card" *ngFor="let item of aboutPillars.controls; let i=index"
+                            [formGroupName]="i">
+                            <div class="item-index">{{ i + 1 }}</div>
+                            <div class="item-body">
+                                <div class="row">
+                                    <div class="col-md-5 form-group mb-0">
+                                        <label class="micro-label">Point Title</label>
+                                        <input type="text" formControlName="title" class="form-control sm">
+                                    </div>
+                                    <div class="col-md-5 form-group mb-0">
+                                        <label class="micro-label">Point Title (Arabic)</label>
+                                        <input type="text" formControlName="titleAr" class="form-control sm text-right"
+                                            dir="rtl">
+                                    </div>
+                                    <div class="col-md-2 form-group mb-0">
+                                        <label class="micro-label">Icon</label>
+                                        <div class="hybrid-icon-selector">
+                                            <select formControlName="iconType" class="form-control sm icon-type-select">
+                                                <option value="fa">FA Icon</option>
+                                                <option value="file">Upload</option>
+                                            </select>
+                                            <input *ngIf="item.get('iconType')?.value === 'fa'" type="text"
+                                                formControlName="iconFA" class="form-control sm"
+                                                placeholder="fas fa-...">
+                                            <div *ngIf="item.get('iconType')?.value === 'file'"
+                                                class="file-icon-placeholder">
+                                                <small>Use image selector</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="item-delete" (click)="removeAboutPillarItem(i)">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. SOLUTIONS TAB -->
+            <div class="tab-content" *ngIf="activeTab === 'solutions'">
+                <div class="form-section">
+                    <h2 class="section-title">Solutions / Capabilities Section</h2>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Section Heading</label>
+                            <input type="text" formControlName="capabilitiesSectionTitle" class="form-control"
+                                placeholder="Our Solutions">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Section Heading (Arabic)</label>
+                            <input type="text" formControlName="capabilitiesSectionTitleAr"
+                                class="form-control text-right" dir="rtl">
+                        </div>
+                    </div>
+
+                    <div class="dynamic-array-section">
+                        <div class="array-header">
+                            <h3 class="subsection-title">Solution Cards</h3>
+                            <button type="button" class="btn-sm btn-outline" (click)="addCapabilityItem()">
+                                <i class="fas fa-plus"></i> Add Solution
+                            </button>
+                        </div>
+                        <div class="array-items grid-2" formArrayName="capabilities">
+                            <div class="array-item-card full-width"
+                                *ngFor="let item of capabilities.controls; let i=index" [formGroupName]="i">
+                                <div class="item-index">{{ i + 1 }}</div>
+                                <div class="item-body">
+                                    <div class="row">
+                                        <div class="col-md-5 form-group">
+                                            <label class="micro-label">Card Title</label>
+                                            <input type="text" formControlName="title" class="form-control sm">
+                                        </div>
+                                        <div class="col-md-5 form-group">
+                                            <label class="micro-label">Card Title (Arabic)</label>
+                                            <input type="text" formControlName="titleAr"
+                                                class="form-control sm text-right" dir="rtl">
+                                        </div>
+                                        <div class="col-md-2 form-group">
+                                            <label class="micro-label">Icon Class</label>
+                                            <input type="text" formControlName="icon" class="form-control sm"
+                                                placeholder="fas fa-...">
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-md-6 form-group mb-0">
+                                            <label class="micro-label">Small Description</label>
+                                            <textarea formControlName="description" class="form-control sm"
+                                                rows="2"></textarea>
+                                        </div>
+                                        <div class="col-md-6 form-group mb-0">
+                                            <label class="micro-label">Description (Arabic)</label>
+                                            <textarea formControlName="descriptionAr" class="form-control sm text-right"
+                                                dir="rtl" rows="2"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="item-delete" (click)="removeCapabilityItem(i)">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. INDUSTRIES TAB -->
+            <div class="tab-content" *ngIf="activeTab === 'industries'">
+                <div class="form-section">
+                    <h2 class="section-title">Industries We Support Section</h2>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Section Heading</label>
+                            <input type="text" formControlName="industriesSectionTitle" class="form-control"
+                                placeholder="Industries We Support">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Section Heading (Arabic)</label>
+                            <input type="text" formControlName="industriesSectionTitleAr"
+                                class="form-control text-right" dir="rtl">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Short Description (Right Side)</label>
+                            <textarea formControlName="industriesSectionDescription" class="form-control"
+                                rows="3"></textarea>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Description (Arabic)</label>
+                            <textarea formControlName="industriesSectionDescriptionAr" class="form-control text-right"
+                                dir="rtl" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-md-8">
+                            <label class="form-label">Section Image (Left Side)</label>
+                            <div class="image-upload-preview large" (click)="indImageFile.click()">
+                                <img *ngIf="industriesImagePreview" [src]="industriesImagePreview"
+                                    alt="Industries Image">
+                                <div *ngIf="!industriesImagePreview" class="placeholder">
+                                    <i class="fas fa-industry"></i>
+                                    <span>Upload Section Image</span>
+                                </div>
+                                <button type="button" class="remove-btn" *ngIf="industriesImagePreview"
+                                    (click)="removeImage('industriesImage'); $event.stopPropagation()">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <input type="file" #indImageFile (change)="onFileSelected($event, 'industriesImage')" hidden
+                                accept="image/*">
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="form-label">Image Alt-Tag (SEO)</label>
+                                <input type="text" formControlName="industriesImageAlt" class="form-control"
+                                    placeholder="Alt text English">
+                                <input type="text" formControlName="industriesImageAltAr"
+                                    class="form-control text-right mt-2" dir="rtl" placeholder="نص بديل بالعربية">
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label class="form-label">Bottom Note (Summary)</label>
+                                <textarea formControlName="industriesSectionBottomNote" class="form-control"
+                                    rows="2"></textarea>
+                                <textarea formControlName="industriesSectionBottomNoteAr"
+                                    class="form-control text-right mt-2" dir="rtl" rows="2"
+                                    placeholder="ملاحظة ختامية بالعربية"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dynamic-array-section mt-5">
+                        <div class="array-header">
+                            <h3 class="subsection-title">Industry Items (Titles with Icons)</h3>
+                            <button type="button" class="btn-sm btn-outline" (click)="addIndustryItem()">
+                                <i class="fas fa-plus"></i> Add Industry
+                            </button>
+                        </div>
+                        <div class="array-items" formArrayName="industries">
+                            <div class="array-item-card" *ngFor="let item of industries.controls; let i=index"
+                                [formGroupName]="i">
+                                <div class="item-index">{{ i + 1 }}</div>
+                                <div class="item-body">
+                                    <div class="row">
+                                        <div class="col-md-5 form-group mb-0">
+                                            <input type="text" formControlName="title" class="form-control sm"
+                                                placeholder="Industry Name">
+                                        </div>
+                                        <div class="col-md-5 form-group mb-0">
+                                            <input type="text" formControlName="titleAr"
+                                                class="form-control sm text-right" dir="rtl" placeholder="اسم القطاع">
+                                        </div>
+                                        <div class="col-md-2 form-group mb-0">
+                                            <input type="text" formControlName="iconFA" class="form-control sm"
+                                                placeholder="fas fa-...">
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="item-delete" (click)="removeIndustryItem(i)">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. CRITICAL TAB -->
+            <div class="tab-content" *ngIf="activeTab === 'critical'">
+                <div class="form-section dark-form-section">
+                    <h2 class="section-title">Critical Why Section (High Impact)</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3 class="subsection-title">Left Side (Impact Text)</h3>
+                            <div class="form-group">
+                                <label class="form-label">Main Impact Title</label>
+                                <input type="text" formControlName="criticalSectionTitle" class="form-control"
+                                    placeholder="Why is this critical?">
+                                <input type="text" formControlName="criticalSectionTitleAr"
+                                    class="form-control text-right mt-2" dir="rtl">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Impact Short Description</label>
+                                <textarea formControlName="criticalSectionDescription" class="form-control"
+                                    rows="3"></textarea>
+                                <textarea formControlName="criticalSectionDescriptionAr"
+                                    class="form-control text-right mt-2" dir="rtl" rows="3"></textarea>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6 form-group">
+                                    <label class="form-label">Action Button Text</label>
+                                    <input type="text" formControlName="criticalSectionButtonText" class="form-control">
+                                    <input type="text" formControlName="criticalSectionButtonTextAr"
+                                        class="form-control text-right mt-2" dir="rtl">
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="form-label">Button Link URL</label>
+                                    <input type="text" formControlName="criticalSectionButtonLink"
+                                        class="form-control mt-4">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <h3 class="subsection-title">Right Side (Cards Grid)</h3>
+                            <div class="form-group">
+                                <label class="form-label">Right Section Title</label>
+                                <input type="text" formControlName="criticalRightTitle" class="form-control">
+                                <input type="text" formControlName="criticalRightTitleAr"
+                                    class="form-control text-right mt-2" dir="rtl">
+                            </div>
+                            <div class="dynamic-array-section mt-3">
+                                <div class="array-header">
+                                    <label class="micro-label">Dynamic Cards</label>
+                                    <button type="button" class="btn-xs" (click)="addCriticalCardItem()">Add
+                                        Card</button>
+                                </div>
+                                <div class="array-items" formArrayName="criticalCards">
+                                    <div class="array-item-card mini"
+                                        *ngFor="let item of criticalCards.controls; let i=index" [formGroupName]="i">
+                                        <div class="item-body">
+                                            <div class="row">
+                                                <div class="col-md-5 p-1">
+                                                    <input type="text" formControlName="title" class="form-control sm"
+                                                        placeholder="Card Title">
+                                                </div>
+                                                <div class="col-md-4 p-1">
+                                                    <input type="text" formControlName="titleAr"
+                                                        class="form-control sm text-right" dir="rtl"
+                                                        placeholder="عنوان البطاقة">
+                                                </div>
+                                                <div class="col-md-3 p-1">
+                                                    <div class="hybrid-icon-selector dark-hybrid">
+                                                        <select formControlName="iconType"
+                                                            class="form-control sm icon-type-select">
+                                                            <option value="fa">FA</option>
+                                                            <option value="file">File</option>
+                                                        </select>
+                                                        <input *ngIf="item.get('iconType')?.value === 'fa'" type="text"
+                                                            formControlName="iconFA" class="form-control sm"
+                                                            placeholder="fas fa-...">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="item-delete xs"
+                                            (click)="removeCriticalCardItem(i)">×</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. WHY CHOOSE TAB -->
+            <div class="tab-content" *ngIf="activeTab === 'why-choose'">
+                <div class="form-section">
+                    <h2 class="section-title">Why Choose Sharp Innovation</h2>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Section Heading</label>
+                            <input type="text" formControlName="whyChooseUsSectionTitle" class="form-control"
+                                placeholder="Why Choose Us?">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Section Heading (Arabic)</label>
+                            <input type="text" formControlName="whyChooseUsSectionTitleAr"
+                                class="form-control text-right" dir="rtl">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Intro Description</label>
+                            <textarea formControlName="whyChooseUsDescription" class="form-control" rows="2"></textarea>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Intro Description (Arabic)</label>
+                            <textarea formControlName="whyChooseUsDescriptionAr" class="form-control text-right"
+                                dir="rtl" rows="2"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Section Bottom Quote/Note</label>
+                            <textarea formControlName="whyChooseUsBottomNote" class="form-control" rows="2"
+                                placeholder="e.g. Our aim is not only about protection..."></textarea>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Bottom Note (Arabic)</label>
+                            <textarea formControlName="whyChooseUsBottomNoteAr" class="form-control text-right"
+                                dir="rtl" rows="2"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="dynamic-array-section mt-4">
+                        <div class="array-header">
+                            <h3 class="subsection-title">Reason Cards</h3>
+                            <button type="button" class="btn-sm btn-outline" (click)="addWhyChooseUsItem()">
+                                <i class="fas fa-plus"></i> Add Reason
+                            </button>
+                        </div>
+                        <div class="array-items grid-2" formArrayName="whyChooseUs">
+                            <div class="array-item-card full-width"
+                                *ngFor="let item of whyChooseUs.controls; let i=index" [formGroupName]="i">
+                                <div class="item-index">{{ i + 1 }}</div>
+                                <div class="item-body">
+                                    <div class="row">
+                                        <div class="col-md-5 form-group">
+                                            <label class="micro-label">Reason Title</label>
+                                            <input type="text" formControlName="title" class="form-control sm">
+                                        </div>
+                                        <div class="col-md-5 form-group">
+                                            <label class="micro-label">Title (Arabic)</label>
+                                            <input type="text" formControlName="titleAr"
+                                                class="form-control sm text-right" dir="rtl">
+                                        </div>
+                                        <div class="col-md-2 form-group">
+                                            <label class="micro-label">Icon (FA)</label>
+                                            <input type="text" formControlName="iconFA" class="form-control sm"
+                                                placeholder="fas fa-...">
+                                        </div>
+                                    </div>
+                                    <div class="row mt-1">
+                                        <div class="col-md-6 form-group mb-0">
+                                            <label class="micro-label">Short Explanation</label>
+                                            <textarea formControlName="description" class="form-control sm"
+                                                rows="2"></textarea>
+                                        </div>
+                                        <div class="col-md-6 form-group mb-0">
+                                            <label class="micro-label">Explanation (Arabic)</label>
+                                            <textarea formControlName="descriptionAr" class="form-control sm text-right"
+                                                dir="rtl" rows="2"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="item-delete" (click)="removeWhyChooseUsItem(i)">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. EXTRA TAB (FAQ & SEO) -->
+            <div class="tab-content" *ngIf="activeTab === 'extra'">
+                <div class="form-section">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <div class="dynamic-array-section">
+                        <div class="array-header">
+                            <button type="button" class="btn-sm btn-outline" (click)="addFAQItem()">
+                                <i class="fas fa-plus"></i> Add FA Question
+                            </button>
+                        </div>
+                        <div class="array-items" formArrayName="faqs">
+                            <div class="array-item-card full-width" *ngFor="let item of faqs.controls; let i=index"
+                                [formGroupName]="i">
+                                <div class="item-index">{{ i + 1 }}</div>
+                                <div class="item-body">
+                                    <div class="row">
+                                        <div class="col-md-6 form-group">
+                                            <label class="micro-label">Question</label>
+                                            <input type="text" formControlName="question" class="form-control sm">
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            <label class="micro-label">Question (Arabic)</label>
+                                            <input type="text" formControlName="questionAr"
+                                                class="form-control sm text-right" dir="rtl">
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-md-6 form-group mb-0">
+                                            <label class="micro-label">Answer Content</label>
+                                            <textarea formControlName="answer" class="form-control sm"
+                                                rows="3"></textarea>
+                                        </div>
+                                        <div class="col-md-6 form-group mb-0">
+                                            <label class="micro-label">Answer (Arabic)</label>
+                                            <textarea formControlName="answerAr" class="form-control sm text-right"
+                                                dir="rtl" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="item-delete" (click)="removeFAQItem(i)">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section mt-5">
+                    <h2 class="section-title">SEO Settings</h2>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Meta Title</label>
+                            <input type="text" formControlName="metaTitle" class="form-control"
+                                [maxlength]="META_TITLE_MAX_LENGTH">
+                            <div class="char-count">{{ serviceForm.get('metaTitle')?.value?.length || 0 }}/{{
+                                META_TITLE_MAX_LENGTH }}</div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Meta Title (Arabic)</label>
+                            <input type="text" formControlName="metaTitleAr" class="form-control text-right" dir="rtl"
+                                [maxlength]="META_TITLE_MAX_LENGTH">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Meta Description</label>
+                            <textarea formControlName="metaDescription" class="form-control" rows="3"
+                                [maxlength]="META_DESC_MAX_LENGTH"></textarea>
+                            <div class="char-count">{{ serviceForm.get('metaDescription')?.value?.length || 0 }}/{{
+                                META_DESC_MAX_LENGTH }}</div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Meta Description (Arabic)</label>
+                            <textarea formControlName="metaDescriptionAr" class="form-control text-right" dir="rtl"
+                                rows="3" [maxlength]="META_DESC_MAX_LENGTH"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Meta Keywords (Comma separated)</label>
+                            <input type="text" formControlName="metaKeywords" class="form-control"
+                                [maxlength]="META_KEYWORDS_MAX_LENGTH">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">Meta Keywords (Arabic)</label>
+                            <input type="text" formControlName="metaKeywordsAr" class="form-control text-right"
+                                dir="rtl" [maxlength]="META_KEYWORDS_MAX_LENGTH">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section mt-5">
+                    <h2 class="section-title">Bottom CTA Banner</h2>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">CTA Primary Message</label>
+                            <textarea formControlName="ctaMessage" class="form-control" rows="2"></textarea>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="form-label">CTA Message (Arabic)</label>
+                            <textarea formControlName="ctaMessageAr" class="form-control text-right" dir="rtl"
+                                rows="2"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 form-group">
+                            <label class="form-label">CTA Button 1 Text</label>
+                            <input type="text" formControlName="ctaPrimaryText" class="form-control">
+                            <input type="text" formControlName="ctaPrimaryTextAr" class="form-control text-right mt-2"
+                                dir="rtl">
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <label class="form-label">CTA Button 1 Link</label>
+                            <input type="text" formControlName="ctaPrimaryLink" class="form-control mt-4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- Final actions -->
+    <div class="footer-actions mt-4">
+        <button class="btn-secondary lg" (click)="goBack()">Discard Changes</button>
+        <button class="btn-primary lg" [disabled]="submitting || serviceForm.invalid" (click)="onSubmit()">
+            {{ submitting ? 'Saving Changes...' : 'Save Service Data' }}
+        </button>
+    </div>
+</div>

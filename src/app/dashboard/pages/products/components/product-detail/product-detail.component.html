@@ -1,0 +1,210 @@
+<div class="product-detail">
+  <!-- Loading Spinner -->
+  <div class="loading-spinner" *ngIf="loading">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Error Alert -->
+  <div class="alert alert-danger" *ngIf="error && !loading">
+    <i class="fas fa-exclamation-circle"></i>
+    {{ error }}
+    <button class="btn-retry" (click)="goBack()">
+      <i class="fas fa-arrow-left"></i> Go Back
+    </button>
+  </div>
+
+  <!-- Product Content -->
+  <div *ngIf="product && !loading" class="product-content">
+
+    <!-- Hero Header Section -->
+    <section class="hero-header">
+      <div class="container">
+        <!-- Breadcrumb -->
+        <div class="product-breadcrumb">
+          <a [routerLink]="['/']">Home</a>
+          <span class="sep">/</span>
+          <a [routerLink]="['/dashboard/products']">Products</a>
+          <span class="sep">/</span>
+          <span class="current">{{ product.title }}</span>
+        </div>
+
+        <h1>
+          <i [class]="product.heroIcon || 'fas fa-circle'" class="hero-icon"></i>
+          {{ product.heroTitle || product.title }}
+        </h1>
+
+        <p class="hero-subtitle" *ngIf="product.heroSubtitle">{{ product.heroSubtitle }}</p>
+        <p class="hero-description" *ngIf="product.heroDescription">{{ product.heroDescription }}</p>
+
+        <div class="hero-buttons">
+          <a [href]="product.ctaButton1Link || '#'" class="btn btn-primary">{{ product.ctaButton1Text || 'Request a
+            Demo' }}</a>
+          <a [href]="product.ctaButton2Link || '#'" class="btn btn-outline">{{ product.ctaButton2Text || 'Talk to
+            Experts' }}</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" *ngIf="product.aboutContent">
+      <div class="container">
+        <div class="about-layout" [class.has-image]="!!product.aboutImage">
+          <div class="about-content">
+            <h2>{{ product.aboutTitle || 'About the Solution' }}</h2>
+            <div [innerHTML]="product.aboutContent"></div>
+          </div>
+          <div class="about-image" *ngIf="product.aboutImage">
+            <img [src]="getImageUrl(product.aboutImage)" alt="About {{ product.title }}">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" *ngIf="getHowItWorks().length > 0">
+      <div class="container">
+        <h2 style="text-align: center;">How It Works</h2>
+        <p class="section-intro" *ngIf="product.shortDescription" style="text-align: center;">{{
+          product.shortDescription }}</p>
+
+        <div class="works-grid">
+          <div class="works-card" *ngFor="let item of getHowItWorks()">
+            <div class="card-icon">
+              <i [class]="item.icon"></i>
+            </div>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="key-features" *ngIf="getKeyFeaturesList().length > 0">
+      <div class="container">
+        <div class="key-features-layout">
+          <div class="features-images" *ngIf="getKeyFeaturesImages().length > 0">
+            <div class="image-placeholder large" *ngIf="getKeyFeaturesImages()[0]">
+              <img [src]="getImageUrl(getKeyFeaturesImages()[0])" [alt]="product?.title || 'Key Feature'">
+            </div>
+            <div class="image-row" *ngIf="getKeyFeaturesImages().length > 1">
+              <div class="image-placeholder small" *ngFor="let img of getKeyFeaturesImages().slice(1, 3)">
+                <img [src]="getImageUrl(img)" [alt]="product?.title || 'Key Feature'">
+              </div>
+            </div>
+          </div>
+          <div class="features-panel">
+            <h2>{{ product?.keyFeaturesTitle || 'Key Features' }}</h2>
+            <div class="features-grid">
+              <div class="feature-item" *ngFor="let feature of getKeyFeaturesList()">
+                <i [class]="getFeatureIcon(feature)"></i>
+                <span class="feature-text">{{ getFeatureText(feature) }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" *ngIf="getBenefits().length > 0">
+      <div class="container">
+        <h2 style="color: white;">Benefits</h2>
+
+        <div class="benefits-grid">
+          <div class="benefit-card" *ngFor="let benefit of getBenefits()">
+            <div class="benefit-icon">
+              <i [class]="benefit.icon"></i>
+            </div>
+            <h3>{{ benefit.title }}</h3>
+            <p>{{ benefit.description }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="vision" *ngIf="getVisionItems().length > 0">
+      <div class="container">
+        <h2>{{ product.visionTitle || 'Vision & Alignment' }}</h2>
+        <p class="vision-subtitle" *ngIf="product.visionSubtitle">{{ product.visionSubtitle }}</p>
+
+        <div class="vision-icons-row">
+          <div class="vision-item" *ngFor="let item of getVisionItems()">
+            <div class="vision-circle">
+              <i [class]="item.icon"></i>
+            </div>
+            <span>{{ item.text }}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Sharp Section -->
+    <section class="why-sharp" *ngIf="product.whySharpContent">
+      <div class="container">
+        <div class="why-sharp-layout">
+          <div class="why-sharp-content">
+            <h2>Why Sharp Innotech?</h2>
+            <div class="product-description" [innerHTML]="product.whySharpContent"></div>
+          </div>
+          <div class="why-sharp-image" *ngIf="product.whySharpImage">
+            <img [src]="getImageUrl(product.whySharpImage)" alt="Why {{ product.title }}">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" *ngIf="getGallery().length > 0">
+      <div class="container">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item" *ngFor="let image of getGallery()">
+            <img [src]="image" [alt]="product.title">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner" *ngIf="product.ctaTitle">
+      <div class="container">
+        <div class="cta-content">
+          <div class="cta-text">
+            <h3>{{ product.ctaTitle }}</h3>
+            <p *ngIf="product.ctaDescription">{{ product.ctaDescription }}</p>
+          </div>
+          <div class="cta-buttons">
+            <a [href]="product.ctaButton1Link || '#'" class="btn btn-white">{{ product.ctaButton1Text || 'Request a
+              Demo' }}</a>
+            <a [href]="product.ctaButton2Link || '#'" class="btn btn-white-outline">{{ product.ctaButton2Text || 'Talk
+              to Experts' }}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" *ngIf="getFAQs().length > 0">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-grid">
+          <div class="faq-item" *ngFor="let faq of getFAQs(); let i = index" (click)="toggleFaq(i)"
+            [class.active]="activeFaq === i">
+            <div class="faq-question">
+              <span>{{ faq.question }}</span>
+              <span class="faq-toggle">
+                <i [class]="activeFaq === i ? 'fas fa-minus' : 'fas fa-plus'"></i>
+              </span>
+            </div>
+            <div class="faq-answer" *ngIf="activeFaq === i">
+              <p>{{ faq.answer }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

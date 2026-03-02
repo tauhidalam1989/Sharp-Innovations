@@ -1,0 +1,118 @@
+.public-blog-detail-container {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.blog-layout-wrapper {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+
+    .blog-main {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .blog-sidebar {
+        width: 350px;
+        flex-shrink: 0;
+
+        .sidebar-content {
+            position: sticky;
+            top: 100px;
+        }
+    }
+}
+
+// Mobile responsiveness for the flex layout
+@media (max-width: 991px) {
+    .blog-layout-wrapper {
+        flex-direction: column-reverse;
+        /* Put image before article body on mobile */
+
+        .blog-sidebar {
+            width: 100%;
+            margin-bottom: 2rem;
+
+            .sidebar-content {
+                position: static;
+            }
+        }
+    }
+}
+
+.article-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+
+    ::ng-deep {
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        h2,
+        h3,
+        h4 {
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: rgba(9, 9, 121, 1);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: #000 !important;
+            font-weight: 400 !important;
+        }
+
+        blockquote {
+            border-left: 4px solid rgba(0, 212, 255, 1);
+            padding-left: 1rem;
+            font-style: italic;
+            color: #000 !important;
+            font-weight: 400 !important;
+            background: #f8faff;
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        a {
+            color: rgba(0, 212, 255, 1);
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.hover-primary {
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: rgba(0, 212, 255, 1) !important;
+    }
+}
+
+.hover-opacity {
+    transition: opacity 0.3s ease;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.pattern-bg {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.2) 2px, transparent 2px);
+    background-size: 20px 20px;
+}
