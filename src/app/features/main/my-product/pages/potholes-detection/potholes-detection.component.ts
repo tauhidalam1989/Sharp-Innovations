@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./potholes-detection.component.scss']
 })
 export class PotholesDetectionComponent {
+  activeFaq: number | null = null;
 
+  toggleFaq(index: number): void {
+    this.activeFaq = this.activeFaq === index ? null : index;
+  }
 }

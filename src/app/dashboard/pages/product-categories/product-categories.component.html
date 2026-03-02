@@ -1,0 +1,109 @@
+<div class="dashboard-container">
+    <div class="header-actions">
+        <h2>Product Categories</h2>
+        <button class="btn btn-primary" (click)="openCreateForm()" *ngIf="!showForm">
+            <i class="fas fa-plus"></i> Add Category
+        </button>
+    </div>
+
+    <div *ngIf="error" class="alert alert-danger">
+        {{ error }}
+    </div>
+
+    <div *ngIf="loading" class="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Form Section -->
+    <div class="card form-card" *ngIf="showForm">
+        <div class="card-header">
+            <h3>{{ editingId ? 'Edit Category' : 'Create Category' }}</h3>
+            <button class="btn btn-icon" (click)="closeForm()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="categoryForm" (ngSubmit)="onSubmit()">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Name (EN) *</label>
+                        <input type="text" formControlName="name" class="form-control" placeholder="Category Name">
+                    </div>
+                    <div class="form-group">
+                        <label>Name (AR)</label>
+                        <input type="text" formControlName="nameAr" class="form-control"
+                            placeholder="Category Name in Arabic">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Slug *</label>
+                        <input type="text" formControlName="slug" class="form-control" placeholder="category-slug">
+                    </div>
+                    <div class="form-group">
+                        <label>Order</label>
+                        <input type="number" formControlName="order" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" formControlName="isActive">
+                        Active
+                    </label>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-outline" (click)="closeForm()">Cancel</button>
+                    <button type="submit" class="btn btn-primary" [disabled]="categoryForm.invalid || submitting">
+                        {{ submitting ? 'Saving...' : 'Save Category' }}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- List Section -->
+    <div class="card" *ngIf="!showForm && !loading">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Order</th>
+                        <th>Name (EN)</th>
+                        <th>Name (AR)</th>
+                        <th>Slug</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cat of categories">
+                        <td>{{ cat.order }}</td>
+                        <td>{{ cat.name }}</td>
+                        <td>{{ cat.nameAr || '-' }}</td>
+                        <td>{{ cat.slug }}</td>
+                        <td>
+                            <span class="badge" [class.badge-success]="cat.isActive"
+                                [class.badge-secondary]="!cat.isActive">
+                                {{ cat.isActive ? 'Active' : 'Inactive' }}
+                            </span>
+                        </td>
+                        <td class="actions">
+                            <button class="btn btn-icon btn-edit" (click)="openEditForm(cat)" title="Edit">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn btn-icon btn-delete" (click)="deleteCategory(cat.id)" title="Delete">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr *ngIf="categories.length === 0">
+                        <td colspan="6" class="text-center">No categories found.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

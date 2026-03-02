@@ -1,0 +1,215 @@
+<div class="public-blog-detail-container">
+    <!-- Loading Spinner -->
+    <div class="loading-spinner text-center py-5" *ngIf="loading">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Error Alert -->
+    <div class="container mt-5" *ngIf="error && !loading">
+        <div class="alert alert-danger d-flex align-items-center justify-content-between p-4 rounded-4 shadow-sm">
+            <div>
+                <i class="fas fa-exclamation-triangle me-2 fs-4"></i>
+                <span>{{ error }}</span>
+            </div>
+            <button class="btn btn-outline-danger rounded-pill px-4" (click)="goBack()">
+                <i class="fas fa-arrow-left me-2"></i> Go Back
+            </button>
+        </div>
+    </div>
+
+    <!-- Blog Content -->
+    <div *ngIf="blog && !loading" class="blog-content pb-5">
+
+        <!-- Hero / Header Section -->
+        <div class="blog-hero bg-light py-5 mb-5 position-relative overflow-hidden">
+            <div class="container position-relative z-1">
+                <button class="btn btn-link text-decoration-none text-primary mb-4 p-0 fw-bold" (click)="goBack()">
+                    <i class="fas fa-arrow-left me-2"></i> {{ currentLang === 'ar' ? 'العودة إلى المدونات' : 'Back to
+                    Blogs' }}
+                </button>
+
+
+
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <span class="badge bg-primary px-3 py-2 rounded-pill"
+                        *ngIf="(currentLang === 'ar' ? blog.categoriesAr : blog.categories)?.length">{{
+                        currentLang === 'ar' && blog.categoriesAr?.length ? blog.categoriesAr?.[0] :
+                        blog.categories?.[0] }}</span>
+                    <span class="text-muted"><i class="far fa-calendar-alt me-1"></i> {{ formatDate(blog.createdAt)
+                        }}</span>
+                    <!-- <span class="text-muted" *ngIf="blog.readingTime"><i class="far fa-clock me-1"></i> {{
+                        getReadingTimeText() }}</span> -->
+                </div>
+
+                <h1 class="display-3 fw-bold mb-4 col-lg-10" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'"
+                    [class.text-end]="currentLang === 'ar'">
+                    {{ currentLang === 'ar' && blog.titleAr ? blog.titleAr : blog.title }}
+                </h1>
+
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+                    <div class="author-info d-flex align-items-center gap-3">
+                        <div class="avatar bg-white text-primary rounded-circle d-flex align-items-center justify-content-center shadow-sm fw-bold"
+                            style="width: 48px; height: 48px; font-size: 1.2rem;">
+                            {{ blog.creator?.name?.[0] || 'U' }}
+                        </div>
+                        <div>
+                            <p class="mb-0 fw-bold">{{ blog.creator?.name || 'Unknown Author' }}</p>
+                            <p class="mb-0 text-muted small">Content Creator</p>
+                        </div>
+                    </div>
+
+                    <!-- <div class="post-stats d-flex gap-4 text-muted">
+                        <span><i class="far fa-eye me-1"></i> {{ blog.views }} views</span>
+                        <span class="cursor-pointer hover-primary" (click)="likePost()"><i class="far fa-heart me-1"
+                                [class.fas]="blog.likes > 0" [class.text-danger]="blog.likes > 0"></i> {{ blog.likes }}
+                            likes</span>
+                    </div> -->
+                </div>
+            </div>
+            <!-- Decorative Background Elements -->
+            <div class="position-absolute top-0 end-0 h-100 w-50"
+                style="background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.05)); z-index: 0;"></div>
+        </div>
+
+        <!-- Main Content Layout Wrapper -->
+        <div class="container">
+            <div class="blog-layout-wrapper">
+
+                <!-- Main Article Body -->
+                <div class="blog-main">
+                    <!-- Excerpt -->
+                    <div class="lead mb-5 p-4 bg-white rounded-4 shadow-sm border-start border-4 border-primary position-relative"
+                        *ngIf="(currentLang === 'en' && blog.excerpt) || (currentLang === 'ar' && blog.excerptAr)"
+                        [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'" [class.text-end]="currentLang === 'ar'">
+                        <i class="fas fa-quote-left position-absolute top-0 start-0 translate-middle text-primary opacity-25"
+                            style="font-size: 3rem; margin-top: 1.5rem; margin-left: 1.5rem;"></i>
+                        <p class="mb-0 position-relative z-1"
+                            style="color: #000 !important; font-weight: 400 !important;">{{ currentLang === 'ar' &&
+                            blog.excerptAr ? blog.excerptAr : blog.excerpt }}</p>
+                    </div>
+
+                    <!-- HTML Content -->
+                    <div class="blog-body article-content" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'"
+                        [class.text-end]="currentLang === 'ar'"
+                        [innerHTML]="(currentLang === 'ar' && blog.contentAr ? blog.contentAr : blog.content) | safeHtml">
+                    </div>
+
+                    <!-- Tags -->
+                    <div class="mt-5 pt-4 border-top" *ngIf="(currentLang === 'ar' ? blog.tagsAr : blog.tags)?.length">
+                        <h5 class="fw-bold mb-3">{{ currentLang === 'ar' ? 'العلامات' : 'Tags' }}</h5>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill"
+                                *ngFor="let tag of (currentLang === 'ar' && blog.tagsAr?.length ? blog.tagsAr : blog.tags)">#{{
+                                tag }}</span>
+                        </div>
+                    </div>
+
+                    <!-- Sharing Section -->
+                    <div
+                        class="social-share mt-5 p-4 bg-light rounded-4 d-flex align-items-center justify-content-between flex-wrap gap-3">
+                        <h5 class="fw-bold mb-0">{{ currentLang === 'ar' ? 'مشاركة هذا المقال' : 'Share this article' }}
+                        </h5>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-outline-primary rounded-circle" style="width: 45px; height: 45px;"
+                                (click)="shareOnFacebook()" title="Share on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </button>
+                            <button class="btn btn-outline-info rounded-circle" style="width: 45px; height: 45px;"
+                                (click)="shareOnTwitter()" title="Share on Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="btn btn-outline-secondary rounded-circle" style="width: 45px; height: 45px;"
+                                (click)="shareOnLinkedIn()" title="Share on LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </button>
+                            <button class="btn btn-outline-dark rounded-circle" style="width: 45px; height: 45px;"
+                                (click)="sharePost()" title="Copy Link">
+                                <i class="fas fa-link"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Sidebar (Images) -->
+                <div class="blog-sidebar">
+                    <div class="sidebar-content d-flex flex-column gap-4 pt-4">
+                        <!-- Gallery -->
+                        <div class="gallery-section" *ngIf="blog.gallery && blog.gallery.length > 0">
+                            <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+                                <div class="position-relative" style="height: 250px;">
+                                    <img [src]="getImageUrl(blog.gallery[currentGalleryIndex])" [alt]="blog.title"
+                                        class="w-100 h-100 object-fit-cover">
+                                    <button
+                                        class="btn btn-dark rounded-circle position-absolute top-50 start-0 translate-middle-y ms-2 opacity-75"
+                                        (click)="prevGalleryImage()"
+                                        *ngIf="blog.gallery.length > 1 && currentGalleryIndex > 0">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </button>
+                                    <button
+                                        class="btn btn-dark rounded-circle position-absolute top-50 end-0 translate-middle-y me-2 opacity-75"
+                                        (click)="nextGalleryImage()"
+                                        *ngIf="blog.gallery.length > 1 && currentGalleryIndex < blog.gallery.length - 1">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </div>
+                                <!-- Thumbnails -->
+                                <div class="d-flex p-2 gap-2 overflow-auto bg-light" *ngIf="blog.gallery.length > 1">
+                                    <img *ngFor="let img of blog.gallery; let i = index" [src]="getImageUrl(img)"
+                                        class="rounded object-fit-cover cursor-pointer hover-opacity"
+                                        style="width: 60px; height: 45px; border: 2px solid transparent;"
+                                        [class.border-primary]="i === currentGalleryIndex"
+                                        (click)="currentGalleryIndex = i">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Featured Image (if no gallery) -->
+                        <div class="featured-image w-100 d-block"
+                            *ngIf="blog.featuredImage && (!blog.gallery || blog.gallery.length === 0)">
+                            <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+                                <img [src]="getImageUrl(blog.featuredImage)" [alt]="blog.title"
+                                    class="w-100 object-fit-cover d-block" style="max-height: 400px;">
+                            </div>
+                        </div>
+
+                        <!-- Quick About or CTA (Optional sidebar widget) -->
+                        <div
+                            class="card border-0 shadow-sm rounded-4 bg-primary text-white p-4 text-center pattern-bg w-100 d-block">
+                            <h4 class="fw-bold mb-3">{{ currentLang === 'ar' ? 'تبحث عن حلول الأمن السيبراني؟' :
+                                'Looking for Cybersecurity Solutions?' }}</h4>
+                            <p class="mb-4 text-white-50">{{ currentLang === 'ar' ? 'تقدم شارب إنوفيشنز أمانًا على مستوى
+                                المؤسسات لأصولك الرقمية.' : 'Sharp Innovations provides enterprise-grade security for
+                                your digital assets.' }}</p>
+                            <a routerLink="/contact" class="btn btn-light rounded-pill fw-bold">{{ currentLang === 'ar'
+                                ? 'اتصل بنا' : 'Contact Us' }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Posts -->
+        <div class="container mt-5 pt-5 border-top" *ngIf="relatedPosts.length > 0">
+            <h3 class="fw-bold mb-4">{{ currentLang === 'ar' ? 'قد يعجبك أيضًا' : 'You might also like' }}</h3>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" *ngFor="let post of relatedPosts">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden cursor-pointer blog-card"
+                        [routerLink]="['/blogs', post.slug || post.id]">
+                        <div style="height: 200px;">
+                            <img [src]="getImageUrl(post.featuredImage) || 'assets/img/placeholder.jpg'"
+                                [alt]="post.title" class="card-img-top h-100 w-100 object-fit-cover">
+                        </div>
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold mb-2 text-truncate">{{ post.title }}</h5>
+                            <p class="small text-muted mb-0"><i class="far fa-calendar-alt me-1"></i> {{
+                                formatDate(post.createdAt) }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

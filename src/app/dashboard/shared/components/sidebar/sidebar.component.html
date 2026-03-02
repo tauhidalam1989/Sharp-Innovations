@@ -1,0 +1,42 @@
+<aside class="admin-sidebar" [class.collapsed]="collapsed">
+  <div class="sidebar-header">
+    <img src="assets/logo/SLogo.png" alt="Company Logo" class="logo">
+    <h3 *ngIf="!collapsed">Admin Panel</h3>
+  </div>
+
+  <nav class="sidebar-nav">
+    <ul>
+      <li *ngFor="let item of menuItems">
+        <a [routerLink]="item.path" 
+           routerLinkActive="active"
+           [routerLinkActiveOptions]="{exact: true}"
+           [title]="collapsed ? item.label : ''">
+          <i [class]="'fas ' + getIconClass(item.icon)"></i>
+          <span *ngIf="!collapsed">{{ item.label }}</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="sidebar-footer" *ngIf="!collapsed">
+    <div class="user-info">
+      <img [src]="(authService.currentUser$ | async)?.avatar || 'assets/default-avatar.png'" 
+           alt="User" class="user-avatar">
+      <div class="user-details">
+        <p class="user-name">{{ (authService.currentUser$ | async)?.name }}</p>
+        <p class="user-role">{{ (authService.currentUser$ | async)?.role }}</p>
+      </div>
+    </div>
+    <button class="logout-btn" (click)="logout()">
+      <i class="fas fa-sign-out-alt"></i>
+      <span>Logout</span>
+    </button>
+  </div>
+
+  <!-- Mini footer for collapsed mode -->
+  <div class="sidebar-footer-mini" *ngIf="collapsed">
+    <button class="logout-btn-mini" (click)="logout()" title="Logout">
+      <i class="fas fa-sign-out-alt"></i>
+    </button>
+  </div>
+</aside>

@@ -12,6 +12,7 @@ import { FeatureComponent } from './features/main/feature/feature.component';
 import { ProjectsComponent } from './features/main/projects/projects.component';
 import { CareersComponent } from './features/main/careers/careers.component';
 import { PrivacyComponent } from './features/shared/components/privacy/privacy.component';
+import { AuthGuard } from './core/guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -56,26 +57,34 @@ const routes: Routes = [
         component: TestimonialComponent,
       },
       {
-        path:'feature',
+        path: 'feature',
         component: FeatureComponent
       },
       {
-        path:'project',
+        path: 'project',
         component: ProjectsComponent
       },
       {
-        path:'Careers',
+        path: 'Careers',
         component: CareersComponent
       },
-     
+
     ],
   },
   {
-    path: 'services',
+    path: 'products',
     component: MainLayoutComponent,
     loadChildren: () =>
       import("./features/main/services/services.module").then(
         (m) => m.ServicesModule
+      ),
+  },
+  {
+    path: 'service-pages',
+    component: MainLayoutComponent,
+    loadChildren: () =>
+      import("./features/main/service-pages/service-pages.module").then(
+        (m) => m.ServicePagesModule
       ),
   },
   {
@@ -86,7 +95,69 @@ const routes: Routes = [
         (m) => m.MyProductModule
       ),
   },
- 
+  {
+    path: 'blogs',
+    component: MainLayoutComponent,
+    loadChildren: () =>
+      import("./features/main/blogs/blogs.module").then(
+        (m) => m.BlogsModule
+      ),
+  },
+
+  {
+    path: 'login',
+    loadChildren: () => import('../app/dashboard/pages/login/login.module').then(m => m.LoginModule)
+  },
+  {
+    path: 'dashboard/products',
+    loadChildren: () => import('../app/dashboard/pages/products/products.module').then(m => m.ProductsModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'dashboard/product-categories',
+    loadChildren: () => import('../app/dashboard/pages/product-categories/product-categories.module').then(m => m.ProductCategoriesModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('../app/dashboard/pages/dashboard/dashboard.module').then(m => m.DashboardModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'blog',
+    loadChildren: () => import('../app/dashboard/pages/blog/blog.module').then(m => m.BlogModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'settings',
+    loadChildren: () => import('../app/dashboard/pages/settings/settings.module').then(m => m.SettingsModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('../app/dashboard/pages/profile/profile.module').then(m => m.ProfileModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'dashboard/services',
+    loadChildren: () => import('../app/dashboard/pages/services/services.module').then(m => m.ServicesModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'dashboard/service-categories',
+    loadChildren: () => import('../app/dashboard/pages/service-categories/service-categories.module').then(m => m.ServiceCategoriesModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  {
+    path: '**',
+    redirectTo: '/home'
+  }
+
   // {
   //   path: "**", // Wildcard route for 404 or invalid paths
   //   redirectTo: "about", // Redirect to another valid route
@@ -99,7 +170,7 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
     initialNavigation: 'enabledBlocking'
-})],
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

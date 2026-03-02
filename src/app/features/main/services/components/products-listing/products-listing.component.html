@@ -1,0 +1,62 @@
+<section class="products-hero">
+    <div class="moving-dots-bg"></div>
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text" [ngClass]="{'text-end': currentLang === 'ar'}">
+                <h1 class="hero-title">{{ currentLang === 'ar' ? 'منتجاتنا' : 'Our Products' }}</h1>
+                <p class="hero-subtitle">{{ currentLang === 'ar' ? 'حلول عالية الأداء مصممة لتنمو معك.' :
+                    'High-Performance Solutions Built to Scale with You.' }}</p>
+            </div>
+            <div class="hero-illustration">
+                <img src="assets/img/product-hero.png" alt="Our Products" onerror="this.style.display='none'">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Products Cards Grid -->
+<section class="products-grid-section">
+    <div class="moving-dots-bg"></div>
+    <div class="container">
+        <!-- Loading -->
+        <div class="loading-container" *ngIf="loading">
+            <div class="spinner"></div>
+            <p>Loading products...</p>
+        </div>
+
+        <!-- Error -->
+        <div class="error-container" *ngIf="error && !loading">
+            <i class="fas fa-exclamation-circle"></i>
+            <p>{{ error }}</p>
+            <button class="btn-retry" (click)="loadProducts()">
+                <i class="fas fa-redo"></i> Retry
+            </button>
+        </div>
+
+        <!-- Products Grouped by Category -->
+        <div class="category-group" *ngFor="let category of categories" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+            <h2 class="category-heading" [ngClass]="{'text-end': currentLang === 'ar'}">{{ category }}</h2>
+            <div class="products-grid">
+                <div class="product-card" *ngFor="let product of productsByCategory[category]; let i = index"
+                    (click)="navigateToProduct(product)" [ngClass]="{'text-end': currentLang === 'ar'}">
+                    <div class="card-icon" [ngClass]="{'ms-3 me-0': currentLang === 'ar'}">
+                        <i [class]="product.cardIcon || 'fas fa-cog'"></i>
+                    </div>
+                    <h3 class="card-title">
+                        {{ currentLang === 'ar' && product.titleAr ? product.titleAr : product.title }}
+                    </h3>
+                    <p class="card-description">
+                        {{ currentLang === 'ar' && product.shortDescriptionAr ? product.shortDescriptionAr :
+                        (product.shortDescription || product.heroSubtitle || ('COMMON.LEARN_MORE' | translate)) }}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-state" *ngIf="!loading && !error && products.length === 0">
+            <i class="fas fa-inbox"></i>
+            <p>No products available at the moment.</p>
+        </div>
+    </div>
+</section>

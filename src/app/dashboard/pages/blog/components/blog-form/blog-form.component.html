@@ -1,0 +1,312 @@
+<div class="blog-form-container">
+  <!-- Header -->
+  <div class="page-header">
+    <h1>{{ isEditMode ? 'Edit Blog Post' : 'Create New Blog Post' }}</h1>
+    <div class="header-actions">
+      <button class="btn-secondary" (click)="onCancel()">
+        <i class="fas fa-times"></i>
+        Cancel
+      </button>
+      <button class="btn-primary" (click)="onSubmit()" [disabled]="submitting">
+        <i class="fas" [ngClass]="submitting ? 'fa-spinner fa-spin' : 'fa-save'"></i>
+        {{ submitting ? 'Saving...' : (isEditMode ? 'Update' : 'Create') }}
+      </button>
+    </div>
+  </div>
+
+  <!-- Error Alert -->
+  <div class="alert alert-danger" *ngIf="error">
+    <i class="fas fa-exclamation-circle"></i>
+    {{ error }}
+  </div>
+
+  <!-- Loading Spinner -->
+  <div class="loading-spinner" *ngIf="loading">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Blog Form -->
+  <form [formGroup]="blogForm" (ngSubmit)="onSubmit()" *ngIf="!loading" class="blog-form">
+    <div class="form-grid">
+      <!-- Left Column - Main Content -->
+      <div class="main-content">
+        <!-- Title -->
+        <div class="form-group">
+          <label for="title">
+            Title (English) <span class="required">*</span>
+          </label>
+          <input type="text" id="title" formControlName="title" class="form-control"
+            [class.is-invalid]="title?.touched && title?.invalid" placeholder="Enter blog post title"
+            (blur)="generateSlug()">
+          <div class="char-counter">{{ title?.value?.length || 0 }}/200</div>
+          <div class="invalid-feedback" *ngIf="title?.touched && title?.invalid">
+            <div *ngIf="title?.errors?.['required']">Title is required</div>
+            <div *ngIf="title?.errors?.['maxlength']">Title cannot exceed 200 characters</div>
+          </div>
+        </div>
+
+        <!-- Title (Arabic) -->
+        <div class="form-group">
+          <label for="titleAr">
+            Title (Arabic)
+          </label>
+          <input type="text" id="titleAr" formControlName="titleAr" class="form-control" dir="rtl"
+            placeholder="أدخل عنوان مقال المدونة" [class.is-invalid]="titleAr?.touched && titleAr?.invalid">
+          <div class="char-counter">{{ titleAr?.value?.length || 0 }}/200</div>
+          <div class="invalid-feedback" *ngIf="titleAr?.touched && titleAr?.invalid">
+            <div *ngIf="titleAr?.errors?.['maxlength']">Title cannot exceed 200 characters</div>
+          </div>
+        </div>
+
+        <!-- Slug -->
+        <div class="form-group">
+          <label for="slug">
+            Slug <span class="required">*</span>
+          </label>
+          <input type="text" id="slug" formControlName="slug" class="form-control"
+            [class.is-invalid]="slug?.touched && slug?.invalid" placeholder="enter-url-slug-here">
+          <small class="form-text text-muted">
+            URL-friendly version of the title. Use lowercase letters, numbers, and hyphens.
+          </small>
+          <div class="invalid-feedback" *ngIf="slug?.touched && slug?.invalid">
+            <div *ngIf="slug?.errors?.['required']">Slug is required</div>
+            <div *ngIf="slug?.errors?.['pattern']">Slug can only contain lowercase letters, numbers, and hyphens</div>
+          </div>
+        </div>
+
+        <!-- Excerpt -->
+        <div class="form-group">
+          <label for="excerpt">Excerpt (English)</label>
+          <textarea id="excerpt" formControlName="excerpt" class="form-control" rows="3"
+            placeholder="Brief summary of the blog post"></textarea>
+          <div class="char-counter">{{ blogForm.get('excerpt')?.value?.length || 0 }}/500</div>
+        </div>
+
+        <!-- Excerpt (Arabic) -->
+        <div class="form-group">
+          <label for="excerptAr">Excerpt (Arabic)</label>
+          <textarea id="excerptAr" formControlName="excerptAr" class="form-control" rows="3" dir="rtl"
+            placeholder="ملخص موجز لمقالة المدونة"></textarea>
+          <div class="char-counter">{{ blogForm.get('excerptAr')?.value?.length || 0 }}/500</div>
+        </div>
+
+        <!-- Content -->
+        <div class="form-group">
+          <label for="content">
+            Content (English) <span class="required">*</span>
+          </label>
+          <quill-editor id="content" formControlName="content" format="html" [modules]="quillConfig"
+            [styles]="{height: '350px'}" placeholder="Write your blog post content here..."></quill-editor>
+          <div class="invalid-feedback d-block" *ngIf="content?.touched && content?.invalid">
+            <div *ngIf="content?.errors?.['required']">Content is required</div>
+          </div>
+        </div>
+
+        <!-- Content (Arabic) -->
+        <div class="form-group">
+          <label for="contentAr">
+            Content (Arabic)
+          </label>
+          <quill-editor id="contentAr" formControlName="contentAr" format="html" [modules]="quillConfig" dir="rtl"
+            [styles]="{height: '350px'}" placeholder="اكتب محتوى تدوينتك هنا..."></quill-editor>
+        </div>
+      </div>
+
+      <!-- Right Column - Sidebar -->
+      <div class="sidebar">
+        <!-- Publish Status -->
+        <div class="card">
+          <h3>Publish Status</h3>
+          <div class="form-group">
+            <label class="checkbox">
+              <input type="checkbox" formControlName="isPublished">
+              <span>Publish immediately</span>
+            </label>
+            <small class="form-text text-muted">
+              Uncheck to save as draft
+            </small>
+          </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="card">
+          <h3>Categories (English)</h3>
+          <div formArrayName="categories">
+            <div *ngFor="let category of categories.controls; let i = index" class="array-item">
+              <input type="text" [formControlName]="i" class="form-control" placeholder="e.g., Technology">
+              <button type="button" class="btn-remove" (click)="removeCategory(i)" *ngIf="categories.length > 1">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+          </div>
+          <button type="button" class="btn-add" (click)="addCategory()">
+            <i class="fas fa-plus"></i> Add Category
+          </button>
+        </div>
+
+        <!-- Categories (Arabic) -->
+        <div class="card">
+          <h3>Categories (Arabic) - الفئات</h3>
+          <div formArrayName="categoriesAr">
+            <div *ngFor="let category of categoriesAr.controls; let i = index" class="array-item">
+              <input type="text" [formControlName]="i" class="form-control" dir="rtl" placeholder="مثل: تكنولوجيا">
+              <button type="button" class="btn-remove" (click)="removeCategoryAr(i)" *ngIf="categoriesAr.length > 1">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+          </div>
+          <button type="button" class="btn-add" (click)="addCategoryAr()">
+            <i class="fas fa-plus"></i> Add Category (Arabic)
+          </button>
+        </div>
+
+        <!-- Tags -->
+        <div class="card">
+          <h3>Tags (English)</h3>
+          <div formArrayName="tags">
+            <div *ngFor="let tag of tags.controls; let i = index" class="array-item">
+              <input type="text" [formControlName]="i" class="form-control" placeholder="e.g., javascript">
+              <button type="button" class="btn-remove" (click)="removeTag(i)" *ngIf="tags.length > 1">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+          </div>
+          <button type="button" class="btn-add" (click)="addTag()">
+            <i class="fas fa-plus"></i> Add Tag
+          </button>
+        </div>
+
+        <!-- Tags (Arabic) -->
+        <div class="card">
+          <h3>Tags (Arabic) - العلامات</h3>
+          <div formArrayName="tagsAr">
+            <div *ngFor="let tag of tagsAr.controls; let i = index" class="array-item">
+              <input type="text" [formControlName]="i" class="form-control" dir="rtl" placeholder="مثل: جافا سكريبت">
+              <button type="button" class="btn-remove" (click)="removeTagAr(i)" *ngIf="tagsAr.length > 1">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+          </div>
+          <button type="button" class="btn-add" (click)="addTagAr()">
+            <i class="fas fa-plus"></i> Add Tag (Arabic)
+          </button>
+        </div>
+
+        <!-- Featured Image -->
+        <div class="card">
+          <h3>Featured Image</h3>
+          <div class="image-upload" *ngIf="!featuredImagePreview">
+            <input type="file" id="featuredImage" accept="image/*" (change)="onFeaturedImageSelected($event)"
+              class="file-input">
+            <label for="featuredImage" class="upload-label">
+              <i class="fas fa-cloud-upload-alt"></i>
+              <span>Click to upload</span>
+              <small>JPG, PNG, GIF up to 10MB</small>
+            </label>
+          </div>
+          <div class="image-preview" *ngIf="featuredImagePreview">
+            <img [src]="featuredImagePreview"
+              [alt]="blogForm.get('featuredImageAlt')?.value || 'Featured image preview'">
+            <button type="button" class="btn-remove-image" (click)="removeFeaturedImage()">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+
+          <!-- Featured Image Alt Tags -->
+          <div class="form-group mt-3">
+            <label for="featuredImageAlt">Alt Text (English)</label>
+            <input type="text" id="featuredImageAlt" formControlName="featuredImageAlt" class="form-control"
+              placeholder="Descriptive text for SEO">
+          </div>
+          <div class="form-group">
+            <label for="featuredImageAltAr">Alt Text (Arabic)</label>
+            <input type="text" id="featuredImageAltAr" formControlName="featuredImageAltAr" class="form-control"
+              dir="rtl" placeholder="نص وصفي لمحركات البحث">
+          </div>
+        </div>
+
+        <!-- Image Gallery -->
+        <div class="card">
+          <h3>Image Gallery</h3>
+          <div class="gallery-grid" *ngIf="galleryPreviews.length > 0">
+            <div class="gallery-item" *ngFor="let img of galleryPreviews; let i = index">
+              <img [src]="img" [alt]="blogForm.get('galleryAlt')?.value || 'Gallery image ' + (i + 1)">
+              <button type="button" class="btn-remove-image" (click)="removeGalleryImage(i)">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Gallery Alt Tags -->
+          <div class="form-group mt-3">
+            <label for="galleryAlt">Gallery Alt Text (EN)</label>
+            <input type="text" id="galleryAlt" formControlName="galleryAlt" class="form-control"
+              placeholder="Descriptive text for gallery images">
+          </div>
+          <div class="form-group">
+            <label for="galleryAltAr">Gallery Alt Text (AR)</label>
+            <input type="text" id="galleryAltAr" formControlName="galleryAltAr" class="form-control" dir="rtl"
+              placeholder="نص وصفي لصور المعرض">
+          </div>
+          <div class="image-upload">
+            <input type="file" id="galleryImages" accept="image/*" multiple (change)="onGalleryImagesSelected($event)"
+              class="file-input">
+            <label for="galleryImages" class="upload-label small">
+              <i class="fas fa-plus"></i>
+              <span>Add Images</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- SEO Settings -->
+        <div class="card">
+          <h3>SEO Settings (English)</h3>
+
+          <div class="form-group">
+            <label for="metaTitle">Meta Title</label>
+            <input type="text" id="metaTitle" formControlName="metaTitle" class="form-control" placeholder="SEO title">
+            <div class="char-counter">{{ metaTitle?.value?.length || 0 }}/200</div>
+          </div>
+
+          <div class="form-group">
+            <label for="metaDescription">Meta Description</label>
+            <textarea id="metaDescription" formControlName="metaDescription" class="form-control" rows="3"
+              placeholder="SEO description"></textarea>
+            <div class="char-counter">{{ metaDescription?.value?.length || 0 }}/500</div>
+          </div>
+
+          <div class="form-group">
+            <label for="metaKeywords">Meta Keywords</label>
+            <input type="text" id="metaKeywords" formControlName="metaKeywords" class="form-control"
+              placeholder="keyword1, keyword2, keyword3">
+          </div>
+        </div>
+
+        <!-- SEO Settings (Arabic) -->
+        <div class="card">
+          <h3>SEO Settings (Arabic) - إعدادات تحسين محركات البحث</h3>
+
+          <div class="form-group">
+            <label for="metaTitleAr">Meta Title (Arabic)</label>
+            <input type="text" id="metaTitleAr" formControlName="metaTitleAr" class="form-control" dir="rtl"
+              placeholder="عنوان SEO">
+            <div class="char-counter">{{ metaTitleAr?.value?.length || 0 }}/200</div>
+          </div>
+
+          <div class="form-group">
+            <label for="metaDescriptionAr">Meta Description (Arabic)</label>
+            <textarea id="metaDescriptionAr" formControlName="metaDescriptionAr" class="form-control" rows="3" dir="rtl"
+              placeholder="وصف SEO"></textarea>
+            <div class="char-counter">{{ metaDescriptionAr?.value?.length || 0 }}/500</div>
+          </div>
+
+          <div class="form-group">
+            <label for="metaKeywordsAr">Meta Keywords (Arabic)</label>
+            <input type="text" id="metaKeywordsAr" formControlName="metaKeywordsAr" class="form-control" dir="rtl"
+              placeholder="كلمة1, كلمة2, كلمة3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

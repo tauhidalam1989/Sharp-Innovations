@@ -1,0 +1,242 @@
+<!-- public-blog.component.html -->
+<div class="public-blog-container">
+    <!-- Animated SVG Background Elements -->
+    <div class="animated-bg">
+        <!-- Floating Orbs -->
+        <svg class="orb orb-1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="80" fill="url(#gradient1)" opacity="0.6">
+                <animate attributeName="r" values="80;85;80" dur="8s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0.6;0.8;0.6" dur="5s" repeatCount="indefinite" />
+            </circle>
+            <defs>
+                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#2563eb;stop-opacity:0.2" />
+                    <stop offset="100%" style="stop-color:#0f3460;stop-opacity:0.1" />
+                </linearGradient>
+            </defs>
+        </svg>
+
+        <svg class="orb orb-2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="60" fill="url(#gradient2)" opacity="0.5">
+                <animate attributeName="r" values="60;70;60" dur="6s" repeatCount="indefinite" />
+                <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="12s"
+                    repeatCount="indefinite" />
+            </circle>
+            <defs>
+                <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#0f3460;stop-opacity:0.15" />
+                    <stop offset="100%" style="stop-color:#2563eb;stop-opacity:0.05" />
+                </linearGradient>
+            </defs>
+        </svg>
+
+        <!-- Floating Lines SVG -->
+        <svg class="floating-lines" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,300 Q200,250 400,300 T800,300" stroke="url(#lineGradient)" stroke-width="1" fill="none"
+                opacity="0.3">
+                <animate attributeName="d" values="M0,300 Q200,250 400,300 T800,300; 
+                           M0,300 Q200,350 400,300 T800,300; 
+                           M0,300 Q200,250 400,300 T800,300" dur="10s" repeatCount="indefinite" />
+            </path>
+            <path d="M0,400 Q250,350 500,400 T800,400" stroke="url(#lineGradient)" stroke-width="1" fill="none"
+                opacity="0.2">
+                <animate attributeName="d" values="M0,400 Q250,350 500,400 T800,400; 
+                           M0,400 Q250,450 500,400 T800,400; 
+                           M0,400 Q250,350 500,400 T800,400" dur="12s" repeatCount="indefinite" />
+            </path>
+            <defs>
+                <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#2563eb;stop-opacity:0.1" />
+                    <stop offset="50%" style="stop-color:#0f3460;stop-opacity:0.2" />
+                    <stop offset="100%" style="stop-color:#2563eb;stop-opacity:0.1" />
+                </linearGradient>
+            </defs>
+        </svg>
+
+        <!-- Animated Dots Grid -->
+        <svg class="dots-grid" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+            <pattern id="dotPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                <circle cx="5" cy="5" r="2" fill="#2563eb" opacity="0.2">
+                    <animate attributeName="r" values="2;3;2" dur="3s" repeatCount="indefinite" />
+                    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="4s" repeatCount="indefinite" />
+                </circle>
+            </pattern>
+            <rect width="100%" height="100%" fill="url(#dotPattern)" />
+        </svg>
+
+        <!-- Animated Wave SVG -->
+        <svg class="wave-svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path fill="url(#waveGradient)" fill-opacity="0.1">
+                <animate attributeName="d"
+                    values="M0,160L48,176C96,192,192,224,288,224C384,224,480,192,576,165.3C672,139,768,117,864,122.7C960,128,1056,160,1152,176C1248,192,1344,192,1392,192L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;
+                           M0,224L48,208C96,192,192,160,288,154.7C384,149,480,171,576,181.3C672,192,768,192,864,176C960,160,1056,128,1152,122.7C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;
+                           M0,160L48,176C96,192,192,224,288,224C384,224,480,192,576,165.3C672,139,768,117,864,122.7C960,128,1056,160,1152,176C1248,192,1344,192,1392,192L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                    dur="15s" repeatCount="indefinite" />
+            </path>
+            <defs>
+                <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#2563eb;stop-opacity:0.2" />
+                    <stop offset="50%" style="stop-color:#0f3460;stop-opacity:0.3" />
+                    <stop offset="100%" style="stop-color:#2563eb;stop-opacity:0.2" />
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+
+    <!-- Header - more compact -->
+    <div class="page-header text-center py-4">
+        <h1 class="fw-bold">{{ 'BLOG_LISTING.TITLE' | translate }}</h1>
+        <p class="lead text-muted mb-0">{{ 'BLOG_LISTING.SUBTITLE' | translate }}</p>
+    </div>
+
+    <!-- Filters - more compact -->
+    <div class="container mb-4">
+        <div class="filters-card rounded-4 p-3">
+            <div class="row g-2">
+                <div class="col-md-4">
+                    <div class="search-box">
+                        <input type="text" [(ngModel)]="searchTerm" (keyup.enter)="onSearch()"
+                            [placeholder]="currentLang === 'ar' ? 'البحث في المقالات...' : 'Search articles...'"
+                            class="form-control rounded-pill px-3">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <select [(ngModel)]="categoryFilter" (change)="onFilterChange()"
+                        class="form-select rounded-pill px-3">
+                        <option value="">{{ currentLang === 'ar' ? 'كل الفئات' : 'All Categories' }}</option>
+                        <ng-container *ngIf="currentLang === 'en'">
+                            <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+                        </ng-container>
+                        <ng-container *ngIf="currentLang === 'ar'">
+                            <option *ngFor="let cat of categoriesAr" [value]="cat">{{ cat }}</option>
+                        </ng-container>
+                    </select>
+                </div>
+
+                <div class="col-md-3">
+                    <select [(ngModel)]="tagFilter" (change)="onFilterChange()" class="form-select rounded-pill px-3">
+                        <option value="">{{ currentLang === 'ar' ? 'كل العلامات' : 'All Tags' }}</option>
+                        <ng-container *ngIf="currentLang === 'en'">
+                            <option *ngFor="let tag of tags" [value]="tag">{{ tag }}</option>
+                        </ng-container>
+                        <ng-container *ngIf="currentLang === 'ar'">
+                            <option *ngFor="let tag of tagsAr" [value]="tag">{{ tag }}</option>
+                        </ng-container>
+                    </select>
+                </div>
+
+                <div class="col-md-2" *ngIf="searchTerm || categoryFilter || tagFilter">
+                    <button class="btn btn-outline-secondary w-100 rounded-pill py-2" (click)="clearFilters()">
+                        {{ currentLang === 'ar' ? 'مسح' : 'Clear' }}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div class="loading-spinner text-center py-5" *ngIf="loading">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Blog Posts Grid -->
+    <div class="container" *ngIf="!loading">
+        <div class="row g-3">
+            <div class="col-lg-4 col-md-6" *ngFor="let blog of blogs">
+                <div class="card blog-card h-100 border-0 shadow-sm rounded-4 overflow-hidden" style="cursor: pointer;"
+                    (click)="viewBlog(blog.slug, blog.id)">
+                    <div class="card-img-wrapper" style="height: 180px; overflow: hidden; position: relative;">
+                        <img [src]="getImageUrl(blog.featuredImage) || 'assets/img/placeholder.jpg'"
+                            class="card-img-top h-100 w-100 object-fit-cover" [alt]="blog.title">
+                        <div class="overlay position-absolute bottom-0 w-100 h-50"
+                            style="background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);"></div>
+
+                        <!-- Animated SVG Badge on Image -->
+                        <svg class="card-badge-svg" viewBox="0 0 50 50">
+                            <circle cx="25" cy="25" r="12" fill="white" opacity="0.9">
+                                <animate attributeName="r" values="12;14;12" dur="2s" repeatCount="indefinite" />
+                            </circle>
+                            <path d="M18 25 L23 30 L32 20" stroke="#2563eb" stroke-width="2" fill="none">
+                                <animate attributeName="stroke-dashoffset" values="0;100;0" dur="3s"
+                                    repeatCount="indefinite" />
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="card-body p-3" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'"
+                        [class.text-end]="currentLang === 'ar'">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <small class="text-primary fw-medium" *ngIf="hasTags(blog)">{{
+                                currentLang === 'ar' ? (blog.categoriesAr?.[0] || blog.tagsAr?.[0] || 'مقال') :
+                                (blog.categories?.[0] || blog.tags?.[0] || 'Article') }}</small>
+                            <small class="text-muted small"><i class="far fa-calendar-alt me-1"></i> {{ blog.createdAt |
+                                date:'mediumDate' }}</small>
+                        </div>
+                        <h6 class="card-title fw-semibold mb-2">
+                            {{ currentLang === 'ar' && blog.titleAr ? blog.titleAr : blog.title }}
+                        </h6>
+                        <p class="card-text text-muted small">
+                            {{ currentLang === 'ar' && blog.excerptAr ? blog.excerptAr : (blog.excerpt || blog.content |
+                            slice:0:100) }}...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- No Results -->
+        <div class="text-center py-5" *ngIf="blogs.length === 0">
+            <svg class="no-results-svg" width="120" height="120" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" fill="none" stroke="#e2e8f0" stroke-width="2">
+                    <animate attributeName="r" values="40;42;40" dur="3s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="35" cy="40" r="3" fill="#2563eb" opacity="0.5">
+                    <animate attributeName="r" values="3;4;3" dur="2s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="65" cy="40" r="3" fill="#2563eb" opacity="0.5">
+                    <animate attributeName="r" values="3;4;3" dur="2s" repeatCount="indefinite" begin="0.5s" />
+                </circle>
+                <path d="M35 60 Q50 70 65 60" stroke="#94a3b8" stroke-width="2" fill="none">
+                    <animate attributeName="d" values="M35 60 Q50 70 65 60; M35 65 Q50 75 65 65; M35 60 Q50 70 65 60"
+                        dur="4s" repeatCount="indefinite" />
+                </path>
+            </svg>
+            <h3 class="fw-bold">{{ currentLang === 'ar' ? 'لم يتم العثور على مقالات' : 'No articles found' }}</h3>
+            <p class="text-muted">{{ currentLang === 'ar' ? 'حاول تعديل الفلاتر للعثور على ما تبحث عنه.' : 'Try
+                adjusting your filters to find what you\'re looking for.' }}</p>
+        </div>
+
+        <!-- Pagination -->
+        <div class="d-flex justify-content-center mt-5 mb-5" *ngIf="totalItems > pageSize">
+            <ul class="pagination">
+                <li class="page-item" [class.disabled]="currentPage === 1">
+                    <button class="page-link" (click)="onPageChange(currentPage - 1)">
+                        <svg class="pagination-icon" width="16" height="16" viewBox="0 0 16 16">
+                            <path d="M10 12 L6 8 L10 4" stroke="currentColor" stroke-width="2" fill="none">
+                                <animate attributeName="stroke-dashoffset" values="0;5;0" dur="2s"
+                                    repeatCount="indefinite" />
+                            </path>
+                        </svg>
+                        {{ currentLang === 'ar' ? 'السابق' : 'Previous' }}
+                    </button>
+                </li>
+                <li class="page-item active">
+                    <span class="page-link">{{ currentPage }}</span>
+                </li>
+                <li class="page-item" [class.disabled]="blogs.length < pageSize">
+                    <button class="page-link" (click)="onPageChange(currentPage + 1)">
+                        {{ currentLang === 'ar' ? 'التالي' : 'Next' }}
+                        <svg class="pagination-icon" width="16" height="16" viewBox="0 0 16 16">
+                            <path d="M6 4 L10 8 L6 12" stroke="currentColor" stroke-width="2" fill="none">
+                                <animate attributeName="stroke-dashoffset" values="0;5;0" dur="2s"
+                                    repeatCount="indefinite" />
+                            </path>
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

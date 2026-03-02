@@ -1,0 +1,990 @@
+﻿<div class="product-form-container">
+  <!-- Header -->
+  <div class="page-header">
+    <h1>{{ isEditMode ? 'Edit Product' : 'Create New Product' }}</h1>
+    <div class="header-actions">
+      <button class="btn-secondary" (click)="onCancel()">
+        <i class="fas fa-times"></i>
+        Cancel
+      </button>
+      <button class="btn-primary" (click)="onSubmit()" [disabled]="submitting">
+        <i class="fas" [ngClass]="submitting ? 'fa-spinner fa-spin' : 'fa-save'"></i>
+        {{ submitting ? 'Saving...' : (isEditMode ? 'Update' : 'Create') }}
+      </button>
+    </div>
+  </div>
+
+  <!-- Error Alert -->
+  <div class="alert alert-danger" *ngIf="error">
+    <i class="fas fa-exclamation-circle"></i>
+    {{ error }}
+  </div>
+
+  <!-- Loading Spinner -->
+  <div class="loading-spinner" *ngIf="loading">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Product Form -->
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()" *ngIf="!loading" class="product-form">
+
+    <!-- Tabs Navigation -->
+
+    <div class="form-tabs">
+      <button type="button" class="tab-btn" [class.active]="activeTab === 'basic'" (click)="setActiveTab('basic')">
+        <i class="fas fa-info-circle"></i> Basic Info
+      </button>
+      <button type="button" class="tab-btn" [class.active]="activeTab === 'hero'" (click)="setActiveTab('hero')">
+        <i class="fas fa-star"></i> Hero Section
+      </button>
+      <button type="button" class="tab-btn" [class.active]="activeTab === 'about'" (click)="setActiveTab('about')">
+        <i class="fas fa-file-alt"></i> About
+      </button>
+      <button type="button" class="tab-btn" [class.active]="activeTab === 'howItWorks'"
+        (click)="setActiveTab('howItWorks')">
+        <i class="fas fa-cogs"></i> How It Works
+      </button>
+      <button type="button" class="tab-btn" [class.active]="activeTab === 'features'"
+        (click)="setActiveTab('features')">
+        <i class="fas fa-list"></i> Key Features
+      </button>
+      <button type="button" class="tab-btn" [class.active]="activeTab === 'benefits'"
+        (click)="setActiveTab('benefits')">
+        <i class="fas fa-gift"></i> Benefits
+      </button>
+      <button type="button" class="tab-btn" [class.active]="activeTab === 'vision'" (click)="setActiveTab('vision')">
+        <i class="fas fa-eye"></i> Vision
+      </button>
+      <button type="button" class="tab-btn" [class.active]="activeTab === 'whySharp'"
+        (click)="setActiveTab('whySharp')">
+        <i class="fas fa-building"></i> Why Sharp
+      </button>
+      <button type="button" class="tab-btn" [class.active]="activeTab === 'cta'" (click)="setActiveTab('cta')">
+        <i class="fas fa-bullhorn"></i> CTA
+      </button>
+      <button type="button" class="tab-btn" [class.active]="activeTab === 'faq'" (click)="setActiveTab('faq')">
+        <i class="fas fa-question-circle"></i> FAQ
+      </button>
+      <button type="button" class="tab-btn" [class.active]="activeTab === 'seo'" (click)="setActiveTab('seo')">
+        <i class="fas fa-search"></i> SEO
+      </button>
+      <button type="button" class="tab-btn" [class.active]="activeTab === 'gallery'" (click)="setActiveTab('gallery')">
+        <i class="fas fa-images"></i> Gallery
+      </button>
+    </div>
+
+    <!-- Tab Content -->
+    <div class="tab-content">
+
+      <!-- BASIC INFO TAB -->
+      <div class="tab-pane active" *ngIf="activeTab === 'basic'">
+        <div class="form-grid">
+          <div class="main-content">
+            <div class="form-row">
+              <!-- Title English -->
+              <div class="form-group half">
+                <label for="title">Title (English) <span class="required">*</span></label>
+                <input type="text" id="title" formControlName="title" class="form-control"
+                  [class.is-invalid]="title?.touched && title?.invalid" placeholder="Enter product title (EN)"
+                  (blur)="generateSlug()">
+                <div class="char-counter">{{ title?.value?.length || 0 }}/200</div>
+                <div class="invalid-feedback" *ngIf="title?.touched && title?.invalid">
+                  <div *ngIf="title?.errors?.['required']">Title is required</div>
+                  <div *ngIf="title?.errors?.['maxlength']">Title cannot exceed 200 characters</div>
+                </div>
+              </div>
+
+              <!-- Title Arabic -->
+              <div class="form-group half">
+                <label for="titleAr">Title (Arabic)</label>
+                <input type="text" id="titleAr" formControlName="titleAr" class="form-control" dir="rtl"
+                  placeholder="أدخل عنوان المنتج (عربي)">
+                <div class="char-counter">{{ productForm.get('titleAr')?.value?.length || 0 }}/200</div>
+              </div>
+            </div>
+
+            <!-- Slug -->
+            <div class="form-group">
+              <label for="slug">
+                Slug <span class="required">*</span>
+              </label>
+              <input type="text" id="slug" formControlName="slug" class="form-control"
+                [class.is-invalid]="slug?.touched && slug?.invalid" placeholder="enter-url-slug-here">
+              <small class="form-text text-muted">
+                URL-friendly version of the title. Use lowercase letters, numbers, and hyphens.
+              </small>
+              <div class="invalid-feedback" *ngIf="slug?.touched && slug?.invalid">
+                <div *ngIf="slug?.errors?.['required']">Slug is required</div>
+                <div *ngIf="slug?.errors?.['pattern']">Slug can only contain lowercase letters, numbers, and hyphens
+                </div>
+              </div>
+            </div>
+
+            <!-- Category -->
+            <div class="form-group">
+              <label for="categoryId">Category</label>
+              <select id="categoryId" formControlName="categoryId" class="form-control">
+                <option [ngValue]="null">None</option>
+                <option *ngFor="let cat of existingCategories" [value]="cat.id">
+                  {{ cat.name }} <span *ngIf="cat.nameAr"> - {{ cat.nameAr }}</span>
+                </option>
+              </select>
+            </div>
+
+            <!-- Card Icon -->
+            <div class="form-group">
+              <label>Card Icon <span class="required">*</span></label>
+              <div class="icon-selector" style="display: flex; gap: 10px; align-items: center;">
+                <input type="text" formControlName="cardIcon" class="form-control" list="cardIconList" style="flex: 1;"
+                  placeholder="e.g., fas fa-city">
+                <datalist id="cardIconList">
+                  <option *ngFor="let iconOpt of availableIcons" [value]="iconOpt.class">{{ iconOpt.name }}</option>
+                </datalist>
+                <div class="icon-preview"
+                  style="width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border: 1px solid #ced4da; border-radius: 4px; font-size: 20px;">
+                  <i [class]="productForm.get('cardIcon')?.value || 'fas fa-cog'"></i>
+                </div>
+              </div>
+              <small class="form-text text-muted">Type any Font Awesome class, or select a common one from the
+                dropdown</small>
+            </div>
+
+            <!-- Short Description -->
+            <div class="form-row">
+              <div class="form-group half">
+                <label for="shortDescription">Short Description (English)</label>
+                <textarea id="shortDescription" formControlName="shortDescription" class="form-control" rows="2"
+                  placeholder="Brief description of the product (EN)"></textarea>
+                <div class="char-counter">{{ productForm.get('shortDescription')?.value?.length || 0 }}/500</div>
+              </div>
+
+              <div class="form-group half">
+                <label for="shortDescriptionAr">Short Description (Arabic)</label>
+                <textarea id="shortDescriptionAr" formControlName="shortDescriptionAr" class="form-control" rows="2"
+                  dir="rtl" placeholder="وصف موجز للمنتج (عربي)"></textarea>
+                <div class="char-counter">{{ productForm.get('shortDescriptionAr')?.value?.length || 0 }}/500</div>
+              </div>
+            </div>
+
+            <!-- Meta Description (for cards) -->
+            <div class="form-row">
+              <div class="form-group half">
+                <label for="metaDescription">Meta Description (English)</label>
+                <textarea id="metaDescription" formControlName="metaDescription" class="form-control" rows="2"
+                  placeholder="Description for social sharing and search results (EN)"></textarea>
+                <div class="char-counter">{{ metaDescription?.value?.length || 0 }}/500</div>
+              </div>
+              <div class="form-group half">
+                <label for="metaDescriptionAr">Meta Description (Arabic)</label>
+                <textarea id="metaDescriptionAr" formControlName="metaDescriptionAr" class="form-control" rows="2"
+                  dir="rtl" placeholder="وصف الميتا لنتائج البحث (عربي)"></textarea>
+                <div class="char-counter">{{ productForm.get('metaDescriptionAr')?.value?.length || 0 }}/500</div>
+              </div>
+            </div>
+
+            <!-- Order and Publish Status -->
+            <div class="form-row">
+              <div class="form-group half">
+                <label for="order">
+                  Display Order <span class="required">*</span>
+                </label>
+                <input type="number" id="order" formControlName="order" class="form-control"
+                  [class.is-invalid]="order?.touched && order?.invalid" min="0">
+                <small class="form-text text-muted">Lower numbers appear first</small>
+                <div class="invalid-feedback" *ngIf="order?.touched && order?.invalid">
+                  <div *ngIf="order?.errors?.['required']">Order is required</div>
+                  <div *ngIf="order?.errors?.['min']">Order must be 0 or greater</div>
+                </div>
+              </div>
+
+              <div class="form-group half">
+                <label class="checkbox">
+                  <input type="checkbox" formControlName="isPublished">
+                  <span>Publish immediately</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HERO SECTION TAB -->
+      <div class="tab-pane active" *ngIf="activeTab === 'hero'">
+        <div class="card">
+          <h3>Hero Section</h3>
+          <div class="form-grid">
+            <div class="main-content">
+              <!-- Hero Title -->
+              <div class="form-row">
+                <div class="form-group half">
+                  <label for="heroTitle">Hero Title (English)</label>
+                  <input type="text" id="heroTitle" formControlName="heroTitle" class="form-control"
+                    placeholder="Enter hero title (EN)">
+                </div>
+                <div class="form-group half">
+                  <label for="heroTitleAr">Hero Title (Arabic)</label>
+                  <input type="text" id="heroTitleAr" formControlName="heroTitleAr" class="form-control" dir="rtl"
+                    placeholder="أدخل عنوان القسم (عربي)">
+                </div>
+              </div>
+
+              <!-- Hero Subtitle -->
+              <div class="form-row">
+                <div class="form-group half">
+                  <label for="heroSubtitle">Hero Subtitle (English)</label>
+                  <input type="text" id="heroSubtitle" formControlName="heroSubtitle" class="form-control"
+                    placeholder="Enter hero subtitle (EN)">
+                </div>
+                <div class="form-group half">
+                  <label for="heroSubtitleAr">Hero Subtitle (Arabic)</label>
+                  <input type="text" id="heroSubtitleAr" formControlName="heroSubtitleAr" class="form-control" dir="rtl"
+                    placeholder="العنوان الفرعي (عربي)">
+                </div>
+              </div>
+
+              <!-- Hero Description -->
+              <div class="form-row">
+                <div class="form-group half">
+                  <label for="heroDescription">Hero Description (English)</label>
+                  <textarea id="heroDescription" formControlName="heroDescription" class="form-control" rows="3"
+                    placeholder="Enter hero description (EN)"></textarea>
+                </div>
+                <div class="form-group half">
+                  <label for="heroDescriptionAr">Hero Description (Arabic)</label>
+                  <textarea id="heroDescriptionAr" formControlName="heroDescriptionAr" class="form-control" rows="3"
+                    dir="rtl" placeholder="وصف القسم (عربي)"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="sidebar">
+              <!-- Hero Icon -->
+              <div class="card">
+                <h4>Hero Banner Image / Icon</h4>
+                <div class="form-group" style="margin-bottom: 20px;">
+                  <label>FontAwesome Class</label>
+                  <div class="icon-selector" style="display: flex; gap: 10px; align-items: center;">
+                    <input type="text" formControlName="heroIcon" class="form-control" list="iconList" style="flex: 1;"
+                      placeholder="e.g. fas fa-cogs">
+                    <div class="icon-preview"
+                      style="width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border: 1px solid #ced4da; border-radius: 4px; font-size: 20px;">
+                      <i [class]="productForm.get('heroIcon')?.value || 'fas fa-cog'"></i>
+                    </div>
+                  </div>
+                  <small class="form-text text-muted">Type any Font Awesome class, or select a common
+                    one from the dropdown</small>
+                </div>
+
+                <div class="image-upload" *ngIf="!heroIconPreview && !productForm.get('heroIcon')?.value">
+                  <input type="file" id="heroIconFile" accept="image/*" (change)="onHeroIconSelected($event)"
+                    class="file-input">
+                  <label for="heroIconFile" class="upload-label small">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <span>Upload Custom Image</span>
+                  </label>
+                </div>
+                <div class="image-preview small" *ngIf="heroIconPreview && !productForm.get('heroIcon')?.value">
+                  <img [src]="heroIconPreview"
+                    [alt]="productForm.get('heroImageAlt')?.value || 'Hero banner image preview'">
+                  <button type="button" class="btn-remove-image" (click)="removeHeroIcon()">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+
+                <!-- Hero Image Alt Tags -->
+                <div class="form-group mt-3">
+                  <label for="heroImageAlt">Banner Alt Text (EN)</label>
+                  <input type="text" id="heroImageAlt" formControlName="heroImageAlt" class="form-control"
+                    placeholder="Descriptive text for image">
+                </div>
+                <div class="form-group">
+                  <label for="heroImageAltAr">Banner Alt Text (AR)</label>
+                  <input type="text" id="heroImageAltAr" formControlName="heroImageAltAr" class="form-control" dir="rtl"
+                    placeholder="نص وصفي للصورة">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ABOUT SECTION TAB -->
+      <div class="tab-pane active" *ngIf="activeTab === 'about'">
+        <div class="card">
+          <h3>About Section</h3>
+
+          <div class="form-grid">
+            <div class="main-content">
+              <!-- About Title -->
+              <div class="form-row">
+                <div class="form-group half">
+                  <label for="aboutTitle">About Title (English)</label>
+                  <input type="text" id="aboutTitle" formControlName="aboutTitle" class="form-control"
+                    placeholder="Enter about section title (EN)">
+                </div>
+                <div class="form-group half">
+                  <label for="aboutTitleAr">About Title (Arabic)</label>
+                  <input type="text" id="aboutTitleAr" formControlName="aboutTitleAr" class="form-control" dir="rtl"
+                    placeholder="عنوان قسم حول (عربي)">
+                </div>
+              </div>
+
+              <!-- About Content -->
+              <div class="form-row">
+                <div class="form-group half">
+                  <label for="aboutContent">About Content (English)</label>
+                  <textarea id="aboutContent" formControlName="aboutContent" class="form-control editor" rows="8"
+                    placeholder="Enter about content (EN)"></textarea>
+                </div>
+                <div class="form-group half">
+                  <label for="aboutContentAr">About Content (Arabic)</label>
+                  <textarea id="aboutContentAr" formControlName="aboutContentAr" class="form-control editor" rows="8"
+                    dir="rtl" placeholder="محتوى قسم حول (عربي)"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="sidebar">
+              <!-- About Image -->
+              <div class="card">
+                <h4>About Image</h4>
+                <div class="image-upload" *ngIf="!aboutImagePreview">
+                  <input type="file" id="aboutImage" accept="image/*" (change)="onAboutImageSelected($event)"
+                    class="file-input">
+                  <label for="aboutImage" class="upload-label small">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <span>Upload About Image</span>
+                  </label>
+                </div>
+                <div class="image-preview small" *ngIf="aboutImagePreview">
+                  <img [src]="aboutImagePreview"
+                    [alt]="productForm.get('aboutImageAlt')?.value || 'About image preview'">
+                  <button type="button" class="btn-remove-image" (click)="removeAboutImage()">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+
+                <!-- About Image Alt Tags -->
+                <div class="form-group mt-3">
+                  <label for="aboutImageAlt">Image Alt Text (EN)</label>
+                  <input type="text" id="aboutImageAlt" formControlName="aboutImageAlt" class="form-control"
+                    placeholder="Descriptive text for image">
+                </div>
+                <div class="form-group">
+                  <label for="aboutImageAltAr">Image Alt Text (AR)</label>
+                  <input type="text" id="aboutImageAltAr" formControlName="aboutImageAltAr" class="form-control"
+                    dir="rtl" placeholder="نص وصفي للصورة">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOW IT WORKS TAB -->
+      <div class="tab-pane active" *ngIf="activeTab === 'howItWorks'">
+        <div class="card">
+          <h3>How It Works - Cards</h3>
+          <p class="section-intro">Add cards showing how the solution works</p>
+
+          <div formArrayName="howItWorks">
+            <div *ngFor="let item of howItWorks.controls; let i = index" class="repeatable-item" [formGroupName]="i">
+              <div class="item-header">
+                <h4>Card {{ i + 1 }}</h4>
+                <button type="button" class="btn-remove" (click)="removeHowItWorkItem(i)" *ngIf="howItWorks.length > 1">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+
+              <div class="form-group">
+                <label>Icon Class <span class="required">*</span></label>
+                <div class="icon-selector" style="display: flex; gap: 10px; align-items: center;">
+                  <input type="text" formControlName="icon" class="form-control" list="iconList" style="flex: 1;"
+                    placeholder="e.g., fas fa-database">
+                  <datalist id="iconList">
+                    <option *ngFor="let iconOpt of availableIcons" [value]="iconOpt.class">{{ iconOpt.name }}</option>
+                  </datalist>
+                  <div class="icon-preview"
+                    style="width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border: 1px solid #ced4da; border-radius: 4px; font-size: 20px;">
+                    <i [class]="item.get('icon')?.value || 'fas fa-question'"></i>
+                  </div>
+                </div>
+                <small class="form-text text-muted">Type any Font Awesome class, or select a common one from the
+                  dropdown</small>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group half">
+                  <label>Title (English) <span class="required">*</span></label>
+                  <input type="text" formControlName="title" class="form-control" placeholder="e.g., Collecting Data">
+                </div>
+                <div class="form-group half">
+                  <label>Title (Arabic)</label>
+                  <input type="text" formControlName="titleAr" class="form-control" dir="rtl"
+                    placeholder="عنوان البطاقة (عربي)">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group half">
+                  <label>Description (English) <span class="required">*</span></label>
+                  <textarea formControlName="description" class="form-control" rows="3"
+                    placeholder="Enter description"></textarea>
+                </div>
+                <div class="form-group half">
+                  <label>Description (Arabic)</label>
+                  <textarea formControlName="descriptionAr" class="form-control" rows="3" dir="rtl"
+                    placeholder="وصف البطاقة (عربي)"></textarea>
+                </div>
+              </div>
+
+              <hr *ngIf="i < howItWorks.length - 1">
+            </div>
+          </div>
+
+          <button type="button" class="btn-add" (click)="addHowItWorkItem()">
+            <i class="fas fa-plus"></i> Add Card
+          </button>
+        </div>
+      </div>
+
+      <!-- KEY FEATURES TAB -->
+      <div class="tab-pane active" *ngIf="activeTab === 'features'">
+        <div class="card">
+          <h3>Key Features Section</h3>
+
+          <!-- Key Features Title -->
+          <div class="form-row">
+            <div class="form-group half">
+              <label for="keyFeaturesTitle">Section Title (English)</label>
+              <input type="text" id="keyFeaturesTitle" formControlName="keyFeaturesTitle" class="form-control"
+                placeholder="Enter key features section title">
+            </div>
+            <div class="form-group half">
+              <label for="keyFeaturesTitleAr">Section Title (Arabic)</label>
+              <input type="text" id="keyFeaturesTitleAr" formControlName="keyFeaturesTitleAr" class="form-control"
+                dir="rtl" placeholder="عنوان الميزات (عربي)">
+            </div>
+          </div>
+
+          <!-- Key Features Images -->
+          <div class="form-group">
+            <h4>Feature Images</h4>
+            <div class="image-upload">
+              <input type="file" id="keyFeaturesImages" accept="image/*" multiple
+                (change)="onKeyFeaturesImagesSelected($event)" class="file-input">
+              <label for="keyFeaturesImages" class="upload-label">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <span>Upload Feature Images</span>
+                <small>Upload large image and two small images</small>
+              </label>
+            </div>
+
+            <div class="gallery-grid" *ngIf="keyFeaturesImagePreviews.length > 0">
+              <div class="gallery-item" *ngFor="let img of keyFeaturesImagePreviews; let i = index">
+                <img [src]="img" [alt]="productForm.get('keyFeaturesImageAlt')?.value || 'Feature image ' + (i + 1)">
+                <button type="button" class="btn-remove-image" (click)="removeKeyFeaturesImage(i)">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Key Features Image Alt Tags -->
+            <div class="form-group mt-3">
+              <label for="keyFeaturesImageAlt">Image Alt Text (EN)</label>
+              <input type="text" id="keyFeaturesImageAlt" formControlName="keyFeaturesImageAlt" class="form-control"
+                placeholder="Descriptive text for feature images">
+            </div>
+            <div class="form-group">
+              <label for="keyFeaturesImageAltAr">Image Alt Text (AR)</label>
+              <input type="text" id="keyFeaturesImageAltAr" formControlName="keyFeaturesImageAltAr" class="form-control"
+                dir="rtl" placeholder="نص وصفي لصور الميزات">
+            </div>
+          </div>
+
+          <!-- Key Features List -->
+          <div class="form-row">
+            <div class="form-group half">
+              <h4>Features List (English)</h4>
+              <div formArrayName="keyFeaturesList">
+                <div *ngFor="let feature of keyFeaturesList.controls; let i = index" class="repeatable-item mb-3"
+                  [formGroupName]="i">
+                  <div class="form-group mb-2">
+                    <label>Icon Class</label>
+                    <div class="icon-selector" style="display: flex; gap: 10px; align-items: center;">
+                      <input type="text" formControlName="icon" class="form-control" list="iconList" style="flex: 1;"
+                        placeholder="e.g., fas fa-check-circle">
+                      <div class="icon-preview"
+                        style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border: 1px solid #ced4da; border-radius: 4px; font-size: 16px;">
+                        <i [class]="feature.get('icon')?.value || 'fas fa-check-circle'"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-0" style="display: flex; gap: 10px;">
+                    <input formControlName="text" class="form-control" style="flex: 1;"
+                      placeholder="Enter feature (e.g., Real-time detection)">
+                    <button type="button" class="btn-remove-small" (click)="removeKeyFeaturesListItem(i)"
+                      *ngIf="keyFeaturesList.length > 1">
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="btn-add" (click)="addKeyFeaturesListItem()">
+                <i class="fas fa-plus"></i> Add Feature
+              </button>
+            </div>
+
+            <div class="form-group half">
+              <h4>Features List (Arabic)</h4>
+              <div formArrayName="keyFeaturesListAr">
+                <div *ngFor="let feature of keyFeaturesListAr.controls; let i = index" class="repeatable-item mb-3"
+                  [formGroupName]="i">
+                  <div class="form-group mb-2">
+                    <label>Icon Class</label>
+                    <div class="icon-selector" style="display: flex; gap: 10px; align-items: center;">
+                      <input type="text" formControlName="icon" class="form-control" list="iconList" style="flex: 1;"
+                        placeholder="fas fa-check-circle">
+                      <div class="icon-preview"
+                        style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border: 1px solid #ced4da; border-radius: 4px; font-size: 16px;">
+                        <i [class]="feature.get('icon')?.value || 'fas fa-check-circle'"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-0" style="display: flex; gap: 10px;">
+                    <input formControlName="text" class="form-control" dir="rtl" style="flex: 1;"
+                      placeholder="ميزة (عربي)">
+                    <button type="button" class="btn-remove-small" (click)="removeKeyFeaturesListItemAr(i)"
+                      *ngIf="keyFeaturesListAr.length > 1">
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="btn-add" (click)="addKeyFeaturesListItemAr()">
+                <i class="fas fa-plus"></i> إضافة ميزة
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BENEFITS TAB -->
+      <div class="tab-pane active" *ngIf="activeTab === 'benefits'">
+        <div class="card">
+          <h3>Benefits Cards</h3>
+          <p class="section-intro">Add benefit cards with icons</p>
+
+          <div formArrayName="benefits">
+            <div *ngFor="let benefit of benefits.controls; let i = index" class="repeatable-item" [formGroupName]="i">
+              <div class="item-header">
+                <h4>Benefit {{ i + 1 }}</h4>
+                <button type="button" class="btn-remove" (click)="removeBenefitItem(i)" *ngIf="benefits.length > 1">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+
+              <div class="form-group">
+                <label>Icon Class <span class="required">*</span></label>
+                <div class="icon-selector" style="display: flex; gap: 10px; align-items: center;">
+                  <input type="text" formControlName="icon" class="form-control" list="iconList" style="flex: 1;"
+                    placeholder="e.g., fas fa-shield-alt">
+                  <div class="icon-preview"
+                    style="width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border: 1px solid #ced4da; border-radius: 4px; font-size: 20px;">
+                    <i [class]="benefit.get('icon')?.value || 'fas fa-question'"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group half">
+                  <label>Title (English) <span class="required">*</span></label>
+                  <input type="text" formControlName="title" class="form-control" placeholder="e.g., Increased Safety">
+                </div>
+                <div class="form-group half">
+                  <label>Title (Arabic)</label>
+                  <input type="text" formControlName="titleAr" class="form-control" dir="rtl"
+                    placeholder="عنوان الفائدة (عربي)">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group half">
+                  <label>Description (English) <span class="required">*</span></label>
+                  <textarea formControlName="description" class="form-control" rows="2"
+                    placeholder="Enter benefit description"></textarea>
+                </div>
+                <div class="form-group half">
+                  <label>Description (Arabic)</label>
+                  <textarea formControlName="descriptionAr" class="form-control" rows="2" dir="rtl"
+                    placeholder="وصف الفائدة (عربي)"></textarea>
+                </div>
+              </div>
+
+              <hr *ngIf="i < benefits.length - 1">
+            </div>
+          </div>
+
+          <button type="button" class="btn-add" (click)="addBenefitItem()">
+            <i class="fas fa-plus"></i> Add Benefit
+          </button>
+        </div>
+      </div>
+
+      <!-- VISION TAB -->
+      <div class="tab-pane active" *ngIf="activeTab === 'vision'">
+        <div class="card">
+          <h3>Vision Section</h3>
+
+          <!-- Vision Title -->
+          <div class="form-row">
+            <div class="form-group half">
+              <label for="visionTitle">Vision Title (English)</label>
+              <input type="text" id="visionTitle" formControlName="visionTitle" class="form-control"
+                placeholder="Enter vision section title">
+            </div>
+            <div class="form-group half">
+              <label for="visionTitleAr">Vision Title (Arabic)</label>
+              <input type="text" id="visionTitleAr" formControlName="visionTitleAr" class="form-control" dir="rtl"
+                placeholder="عنوان الرؤية (عربي)">
+            </div>
+          </div>
+
+          <!-- Vision Subtitle -->
+          <div class="form-row">
+            <div class="form-group half">
+              <label for="visionSubtitle">Vision Subtitle (English)</label>
+              <input type="text" id="visionSubtitle" formControlName="visionSubtitle" class="form-control"
+                placeholder="Enter vision subtitle">
+            </div>
+            <div class="form-group half">
+              <label for="visionSubtitleAr">Vision Subtitle (Arabic)</label>
+              <input type="text" id="visionSubtitleAr" formControlName="visionSubtitleAr" class="form-control" dir="rtl"
+                placeholder="العنوان الفرعي للرؤية (عربي)">
+            </div>
+          </div>
+
+          <!-- Vision Items -->
+          <h4>Vision Items (Circle Icons)</h4>
+          <div formArrayName="visionItems">
+            <div *ngFor="let item of visionItems.controls; let i = index" class="repeatable-item" [formGroupName]="i">
+              <div class="item-header">
+                <h4>Item {{ i + 1 }}</h4>
+                <button type="button" class="btn-remove" (click)="removeVisionItem(i)" *ngIf="visionItems.length > 1">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+
+              <div class="form-group">
+                <label>Icon Class <span class="required">*</span></label>
+                <div class="icon-selector" style="display: flex; gap: 10px; align-items: center;">
+                  <input type="text" formControlName="icon" class="form-control" list="iconList" style="flex: 1;"
+                    placeholder="e.g., fas fa-city">
+                  <div class="icon-preview"
+                    style="width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border: 1px solid #ced4da; border-radius: 4px; font-size: 20px;">
+                    <i [class]="item.get('icon')?.value || 'fas fa-question'"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group half">
+                  <label>Text (English) <span class="required">*</span></label>
+                  <input type="text" formControlName="text" class="form-control"
+                    placeholder="e.g., Smart city transformation">
+                </div>
+                <div class="form-group half">
+                  <label>Text (Arabic)</label>
+                  <input type="text" formControlName="textAr" class="form-control" dir="rtl" placeholder="نص (عربي)">
+                </div>
+              </div>
+
+              <hr *ngIf="i < visionItems.length - 1">
+            </div>
+          </div>
+
+          <button type="button" class="btn-add" (click)="addVisionItem()">
+            <i class="fas fa-plus"></i> Add Vision Item
+          </button>
+        </div>
+      </div>
+
+      <!-- WHY SHARP TAB -->
+      <div class="tab-pane active" *ngIf="activeTab === 'whySharp'">
+        <div class="card">
+          <h3>Why Sharp Innotech Section</h3>
+
+          <div class="form-grid">
+            <div class="main-content">
+              <!-- Why Sharp Title -->
+              <div class="form-row">
+                <div class="form-group half">
+                  <label for="whySharpTitle">Section Title (English)</label>
+                  <input type="text" id="whySharpTitle" formControlName="whySharpTitle" class="form-control"
+                    placeholder="Enter section title">
+                </div>
+                <div class="form-group half">
+                  <label for="whySharpTitleAr">Section Title (Arabic)</label>
+                  <input type="text" id="whySharpTitleAr" formControlName="whySharpTitleAr" class="form-control"
+                    dir="rtl" placeholder="عنوان القسم (عربي)">
+                </div>
+              </div>
+
+              <!-- Why Sharp Content -->
+              <div class="form-row">
+                <div class="form-group half">
+                  <label for="whySharpContent">Content (English)</label>
+                  <textarea id="whySharpContent" formControlName="whySharpContent" class="form-control editor" rows="6"
+                    placeholder="Enter content about why Sharp Innotech"></textarea>
+                </div>
+                <div class="form-group half">
+                  <label for="whySharpContentAr">Content (Arabic)</label>
+                  <textarea id="whySharpContentAr" formControlName="whySharpContentAr" class="form-control editor"
+                    rows="6" dir="rtl" placeholder="لماذا شارب إنوفيشنز (عربي)"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="sidebar">
+              <!-- Why Sharp Image -->
+              <div class="card">
+                <h4>Section Image</h4>
+                <div class="image-upload" *ngIf="!whySharpImagePreview">
+                  <input type="file" id="whySharpImage" accept="image/*" (change)="onWhySharpImageSelected($event)"
+                    class="file-input">
+                  <label for="whySharpImage" class="upload-label">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <span>Upload Image</span>
+                  </label>
+                </div>
+                <div class="image-preview" *ngIf="whySharpImagePreview">
+                  <img [src]="whySharpImagePreview"
+                    [alt]="productForm.get('whySharpImageAlt')?.value || 'Why Sharp image preview'">
+                  <button type="button" class="btn-remove-image" (click)="removeWhySharpImage()">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+
+                <!-- Why Sharp Image Alt Tags -->
+                <div class="form-group mt-3">
+                  <label for="whySharpImageAlt">Image Alt Text (EN)</label>
+                  <input type="text" id="whySharpImageAlt" formControlName="whySharpImageAlt" class="form-control"
+                    placeholder="Descriptive text for image">
+                </div>
+                <div class="form-group">
+                  <label for="whySharpImageAltAr">Image Alt Text (AR)</label>
+                  <input type="text" id="whySharpImageAltAr" formControlName="whySharpImageAltAr" class="form-control"
+                    dir="rtl" placeholder="نص وصفي للصورة">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA TAB -->
+      <div class="tab-pane active" *ngIf="activeTab === 'cta'">
+        <div class="card">
+          <h3>Call-to-Action Section</h3>
+
+          <div class="form-grid">
+            <div class="main-content">
+              <!-- CTA Title -->
+              <div class="form-row">
+                <div class="form-group half">
+                  <label for="ctaTitle">CTA Title (English)</label>
+                  <input type="text" id="ctaTitle" formControlName="ctaTitle" class="form-control"
+                    placeholder="e.g., Drive next step">
+                </div>
+                <div class="form-group half">
+                  <label for="ctaTitleAr">CTA Title (Arabic)</label>
+                  <input type="text" id="ctaTitleAr" formControlName="ctaTitleAr" class="form-control" dir="rtl"
+                    placeholder="عنوان الدعوة (عربي)">
+                </div>
+              </div>
+
+              <!-- CTA Description -->
+              <div class="form-row">
+                <div class="form-group half">
+                  <label for="ctaDescription">CTA Description (English)</label>
+                  <input type="text" id="ctaDescription" formControlName="ctaDescription" class="form-control"
+                    placeholder="e.g., Build trust">
+                </div>
+                <div class="form-group half">
+                  <label for="ctaDescriptionAr">CTA Description (Arabic)</label>
+                  <input type="text" id="ctaDescriptionAr" formControlName="ctaDescriptionAr" class="form-control"
+                    dir="rtl" placeholder="وصف الدعوة (عربي)">
+                </div>
+              </div>
+
+              <!-- Button 1 -->
+              <h4>Button 1</h4>
+              <div class="form-row">
+                <div class="form-group third">
+                  <label for="ctaButton1Text">Text (EN)</label>
+                  <input type="text" id="ctaButton1Text" formControlName="ctaButton1Text" class="form-control"
+                    placeholder="Demo">
+                </div>
+                <div class="form-group third">
+                  <label for="ctaButton1TextAr">Text (AR)</label>
+                  <input type="text" id="ctaButton1TextAr" formControlName="ctaButton1TextAr" class="form-control"
+                    dir="rtl" placeholder="عرض تجريبي">
+                </div>
+                <div class="form-group third">
+                  <label for="ctaButton1Link">Button Link</label>
+                  <input type="text" id="ctaButton1Link" formControlName="ctaButton1Link" class="form-control"
+                    placeholder="/contact or https://...">
+                </div>
+              </div>
+
+              <!-- Button 2 -->
+              <h4>Button 2</h4>
+              <div class="form-row">
+                <div class="form-group third">
+                  <label for="ctaButton2Text">Text (EN)</label>
+                  <input type="text" id="ctaButton2Text" formControlName="ctaButton2Text" class="form-control"
+                    placeholder="Talk">
+                </div>
+                <div class="form-group third">
+                  <label for="ctaButton2TextAr">Text (AR)</label>
+                  <input type="text" id="ctaButton2TextAr" formControlName="ctaButton2TextAr" class="form-control"
+                    dir="rtl" placeholder="تحدث للخبراء">
+                </div>
+                <div class="form-group third">
+                  <label for="ctaButton2Link">Button Link</label>
+                  <input type="text" id="ctaButton2Link" formControlName="ctaButton2Link" class="form-control"
+                    placeholder="/contact or https://...">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ TAB -->
+      <div class="tab-pane active" *ngIf="activeTab === 'faq'">
+        <div class="card">
+          <h3>Frequently Asked Questions</h3>
+          <p class="section-intro">Add expandable FAQ items</p>
+
+          <div formArrayName="faqs">
+            <div *ngFor="let faq of faqs.controls; let i = index" class="repeatable-item" [formGroupName]="i">
+              <div class="item-header">
+                <h4>FAQ {{ i + 1 }}</h4>
+                <button type="button" class="btn-remove" (click)="removeFAQItem(i)" *ngIf="faqs.length > 1">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group half">
+                  <label>Question (English) <span class="required">*</span></label>
+                  <input type="text" formControlName="question" class="form-control" placeholder="Enter question">
+                </div>
+                <div class="form-group half">
+                  <label>Question (Arabic)</label>
+                  <input type="text" formControlName="questionAr" class="form-control" dir="rtl"
+                    placeholder="سؤال (عربي)">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group half">
+                  <label>Answer (English) <span class="required">*</span></label>
+                  <textarea formControlName="answer" class="form-control" rows="3"
+                    placeholder="Enter answer"></textarea>
+                </div>
+                <div class="form-group half">
+                  <label>Answer (Arabic)</label>
+                  <textarea formControlName="answerAr" class="form-control" rows="3" dir="rtl"
+                    placeholder="جواب (عربي)"></textarea>
+                </div>
+              </div>
+
+              <hr *ngIf="i < faqs.length - 1">
+            </div>
+          </div>
+
+          <button type="button" class="btn-add" (click)="addFAQItem()">
+            <i class="fas fa-plus"></i> Add FAQ
+          </button>
+        </div>
+      </div>
+
+      <!-- SEO TAB -->
+      <div class="tab-pane active" *ngIf="activeTab === 'seo'">
+        <div class="card">
+          <h3>SEO Settings</h3>
+
+          <div class="form-row">
+            <div class="form-group half">
+              <label for="metaTitle">Meta Title (English)</label>
+              <input type="text" id="metaTitle" formControlName="metaTitle" class="form-control"
+                placeholder="SEO title">
+              <div class="char-counter">{{ metaTitle?.value?.length || 0 }}/200</div>
+            </div>
+            <div class="form-group half">
+              <label for="metaTitleAr">Meta Title (Arabic)</label>
+              <input type="text" id="metaTitleAr" formControlName="metaTitleAr" class="form-control" dir="rtl"
+                placeholder="عنوان الميتا (عربي)">
+              <div class="char-counter">{{ productForm.get('metaTitleAr')?.value?.length || 0 }}/200</div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group half">
+              <label for="metaKeywords">Meta Keywords (English)</label>
+              <input type="text" id="metaKeywords" formControlName="metaKeywords" class="form-control"
+                placeholder="keyword1, keyword2">
+              <div class="char-counter">{{ productForm.get('metaKeywords')?.value?.length || 0 }}/500</div>
+            </div>
+            <div class="form-group half">
+              <label for="metaKeywordsAr">Meta Keywords (Arabic)</label>
+              <input type="text" id="metaKeywordsAr" formControlName="metaKeywordsAr" class="form-control" dir="rtl"
+                placeholder="كلمة١, كلمة٢">
+              <div class="char-counter">{{ productForm.get('metaKeywordsAr')?.value?.length || 0 }}/500</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GALLERY TAB -->
+      <div class="tab-pane active" *ngIf="activeTab === 'gallery'">
+        <div class="card">
+          <h3>Image Gallery</h3>
+
+          <div class="gallery-grid" *ngIf="galleryPreviews.length > 0">
+            <div class="gallery-item" *ngFor="let img of galleryPreviews; let i = index">
+              <img [src]="img" [alt]="productForm.get('galleryAlt')?.value || 'Gallery image ' + (i + 1)">
+              <button type="button" class="btn-remove-image" (click)="removeGalleryImage(i)">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Gallery Alt Tags -->
+          <div class="form-group mt-3">
+            <label for="galleryAlt">Gallery Alt Text (EN)</label>
+            <input type="text" id="galleryAlt" formControlName="galleryAlt" class="form-control"
+              placeholder="Descriptive text for gallery images">
+          </div>
+          <div class="form-group">
+            <label for="galleryAltAr">Gallery Alt Text (AR)</label>
+            <input type="text" id="galleryAltAr" formControlName="galleryAltAr" class="form-control" dir="rtl"
+              placeholder="نص وصفي لصور المعرض">
+          </div>
+
+          <div class="image-upload">
+            <input type="file" id="galleryImages" accept="image/*" multiple (change)="onGalleryImagesSelected($event)"
+              class="file-input">
+            <label for="galleryImages" class="upload-label">
+              <i class="fas fa-cloud-upload-alt"></i>
+              <span>Add Gallery Images</span>
+              <small>Upload multiple images</small>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

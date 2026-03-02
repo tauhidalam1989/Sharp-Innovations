@@ -1,0 +1,195 @@
+<div class="blog-detail-container">
+  <!-- Loading Spinner -->
+  <div class="loading-spinner" *ngIf="loading">
+    <div class="spinner"></div>
+  </div>
+
+
+  <!-- Error Alert -->
+  <div class="alert alert-danger" *ngIf="error && !loading">
+    <i class="fas fa-exclamation-circle"></i>
+    {{ error }}
+    <button class="btn-retry" (click)="goBack()">
+      <i class="fas fa-arrow-left"></i> Go Back
+    </button>
+  </div>
+
+  <!-- Blog Content -->
+  <div *ngIf="blog && !loading" class="blog-content">
+    <!-- Admin Actions Bar -->
+    <div class="admin-actions">
+      <button class="btn-back" (click)="goBack()">
+        <i class="fas fa-arrow-left"></i>
+        Back to List
+      </button>
+
+      <div class="action-buttons">
+        <span class="status-badge" [class.published]="blog.isPublished" [class.draft]="!blog.isPublished">
+          {{ blog.isPublished ? 'Published' : 'Draft' }}
+        </span>
+
+        <button class="btn-icon" (click)="togglePublish()" [title]="blog.isPublished ? 'Unpublish' : 'Publish'">
+          <i class="fas" [ngClass]="blog.isPublished ? 'fa-eye-slash' : 'fa-eye'"></i>
+        </button>
+
+        <button class="btn-icon" (click)="editPost()" title="Edit">
+          <i class="fas fa-edit"></i>
+        </button>
+
+        <button class="btn-icon delete" (click)="deletePost()" title="Delete">
+          <i class="fas fa-trash"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Blog Header -->
+    <div class="blog-header">
+      <h1 class="blog-title">{{ blog.title }}</h1>
+
+      <div class="blog-meta">
+        <div class="meta-left">
+          <span class="meta-item">
+            <i class="far fa-calendar"></i>
+            {{ formatDate(blog.createdAt) }}
+          </span>
+
+          <span class="meta-item" *ngIf="blog.readingTime">
+            <i class="far fa-clock"></i>
+            {{ getReadingTimeText() }}
+          </span>
+
+          <span class="meta-item">
+            <i class="far fa-user"></i>
+            {{ blog.creator?.name || 'Unknown' }}
+          </span>
+        </div>
+
+        <div class="meta-right">
+          <span class="meta-item">
+            <i class="far fa-eye"></i>
+            {{ blog.views }} views
+          </span>
+
+          <span class="meta-item clickable" (click)="likePost()">
+            <i class="far" [class.fas]="blog.likes > 0" [class.fa-heart]="blog.likes > 0"
+              [class.fa-heart]="blog.likes === 0"></i>
+            {{ blog.likes }} likes
+          </span>
+
+          <span class="meta-item clickable" (click)="sharePost()">
+            <i class="far fa-share-square"></i>
+            {{ blog.shares }} shares
+          </span>
+        </div>
+      </div>
+
+      <!-- Categories & Tags -->
+      <div class="blog-taxonomies">
+        <div class="categories" *ngIf="blog.categories && blog.categories.length > 0">
+          <span class="taxonomy-label">Categories:</span>
+          <span class="category" *ngFor="let cat of blog.categories">
+            {{ cat }}
+          </span>
+        </div>
+
+        <div class="tags" *ngIf="blog.tags && blog.tags.length > 0">
+          <span class="taxonomy-label">Tags:</span>
+          <span class="tag" *ngFor="let tag of blog.tags">
+            #{{ tag }}
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-layout-wrapper">
+      <!-- Main Content -->
+      <div class="blog-main">
+        <!-- Excerpt (if exists) -->
+        <div class="blog-excerpt" *ngIf="blog.excerpt">
+          <blockquote>
+            <i class="fas fa-quote-left"></i>
+            {{ blog.excerpt }}
+          </blockquote>
+        </div>
+
+        <!-- Blog Content -->
+        <div class="blog-body" [innerHTML]="blog.content | safeHtml"></div>
+      </div>
+
+      <!-- Right Sidebar (Image) -->
+      <div class="blog-sidebar" *ngIf="blog.featuredImage || (blog.gallery && blog.gallery.length > 0)">
+        <!-- Featured Image Gallery -->
+        <div class="gallery-section" *ngIf="blog.gallery && blog.gallery.length > 0">
+          <div class="gallery-container">
+            <div class="gallery-main">
+              <img [src]="getImageUrl(blog.gallery[currentGalleryIndex])" [alt]="blog.title">
+
+              <button class="gallery-nav prev" (click)="prevGalleryImage()" *ngIf="blog.gallery.length > 1">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+
+              <button class="gallery-nav next" (click)="nextGalleryImage()" *ngIf="blog.gallery.length > 1">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+
+            <div class="gallery-thumbnails" *ngIf="blog.gallery.length > 1">
+              <div class="thumbnail" *ngFor="let img of blog.gallery; let i = index"
+                [class.active]="i === currentGalleryIndex" (click)="currentGalleryIndex = i">
+                <img [src]="getImageUrl(img)" [alt]="'Thumbnail ' + (i + 1)">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Image (Single) -->
+        <div class="featured-image" *ngIf="blog.featuredImage && (!blog.gallery || blog.gallery.length === 0)">
+          <img [src]="getImageUrl(blog.featuredImage)" [alt]="blog.title">
+        </div>
+      </div>
+    </div>
+
+    <!-- Share Section -->
+    <div class="share-section">
+      <h3>Share this post</h3>
+      <div class="share-buttons">
+        <button class="share-btn facebook" (click)="shareOnFacebook()">
+          <i class="fab fa-facebook-f"></i>
+          Facebook
+        </button>
+        <button class="share-btn twitter" (click)="shareOnTwitter()">
+          <i class="fab fa-twitter"></i>
+          Twitter
+        </button>
+        <button class="share-btn linkedin" (click)="shareOnLinkedIn()">
+          <i class="fab fa-linkedin-in"></i>
+          LinkedIn
+        </button>
+        <button class="share-btn copy" (click)="sharePost()">
+          <i class="fas fa-link"></i>
+          Copy Link
+        </button>
+      </div>
+    </div>
+
+    <!-- Related Posts -->
+    <div class="related-posts" *ngIf="relatedPosts.length > 0">
+      <h2>Related Posts</h2>
+      <div class="related-grid">
+        <div class="related-card" *ngFor="let post of relatedPosts" [routerLink]="['/blog', post.id]">
+          <div class="related-image" *ngIf="post.featuredImage">
+            <img [src]="getImageUrl(post.featuredImage)" [alt]="post.title">
+          </div>
+          <div class="related-content">
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.excerpt || post.content | slice:0:100 }}...</p>
+            <div class="related-meta">
+              <span><i class="far fa-calendar"></i> {{ formatDate(post.createdAt) }}</span>
+              <span><i class="far fa-eye"></i> {{ post.views }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,148 @@
+<div class="blog-list-container">
+  <!-- Header -->
+  <div class="page-header">
+    <h1>Blog Posts</h1>
+    <button class="btn-primary" (click)="createNew()">
+      <i class="fas fa-plus"></i>
+      Add New Post
+    </button>
+  </div>
+
+  <!-- Filters -->
+  <div class="filters-card">
+    <div class="filters-grid">
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" [(ngModel)]="searchTerm" (keyup.enter)="onSearch()" placeholder="Search posts..."
+          class="form-control">
+      </div>
+
+      <div class="filter-select">
+        <select [(ngModel)]="categoryFilter" (change)="onFilterChange()" class="form-control">
+          <option value="">All Categories</option>
+          <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+        </select>
+      </div>
+
+      <div class="filter-select">
+        <select [(ngModel)]="tagFilter" (change)="onFilterChange()" class="form-control">
+          <option value="">All Tags</option>
+          <option *ngFor="let tag of tags" [value]="tag">{{ tag }}</option>
+        </select>
+      </div>
+
+      <div class="filter-select">
+        <select [(ngModel)]="statusFilter" (change)="onFilterChange()" class="form-control">
+          <option value="all">All Status</option>
+          <option value="published">Published</option>
+          <option value="draft">Draft</option>
+        </select>
+      </div>
+
+      <div class="filter-select">
+        <select class="form-control" (change)="onPageChange(1)">
+          <option [value]="10">10 per page</option>
+          <option [value]="25">25 per page</option>
+          <option [value]="50">50 per page</option>
+          <option [value]="100">100 per page</option>
+        </select>
+      </div>
+
+      <button class="btn-clear" (click)="clearFilters()"
+        *ngIf="searchTerm || categoryFilter || tagFilter || statusFilter !== 'all'">
+        <i class="fas fa-times"></i>
+        Clear Filters
+      </button>
+    </div>
+  </div>
+
+  <!-- Loading Spinner -->
+  <div class="loading-spinner" *ngIf="loading">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Blog Posts Grid -->
+  <div class="posts-grid" *ngIf="!loading">
+    <div class="post-card" *ngFor="let blog of blogs">
+      <div class="post-image" *ngIf="blog.featuredImage">
+        <img [src]="getImageUrl(blog.featuredImage)" [alt]="blog.title">
+        <span class="status-badge" [class.published]="blog.isPublished" [class.draft]="!blog.isPublished">
+          {{ blog.isPublished ? 'Published' : 'Draft' }}
+        </span>
+      </div>
+
+      <div class="post-content">
+        <div class="post-meta">
+          <span class="post-date">
+            <i class="far fa-calendar"></i>
+            {{ blog.createdAt | date:'mediumDate' }}
+          </span>
+          <span class="post-reading" *ngIf="blog.readingTime">
+            <i class="far fa-clock"></i>
+            {{ getReadingTimeText(blog.readingTime) }}
+          </span>
+        </div>
+
+        <h3 class="post-title">{{ blog.title }}</h3>
+
+        <p class="post-excerpt">{{ blog.excerpt || blog.content | slice:0:150 }}...</p>
+
+        <!-- <div class="post-tags" *ngIf="blog.tags?.length">
+          <span class="tag" *ngFor="let tag of blog.tags | slice:0:3">{{ tag }}</span>
+          <span class="tag more" *ngIf="blog.tags.length > 3">+{{ blog.tags.length - 3 }}</span>
+        </div> -->
+        <div class="post-tags" *ngIf="hasTags(blog)">
+          <span class="tag" *ngFor="let tag of blog.tags | slice:0:3">{{ tag }}</span>
+          <span class="tag more" *ngIf="getTagLength(blog) > 3">+{{ getTagLength(blog) - 3 }}</span>
+        </div>
+
+        <div class="post-stats">
+          <span><i class="far fa-eye"></i> {{ blog.views }}</span>
+          <span><i class="far fa-heart"></i> {{ blog.likes }}</span>
+          <span><i class="far fa-share-square"></i> {{ blog.shares }}</span>
+        </div>
+
+        <div class="post-actions">
+          <button class="btn-icon" (click)="viewBlog(blog.id)" title="View">
+            <i class="fas fa-eye"></i>
+          </button>
+          <button class="btn-icon" (click)="editBlog(blog.id)" title="Edit">
+            <i class="fas fa-edit"></i>
+          </button>
+          <button class="btn-icon" (click)="togglePublish(blog)" [title]="blog.isPublished ? 'Unpublish' : 'Publish'">
+            <i class="fas" [ngClass]="blog.isPublished ? 'fa-eye-slash' : 'fa-eye'"></i>
+          </button>
+          <button class="btn-icon delete" (click)="deleteBlog(blog.id)" title="Delete">
+            <i class="fas fa-trash"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="no-results" *ngIf="blogs.length === 0">
+      <i class="fas fa-newspaper"></i>
+      <h3>No blog posts found</h3>
+      <p>Try adjusting your filters or create a new post</p>
+      <button class="btn-primary" (click)="createNew()">
+        <i class="fas fa-plus"></i>
+        Create New Post
+      </button>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="pagination" *ngIf="totalItems > pageSize">
+    <button class="page-btn" [disabled]="currentPage === 1" (click)="onPageChange(currentPage - 1)">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <span class="page-info">
+      Page {{ currentPage }} of {{ totalItems | paginationPages:pageSize }}
+    </span>
+
+    <button class="page-btn" [disabled]="currentPage === (totalItems | paginationPages:pageSize)"
+      (click)="onPageChange(currentPage + 1)">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+</div>

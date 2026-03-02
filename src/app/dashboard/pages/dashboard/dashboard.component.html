@@ -1,0 +1,240 @@
+<div class="dashboard-container">
+  <!-- Sidebar with collapsed state -->
+  <app-sidebar [collapsed]="sidebarCollapsed"></app-sidebar>
+  <div class="main-content" [class.expanded]="sidebarCollapsed">
+    <header class="dashboard-header">
+      <div class="header-left">
+        <button class="menu-toggle" (click)="toggleSidebar()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <h1>Dashboard</h1>
+      </div>
+
+      <div class="header-right">
+        <div class="user-menu">
+          <span class="user-name">{{ (authService.currentUser$ | async)?.name }}</span>
+          <img [src]="(authService.currentUser$ | async)?.avatar || 'assets/default-avatar.png'" alt="User"
+            class="user-avatar">
+          <div class="user-dropdown">
+            <a href="javascript:void(0)" (click)="navigateTo('profile')">Profile</a>
+            <a href="javascript:void(0)" (click)="navigateTo('settings')">Settings</a>
+            <a href="javascript:void(0)" (click)="logout()">Logout</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="dashboard-content">
+      <div class="welcome-banner">
+        <h2>Welcome back, {{ (authService.currentUser$ | async)?.name }}!</h2>
+        <!-- <p>Here's what's happening with your content today.</p> -->
+      </div>
+
+      <!-- Stats Cards -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon blue">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <div class="stat-content">
+            <h3>Total Products</h3>
+            <p class="stat-value">{{ stats.totalProducts }}</p>
+            <div class="stat-detail">
+              <span class="badge success">{{ stats.publishedProducts }} Published</span>
+              <span class="badge warning">{{ stats.draftProducts }} Draft</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon green">
+            <i class="fas fa-blog"></i>
+          </div>
+          <div class="stat-content">
+            <h3>Total Blogs</h3>
+            <p class="stat-value">{{ stats.totalBlogs }}</p>
+            <div class="stat-detail">
+              <span class="badge success">{{ stats.publishedBlogs }} Published</span>
+              <span class="badge warning">{{ stats.draftBlogs }} Draft</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon purple">
+            <i class="fas fa-concierge-bell"></i>
+          </div>
+          <div class="stat-content">
+            <h3>Total Services</h3>
+            <p class="stat-value">{{ stats.totalServices }}</p>
+            <div class="stat-detail">
+              <span class="badge success">{{ stats.publishedServices }} Published</span>
+              <span class="badge warning">{{ stats.draftServices }} Draft</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon orange">
+            <i class="fas fa-eye"></i>
+          </div>
+          <div class="stat-content">
+            <h3>Total Views</h3>
+            <p class="stat-value">{{ stats.totalViews }}</p>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon purple">
+            <i class="fas fa-heart"></i>
+          </div>
+          <div class="stat-content">
+            <h3>Total Likes</h3>
+            <p class="stat-value">{{ stats.totalLikes }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Content -->
+      <div class="recent-content-grid">
+        <div class="recent-section">
+          <div class="section-header">
+            <h2>Recent Products</h2>
+            <a href="javascript:void(0)" (click)="navigateTo('dashboard/products')" class="view-all">
+              View All <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="content-list" *ngIf="!loading">
+            <div class="content-item" *ngFor="let product of recentProducts">
+              <div class="content-info">
+                <h3>{{ product.title }}</h3>
+                <p class="content-meta">
+                  <span class="status-badge" [class.published]="product.isPublished"
+                    [class.draft]="!product.isPublished">
+                    {{ product.isPublished ? 'Published' : 'Draft' }}
+                  </span>
+                  <span class="date">{{ product.createdAt | date:'mediumDate' }}</span>
+                </p>
+              </div>
+              <div class="content-actions">
+                <button class="btn-icon" (click)="navigateTo('dashboard/products/edit/' + product.id)" title="Edit">
+                  <i class="fas fa-edit"></i>
+                </button>
+                <button class="btn-icon" (click)="navigateTo('dashboard/products/' + product.id)" title="View">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="empty-state" *ngIf="recentProducts.length === 0">
+              <p>No recent products found</p>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Recent Blogs -->
+        <div class="recent-section">
+          <div class="section-header">
+            <h2>Recent Blogs</h2>
+            <a href="javascript:void(0)" (click)="navigateTo('blog')" class="view-all">
+              View All <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="content-list" *ngIf="!loading">
+            <div class="content-item" *ngFor="let blog of recentBlogs">
+              <div class="content-info">
+                <h3>{{ blog.title }}</h3>
+                <p class="content-meta">
+                  <span class="status-badge" [class.published]="blog.isPublished" [class.draft]="!blog.isPublished">
+                    {{ blog.isPublished ? 'Published' : 'Draft' }}
+                  </span>
+                  <span class="date">{{ blog.createdAt | date:'mediumDate' }}</span>
+                </p>
+              </div>
+              <div class="content-actions">
+                <button class="btn-icon" (click)="navigateTo('blog/edit/' + blog.id)" title="Edit">
+                  <i class="fas fa-edit"></i>
+                </button>
+                <button class="btn-icon" (click)="navigateTo('blog/' + blog.id)" title="View">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Show empty state if no blogs -->
+            <div class="empty-state" *ngIf="recentBlogs.length === 0">
+              <p>No recent blogs found</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Services -->
+        <div class="recent-section">
+          <div class="section-header">
+            <h2>Recent Services</h2>
+            <a href="javascript:void(0)" (click)="navigateTo('dashboard/services')" class="view-all">
+              View All <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="content-list" *ngIf="!loading">
+            <div class="content-item" *ngFor="let service of recentServices">
+              <div class="content-info">
+                <h3>{{ service.title || service.heroTitle }}</h3>
+                <p class="content-meta">
+                  <span class="status-badge" [class.published]="service.isPublished"
+                    [class.draft]="!service.isPublished">
+                    {{ service.isPublished ? 'Published' : 'Draft' }}
+                  </span>
+                  <span class="date">{{ service.createdAt | date:'mediumDate' }}</span>
+                </p>
+              </div>
+              <div class="content-actions">
+                <button class="btn-icon" (click)="navigateTo('dashboard/services/edit/' + service.id)" title="Edit">
+                  <i class="fas fa-edit"></i>
+                </button>
+                <button class="btn-icon" (click)="navigateTo('dashboard/services/detail/' + service.id)" title="View">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="empty-state" *ngIf="recentServices.length === 0">
+              <p>No recent services found</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Loading Spinner -->
+      <div class="loading-spinner" *ngIf="loading">
+        <div class="spinner"></div>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="quick-actions" *ngIf="!loading">
+        <h2>Quick Actions</h2>
+        <div class="action-buttons">
+          <button class="action-btn" (click)="navigateTo('dashboard/products/new')">
+            <i class="fas fa-plus"></i>
+            <span>Add New Product</span>
+          </button>
+          <button class="action-btn" (click)="navigateTo('dashboard/services/add')">
+            <i class="fas fa-plus"></i>
+            <span>Add New Service</span>
+          </button>
+          <button class="action-btn" (click)="navigateTo('blog/new')">
+            <i class="fas fa-plus"></i>
+            <span>Add New Blog</span>
+          </button>
+          <!-- <button class="action-btn" (click)="navigateTo('media')">
+            <i class="fas fa-images"></i>
+            <span>Media Library</span>
+          </button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

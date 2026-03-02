@@ -1,28 +1,28 @@
 <div class="container-fluid sticky-top">
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3JLR6G6RLB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3JLR6G6RLB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-3JLR6G6RLB');
-</script>
+    gtag('config', 'G-3JLR6G6RLB');
+  </script>
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark p-0 cursor-pointer">
-        <a class="cursor-pointer" (click)="pathService.navigateToAbout('home')" class="navbar-brand">
-          <!-- <h1 class="text-white">{{ 'TITLE' | translate }}</h1> -->
-           <img [height]="60" [src]="imageSrc" alt="" srcset="">
-        </a>
-        <button type="button" class="navbar-toggler ms-auto me-0" (click)="toggleSidebar.emit()">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <a class="cursor-pointer" (click)="pathService.navigateToAbout('home')" class="navbar-brand">
+        <!-- <h1 class="text-white">{{ 'TITLE' | translate }}</h1> -->
+        <img [height]="60" [src]="imageSrc" alt="" srcset="">
+      </a>
+      <button type="button" class="navbar-toggler ms-auto me-0" (click)="toggleSidebar.emit()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <!-- Brand -->
-    
+
       <!-- Mobile Toggle Button -->
-   
+
       <!-- Navbar Links -->
-      <div class="collapse navbar-collapse" id="navbarCollapse" >
+      <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto">
           <!-- Other Links -->
           <a routerLink="/home" routerLinkActive="active" class="nav-item nav-link">
@@ -32,103 +32,14 @@
             {{ 'ABOUT' | translate }}
           </a>
 
-          <!-- Services Dropdown -->
-          <div
-          class="nav-item dropdown"
-          [ngClass]="{ show: isservicing }"
-          (mouseenter)="toggleDropdown('isservicing', true)"
-          (mouseleave)="toggleDropdown('isservicing', false)"
-        >
-          <a class="nav-link dropdown-toggle cursor-pointer">{{ 'SERVICES' | translate }}</a>
-          <div class="dropdown-menu service-menuiot" [ngClass]="{ show: isservicing }">
-            <div class="row p-3">
-              <!-- Categories Column -->
-              <div class="col-md-6 border-end">
-                <div *ngFor="let category of ('servicing' | translate); let i = index">
-                  <h6 class="fw-bold mb-3 text-primary category-item" 
-                      (mouseenter)="selectedCategory = category"
-                      [ngClass]="{'active': selectedCategory === category}"
-                      #categoryElement>
-                    <i [class]="category.icon + ' me-2'"></i> {{ category.key | translate }}
-                  </h6>
-                 
-                </div>
-                <div class="banner-container">
-                  <div class="banner-container">
-                    <img class="img-fluid banner-image" [src]="selectedCategory?.img || (('servicing' | translate)[0])?.img" alt="">
-                  </div>
-                </div>
-              </div>
-              <!-- Items Column -->
-              <div class="col-md-6">
-                <a
-                [routerLink]="'/services/'+item.path"
-                *ngFor="let item of (selectedCategory?.items || (('servicing' | translate)[0])?.items)"
-                class="dropdown-item py-2 px-3 cursor-pointer d-flex justify-content-between align-items-center "
-                (click)="closeAllDropdowns()">
-                <span><i [class]="item.icon + ' me-2'"></i> {{ item.name | translate }}</span>
-                <i class="fa"
-                [ngClass]="{
-                  'fa-chevron-right': currentLang === 'en',
-                  'fa-chevron-left': currentLang === 'ar',
-                  'ms-2': currentLang === 'en',
-                  'me-2': currentLang === 'ar'
-                }">
-             </i>
-             
-              </a>
-              </div>
-            </div>
-          </div>
-        </div>             
- <!-- PRODUCT Dropdown -->
- <div
- class="nav-item dropdown cursor-pointer"
- [ngClass]="{ show: isProduct }"
- (mouseenter)="toggleDropdown('isProduct', true)"
- (mouseleave)="toggleDropdown('isProduct', false)"
->
- <a class="nav-link dropdown-toggle">{{ 'PRODUCTS' | translate }}</a>
- <div class="dropdown-menu service-menuiot" [ngClass]="{ show: isProduct }">
-   <div class="row p-3">
-     <!-- Categories Column -->
-     <div class="col-md-6 border-end">
-      <div *ngFor="let product of ('products_service' | translate); let i = index">
-         <h6 class="fw-bold mb-3 text-primary category-item" 
-             (mouseenter)="selectedproduct = product"
-             [ngClass]="{'active': selectedproduct === product}"
-             #categoryElement>
-           <i [class]="product.pathIcon + ' me-2'"></i> {{ product.key | translate }}
-         </h6>
-        
-       </div>
-       <div class="banner-container">
-         <div class="banner-container">
-           <img class="img-fluid banner-image" [src]="selectedproduct?.img || (('products_service' | translate)[0])?.img" alt="">
-         </div>
-       </div>
-     </div>
-     <!-- Items Column -->
-     <div class="col-md-6">
-       <a
-       [routerLink]="'/product/'+item.path"
-       *ngFor="let item of (selectedproduct?.items || (('products_service' | translate)[0])?.items)"
-       class="dropdown-item py-2 px-3 cursor-pointer d-flex justify-content-between align-items-center "
-     >
-       <span><i [class]="item.icon + ' me-2'"></i> {{ item.name | translate }}</span>
-       <i class="fa"
-                [ngClass]="{
-                  'fa-chevron-right': currentLang === 'en',
-                  'fa-chevron-left': currentLang === 'ar',
-                  'ms-2': currentLang === 'en',
-                  'me-2': currentLang === 'ar'
-                }">
-             </i>
-     </a>
-     </div>
-   </div>
- </div>
-</div>             
+          <!-- SERVICES Link -->
+          <a routerLink="/service-pages" routerLinkActive="active" class="nav-item nav-link">
+            {{ 'SERVICES' | translate }}
+          </a>
+          <!-- PRODUCTS Link -->
+          <a routerLink="/products" routerLinkActive="active" class="nav-item nav-link">
+            {{ 'PRODUCTS' | translate }}
+          </a>
 
           <a routerLink="/Careers" routerLinkActive="active" class="nav-item nav-link">
             {{ 'CAREERS' | translate }}
@@ -136,12 +47,16 @@
           <a routerLink="/contact" routerLinkActive="active" class="nav-item nav-link">
             {{ 'CONTACT' | translate }}
           </a>
-          <a class="cursor-pointer" (click)="switchLanguage(currentLang === 'en' ? 'ar' : 'en')"  routerLinkActive="active" class="nav-item nav-link cursor-pointer">
-            {{ currentLang === 'ar' ? 'English': 'عربي'   }}
+          <a routerLink="/blogs" routerLinkActive="active" class="nav-item nav-link">
+            {{ currentLang === 'ar' ? 'المدونات' : 'Blogs' }}
+          </a>
+          <a class="cursor-pointer" (click)="switchLanguage(currentLang === 'en' ? 'ar' : 'en')"
+            routerLinkActive="active" class="nav-item nav-link cursor-pointer">
+            {{ currentLang === 'ar' ? 'English': 'عربي' }}
           </a>
 
           <!-- Language Toggle Switch -->
-          
+
         </div>
       </div>
     </nav>

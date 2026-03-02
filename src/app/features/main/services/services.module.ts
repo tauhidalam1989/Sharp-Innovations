@@ -40,6 +40,8 @@ import { OracleAutomationComponent } from './oracle-automation/oracle-automation
 import { OracleVisualBuilderComponent } from './oracle-visual-builder/oracle-visual-builder.component';
 import { ItInfrastructureComponent } from './it-infrastructure/it-infrastructure.component';
 import { MyServicesLayoutComponent } from './components/my-services-layout/my-services-layout.component';
+import { ProductsListingComponent } from './components/products-listing/products-listing.component';
+import { UserProductDetailComponent } from './components/user-product-detail/user-product-detail.component';
 
 
 @NgModule({
@@ -80,7 +82,9 @@ import { MyServicesLayoutComponent } from './components/my-services-layout/my-se
     OracleAutomationComponent,
     OracleVisualBuilderComponent,
     ItInfrastructureComponent,
-    MyServicesLayoutComponent
+    MyServicesLayoutComponent,
+    ProductsListingComponent,
+    UserProductDetailComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,250 @@
+<div class="product-detail">
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" *ngIf="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Error Alert -->
+    <div class="alert alert-danger" *ngIf="error && !loading">
+        <i class="fas fa-exclamation-circle"></i>
+        {{ error }}
+        <button class="btn-retry" (click)="goBack()">
+            <i class="fas fa-arrow-left"></i> Go Back
+        </button>
+    </div>
+
+    <!-- Product Content -->
+    <div *ngIf="product && !loading" class="product-content">
+
+        <!-- Hero Header Section -->
+        <section class="hero-header" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+            <div class="container" [ngClass]="{'text-end': currentLang === 'ar'}">
+
+                <h1>
+                    <i [class]="product.heroIcon || 'fas fa-circle'" class="hero-icon"
+                        [ngClass]="{'ms-3 me-0': currentLang === 'ar'}"></i>
+                    {{ currentLang === 'ar' && product.heroTitleAr ? product.heroTitleAr : (product.heroTitle ||
+                    (currentLang === 'ar' && product.titleAr ? product.titleAr : product.title)) }}
+                </h1>
+
+                <p class="hero-subtitle" *ngIf="product.heroSubtitle || product.heroSubtitleAr">
+                    {{ currentLang === 'ar' && product.heroSubtitleAr ? product.heroSubtitleAr : product.heroSubtitle }}
+                </p>
+                <p class="hero-description" *ngIf="product.heroDescription || product.heroDescriptionAr">
+                    {{ currentLang === 'ar' && product.heroDescriptionAr ? product.heroDescriptionAr :
+                    product.heroDescription }}
+                </p>
+
+                <div class="hero-buttons">
+                    <a [href]="product.ctaButton1Link || '#'" class="btn btn-primary">{{ currentLang === 'ar' &&
+                        product.ctaButton1TextAr ? product.ctaButton1TextAr : (product.ctaButton1Text || 'Request a
+                        Demo') }}</a>
+                    <a [href]="product.ctaButton2Link || '#'" class="btn btn-outline">{{ currentLang === 'ar' &&
+                        product.ctaButton2TextAr ? product.ctaButton2TextAr : (product.ctaButton2Text || 'Talk to
+                        Experts') }}</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" *ngIf="product.aboutContent || product.aboutContentAr"
+            [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+            <div class="container">
+                <div class="about-layout" [class.has-image]="!!product.aboutImage">
+                    <div class="about-content" [ngClass]="{'text-end': currentLang === 'ar'}">
+                        <h2>{{ currentLang === 'ar' && product.aboutTitleAr ? product.aboutTitleAr : (product.aboutTitle
+                            || 'About the Solution') }}</h2>
+                        <div
+                            [innerHTML]="currentLang === 'ar' && product.aboutContentAr ? product.aboutContentAr : product.aboutContent">
+                        </div>
+                    </div>
+                    <div class="about-image" *ngIf="product.aboutImage">
+                        <img [src]="getImageUrl(product.aboutImage)"
+                            alt="About {{ currentLang === 'ar' && product.titleAr ? product.titleAr : product.title }}">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works" *ngIf="getHowItWorks().length > 0" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+            <div class="container">
+                <h2 [ngClass]="{'text-end': currentLang === 'ar'}">{{ currentLang === 'ar' ? 'كيف تعمل' : 'How It Works'
+                    }}</h2>
+                <p class="section-intro" *ngIf="product.shortDescription || product.shortDescriptionAr"
+                    [ngClass]="{'text-end': currentLang === 'ar'}">
+                    {{ currentLang === 'ar' && product.shortDescriptionAr ? product.shortDescriptionAr :
+                    product.shortDescription }}
+                </p>
+
+                <div class="works-grid">
+                    <div class="works-card" *ngFor="let item of getHowItWorks()"
+                        [ngClass]="{'text-end': currentLang === 'ar'}">
+                        <div class="card-icon">
+                            <i [class]="item.icon"></i>
+                        </div>
+                        <h3>{{ currentLang === 'ar' && item.titleAr ? item.titleAr : item.title }}</h3>
+                        <p>{{ currentLang === 'ar' && item.descriptionAr ? item.descriptionAr : item.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features Section -->
+        <section class="key-features"
+            *ngIf="(currentLang === 'ar' ? product['keyFeaturesListAr'] : product['keyFeaturesList'])?.length"
+            [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+            <div class="container">
+                <div class="key-features-layout">
+                    <div class="features-images" *ngIf="getKeyFeaturesImages().length > 0">
+                        <div class="image-placeholder large" *ngIf="getKeyFeaturesImages()[0]">
+                            <img [src]="getImageUrl(getKeyFeaturesImages()[0])"
+                                [alt]="currentLang === 'ar' && product?.titleAr ? product?.titleAr : (product?.title || 'Key Feature')">
+                        </div>
+                        <div class="image-row" *ngIf="getKeyFeaturesImages().length > 1">
+                            <div class="image-placeholder small" *ngFor="let img of getKeyFeaturesImages().slice(1, 3)">
+                                <img [src]="getImageUrl(img)"
+                                    [alt]="currentLang === 'ar' && product?.titleAr ? product?.titleAr : (product?.title || 'Key Feature')">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="features-panel" [ngClass]="{'text-end': currentLang === 'ar'}">
+                        <h2>{{ currentLang === 'ar' && product?.keyFeaturesTitleAr ? product?.keyFeaturesTitleAr :
+                            (product?.keyFeaturesTitle || 'Key Features') }}</h2>
+                        <div class="features-grid">
+                            <div class="feature-item"
+                                *ngFor="let feature of (currentLang === 'ar' && product['keyFeaturesListAr']?.length ? product['keyFeaturesListAr'] : product['keyFeaturesList'])">
+                                <i [class]="getFeatureIcon(feature)"
+                                    [ngClass]="{'ms-3 me-0': currentLang === 'ar'}"></i>
+                                <span class="feature-text">{{ getFeatureText(feature) }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="benefits" *ngIf="getBenefits().length > 0" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+            <div class="container">
+                <h2 style="color: white;" [ngClass]="{'text-end': currentLang === 'ar'}">{{ currentLang === 'ar' ?
+                    'الفوائد' : 'Benefits' }}</h2>
+
+                <div class="benefits-grid">
+                    <div class="benefit-card" *ngFor="let benefit of getBenefits()"
+                        [ngClass]="{'text-end': currentLang === 'ar'}">
+                        <div class="benefit-icon">
+                            <i [class]="benefit.icon"></i>
+                        </div>
+                        <h3>{{ currentLang === 'ar' && benefit.titleAr ? benefit.titleAr : benefit.title }}</h3>
+                        <p>{{ currentLang === 'ar' && benefit.descriptionAr ? benefit.descriptionAr :
+                            benefit.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision Section -->
+        <section class="vision" *ngIf="getVisionItems().length > 0" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+            <div class="container">
+                <h2 [ngClass]="{'text-end': currentLang === 'ar'}">{{ currentLang === 'ar' && product.visionTitleAr ?
+                    product.visionTitleAr : (product.visionTitle || 'Vision & Alignment') }}</h2>
+                <p class="vision-subtitle" *ngIf="product.visionSubtitle || product.visionSubtitleAr"
+                    [ngClass]="{'text-end': currentLang === 'ar'}">
+                    {{ currentLang === 'ar' && product.visionSubtitleAr ? product.visionSubtitleAr :
+                    product.visionSubtitle }}
+                </p>
+
+                <div class="vision-icons-row">
+                    <div class="vision-item" *ngFor="let item of getVisionItems()"
+                        [ngClass]="{'text-end': currentLang === 'ar'}">
+                        <div class="vision-circle">
+                            <i [class]="item.icon"></i>
+                        </div>
+                        <span>{{ currentLang === 'ar' && item.textAr ? item.textAr : item.text }}</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Sharp Section -->
+        <section class="why-sharp" *ngIf="product.whySharpContent || product.whySharpContentAr"
+            [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+            <div class="container">
+                <div class="why-sharp-layout">
+                    <div class="why-sharp-content" [ngClass]="{'text-end': currentLang === 'ar'}">
+                        <h2>{{ currentLang === 'ar' && product.whySharpTitleAr ? product.whySharpTitleAr :
+                            (product.whySharpTitle || 'Why Sharp Innotech?') }}</h2>
+                        <div class="product-description"
+                            [innerHTML]="currentLang === 'ar' && product.whySharpContentAr ? product.whySharpContentAr : product.whySharpContent">
+                        </div>
+                    </div>
+                    <div class="why-sharp-image" *ngIf="product.whySharpImage">
+                        <img [src]="getImageUrl(product.whySharpImage)"
+                            alt="Why {{ currentLang === 'ar' && product.titleAr ? product.titleAr : product.title }}">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery" *ngIf="getGallery().length > 0" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+            <div class="container">
+                <h2 [ngClass]="{'text-end': currentLang === 'ar'}">Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item" *ngFor="let image of getGallery()">
+                        <img [src]="image"
+                            [alt]="currentLang === 'ar' && product.titleAr ? product.titleAr : product.title">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="cta-banner" *ngIf="product.ctaTitle || product.ctaTitleAr"
+            [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+            <div class="container">
+                <div class="cta-content" [ngClass]="{'text-end': currentLang === 'ar'}">
+                    <div class="cta-text">
+                        <h3>{{ currentLang === 'ar' && product.ctaTitleAr ? product.ctaTitleAr : product.ctaTitle }}
+                        </h3>
+                        <p *ngIf="product.ctaDescription || product.ctaDescriptionAr">{{ currentLang === 'ar' &&
+                            product.ctaDescriptionAr ? product.ctaDescriptionAr : product.ctaDescription }}</p>
+                    </div>
+                    <div class="cta-buttons">
+                        <a [href]="product.ctaButton1Link || '#'" class="btn btn-white">{{ currentLang === 'ar' &&
+                            product.ctaButton1TextAr ? product.ctaButton1TextAr : (product.ctaButton1Text || 'Request a
+                            Demo') }}</a>
+                        <a [href]="product.ctaButton2Link || '#'" class="btn btn-white-outline">{{ currentLang === 'ar'
+                            && product.ctaButton2TextAr ? product.ctaButton2TextAr : (product.ctaButton2Text || 'Talk to
+                            Experts') }}</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq" *ngIf="getFAQs().length > 0" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+            <div class="container">
+                <h2 [ngClass]="{'text-end': currentLang === 'ar'}">{{ currentLang === 'ar' ? 'الأسئلة الشائعة' :
+                    'Frequently Asked Questions' }}</h2>
+
+                <div class="faq-grid">
+                    <div class="faq-item" *ngFor="let faq of getFAQs(); let i = index" (click)="toggleFaq(i)"
+                        [class.active]="activeFaqIndex === i">
+                        <div class="faq-question">
+                            <span>{{ currentLang === 'ar' && faq.questionAr ? faq.questionAr : faq.question }}</span>
+                            <span class="faq-toggle">
+                                <i [class]="activeFaqIndex === i ? 'fas fa-minus' : 'fas fa-plus'"></i>
+                            </span>
+                        </div>
+                        <div class="faq-answer" *ngIf="activeFaqIndex === i">
+                            <p [ngClass]="{'text-end': currentLang === 'ar'}">{{ currentLang === 'ar' && faq.answerAr ?
+                                faq.answerAr : faq.answer }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
