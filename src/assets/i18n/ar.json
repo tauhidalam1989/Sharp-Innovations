@@ -18,7 +18,11 @@
     "cloudDevelopment": "تطوير السحابة",
     "chatbotDevelopment": "تطوير الشات بوت",
     "digitalMarketingServices": "خدمات التسويق الرقمي",
-    "uiDevelopment": "تطوير واجهة المستخدم"
+    "uiDevelopment": "تطوير واجهة المستخدم",
+    "BLOGS": "المدونات",
+    "PRODUCTS": "منتجاتنا",
+    "SERVICE_PAGES": "صفحات الخدمة",
+    "PRODUCT": "المنتج"
   },
   "FEATURESS": {
     "WHY_CHOOSE_US": "لماذا تختار شارب إينوفيشنز؟",
@@ -3833,5 +3837,16 @@
   "BLOG_LISTING": {
     "TITLE": "رؤانا وأخبارنا",
     "SUBTITLE": "ابق على اطلاع بأحدث التطورات في التكنولوجيا والتصميم والأمن السيبراني."
+  },
+  "BLOG_DETAIL": {
+    "AUTHOR_NAME": "ابتكارات حادة",
+    "AUTHOR_ROLE": "منشئ محتوى",
+    "BACK_TO_BLOGS": "العودة إلى المدونات",
+    "TAGS": "العلامات",
+    "SHARE_ARTICLE": "مشاركة هذا المقال",
+    "YOU_MIGHT_ALSO_LIKE": "قد يعجبك أيضًا",
+    "CYBER_CTA_TITLE": "تبحث عن حلول الأمن السيبراني؟",
+    "CYBER_CTA_DESC": "تقدم شارب إنوفيشنز أمانًا على مستوى المؤسسات لأصولك الرقمية.",
+    "CONTACT_US": "اتصل بنا"
   }
 }

@@ -23,11 +23,22 @@
     <div *ngIf="blog && !loading" class="blog-content pb-5">
 
         <!-- Hero / Header Section -->
-        <div class="blog-hero bg-light py-5 mb-5 position-relative overflow-hidden">
+        <div class="blog-hero bg-light pt-3 pb-4 mb-5 position-relative overflow-hidden">
             <div class="container position-relative z-1">
+                <!-- Breadcrumb -->
+                <nav class="breadcrumb-custom mb-4" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+                    <i class="fa fa-home" aria-hidden="true" [style.margin-left]="currentLang === 'en' ? '5px' : '0'"
+                        [style.margin-right]="currentLang === 'ar' ? '5px' : '0'"></i>
+                    <a routerLink="/" class="text-decoration-none">{{ 'PAGE_TITLE.HOME' | translate }}</a>
+                    <span style="opacity: 0.5;">|</span>
+                    <a routerLink="/blogs" class="text-decoration-none">{{ 'PAGE_TITLE.BLOGS' | translate }}</a>
+                    <span style="opacity: 0.5;">|</span>
+                    <span class="active">{{ currentLang === 'ar' && blog.titleAr ? blog.titleAr : blog.title }}</span>
+                </nav>
+
                 <button class="btn btn-link text-decoration-none text-primary mb-4 p-0 fw-bold" (click)="goBack()">
-                    <i class="fas fa-arrow-left me-2"></i> {{ currentLang === 'ar' ? 'العودة إلى المدونات' : 'Back to
-                    Blogs' }}
+                    <i class="fas fa-arrow-left me-2" [ngClass]="{'fa-rotate-180': currentLang === 'ar'}"></i>
+                    {{ 'BLOG_DETAIL.BACK_TO_BLOGS' | translate }}
                 </button>
 
 
@@ -55,8 +66,8 @@
                             {{ blog.creator?.name?.[0] || 'U' }}
                         </div>
                         <div>
-                            <p class="mb-0 fw-bold">{{ blog.creator?.name || 'Unknown Author' }}</p>
-                            <p class="mb-0 text-muted small">Content Creator</p>
+                            <p class="mb-0 fw-bold">{{ 'BLOG_DETAIL.AUTHOR_NAME' | translate }}</p>
+                            <p class="mb-0 text-muted small">{{ 'BLOG_DETAIL.AUTHOR_ROLE' | translate }}</p>
                         </div>
                     </div>
 
@@ -98,7 +109,7 @@
 
                     <!-- Tags -->
                     <div class="mt-5 pt-4 border-top" *ngIf="(currentLang === 'ar' ? blog.tagsAr : blog.tags)?.length">
-                        <h5 class="fw-bold mb-3">{{ currentLang === 'ar' ? 'العلامات' : 'Tags' }}</h5>
+                        <h5 class="fw-bold mb-3">{{ 'BLOG_DETAIL.TAGS' | translate }}</h5>
                         <div class="d-flex flex-wrap gap-2">
                             <span class="badge bg-light text-dark border px-3 py-2 rounded-pill"
                                 *ngFor="let tag of (currentLang === 'ar' && blog.tagsAr?.length ? blog.tagsAr : blog.tags)">#{{
@@ -109,7 +120,7 @@
                     <!-- Sharing Section -->
                     <div
                         class="social-share mt-5 p-4 bg-light rounded-4 d-flex align-items-center justify-content-between flex-wrap gap-3">
-                        <h5 class="fw-bold mb-0">{{ currentLang === 'ar' ? 'مشاركة هذا المقال' : 'Share this article' }}
+                        <h5 class="fw-bold mb-0">{{ 'BLOG_DETAIL.SHARE_ARTICLE' | translate }}
                         </h5>
                         <div class="d-flex gap-2">
                             <button class="btn btn-outline-primary rounded-circle" style="width: 45px; height: 45px;"
@@ -177,13 +188,10 @@
                         <!-- Quick About or CTA (Optional sidebar widget) -->
                         <div
                             class="card border-0 shadow-sm rounded-4 bg-primary text-white p-4 text-center pattern-bg w-100 d-block">
-                            <h4 class="fw-bold mb-3">{{ currentLang === 'ar' ? 'تبحث عن حلول الأمن السيبراني؟' :
-                                'Looking for Cybersecurity Solutions?' }}</h4>
-                            <p class="mb-4 text-white-50">{{ currentLang === 'ar' ? 'تقدم شارب إنوفيشنز أمانًا على مستوى
-                                المؤسسات لأصولك الرقمية.' : 'Sharp Innovations provides enterprise-grade security for
-                                your digital assets.' }}</p>
-                            <a routerLink="/contact" class="btn btn-light rounded-pill fw-bold">{{ currentLang === 'ar'
-                                ? 'اتصل بنا' : 'Contact Us' }}</a>
+                            <h4 class="fw-bold mb-3">{{ 'BLOG_DETAIL.CYBER_CTA_TITLE' | translate }}</h4>
+                            <p class="mb-4 text-white-50">{{ 'BLOG_DETAIL.CYBER_CTA_DESC' | translate }}</p>
+                            <a routerLink="/contact" class="btn btn-light rounded-pill fw-bold">{{
+                                'BLOG_DETAIL.CONTACT_US' | translate }}</a>
                         </div>
                     </div>
                 </div>
@@ -192,7 +200,7 @@
 
         <!-- Related Posts -->
         <div class="container mt-5 pt-5 border-top" *ngIf="relatedPosts.length > 0">
-            <h3 class="fw-bold mb-4">{{ currentLang === 'ar' ? 'قد يعجبك أيضًا' : 'You might also like' }}</h3>
+            <h3 class="fw-bold mb-4">{{ 'BLOG_DETAIL.YOU_MIGHT_ALSO_LIKE' | translate }}</h3>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6" *ngFor="let post of relatedPosts">
                     <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden cursor-pointer blog-card"

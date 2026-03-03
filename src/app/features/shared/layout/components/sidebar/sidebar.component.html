@@ -1,53 +1,52 @@
 <div class="sidebar" [class.open]="isOpen">
-    <button class="close-btn" (click)="closeSidebar()">×</button>
-    <a class="cursor-pointer" (click)="pathService.navigateToAbout('home')" class="navbar-brand">
-        <!-- <h1 class="text-white">{{ 'TITLE' | translate }}</h1> -->
-         <img [height]="50" [src]="imageSrc" alt="" srcset="">
-      </a>
-      <a class="cursor-pointer lang-switch" (click)="switchLanguage(currentLang === 'en' ? 'ar' : 'en')">
-        <i class="fa fa-globe"></i> 
-        {{ currentLang === 'ar' ? 'English' : ' العربية' }}
-    </a>
-    
-    <a routerLink="/home" (click)="closeSidebar()" routerLinkActive="active" class="nav-item">
-        <i class="fa fa-home"></i> 
-        {{ 'HOME' | translate }}
-    </a>
-    
-    <a routerLink="/about" (click)="closeSidebar()" routerLinkActive="active" class="nav-item">
-        <i class="fa fa-info-circle"></i> 
-        {{ 'ABOUT' | translate }}
-    </a>
-    
-    <!-- Services Link -->
-    <a routerLink="/service-pages" (click)="closeSidebar()" routerLinkActive="active" class="nav-item">
-      <i class="fa fa-cog"></i>       
-      {{ 'SERVICES' | translate }}
-          </a>
-          <!-- PRODUCTS Link -->
-<a routerLink="/products" (click)="closeSidebar()" routerLinkActive="active" class="nav-item">
-  <i class="fa fa-shopping-bag"></i>
-            {{ 'PRODUCTS' | translate }}
-          </a>
-  
-    <a routerLink="/careers" (click)="closeSidebar()" routerLinkActive="active" class="nav-item">
-        <i class="fa fa-briefcase"></i>
-        {{ 'CAREERS' | translate }}
-    </a>
-    
-    <a routerLink="/contact" (click)="closeSidebar()" routerLinkActive="active" class="nav-item">
-        <i class="fa fa-envelope"></i>
-        {{ 'CONTACT' | translate }}
-    </a>
-    
-    <a routerLink="/blogs" (click)="closeSidebar()" routerLinkActive="active" class="nav-item">
-            <i class="fa fa-rss"></i>
-            {{ currentLang === 'ar' ? 'المدونات' : 'Blogs' }}
-          </a>
+  <button class="close-btn" (click)="closeSidebar()">×</button>
+  <a class="cursor-pointer navbar-brand" (click)="pathService.navigateToAbout('home')">
+    <img [height]="50" [src]="imageSrc" alt="" srcset="">
+  </a>
+  <a class="cursor-pointer lang-switch" (click)="switchLanguage(currentLang === 'en' ? 'ar' : 'en')">
+    <i class="fa fa-globe"></i>
+    {{ currentLang === 'ar' ? 'English' : ' العربية' }}
+  </a>
+
+  <a routerLink="/home" (click)="closeSidebar()" routerLinkActive="active" class="nav-item">
+    <i class="fa fa-home"></i>
+    {{ 'HOME' | translate }}
+  </a>
+
+  <a routerLink="/about" (click)="closeSidebar()" routerLinkActive="active" class="nav-item">
+    <i class="fa fa-info-circle"></i>
+    {{ 'ABOUT' | translate }}
+  </a>
+
+  <!-- Services Link -->
+  <a routerLink="/service-pages" (click)="closeSidebar()" routerLinkActive="active" class="nav-item">
+    <i class="fa fa-cog"></i>
+    {{ 'SERVICES' | translate }}
+  </a>
+  <!-- PRODUCTS Link -->
+  <a routerLink="/products" (click)="closeSidebar()" routerLinkActive="active" class="nav-item">
+    <i class="fa fa-shopping-bag"></i>
+    {{ 'PRODUCTS' | translate }}
+  </a>
+
+  <a routerLink="/careers" (click)="closeSidebar()" routerLinkActive="active" class="nav-item">
+    <i class="fa fa-briefcase"></i>
+    {{ 'CAREERS' | translate }}
+  </a>
+
+  <a routerLink="/contact" (click)="closeSidebar()" routerLinkActive="active" class="nav-item">
+    <i class="fa fa-envelope"></i>
+    {{ 'CONTACT' | translate }}
+  </a>
+
+  <a routerLink="/blogs" (click)="closeSidebar()" routerLinkActive="active" class="nav-item">
+    <i class="fa fa-rss"></i>
+    {{ currentLang === 'ar' ? 'المدونات' : 'Blogs' }}
+  </a>
+  <div class="banner-container">
     <div class="banner-container">
-        <div class="banner-container">
-          <img class="img-fluid banner-image" src="../../../../../../assets/img/Banner3.svg" alt="">
-        </div>
-      </div>
+      <img class="img-fluid banner-image" src="../../../../../../assets/img/Banner3.svg" alt="">
+    </div>
+  </div>
 
 </div>

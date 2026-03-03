@@ -112,6 +112,24 @@
     cursor: pointer;
 }
 
+.breadcrumb-custom {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; // Added to handle overflow on mobile
+    gap: 4px;
+    font-size: 0.95rem;
+    color: #64748b;
+
+    @media (max-width: 768px) {
+        font-size: 0.85rem; // Smaller font on mobile
+        gap: 2px 4px;
+    }
+
+    .active {
+        color: #64748b;
+    }
+}
+
 .pattern-bg {
     background-image: radial-gradient(rgba(255, 255, 255, 0.2) 2px, transparent 2px);
     background-size: 20px 20px;
