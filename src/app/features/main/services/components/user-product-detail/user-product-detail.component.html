@@ -20,6 +20,17 @@
         <section class="hero-header" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
             <div class="container" [ngClass]="{'text-end': currentLang === 'ar'}">
 
+                <nav class="breadcrumb-custom mb-2" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+                    <i class="fa fa-home" aria-hidden="true" [style.margin-left]="currentLang === 'en' ? '5px' : '0'"
+                        [style.margin-right]="currentLang === 'ar' ? '5px' : '0'"></i>
+                    <a class="link" routerLink="/">{{ 'PAGE_TITLE.HOME' | translate }}</a>
+                    <span style="opacity: 0.5;">|</span>
+                    <a class="link" routerLink="/products">{{ 'PAGE_TITLE.PRODUCTS' | translate }}</a>
+                    <span style="opacity: 0.5;">|</span>
+                    <span class="active">{{ currentLang === 'ar' && product.heroTitleAr ? product.heroTitleAr :
+                        product.heroTitle }}</span>
+                </nav>
+
                 <h1>
                     <i [class]="product.heroIcon || 'fas fa-circle'" class="hero-icon"
                         [ngClass]="{'ms-3 me-0': currentLang === 'ar'}"></i>

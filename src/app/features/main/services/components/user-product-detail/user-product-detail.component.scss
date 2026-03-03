@@ -22,7 +22,7 @@ $radius-lg: 16px;
     line-height: 1.6;
     background: $light-bg;
     min-height: 100vh;
-    margin-top: 20px;
+    padding-top: 80px; // Adjusted to match site-header height (75px)
 }
 
 .container {
@@ -168,9 +168,37 @@ h3 {
 }
 
 .hero-header {
-    padding: 40px 0 20px;
+    padding: 0px 0 10px; // Reduced top padding to move breadcrumbs to the very top
     background: transparent;
     border-bottom: 1px solid $border-light;
+
+    .breadcrumb-custom {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap; // Added to handle overflow on mobile
+        gap: 4px; // Reduced from 0.5rem for tighter spacing
+        font-size: 0.95rem;
+        color: $text-muted;
+        margin-bottom: 1rem;
+
+        @media (max-width: 768px) {
+            font-size: 0.85rem; // Smaller font on mobile
+            gap: 2px 4px; // Horizontal and vertical gap for wrapped lines
+        }
+
+        .link {
+            color: $primary-blue;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .active {
+            color: $text-muted;
+        }
+    }
 
     h1 {
         font-size: 28px;

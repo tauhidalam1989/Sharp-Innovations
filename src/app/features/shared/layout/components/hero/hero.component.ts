@@ -13,7 +13,7 @@ export class HeroComponent implements OnInit {
   showHero: boolean = false;
   heroImageSrc: string = ''; // Property for hero image source
 
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     // Listen to navigation events
@@ -29,7 +29,13 @@ export class HeroComponent implements OnInit {
 
   private updatePageDetails(): void {
     const currentRoute = this.router.url;
-    this.showHero = !currentRoute.includes('home');
+    const urlSegments = currentRoute.split('/').filter((segment) => segment);
+
+    // Show hero only for top-level listing pages, not for detail pages or home
+    const listingRoutes = ['about', 'privacy', 'contact', 'service', 'faq', 'team', 'testimonial', 'feature', 'project', 'Careers', 'products', 'service-pages', 'blogs', 'product'];
+
+    this.showHero = urlSegments.length === 1 && listingRoutes.includes(urlSegments[0]);
+
     this.updatePageTitleAndBreadcrumbs();
   }
 
@@ -70,6 +76,10 @@ export class HeroComponent implements OnInit {
       'chatbot-development': 'PAGE_TITLE.chatbotDevelopment',
       'digital-marketing-services': 'PAGE_TITLE.digitalMarketingServices',
       'ui-development': 'PAGE_TITLE.uiDevelopment',
+      blogs: 'PAGE_TITLE.BLOGS',
+      products: 'PAGE_TITLE.PRODUCTS',
+      'service-pages': 'PAGE_TITLE.SERVICE_PAGES',
+      product: 'PAGE_TITLE.PRODUCT',
     };
     return customLabels[routeSegment] || null;
   }
@@ -81,5 +91,5 @@ export class HeroComponent implements OnInit {
   replaceHyphen(label: string): string {
     return label ? label.replace(/-/g, ' ') : label;
   }
-  
+
 }

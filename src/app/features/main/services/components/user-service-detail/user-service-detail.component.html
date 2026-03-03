@@ -4,11 +4,15 @@
     <!-- 1. HERO SECTION (Light Theme) -->
     <section class="hero-section clean-hero">
         <div class="container hero-container">
-            <!-- <nav class="breadcrumb-custom mb-4">
-                <a class="link" href="/">{{ currentLang === 'ar' ? 'الرئيسية' : 'Home' }}</a> /
-                <a class="link" href="/services">{{ currentLang === 'ar' ? 'الخدمات' : 'Services' }}</a> /
+            <nav class="breadcrumb-custom mb-4" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+                <i class="fa fa-home" aria-hidden="true" [style.margin-left]="currentLang === 'en' ? '5px' : '0'"
+                    [style.margin-right]="currentLang === 'ar' ? '5px' : '0'"></i>
+                <a class="link" routerLink="/">{{ 'PAGE_TITLE.HOME' | translate }}</a>
+                <span style="opacity: 0.5;">|</span>
+                <a class="link" routerLink="/service-pages">{{ 'PAGE_TITLE.SERVICE_PAGES' | translate }}</a>
+                <span style="opacity: 0.5;">|</span>
                 <span class="active">{{ currentLang === 'ar' ? service.heroTitleAr : service.heroTitle }}</span>
-            </nav> -->
+            </nav>
 
             <div class="hero-content">
                 <div class="hero-title-row">

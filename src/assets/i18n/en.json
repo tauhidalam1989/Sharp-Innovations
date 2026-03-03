@@ -15,7 +15,11 @@
     "cloudDevelopment": "Cloud Development",
     "chatbotDevelopment": "Chatbot Development",
     "digitalMarketingServices": "Digital Marketing Services",
-    "uiDevelopment": "UI Development"
+    "uiDevelopment": "UI Development",
+    "BLOGS": "Blogs",
+    "PRODUCTS": "Our Products",
+    "SERVICE_PAGES": "Service Pages",
+    "PRODUCT": "Product"
   },
   "FEATURESS": {
     "WHY_CHOOSE_US": "Why Choose Sharp Innovations?",
@@ -4024,5 +4028,16 @@
   "BLOG_LISTING": {
     "TITLE": "Our Insights & News",
     "SUBTITLE": "Stay updated with the latest in technology, design, and cybersecurity."
+  },
+  "BLOG_DETAIL": {
+    "AUTHOR_NAME": "Sharp Innovations",
+    "AUTHOR_ROLE": "Content Creator",
+    "BACK_TO_BLOGS": "Back to Blogs",
+    "TAGS": "Tags",
+    "SHARE_ARTICLE": "Share this article",
+    "YOU_MIGHT_ALSO_LIKE": "You might also like",
+    "CYBER_CTA_TITLE": "Looking for Cybersecurity Solutions?",
+    "CYBER_CTA_DESC": "Sharp Innovations provides enterprise-grade security for your digital assets.",
+    "CONTACT_US": "Contact Us"
   }
 }
