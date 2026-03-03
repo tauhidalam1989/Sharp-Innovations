@@ -33,7 +33,6 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     HttpClientModule,
     AppRoutingModule,
     RouterModule,
-    TranslateModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
