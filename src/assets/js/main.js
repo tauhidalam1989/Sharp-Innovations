@@ -10,18 +10,25 @@
         }, 1);
     };
     spinner();
-    
-    
+
+
     // Initiate the wowjs
     new WOW().init();
 
 
     // Sticky Navbar
     $(window).scroll(function () {
+        var path = window.location.pathname;
+        var isHome = path === '/' || path === '/home' || path.endsWith('/home') || path === '';
+
         if ($(this).scrollTop() > 300) {
             $('.sticky-top').addClass('bg-primary shadow-sm').css('top', '0px');
         } else {
-            $('.sticky-top').removeClass('bg-primary shadow-sm').css('top', '-150px');
+            if (isHome) {
+                $('.sticky-top').addClass('bg-primary').css('top', '0px').removeClass('shadow-sm');
+            } else {
+                $('.sticky-top').removeClass('bg-primary shadow-sm').css('top', '-150px');
+            }
         }
     });
 
@@ -31,8 +38,8 @@
         delay: 10,
         time: 2000
     });
-    
-    
+
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
@@ -42,7 +49,7 @@
         }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
         return false;
     });
 
@@ -55,11 +62,11 @@
         dots: true,
         loop: true,
         nav: true,
-        navText : [
+        navText: [
             '<i class="bi bi-chevron-left"></i>',
             '<i class="bi bi-chevron-right"></i>'
         ]
     });
-    
+
 })(jQuery);
 

@@ -41,9 +41,13 @@ export class ServiceComponent implements OnInit {
     private router: Router,
     private seoService: SeoService,
     private translateService: TranslateService
-  ) {}
+  ) {
+    console.log('🔍 ServiceComponent constructor - calling setServerSideMetaTags');
+    this.seoService.setServerSideMetaTags('SERVICES');
+  }
 
   ngOnInit() {
+    //this.seoService.setServerSideMetaTags('SERVICES');
     this.translateService.get(['SEO.SERVICES.TITLE', 'SEO.SERVICES.DESCRIPTION', 'SEO.SERVICES.KEYWORDS']).subscribe(translations => {
       this.seoService.updateMetaTags({
         title: translations['SEO.SERVICES.TITLE'],

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { Router } from '@angular/router';
 import { BlogService } from '../../../../../dashboard/pages/blog/services/blog.service';
 import { Blog, BlogFilters } from '../../../../../dashboard/pages/blog/models/blog.model';
@@ -6,6 +6,8 @@ import { environment } from '../../../../../../environments/environment';
 
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 import { LanguageService } from '../../../../shared/services/language.service';
+import { SeoService } from '../../../../shared/services/seo.service';
+import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 
 @Component({
   selector: 'app-blog-listing',
@@ -27,20 +29,42 @@ export class BlogListingComponent implements OnInit {
   tags: string[] = [];
   categoriesAr: string[] = [];
   tagsAr: string[] = [];
+  private isBrowser: boolean;
+  private isServer: boolean;
 
   constructor(
     private blogService: BlogService,
     private router: Router,
     private translate: TranslateService,
-    private languageService: LanguageService
+    private languageService: LanguageService,
+    private seoService: SeoService,
+    @Inject(PLATFORM_ID) platformId: Object
   ) {
+    this.isBrowser = isPlatformBrowser(platformId);
+    this.isServer = isPlatformServer(platformId);
     this.currentLang = this.languageService.getLanguage() as 'en' | 'ar';
+    // Set meta tags synchronously for SSR
+    this.seoService.setServerSideMetaTags('BLOGS');
   }
 
   ngOnInit(): void {
     this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
       this.currentLang = event.lang as 'en' | 'ar';
     });
+
+    // Set translated meta tags (browser-only to avoid overwriting SSR defaults with raw keys)
+    if (this.isBrowser) {
+      this.translate.get(['SEO.BLOGS.TITLE', 'SEO.BLOGS.DESCRIPTION', 'SEO.BLOGS.KEYWORDS']).subscribe(translations => {
+        this.seoService.updateMetaTags({
+          title: translations['SEO.BLOGS.TITLE'],
+          description: translations['SEO.BLOGS.DESCRIPTION'],
+          keywords: translations['SEO.BLOGS.KEYWORDS'],
+          url: 'https://sharpinvotech.com/blogs',
+          page: 'BLOGS'
+        });
+      });
+    }
+
     this.loadBlogs();
     this.loadMetadata();
   }
@@ -73,6 +97,9 @@ export class BlogListingComponent implements OnInit {
         if (response.success) {
           this.blogs = response.result as Blog[];
           this.totalItems = response.pagination?.total || 0;
+          if (this.isServer) {
+            console.log(`[SSR-BlogListing] Loaded ${this.blogs.length} blogs. Lang: ${this.currentLang}`);
+          }
         }
         this.loading = false;
       },

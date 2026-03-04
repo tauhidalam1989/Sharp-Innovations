@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, OnDestroy } from '@angular/core';
+import { Component, OnInit, Inject, OnDestroy, PLATFORM_ID } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../../../../../dashboard/pages/products/products/product.service';
 import { Product, HowItWorkItem, BenefitItem, VisionItem, FAQItem, KeyFeatureItem } from '../../../../../dashboard/pages/products/products/product.model';
@@ -7,6 +7,8 @@ import { LanguageService } from '../../../../shared/services/language.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { environment } from '../../../../../../environments/environment';
+import { SeoService } from '../../../../shared/services/seo.service';
+import { isPlatformServer } from '@angular/common';
 
 @Component({
     selector: 'app-user-product-detail',
@@ -21,20 +23,30 @@ export class UserProductDetailComponent implements OnInit, OnDestroy {
     currentLang: string = 'en';
     private langSubscription?: Subscription;
     activeFaq: number | null = null;
+    isServer: boolean;
 
     constructor(
         private route: ActivatedRoute,
         private router: Router,
-        private productService: ProductService, // Renamed from productProduct for clarity and removed @Inject
+        private productService: ProductService,
         private sanitizer: DomSanitizer,
         private languageService: LanguageService,
-        private translateService: TranslateService
-    ) { }
+        private translateService: TranslateService,
+        private seoService: SeoService,
+        @Inject(PLATFORM_ID) private platformId: Object
+    ) {
+        this.isServer = isPlatformServer(this.platformId);
+        // Set default meta tags synchronously for SSR
+        this.seoService.setServerSideMetaTags('PRODUCTS');
+    }
 
     ngOnInit(): void {
         this.currentLang = this.languageService.getLanguage();
         this.langSubscription = this.translateService.onLangChange.subscribe((event) => {
             this.currentLang = event.lang;
+            if (this.product) {
+                this.updateSeoTags();
+            }
         });
 
         this.route.paramMap.subscribe(params => {
@@ -51,11 +63,11 @@ export class UserProductDetailComponent implements OnInit, OnDestroy {
         }
     }
 
-    loadProduct(slug: string): void { // Renamed from loadProductBySlug
+    loadProduct(slug: string): void {
         this.loading = true;
         this.error = '';
 
-        this.productService.getProductBySlug(slug).subscribe({ // Changed to productService
+        this.productService.getProductBySlug(slug).subscribe({
             next: (response) => {
                 if (response?.success) {
                     const productData = response.result || response.data;
@@ -64,6 +76,11 @@ export class UserProductDetailComponent implements OnInit, OnDestroy {
                     } else {
                         this.product = productData as Product;
                     }
+
+                    if (this.isServer && this.product) {
+                        console.log(`[SSR] Product Loaded: ${this.product.title} | Ar: ${this.product.titleAr ? 'YES' : 'NO'} | Lang: ${this.currentLang}`);
+                    }
+                    this.updateSeoTags();
                 } else {
                     this.error = response?.message || 'Failed to load product';
                 }
@@ -75,6 +92,25 @@ export class UserProductDetailComponent implements OnInit, OnDestroy {
                 this.loading = false;
             }
         });
+    }
+
+    updateSeoTags(): void {
+        if (this.product) {
+            const title = this.currentLang === 'ar'
+                ? (this.product.metaTitleAr || this.product.titleAr || this.product.title)
+                : (this.product.metaTitle || this.product.title);
+
+            const description = this.currentLang === 'ar'
+                ? (this.product.metaDescriptionAr || this.product.shortDescriptionAr || this.product.shortDescription || '')
+                : (this.product.metaDescription || this.product.shortDescription || '');
+
+            this.seoService.updateMetaTags({
+                title: title,
+                description: description,
+                image: this.getImageUrl(this.product.heroIcon || this.product.aboutImage),
+                page: 'PRODUCTS'
+            });
+        }
     }
 
     getHowItWorks(): HowItWorkItem[] {

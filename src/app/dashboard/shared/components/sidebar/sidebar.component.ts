@@ -19,6 +19,7 @@ export class SidebarComponent {
     { path: '/dashboard/services/add', icon: 'plus-circle', label: 'Add Service' },
     { path: '/blog', icon: 'blog', label: 'Blog Posts' },
     { path: '/blog/new', icon: 'plus-circle', label: 'Add Blog' },
+    { path: '/dashboard/clients-partners', icon: 'handshake', label: 'Manage Clients & Partners' },
     { path: '/settings', icon: 'cog', label: 'Settings' }
   ];
 
@@ -36,7 +37,8 @@ export class SidebarComponent {
       'tags': 'fa-tags',
       'images': 'fa-images',
       'cog': 'fa-cog',
-      'concierge-bell': 'fa-concierge-bell'
+      'concierge-bell': 'fa-concierge-bell',
+      'handshake': 'fa-handshake'
     };
     return icons[icon] || 'fa-circle';
   }

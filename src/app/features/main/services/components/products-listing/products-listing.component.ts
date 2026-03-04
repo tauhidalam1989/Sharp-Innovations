@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductService } from '../../../../../dashboard/pages/products/products/product.service';
 import { Product } from '../../../../../dashboard/pages/products/products/product.model';
@@ -6,6 +6,8 @@ import { environment } from '../../../../../../environments/environment';
 import { LanguageService } from '../../../../shared/services/language.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
+import { isPlatformBrowser, isPlatformServer } from '@angular/common';
+import { SeoService } from '../../../../shared/services/seo.service';
 
 @Component({
     selector: 'app-products-listing',
@@ -20,13 +22,22 @@ export class ProductsListingComponent implements OnInit {
     error = '';
     currentLang: string = 'en';
     private langSubscription?: Subscription;
+    private isBrowser: boolean;
+    private isServer: boolean;
 
     constructor(
         @Inject(ProductService) private productProduct: ProductService,
         private router: Router,
         private languageService: LanguageService,
-        private translateService: TranslateService
-    ) { }
+        private translateService: TranslateService,
+        private seoService: SeoService,
+        @Inject(PLATFORM_ID) platformId: Object
+    ) {
+        this.isBrowser = isPlatformBrowser(platformId);
+        this.isServer = isPlatformServer(platformId);
+        // Set meta tags synchronously for SSR
+        this.seoService.setServerSideMetaTags('PRODUCTS');
+    }
 
     ngOnInit(): void {
         this.currentLang = this.languageService.getLanguage();
@@ -36,6 +47,20 @@ export class ProductsListingComponent implements OnInit {
                 this.groupProducts();
             }
         });
+
+        // Set translated meta tags (browser-only to avoid overwriting SSR defaults with raw keys)
+        if (this.isBrowser) {
+            this.translateService.get(['SEO.PRODUCTS.TITLE', 'SEO.PRODUCTS.DESCRIPTION', 'SEO.PRODUCTS.KEYWORDS']).subscribe(translations => {
+                this.seoService.updateMetaTags({
+                    title: translations['SEO.PRODUCTS.TITLE'],
+                    description: translations['SEO.PRODUCTS.DESCRIPTION'],
+                    keywords: translations['SEO.PRODUCTS.KEYWORDS'],
+                    url: 'https://sharpinvotech.com/products',
+                    page: 'PRODUCTS'
+                });
+            });
+        }
+
         this.loadProducts();
     }
 
@@ -57,6 +82,9 @@ export class ProductsListingComponent implements OnInit {
                         this.products = data;
                     } else if (data) {
                         this.products = [data as Product];
+                    }
+                    if (this.isServer) {
+                        console.log(`[SSR-ProductsListing] Loaded ${this.products.length} products. Lang: ${this.currentLang}`);
                     }
                     this.groupProducts();
                 } else {
