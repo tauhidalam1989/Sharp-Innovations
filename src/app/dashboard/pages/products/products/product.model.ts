@@ -132,6 +132,12 @@ export interface Product {
   heroDescription?: string;
   heroDescriptionAr?: string;
   heroIcon?: string;
+  heroPrimaryCtaText?: string;
+  heroPrimaryCtaTextAr?: string;
+  heroPrimaryCtaLink?: string;
+  heroSecondaryCtaText?: string;
+  heroSecondaryCtaTextAr?: string;
+  heroSecondaryCtaLink?: string;
   heroImageAlt?: string;
   heroImageAltAr?: string;
 

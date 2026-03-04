@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BlogService } from '../../../../../dashboard/pages/blog/services/blog.service';
 import { Blog } from '../../../../../dashboard/pages/blog/models/blog.model';
 import { environment } from '../../../../../../environments/environment';
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 import { LanguageService } from '../../../../shared/services/language.service';
+import { SeoService } from '../../../../shared/services/seo.service';
+import { isPlatformServer } from '@angular/common';
 
 @Component({
   selector: 'app-blog-detail',
@@ -18,20 +20,27 @@ export class BlogDetailComponent implements OnInit {
   relatedPosts: Blog[] = [];
   currentGalleryIndex = 0;
   currentLang: 'en' | 'ar' = 'en';
+  isServer: boolean;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private blogService: BlogService,
     private languageService: LanguageService,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private seoService: SeoService,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {
+    this.isServer = isPlatformServer(this.platformId);
     this.currentLang = this.languageService.getLanguage() as 'en' | 'ar';
   }
 
   ngOnInit(): void {
     this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
       this.currentLang = event.lang as 'en' | 'ar';
+      if (this.blog) {
+        this.updateSeoTags();
+      }
     });
 
     this.route.params.subscribe(params => {
@@ -55,6 +64,10 @@ export class BlogDetailComponent implements OnInit {
       next: (response) => {
         if (response.success) {
           this.blog = response.result as Blog;
+          if (this.isServer && this.blog) {
+            console.log(`[SSR-BlogDetail] Lang: ${this.currentLang} | Title: ${this.blog.title} | TitleAr: ${this.blog.titleAr ? 'YES' : 'NO'}`);
+          }
+          this.updateSeoTags();
           this.loadRelatedPosts();
         } else {
           this.error = 'Failed to load blog post';
@@ -67,6 +80,32 @@ export class BlogDetailComponent implements OnInit {
         this.loading = false;
       }
     });
+  }
+
+  updateSeoTags(): void {
+    if (this.blog) {
+      const title = this.currentLang === 'ar'
+        ? (this.blog.metaTitleAr || this.blog.titleAr || this.blog.title)
+        : (this.blog.metaTitle || this.blog.title);
+
+      const description = this.currentLang === 'ar'
+        ? (this.blog.metaDescriptionAr || this.blog.excerptAr || this.blog.excerpt || '')
+        : (this.blog.metaDescription || this.blog.excerpt || '');
+
+      // Use blog tags as keywords
+      const tags = this.currentLang === 'ar' && this.blog.tagsAr && this.blog.tagsAr.length > 0
+        ? this.blog.tagsAr
+        : (this.blog.tags || []);
+      const keywords = tags.join(', ');
+
+      this.seoService.updateMetaTags({
+        title: title,
+        description: description,
+        keywords: keywords,
+        image: this.getImageUrl(this.blog.featuredImage),
+        page: 'BLOGS'
+      });
+    }
   }
 
   loadRelatedPosts(): void {

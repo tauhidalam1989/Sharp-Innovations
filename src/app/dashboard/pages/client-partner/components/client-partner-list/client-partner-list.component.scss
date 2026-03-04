@@ -1,0 +1,33 @@
+.bg-success-soft {
+    background-color: rgba(40, 167, 69, 0.1);
+}
+
+.bg-danger-soft {
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+.btn-icon {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    border: none;
+    transition: all 0.2s;
+}
+
+.table> :not(caption)>*>* {
+    padding: 1rem 1rem;
+}
+
+.card {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.img-fluid {
+    max-height: 40px;
+    object-fit: contain;
+}

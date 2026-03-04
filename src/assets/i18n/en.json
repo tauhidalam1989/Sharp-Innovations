@@ -4021,6 +4021,18 @@
       "DESCRIPTION": "Read what our clients say about Sharp Innovations' IT services and solutions. Real feedback from businesses across Saudi Arabia.",
       "KEYWORDS": "IT company reviews, technology testimonials, Sharp Innovations feedback, client success stories",
       "SCHEMA_TYPE": "ReviewNewsArticle"
+    },
+    "PRODUCTS": {
+      "TITLE": "Our Products & Solutions - Sharp Innovations",
+      "DESCRIPTION": "Browse our latest technology products and innovative IT solutions. Sharp Innovations offers cutting-edge software and hardware solutions for businesses in Saudi Arabia.",
+      "KEYWORDS": "IT products Saudi Arabia, technology solutions, software products, Sharp Innovations products, business solutions KSA",
+      "SCHEMA_TYPE": "CollectionPage"
+    },
+    "BLOGS": {
+      "TITLE": "Blog & Insights - Sharp Innovations Technology Articles",
+      "DESCRIPTION": "Stay updated with the latest insights, news, and articles about technology, cybersecurity, and digital innovation from Sharp Innovations.",
+      "KEYWORDS": "technology blog, IT insights, cybersecurity news, Sharp Innovations blog, tech articles KSA",
+      "SCHEMA_TYPE": "Blog"
     }
   },
   "BLOG_LISTING": {

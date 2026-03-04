@@ -21,9 +21,12 @@ export class CoreServiceComponent {
     private seoService: SeoService
   ) {
     this.isBrowser = isPlatformBrowser(this.platformId);
+    console.log('🔍 CoreServiceComponent constructor - calling setServerSideMetaTags');
+    this.seoService.setServerSideMetaTags('SERVICES');
   }
 
   ngOnInit(): void {
+    // this.seoService.setServerSideMetaTags('SERVICES');
     // Set SEO meta tags for the services page
     this.translateService.get(['SEO.SERVICES.TITLE', 'SEO.SERVICES.DESCRIPTION', 'SEO.SERVICES.KEYWORDS']).subscribe(translations => {
       this.seoService.updateMetaTags({
@@ -46,7 +49,7 @@ export class CoreServiceComponent {
 
   selectService(service: any) {
     this.selectedService = service;
-  
+
     if (this.isBrowser && window.innerWidth <= 768) {
       setTimeout(() => {
         this.detailSection?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });

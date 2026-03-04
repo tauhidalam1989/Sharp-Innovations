@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
 import { Router } from '@angular/router';
 import { ServicePageService } from '../../../../../dashboard/pages/services/services/service.service';
 import { ServicePage } from '../../../../../dashboard/pages/services/services/service.model';
@@ -6,6 +6,8 @@ import { environment } from '../../../../../../environments/environment';
 import { LanguageService } from '../../../../shared/services/language.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
+import { isPlatformBrowser, isPlatformServer } from '@angular/common';
+import { SeoService } from '../../../../shared/services/seo.service';
 
 @Component({
     selector: 'app-services-listing',
@@ -20,13 +22,22 @@ export class ServicesListingComponent implements OnInit, OnDestroy {
     error = '';
     currentLang: string = 'en';
     private langSubscription?: Subscription;
+    private isBrowser: boolean;
+    private isServer: boolean;
 
     constructor(
         private servicePageService: ServicePageService,
         private router: Router,
         private languageService: LanguageService,
-        private translateService: TranslateService
-    ) { }
+        private translateService: TranslateService,
+        private seoService: SeoService,
+        @Inject(PLATFORM_ID) platformId: Object
+    ) {
+        this.isBrowser = isPlatformBrowser(platformId);
+        this.isServer = isPlatformServer(platformId);
+        // Set meta tags synchronously for SSR
+        this.seoService.setServerSideMetaTags('SERVICES');
+    }
 
     ngOnInit(): void {
         this.currentLang = this.languageService.getLanguage();
@@ -36,6 +47,20 @@ export class ServicesListingComponent implements OnInit, OnDestroy {
                 this.groupServices();
             }
         });
+
+        // Set translated meta tags (browser-only to avoid overwriting SSR defaults with raw keys)
+        if (this.isBrowser) {
+            this.translateService.get(['SEO.SERVICES.TITLE', 'SEO.SERVICES.DESCRIPTION', 'SEO.SERVICES.KEYWORDS']).subscribe(translations => {
+                this.seoService.updateMetaTags({
+                    title: translations['SEO.SERVICES.TITLE'],
+                    description: translations['SEO.SERVICES.DESCRIPTION'],
+                    keywords: translations['SEO.SERVICES.KEYWORDS'],
+                    url: 'https://sharpinvotech.com/service-pages',
+                    page: 'SERVICES'
+                });
+            });
+        }
+
         this.loadServices();
     }
 
@@ -57,6 +82,9 @@ export class ServicesListingComponent implements OnInit, OnDestroy {
                         this.services = data;
                     } else if (data) {
                         this.services = [data as ServicePage];
+                    }
+                    if (this.isServer) {
+                        console.log(`[SSR-ServicesListing] Loaded ${this.services.length} services. Lang: ${this.currentLang}`);
                     }
                     this.groupServices();
                 } else {

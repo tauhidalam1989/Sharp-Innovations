@@ -1,8 +1,9 @@
 /* Main section styling */
 .clients-page {
- // padding: 60px 0;
- // background-color: #f9f9f9;
+  // padding: 60px 0;
+  // background-color: #f9f9f9;
 }
+
 .rtl {
   direction: rtl;
 }
@@ -11,32 +12,45 @@
   float: right !important;
 }
 
+/* Remove default list bullets from owl-carousel items */
+::ng-deep owl-carousel-o,
+::ng-deep .owl-carousel,
+::ng-deep .owl-stage,
+::ng-deep owl-stage,
+::ng-deep .owl-item {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
 
 .section-title {
   text-align: center;
   margin-bottom: 50px;
- // position: relative;
-  .header-title{
+
+  // position: relative;
+  .header-title {
     display: flex;
-        gap: 20px;
-        justify-content: center;
+    gap: 20px;
+    justify-content: center;
   }
 
-  
+
   h2 {
     font-size: 2.5rem;
     color: #333;
+
     @media (max-width: 768px) {
-    font-size: 18px;
+      font-size: 18px;
     }
+
     font-weight: 700;
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    
-  
+
+
   }
-  
+
   p {
     color: #666;
     font-size: 1.1rem;
@@ -57,15 +71,15 @@
   display: flex !important;
   justify-content: center;
   align-items: center;
-cursor: pointer;
+  cursor: pointer;
   padding: 22px;
   padding: 15px 25px;
   margin: 0 10px;
- // background: white;
- height: 160px;
- width: 100%;
- max-width: 300px !important;
- border: 1.5px solid #1363c6 !important;
+  // background: white;
+  height: 160px;
+  width: 100%;
+  max-width: 300px !important;
+  border: 1.5px solid #1363c6 !important;
   border-radius: 8px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
   transition: all 0.4s ease;
@@ -76,13 +90,13 @@ cursor: pointer;
     width: auto;
     height: auto;
     object-fit: contain;
-   // filter: grayscale(100%);
-   // opacity: 0.7;
+    // filter: grayscale(100%);
+    // opacity: 0.7;
     transition: all 0.3s ease;
   }
 
   &:hover {
-     transform: translateX(-10px);
+    transform: translateX(-10px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
 
     img {
@@ -97,7 +111,7 @@ cursor: pointer;
   @extend .logo-item;
   height: 180px;
   padding: 20px;
-  
+
   img {
     filter: none;
     opacity: 1;
@@ -115,10 +129,10 @@ cursor: pointer;
 /* Custom navigation arrows */
 ::ng-deep .owl-carousel {
   position: relative;
-  
+
   .owl-nav {
     margin-top: 0;
-    
+
     button.owl-prev,
     button.owl-next {
       position: absolute;
@@ -134,43 +148,43 @@ cursor: pointer;
       align-items: center;
       justify-content: center;
       transition: all 0.3s ease;
-      
+
       &:hover {
         background: rgba(63, 81, 181, 1) !important;
         transform: translateY(-50%) scale(1.1);
       }
-      
+
       span {
         display: block;
         line-height: 1;
         margin-top: -2px;
       }
     }
-    
+
     button.owl-prev {
       left: -50px;
-      
+
       @media (max-width: 768px) {
         left: -20px;
       }
     }
-    
+
     button.owl-next {
       right: -50px;
-      
+
       @media (max-width: 768px) {
         right: -20px;
       }
     }
-    
+
     &.disabled {
       display: none;
     }
   }
-  
+
   .owl-dots {
     margin-top: 30px !important;
-    
+
     .owl-dot {
       span {
         width: 12px !important;
@@ -179,12 +193,12 @@ cursor: pointer;
         background: #ddd !important;
         transition: all 0.3s ease;
       }
-      
+
       &.active span {
         background: #3f51b5 !important;
         transform: scale(1.2);
       }
-      
+
       &:hover span {
         background: #bbb !important;
       }
@@ -197,12 +211,12 @@ cursor: pointer;
   .section-title h2 {
     font-size: 2.2rem;
   }
-  
+
   .logo-item {
     height: 100px;
     padding: 10px 20px;
   }
-  
+
   .certificate-item {
     height: 160px;
   }
@@ -212,21 +226,23 @@ cursor: pointer;
   .clients-page {
     padding: 40px 0;
   }
-  
+
   .section-title {
     margin-bottom: 50px;
-    
+
     h2 {
       font-size: 1.8rem;
+
       @media (max-width: 767px) {
         font-size: 18px;
+      }
     }
-  }
+
     p {
       font-size: 1rem;
     }
   }
-  
+
   .logo-item {
     height: 128px;
     width: 100%;
@@ -234,12 +250,13 @@ cursor: pointer;
     padding: 8px 15px;
     margin: 0 5px;
   }
-  
+
   .certificate-item {
     height: 140px;
   }
-  
+
   ::ng-deep .owl-carousel .owl-nav {
+
     button.owl-prev,
     button.owl-next {
       width: 30px;
@@ -251,8 +268,15 @@ cursor: pointer;
 
 /* Animation for autoplay items */
 @keyframes fadeIn {
-  from { opacity: 0.5; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 ::ng-deep .owl-item {
@@ -265,7 +289,7 @@ cursor: pointer;
   justify-content: center;
   align-items: center;
   min-height: 200px;
-  
+
   .spinner {
     border: 4px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
@@ -277,8 +301,13 @@ cursor: pointer;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* PDF Modal object styling */

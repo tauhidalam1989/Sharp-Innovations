@@ -149,6 +149,21 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
+    path: 'dashboard/clients-partners',
+    loadChildren: () => import('../app/dashboard/pages/client-partner/client-partner.module').then(m => m.ClientPartnerModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'dashboard/clients',
+    redirectTo: 'dashboard/clients-partners',
+    pathMatch: 'full'
+  },
+  {
+    path: 'dashboard/partners',
+    redirectTo: 'dashboard/clients-partners',
+    pathMatch: 'full'
+  },
+  {
     path: '',
     redirectTo: '/home',
     pathMatch: 'full'

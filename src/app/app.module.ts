@@ -43,8 +43,6 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   providers: [
-    Meta,
-    Title,
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]

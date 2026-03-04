@@ -13,6 +13,30 @@
 @import "~quill/dist/quill.core.css";
 @import "~quill/dist/quill.snow.css";
 
+/* Fix: Hide stray dots from owl-carousel slide elements */
+owl-carousel-o {
+  overflow: hidden;
+  display: block;
+}
+
+.owl-carousel .owl-stage::after {
+  content: "" !important;
+  display: none !important;
+}
+
+.owl-carousel .owl-stage-outer {
+  overflow: hidden !important;
+}
+
+owl-carousel-o .owl-carousel {
+  font-size: 0;
+}
+
+owl-carousel-o .owl-carousel .owl-item {
+  font-size: 14px;
+}
+
+
 body.rtl {
   .me-3 {
     margin-left: 1rem !important;

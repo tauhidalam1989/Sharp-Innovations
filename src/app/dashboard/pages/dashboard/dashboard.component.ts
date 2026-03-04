@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 import { AuthService } from '../../../core/services/auth.service';
 import { ApiService } from '../../../core/services/api.service';
 import { ServicePageService } from '../services/services/service.service';
@@ -35,10 +36,12 @@ export class DashboardComponent implements OnInit {
     public authService: AuthService,
     private apiService: ApiService,
     private servicePageService: ServicePageService,
-    private router: Router
+    private router: Router,
+    private titleService: Title
   ) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle('Admin Dashboard - Sharp Innovations');
     this.loadDashboardData();
   }
 

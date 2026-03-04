@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, AfterViewInit, ElementRef, EventEmitter, Output } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { RoutingService } from '../../../services/routing.service';
 import { LanguageService } from '../../../services/language.service';
 
@@ -12,23 +12,31 @@ export class SiteHeaderComponent implements OnInit {
   currentLang: string = 'en';
   isServicesHovered = false;
 
-// Add this property to your component class
-selectedCategory: any = null;
-selectedproduct: any = null;
+  // Add this property to your component class
+  selectedCategory: any = null;
+  selectedproduct: any = null;
   imageSrc: "../../../../../../assets/img/d1.png" | any;
+  isHomePage: boolean = false;
+
   constructor(
     private router: Router,
+    private route: ActivatedRoute,
     public pathService: RoutingService,
     private languageService: LanguageService
   ) {
-   
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.checkHomePage();
+      }
+    });
   }
 
   ngOnInit(): void {
+    this.checkHomePage();
     this.currentLang = this.languageService.getLanguage();
     this.languageService.switchLanguage(this.currentLang);
-    this.imageSrc =  this.currentLang === 'en' ? '../../../../../../assets/img/d1.png' : '../../../../../../assets/img/d2.png';
-    
+    this.imageSrc = this.currentLang === 'en' ? '../../../../../../assets/img/d1.png' : '../../../../../../assets/img/d2.png';
+
     // Listen for navigation events
     // this.router.events.subscribe((event) => {
     //   if (event instanceof NavigationEnd) {
@@ -48,33 +56,46 @@ selectedproduct: any = null;
   switchLanguage(lang: string): void {
     this.languageService.switchLanguage(lang);
     this.currentLang = lang;
-    this.imageSrc =  this.currentLang === 'en' ? '../../../../../../assets/img/d1.png' : '../../../../../../assets/img/d2.png';
-    
-     
+    this.imageSrc = this.currentLang === 'en' ? '../../../../../../assets/img/d1.png' : '../../../../../../assets/img/d2.png';
+
+    // Sync URL with language parameter for SSR/SEO transparency
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: { lang: lang },
+      queryParamsHandling: 'merge'
+    });
   }
 
-isIotHovered = false;
-isProductsHovered = false;
-isservicing=false
-isProduct=false
-toggleDropdown(menu: string, state: boolean) {  
-  console.log(`Toggling ${menu} to ${state}`);
-  switch (menu) {
-    case 'isservicing':
-      this.isservicing = state;
-      break;
-    case 'isProduct':
-      this.isProduct = state;
-      break;
-    case 'products':
-      this.isProductsHovered = state;
-      break;
+  isIotHovered = false;
+  isProductsHovered = false;
+  isservicing = false
+  isProduct = false
+  toggleDropdown(menu: string, state: boolean) {
+    console.log(`Toggling ${menu} to ${state}`);
+    switch (menu) {
+      case 'isservicing':
+        this.isservicing = state;
+        break;
+      case 'isProduct':
+        this.isProduct = state;
+        break;
+      case 'products':
+        this.isProductsHovered = state;
+        break;
+    }
   }
-}
-closeAllDropdowns(): void {  
-  this.isservicing = false;
-  this.isProduct = false;
-  this.isProductsHovered = false;  
-}
-@Output() toggleSidebar = new EventEmitter<void>();
+  closeAllDropdowns(): void {
+    this.isservicing = false;
+    this.isProduct = false;
+    this.isProductsHovered = false;
+  }
+  @Output() toggleSidebar = new EventEmitter<void>();
+
+  private checkHomePage(): void {
+    const url = this.router.url;
+    // Check if current URL is home or root, ignoring language params if present
+    const cleanUrl = url.split('?')[0];
+    this.isHomePage = cleanUrl === '/home' || cleanUrl === '/' || cleanUrl === '';
+    console.log('SiteHeader - isHomePage:', this.isHomePage, 'Clean URL:', cleanUrl);
+  }
 }

@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #1363C6;
+    --primary: #0d6efd;
     --secondary: #15ACE1;
     --light: #F4F7FE;
     --dark: #14183E;
@@ -483,7 +483,7 @@ h6,
     display: block;
     margin-bottom: 10px;
     padding: 0;
-    text-align: left;
+    text-align: start;
     color: rgba(255, 255, 255, .5);
     font-weight: normal;
     transition: .3s;
@@ -500,7 +500,7 @@ h6,
     content: "\f105";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    margin-right: 10px;
+    margin-inline-end: 10px;
 }
 
 .footer .btn.btn-link:hover {
@@ -523,13 +523,13 @@ h6,
 }
 
 .footer .footer-menu a {
-    margin-right: 15px;
-    padding-right: 15px;
-    border-right: 1px solid rgba(255, 255, 255, .1);
+    margin-inline-end: 15px;
+    padding-inline-end: 15px;
+    border-inline-end: 1px solid rgba(255, 255, 255, .1);
 }
 
 .footer .footer-menu a:last-child {
-    margin-right: 0;
-    padding-right: 0;
-    border-right: none;
+    margin-inline-end: 0;
+    padding-inline-end: 0;
+    border-inline-end: none;
 }

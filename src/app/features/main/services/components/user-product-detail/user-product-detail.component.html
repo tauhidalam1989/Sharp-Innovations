@@ -47,12 +47,28 @@
                 </p>
 
                 <div class="hero-buttons">
-                    <a [href]="product.ctaButton1Link || '#'" class="btn btn-primary">{{ currentLang === 'ar' &&
-                        product.ctaButton1TextAr ? product.ctaButton1TextAr : (product.ctaButton1Text || 'Request a
-                        Demo') }}</a>
-                    <a [href]="product.ctaButton2Link || '#'" class="btn btn-outline">{{ currentLang === 'ar' &&
-                        product.ctaButton2TextAr ? product.ctaButton2TextAr : (product.ctaButton2Text || 'Talk to
-                        Experts') }}</a>
+                    <a *ngIf="product.heroPrimaryCtaText || product.heroPrimaryCtaTextAr"
+                        [href]="product.heroPrimaryCtaLink || '#'" class="btn btn-primary">
+                        {{ currentLang === 'ar' && product.heroPrimaryCtaTextAr ? product.heroPrimaryCtaTextAr :
+                        (product.heroPrimaryCtaText || '') }}
+                    </a>
+                    <a *ngIf="product.heroSecondaryCtaText || product.heroSecondaryCtaTextAr"
+                        [href]="product.heroSecondaryCtaLink || '#'" class="btn btn-outline">
+                        {{ currentLang === 'ar' && product.heroSecondaryCtaTextAr ? product.heroSecondaryCtaTextAr :
+                        (product.heroSecondaryCtaText || '') }}
+                    </a>
+                    <!-- Fallback to original CTA buttons if hero buttons are not set -->
+                    <ng-container
+                        *ngIf="!(product.heroPrimaryCtaText || product.heroPrimaryCtaTextAr) && !(product.heroSecondaryCtaText || product.heroSecondaryCtaTextAr)">
+                        <a [href]="product.ctaButton1Link || '#'" class="btn btn-primary">
+                            {{ currentLang === 'ar' && product.ctaButton1TextAr ? product.ctaButton1TextAr :
+                            (product.ctaButton1Text || 'Request a Demo') }}
+                        </a>
+                        <a [href]="product.ctaButton2Link || '#'" class="btn btn-outline">
+                            {{ currentLang === 'ar' && product.ctaButton2TextAr ? product.ctaButton2TextAr :
+                            (product.ctaButton2Text || 'Talk to Experts') }}
+                        </a>
+                    </ng-container>
                 </div>
             </div>
         </section>
