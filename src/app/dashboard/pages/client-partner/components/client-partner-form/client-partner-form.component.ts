@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { ClientPartnerService } from '../../../../../core/services/client-partner.service';
 import { ApiResponse } from '../../../../../core/models/client-partner.model';
 
@@ -13,7 +14,7 @@ export class ClientPartnerFormComponent implements OnInit {
     form: FormGroup;
     isEdit = false;
     id?: number;
-    type: 'client' | 'partner' = 'client';
+    type: 'client' | 'partner' | 'certificate' = 'client';
     loading = false;
     submitting = false;
     selectedFile?: File;
@@ -38,6 +39,8 @@ export class ClientPartnerFormComponent implements OnInit {
             this.type = 'client';
         } else if (url.includes('/partners/')) {
             this.type = 'partner';
+        } else if (url.includes('/certificates/')) {
+            this.type = 'certificate';
         }
 
         this.id = Number(this.route.snapshot.paramMap.get('id'));
@@ -49,9 +52,11 @@ export class ClientPartnerFormComponent implements OnInit {
 
     loadData(): void {
         this.loading = true;
-        const obs = this.type === 'client'
+        const obs: Observable<ApiResponse<any>> = this.type === 'client'
             ? this.clientPartnerService.getClient(this.id!)
-            : this.clientPartnerService.getPartner(this.id!);
+            : this.type === 'partner'
+                ? this.clientPartnerService.getPartner(this.id!)
+                : this.clientPartnerService.getCertificate(this.id!);
 
         obs.subscribe({
             next: (res: ApiResponse<any>) => {
@@ -62,11 +67,11 @@ export class ClientPartnerFormComponent implements OnInit {
                         isActive: item.isActive,
                         order: item.order
                     });
-                    this.imagePreview = item.logo;
+                    this.imagePreview = this.type === 'certificate' ? item.image : item.logo;
                 }
                 this.loading = false;
             },
-            error: (err) => {
+            error: (err: any) => {
                 console.error('Failed to load data', err);
                 alert('Failed to load data');
                 this.loading = false;
@@ -98,19 +103,23 @@ export class ClientPartnerFormComponent implements OnInit {
         formData.append('isActive', this.form.get('isActive')?.value);
         formData.append('order', this.form.get('order')?.value);
         if (this.selectedFile) {
-            formData.append('logo', this.selectedFile);
+            formData.append(this.type === 'certificate' ? 'certificate' : 'logo', this.selectedFile);
         }
 
-        const obs = this.type === 'client'
+        const obs: Observable<ApiResponse<any>> = this.type === 'client'
             ? (this.isEdit ? this.clientPartnerService.updateClient(this.id!, formData) : this.clientPartnerService.createClient(formData))
-            : (this.isEdit ? this.clientPartnerService.updatePartner(this.id!, formData) : this.clientPartnerService.createPartner(formData));
+            : this.type === 'partner'
+                ? (this.isEdit ? this.clientPartnerService.updatePartner(this.id!, formData) : this.clientPartnerService.createPartner(formData))
+                : (this.isEdit ? this.clientPartnerService.updateCertificate(this.id!, formData) : this.clientPartnerService.createCertificate(formData));
 
         obs.subscribe({
             next: () => {
-                alert(`${this.type === 'client' ? 'Client' : 'Partner'} saved successfully`);
+                const typeLabel = this.type === 'client' ? 'Client' : this.type === 'partner' ? 'Partner' : 'Certificate';
+                alert(`${typeLabel} saved successfully`);
                 this.router.navigate(['/dashboard/clients-partners']);
             },
-            error: () => {
+            error: (err: any) => {
+                console.error('Failed to save', err);
                 alert('Failed to save');
                 this.submitting = false;
             }

@@ -2,6 +2,13 @@ import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../../../core/services/auth.service';
 
+interface MenuItem {
+  path: string;
+  icon: string;
+  label: string;
+  roles?: string[];
+}
+
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -9,7 +16,7 @@ import { AuthService } from '../../../../core/services/auth.service';
 })
 export class SidebarComponent {
   @Input() collapsed = false;
-  menuItems = [
+  menuItems: MenuItem[] = [
     { path: '/dashboard', icon: 'dashboard', label: 'Dashboard' },
     { path: '/dashboard/products', icon: 'cogs', label: 'Products' },
     { path: '/dashboard/product-categories', icon: 'tags', label: 'Product Categories' },
@@ -19,7 +26,9 @@ export class SidebarComponent {
     { path: '/dashboard/services/add', icon: 'plus-circle', label: 'Add Service' },
     { path: '/blog', icon: 'blog', label: 'Blog Posts' },
     { path: '/blog/new', icon: 'plus-circle', label: 'Add Blog' },
-    { path: '/dashboard/clients-partners', icon: 'handshake', label: 'Manage Clients & Partners' },
+    // { path: '/dashboard/contact', icon: 'fas fa-envelope', label: 'Inquiries' },
+    { path: '/dashboard/client-partner', icon: 'handshake', label: 'Clients & Partners' },
+    { path: '/dashboard/users', icon: 'users-cog', label: 'User Management' },
     { path: '/settings', icon: 'cog', label: 'Settings' }
   ];
 
@@ -38,7 +47,8 @@ export class SidebarComponent {
       'images': 'fa-images',
       'cog': 'fa-cog',
       'concierge-bell': 'fa-concierge-bell',
-      'handshake': 'fa-handshake'
+      'handshake': 'fa-handshake',
+      'users-cog': 'fa-users-cog'
     };
     return icons[icon] || 'fa-circle';
   }

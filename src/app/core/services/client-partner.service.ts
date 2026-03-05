@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
-import { Client, Partner, ApiResponse } from '../models/client-partner.model';
+import { Client, Partner, ApiResponse, Certificate } from '../models/client-partner.model';
 
 @Injectable({
     providedIn: 'root'
@@ -60,5 +60,30 @@ export class ClientPartnerService {
 
     deletePartner(id: number): Observable<ApiResponse<void>> {
         return this.http.delete<ApiResponse<void>>(`${this.apiUrl}/partners/${id}`);
+    }
+
+    // Certificates
+    getCertificates(status?: string): Observable<ApiResponse<Certificate[]>> {
+        let params = new HttpParams();
+        if (status) {
+            params = params.set('status', status);
+        }
+        return this.http.get<ApiResponse<Certificate[]>>(`${this.apiUrl}/certificates`, { params });
+    }
+
+    getCertificate(id: number): Observable<ApiResponse<Certificate>> {
+        return this.http.get<ApiResponse<Certificate>>(`${this.apiUrl}/certificates/${id}`);
+    }
+
+    createCertificate(data: FormData): Observable<ApiResponse<Certificate>> {
+        return this.http.post<ApiResponse<Certificate>>(`${this.apiUrl}/certificates`, data);
+    }
+
+    updateCertificate(id: number, data: FormData): Observable<ApiResponse<Certificate>> {
+        return this.http.put<ApiResponse<Certificate>>(`${this.apiUrl}/certificates/${id}`, data);
+    }
+
+    deleteCertificate(id: number): Observable<ApiResponse<void>> {
+        return this.http.delete<ApiResponse<void>>(`${this.apiUrl}/certificates/${id}`);
     }
 }

@@ -21,7 +21,8 @@
   gap: 12px;
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary,
+.btn-secondary {
   padding: 10px 20px;
   border: none;
   border-radius: 8px;
@@ -123,7 +124,8 @@
   gap: 24px;
 }
 
-.main-content, .sidebar {
+.main-content,
+.sidebar {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -368,8 +370,13 @@
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 992px) {

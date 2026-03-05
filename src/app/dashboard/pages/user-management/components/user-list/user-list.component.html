@@ -1,0 +1,108 @@
+<div class="user-list-container">
+    <!-- Header -->
+    <div class="page-header">
+        <h1>User Management</h1>
+        <button class="btn-primary" (click)="createNew()" *ngIf="authService.hasRole(['super_admin'])">
+            <i class="fas fa-user-plus"></i>
+            Add New User
+        </button>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters-card">
+        <div class="filters-grid">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" [(ngModel)]="searchTerm" (keyup.enter)="onSearch()"
+                    placeholder="Search users by name or email..." class="form-control">
+            </div>
+
+            <div class="filter-select">
+                <select class="form-control" (change)="onPageSizeChange($event)">
+                    <option [value]="10">10 per page</option>
+                    <option [value]="25">25 per page</option>
+                    <option [value]="50">50 per page</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" *ngIf="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Users Table -->
+    <div class="table-card" *ngIf="!loading">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th>Last Login</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users">
+                    <td>
+                        <div class="user-profile">
+                            <img [src]="user.avatar || 'assets/default-avatar.png'" alt="Avatar" class="avatar">
+                            <div class="user-name">
+                                <strong>{{ user.name }}</strong>
+                            </div>
+                        </div>
+                    </td>
+                    <td>{{ user.email }}</td>
+                    <td>
+                        <span class="role-badge" [ngClass]="user.role">
+                            {{ user.role | titlecase }}
+                        </span>
+                    </td>
+                    <td>
+                        <span class="status-badge" [class.active]="user.isActive" [class.inactive]="!user.isActive">
+                            {{ user.isActive ? 'Active' : 'Inactive' }}
+                        </span>
+                    </td>
+                    <td>{{ (user.lastLogin | date:'medium') || 'Never' }}</td>
+                    <td class="actions">
+                        <button class="btn-icon" (click)="editUser(user.id)" title="Edit"
+                            *ngIf="authService.hasRole(['super_admin']) || authService.getCurrentUser()?.id === user.id">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn-icon" (click)="toggleStatus(user)"
+                            [title]="user.isActive ? 'Deactivate' : 'Activate'"
+                            *ngIf="authService.hasRole(['super_admin'])">
+                            <i class="fas" [ngClass]="user.isActive ? 'fa-user-slash' : 'fa-user-check'"></i>
+                        </button>
+                        <button class="btn-icon delete" (click)="deleteUser(user.id)" title="Delete"
+                            *ngIf="authService.hasRole(['super_admin']) && user.role !== 'super_admin'">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr *ngIf="users.length === 0">
+                    <td colspan="6" class="text-center">No users found</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Pagination -->
+        <div class="pagination" *ngIf="totalItems > pageSize">
+            <button class="page-btn" [disabled]="currentPage === 1" (click)="onPageChange(currentPage - 1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <span class="page-info">
+                Page {{ currentPage }} of {{ getTotalPages() }}
+            </span>
+
+            <button class="page-btn" [disabled]="currentPage === getTotalPages()"
+                (click)="onPageChange(currentPage + 1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</div>
