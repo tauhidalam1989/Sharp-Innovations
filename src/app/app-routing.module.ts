@@ -119,6 +119,41 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
+    path: 'dashboard/services',
+    loadChildren: () => import('../app/dashboard/pages/services/services.module').then(m => m.ServicesModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'dashboard/service-categories',
+    loadChildren: () => import('../app/dashboard/pages/service-categories/service-categories.module').then(m => m.ServiceCategoriesModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'dashboard/users',
+    loadChildren: () => import('../app/dashboard/pages/user-management/user-management.module').then(m => m.UserManagementModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'dashboard/clients-partners',
+    loadChildren: () => import('../app/dashboard/pages/client-partner/client-partner.module').then(m => m.ClientPartnerModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'dashboard/client-partner',
+    redirectTo: 'dashboard/clients-partners',
+    pathMatch: 'full'
+  },
+  {
+    path: 'dashboard/clients',
+    redirectTo: 'dashboard/clients-partners',
+    pathMatch: 'full'
+  },
+  {
+    path: 'dashboard/partners',
+    redirectTo: 'dashboard/clients-partners',
+    pathMatch: 'full'
+  },
+  {
     path: 'dashboard',
     loadChildren: () => import('../app/dashboard/pages/dashboard/dashboard.module').then(m => m.DashboardModule),
     canActivate: [AuthGuard]
@@ -137,31 +172,6 @@ const routes: Routes = [
     path: 'profile',
     loadChildren: () => import('../app/dashboard/pages/profile/profile.module').then(m => m.ProfileModule),
     canActivate: [AuthGuard]
-  },
-  {
-    path: 'dashboard/services',
-    loadChildren: () => import('../app/dashboard/pages/services/services.module').then(m => m.ServicesModule),
-    canActivate: [AuthGuard]
-  },
-  {
-    path: 'dashboard/service-categories',
-    loadChildren: () => import('../app/dashboard/pages/service-categories/service-categories.module').then(m => m.ServiceCategoriesModule),
-    canActivate: [AuthGuard]
-  },
-  {
-    path: 'dashboard/clients-partners',
-    loadChildren: () => import('../app/dashboard/pages/client-partner/client-partner.module').then(m => m.ClientPartnerModule),
-    canActivate: [AuthGuard]
-  },
-  {
-    path: 'dashboard/clients',
-    redirectTo: 'dashboard/clients-partners',
-    pathMatch: 'full'
-  },
-  {
-    path: 'dashboard/partners',
-    redirectTo: 'dashboard/clients-partners',
-    pathMatch: 'full'
   },
   {
     path: '',

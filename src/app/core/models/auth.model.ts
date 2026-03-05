@@ -24,6 +24,7 @@ export interface User {
   role: 'super_admin' | 'admin' | 'editor' | 'viewer';
   avatar?: string;
   phone?: string;
+  isActive?: boolean;
   lastLogin?: Date;
 }
 

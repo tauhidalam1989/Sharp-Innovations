@@ -6,22 +6,22 @@
 
   <nav class="sidebar-nav">
     <ul>
-      <li *ngFor="let item of menuItems">
-        <a [routerLink]="item.path" 
-           routerLinkActive="active"
-           [routerLinkActiveOptions]="{exact: true}"
-           [title]="collapsed ? item.label : ''">
-          <i [class]="'fas ' + getIconClass(item.icon)"></i>
-          <span *ngIf="!collapsed">{{ item.label }}</span>
-        </a>
-      </li>
+      <ng-container *ngFor="let item of menuItems">
+        <li *ngIf="!item.roles || authService.hasRole(item.roles)">
+          <a [routerLink]="item.path" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+            [title]="collapsed ? item.label : ''">
+            <i [class]="'fas ' + getIconClass(item.icon)"></i>
+            <span *ngIf="!collapsed">{{ item.label }}</span>
+          </a>
+        </li>
+      </ng-container>
     </ul>
   </nav>
 
   <div class="sidebar-footer" *ngIf="!collapsed">
     <div class="user-info">
-      <img [src]="(authService.currentUser$ | async)?.avatar || 'assets/default-avatar.png'" 
-           alt="User" class="user-avatar">
+      <img [src]="(authService.currentUser$ | async)?.avatar || 'assets/default-avatar.png'" alt="User"
+        class="user-avatar">
       <div class="user-details">
         <p class="user-name">{{ (authService.currentUser$ | async)?.name }}</p>
         <p class="user-role">{{ (authService.currentUser$ | async)?.role }}</p>

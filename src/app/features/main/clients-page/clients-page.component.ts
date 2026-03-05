@@ -2,7 +2,7 @@ import { Component, ViewChild, OnInit } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { TranslateService } from '@ngx-translate/core';
 import { ClientPartnerService } from '../../../core/services/client-partner.service';
-import { Client, Partner } from '../../../core/models/client-partner.model';
+import { Client, Partner, Certificate } from '../../../core/models/client-partner.model';
 
 @Component({
   selector: 'app-clients-page',
@@ -17,15 +17,7 @@ export class ClientsPageComponent implements OnInit {
 
   clientLogos: string[] = [];
   partnerLogos: string[] = [];
-  isocertificates: string[] = [
-    'assets/isocert/1.jpg',
-    'assets/isocert/2.jpg',
-    'assets/isocert/3.jpg',
-    'assets/isocert/4.jpg',
-    'assets/isocert/5.jpg',
-    'assets/isocert/6.jpg',
-    'assets/isocert/7.jpg',
-  ];
+  isocertificates: string[] = [];
 
   clientOptions: any = {};
   partnerOptions: any = {};
@@ -62,6 +54,13 @@ export class ClientsPageComponent implements OnInit {
         this.partnerLogos = res.result.map(p => p.logo);
       },
       error: (err) => console.error('Error loading partners', err)
+    });
+
+    this.clientPartnerService.getCertificates('active').subscribe({
+      next: (res) => {
+        this.isocertificates = res.result.map(c => c.image);
+      },
+      error: (err) => console.error('Error loading certificates', err)
     });
   }
 

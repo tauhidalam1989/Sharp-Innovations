@@ -18,6 +18,17 @@ export interface Partner {
     order: number;
     createdBy: number;
     updatedBy?: number;
+    updatedAt: Date;
+}
+
+export interface Certificate {
+    id: number;
+    name: string;
+    image: string;
+    isActive: boolean;
+    order: number;
+    createdBy: number;
+    updatedBy?: number;
     createdAt: Date;
     updatedAt: Date;
 }
