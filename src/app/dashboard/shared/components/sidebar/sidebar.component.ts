@@ -28,7 +28,7 @@ export class SidebarComponent {
     { path: '/blog/new', icon: 'plus-circle', label: 'Add Blog' },
     // { path: '/dashboard/contact', icon: 'fas fa-envelope', label: 'Inquiries' },
     { path: '/dashboard/client-partner', icon: 'handshake', label: 'Clients & Partners' },
-    { path: '/dashboard/users', icon: 'users-cog', label: 'User Management' },
+    { path: '/dashboard/users', icon: 'users-cog', label: 'User Management', roles: ['super_admin'] },
     { path: '/settings', icon: 'cog', label: 'Settings' }
   ];
 

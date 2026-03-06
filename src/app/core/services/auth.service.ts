@@ -273,17 +273,20 @@ export class AuthService {
   }
 
   logout(): void {
+    if (this.isBrowser) {
+      console.log('[AuthService] Logout initiated');
+    }
     const token = this.getToken();
 
     if (token && this.isBrowser) {
       this.http.post(`${this.apiUrl}/logout`, {})
         .subscribe({
           next: (response) => {
-            console.log('Logout successful:', response);
+            console.log('[AuthService] Logout API success:', response);
             this.clearSession();
           },
           error: (error) => {
-            console.error('Logout error:', error);
+            console.error('[AuthService] Logout API error:', error);
             this.clearSession();
           }
         });
@@ -425,10 +428,14 @@ export class AuthService {
   }
 
   private clearSession(): void {
+    if (this.isBrowser) {
+      console.log('[AuthService] Clearing session/storage in browser');
+    }
     this.clearStorage();
     this.currentUserSubject.next(null);
 
     if (this.isBrowser) {
+      console.log('[AuthService] Navigation to /login triggered from clearSession');
       this.router.navigate(['/login']);
     }
   }
