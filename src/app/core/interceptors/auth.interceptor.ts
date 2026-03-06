@@ -25,7 +25,12 @@ export class AuthInterceptor implements HttpInterceptor {
     }
 
     // Clone the request and add headers
+    // Only prefix with environment.apiUrl if the URL is relative and not a local asset
+    const isAsset = req.url.startsWith('assets/');
+    const url = req.url.startsWith('http') || isAsset ? req.url : `${environment.apiUrl}${req.url}`;
+
     let apiReq = req.clone({
+      url: url,
       setHeaders: {
         'x-api-key': environment.apiKey
       }
@@ -44,7 +49,17 @@ export class AuthInterceptor implements HttpInterceptor {
     return next.handle(apiReq).pipe(
       catchError(error => {
         if (error instanceof HttpErrorResponse && error.status === 401) {
-          return this.handle401Error(apiReq, next);
+          const hasToken = !!this.authService.getToken();
+          if (hasToken) {
+            console.error(`[AuthInterceptor] 401 Unauthorized for URL: ${apiReq.url}. Attempting token verify/refresh.`);
+            return this.handle401Error(apiReq, next);
+          } else {
+            console.warn(`[AuthInterceptor] 401 Unauthorized for Guest (No Token) on URL: ${apiReq.url}. Skipping redirection.`);
+            return throwError(() => error);
+          }
+        }
+        if (error instanceof HttpErrorResponse) {
+          console.error(`[AuthInterceptor] Error ${error.status} for URL: ${apiReq.url}`);
         }
         return throwError(() => error);
       })
