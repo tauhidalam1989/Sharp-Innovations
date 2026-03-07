@@ -18,7 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CookieConsentComponent } from './features/shared/components/cookie-consent/cookie-consent.component';
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+  return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
 }
 
 @NgModule({
@@ -33,7 +33,6 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     HttpClientModule,
     AppRoutingModule,
     RouterModule,
-    TranslateModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -44,8 +43,6 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   providers: [
-    Meta,
-    Title,
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]

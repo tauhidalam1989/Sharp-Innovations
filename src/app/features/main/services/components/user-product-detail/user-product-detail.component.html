@@ -19,6 +19,17 @@
         <!-- Hero Header Section -->
         <section class="hero-header" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
             <div class="container" [ngClass]="{'text-end': currentLang === 'ar'}">
+                <!-- user product detail breadcrumb -->
+                <nav class="breadcrumb-custom mb-2" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+                    <i class="fa fa-home" aria-hidden="true" [style.margin-left]="currentLang === 'en' ? '5px' : '0'"
+                        [style.margin-right]="currentLang === 'ar' ? '5px' : '0'"></i>
+                    <a class="link" routerLink="/">{{ 'PAGE_TITLE.HOME' | translate }}</a>
+                    <span style="opacity: 0.5;">|</span>
+                    <a class="link" routerLink="/products">{{ 'PAGE_TITLE.PRODUCTS' | translate }}</a>
+                    <span style="opacity: 0.5;">|</span>
+                    <span class="active">{{ currentLang === 'ar' && product.heroTitleAr ? product.heroTitleAr :
+                        product.heroTitle }}</span>
+                </nav>
 
                 <h1>
                     <i [class]="product.heroIcon || 'fas fa-circle'" class="hero-icon"
@@ -36,12 +47,28 @@
                 </p>
 
                 <div class="hero-buttons">
-                    <a [href]="product.ctaButton1Link || '#'" class="btn btn-primary">{{ currentLang === 'ar' &&
-                        product.ctaButton1TextAr ? product.ctaButton1TextAr : (product.ctaButton1Text || 'Request a
-                        Demo') }}</a>
-                    <a [href]="product.ctaButton2Link || '#'" class="btn btn-outline">{{ currentLang === 'ar' &&
-                        product.ctaButton2TextAr ? product.ctaButton2TextAr : (product.ctaButton2Text || 'Talk to
-                        Experts') }}</a>
+                    <a *ngIf="product.heroPrimaryCtaText || product.heroPrimaryCtaTextAr"
+                        [href]="product.heroPrimaryCtaLink || '#'" class="btn btn-primary">
+                        {{ currentLang === 'ar' && product.heroPrimaryCtaTextAr ? product.heroPrimaryCtaTextAr :
+                        (product.heroPrimaryCtaText || '') }}
+                    </a>
+                    <a *ngIf="product.heroSecondaryCtaText || product.heroSecondaryCtaTextAr"
+                        [href]="product.heroSecondaryCtaLink || '#'" class="btn btn-outline">
+                        {{ currentLang === 'ar' && product.heroSecondaryCtaTextAr ? product.heroSecondaryCtaTextAr :
+                        (product.heroSecondaryCtaText || '') }}
+                    </a>
+                    <!-- Fallback to original CTA buttons if hero buttons are not set -->
+                    <ng-container
+                        *ngIf="!(product.heroPrimaryCtaText || product.heroPrimaryCtaTextAr) && !(product.heroSecondaryCtaText || product.heroSecondaryCtaTextAr)">
+                        <a [href]="product.ctaButton1Link || '#'" class="btn btn-primary">
+                            {{ currentLang === 'ar' && product.ctaButton1TextAr ? product.ctaButton1TextAr :
+                            (product.ctaButton1Text || 'Request a Demo') }}
+                        </a>
+                        <a [href]="product.ctaButton2Link || '#'" class="btn btn-outline">
+                            {{ currentLang === 'ar' && product.ctaButton2TextAr ? product.ctaButton2TextAr :
+                            (product.ctaButton2Text || 'Talk to Experts') }}
+                        </a>
+                    </ng-container>
                 </div>
             </div>
         </section>

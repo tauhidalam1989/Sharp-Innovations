@@ -1,0 +1,223 @@
+.user-list-container {
+    padding: 1rem;
+
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+    }
+
+    .filters-card {
+        background: #1a1a1a;
+        border: 1px solid #333;
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+
+        .filters-grid {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .search-box {
+            position: relative;
+
+            i {
+                position: absolute;
+                left: 0.75rem;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #666;
+            }
+
+            input {
+                padding-left: 2.5rem;
+            }
+        }
+    }
+
+    .table-card {
+        background: #1a1a1a;
+        border: 1px solid #333;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .data-table {
+        width: 100%;
+        border-collapse: collapse;
+
+        th,
+        td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid #333;
+            color: #ccc;
+        }
+
+        th {
+            background: #252525;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+        }
+
+        tr:hover {
+            background: #2a2a2a;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+
+            .avatar {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+
+        .role-badge {
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+
+            &.super_admin {
+                background: rgba(255, 68, 68, 0.1);
+                color: #ff4444;
+            }
+
+            &.admin {
+                background: rgba(0, 200, 81, 0.1);
+                color: #00c851;
+            }
+
+            &.editor {
+                background: rgba(51, 181, 229, 0.1);
+                color: #33b5e5;
+            }
+
+            &.viewer {
+                background: rgba(170, 170, 170, 0.1);
+                color: #aaa;
+            }
+        }
+
+        .status-badge {
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+
+            &.active {
+                color: #00c851;
+            }
+
+            &.inactive {
+                color: #ff4444;
+            }
+        }
+
+        .actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        background: #252525;
+
+        .page-info {
+            color: #888;
+            font-size: 0.9rem;
+        }
+    }
+}
+
+.form-control {
+    background: #2a2a2a;
+    border: 1px solid #444;
+    color: #fff;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    width: 100%;
+
+    &:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+}
+
+.btn-primary {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &:hover {
+        background: #0056b3;
+    }
+}
+
+.btn-icon {
+    background: transparent;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    padding: 0.25rem;
+
+    &:hover {
+        color: #fff;
+    }
+
+    &.delete:hover {
+        color: #ff4444;
+    }
+}
+
+.loading-spinner {
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+
+    .spinner {
+        width: 40px;
+        height: 40px;
+        border: 4px solid rgba(255, 255, 255, 0.1);
+        border-top: 4px solid #007bff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

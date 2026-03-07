@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ServicePageService } from '../../../../../dashboard/pages/services/services/service.service';
 import { ServicePage, ProcessItem, CapabilityItem, BenefitItem, WhyChooseUsItem, FAQItem, AboutPillarItem, IndustryItem, CriticalCardItem } from '../../../../../dashboard/pages/services/services/service.model';
@@ -6,6 +6,8 @@ import { LanguageService } from '../../../../shared/services/language.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { environment } from '../../../../../../environments/environment';
+import { SeoService } from '../../../../shared/services/seo.service';
+import { isPlatformServer } from '@angular/common';
 
 @Component({
     selector: 'app-user-service-detail',
@@ -19,19 +21,29 @@ export class UserServiceDetailComponent implements OnInit, OnDestroy {
     activeFaqIndex: number | null = null;
     currentLang: string = 'en';
     private langSubscription?: Subscription;
+    isServer: boolean;
 
     constructor(
         private route: ActivatedRoute,
         private router: Router,
         private servicePageService: ServicePageService,
         private languageService: LanguageService,
-        private translateService: TranslateService
-    ) { }
+        private translateService: TranslateService,
+        private seoService: SeoService,
+        @Inject(PLATFORM_ID) private platformId: Object
+    ) {
+        this.isServer = isPlatformServer(this.platformId);
+        // Set default meta tags synchronously for SSR
+        this.seoService.setServerSideMetaTags('SERVICES');
+    }
 
     ngOnInit(): void {
         this.currentLang = this.languageService.getLanguage();
         this.langSubscription = this.translateService.onLangChange.subscribe((event) => {
             this.currentLang = event.lang;
+            if (this.service) {
+                this.updateSeoTags();
+            }
         });
 
         this.route.paramMap.subscribe(params => {
@@ -63,6 +75,10 @@ export class UserServiceDetailComponent implements OnInit, OnDestroy {
                         parsed = serviceData;
                     }
                     this.service = this.parseJsonFields(parsed) as ServicePage;
+                    if (this.isServer && this.service) {
+                        console.log(`[SSR-ServiceDetail] Lang: ${this.currentLang} | Title: ${this.service.heroTitle} | TitleAr: ${this.service.heroTitleAr ? 'YES' : 'NO'}`);
+                    }
+                    this.updateSeoTags();
                 } else {
                     this.error = response?.message || 'Failed to load service';
                 }
@@ -74,6 +90,25 @@ export class UserServiceDetailComponent implements OnInit, OnDestroy {
                 this.loading = false;
             }
         });
+    }
+
+    updateSeoTags(): void {
+        if (this.service) {
+            const title = this.currentLang === 'ar'
+                ? (this.service.metaTitleAr || this.service.heroTitleAr || this.service.heroTitle)
+                : (this.service.metaTitle || this.service.heroTitle);
+
+            const description = this.currentLang === 'ar'
+                ? (this.service.metaDescriptionAr || this.service.heroIntroductionAr || this.service.heroIntroduction || '')
+                : (this.service.metaDescription || this.service.heroIntroduction || '');
+
+            this.seoService.updateMetaTags({
+                title: title,
+                description: description,
+                image: this.getImageUrl(this.service.heroImage || this.service.heroIcon),
+                page: 'SERVICES'
+            });
+        }
     }
 
     private parseJsonFields(service: any): any {

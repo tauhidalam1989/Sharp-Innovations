@@ -1,22 +1,24 @@
 {
-  "PAGE_TITLE": {
-    "ABOUT": "About Us",
-    "HOME": "Home",
-    "SERVICES": "Our Services",
-    "services": "Services",
-    "PROJECTS": "Our Projects",
-    "CONTACT": "Contact",
-    "FEATURES": "Features",
-    "OUR_TEAM": "Our Team",
-    "FAQS": "FAQs",
-    "TESTIMONIALS": "Testimonials",
-    "MobileDevelopment": "Mobile App Development",
-    "webDevelopment": "Web Application Development",
-    "cloudDevelopment": "Cloud Development",
-    "chatbotDevelopment": "Chatbot Development",
-    "digitalMarketingServices": "Digital Marketing Services",
-    "uiDevelopment": "UI Development"
-  },
+  "PAGE_TITLE.ABOUT": "About Us",
+  "PAGE_TITLE.HOME": "Home",
+  "PAGE_TITLE.SERVICES": "Our Services",
+  "PAGE_TITLE.services": "Services",
+  "PAGE_TITLE.PROJECTS": "Our Projects",
+  "PAGE_TITLE.CONTACT": "Contact",
+  "PAGE_TITLE.FEATURES": "Features",
+  "PAGE_TITLE.OUR_TEAM": "Our Team",
+  "PAGE_TITLE.FAQS": "FAQs",
+  "PAGE_TITLE.TESTIMONIALS": "Testimonials",
+  "PAGE_TITLE.MobileDevelopment": "Mobile App Development",
+  "PAGE_TITLE.webDevelopment": "Web Application Development",
+  "PAGE_TITLE.cloudDevelopment": "Cloud Development",
+  "PAGE_TITLE.chatbotDevelopment": "Chatbot Development",
+  "PAGE_TITLE.digitalMarketingServices": "Digital Marketing Services",
+  "PAGE_TITLE.uiDevelopment": "UI Development",
+  "PAGE_TITLE.BLOGS": "Blogs",
+  "PAGE_TITLE.PRODUCTS": "Our Products",
+  "PAGE_TITLE.SERVICE_PAGES": "Service Pages",
+  "PAGE_TITLE.PRODUCT": "Product",
   "FEATURESS": {
     "WHY_CHOOSE_US": "Why Choose Sharp Innovations?",
     "TITLE": "We Are Sharp Innovations Company for Information Technology",
@@ -4019,10 +4021,33 @@
       "DESCRIPTION": "Read what our clients say about Sharp Innovations' IT services and solutions. Real feedback from businesses across Saudi Arabia.",
       "KEYWORDS": "IT company reviews, technology testimonials, Sharp Innovations feedback, client success stories",
       "SCHEMA_TYPE": "ReviewNewsArticle"
+    },
+    "PRODUCTS": {
+      "TITLE": "Our Products & Solutions - Sharp Innovations",
+      "DESCRIPTION": "Browse our latest technology products and innovative IT solutions. Sharp Innovations offers cutting-edge software and hardware solutions for businesses in Saudi Arabia.",
+      "KEYWORDS": "IT products Saudi Arabia, technology solutions, software products, Sharp Innovations products, business solutions KSA",
+      "SCHEMA_TYPE": "CollectionPage"
+    },
+    "BLOGS": {
+      "TITLE": "Blog & Insights - Sharp Innovations Technology Articles",
+      "DESCRIPTION": "Stay updated with the latest insights, news, and articles about technology, cybersecurity, and digital innovation from Sharp Innovations.",
+      "KEYWORDS": "technology blog, IT insights, cybersecurity news, Sharp Innovations blog, tech articles KSA",
+      "SCHEMA_TYPE": "Blog"
     }
   },
   "BLOG_LISTING": {
     "TITLE": "Our Insights & News",
     "SUBTITLE": "Stay updated with the latest in technology, design, and cybersecurity."
+  },
+  "BLOG_DETAIL": {
+    "AUTHOR_NAME": "Sharp Innovations",
+    "AUTHOR_ROLE": "Content Creator",
+    "BACK_TO_BLOGS": "Back to Blogs",
+    "TAGS": "Tags",
+    "SHARE_ARTICLE": "Share this article",
+    "YOU_MIGHT_ALSO_LIKE": "You might also like",
+    "CYBER_CTA_TITLE": "Looking for Cybersecurity Solutions?",
+    "CYBER_CTA_DESC": "Sharp Innovations provides enterprise-grade security for your digital assets.",
+    "CONTACT_US": "Contact Us"
   }
 }

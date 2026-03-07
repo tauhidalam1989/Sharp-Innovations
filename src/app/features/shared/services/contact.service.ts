@@ -1,3 +1,4 @@
+import { environment } from 'src/environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -6,10 +7,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ContactService {
-  private apiUrl = 'https://sharpinnovation-api.sharpinnvotech.com/v1/mail/send-mail'; // Replace with your API endpoint
-  private apiUrlnews = 'https://sharpinnovation-api.sharpinnvotech.com/v1/mail/send-resume';
-  
-  constructor(private http: HttpClient) {}
+  private apiUrl = `${environment.apiUrl}/mail/send-mail`;
+  private apiUrlnews = `${environment.apiUrl}/mail/send-resume`;
+
+  constructor(private http: HttpClient) { }
 
   sendContactForm(payload: any): Observable<any> {
     return this.http.post(this.apiUrl, payload);

@@ -5,6 +5,7 @@ import { Title } from '@angular/platform-browser';
 import { filter } from 'rxjs/operators';
 import { TranslateService } from '@ngx-translate/core';
 import { isPlatformBrowser } from '@angular/common';
+import { SeoService } from './features/shared/services/seo.service';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,7 @@ export class AppComponent implements OnInit {
     private titleService: Title,
     private translateService: TranslateService,
     private renderer: Renderer2,
+    private seoService: SeoService,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
     this.isBrowser = isPlatformBrowser(this.platformId);
@@ -37,16 +39,34 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     // Check the current route and navigate to home if no route is provided
     const currentUrl = this.router.url;
-    // if (!currentUrl || currentUrl === '/') {
-    //   this.router.navigate(['/home']);
-    // }
 
-    // Set dynamic titles based on the route
+    // Listen to route changes for SEO updates
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(() => {
-        const currentRoute = this.router.url.split('/')[1]; // Get the first segment of the URL
-        this.setPageTitle(currentRoute);
+        const urlSegments = this.router.url.split('/');
+        const firstSegment = urlSegments[1]; // Get the first segment of the URL
+
+        // Only update if it's a known global route and NOT a detail page
+        // Detail pages will call SeoService themselves
+        const globalRoutes = ['home', 'about', 'contact', 'services', 'service-pages', 'products', 'blogs', 'faq', 'team', 'testimonial', 'feature', 'careers'];
+
+        // Map route segments to page keys (handle hyphenated routes)
+        const routeToPageKey: { [key: string]: string } = {
+          'service-pages': 'SERVICES',
+          'services': 'SERVICES'
+        };
+
+        if (globalRoutes.includes(firstSegment.toLowerCase()) && urlSegments.length <= 2) {
+          const pageKey = routeToPageKey[firstSegment.toLowerCase()] || firstSegment.toUpperCase();
+          this.seoService.updateMetaTags({ page: pageKey });
+        } else if (!firstSegment) {
+          this.seoService.updateMetaTags({ page: 'HOME' });
+        } else if (firstSegment.toLowerCase() === 'dashboard') {
+          this.titleService.setTitle('Admin Dashboard - Sharp Innovations');
+        } else if (firstSegment.toLowerCase() === 'login') {
+          this.titleService.setTitle('Admin Login - Sharp Innovations');
+        }
       });
 
     if (this.isBrowser) {
