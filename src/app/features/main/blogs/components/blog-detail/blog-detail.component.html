@@ -209,8 +209,11 @@
                             <img [src]="getImageUrl(post.featuredImage) || 'assets/img/placeholder.jpg'"
                                 [alt]="post.title" class="card-img-top h-100 w-100 object-fit-cover">
                         </div>
-                        <div class="card-body p-4">
-                            <h5 class="card-title fw-bold mb-2 text-truncate">{{ post.title }}</h5>
+                        <div class="card-body p-4" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr'"
+                            [class.text-end]="currentLang === 'ar'">
+                            <h5 class="card-title fw-bold mb-2 text-truncate">
+                                {{ currentLang === 'ar' && post.titleAr ? post.titleAr : post.title }}
+                            </h5>
                             <p class="small text-muted mb-0"><i class="far fa-calendar-alt me-1"></i> {{
                                 formatDate(post.createdAt) }}</p>
                         </div>
