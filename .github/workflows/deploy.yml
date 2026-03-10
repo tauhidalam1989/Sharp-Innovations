@@ -28,7 +28,17 @@ jobs:
       - name: Build and Prerender Angular
         run: npm run prerender
 
+<<<<<<< Updated upstream
       # Deploy to Hostinger FTP (deploy browser folder directly)
+=======
+      # Move built browser files to the root of the dist folder
+      - name: Move built files to root
+        run: |
+          cp -r dist/sharpinvotech/browser/* dist/sharpinvotech/
+          cp -r dist/sharpinvotech/server/* dist/sharpinvotech/
+
+      # Deploy to Hostinger FTP
+>>>>>>> Stashed changes
       - name: Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
