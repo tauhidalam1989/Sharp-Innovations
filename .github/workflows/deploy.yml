@@ -25,8 +25,8 @@ jobs:
         run: npm ci --legacy-peer-deps
 
       # Build and Prerender Angular app for production (generates static HTML with meta tags)
-      - name: Build and Prerender Angular
-        run: npm run prerender
+      - name: Build and SSR Angular
+        run: npm run build:ssr
 
       # Move built browser files to the root of the dist folder
       - name: Move built files to root

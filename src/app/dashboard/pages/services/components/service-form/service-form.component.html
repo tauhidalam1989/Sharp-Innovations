@@ -74,9 +74,22 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 form-group">
-                            <label class="form-label">Display Order</label>
-                            <input type="number" formControlName="order" class="form-control">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Order</label>
+                            <input type="number" formControlName="order" class="form-control" placeholder="Display Order">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Card Icon (FontAwesome)</label>
+                            <input type="text" formControlName="cardIcon" class="form-control" list="cardIconList"
+                                placeholder="e.g., fas fa-cog">
+                            <datalist id="cardIconList">
+                                <option *ngFor="let icon of availableIcons" [value]="icon.class">{{icon.name}}</option>
+                            </datalist>
+                            <div class="mt-2" *ngIf="serviceForm.get('cardIcon')?.value">
+                                <i [class]="serviceForm.get('cardIcon')?.value" style="font-size: 1.5rem;"></i>
+                                <span class="ms-2">{{serviceForm.get('cardIcon')?.value}}</span>
+                            </div>
                         </div>
                         <div class="col-md-6 form-group">
                             <label class="form-label d-block">Publication Status</label>
