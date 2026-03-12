@@ -29,7 +29,7 @@ export class MyServicesLayoutComponent implements OnInit, AfterViewInit, OnDestr
     private route: ActivatedRoute,
     private router: Router,
     private translate: TranslateService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.loadTranslations();
@@ -109,7 +109,7 @@ export class MyServicesLayoutComponent implements OnInit, AfterViewInit, OnDestr
     if (submenu) {
       this.router.navigate([`${this.selectedProduct.key}/${submenu.path}`]);
       this.scrollToActiveItem();
-    
+
     }
   }
 

@@ -18,38 +18,38 @@ export class MyProductLayoutComponent implements OnInit, AfterViewInit {
     private route: ActivatedRoute,
     private router: Router,
     private translate: TranslateService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.translate.get('products_service').subscribe((data: any) => {
       this.productsService = data;
-  
+
       // Initialize submenu visibility for each product
       data.forEach((product: { key: string | number; items: any[]; }) => {
         this.submenuVisibilityMap[product.key] = false;
-  
+
         // Auto-expand if current route matches any of the submenu items
         const currentUrl = this.router.url;
         const hasActiveSubmenu = product.items?.some((item: any) =>
           currentUrl.includes(item.path)
         );
-  
+
         if (hasActiveSubmenu) {
           this.submenuVisibilityMap[product.key] = true;
           this.selectedProduct = product;
         }
       });
     });
-  
+
     this.route.params.subscribe(params => {
       const productKey = params['key'];
       const submenuKey = params['submenuKey'];
-  
+
       if (productKey) {
         this.selectedProduct = this.getProductByKey(productKey);
         this.submenuVisibilityMap[productKey] = true; // Force show when route hits main product
       }
-  
+
       if (submenuKey && this.selectedProduct) {
         this.selectSubmenu(submenuKey);
         this.scrollToActiveItem();
@@ -61,7 +61,7 @@ export class MyProductLayoutComponent implements OnInit, AfterViewInit {
       this.scrollToActiveItem();
     });
   }
-  
+
 
   ngAfterViewInit() {
     this.scrollToActiveItem();

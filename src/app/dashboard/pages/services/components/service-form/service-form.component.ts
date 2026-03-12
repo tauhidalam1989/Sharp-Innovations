@@ -121,6 +121,7 @@ export class ServiceFormComponent implements OnInit {
             heroIntroductionAr: [''],
             heroImage: [''],
             heroIcon: [''],
+            cardIcon: ['fas fa-cog'],
             primaryCtaText: [''],
             primaryCtaTextAr: [''],
             primaryCtaLink: [''],
@@ -365,6 +366,7 @@ export class ServiceFormComponent implements OnInit {
             slug: s.slug || '', categoryId: s.categoryId || null, order: s.order || 0, isPublished: s.isPublished || false,
             heroTitle: s.heroTitle || '', heroTitleAr: s.heroTitleAr || '', heroTagline: s.heroTagline || '', heroTaglineAr: s.heroTaglineAr || '',
             heroIntroduction: s.heroIntroduction || '', heroIntroductionAr: s.heroIntroductionAr || '', heroIcon: s.heroIcon || '', heroImage: s.heroImage || '',
+            cardIcon: s.cardIcon || 'fas fa-cog',
             primaryCtaText: s.primaryCtaText || '', primaryCtaTextAr: s.primaryCtaTextAr || '', primaryCtaLink: s.primaryCtaLink || '',
             secondaryCtaText: s.secondaryCtaText || '', secondaryCtaTextAr: s.secondaryCtaTextAr || '', secondaryCtaLink: s.secondaryCtaLink || '',
 
@@ -469,12 +471,12 @@ export class ServiceFormComponent implements OnInit {
         // JSON Arrays
         arrays.forEach(a => { if (fv[a]?.length >= 0) fd.append(a, JSON.stringify(fv[a].filter((it: any) => it && Object.values(it).some(v => v !== null && v !== undefined && v !== '')))); });
 
-        // Retain existing images
-        if (!this.selectedHeroImage && fv.heroImage) fd.append('heroImage', fv.heroImage);
-        if (!this.selectedOverviewImage && fv.overviewImage) fd.append('overviewImage', fv.overviewImage);
-        if (!this.selectedAboutSectionImage && fv.aboutSectionImage) fd.append('aboutSectionImage', fv.aboutSectionImage);
-        if (!this.selectedIndustriesImage && fv.industriesImage) fd.append('industriesImage', fv.industriesImage);
-        if (!this.selectedHeroIcon && fv.heroIcon) fd.append('heroIcon', fv.heroIcon);
+        // Retain existing images or clear them
+        if (!this.selectedHeroImage) fd.append('heroImage', fv.heroImage || '');
+        if (!this.selectedOverviewImage) fd.append('overviewImage', fv.overviewImage || '');
+        if (!this.selectedAboutSectionImage) fd.append('aboutSectionImage', fv.aboutSectionImage || '');
+        if (!this.selectedIndustriesImage) fd.append('industriesImage', fv.industriesImage || '');
+        if (!this.selectedHeroIcon) fd.append('heroIcon', fv.heroIcon || '');
 
         // Upload new files
         if (this.selectedHeroIcon) fd.append('heroIcon', this.selectedHeroIcon, this.selectedHeroIcon.name);

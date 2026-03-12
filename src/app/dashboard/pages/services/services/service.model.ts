@@ -105,6 +105,7 @@ export interface ServicePage {
     heroIntroductionAr?: string;
     heroImage?: string;
     heroIcon?: string;
+    cardIcon?: string;
     primaryCtaText?: string;
     primaryCtaTextAr?: string;
     primaryCtaLink?: string;

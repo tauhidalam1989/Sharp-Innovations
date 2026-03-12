@@ -40,7 +40,7 @@
                 <div class="service-card" *ngFor="let service of servicesByCategory[category]"
                     (click)="navigateToService(service)" [ngClass]="{'text-end': currentLang === 'ar'}">
                     <div class="card-icon" [ngClass]="{'ms-3 me-0': currentLang === 'ar'}">
-                        <i [class]="service.heroIcon || 'fas fa-cog'"></i>
+                        <i [class]="service.cardIcon || 'fas fa-cog'"></i>
                     </div>
                     <h3 class="card-title">
                         {{ currentLang === 'ar' && service.heroTitleAr ? service.heroTitleAr : service.heroTitle }}
